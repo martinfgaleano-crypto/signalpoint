@@ -348,7 +348,7 @@ a:hover{text-decoration-color:#000}
 .fchip:hover{box-shadow:inset 0 0 0 1px #fff}
 .fchip[aria-pressed="true"]{background:#fff;color:#000;box-shadow:none}
 .mgroup.mine{box-shadow:0 0 0 2px #000}
-.mact{margin:10px 0 2px;flex-wrap:wrap}
+.mact{margin:18px 0 0;flex-wrap:wrap}
 .ahead{margin:34px 0 0}
 .ahead h2,.lhead h1{font-family:var(--display);letter-spacing:-.03em}
 .ahead h2{font-size:24px;font-weight:650;margin:0 0 14px}
@@ -380,6 +380,73 @@ a:hover{text-decoration-color:#000}
 .lesson-b .row{flex-wrap:wrap}
 @media (max-width:880px){.lesson-b{padding-left:20px}}
 @media (max-width:880px){.mback{display:none}.mchart{height:170px}}
+
+/* Hybrid: a dark terminal band on top, a light editorial body below, one blue accent for what you choose. */
+:root:root:root{--accent:#2F5BFF;--accent-ink:#fff;--accent-soft:rgba(47,91,255,.09);--bg:#FAFAFA;--surface:#fff}
+body{overflow-x:clip}
+header.top{background:#000;border-bottom:1px solid rgba(255,255,255,.1);color:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}
+header.top .mark{color:#fff}
+header.top nav{box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+header.top nav button{color:#A1A1A6}
+header.top nav button:hover{color:#fff}
+header.top nav button[aria-current="page"]{background:#fff;color:#000}
+header.top nav .n{color:#6E6E73}
+.btn{background:#000;color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mhero{width:100vw;margin:0 0 0 calc(50% - 50vw);border-radius:0;background:#000;color:#fff;padding:0;position:relative;overflow:hidden}
+.mhero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 80% 90% at 70% 40%,#000,transparent);mask-image:radial-gradient(ellipse 80% 90% at 70% 40%,#000,transparent);pointer-events:none}
+.mh-in{position:relative;max-width:1180px;margin:0 auto;padding:56px 22px 34px;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr);gap:48px;align-items:start}
+.mh-k{font-size:13px;color:#8E8E93;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.mhero h1{font-size:clamp(28px,3.3vw,46px);line-height:1.04;letter-spacing:-.042em;margin:0 0 28px}
+.mhero .clause{display:block}
+.mhero .clause span{white-space:nowrap}
+.mh-l,.mh-r{min-width:0}
+.mhero .clause .up{color:#3DDC6E}.mhero .clause .down{color:#FF5A4E}.mhero .clause .flat{color:#98989D}
+.mhero .cmd{max-width:560px;margin:0 0 18px}
+.mhero .cmd .search{background:rgba(255,255,255,.1);color:#fff;color-scheme:dark;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.mhero .cmd .search:focus{box-shadow:inset 0 0 0 1px var(--accent);outline:0}
+.mhero .follow{margin:0 0 18px}
+.mhero .fchip[aria-pressed="true"]{background:var(--accent);color:#fff}
+.mhero .mwhen{color:#6E6E73;font-size:12.5px;margin:0}
+.mh-r{display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:6px}
+.pl{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"n s" "v c";align-items:end;gap:2px 14px;background:none;border:0;border-radius:14px;padding:12px 14px;color:#fff;text-align:left;transition:background .25s}
+.pl:hover{background:rgba(255,255,255,.07)}
+.pl-n{grid-area:n;font-size:12.5px;color:#8E8E93;align-self:start}
+.pl-v{grid-area:v;font-size:22px;font-weight:600;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.pl-c{grid-area:c;justify-self:end;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+.pl-s{grid-area:s;width:96px;height:28px;justify-self:end}
+.pl-c.up,.pl-s.up{color:#3DDC6E}.pl-c.down,.pl-s.down{color:#FF5A4E}.pl-c.flat,.pl-s.flat{color:#8E8E93}
+.mhero .tape{position:relative;margin:0;border-radius:0;border-top:1px solid rgba(255,255,255,.12);background:#000}
+.heat{margin:40px 0 30px}
+.heat-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+.heat-head h2{font-family:var(--display);font-size:24px;font-weight:650;letter-spacing:-.03em;margin:0}
+.heat-head .note{margin:0;max-width:46ch}
+.heat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.hc{display:flex;flex-direction:column;gap:3px;text-align:left;border:0;border-radius:14px;padding:14px 15px 13px;min-height:98px;transition:transform .3s var(--ease),filter .3s}
+.hc:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.hc-n{font-size:12.5px;opacity:.85;line-height:1.25}
+.hc-v{font-size:19px;font-weight:600;letter-spacing:-.02em;margin-top:auto;font-variant-numeric:tabular-nums}
+.hc-c{font-size:12.5px;font-weight:500;font-variant-numeric:tabular-nums}
+.tile-m[aria-current]{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.tile-m[aria-current] .tm-name,.tile-m[aria-current] .tm-val{color:var(--ink)}
+.tile-m[aria-current] .tm-chg.flat{color:var(--muted)}
+.tile-m[aria-current] .tm-spark.up{color:var(--fav)}.tile-m[aria-current] .tm-spark.down{color:var(--adv)}
+.mgroup.mine{box-shadow:0 0 0 2px var(--accent)}
+.lprog span{background:var(--accent)}
+.lesson.ok .lnum{background:var(--accent)}
+#wi-range{accent-color:var(--accent)}
+.mback{display:none}
+.mdesk{margin-top:8px}
+@media (max-width:880px){
+  .mh-in{grid-template-columns:minmax(0,1fr);gap:26px;padding:34px 20px 24px}
+  .mhero h1{font-size:30px}
+  .mh-r{flex-direction:row;overflow-x:auto;scrollbar-width:none;padding:6px}
+  .mh-r::-webkit-scrollbar{display:none}
+  .pl{flex:none;width:168px;grid-template-columns:1fr;grid-template-areas:"n" "v" "c" "s"}
+  .pl-c,.pl-s{justify-self:start}
+  .heat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  header.top nav{background:rgba(255,255,255,.06)}
+}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -773,15 +840,28 @@ function mHeadline(){
   if(!ids.length)ids=["sp500","us10y","eurusd"].filter(function(id){return S.markets[id]&&S.markets[id].series});
   return ids.map(function(id){var m=S.markets[id];m.id=id;return mClause(m)});
 }
+var PULSE=["sp500","us10y","eurusd","brent","btc"];
+function mPulse(){
+  return PULSE.filter(function(id){return S.markets[id]&&S.markets[id].series}).map(function(id){var m=S.markets[id];m.id=id;var c=mChange(m,m.series.length-2),d=mDir(c.v);
+    return '<button class="pl" data-market="'+esc(id)+'"><span class="pl-n">'+esc(m.name)+'</span><span class="pl-v">'+esc(mNum(mLast(m)[1],m))+'</span><span class="pl-c '+d+'">'+esc(c.text)+'</span><span class="pl-s '+d+'">'+spark(m,120,34)+"</span></button>"}).join("");
+}
+function heatT(m){if(m.kind==="stat")return null;var c=mChange(m,m.series.length-2),sc=m.changeUnit==="pp"?0.1:(m.group==="Crypto"?5:(m.group==="Energy"?3:1.5));return Math.max(-1,Math.min(1,c.v/sc))}
+function mHeat(){
+  var list=mList();if(!list.length)return"";
+  return '<section class="heat" aria-labelledby="ht-h"><div class="heat-head"><h2 id="ht-h">The last session at a glance</h2><p class="note">Colour strength shows the size of each move against what is normal for that market. Tap any square.</p></div><div class="heat-grid">'+list.map(function(m){
+    var t=heatT(m),bg,fg,val,chg;
+    if(t===null){bg="var(--sunk)";fg="var(--ink)";val=m.valueText;chg=fmtDate(m.asOf)}
+    else{var a=(0.10+0.78*Math.abs(t)).toFixed(2);bg=t>=0?"rgba(18,140,64,"+a+")":"rgba(220,38,38,"+a+")";fg=Math.abs(t)>0.45?"#fff":"var(--ink)";val=mNum(mLast(m)[1],m);chg=mChange(m,m.series.length-2).text}
+    return '<button class="hc" data-market="'+esc(m.id)+'" style="background:'+bg+';color:'+fg+'"><span class="hc-n">'+esc(m.name)+'</span><span class="hc-v">'+esc(val)+'</span><span class="hc-c">'+esc(chg)+"</span></button>"}).join("")+"</div></section>";
+}
 function mHero(){
   var cl=mHeadline(),list=mList().filter(function(m){return m.kind!=="stat"});
   var from="",to="";list.forEach(function(m){var a=m.series[0][0],b=mLast(m)[0];if(!from||a<from)from=a;if(b>to)to=b});
   var tape=list.map(function(m){var c=mChange(m,m.series.length-2),d=mDir(c.v);return '<span class="tp"><b>'+esc(m.name)+"</b> "+esc(mNum(mLast(m)[1],m))+' <i class="'+d+'">'+esc(c.text)+"</i></span>"}).join("");
-  var bg=S.markets.sp500&&S.markets.sp500.series?'<div class="mback '+mDir(mChange(S.markets.sp500,0).v)+'" aria-hidden="true">'+spark(S.markets.sp500,600,220)+"</div>":"";
-  return '<section class="mhero" aria-labelledby="mh1">'+bg+'<h1 id="mh1">'+(cl.length?cl.map(function(c,i){return '<button class="clause" data-market="'+esc(c.id)+'" style="--i:'+i+'">'+esc(c.lead)+' <span class="'+c.dir+'">'+esc(c.num)+"</span>"+esc(c.tail||"")+".</button>"}).join(" "):"The market in plain words.")+"</h1>"+
-    '<p class="mwhen">'+(from?"From "+esc(fmtDate(from))+" to "+esc(fmtDate(to))+". ":"")+"Closing values entered by hand from the source named on each market. Not real time. Colour shows direction, not good or bad.</p>"+
-    '<div class="cmd"><label class="sr" for="mq">Search markets, companies and events</label><input class="search" id="mq" type="search" autocomplete="off" placeholder="Search a market, a company or a theme: 10-year, dollar, Nvidia, inflation…" value="'+esc(S.mq||"")+'"><div id="mq-out" aria-live="polite">'+mSearch()+"</div></div>"+
-    followRow()+(tape?'<div class="tape" aria-hidden="true"><div class="tape-run">'+tape+tape+"</div></div>":"")+"</section>";
+  return '<section class="mhero" aria-labelledby="mh1"><div class="mh-in"><div class="mh-l"><p class="mh-k">'+(from?esc(fmtDate(from))+" – "+esc(fmtDate(to)):"")+'</p><h1 id="mh1">'+(cl.length?cl.map(function(c,i){return '<button class="clause" data-market="'+esc(c.id)+'" style="--i:'+i+'">'+esc(c.lead)+' <span class="'+c.dir+'">'+esc(c.num)+"</span>"+esc(c.tail||"")+".</button>"}).join(" "):"The market in plain words.")+"</h1>"+
+    '<div class="cmd"><label class="sr" for="mq">Search markets, companies and events</label><input class="search" id="mq" type="search" autocomplete="off" placeholder="Search a market, a company or a theme" value="'+esc(S.mq||"")+'"><div id="mq-out" aria-live="polite">'+mSearch()+"</div></div>"+followRow()+
+    '<p class="mwhen">Closing values entered by hand from the source named on each market. Not real time. Colour shows direction, not good or bad.</p></div><div class="mh-r" aria-label="Key markets">'+mPulse()+"</div></div>"+
+    (tape?'<div class="tape" aria-hidden="true"><div class="tape-run">'+tape+tape+"</div></div>":"")+"</section>";
 }
 function mRelated(m){var ids=arr(m.related).map(String);return all().filter(function(b){return !b.private&&ids.indexOf(b.id)>=0})}
 function mDetail(m){
@@ -790,7 +870,8 @@ function mDetail(m){
   next.sort(function(a,b){return String(a.w.due).localeCompare(String(b.w.due))});
   var seen={};next=next.filter(function(n){var k=n.w.due+"|"+n.w.text;if(seen[k])return false;seen[k]=1;return true}).slice(0,4);
   var basis={official:"Official figure",provider:"Published by the index or data provider",reported:"As reported by press"}[m.basis];
-  var head='<article class="paper mdetail"><div class="meta"><span>'+esc(m.group)+"</span><span>"+esc(basis)+"</span></div><h2>"+esc(m.name)+'</h2><div class="row mact"><button class="btn'+(S.watch.indexOf(m.id)>=0?"":" ghost")+'" data-follow="'+esc(m.id)+'" aria-pressed="'+(S.watch.indexOf(m.id)>=0)+'">'+(S.watch.indexOf(m.id)>=0?"\u2713 In my list":"+ Add to my list")+"</button>"+(lessonFor(m.id)?'<button class="btn ghost" data-lesson="'+lessonFor(m.id).id+'">Learn: '+esc(lessonFor(m.id).title)+" \u00B7 "+lessonFor(m.id).min+" min</button>":"")+"</div>";
+  var head='<article class="paper mdetail"><div class="meta"><span>'+esc(m.group)+"</span><span>"+esc(basis)+"</span></div><h2>"+esc(m.name)+"</h2>";
+  var act='<div class="row mact"><button class="btn'+(S.watch.indexOf(m.id)>=0?"":" ghost")+'" data-follow="'+esc(m.id)+'" aria-pressed="'+(S.watch.indexOf(m.id)>=0)+'">'+(S.watch.indexOf(m.id)>=0?"\u2713 In my list":"+ Add to my list")+"</button>"+(lessonFor(m.id)?'<button class="btn ghost" data-lesson="'+lessonFor(m.id).id+'">Learn: '+esc(lessonFor(m.id).title)+" \u00B7 "+lessonFor(m.id).min+" min</button>":"")+"</div>";
   var body;
   if(m.kind==="stat")body='<p class="mbig">'+esc(m.valueText)+'</p><p class="note">'+esc(m.note||"")+" As of "+esc(fmtDate(m.asOf))+".</p>";
   else{
@@ -798,7 +879,7 @@ function mDetail(m){
     body='<p class="mbig">'+esc(mNum(last[1],m))+' <span class="tm-chg '+mDir(c1.v)+'">'+esc(c1.text)+' on the day</span></p>'+mChart(m)+'<div class="mrow"><span>'+esc(fmtDate(m.series[0][0]))+"</span><span>"+esc(fmtDate(last[0]))+'</span></div>'+
       '<div class="mstats"><div><b>'+esc(c0.text)+"</b><span>since "+esc(fmtDate(m.series[0][0]))+"</span></div><div><b>"+esc(mNum(Math.max.apply(null,vals),m))+"</b><span>high in this window</span></div><div><b>"+esc(mNum(Math.min.apply(null,vals),m))+"</b><span>low in this window</span></div></div>";
   }
-  return head+body+
+  return head+body+act+
     '<section class="sec"><h4>What it is</h4><p>'+esc(m.plain)+'</p></section><section class="sec"><h4>Why it matters to you</h4><p>'+esc(m.why)+"</p></section>"+
     (rel.length?'<section class="sec"><h4>Related events</h4><ul class="plain">'+rel.slice(0,4).map(function(b){return '<li class="cp"><span class="due">'+esc(fmtDate(b.eventDate))+'</span><button class="linkish" data-open="'+esc(b.id)+'">'+esc(b.title)+"</button></li>"}).join("")+"</ul></section>":"")+
     (next.length?'<section class="sec"><h4>What comes next</h4><ul class="plain">'+next.map(function(n){return '<li class="cp"><span class="due">'+esc(fmtDate(n.w.due))+"</span><span>"+esc(n.w.text)+"</span></li>"}).join("")+"</ul></section>":"")+
@@ -824,7 +905,7 @@ function vMarkets(){
   var soon=checkpoints().filter(function(c){return c.w.due&&stOf(c.w)==="open"&&!c.b.private}).sort(function(a,b){return String(a.w.due).localeCompare(String(b.w.due))});
   var seen={};soon=soon.filter(function(c){var k=c.w.due+"|"+c.w.text;if(seen[k])return false;seen[k]=1;return true}).slice(0,5);
   var latest=all().filter(function(b){return !b.private}).slice(0,3);
-  return mHero()+
+  return mHero()+mHeat()+
     '<div class="desk mdesk'+(S.msel?" open":"")+'"><div class="rail">'+groups+"</div><div class=\"paperwrap\"><button class=\"btn ghost back\" id=\"mback\">← All markets</button>"+mDetail(S.msel&&S.markets[S.msel])+"</div></div>"+
     mAhead()+'<div style="margin-top:28px">'+tryBar()+"</div>"+whatIf()+
     '<div class="two one">'+'<section class="paper"><h4 class="mh">Latest events</h4><ul class="plain">'+latest.map(function(b){return '<li class="cp"><span class="due">'+esc(fmtDate(b.eventDate))+'</span><button class="linkish" data-open="'+esc(b.id)+'">'+esc(b.title)+"</button></li>"}).join("")+'</ul><button class="btn ghost" data-view="briefing" style="margin-top:14px">All events</button></section></div>';
