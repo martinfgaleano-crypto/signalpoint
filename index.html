@@ -539,6 +539,9 @@ header.top nav button[aria-current="page"] .n{background:rgba(0,0,0,.08);color:#
 .aev ul{list-style:none;padding-left:0;gap:8px}
 .aev ul li{position:relative;padding-left:14px}
 .aev ul li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--c)}
+.lmks{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.lmk{border:0;background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:12.5px}
+.lmk:hover{background:rgba(47,91,255,.16)}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -1084,8 +1087,8 @@ function lBody(l){
   var st=lStep(l.id),n=l.steps.length,last=n+1,labels=l.steps.map(function(_,i){return "Read "+(i+1)}).concat(["Try it","Check"]);
   var dots='<div class="lsteps" role="tablist">'+labels.map(function(t,i){return '<button role="tab" aria-selected="'+(i===st)+'" class="'+(i<st?"done":"")+'" data-lgo="'+l.id+'" data-lgi="'+i+'"><span></span>'+esc(t)+"</button>"}).join("")+"</div>";
   var main=st<n?'<p class="lread">'+esc(l.steps[st])+"</p>":st===n?lTry(l.id):lQuiz(l.id);
-  var mk=l.markets.filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="btn ghost" data-market="'+esc(id)+'">See '+esc(S.markets[id].name)+"</button>"}).join("");
-  return '<div class="lesson-b">'+dots+'<div class="lstage" key="'+st+'">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+(st===n-1?"Try it":st===n?"Check yourself":"Next")+"</button>":"")+'<span class="lnav-sp"></span>'+mk+"</div></div>";
+  var mk=l.markets.filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="lmk" data-market="'+esc(id)+'">'+esc(S.markets[id].name)+"</button>"}).join("");
+  return '<div class="lesson-b">'+dots+'<div class="lstage" key="'+st+'">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+(st===n-1?"Try it":st===n?"Check yourself":"Next")+"</button>":"")+"</div>"+(mk?'<div class="lmks"><span>On the board:</span>'+mk+"</div>":"")+"</div>";
 }
 /* ---------- What is coming: grouped, coloured, explained ---------- */
 var ACAT={
