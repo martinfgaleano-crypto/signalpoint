@@ -379,7 +379,70 @@ a:hover{text-decoration-color:#000}
 .lesson-b li{line-height:1.5}
 .lesson-b .row{flex-wrap:wrap}
 @media (max-width:880px){.lesson-b{padding-left:20px}}
+
+.lsteps{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 18px}
+.lsteps button{display:flex;align-items:center;gap:7px;background:var(--sunk);border:0;border-radius:999px;padding:6px 12px 6px 8px;font-size:12.5px;color:var(--muted)}
+.lsteps button span{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.18)}
+.lsteps button.done span{background:var(--accent)}
+.lsteps button[aria-selected="true"]{background:#000;color:#fff}
+.lsteps button[aria-selected="true"] span{background:#fff}
+.lstage{animation:rise .35s var(--ease) both}
+.lread{font-size:19px;line-height:1.5;letter-spacing:-.01em;max-width:58ch;margin:0}
+.lnav{margin-top:20px;flex-wrap:wrap;align-items:center}
+.lnav-sp{flex:1}
+.ltry label{display:block;font-size:15px;margin-bottom:10px}
+.ltry label b{font-variant-numeric:tabular-nums;color:var(--accent)}
+.ltry input[type=range]{width:100%;max-width:520px;accent-color:var(--accent)}
+.ltry-out{margin:16px 0 6px}
+.ltry-out b{display:block;font-family:var(--display);font-size:clamp(30px,4vw,44px);font-weight:650;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.ltry-out p{margin:6px 0 0;max-width:58ch}
+.seg{display:inline-flex;background:var(--sunk);border-radius:999px;padding:3px;margin-bottom:16px}
+.seg button{border:0;background:none;border-radius:999px;padding:7px 18px;font-weight:500}
+.seg button[aria-pressed="true"]{background:#000;color:#fff}
+.lrows{display:flex;flex-direction:column;max-width:520px;border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.lrow{display:flex;justify-content:space-between;gap:16px;padding:12px 16px;border-top:1px solid var(--line)}
+.lrow:first-child{border-top:0}
+.lrow b.up{color:var(--adv)}.lrow b.down{color:var(--fav)}.lrow b.flat{color:var(--muted)}
+.lq-q{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:-.02em;margin:0 0 14px;max-width:46ch}
+.lq-o{display:flex;flex-direction:column;gap:8px;max-width:560px}
+.lq-o button{text-align:left;background:var(--surface);border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);border-radius:12px;padding:12px 16px;font-size:15px;transition:box-shadow .2s,background .2s}
+.lq-o button:hover:not(:disabled){box-shadow:inset 0 0 0 1px #000}
+.lq-o button.right{background:rgba(18,140,64,.12);box-shadow:inset 0 0 0 2px var(--fav)}
+.lq-o button.wrong{background:rgba(220,38,38,.08);box-shadow:inset 0 0 0 2px var(--adv)}
+.lq-f{margin:14px 0 10px;max-width:58ch}
+.lq-f.ok b{color:var(--fav)}.lq-f.no b{color:var(--adv)}
+.ahead .heat-head{margin-bottom:10px}
+.alg{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.alg span{display:flex;align-items:center;gap:6px}
+.alg i,.atl-pt i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.atl{position:relative;height:58px;margin:26px 8px 18px}
+.atl-bar{position:absolute;left:0;right:0;top:20px;height:2px;background:linear-gradient(90deg,#000,rgba(0,0,0,.12))}
+.atl-now{position:absolute;top:30px;transform:translateX(0);font-size:12px;font-weight:600}
+.atl-now::before{content:"";position:absolute;left:0;top:-14px;width:12px;height:12px;border-radius:50%;background:#000;transform:translateX(-50%)}
+.atl-pt{position:absolute;top:14px;display:flex;flex-direction:column;align-items:center;gap:3px;transform:translateX(-50%)}
+.atl-pt i{width:14px;height:14px;box-shadow:0 0 0 3px var(--bg)}
+.atl-pt em{font-style:normal;font-size:12px;color:var(--muted);white-space:nowrap}
+.ahead-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.aev{position:relative;background:var(--surface);box-shadow:var(--shadow);border-radius:18px;padding:18px 20px 18px 22px;overflow:hidden}
+.aev::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+.aev-top{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.aev-d{display:flex;flex-direction:column;align-items:center;justify-content:center;width:56px;height:60px;border-radius:14px;background:var(--c);color:#fff;font-size:12px}
+.aev-d b{font-family:var(--display);font-size:26px;font-weight:650;line-height:1}
+.aev-k{display:inline-block;font-size:11.5px;font-weight:600;color:var(--c);margin-bottom:3px}
+.aev h3{font-family:var(--display);font-size:17px;font-weight:650;letter-spacing:-.015em;line-height:1.25;margin:0 0 4px}
+.aev-w{font-size:12.5px;color:var(--muted)}
+.aev-why{font-size:14px;line-height:1.5;margin:14px 0 12px;color:var(--ink)}
+.aev-h{font-size:12px;font-weight:600;color:var(--muted);margin:10px 0 6px}
+.aev ul{margin:0;padding-left:18px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.aev ul .linkish{display:inline;font-size:14px;text-align:left}
+.atl-pt.hi{flex-direction:column-reverse;top:-6px}
+.atl-pt.hi i{margin-top:0}
+.amvs{display:flex;gap:6px;flex-wrap:wrap}
+.amv{border:0;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:12.5px}
+.amv:hover{background:color-mix(in srgb,var(--c) 22%,transparent)}
+@media (max-width:880px){.atl{margin:8px 14px 18px}.atl-pt em{font-size:11px}}
 @media (max-width:880px){.mback{display:none}.mchart{height:170px}}
+
 
 /* Hybrid: a dark terminal band on top, a light editorial body below, one blue accent for what you choose. */
 :root:root:root{--accent:#2F5BFF;--accent-ink:#fff;--accent-soft:rgba(47,91,255,.09);--bg:#FAFAFA;--surface:#fff}
@@ -447,6 +510,35 @@ header.top nav .n{color:#6E6E73}
   .heat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   header.top nav{background:rgba(255,255,255,.06)}
 }
+/* Navigation: icon + label on desktop; a bottom tab bar on phones. */
+header.top nav{display:flex;gap:2px;background:rgba(255,255,255,.06);box-shadow:none;padding:4px;border-radius:14px;flex-wrap:nowrap}
+header.top nav button{display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:10px;color:#A1A1A6;font-size:13.5px;font-weight:500;white-space:nowrap;position:relative}
+header.top nav button:hover{color:#fff;background:rgba(255,255,255,.06)}
+header.top nav button[aria-current="page"]{background:#fff;color:#000;box-shadow:none}
+header.top nav button[aria-current="page"] .ni{color:var(--accent)}
+.ni{width:17px;height:17px;flex:none}
+header.top nav .n{margin-left:0;font-size:11px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:rgba(255,255,255,.12);color:#D1D1D6;display:inline-grid;place-items:center;font-variant-numeric:tabular-nums}
+header.top nav .n:empty{display:none}
+header.top nav button[aria-current="page"] .n{background:rgba(0,0,0,.08);color:#000}
+@media (max-width:1100px) and (min-width:881px){header.top nav button{padding:7px 10px}header.top nav .nl{font-size:13px}}
+@media (max-width:880px){
+  header.top nav{position:fixed;left:0;right:0;bottom:0;z-index:20;margin:0;border-radius:0;background:rgba(0,0,0,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.12);padding:6px 4px calc(6px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+  header.top nav button{flex-direction:column;gap:3px;padding:6px 2px;font-size:10.5px;border-radius:10px;color:#8E8E93}
+  header.top nav button[aria-current="page"]{background:none;color:#fff}
+  header.top nav button[aria-current="page"] .ni{color:#fff}
+  header.top nav button[aria-current="page"]::before{content:"";position:absolute;top:-6px;left:28%;right:28%;height:2px;border-radius:2px;background:var(--accent)}
+  header.top nav .ni{width:22px;height:22px}
+  header.top nav .nl{font-size:10.5px;line-height:1.1;text-align:center}
+  header.top nav .n{position:absolute;top:1px;left:calc(50% + 6px);height:15px;min-width:15px;font-size:9.5px;padding:0 4px;background:var(--accent);color:#fff}
+  header.top nav button[aria-current="page"] .n{background:var(--accent);color:#fff}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  header.top .wrap{padding-top:12px;padding-bottom:12px}
+}
+.nl-s{display:none}
+@media (max-width:880px){.nl-l{display:none}.nl-s{display:inline}}
+.aev ul{list-style:none;padding-left:0;gap:8px}
+.aev ul li{position:relative;padding-left:14px}
+.aev ul li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--c)}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -460,12 +552,12 @@ header.top nav .n{color:#6E6E73}
     SignalPoint
   </div>
   <nav aria-label="Views">
-    <button data-view="markets">Markets</button>
-    <button data-view="briefing">Events<span class="n" id="n-briefs"></span></button>
-    <button data-view="checkpoints">Checkpoints<span class="n" id="n-open"></span></button>
-    <button data-view="exposure">My exposure<span class="n" id="n-wl"></span></button>
-    <button data-view="learn">Learn<span class="n" id="n-learn"></span></button>
-    <button data-view="method">How it works</button>
+    <button data-view="markets"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 3 6-8 3 3"/></svg><span class="nl">Markets</span></button>
+    <button data-view="briefing"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span class="nl">Events</span><span class="n" id="n-briefs"></span></button>
+    <button data-view="checkpoints"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg><span class="nl"><span class="nl-l">Checkpoints</span><span class="nl-s">Watch</span></span><span class="n" id="n-open"></span></button>
+    <button data-view="exposure"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg><span class="nl"><span class="nl-l">My exposure</span><span class="nl-s">Exposure</span></span><span class="n" id="n-wl"></span></button>
+    <button data-view="learn"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5L12 4l8.5 3.5L12 11z"/><path d="M7 9.5v4.5c0 1.4 2.2 3 5 3s5-1.6 5-3V9.5"/></svg><span class="nl">Learn</span><span class="n" id="n-learn"></span></button>
+    <button data-view="method"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><span class="nl"><span class="nl-l">How it works</span><span class="nl-s">About</span></span></button>
   </nav>
 </div></header>
 
@@ -477,7 +569,7 @@ header.top nav .n{color:#6E6E73}
 <script>
 (function(){
 "use strict";
-var S={watch:[],learned:{},lesson:null,wiKind:"fixed_borrowing",wiAmount:"500000",wiMove:null,markets:{},msel:null,mq:"",tryKind:"fixed_borrowing",tryAmount:"500000",items:[],moves:{},itemErr:"",briefs:[],loaded:false,loadNote:"",sel:null,cat:"All",q:"",mine:false,view:"briefing",wl:[],saved:[],draft:"",result:null,busy:false,err:"",db:null,uid:null,sample:null,canSave:false,desc:"",descDraft:null,descBusy:false,lens:{},lensBusy:null,lensErr:"",lensFor:null,saveNote:"",runs:[],auto:null,runsLoaded:false,gone:{terms:[],briefs:[]}};
+var S={lstep:{},lw:{},lq:{},watch:[],learned:{},lesson:null,wiKind:"fixed_borrowing",wiAmount:"500000",wiMove:null,markets:{},msel:null,mq:"",tryKind:"fixed_borrowing",tryAmount:"500000",items:[],moves:{},itemErr:"",briefs:[],loaded:false,loadNote:"",sel:null,cat:"All",q:"",mine:false,view:"briefing",wl:[],saved:[],draft:"",result:null,busy:false,err:"",db:null,uid:null,sample:null,canSave:false,desc:"",descDraft:null,descBusy:false,lens:{},lensBusy:null,lensErr:"",lensFor:null,saveNote:"",runs:[],auto:null,runsLoaded:false,gone:{terms:[],briefs:[]}};
 var IMP={favorable:["fav","▲","Favorable"],adverse:["adv","▼","Adverse"],mixed:["mix","◆","Mixed"],undetermined:["und","○","Undetermined"]};
 var VIEWS=["markets","briefing","checkpoints","exposure","learn","method"];
 var $=function(id){return document.getElementById(id)};
@@ -951,18 +1043,82 @@ function lessonFor(mid){for(var i=0;i<LESSONS.length;i++)if(LESSONS[i].markets.i
 function learnedCount(){return LESSONS.filter(function(l){return S.learned[l.id]}).length}
 function vLearn(){
   var done=learnedCount();
-  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Six short lessons, each tied to a number on the board. Read one, then open the market it explains.</div><div class="lprog" role="img" aria-label="'+done+" of "+LESSONS.length+' lessons understood"><span style="width:'+(done/LESSONS.length*100)+'%"></span></div><p class="note">'+done+" of "+LESSONS.length+" understood. The lessons are free in this pilot. Longer guided paths are an idea for the paid plans, not something that exists yet.</p></div>"+
+  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Six short lessons, each tied to a number on the board. Read three short steps, try it with a slider, then check yourself.</div><div class="lprog" role="img" aria-label="'+done+" of "+LESSONS.length+' lessons understood"><span style="width:'+(done/LESSONS.length*100)+'%"></span></div><p class="note">'+done+" of "+LESSONS.length+" understood. The lessons are free in this pilot. Longer guided paths are an idea for the paid plans, not something that exists yet.</p></div>"+
     '<div class="lessons">'+LESSONS.map(function(l,i){var open=S.lesson===l.id,ok=!!S.learned[l.id];
       return '<section class="lesson'+(open?" open":"")+(ok?" ok":"")+'"><button class="lesson-h" data-lesson="'+l.id+'" aria-expanded="'+open+'"><span class="lnum">'+(ok?"✓":i+1)+'</span><span class="ltitle">'+esc(l.title)+'</span><span class="lmin">'+l.min+" min</span></button>"+
-        (open?'<div class="lesson-b"><ol>'+l.steps.map(function(s){return "<li>"+esc(s)+"</li>"}).join("")+'</ol><div class="row"><button class="btn" data-learned="'+l.id+'">'+(ok?"Marked as understood":"I understand this")+"</button>"+l.markets.filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="btn ghost" data-market="'+esc(id)+'">See '+esc(S.markets[id].name)+"</button>"}).join("")+"</div></div>":"")+"</section>"}).join("")+"</div>";
+        (open?lBody(l):"")+"</section>"}).join("")+"</div>";
 }
 function dayDiff(iso){var d=new Date(iso+"T12:00:00Z"),n=new Date();n=Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate(),12);return Math.round((d-n)/864e5)}
+/* ---------- Learn, interactive: read, try, check ---------- */
+var LTRY={
+ index:{label:"If the S&P 500 moved",min:-10,max:10,step:0.5,def:-2,unit:"%",out:function(v){var a=10000*(1+v/100);return {big:money(a),line:"$10,000 in a fund that tracks the index would be worth "+money(a)+" ("+(v>0?"+":v<0?"−":"")+money(Math.abs(a-10000))+")."}},note:"Index funds follow their index almost exactly, before fees."},
+ yields:{label:"If the 10-year yield moved",min:-1.5,max:1.5,step:0.05,def:0.25,unit:" pts",out:function(v){var p=-8*v;return {big:(p>0?"+":p<0?"−":"")+Math.abs(p).toFixed(1)+"%",line:"A 10-year bond already held would change in price by about "+(p>0?"+":p<0?"−":"")+Math.abs(p).toFixed(1)+"%: "+money(10000*(1+p/100))+" for every $10,000."}},note:"Rule of thumb using a duration of about 8 years. Real bonds differ."},
+ fed:{choice:["Raise","Hold","Cut"],def:0,out:function(v){var t=[["Variable-rate loan payments","▲ tend to rise","— stay put","▼ tend to fall"],["Savings account rates","▲ tend to rise","— stay put","▼ tend to fall"],["The dollar","▲ often firms","— depends on surprise","▼ often eases"]];return {rows:t.map(function(r){return [r[0],r[1+v]]})}},note:"Typical direction, not a rule. Markets react to the surprise, not the decision itself."},
+ inflation:{label:"If prices rose every month by",min:0,max:1.5,step:0.05,def:0.4,unit:"%",out:function(v){var y=(Math.pow(1+v/100,12)-1)*100;return {big:y.toFixed(1)+"% a year",line:"Kept up for twelve months, that is about "+y.toFixed(1)+"% a year. $100 of shopping would cost "+money(100*(1+y/100))+"."}},note:"A single month is not a trend. Check the 12-month figure in the release."},
+ fx:{label:"If one dollar cost",min:2800,max:4600,step:25,def:3316.7,unit:" pesos",fmt:function(v){return Number(v).toLocaleString("en-US",{maximumFractionDigits:2})},out:function(v){var d=(v/3148.02-1)*100;return {big:Math.round(100*v).toLocaleString("en-US")+" COP",line:"A US$100 purchase would cost "+Math.round(100*v).toLocaleString("en-US")+" pesos. Against the 3,148 of October 28, the dollar would be "+(d>=0?"stronger":"weaker")+" by "+Math.abs(d).toFixed(1)+"%."}},note:"Starts at the official TRM of November 14."},
+ oil:{label:"If Brent crude moved",min:-30,max:30,step:5,def:10,unit:"%",out:function(v){var f=60*(1+v/100);return {big:money(f),line:"A $60 tank would cost "+money(f)+" only if the pump price followed crude fully and the move lasted. In practice it follows partly and later."}},note:"An upper bound, not a forecast."}
+};
+var LQUIZ={
+ index:{q:"The S&P 500 falls 2% in a day. What does that tell you?",o:["Every company in it fell 2%","The 500 companies in it are worth about 2% less in total than the day before","Your savings fell 2% for the year"],a:1,why:"An index is an average weighted by size. Some companies rose that day while others fell more."},
+ yields:{q:"The 10-year yield rises. What happens to bonds people already hold?",o:["Their price falls","Their price rises","Nothing changes"],a:0,why:"Older bonds pay less than new ones, so their price drops until their yield matches."},
+ fed:{q:"The Fed raises its target range. What usually happens to a variable-rate loan?",o:["Payments tend to fall","Nothing, ever","Payments tend to rise"],a:2,why:"Variable rates are tied to short-term rates, which follow the Fed's range."},
+ inflation:{q:"CPI rose 0.4% in October. Is that the annual inflation rate?",o:["Yes","No, it is the change over one month","It is the forecast for next year"],a:1,why:"Monthly figures compound. 0.4% a month for a year is about 4.9%."},
+ fx:{q:"The dollar in pesos goes from 3,150 to 3,300. What happened?",o:["The peso got stronger","Nothing important","The dollar got stronger against the peso"],a:2,why:"One dollar now buys more pesos, so dollar prices cost more in pesos."},
+ oil:{q:"Brent jumps 5% in one day. When does it reach the pump?",o:["With a delay and only in part, if the move lasts","Immediately and in full","Never"],a:0,why:"Taxes, refining and contracts sit between crude and the pump, and one-day moves often reverse."}
+};
+function lStep(id){return S.lstep[id]||0}
+function lTryVal(id){var t=LTRY[id];var v=S.lw[id];return v==null?t.def:v}
+function lTry(id){
+  var t=LTRY[id],v=lTryVal(id);
+  if(t.choice){var r=t.out(v);return '<div class="ltry"><div class="seg" role="group" aria-label="Fed decision">'+t.choice.map(function(c,i){return '<button data-lw="'+id+'" data-lwv="'+i+'" aria-pressed="'+(i===v)+'">'+c+"</button>"}).join("")+'</div><div class="lrows">'+r.rows.map(function(x){return '<div class="lrow"><span>'+esc(x[0])+'</span><b class="'+(/▲/.test(x[1])?"up":/▼/.test(x[1])?"down":"flat")+'">'+esc(x[1])+"</b></div>"}).join("")+'</div><p class="note">'+esc(t.note)+"</p></div>"}
+  var r=t.out(v),shown=t.fmt?t.fmt(v):(v>0&&t.unit!=="%"||v>0&&id!=="inflation"?"+":"")+v;
+  if(id==="inflation")shown=String(v);
+  return '<div class="ltry"><label for="lw-'+id+'">'+esc(t.label)+' <b id="lwv-'+id+'">'+esc(shown)+esc(t.unit)+'</b></label><input id="lw-'+id+'" data-lwr="'+id+'" type="range" min="'+t.min+'" max="'+t.max+'" step="'+t.step+'" value="'+v+'"><div class="ltry-out" id="lwo-'+id+'"><b>'+esc(r.big)+"</b><p>"+esc(r.line)+'</p></div><p class="note">'+esc(t.note)+"</p></div>";
+}
+function lQuiz(id){
+  var z=LQUIZ[id],pick=S.lq[id];
+  return '<div class="lquiz"><p class="lq-q">'+esc(z.q)+'</p><div class="lq-o">'+z.o.map(function(o,i){var st=pick==null?"":i===z.a?" right":i===pick?" wrong":"";return '<button data-lqa="'+id+'" data-lqv="'+i+'" class="'+st.trim()+'"'+(pick!=null?" disabled":"")+">"+esc(o)+"</button>"}).join("")+"</div>"+
+    (pick!=null?'<p class="lq-f '+(pick===z.a?"ok":"no")+'" role="status"><b>'+(pick===z.a?"Right.":"Not quite.")+"</b> "+esc(z.why)+"</p>"+(pick===z.a?"":'<button class="btn ghost" data-lqr="'+id+'">Try again</button>'):"")+"</div>";
+}
+function lBody(l){
+  var st=lStep(l.id),n=l.steps.length,last=n+1,labels=l.steps.map(function(_,i){return "Read "+(i+1)}).concat(["Try it","Check"]);
+  var dots='<div class="lsteps" role="tablist">'+labels.map(function(t,i){return '<button role="tab" aria-selected="'+(i===st)+'" class="'+(i<st?"done":"")+'" data-lgo="'+l.id+'" data-lgi="'+i+'"><span></span>'+esc(t)+"</button>"}).join("")+"</div>";
+  var main=st<n?'<p class="lread">'+esc(l.steps[st])+"</p>":st===n?lTry(l.id):lQuiz(l.id);
+  var mk=l.markets.filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="btn ghost" data-market="'+esc(id)+'">See '+esc(S.markets[id].name)+"</button>"}).join("");
+  return '<div class="lesson-b">'+dots+'<div class="lstage" key="'+st+'">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+(st===n-1?"Try it":st===n?"Check yourself":"Next")+"</button>":"")+'<span class="lnav-sp"></span>'+mk+"</div></div>";
+}
+/* ---------- What is coming: grouped, coloured, explained ---------- */
+var ACAT={
+ fed:{label:"Central bank",col:"#2F5BFF",why:"The Federal Reserve decides whether to change interest rates, or publishes the record of how it decided. Rates, the dollar and stocks often react within minutes.",moves:["us2y","us10y","eurusd","usdcop","sp500"]},
+ inflation:{label:"Inflation data",col:"#E07A00",why:"A new reading of how fast prices are rising. A figure above what was expected tends to push interest rates up; below, the opposite.",moves:["us2y","us10y","eurusd","sp500"]},
+ earnings:{label:"Company results",col:"#8B3DF0",why:"The company publishes revenue, profit and its outlook. Its shares, and others in its sector, can move sharply the next day.",moves:["nasdaq","sp500"]},
+ energy:{label:"Energy data",col:"#0E9F8E",why:"The US energy agency publishes official oil prices. It confirms or corrects what press reports said at the time.",moves:["brent"]},
+ other:{label:"Follow-up",col:"#6B6B70",why:"A development the briefs are tracking. It will be marked as observed or not with a dated source.",moves:[]}
+};
+function aKind(t){t=String(t);if(/\bEIA\b|crude|Brent|WTI|\boil\b/i.test(t))return"energy";if(/\bCPI\b|\bPPI\b|inflation/i.test(t)&&!/meeting|minutes/i.test(t))return"inflation";if(/minutes|FOMC|\bFed\b|Committee|federal funds|target range|dissent/i.test(t))return"fed";if(/reports .*results|earnings/i.test(t))return"earnings";return"other"}
+function aTitle(k,items){
+  var t=items.map(function(c){return c.w.text}).join(" ");
+  if(k==="fed")return /minutes/i.test(t)?"Fed minutes from the October meeting":"Federal Reserve rate decision";
+  if(k==="inflation")return /\bCPI\b/.test(t)?"US consumer inflation report (CPI)":"US producer prices report (PPI)";
+  if(k==="earnings"){var m=t.match(/([A-Z][A-Za-z&.]+(?: [A-Z][A-Za-z&.]+)?) reports/);return (m?m[1]:"Company")+" quarterly results"}
+  if(k==="energy")return "Official oil price data (EIA)";
+  return items[0].w.text;
+}
+function aEvents(){
+  var g={},order=[];
+  checkpoints().forEach(function(c){if(!c.w.due||stOf(c.w)!=="open"||c.b.private)return;var k=aKind(c.w.text),key=c.w.due+"|"+k;if(!g[key]){g[key]={due:c.w.due,kind:k,items:[]};order.push(key)}g[key].items.push(c)});
+  return order.map(function(k){var e=g[k],seen={};e.items=e.items.filter(function(c){var x=String(c.w.text).toLowerCase().replace(/[^a-z0-9]+/g," ").split(" ").slice(0,4).join(" ");if(seen[x])return false;seen[x]=1;return true});e.title=aTitle(e.kind,e.items);return e}).sort(function(a,b){return a.due.localeCompare(b.due)});
+}
 function mAhead(){
-  var soon=checkpoints().filter(function(c){return c.w.due&&stOf(c.w)==="open"&&!c.b.private}).sort(function(a,b){return String(a.w.due).localeCompare(String(b.w.due))});
-  var seen={};soon=soon.filter(function(c){var k=c.w.due+"|"+String(c.w.text).toLowerCase().split(/\s+/).slice(0,2).join(" ");if(seen[k])return false;seen[k]=1;return true}).slice(0,6);
-  if(!soon.length)return"";
-  return '<section class="ahead" aria-labelledby="ah-h"><h2 id="ah-h">What is coming</h2><div class="ahead-grid">'+soon.map(function(c){var dd=dayDiff(c.w.due),d=new Date(c.w.due+"T12:00:00Z"),when=dd===0?"today":dd===1?"tomorrow":dd>1?"in "+dd+" days":"date passed, not yet confirmed";
-    return '<button class="ahead-i" data-open="'+esc(c.b.id)+'"><span class="ah-d"><b>'+d.getUTCDate()+"</b>"+esc(d.toLocaleDateString("en-US",{month:"short",timeZone:"UTC"}))+'</span><span class="ah-t">'+esc(c.w.text)+'</span><span class="ah-w">'+esc(when)+"</span></button>"}).join("")+"</div></section>";
+  var ev=aEvents();if(!ev.length)return"";
+  var first=dayDiff(ev[0].due),lastD=dayDiff(ev[ev.length-1].due),span=Math.max(1,lastD-Math.min(0,first)),base=Math.min(0,first);
+  var dates={};ev.forEach(function(e){(dates[e.due]=dates[e.due]||[]).push(e)});
+  var line='<div class="atl" aria-hidden="true"><div class="atl-bar"></div><span class="atl-now" style="left:0%">Today</span>'+Object.keys(dates).map(function(d){var x=(dayDiff(d)-base)/span*100,dd=new Date(d+"T12:00:00Z");return '<span class="atl-pt'+(Object.keys(dates).indexOf(d)%2?" hi":"")+'" style="left:'+x.toFixed(1)+'%">'+dates[d].map(function(e){return '<i style="background:'+ACAT[e.kind].col+'"></i>'}).join("")+'<em>'+esc(dd.toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"}))+"</em></span>"}).join("")+"</div>";
+  var legend='<div class="alg">'+Object.keys(ACAT).filter(function(k){return ev.some(function(e){return e.kind===k})}).map(function(k){return '<span><i style="background:'+ACAT[k].col+'"></i>'+esc(ACAT[k].label)+"</span>"}).join("")+"</div>";
+  return '<section class="ahead" aria-labelledby="ah-h"><div class="heat-head"><h2 id="ah-h">What is coming</h2>'+legend+"</div>"+line+'<div class="ahead-grid">'+ev.map(function(e){
+    var c=ACAT[e.kind],dd=dayDiff(e.due),d=new Date(e.due+"T12:00:00Z"),when=dd===0?"Today":dd===1?"Tomorrow":dd>1?"In "+dd+" days":"Date passed, awaiting confirmation";
+    var mv=c.moves.filter(function(id){return S.markets[id]}).map(function(id){return '<button class="amv" data-market="'+esc(id)+'">'+esc(S.markets[id].name)+"</button>"}).join("");
+    return '<article class="aev" style="--c:'+c.col+'"><div class="aev-top"><span class="aev-d"><b>'+d.getUTCDate()+"</b>"+esc(d.toLocaleDateString("en-US",{month:"short",timeZone:"UTC"}))+'</span><div><span class="aev-k">'+esc(c.label)+'</span><h3>'+esc(e.title)+'</h3><span class="aev-w">'+esc(when)+'</span></div></div><p class="aev-why">'+esc(c.why)+'</p><p class="aev-h">What the briefs are watching for</p><ul>'+e.items.slice(0,3).map(function(x){return '<li><button class="linkish" data-open="'+esc(x.b.id)+'">'+esc(x.w.text)+"</button></li>"}).join("")+"</ul>"+(mv?'<p class="aev-h">Can move</p><div class="amvs">'+mv+"</div>":"")+"</article>"}).join("")+'</div><p class="note" style="margin-top:12px">These are scheduled dates and open questions, not predictions. Each is closed later with a dated source.</p></section>';
 }
 function hasProfile(){return !!(S.desc.trim()||S.wl.length)}
 var DIR={helps:["fav","▲","Helps"],hurts:["adv","▼","Hurts"],mixed:["mix","◆","Mixed"],unclear:["und","○","Unclear"]};
@@ -1092,6 +1248,10 @@ document.addEventListener("click",function(e){
   if(t.id==="try-keep"){var ta=Number(S.tryAmount);if(S.personalReady&&KINDS[S.tryKind]&&isFinite(ta)&&ta>0&&ta<=1e12&&S.items.length<12){S.items.push({id:"i"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),kind:S.tryKind,amount:ta});S.tryAmount="";persist();return go("exposure")}return}
   if(t.dataset.follow){var fi=S.watch.indexOf(t.dataset.follow);if(fi>=0)S.watch.splice(fi,1);else if(S.markets[t.dataset.follow]&&S.watch.length<13)S.watch.push(t.dataset.follow);persist();return render()}
   if(t.dataset.lesson){S.lesson=S.view==="learn"&&S.lesson===t.dataset.lesson?null:t.dataset.lesson;if(S.view!=="learn")return go("learn");return render()}
+  if(t.dataset.lgo){S.lstep[t.dataset.lgo]=+t.dataset.lgi;return render()}
+  if(t.dataset.lw){S.lw[t.dataset.lw]=+t.dataset.lwv;return render()}
+  if(t.dataset.lqa){var qv=+t.dataset.lqv;S.lq[t.dataset.lqa]=qv;if(LQUIZ[t.dataset.lqa]&&qv===LQUIZ[t.dataset.lqa].a){S.learned[t.dataset.lqa]=true;persist()}return render()}
+  if(t.dataset.lqr){delete S.lq[t.dataset.lqr];return render()}
   if(t.dataset.learned){if(S.learned[t.dataset.learned])delete S.learned[t.dataset.learned];else S.learned[t.dataset.learned]=true;persist();return render()}
   if(t.dataset.market){S.msel=t.dataset.market;S.mq="";if(S.view!=="markets")return go("markets");S.anim="paper";render();if(!window.matchMedia("(min-width:881px)").matches)window.scrollTo(0,0);return}
   if(t.id==="mback"){S.msel=null;return render()}
@@ -1102,6 +1262,7 @@ document.addEventListener("click",function(e){
   if(t.id==="desc-save")return saveProfile();
 });
 document.addEventListener("input",function(e){
+  if(e.target.dataset&&e.target.dataset.lwr){var lid=e.target.dataset.lwr,tt=LTRY[lid],lv=+e.target.value;S.lw[lid]=lv;var r=tt.out(lv),o=$("lwo-"+lid),b=$("lwv-"+lid);if(o)o.innerHTML="<b>"+esc(r.big)+"</b><p>"+esc(r.line)+"</p>";if(b)b.textContent=(tt.fmt?tt.fmt(lv):(lv>0&&lid!=="inflation"?"+":"")+lv)+tt.unit;return}
   if(e.target.id==="wi-amount"){S.wiAmount=e.target.value;var w1=$("wi-out");if(w1)w1.innerHTML=wiOut();return}
   if(e.target.id==="wi-range"){S.wiMove=e.target.value;var w2=$("wi-out");if(w2)w2.innerHTML=wiOut();return}
   if(e.target.id==="mq"){S.mq=e.target.value;var mo=$("mq-out");if(mo)mo.innerHTML=mSearch();return}
