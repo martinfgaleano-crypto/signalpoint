@@ -613,7 +613,8 @@ header.top nav .n{display:none}
   header.top nav button{padding:6px 2px;font-size:10.5px;background:none}
   header.top nav button[aria-current="page"]::after{display:none}
   header.top nav .n{display:inline-grid}
-  .topro{margin-left:auto;padding:6px 14px;font-size:13px}
+  .tosign{margin-left:auto;padding:6px 8px;font-size:13px}
+  .topro{margin-left:0;padding:6px 14px;font-size:13px}
   .mdetail{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 20px}
   .md-r{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:8px}
   .plgrid{grid-template-columns:minmax(0,1fr)}
@@ -625,6 +626,36 @@ header.top nav .n{display:none}
 .plgrid.two-col{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px;margin:0 auto}
 @media (max-width:880px){.plgrid.two-col{grid-template-columns:minmax(0,1fr)}}
 #view p.plfoot{text-align:center;max-width:none}
+
+/* Pro gating */
+.insight,.week{margin:22px 0;padding:18px 20px;border:1px solid #D8DEF0;border-left:3px solid var(--accent);background:#F7F9FF;border-radius:6px}
+.week{margin:0 0 22px}
+.ins-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.ins-h h4,.ins-h h2{margin:0}.ins-h h2{font-size:1.25rem}
+.insight h5,.week h5{margin:14px 0 4px;font-size:.95rem}
+.insight p,.week p{margin:0 0 6px;line-height:1.6}
+.protag{font-size:.72rem;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.ins-lock{position:relative;margin-top:10px;-webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}
+.ins-ghost{margin:10px 0}.ins-ghost b{display:block;font-size:.9rem;margin-bottom:6px;color:#3A4466}
+.ins-ghost i{display:block;height:9px;border-radius:4px;background:#DCE2F2;margin:6px 0}.ins-ghost i.s{width:60%}
+.procta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;padding:14px;border-radius:6px;background:#0F1322;color:#fff}
+.procta b{display:block}.procta span{font-size:.85rem;opacity:.75}
+.procta .btn{background:var(--accent);color:#fff;border-color:var(--accent)}
+.procta .btn.ghost{background:none;color:#fff;border-color:rgba(255,255,255,.4)}
+.lsec{font-size:1.1rem;margin:26px 0 10px;display:flex;align-items:center;gap:10px}
+.freetag{font-size:.7rem;font-weight:700;color:#0E7A4E;background:#E3F5EC;border-radius:999px;padding:2px 8px;vertical-align:middle}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.ccard{text-align:left;display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid #DDE1EA;border-radius:8px;background:#fff;cursor:pointer;font:inherit;color:inherit}
+.ccard:hover,.ccard.on{border-color:var(--accent)}.ccard.on{box-shadow:0 0 0 1px var(--accent) inset}
+.cc-top{display:flex;justify-content:space-between;align-items:center}.cc-n,.cc-f{font-size:.8rem;color:#5B6478}.cc-b{font-size:.88rem;line-height:1.45}
+.course-open{margin-top:16px}.ctitle{margin:0 0 8px}
+.ltitle small{display:block;font-weight:400;font-size:.82rem;color:#5B6478;margin-top:2px}
+.tosign{flex:none;margin-left:auto;background:none;border:0;color:#C9D2EA;font:inherit;font-size:.9rem;cursor:pointer;padding:6px 10px}
+.tosign:hover,.tosign[aria-current="page"]{color:#fff}
+.acct{max-width:520px;margin:30px auto;padding:0 4px}.acct form{gap:8px;margin:14px 0}.acct .search{flex:1;min-width:200px}
+.plan-badge{display:inline-block;font-weight:700;font-size:.85rem;padding:4px 10px;border-radius:999px;background:#EEF0F5}.plan-badge.pro{background:var(--accent);color:#fff}
+.linkish{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;font:inherit;cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -644,6 +675,7 @@ header.top nav .n{display:none}
     <button data-view="learn"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5L12 4l8.5 3.5L12 11z"/><path d="M7 9.5v4.5c0 1.4 2.2 3 5 3s5-1.6 5-3V9.5"/></svg><span class="nl">Learn</span><span class="n" id="n-learn"></span></button>
     <button data-view="exposure"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg><span class="nl">For you</span><span class="n" id="n-wl"></span></button>
   </nav>
+  <button class="tosign" data-view="account" id="tosign">Sign in</button>
   <button class="topro" data-view="plans">Plans</button>
 </div></header>
 
@@ -655,9 +687,9 @@ header.top nav .n{display:none}
 <script>
 (function(){
 "use strict";
-var S={lstep:{},lw:{},lq:{},watch:[],learned:{},lesson:null,wiKind:"fixed_borrowing",wiAmount:"500000",wiMove:null,markets:{},msel:null,mq:"",tryKind:"fixed_borrowing",tryAmount:"500000",items:[],moves:{},itemErr:"",briefs:[],loaded:false,loadNote:"",sel:null,cat:"All",q:"",mine:false,view:"briefing",wl:[],saved:[],draft:"",result:null,busy:false,err:"",db:null,uid:null,sample:null,canSave:false,desc:"",descDraft:null,descBusy:false,lens:{},lensBusy:null,lensErr:"",lensFor:null,saveNote:"",runs:[],auto:null,runsLoaded:false,gone:{terms:[],briefs:[]}};
+var S={prem:null,user:null,plan:null,course:null,authNote:"",authBusy:false,lstep:{},lw:{},lq:{},watch:[],learned:{},lesson:null,wiKind:"fixed_borrowing",wiAmount:"500000",wiMove:null,markets:{},msel:null,mq:"",tryKind:"fixed_borrowing",tryAmount:"500000",items:[],moves:{},itemErr:"",briefs:[],loaded:false,loadNote:"",sel:null,cat:"All",q:"",mine:false,view:"briefing",wl:[],saved:[],draft:"",result:null,busy:false,err:"",db:null,uid:null,sample:null,canSave:false,desc:"",descDraft:null,descBusy:false,lens:{},lensBusy:null,lensErr:"",lensFor:null,saveNote:"",runs:[],auto:null,runsLoaded:false,gone:{terms:[],briefs:[]}};
 var IMP={favorable:["fav","▲","Favorable"],adverse:["adv","▼","Adverse"],mixed:["mix","◆","Mixed"],undetermined:["und","○","Undetermined"]};
-var VIEWS=["markets","briefing","checkpoints","learn","exposure","plans","method"];
+var VIEWS=["markets","briefing","checkpoints","learn","exposure","plans","method","account"];
 var $=function(id){return document.getElementById(id)};
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function imp(k){return IMP[k]||IMP.undetermined}
@@ -833,7 +865,7 @@ function paper(b,opts){
   return '<article class="paper">'+
     '<div class="meta"><span>'+fmtDate(b.eventDate)+"</span><span>"+esc(b.category||"")+"</span>"+(b.region?"<span>"+esc(b.region)+"</span>":"")+(gradeTxt?'<span class="grade">Evidence '+esc(gradeTxt)+"</span>":"")+"</div>"+
     "<h2>"+esc(b.title)+"</h2>"+
-    '<p class="lede">'+esc(b.summary)+"</p>"+(opts.save||b.private?"":lensBlock(b)+numbersBlock(b))+
+    '<p class="lede">'+esc(b.summary)+"</p>"+(opts.save||b.private?"":insightBlock(b)+lensBlock(b)+numbersBlock(b))+
     '<section class="sec"><h4>Impact by actor</h4>'+((b.actors||[]).length?'<div class="bar" aria-hidden="true">'+(b.actors||[]).map(function(a){return '<i class="'+imp(a.impact)[0]+'" style="flex:1"></i>'}).join("")+"</div>":"")+'<div class="actors">'+((b.actors||[]).map(function(a){var i=imp(a.impact);return '<div class="actor"><div><span class="who">'+esc(a.name)+"</span>"+(a.ticker?'<span class="tk">'+esc(a.ticker)+"</span>":"")+'</div><div><span class="imp '+i[0]+'">'+i[1]+" "+i[2]+"</span></div><p>"+esc(a.reason)+"</p></div>"}).join("")||'<p class="note">No actor could be assessed from the source.</p>')+"</div></section>"+
     '<section class="sec"><h4>What to watch · observable follow-ups</h4><ul class="plain">'+((b.watch||[]).map(function(w){var st=stOf(w);return '<li class="cp"><span class="box '+esc(st)+'" title="'+esc(st)+'">'+(st==="observed"?"✓":st==="not_observed"?"✕":"")+"</span><span>"+esc(w.text)+((w.outcome||w.note)?'<br><span class="note">'+esc(w.outcome||w.note)+"</span>":"")+'</span><span class="due">'+(w.due?"by "+fmtDate(w.due):"")+"</span></li>"}).join("")||"<li class=\"note\">None stated.</li>")+"</ul></section>"+
     '<section class="sec"><h4>What we do not know</h4><ul class="plain unk">'+((b.unknowns||[]).map(function(x){return"<li>"+esc(x)+"</li>"}).join("")||"<li>Nothing flagged.</li>")+"</ul></section>"+
@@ -885,7 +917,7 @@ function vBriefing(){
   var rail=!S.loaded?'<div class="skel"></div><div class="skel"></div><div class="skel"></div>':
     shown.length?shown.map(slip).join(""):'<div class="empty">'+(list.length?"No events match these filters.":esc(S.loadNote||"No briefs published yet."))+"</div>";
   return '<div class="hero"><div class="strip"><h1>The news behind the numbers.</h1><div class="facts">Who is affected, what would prove the reading wrong, and what nobody knows yet.</div><div class="stats"><div class="stat"><b>'+S.briefs.length+"</b><span>events briefed</span></div><div class=\"stat\"><b>"+prim+"</b><span>from primary documents</span></div><div class=\"stat\"><b>"+open+"</b><span>open checkpoints</span></div></div>"+statusLine()+"</div>"+pulse()+"</div>"+
-    '<div class="desk'+(S.sel&&byId(S.sel)?" open":"")+'"><div class="rail"><div class="tools"><input class="search" id="q" type="search" placeholder="Search company, ticker or theme" value="'+esc(S.q)+'" aria-label="Search events">'+
+    weekBlock()+'<div class="desk'+(S.sel&&byId(S.sel)?" open":"")+'"><div class="rail"><div class="tools"><input class="search" id="q" type="search" placeholder="Search company, ticker or theme" value="'+esc(S.q)+'" aria-label="Search events">'+
     '<div class="chips">'+cats.map(function(c){return '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c)+"</button>"}).join("")+
     (S.wl.length?'<button class="chip" id="mine" aria-pressed="'+S.mine+'">★ My exposure</button>':"")+"</div></div>"+
     (S.wl.length?'<p class="note">Keyword matches first. Open an event for a source-based reading.</p>':"")+'<div id="rail" style="display:flex;flex-direction:column;gap:10px">'+rail+"</div></div>"+
@@ -1122,14 +1154,6 @@ var LESSONS=[
  {id:"oil",title:"Oil and what its price reaches",min:2,markets:["brent"],steps:["Brent is the crude oil benchmark most of the world outside the US is priced from. Its price reacts fast to supply news: conflicts, production decisions, inventories.","Fuel, freight and air fares follow crude with a delay and only in part, because taxes, refining and contracts sit in between. A one-day jump often reverses before it reaches anyone's bill.","A sustained move is different. It reaches transport costs first, then the price of goods that have to be moved, and shows up in inflation figures a few months later."]}
 ];
 function lessonFor(mid){for(var i=0;i<LESSONS.length;i++)if(LESSONS[i].markets.indexOf(mid)>=0)return LESSONS[i];return null}
-function learnedCount(){return LESSONS.filter(function(l){return S.learned[l.id]}).length}
-function vLearn(){
-  var done=learnedCount();
-  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Six short lessons, each tied to a number on the board. Read three short steps, try it with a slider, then check yourself.</div><div class="lprog" role="img" aria-label="'+done+" of "+LESSONS.length+' lessons understood"><span style="width:'+(done/LESSONS.length*100)+'%"></span></div><p class="note">'+done+" of "+LESSONS.length+" understood. The lessons are free in this pilot. Longer guided paths are an idea for the paid plans, not something that exists yet.</p></div>"+
-    '<div class="lessons">'+LESSONS.map(function(l,i){var open=S.lesson===l.id,ok=!!S.learned[l.id];
-      return '<section class="lesson'+(open?" open":"")+(ok?" ok":"")+'"><button class="lesson-h" data-lesson="'+l.id+'" aria-expanded="'+open+'"><span class="lnum">'+(ok?"✓":i+1)+'</span><span class="ltitle">'+esc(l.title)+'</span><span class="lmin">'+l.min+" min</span></button>"+
-        (open?lBody(l):"")+"</section>"}).join("")+'<section class="lesson locked"><div class="lesson-h"><span class="lnum">+</span><span class="ltitle">Guided paths: investing basics, reading a central bank, understanding a company report</span>'+proLock("Guided learning paths")+"</div></section></div>";
-}
 function dayDiff(iso){var d=new Date(iso+"T12:00:00Z"),n=new Date();n=Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate(),12);return Math.round((d-n)/864e5)}
 /* ---------- Learn, interactive: read, try, check ---------- */
 var LTRY={
@@ -1156,18 +1180,6 @@ function lTry(id){
   var r=t.out(v),shown=t.fmt?t.fmt(v):(v>0&&t.unit!=="%"||v>0&&id!=="inflation"?"+":"")+v;
   if(id==="inflation")shown=String(v);
   return '<div class="ltry"><label for="lw-'+id+'">'+esc(t.label)+' <b id="lwv-'+id+'">'+esc(shown)+esc(t.unit)+'</b></label><input id="lw-'+id+'" data-lwr="'+id+'" type="range" min="'+t.min+'" max="'+t.max+'" step="'+t.step+'" value="'+v+'"><div class="ltry-out" id="lwo-'+id+'"><b>'+esc(r.big)+"</b><p>"+esc(r.line)+'</p></div><p class="note">'+esc(t.note)+"</p></div>";
-}
-function lQuiz(id){
-  var z=LQUIZ[id],pick=S.lq[id];
-  return '<div class="lquiz"><p class="lq-q">'+esc(z.q)+'</p><div class="lq-o">'+z.o.map(function(o,i){var st=pick==null?"":i===z.a?" right":i===pick?" wrong":"";return '<button data-lqa="'+id+'" data-lqv="'+i+'" class="'+st.trim()+'"'+(pick!=null?" disabled":"")+">"+esc(o)+"</button>"}).join("")+"</div>"+
-    (pick!=null?'<p class="lq-f '+(pick===z.a?"ok":"no")+'" role="status"><b>'+(pick===z.a?"Right.":"Not quite.")+"</b> "+esc(z.why)+"</p>"+(pick===z.a?"":'<button class="btn ghost" data-lqr="'+id+'">Try again</button>'):"")+"</div>";
-}
-function lBody(l){
-  var st=lStep(l.id),n=l.steps.length,last=n+1,labels=l.steps.map(function(_,i){return "Read "+(i+1)}).concat(["Try it","Check"]);
-  var dots='<div class="lsteps" role="tablist">'+labels.map(function(t,i){return '<button role="tab" aria-selected="'+(i===st)+'" class="'+(i<st?"done":"")+'" data-lgo="'+l.id+'" data-lgi="'+i+'"><span></span>'+esc(t)+"</button>"}).join("")+"</div>";
-  var main=st<n?'<p class="lread">'+esc(l.steps[st])+"</p>":st===n?lTry(l.id):lQuiz(l.id);
-  var mk=l.markets.filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="lmk" data-market="'+esc(id)+'">'+esc(S.markets[id].name)+"</button>"}).join("");
-  return '<div class="lesson-b">'+dots+'<div class="lstage" key="'+st+'">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+(st===n-1?"Try it":st===n?"Check yourself":"Next")+"</button>":"")+"</div>"+(mk?'<div class="lmks"><span>On the board:</span>'+mk+"</div>":"")+"</div>";
 }
 /* ---------- What is coming: grouped, coloured, explained ---------- */
 var ACAT={
@@ -1208,7 +1220,7 @@ var FREE_LIST=3;
 var PRO_FEATS=[
  ["Deeper insight on every event","What it means for prices, rates and your money, scenario by scenario, with sources"],
  ["The week explained","A weekly reading of what moved and what comes next, in plain words"],
- ["Full courses","Guided paths: investing basics, reading the Fed, company results, currencies and the dollar"],
+ ["Every lesson in four courses","Investing from zero, Reading the Fed, Understanding company results, The dollar and Latin America"],
  ["Alerts and a morning summary","A note before every date that moves your markets, and one minute each morning on your list"],
  ["Your whole list, full history","Unlimited markets, one and five years on every chart"],
  ["Ask about any event","An answer with its source, never a tip"]
@@ -1216,7 +1228,7 @@ var PRO_FEATS=[
 function proLock(what){return '<button class="prolock" data-view="plans" aria-label="'+esc(what)+' is part of Pro. See plans"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pro</button>'}
 function vPlans(){
   var cta=WAITLIST_URL?'<a class="btn big" href="'+esc(WAITLIST_URL)+'" target="_blank" rel="noopener noreferrer">Join the Pro waitlist</a>':'<button class="btn big" disabled>Pro waitlist opens soon</button>';
-  return '<section class="plhero"><h1>One plan. Everything inside.</h1><p class="facts">The board, the news and six lessons stay free. SignalPoint Pro adds the depth: insight on every event, the full courses, and alerts that come to you.</p>'+cta+'<p class="note">Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for.</p></section>'+
+  return '<section class="plhero"><h1>One plan. Everything inside.</h1><p class="facts">The board, the news and six lessons stay free. SignalPoint Pro adds the depth: insight on every event, the full courses, and alerts that come to you.</p>'+cta+'<p class="note">Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for. Already Pro? <button class="linkish" data-view="account">Sign in</button>.</p></section>'+
   '<div class="plgrid two-col">'+
    '<article class="pl-card"><h2>Free</h2><p class="pl-price">$0</p><p class="note">To understand what the market did today.</p><ul><li>The board: 13 markets in plain words</li><li>News with sources and evidence grades</li><li>Calendar of what is coming</li><li>Your numbers and what-if scenarios</li><li>Six short lessons</li><li>A list of up to '+FREE_LIST+' markets</li></ul></article>'+
    '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>SignalPoint Pro</h2><p class="pl-price">$9<small> / month</small></p><p class="note">Everything in Free, plus:</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
@@ -1226,6 +1238,96 @@ function vPlans(){
 function toolsBlock(){
   var t=S.tool==="whatif"?"whatif":"happened";
   return '<section class="tools" aria-labelledby="tl-h"><div class="heat-head"><h2 id="tl-h">Your numbers</h2><div class="seg" role="tablist"><button role="tab" data-tool="happened" aria-selected="'+(t==="happened")+'" aria-pressed="'+(t==="happened")+'">What happened</button><button role="tab" data-tool="whatif" aria-selected="'+(t==="whatif")+'" aria-pressed="'+(t==="whatif")+'">What if</button></div></div>'+(t==="whatif"?whatIf():tryBar())+"</section>";
+}
+/* ---------- Free and Pro ---------- */
+/*CONTENT-START*/var SP_CONTENT={"courses":[{"id":"investing","title":"Investing from zero","blurb":"What investing is, what it costs and why time matters more than timing.","lessons":[{"id":"inv1","title":"Saving and investing are different jobs","min":3,"summary":"Why money you need soon and money you can leave alone belong in different places.","markets":["sp500"],"steps":["Saving keeps money safe and available: a bank account or a short-term deposit. Its job is to be there when you need it, and its value barely moves.","Investing buys a share of something that can grow, such as companies or bonds. Its value goes up and down along the way, sometimes sharply.","The rule most planners start from: money you may need within a few years is savings; only money you can leave alone through bad years is investable."],"quiz":{"q":"You will need the money for a deposit on a flat in one year. Where does it usually belong?","o":["Savings: safe and available","Stocks, because they grow faster","Bitcoin"],"a":0,"why":"In one year a falling market may not have time to recover. Short horizons call for stability, not growth."},"free":true},{"id":"inv2","title":"Risk and return: why growth comes with bumps","min":3,"summary":"Higher expected returns are payment for living with larger swings.","markets":["sp500","btc"],"free":false},{"id":"inv3","title":"Diversification: not betting on one thing","min":3,"summary":"How spreading money across many holdings reduces the damage any one can do.","markets":["sp500","nasdaq"],"free":false},{"id":"inv4","title":"Index funds and what fees really cost","min":4,"summary":"Why a fee of 1% a year can take a large share of a lifetime of returns.","markets":["sp500"],"free":false},{"id":"inv5","title":"Time and compounding","min":3,"summary":"Why starting early matters more than finding the perfect moment.","markets":["sp500"],"free":false}]},{"id":"fedpath","title":"Reading the Fed","blurb":"How the US central bank decides, what it publishes and how markets read it.","lessons":[{"id":"fed1","title":"What the Fed is trying to do","min":3,"summary":"Two goals, one main tool, and why they sometimes pull apart.","markets":["fed","us2y"],"steps":["The Federal Reserve has two goals set by Congress: stable prices and maximum employment. Its main tool is the target range for the overnight interest rate.","Raising the range cools spending and borrowing, which helps bring inflation down but can slow hiring. Cutting does the opposite.","When inflation is high and jobs are still plentiful, the case for higher rates is strongest. In October the committee held at 3.75%–4.00%, with two members wanting a hike."],"quiz":{"q":"Inflation is running above target while unemployment is low. Which way does that usually push the Fed?","o":["Toward higher rates","Toward lower rates","It has no effect"],"a":0,"why":"High inflation with a strong job market leaves room to raise rates without much risk to employment."},"free":true},{"id":"fed2","title":"The meeting, the statement and the vote","min":3,"summary":"What to read first on decision day, and why dissents matter.","markets":["fed"],"free":false},{"id":"fed3","title":"Projections and minutes","min":3,"summary":"The two documents that explain the decision after the fact.","markets":["fed"],"free":false},{"id":"fed4","title":"How markets price what the Fed will do","min":3,"summary":"Why rates move before the Fed does.","markets":["us2y","fed"],"free":false}]},{"id":"results","title":"Understanding company results","blurb":"Read an earnings release like an analyst, in four short lessons.","lessons":[{"id":"res1","title":"Revenue, profit and margin","min":3,"summary":"The three numbers every results release leads with.","markets":[],"steps":["Revenue is everything the company sold. Profit is what is left after costs. Margin is profit as a share of revenue.","A company can grow revenue and still earn less if costs rise faster. Richemont grew sales 17% at constant currency while its gross margin fell, mainly on gold costs.","Read the three together. Growth with shrinking margins and growth with expanding margins are very different stories."],"quiz":{"q":"Sales rise 17% but margin falls. What is the most likely explanation?","o":["Costs grew faster than prices","The company sold less","Margins cannot fall when sales rise"],"a":0,"why":"Higher input costs, like gold for a jeweller, can squeeze margin even as revenue grows."},"free":true},{"id":"res2","title":"Guidance: the number markets care about","min":3,"summary":"Why the outlook often moves shares more than the quarter itself.","markets":[],"free":false},{"id":"res3","title":"Expectations: why good results can send shares down","min":3,"summary":"Beating last year is not enough; the market compares with what it expected.","markets":[],"free":false},{"id":"res4","title":"One-time items and adjusted figures","min":3,"summary":"Reading past the headline number.","markets":[],"free":false}]},{"id":"dollar","title":"The dollar and Latin America","blurb":"What moves the dollar against Latin American currencies and what it means for people earning, saving or owing in dollars.","lessons":[{"id":"fx1","title":"What moves the dollar against the peso","min":3,"summary":"The three forces behind a rising or falling exchange rate.","markets":["usdcop","eurusd"],"steps":["The dollar in pesos is a price set by supply and demand for each currency. Three forces matter most: interest rates, risk appetite and trade flows such as oil exports.","Between October 28 and November 14 the official rate rose from 3,148 to 3,317 pesos, as US rates climbed and the dollar strengthened broadly.","No single headline explains a move. Look at whether the dollar rose against all currencies or against the peso alone."],"quiz":{"q":"The dollar rises against the euro and the peso at the same time. What does that suggest?","o":["A broad dollar move, not a peso-specific one","Something only happened in Colombia","Nothing can be concluded"],"a":0,"why":"When the dollar rises against many currencies at once, the driver is usually on the US side."},"free":true},{"id":"fx2","title":"Interest rates and the dollar","min":3,"summary":"Why higher US rates tend to pull money toward the dollar.","markets":["usdcop","us10y"],"free":false},{"id":"fx3","title":"Earning, saving or owing in dollars","min":3,"summary":"The same move is good news for some and bad news for others.","markets":["usdcop"],"free":false},{"id":"fx4","title":"Reading the TRM and other official rates","min":3,"summary":"Where the official number comes from and how to use it.","markets":["usdcop"],"free":false}]}],"insights":{"2026-11-13-chip-selloff-nvidia-below-4tn":{"tease":"A weekly gain hid a rough Friday for the companies that led the year. When the biggest technology names fall together, indexes weighted toward them, like the Nasdaq, feel it most, while a more traditional index like the Dow can rise the same day.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-13-modine-samsung-talks":{"tease":"A 33% jump on a single press report shows how much the market thinks a takeover could be worth, not that a deal exists. Until a company confirms, this is a rumour with a price on it.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-13-richemont-h1":{"tease":"Strong sales growth met rising gold costs. The headline profit was flattered by one-time tariff gains, and underlying margin fell, which helps explain why shares dropped on a day of good-looking numbers.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-13-us-ppi-october":{"tease":"Producer prices rose again in October and are up 6.5% over twelve months. Costs at the producer level often reach consumers later, which keeps pressure on the Federal Reserve ahead of its December meeting.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-cerebras-q3":{"tease":"Record revenue and a raised outlook support the idea that demand for AI computing capacity is still growing quickly. Contracted capacity of 700 megawatts is a physical measure of that demand, not just a forecast.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-nvidia-ceo-resigns":{"tease":"A founder-led company lost its founder as chief executive with immediate effect and no reason given. Leadership uncertainty at the largest chip company affects how investors price the whole sector.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-oil-iran-no-deal":{"tease":"Oil reacts quickly to signals about supply from the Middle East. A higher price helps energy producers and costs importers, but one-day moves often reverse.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-us-10y-above-5":{"tease":"Long-term borrowing costs for the US government are back above 5%. Because so many loans are priced from this rate, new mortgages and long business loans tend to get more expensive.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-wolverine-q3":{"tease":"Results beat last year mostly because of tariff refunds, not only better business. That makes the raised outlook less informative than it looks.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-12-us-wheat-dollar-usda":{"tease":"A stronger dollar makes US wheat more expensive for foreign buyers, and the USDA cut its estimate for hard red winter exports. Both point to softer demand for US wheat.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-11-10-us-cpi-october":{"tease":"Consumer prices rose 0.4% in one month, and core inflation stayed at 0.3% for a third month. Kept up for a year, that pace would be well above the Fed's target.","parts":["Scenarios","Who feels it first","What would change this reading"]},"2026-10-28-fomc-hold":{"tease":"The Fed held, but two dissents for a hike show the debate has moved toward tightening. Since then, inflation and yields have both moved up.","parts":["Scenarios","Who feels it first","What would change this reading"]}},"week":{"id":"week-2026-11-13","title":"The week explained: November 9 to 13","tease":"The week's story was rates. After a 0.4% monthly rise in consumer prices, the 10-year Treasury yield climbed back above 5% and the 2-year rose faster, a sign that markets moved toward expecting a December rate increase.","parts":["Technology wobbled","The dollar climbed","What to watch next week"]}};/*CONTENT-END*/
+var SP_AUTH={url:"",key:""};
+function isPro(){return !!(S.prem&&S.prem.ok)}
+function mergedPremium(raw){var p={ok:true,lessons:{},insights:{},week:null};if(!raw)return null;p.lessons=raw.lessons||{};p.insights=raw.insights||{};p.week=raw.week||null;return p}
+function courseLessons(){var out=[];SP_CONTENT.courses.forEach(function(c){c.lessons.forEach(function(l){var full=l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null);out.push({course:c.id,meta:l,full:full})})});return out}
+function getLesson(id){for(var i=0;i<LESSONS.length;i++)if(LESSONS[i].id===id)return Object.assign({quiz:LQUIZ[id]},LESSONS[i]);var cl=courseLessons();for(var j=0;j<cl.length;j++)if(cl[j].meta.id===id)return cl[j].full;return null}
+function quizFor(id){var l=getLesson(id);return l&&l.quiz}
+function accessibleLessons(){return LESSONS.map(function(l){return l.id}).concat(courseLessons().filter(function(x){return !!x.full}).map(function(x){return x.meta.id}))}
+function proCta(what){return '<div class="procta"><div><b>'+esc(what)+'</b><span>Part of SignalPoint Pro.</span></div><div class="row"><button class="btn" data-view="plans">See Pro</button>'+(S.user?"":'<button class="btn ghost" data-view="account">Sign in</button>')+"</div></div>"}
+function insightBlock(b){
+  var pub=SP_CONTENT.insights[b.id];if(!pub)return"";
+  var full=isPro()&&S.prem.insights[b.id];
+  var head='<section class="insight"><div class="ins-h"><h4>SignalPoint insight</h4><span class="protag">Pro</span></div>';
+  if(full)return head+full.map(function(s,i){return (i?'<h5>'+esc(s.h)+"</h5>":"")+"<p>"+esc(s.p)+"</p>"}).join("")+"</section>";
+  return head+'<p>'+esc(pub.tease)+'</p><div class="ins-lock" aria-hidden="true">'+pub.parts.map(function(p){return '<div class="ins-ghost"><b>'+esc(p)+'</b><i></i><i></i><i class="s"></i></div>'}).join("")+"</div>"+proCta("Keep reading: "+pub.parts.join(", ").toLowerCase())+"</section>";
+}
+function weekBlock(){
+  var w=SP_CONTENT.week;if(!w)return"";
+  var full=isPro()&&S.prem.week;
+  if(full)return '<section class="week"><div class="ins-h"><h2>'+esc(full.title)+'</h2><span class="protag">Pro</span></div>'+full.sections.map(function(s){return "<h5>"+esc(s.h)+"</h5><p>"+esc(s.p)+"</p>"}).join("")+"</section>";
+  return '<section class="week"><div class="ins-h"><h2>'+esc(w.title)+'</h2><span class="protag">Pro</span></div><p>'+esc(w.tease)+'</p><div class="ins-lock" aria-hidden="true">'+w.parts.map(function(p){return '<div class="ins-ghost"><b>'+esc(p)+"</b><i></i><i class=\"s\"></i></div>"}).join("")+"</div>"+proCta("The full weekly reading")+"</section>";
+}
+/* ---------- Accounts: magic-link sign-in, ready for a Supabase project. Off until SP_AUTH is set. ---------- */
+var SKEY="signalpoint.session";
+function authReady(){return !!(SP_AUTH.url&&SP_AUTH.key)}
+function authCatch(){
+  var h=location.hash;if(h.indexOf("access_token=")<0)return;
+  var q={};h.slice(1).split("&").forEach(function(kv){var i=kv.indexOf("=");if(i>0)q[decodeURIComponent(kv.slice(0,i))]=decodeURIComponent(kv.slice(i+1))});
+  if(q.access_token){try{localStorage.setItem(SKEY,JSON.stringify({t:q.access_token,exp:Date.now()+((+q.expires_in||3600)*1000)}))}catch(e){}}
+  try{history.replaceState(null,"",location.pathname+location.search+"#account")}catch(e){location.hash="account"}
+}
+function authToken(){try{var s=JSON.parse(localStorage.getItem(SKEY)||"null");if(s&&s.t&&s.exp>Date.now())return s.t}catch(e){}return null}
+function authFetch(path,opt){opt=opt||{};var h={apikey:SP_AUTH.key,"Content-Type":"application/json"},t=authToken();if(t)h.Authorization="Bearer "+t;return fetch(SP_AUTH.url+path,{method:opt.method||"GET",headers:h,body:opt.body?JSON.stringify(opt.body):undefined})}
+async function authLoad(){
+  if(!authReady()||!authToken())return;
+  try{
+    var u=await authFetch("/auth/v1/user");if(!u.ok)throw 0;var uj=await u.json();S.user={email:String(uj.email||"")};
+    var pr=await authFetch("/rest/v1/profiles?select=plan");var pj=pr.ok?await pr.json():[];S.plan=(pj[0]&&pj[0].plan)==="pro"?"pro":"free";
+    if(S.plan==="pro"){var c=await authFetch("/rest/v1/premium_content?select=id,body");if(c.ok){var rows=await c.json(),raw={lessons:{},insights:{},week:null};rows.forEach(function(r){var k=String(r.id);if(k.indexOf("lesson:")===0)raw.lessons[k.slice(7)]=r.body;else if(k.indexOf("insight:")===0)raw.insights[k.slice(8)]=r.body;else if(k.indexOf("week:")===0)raw.week=r.body});S.prem=mergedPremium(raw)}}
+  }catch(e){S.user=null;S.plan=null}
+  render();
+}
+async function authSignIn(email){
+  S.authNote="";
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){S.authNote="Enter a valid email address.";return render()}
+  S.authBusy=true;render();
+  try{var r=await authFetch("/auth/v1/otp?redirect_to="+encodeURIComponent(location.origin+location.pathname),{method:"POST",body:{email:email,create_user:true}});S.authNote=r.ok?"Check your inbox: we sent a sign-in link to "+email+".":"The sign-in link could not be sent. Try again in a minute."}
+  catch(e){S.authNote="The sign-in link could not be sent. Check your connection and try again."}
+  S.authBusy=false;render();
+}
+function authSignOut(){try{localStorage.removeItem(SKEY)}catch(e){}S.user=null;S.plan=null;S.prem=window.SP_PREMIUM?mergedPremium(window.SP_PREMIUM):null;render()}
+function vAccount(){
+  if(S.user)return '<section class="acct"><h1>Your account</h1><p class="facts">Signed in as <b>'+esc(S.user.email)+'</b>.</p><p><span class="plan-badge '+(S.plan==="pro"?"pro":"")+'">'+(S.plan==="pro"?"SignalPoint Pro":"Free plan")+"</span></p>"+(S.plan==="pro"?'<p class="note">Insight, the weekly reading and all courses are unlocked.</p>':'<p class="note">Pro is not on sale yet. <button class="linkish" data-view="plans">See what it adds</button>.</p>')+'<button class="btn ghost" id="signout">Sign out</button></section>';
+  var on=authReady();
+  return '<section class="acct"><h1>Sign in</h1><p class="facts">Use your email. We send you a link; no password to remember.</p><form id="signin-form" class="row"><label class="sr" for="si-email">Email</label><input class="search" id="si-email" type="email" autocomplete="email" placeholder="you@example.com"'+(on?"":" disabled")+'><button class="btn" type="submit"'+(on&&!S.authBusy?"":" disabled")+">"+(S.authBusy?"Sending…":"Send me a link")+"</button></form>"+
+    (S.authNote?'<p class="note" role="status">'+esc(S.authNote)+"</p>":"")+(on?"":'<p class="note">Accounts open together with Pro. Until then, everything free works without signing in, and your list and progress stay in this browser.</p>')+"</section>";
+}
+/* ---------- Learn: a free starter course and four Pro courses with a free first lesson ---------- */
+function courseCard(c){
+  var n=c.lessons.length,done=c.lessons.filter(function(l){return S.learned[l.id]}).length,free=c.lessons.filter(function(l){return l.free}).length,open=S.course===c.id;
+  return '<button class="ccard'+(open?" on":"")+'" data-course="'+esc(c.id)+'" aria-expanded="'+open+'"><span class="cc-top"><span class="protag">'+(isPro()?"Pro · unlocked":"Pro")+'</span><span class="cc-n">'+n+" lessons</span></span><b>"+esc(c.title)+"</b><span class=\"cc-b\">"+esc(c.blurb)+'</span><span class="cc-f">'+(isPro()?done+" of "+n+" done":(free?"First lesson free":""))+"</span></button>";
+}
+function lessonRow(l,i,full){
+  var open=S.lesson===l.id,ok=!!S.learned[l.id];
+  if(!full)return '<section class="lesson locked"><div class="lesson-h"><span class="lnum">'+(i+1)+'</span><span class="ltitle">'+esc(l.title)+'<small>'+esc(l.summary)+'</small></span>'+proLock(l.title)+"</div></section>";
+  return '<section class="lesson'+(open?" open":"")+(ok?" ok":"")+'"><button class="lesson-h" data-lesson="'+l.id+'" aria-expanded="'+open+'"><span class="lnum">'+(ok?"✓":i+1)+'</span><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">Free</span>':"")+'</span><span class="lmin">'+l.min+" min</span></button>"+(open?lBody(full):"")+"</section>";
+}
+function learnedCount(){return accessibleLessons().filter(function(id){return S.learned[id]}).length}
+function lQuiz(l){
+  var id=l.id,z=l.quiz||LQUIZ[id],pick=S.lq[id];if(!z)return"";
+  return '<div class="lquiz"><p class="lq-q">'+esc(z.q)+'</p><div class="lq-o">'+z.o.map(function(o,i){var st=pick==null?"":i===z.a?" right":i===pick?" wrong":"";return '<button data-lqa="'+id+'" data-lqv="'+i+'" class="'+st.trim()+'"'+(pick!=null?" disabled":"")+">"+esc(o)+"</button>"}).join("")+"</div>"+
+    (pick!=null?'<p class="lq-f '+(pick===z.a?"ok":"no")+'" role="status"><b>'+(pick===z.a?"Right.":"Not quite.")+"</b> "+esc(z.why)+"</p>"+(pick===z.a?"":'<button class="btn ghost" data-lqr="'+id+'">Try again</button>'):"")+"</div>";
+}
+function lBody(l){
+  var st=lStep(l.id),n=l.steps.length,hasTry=!!LTRY[l.id],last=n+(hasTry?1:0),labels=l.steps.map(function(_,i){return "Read "+(i+1)}).concat(hasTry?["Try it","Check"]:["Check"]);
+  var dots='<div class="lsteps" role="tablist">'+labels.map(function(t,i){return '<button role="tab" aria-selected="'+(i===st)+'" class="'+(i<st?"done":"")+'" data-lgo="'+l.id+'" data-lgi="'+i+'"><span></span>'+esc(t)+"</button>"}).join("")+"</div>";
+  var main=st<n?'<p class="lread">'+esc(l.steps[st])+"</p>":(hasTry&&st===n)?lTry(l.id):lQuiz(l);
+  var mk=(l.markets||[]).filter(function(id){return !!S.markets[id]}).map(function(id){return '<button class="lmk" data-market="'+esc(id)+'">'+esc(S.markets[id].name)+"</button>"}).join("");
+  var nextLabel=st===n-1?(hasTry?"Try it":"Check yourself"):(hasTry&&st===n)?"Check yourself":"Next";
+  return '<div class="lesson-b">'+dots+'<div class="lstage">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+nextLabel+"</button>":"")+"</div>"+(mk?'<div class="lmks"><span>On the board:</span>'+mk+"</div>":"")+"</div>";
+}
+function vLearn(){
+  var acc=accessibleLessons(),done=learnedCount(),c=null;
+  SP_CONTENT.courses.forEach(function(x){if(x.id===S.course)c=x});
+  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with four courses: the first lesson of each is free.</div><div class="lprog" role="img" aria-label="'+done+" of "+acc.length+' lessons done"><span style="width:'+(acc.length?done/acc.length*100:0)+'%"></span></div><p class="note">'+done+" of "+acc.length+" lessons done.</p></div>"+
+    '<h2 class="lsec">Start here: market basics <span class="freetag">Free</span></h2><div class="lessons">'+LESSONS.map(function(l,i){return lessonRow(Object.assign({free:true,basic:true},l),i,Object.assign({quiz:LQUIZ[l.id]},l))}).join("")+"</div>"+
+    '<h2 class="lsec">Courses</h2><div class="cgrid">'+SP_CONTENT.courses.map(courseCard).join("")+"</div>"+
+    (c?'<div class="lessons course-open" id="course-'+esc(c.id)+'"><h3 class="ctitle">'+esc(c.title)+"</h3>"+c.lessons.map(function(l,i){var full=l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null);return lessonRow(l,i,full)}).join("")+(isPro()?"":proCta("Unlock every lesson in all four courses"))+"</div>":"");
 }
 function hasProfile(){return !!(S.desc.trim()||S.wl.length)}
 var DIR={helps:["fav","▲","Helps"],hurts:["adv","▼","Hurts"],mixed:["mix","◆","Mixed"],unclear:["und","○","Unclear"]};
@@ -1329,15 +1431,16 @@ function vMethod(){
     '<section class="paper"><h4>Updates and limits</h4><p>'+((S.auto&&S.auto.active===true)?'The scheduled task checks for updates; the briefing shows the latest recorded run.':'Automatic ingestion is inactive. News currently arrives after a manual review run.')+'</p><p>We add material events with sources, not a fixed quota. Check the ingestion status for stale data or partial coverage. This is not a complete or real-time market feed.</p><p>AI can make mistakes. SignalPoint gives no investment advice, trading recommendations, price targets or confidence scores. Planned subscriptions are hypotheses; the pilot has no payment flow.</p></section></div>';
 }
 function render(){
-  var v={markets:vMarkets,briefing:vBriefing,checkpoints:vCheckpoints,exposure:vExposure,learn:vLearn,plans:vPlans,method:vMethod}[S.view]();
+  var v={markets:vMarkets,briefing:vBriefing,checkpoints:vCheckpoints,exposure:vExposure,learn:vLearn,plans:vPlans,method:vMethod,account:vAccount}[S.view]();
   var keep=document.activeElement&&document.activeElement.id,pos=keep&&document.activeElement.selectionStart;
   $("view").innerHTML=v;$("view").className="wrap"+(S.anim==="view"?" enter":S.anim==="paper"?" enter-paper":"");S.anim=null;
   if(keep&&$(keep)){$(keep).focus();try{$(keep).setSelectionRange(pos,pos)}catch(e){}}
-  document.querySelectorAll("nav button,.topro").forEach(function(b){if(b.dataset.view===S.view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
+  if($("tosign"))$("tosign").textContent=S.user?(S.plan==="pro"?"Pro account":"Account"):"Sign in";
+  document.querySelectorAll("nav button,.topro,.tosign").forEach(function(b){if(b.dataset.view===S.view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
   $("n-briefs").textContent=S.briefs.length||"";
   $("n-open").textContent=checkpoints().filter(function(c){return stOf(c.w)==="open"}).length||"";
   $("n-wl").textContent=S.wl.length||"";
-  if($("n-learn"))$("n-learn").textContent=learnedCount()?learnedCount()+"/"+LESSONS.length:"";
+  if($("n-learn"))$("n-learn").textContent=learnedCount()?learnedCount()+"/"+accessibleLessons().length:"";
 }
 function go(v){S.anim="view";S.view=VIEWS.indexOf(v)>=0?v:"briefing";if(location.hash.slice(1)!==S.view){try{location.hash=S.view}catch(e){}}render();window.scrollTo(0,0)}
 
@@ -1356,9 +1459,11 @@ document.addEventListener("click",function(e){
   if(t.dataset.follow){var fi=S.watch.indexOf(t.dataset.follow);S.listNote="";if(fi>=0)S.watch.splice(fi,1);else if(S.markets[t.dataset.follow]&&S.watch.length<FREE_LIST)S.watch.push(t.dataset.follow);else if(S.markets[t.dataset.follow])S.listNote='Your free list holds '+FREE_LIST+' markets. Remove one, or <button class="linkish" data-view="plans">see what Pro adds</button>.';persist();return render()}
   if(t.dataset.tool){S.tool=t.dataset.tool;return render()}
   if(t.dataset.lesson){S.lesson=S.view==="learn"&&S.lesson===t.dataset.lesson?null:t.dataset.lesson;if(S.view!=="learn")return go("learn");return render()}
+  if(t.dataset.course){S.course=S.course===t.dataset.course?null:t.dataset.course;S.lesson=null;render();var co=$("course-"+S.course);if(co&&co.scrollIntoView)co.scrollIntoView({block:"start",behavior:"smooth"});return}
+  if(t.id==="signout")return authSignOut();
   if(t.dataset.lgo){S.lstep[t.dataset.lgo]=+t.dataset.lgi;return render()}
   if(t.dataset.lw){S.lw[t.dataset.lw]=+t.dataset.lwv;return render()}
-  if(t.dataset.lqa){var qv=+t.dataset.lqv;S.lq[t.dataset.lqa]=qv;if(LQUIZ[t.dataset.lqa]&&qv===LQUIZ[t.dataset.lqa].a){S.learned[t.dataset.lqa]=true;persist()}return render()}
+  if(t.dataset.lqa){var qv=+t.dataset.lqv;S.lq[t.dataset.lqa]=qv;if(quizFor(t.dataset.lqa)&&qv===quizFor(t.dataset.lqa).a){S.learned[t.dataset.lqa]=true;persist()}return render()}
   if(t.dataset.lqr){delete S.lq[t.dataset.lqr];return render()}
   if(t.dataset.learned){if(S.learned[t.dataset.learned])delete S.learned[t.dataset.learned];else S.learned[t.dataset.learned]=true;persist();return render()}
   if(t.dataset.market){S.msel=t.dataset.market;S.mq="";S.listNote="";if(S.view!=="markets"){go("markets")}else{S.anim="paper";render()}var md=$("mdetail");if(md&&md.scrollIntoView)md.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
@@ -1390,6 +1495,7 @@ document.addEventListener("pointermove",function(e){
 });
 document.addEventListener("submit",function(e){
   e.preventDefault();
+  if(e.target.id==="signin-form"){var em=$("si-email");return authSignIn(em?em.value.trim():"")}
   if(e.target.id==="item-form"){
     var kind=$("item-kind").value,amount=Number($("item-amount").value);
     if(!KINDS[kind]||!isFinite(amount)||amount<=0||amount>1e12)S.itemErr="Enter an amount above zero, in US dollars.";
@@ -1460,7 +1566,7 @@ function vd(d){if(!/^\d{4}-\d{2}-\d{2}$/.test(d||""))return false;var t=new Date
 function arr(x){return Array.isArray(x)?x:[]}
 function parse(t){var m=String(t).match(/\{[\s\S]*\}/);return JSON.parse(m?m[0]:t)}
 /* ---------- boot ---------- */
-var h0=location.hash.slice(1);if(VIEWS.indexOf(h0)>=0)S.view=h0;else if(!h0&&!window.SP_HOME_BRIEFING)S.view="markets";S.anim="view";
+authCatch();if(window.SP_PREMIUM)S.prem=mergedPremium(window.SP_PREMIUM);var h0=location.hash.slice(1);if(VIEWS.indexOf(h0)>=0)S.view=h0;else if(!h0&&!window.SP_HOME_BRIEFING)S.view="markets";S.anim="view";
 render();
 var timer=setTimeout(function(){if(!S.loaded){S.loaded=true;S.loadNote="Live briefs could not be reached. Sign in to Claude and reopen this page.";render()}},10000);
 (async function(){
@@ -1470,7 +1576,7 @@ var timer=setTimeout(function(){if(!S.loaded){S.loaded=true;S.loadNote="Live bri
     var mv={};Object.keys(T.moves||{}).forEach(function(id){var it=arr(T.moves[id].items).filter(validMove).slice(0,4);if(it.length)mv[id]=it});S.moves=mv;
     var mk={};Object.keys(T.markets||{}).forEach(function(id){var v=mNorm(JSON.parse(JSON.stringify(T.markets[id])));if(validMarket(v))mk[id]=v});S.markets=mk;
     S.runs=arr(T.runs);S.auto=T.auto||null;S.loaded=true;S.marketsReady=true;S.anim="view";
-    return loadLocal(LS+".public");
+    loadLocal(LS+".public");authLoad();return;
   }
   if(!window.claude||!window.claude.use){clearTimeout(timer);S.loaded=true;S.loadNote="Live briefs load when this page is opened on claude.ai.";return loadLocal(LS+".anon")}
   window.claude.use("sample").then(function(s){S.sample=s;render()},function(){S.sample=null;render()});
