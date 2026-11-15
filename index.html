@@ -622,6 +622,9 @@ header.top nav .n{display:none}
 @media (min-width:1100px){.board .heat-grid{grid-template-columns:repeat(7,minmax(0,1fr))}}
 .note.plfoot{text-align:center}
 .mrange{flex-wrap:wrap}.mrange button,.mrange span{white-space:nowrap}
+.plgrid.two-col{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px;margin:0 auto}
+@media (max-width:880px){.plgrid.two-col{grid-template-columns:minmax(0,1fr)}}
+#view p.plfoot{text-align:center;max-width:none}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -1203,22 +1206,21 @@ function mAhead(){
 var WAITLIST_URL="";
 var FREE_LIST=3;
 var PRO_FEATS=[
- ["Alerts before every event that moves your markets","Free: you check the calendar yourself"],
- ["A one-minute morning summary of your list, by email","Free: open the page"],
- ["Unlimited markets in your list","Free: up to "+FREE_LIST],
- ["One year and five years of history on every chart","Free: the last two weeks"],
- ["Ask about any event and get an answer with its source","Free: read the brief"],
- ["Guided learning paths with progress","Free: six short lessons"]
+ ["Deeper insight on every event","What it means for prices, rates and your money, scenario by scenario, with sources"],
+ ["The week explained","A weekly reading of what moved and what comes next, in plain words"],
+ ["Full courses","Guided paths: investing basics, reading the Fed, company results, currencies and the dollar"],
+ ["Alerts and a morning summary","A note before every date that moves your markets, and one minute each morning on your list"],
+ ["Your whole list, full history","Unlimited markets, one and five years on every chart"],
+ ["Ask about any event","An answer with its source, never a tip"]
 ];
 function proLock(what){return '<button class="prolock" data-view="plans" aria-label="'+esc(what)+' is part of Pro. See plans"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pro</button>'}
 function vPlans(){
   var cta=WAITLIST_URL?'<a class="btn big" href="'+esc(WAITLIST_URL)+'" target="_blank" rel="noopener noreferrer">Join the Pro waitlist</a>':'<button class="btn big" disabled>Pro waitlist opens soon</button>';
-  return '<section class="plhero"><h1>Free to read. Pro to stay ahead.</h1><p class="facts">Everything on SignalPoint today is free. Pro is the version that comes to you: alerts before the dates that matter, a morning summary of your markets and deeper history.</p>'+cta+'<p class="note">Pro is not on sale yet. Prices below are what we plan to charge; nothing is billed and no card is asked for.</p></section>'+
-  '<div class="plgrid">'+
-   '<article class="pl-card"><h2>Free</h2><p class="pl-price">$0</p><p class="note">For anyone who wants to understand the market.</p><ul><li>The board: 13 markets in plain words</li><li>News with sources and evidence grades</li><li>Calendar of what is coming</li><li>Your numbers and what-if scenarios</li><li>Six short lessons</li><li>A list of up to '+FREE_LIST+' markets</li></ul></article>'+
-   '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>Pro</h2><p class="pl-price">$9<small> / month</small></p><p class="note">For people who want it to come to them.</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
-   '<article class="pl-card"><span class="pl-tag">Planned</span><h2>Business</h2><p class="pl-price">$49<small> / month</small></p><p class="note">For a finance lead tracking what moves the company.</p><ul><li>Everything in Pro for three people</li><li>Your costs and debts tracked against the markets that move them</li><li>A monthly report for management, with sources</li></ul></article>'+
-  '</div><p class="note plfoot">SignalPoint gives no investment advice, trading recommendations or price targets on any plan.</p>';
+  return '<section class="plhero"><h1>One plan. Everything inside.</h1><p class="facts">The board, the news and six lessons stay free. SignalPoint Pro adds the depth: insight on every event, the full courses, and alerts that come to you.</p>'+cta+'<p class="note">Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for.</p></section>'+
+  '<div class="plgrid two-col">'+
+   '<article class="pl-card"><h2>Free</h2><p class="pl-price">$0</p><p class="note">To understand what the market did today.</p><ul><li>The board: 13 markets in plain words</li><li>News with sources and evidence grades</li><li>Calendar of what is coming</li><li>Your numbers and what-if scenarios</li><li>Six short lessons</li><li>A list of up to '+FREE_LIST+' markets</li></ul></article>'+
+   '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>SignalPoint Pro</h2><p class="pl-price">$9<small> / month</small></p><p class="note">Everything in Free, plus:</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
+  '</div><p class="note plfoot">SignalPoint gives no investment advice, trading recommendations or price targets.</p>';
 }
 /* ---------- Tools: one block, two tabs ---------- */
 function toolsBlock(){
