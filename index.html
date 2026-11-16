@@ -836,6 +836,17 @@ body.ck-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.ck,.ck-back{animation:none}#toast{transition:none}}
 .hgroups{display:flex;flex-wrap:wrap;gap:6px 22px}.hgrp{display:flex;flex-direction:column}.hg-row{display:flex;flex-wrap:wrap;gap:8px}.hg-row .hc{width:150px;min-height:128px}
 @media (max-width:600px){.hgroups{display:block}.hg-row{display:grid;grid-template-columns:1fr 1fr}.hg-row .hc{width:auto}}
+.cmp-pick{display:flex;align-items:center;gap:8px;margin:10px 0 4px;font-size:.85rem;color:#5B6478}.cmp-pick select{padding:6px 10px;font-size:.9rem;max-width:240px}
+.cmp-leg{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 0 2px;font-size:.85rem}.cmp-leg .cl{display:flex;align-items:center;gap:6px}.cmp-leg i{display:inline-block;width:16px;height:3px;border-radius:2px}
+.cmpc{color:var(--ink)}
+.rd-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px}.rd-pos{font-size:.85rem;font-weight:700;color:#5B6478;margin-left:auto}.rd-nav{display:flex;gap:6px}.rd-nav .btn{min-width:42px;padding:6px 12px;font-size:1.2rem;line-height:1}
+@media (min-width:881px){.rd-bar .back{display:none}}
+@media (max-width:880px){
+ body.rd-open{overflow:hidden}
+ .desk.open .paperwrap{position:fixed;inset:0;z-index:70;background:#F5F6FA;overflow:auto;padding:0 14px 40px;animation:lpin .2s ease-out}
+ .desk.open .rd-bar{position:sticky;top:0;z-index:2;background:#F5F6FA;margin:0 -14px 10px;padding:12px 14px;border-bottom:1px solid #E6E9F2}
+ .desk.open .paperwrap .paper{padding:22px 18px}
+}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1108,6 +1119,7 @@ function vBriefing(){
   var q=S.q.trim().toLowerCase();
   var shown=list.filter(function(b){return(S.cat==="All"||b.category===S.cat||(S.cat==="Colombia"&&b.region==="Colombia"))&&(!q||hay(b).indexOf(q)>=0)&&(!S.mine||matchWl(b))});
   if(S.wl.length)shown=rankEvents(shown);
+  S.shownIds=shown.map(function(b){return b.id});
   if(S.sel&&!shown.some(function(b){return b.id===S.sel}))S.sel=null;
   if(!S.sel&&shown[0]&&window.matchMedia("(min-width:881px)").matches)S.sel=shown[0].id;
   var open=checkpoints().filter(function(c){return stOf(c.w)==="open"}).length;
@@ -1119,7 +1131,7 @@ function vBriefing(){
     '<div class="chips">'+cats.map(function(c){return '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c)+"</button>"}).join("")+
     (S.wl.length?'<button class="chip" id="mine" aria-pressed="'+S.mine+'">★ My exposure</button>':"")+"</div></div>"+
     (S.wl.length?'<p class="note">Keyword matches first. Open an event for a source-based reading.</p>':"")+'<div id="rail" style="display:flex;flex-direction:column;gap:10px">'+rail+"</div></div>"+
-    '<div class="paperwrap"><button class="btn ghost back" id="back">← All events</button>'+paper(byId(S.sel))+"</div></div>";
+    '<div class="paperwrap"><div class="rd-bar"><button class="btn ghost back" id="back">← All events</button>'+(function(){var ix=(S.shownIds||[]).indexOf(S.sel),n=(S.shownIds||[]).length;return ix<0?"":'<span class="rd-pos">'+(ix+1)+" / "+n+'</span><span class="rd-nav"><button class="btn ghost" data-rdstep="-1" aria-label="'+T("Previous event","Evento anterior")+'"'+(ix<=0?" disabled":"")+'>\u2039</button><button class="btn ghost" data-rdstep="1" aria-label="'+T("Next event","Siguiente evento")+'"'+(ix>=n-1?" disabled":"")+">\u203a</button></span>"})()+"</div>"+paper(byId(S.sel))+"</div></div>";
 }
 function vCheckpoints(){
   var cps=checkpoints(),t={open:0,observed:0,not_observed:0,inconclusive:0};
@@ -1279,6 +1291,23 @@ function mHero(){
     "</section>";
 }
 function mRelated(m){var ids=arr(m.related).map(String);return all().filter(function(b){return !b.private&&ids.indexOf(b.id)>=0})}
+/* ---------- Compare two markets on one indexed chart (base 100, one axis) ---------- */
+function ts(d){return Date.parse(d+"T12:00:00Z")}
+function cmpChart(m,o){
+  var W=600,H=180,st=Math.max(ts(m.series[0][0]),ts(o.series[0][0])),sets=[m,o].map(function(x){var ser=x.series.filter(function(p){return ts(p[0])>=st});if(ser.length<2)ser=x.series.slice(-2);var b=ser[0][1];return ser.map(function(p){return [ts(p[0]),p[1]/b*100,p]})});
+  var t0=st,t1=Math.max(sets[0][sets[0].length-1][0],sets[1][sets[1].length-1][0]);
+  var all=sets[0].concat(sets[1]).map(function(p){return p[1]}),lo=Math.min.apply(null,all),hi=Math.max.apply(null,all),r=hi-lo||1;
+  function X(t){return (t-t0)/((t1-t0)||1)*W}function Y(v){return H-12-(v-lo)/r*(H-30)}
+  var cols=["var(--ink)","#2F5BFF"];
+  var lines=sets.map(function(s,k){return '<polyline points="'+s.map(function(p){return X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1)}).join(" ")+'" fill="none" stroke="'+cols[k]+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'}).join("");
+  var base=Y(100);
+  var leg=[m,o].map(function(x,k){var s=sets[k],ch=s[s.length-1][1]-100;return '<span class="cl"><i style="background:'+cols[k]+'"></i>'+esc(x.name)+' <b class="'+mDir(ch)+'">'+(ch>=0?"+":"−")+Math.abs(ch).toFixed(2)+"%</b></span>"}).join("");
+  return '<div class="cmp-leg">'+leg+'</div><div class="mchart cmpc" data-cmp="'+esc(m.id)+"|"+esc(o.id)+'" data-t0="'+t0+'" data-t1="'+t1+'"><div class="mread" aria-hidden="true"></div><svg viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" role="img" aria-label="'+esc(m.name)+" vs "+esc(o.name)+', indexed to 100"><line class="grid" x1="0" x2="'+W+'" y1="'+base.toFixed(1)+'" y2="'+base.toFixed(1)+'" stroke-dasharray="4 4"/>'+lines+'</svg><span class="mcur" hidden></span></div><p class="note">'+T("Both series start at 100 on <b>"+fmtDate(new Date(st).toISOString().slice(0,10))+"</b>, the first date they share, so the lines compare percentage moves, not prices.","Las dos series parten de 100 el <b>"+fmtDate(new Date(st).toISOString().slice(0,10))+"</b>, la primera fecha que comparten; las líneas comparan movimientos en porcentaje, no precios.")+"</p>";
+}
+function cmpPicker(m){
+  var opts=mList().filter(function(x){return x.id!==m.id&&x.kind!=="stat"&&x.series});
+  return '<label class="cmp-pick"><span>'+T("Compare with","Comparar con")+'</span><select id="mcmp" class="search"><option value="">'+T("— nothing —","— ninguno —")+"</option>"+opts.map(function(x){return '<option value="'+esc(x.id)+'"'+(S.mcmp===x.id?" selected":"")+">"+esc(x.name)+"</option>"}).join("")+"</select></label>";
+}
 function mDetail(m){
   if(!m)return '<div class="empty">Pick a market to see what it is, what moved it and what comes next.</div>';
   var rel=mRelated(m),next=[];rel.forEach(function(b){(b.watch||[]).forEach(function(w){if(w.due&&stOf(w)==="open")next.push({b:b,w:w})})});
@@ -1286,12 +1315,12 @@ function mDetail(m){
   var seen={};next=next.filter(function(n){var k=n.w.due+"|"+n.w.text;if(seen[k])return false;seen[k]=1;return true}).slice(0,4);
   var basis={official:"Official figure",provider:"Published by the index or data provider",reported:"As reported by press"}[m.basis];
   var head='<article class="paper mdetail"><div class="md-l"><div class="meta"><span>'+esc(m.group)+"</span><span>"+esc(basis)+"</span></div><h2>"+esc(m.name)+"</h2>";
-  var act='<div class="row mact"><button class="btn'+(S.watch.indexOf(m.id)>=0?"":" ghost")+'" data-follow="'+esc(m.id)+'" aria-pressed="'+(S.watch.indexOf(m.id)>=0)+'">'+(S.watch.indexOf(m.id)>=0?"\u2713 In my list":"+ Add to my list")+"</button>"+(lessonFor(m.id)?'<button class="btn ghost" data-lesson="'+lessonFor(m.id).id+'">Learn: '+esc(lessonFor(m.id).title)+" \u00B7 "+lessonFor(m.id).min+" min</button>":"")+"</div>";
+  var act='<div class="row mact"><button class="btn'+(S.watch.indexOf(m.id)>=0?"":" ghost")+'" data-follow="'+esc(m.id)+'" aria-pressed="'+(S.watch.indexOf(m.id)>=0)+'">'+(S.watch.indexOf(m.id)>=0?"\u2713 In my list":"+ Add to my list")+"</button>"+(lessonFor(m.id)?'<button class="btn ghost" data-lesson="'+lessonFor(m.id).id+'">'+T("Learn: ","Aprende: ")+esc(lessonFor(m.id).title)+" \u00B7 "+lessonFor(m.id).min+" min</button>":"")+"</div>";
   var body;
   if(m.kind==="stat")body='<p class="mbig">'+esc(m.valueText)+'</p><p class="note">'+esc(m.note||"")+" As of "+esc(fmtDate(m.asOf))+".</p>";
   else{
     var last=mLast(m),c1=mChange(m,m.series.length-2),c0=mChange(m,0),vals=m.series.map(function(p){return p[1]}),d=mDir(c0.v);
-    body='<p class="mbig">'+esc(mNum(last[1],m))+' <span class="tm-chg '+mDir(c1.v)+'">'+esc(c1.text)+' on the day</span></p>'+'<div class="mrange" role="group" aria-label="Chart period"><button aria-pressed="true">2 weeks</button><span>1 year '+proLock("One year of history")+'</span><span>5 years '+proLock("Five years of history")+"</span></div>"+mChart(m)+'<div class="mrow"><span>'+esc(fmtDate(m.series[0][0]))+"</span><span>"+esc(fmtDate(last[0]))+'</span></div>'+
+    body='<p class="mbig">'+esc(mNum(last[1],m))+' <span class="tm-chg '+mDir(c1.v)+'">'+esc(c1.text)+' on the day</span></p>'+'<div class="mrange" role="group" aria-label="Chart period"><button aria-pressed="true">2 weeks</button><span>1 year '+proLock("One year of history")+'</span><span>5 years '+proLock("Five years of history")+"</span></div>"+cmpPicker(m)+(S.mcmp&&S.markets[S.mcmp]&&S.markets[S.mcmp].series&&S.mcmp!==m.id?cmpChart(m,S.markets[S.mcmp]):mChart(m))+'<div class="mrow"><span>'+esc(fmtDate(S.mcmp&&S.markets[S.mcmp]&&S.markets[S.mcmp].series&&S.mcmp!==m.id?new Date(Math.max(ts(m.series[0][0]),ts(S.markets[S.mcmp].series[0][0]))).toISOString().slice(0,10):m.series[0][0]))+"</span><span>"+esc(fmtDate(last[0]))+'</span></div>'+
       '<div class="mstats"><div><b>'+esc(c0.text)+"</b><span>since "+esc(fmtDate(m.series[0][0]))+"</span></div><div><b>"+esc(mNum(Math.max.apply(null,vals),m))+"</b><span>high in this window</span></div><div><b>"+esc(mNum(Math.min.apply(null,vals),m))+"</b><span>low in this window</span></div></div>";
   }
   return head+body+act+(S.listNote?'<p class="note listnote" role="status">'+S.listNote+"</p>":"")+'</div><div class="md-r">'+
@@ -1997,6 +2026,7 @@ function render(){
   $("view").innerHTML=v;$("view").className="wrap"+(S.anim==="view"?" enter":S.anim==="paper"?" enter-paper":"");S.anim=null;
   if(keep&&$(keep)){$(keep).focus();try{$(keep).setSelectionRange(pos,pos)}catch(e){}}
   document.body.classList.toggle("lp-open",S.view==="learn"&&!!document.querySelector(".lplayer"));
+  document.body.classList.toggle("rd-open",S.view==="briefing"&&!!document.querySelector(".desk.open")&&!window.matchMedia("(min-width:881px)").matches);
   if($("tosign"))$("tosign").textContent=S.user?(S.plan==="pro"?"Pro account":"Account"):"Sign in";
   document.querySelectorAll("nav button,.topro,.tosign").forEach(function(b){if(b.dataset.view===S.view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
   $("n-briefs").textContent=S.briefs.length||"";
@@ -2016,6 +2046,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.open){S.sel=t.dataset.open;S.selectionTouched=true;S.cat="All";S.q="";S.mine=false;return go("briefing")}
   if(t.dataset.cat){S.cat=t.dataset.cat;S.sel=null;S.selectionTouched=false;return render()}
   if(t.id==="mine"){S.mine=!S.mine;S.sel=null;S.selectionTouched=false;return render()}
+  if(t.dataset.rdstep){var ids=S.shownIds||[],k=ids.indexOf(S.sel)+(+t.dataset.rdstep);if(k>=0&&k<ids.length){S.sel=ids[k];S.selectionTouched=true;S.anim="paper";render();var pw=document.querySelector(".paperwrap");if(pw)pw.scrollTop=0;window.scrollTo(0,0)}return}
   if(t.id==="back"){S.sel=null;S.selectionTouched=false;return render()}
   if(t.dataset.rm){var gone=S.wl.splice(+t.dataset.rm,1)[0];if(gone)S.gone.terms.push(gone.toLowerCase());if(!S.wl.length)S.mine=false;invalidateReadings();persist();return render()}
   if(t.id==="try-keep"){var ta=Number(S.tryAmount);if(S.personalReady&&KINDS[S.tryKind]&&isFinite(ta)&&ta>0&&ta<=1e12&&S.items.length<12){S.items.push({id:"i"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),kind:S.tryKind,amount:ta});S.tryAmount="";persist();return go("exposure")}return}
@@ -2070,8 +2101,16 @@ document.addEventListener("input",function(e){
   if(e.target.id==="q"){S.q=e.target.value;S.sel=null;S.selectionTouched=false;render()}
   if(e.target.id==="desc")S.descDraft=e.target.value;
 });
-document.addEventListener("change",function(e){if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
+document.addEventListener("change",function(e){if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
+var swX=null,swY=null;
+document.addEventListener("touchstart",function(e){var p=e.target&&e.target.closest&&e.target.closest(".desk.open .paperwrap");if(!p||!e.touches[0])return;swX=e.touches[0].clientX;swY=e.touches[0].clientY},{passive:true});
+document.addEventListener("touchend",function(e){if(swX==null||!e.changedTouches[0])return;var dx=e.changedTouches[0].clientX-swX,dy=e.changedTouches[0].clientY-swY;swX=null;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.6){var b=document.querySelector('[data-rdstep="'+(dx<0?1:-1)+'"]:not([disabled])');if(b)b.click()}},{passive:true});
 document.addEventListener("pointermove",function(e){
+  var cc=e.target&&e.target.closest?e.target.closest(".mchart[data-cmp]"):null;
+  if(cc){var ids=cc.dataset.cmp.split("|"),ms=ids.map(function(i){return S.markets[i]}),rr=cc.getBoundingClientRect(),t0=+cc.dataset.t0,t1=+cc.dataset.t1,tt=t0+(e.clientX-rr.left)/rr.width*(t1-t0);
+    var parts=ms.map(function(mm){var best=mm.series[0];mm.series.forEach(function(p){if(Math.abs(ts(p[0])-tt)<Math.abs(ts(best[0])-tt))best=p});return [best,mm]});
+    var tx=ts(parts[0][0][0]),cu=cc.querySelector(".mcur"),rd=cc.querySelector(".mread");cu.hidden=false;cu.style.left=((tx-t0)/((t1-t0)||1)*100)+"%";
+    rd.textContent=fmtDate(parts[0][0][0])+"   "+parts.map(function(p){return p[1].name+" "+mNum(p[0][1],p[1])}).join("   ");var w=rd.offsetWidth||0,xx=(tx-t0)/((t1-t0)||1)*rr.width;rd.style.left=Math.max(0,Math.min(rr.width-w,xx-w/2))+"px";return}
   var c=e.target&&e.target.closest?e.target.closest(".mchart[data-chart]"):null;
   if(!c){var open=document.querySelectorAll(".mcur:not([hidden])");for(var i=0;i<open.length;i++){open[i].hidden=true;var rd=open[i].parentNode.querySelector(".mread");if(rd)rd.textContent=""}return}
   var m=S.markets[c.dataset.chart];if(!m||!m.series)return;
