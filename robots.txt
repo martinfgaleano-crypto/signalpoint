@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://martinfgaleano-crypto.github.io/signalpoint/sitemap.xml
