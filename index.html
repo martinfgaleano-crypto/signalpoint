@@ -847,6 +847,22 @@ body.ck-open{overflow:hidden}
  .desk.open .rd-bar{position:sticky;top:0;z-index:2;background:#F5F6FA;margin:0 -14px 10px;padding:12px 14px;border-bottom:1px solid #E6E9F2}
  .desk.open .paperwrap .paper{padding:22px 18px}
 }
+/* board v3: one grid, groups packed densely, every tile the same size */
+.hc{min-height:132px;width:auto}
+.hc-n{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hc-stat{box-shadow:inset 0 0 0 2px #E3E6EE}
+.hc-stat .hc-v{font-size:16px;line-height:1.2;letter-spacing:-.01em}
+.hc-stat .hc-c{color:#5B6478}
+@media (min-width:761px){
+ .hgroups{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));grid-auto-flow:row dense;gap:18px 10px}
+ .hgrp{grid-column:span var(--n);display:grid;grid-template-columns:subgrid;row-gap:0;align-content:start}
+ .hgrp .hg-l{grid-column:1/-1}
+ .hg-row{display:contents}
+ .hg-row .hc{width:auto;min-height:132px}
+ .heat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+}
+@media (max-width:760px){.hgroups{display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:row dense;gap:14px 8px}.hgrp{grid-column:span var(--m);display:grid;grid-template-columns:subgrid;row-gap:8px;align-content:start}.hgrp .hg-l{grid-column:1/-1;margin-bottom:0}.hg-row{display:contents}.hg-row .hc{width:auto;min-height:120px}}
+@media (prefers-reduced-motion:reduce){.clause{opacity:1;animation:none}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1271,15 +1287,15 @@ function mPulse(){
 function heatT(m){if(m.kind==="stat")return null;var c=mChange(m,m.series.length-2),sc=m.changeUnit==="pp"?0.1:(m.group==="Crypto"?5:(m.group==="Energy"?3:1.5));return Math.max(-1,Math.min(1,c.v/sc))}
 function hTile(m){
   var t=heatT(m),bg,fg,val,chg,sel=S.msel===m.id?' aria-current="true"':"";
-  if(t===null){bg="var(--sunk)";fg="var(--ink)";val=m.valueText;chg=fmtDate(m.asOf)}
+  if(t===null){bg="#fff";fg="var(--ink)";val=m.valueText;chg=null}
   else{var a=(0.10+0.78*Math.abs(t)).toFixed(2);bg=t>=0?"rgba(18,140,64,"+a+")":"rgba(220,38,38,"+a+")";fg=Math.abs(t)>0.45?"#fff":"var(--ink)";val=mNum(mLast(m)[1],m);chg=mChange(m,m.series.length-2).text}
-  return '<button class="hc" data-market="'+esc(m.id)+'"'+sel+' style="background:'+bg+';color:'+fg+'"><span class="hc-n">'+esc(m.name)+(S.watch.indexOf(m.id)>=0?' <span class="hc-star" aria-label="in your list">★</span>':"")+'</span><span class="hc-v">'+esc(val)+'</span><span class="hc-c">'+esc(chg)+"</span></button>";
+  return '<button class="hc'+(t===null?" hc-stat":"")+'" data-market="'+esc(m.id)+'"'+sel+' style="background:'+bg+';color:'+fg+'"><span class="hc-n">'+esc(m.name)+(S.watch.indexOf(m.id)>=0?' <span class="hc-star" aria-label="in your list">★</span>':"")+'</span><span class="hc-v">'+esc(val)+'</span><span class="hc-c">'+(chg===null?T("as of ","al ")+'<span>'+esc(fmtDate(m.asOf))+"</span>":esc(chg))+"</span></button>";
 }
 function mBoard(){
   var list=mList(),mine=watched().map(function(id){var m=S.markets[id];m.id=id;return m});
   return '<section class="heat board" aria-labelledby="ht-h"><div class="heat-head"><h2 id="ht-h">The board</h2><p class="note">Last session. Colour strength shows how big the move was for that market. Pick one to see what it is and why it matters.</p></div>'+
     (mine.length?'<p class="hg-l">Your list</p><div class="heat-grid">'+mine.map(hTile).join("")+'</div><p class="hg-l">All markets</p>':"")+
-    (function(){var gs=[];list.forEach(function(m){if(gs.indexOf(m.group)<0)gs.push(m.group)});return '<div class="hgroups">'+gs.map(function(g){return '<div class="hgrp"><p class="hg-l">'+esc(g)+'</p><div class="hg-row">'+list.filter(function(m){return m.group===g}).map(hTile).join("")+"</div></div>"}).join("")+"</div>"})()+"</section>";
+    (function(){var gs=[];list.forEach(function(m){if(gs.indexOf(m.group)<0)gs.push(m.group)});return '<div class="hgroups">'+gs.map(function(g){var ms=list.filter(function(m){return m.group===g});return '<div class="hgrp" style="--n:'+ms.length+';--m:'+Math.min(2,ms.length)+'"><p class="hg-l">'+esc(g)+'</p><div class="hg-row">'+ms.map(hTile).join("")+"</div></div>"}).join("")+"</div>"})()+"</section>";
 }
 function mHero(){
   var cl=mHeadline(),list=mList().filter(function(m){return m.kind!=="stat"});
