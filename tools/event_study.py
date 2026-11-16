@@ -51,6 +51,27 @@ br=[e for e in steps(bis()) if e[0]>=START]
 trmc=[e for e in changes(trm()) if e[0]>=START]
 brc=[e for e in changes(fred('fred_DCOILBRENTEU.csv')) if e[0]>=START]
 coloc=[e for e in changes(yahoo('yahoo_COLO.json')) if e[0]>=START]
+dgs2=dict(fred('fred_DGS2.csv'));dgs10=fred('fred_DGS10.csv')
+def ychg(series,dd):  # change in a yield (pp) on market day dd vs previous obs
+    ks=sorted(series)
+    for i,k in enumerate(ks):
+        if k>=dd: return None if i==0 or k!=dd else series[k]-series[ks[i-1]]
+    return None
+def prevbd(x):
+    x-=timedelta(days=1)
+    while x.weekday()>4: x-=timedelta(days=1)
+    return x
+fed_surp=[]
+for e in fed:
+    dd=prevbd(e[0]); c=ychg(dgs2,dd)
+    if c is not None: fed_surp.append((e[0],e[1],c))
+def turns(st_):
+    out=[]
+    for i in range(1,len(st_)):
+        if (st_[i][1]>0)!=(st_[i-1][1]>0): out.append(st_[i])
+    return out
+brt=turns(br)
+y10=[(dgs10[i][0],dgs10[i][1]-dgs10[i-1][1]) for i in range(1,len(dgs10)) if dgs10[i][0]>=START]
 EV={
  "fed_hike":("La Fed sube su tasa","The Fed raises rates",[e for e in fed if e[1]>0]),
  "fed_cut":("La Fed baja su tasa","The Fed cuts rates",[e for e in fed if e[1]<0]),
@@ -59,6 +80,11 @@ EV={
  "trm_up":("El dólar sube 1,5% o más en un día frente al peso","The dollar jumps 1.5% or more against the peso in a day",cluster([e for e in trmc if e[1]>=1.5])),
  "trm_down":("El dólar cae 1,5% o más en un día frente al peso","The dollar drops 1.5% or more against the peso in a day",cluster([e for e in trmc if e[1]<=-1.5])),
  "brent_up":("El Brent sube 2,5% o más en un día","Brent rises 2.5% or more in a day",cluster([e for e in brc if e[1]>=2.5])),
+ "fed_hawk":("La Fed sorprende al alza: el bono a 2 años sube 0,07 puntos o más el día de la decisión","The Fed surprises hawkish: the 2-year yield rises 0.07 points or more on decision day",[(e[0],e[1]) for e in fed_surp if e[2]>=0.07]),
+ "fed_dove":("La Fed sorprende a la baja: el bono a 2 años cae 0,07 puntos o más el día de la decisión","The Fed surprises dovish: the 2-year yield falls 0.07 points or more on decision day",[(e[0],e[1]) for e in fed_surp if e[2]<=-0.07]),
+ "banrep_turn_hike":("El Banco de la República vuelve a subir después de un ciclo de bajadas","Banco de la República hikes again after a cutting cycle",[e for e in brt if e[1]>0]),
+ "banrep_turn_cut":("El Banco de la República empieza a bajar después de un ciclo de subidas","Banco de la República starts cutting after a hiking cycle",[e for e in brt if e[1]<0]),
+ "us10y_jump":("El bono del Tesoro a 10 años sube 0,12 puntos o más en un día","The 10-year Treasury yield rises 0.12 points or more in a day",cluster([e for e in y10 if e[1]>=0.12])),
  "colo_jump":("Las acciones colombianas suben 3% o más en un día","Colombian stocks jump 3% or more in a day",cluster([e for e in coloc if e[1]>=3])),
 }
 H=[1,5,20]
