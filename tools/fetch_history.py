@@ -40,5 +40,10 @@ save("fred_COLCPIALLMINMEI.csv", FRED + "COLCPIALLMINMEI")
 # Look for Banco de la República policy-rate datasets on datos.gov.co
 save("catalog_banrep.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("tasa de intervención política monetaria") + "&limit=20")
 save("catalog_ipc.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("IPC variación mensual") + "&limit=20")
+# FOMC meeting calendars (Federal Reserve): current page + yearly historical pages
+os.makedirs(os.path.join(OUT, "fomc"), exist_ok=True)
+save("fomc/current.html", "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm")
+for y in range(2000, 2021):
+    save(f"fomc/{y}.html", f"https://www.federalreserve.gov/monetarypolicy/fomchistorical{y}.htm"); time.sleep(0.5)
 json.dump(log, open(os.path.join(OUT, "log.json"), "w"), indent=1, ensure_ascii=False)
 print(json.dumps({k: v.get("ok") for k, v in log.items()}))
