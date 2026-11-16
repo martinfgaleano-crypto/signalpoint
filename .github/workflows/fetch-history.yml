@@ -1,0 +1,21 @@
+name: fetch-history
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/fetch_history.py', '.github/workflows/fetch-history.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/fetch_history.py out
+      - name: Publish raw data to the data branch
+        run: |
+          cd out
+          git init -q && git checkout -q -b data
+          git add -A
+          git -c user.name="signalpoint-bot" -c user.email="signalpoint-bot@users.noreply.github.com" commit -qm "Raw history $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" data

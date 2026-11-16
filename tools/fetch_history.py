@@ -1,0 +1,32 @@
+"""Download public historical series for SignalPoint's "what happened the other times" studies.
+Runs on GitHub Actions (open internet). Writes raw files + a log; never fails the job."""
+import json, sys, os, time, urllib.request, urllib.parse
+OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
+os.makedirs(OUT, exist_ok=True)
+UA = {"User-Agent": "Mozilla/5.0 (SignalPoint research; github.com/martinfgaleano-crypto/signalpoint)"}
+log = {}
+def get(url, timeout=60):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
+def save(name, url):
+    try:
+        b = get(url); open(os.path.join(OUT, name), "wb").write(b)
+        log[name] = {"ok": True, "bytes": len(b), "url": url, "head": b[:160].decode("utf-8", "replace")}
+    except Exception as e:
+        log[name] = {"ok": False, "url": url, "error": repr(e)[:300]}
+FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv?id="
+for sid in ["DFEDTARU", "DFEDTAR", "SP500", "DCOILBRENTEU", "DEXUSAL", "DGS10", "CPIAUCSL"]:
+    save(f"fred_{sid}.csv", FRED + sid)
+# TRM (Superfinanciera via datos.gov.co, Socrata)
+save("trm.csv", "https://www.datos.gov.co/resource/32sa-8pi3.csv?$limit=20000&$order=vigenciadesde")
+# Yahoo daily history (long range)
+for sym in ["^GSPC", "COP=X", "ICOL", "GXG", "^COLCAP", "BZ=F"]:
+    q = urllib.parse.quote(sym)
+    save(f"yahoo_{sym.replace('^','').replace('=','_')}.json", f"https://query1.finance.yahoo.com/v8/finance/chart/{q}?range=max&interval=1d")
+    time.sleep(1)
+# Look for Banco de la República policy-rate datasets on datos.gov.co
+save("catalog_banrep.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("tasa de intervención política monetaria") + "&limit=20")
+save("catalog_ipc.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("IPC variación mensual") + "&limit=20")
+json.dump(log, open(os.path.join(OUT, "log.json"), "w"), indent=1, ensure_ascii=False)
+print(json.dumps({k: v.get("ok") for k, v in log.items()}))
