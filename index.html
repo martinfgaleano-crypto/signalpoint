@@ -903,6 +903,9 @@ body.ck-open{overflow:hidden}
 .sim-f{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.sim-f li{display:grid;grid-template-columns:1fr auto;gap:0 10px;font-size:.88rem;border-top:1px solid #EEF0F5;padding-top:7px}.sim-f b{text-align:right}.sim-f small{grid-column:1/-1;color:#8A93A6;font-size:.75rem}
 .sim-d summary{cursor:pointer;color:#2F5BFF;font-weight:600;font-size:.85rem}
 @media (max-width:880px){.sim-g{grid-template-columns:1fr}}
+.hlegend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;font-size:.78rem;font-weight:700}.hlegend span{padding:3px 10px;border-radius:999px}.lg-up{background:rgba(18,140,64,.35);color:#0B3D1E}.lg-dn{background:rgba(220,38,38,.35);color:#5A0E0E}.lg-st{background:#fff;box-shadow:inset 0 0 0 2px #E3E6EE;color:#5B6478}
+.implegend{margin:-2px 0 10px}.ev-q{width:20px;height:20px;border-radius:50%;border:1.5px solid #C9CEDB;background:#fff;font:inherit;font-size:.72rem;font-weight:800;color:#5B6478;cursor:pointer;padding:0;line-height:1}.ev-x{flex-basis:100%;font-size:.8rem;color:#2B3345;background:#F5F6FA;border-radius:10px;padding:8px 10px;margin-top:6px}
+.calkey{margin:0 0 12px}.who{max-width:720px;margin:28px auto 0}.who h3{margin:0 0 8px}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1172,10 +1175,10 @@ function paper(b,opts){
   var src=b.source||{},u=safeUrl(src.url);
   var gradeTxt={A:"A · primary document",B:"B · reported by press",C:"C · single unconfirmed report"}[b.evidence]||"";
   return '<article class="paper">'+
-    '<div class="meta"><span>'+fmtDate(b.eventDate)+"</span><span>"+esc(b.category||"")+"</span>"+(b.region?"<span>"+esc(b.region)+"</span>":"")+(gradeTxt?'<span class="grade">Evidence '+esc(gradeTxt)+"</span>":"")+"</div>"+
+    '<div class="meta"><span>'+fmtDate(b.eventDate)+"</span><span>"+esc(b.category||"")+"</span>"+(b.region?"<span>"+esc(b.region)+"</span>":"")+(gradeTxt?'<span class="grade">Evidence '+esc(gradeTxt)+'</span><button class="ev-q" data-evq="1" aria-label="'+T("What the evidence grade means","Qu\u00e9 significa el nivel de evidencia")+'">?</button>':"")+(S.evq?'<span class="ev-x">'+T("A: the primary document was read. B: press reporting with attribution. C: a single unconfirmed report.","A: se ley\u00f3 el documento original. B: prensa que cita su fuente. C: un solo reporte sin confirmar.")+"</span>":"")+"</div>"+
     "<h2>"+esc(b.title)+"</h2>"+
     '<p class="lede">'+esc(b.summary)+"</p>"+(opts.save||b.private?"":insightBlock(b)+hxBlock(b)+lensBlock(b)+numbersBlock(b))+
-    '<section class="sec"><h4>Impact by actor</h4>'+((b.actors||[]).length?'<div class="bar" aria-hidden="true">'+(b.actors||[]).map(function(a){return '<i class="'+imp(a.impact)[0]+'" style="flex:1"></i>'}).join("")+"</div>":"")+'<div class="actors">'+((b.actors||[]).map(function(a){var i=imp(a.impact);return '<div class="actor"><div><span class="who">'+esc(a.name)+"</span>"+(a.ticker?'<span class="tk">'+esc(a.ticker)+"</span>":"")+'</div><div><span class="imp '+i[0]+'">'+i[1]+" "+impL(i[2])+"</span></div><p>"+esc(a.reason)+"</p></div>"}).join("")||'<p class="note">No actor could be assessed from the source.</p>')+"</div></section>"+
+    '<section class="sec"><h4>Impact by actor</h4><p class="note implegend">'+T("\u25b2 favorable \u00b7 \u25bc adverse \u00b7 \u25c6 mixed \u00b7 \u25cb undetermined: the effect on that actor through the channel described, not a call on its share price.","\u25b2 favorable \u00b7 \u25bc desfavorable \u00b7 \u25c6 mixto \u00b7 \u25cb indeterminado: el efecto sobre ese actor por el canal descrito, no una predicci\u00f3n del precio de su acci\u00f3n.")+'</p>'+((b.actors||[]).length?'<div class="bar" aria-hidden="true">'+(b.actors||[]).map(function(a){return '<i class="'+imp(a.impact)[0]+'" style="flex:1"></i>'}).join("")+"</div>":"")+'<div class="actors">'+((b.actors||[]).map(function(a){var i=imp(a.impact);return '<div class="actor"><div><span class="who">'+esc(a.name)+"</span>"+(a.ticker?'<span class="tk">'+esc(a.ticker)+"</span>":"")+'</div><div><span class="imp '+i[0]+'">'+i[1]+" "+impL(i[2])+"</span></div><p>"+esc(a.reason)+"</p></div>"}).join("")||'<p class="note">No actor could be assessed from the source.</p>')+"</div></section>"+
     '<section class="sec"><h4>What to watch · observable follow-ups</h4><ul class="plain">'+((b.watch||[]).map(function(w){var st=stOf(w);return '<li class="cp"><span class="box '+esc(st)+'" title="'+esc(st)+'">'+(st==="observed"?"✓":st==="not_observed"?"✕":"")+"</span><span>"+esc(w.text)+((w.outcome||w.note)?'<br><span class="note">'+esc(w.outcome||w.note)+"</span>":"")+'</span><span class="due">'+(w.due?"by "+fmtDate(w.due):"")+"</span></li>"}).join("")||"<li class=\"note\">None stated.</li>")+"</ul></section>"+
     '<section class="sec"><h4>What we do not know</h4><ul class="plain unk">'+((b.unknowns||[]).map(function(x){return"<li>"+esc(x)+"</li>"}).join("")||"<li>Nothing flagged.</li>")+"</ul></section>"+
     '<div class="src"><span>Source: '+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(src.name||u)+"</a>":esc(src.name||"Pasted text"))+"</span>"+
@@ -1243,7 +1246,7 @@ function vCheckpoints(){
   cps.sort(function(a,b){var sa=stOf(a.w)==="open"?0:1,sb=stOf(b.w)==="open"?0:1;return sa-sb||String(a.w.due||"9").localeCompare(String(b.w.due||"9"))});
   
   return '<div class="strip"><h1>Calendar and follow-ups</h1><div class="facts"><span>Every brief names what to watch next. Each item is closed only on dated evidence, and recorded as observed, not observed or inconclusive.</span></div></div>'+
-    '<div class="ledger">'+ring(t)+'<div class="tally">'+[["open","Open"],["observed","Observed"],["not_observed","Not observed"],["inconclusive","Inconclusive"]].map(function(p){return '<div class="tile"><b>'+t[p[0]]+"</b><span>"+p[1]+"</span></div>"}).join("")+"</div></div>"+
+    '<p class="note calkey">'+T("Open: not known yet. Observed: it happened. Not observed: it did not happen by the date. Inconclusive: the evidence is not enough to say.","Abierto: a\u00fan no se sabe. Observado: pas\u00f3. No observado: no pas\u00f3 en la fecha. Inconcluso: la evidencia no alcanza para decirlo.")+'</p><div class="ledger">'+ring(t)+'<div class="tally">'+[["open","Open"],["observed","Observed"],["not_observed","Not observed"],["inconclusive","Inconclusive"]].map(function(p){return '<div class="tile"><b>'+t[p[0]]+"</b><span>"+p[1]+"</span></div>"}).join("")+"</div></div>"+
     (cps.length?(function(){var groups=[],by={};cps.forEach(function(c){var k=c.w.due||"";if(!by[k]){by[k]=[];groups.push(k)}by[k].push(c)});
       return '<div class="cal">'+groups.map(function(k){var d=k?new Date(k+"T12:00:00Z"):null,dd=k?dayDiff(k):null;
         var cats=[],cby={};by[k].forEach(function(c){var ak=aKind(c.w.en||c.w.text);if(!cby[ak]){cby[ak]=[];cats.push(ak)}cby[ak].push(c)});
@@ -1394,7 +1397,7 @@ function hTile(m){
 }
 function mBoard(){
   var list=mList(),mine=watched().map(function(id){var m=S.markets[id];m.id=id;return m});
-  return '<section class="heat board" aria-labelledby="ht-h"><div class="heat-head"><h2 id="ht-h">The board</h2><p class="note">Last session. Colour strength shows how big the move was for that market. Pick one to see what it is and why it matters.</p></div>'+
+  return '<section class="heat board" aria-labelledby="ht-h"><div class="heat-head"><h2 id="ht-h">The board</h2><div><p class="note">Last session. Colour strength shows how big the move was for that market. Pick one to see what it is and why it matters.</p><p class="hlegend"><span class="lg-up">'+T("Rose","Subi\u00f3")+'</span><span class="lg-dn">'+T("Fell","Baj\u00f3")+'</span><span class="lg-st">'+T("Published figure, no daily change","Dato publicado, sin cambio diario")+'</span></p><p class="note">'+T("Green and red show direction, not good or bad: a stronger dollar helps an exporter and hurts an importer.","Verde y rojo muestran la direcci\u00f3n, no si es bueno o malo: un d\u00f3lar m\u00e1s alto le sirve a un exportador y perjudica a un importador.")+'</p></div></div>'+
     (mine.length?'<p class="hg-l">Your list</p><div class="heat-grid">'+mine.map(hTile).join("")+'</div><p class="hg-l">All markets</p>':"")+
     (function(){var gs=[];list.forEach(function(m){if(gs.indexOf(m.group)<0)gs.push(m.group)});return '<div class="hgroups">'+gs.map(function(g){var ms=list.filter(function(m){return m.group===g});return '<div class="hgrp" style="--n:'+ms.length+';--m:'+Math.min(2,ms.length)+'"><p class="hg-l">'+esc(g)+'</p><div class="hg-row">'+ms.map(hTile).join("")+"</div></div>"}).join("")+"</div>"})()+"</section>";
 }
@@ -1578,11 +1581,11 @@ var PRO_FEATS=[
 function proLock(what){return '<button class="prolock" data-view="plans" aria-label="'+esc(what)+' is part of Pro. See plans"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pro</button>'}
 function vPlans(){
   var cta=WAITLIST_URL?'<a class="btn big" href="'+esc(WAITLIST_URL)+'" target="_blank" rel="noopener noreferrer">Join the Pro waitlist</a>':''+waitBlock()+'';var startCta='<button class="btn big" data-view="learn">'+T("Start free","Empieza gratis")+"</button>";
-  return '<section class="plhero"><h1>One plan. Everything inside.</h1><p class="facts">'+T("The board, the news, the basics course, the glossary and the calculators are free. Pro unlocks every course, the insight on every event and alerts that come to you.","El tablero, las noticias, el curso b\u00e1sico, el glosario y las calculadoras son gratis. Pro desbloquea todos los cursos, el an\u00e1lisis de cada evento y alertas que te llegan.")+'</p>'+startCta+'<p class="note">Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for. Already Pro? <button class="linkish" data-view="account">Sign in</button>.</p></section>'+
+  return '<section class="plhero"><h1>'+T("Free to start. Pro to go deeper.","Gratis para empezar. Pro para ir m\u00e1s a fondo.")+'</h1><p class="facts">'+T("The board, the news, the basics course, the glossary and the calculators are free. Pro unlocks every course, the insight on every event and alerts that come to you.","El tablero, las noticias, el curso b\u00e1sico, el glosario y las calculadoras son gratis. Pro desbloquea todos los cursos, el an\u00e1lisis de cada evento y alertas que te llegan.")+'</p>'+startCta+'<p class="note">'+T("Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for. ","Pro todav\u00eda no est\u00e1 a la venta. El precio es el que planeamos cobrar; no se cobra nada ni se pide tarjeta. ")+T("Have early access? ","\u00bfTienes acceso anticipado? ")+'<button class="linkish" data-view="account">'+T("Sign in","Inicia sesi\u00f3n")+'</button>.</p></section>'+
   '<div class="plgrid two-col">'+
    '<article class="pl-card"><h2>Free</h2><p class="pl-price">$0</p><p class="note">To understand what the market did today.</p><ul><li>'+T("The board: "+Object.keys(S.markets).length+" markets in plain words","El tablero: "+Object.keys(S.markets).length+" mercados en palabras simples")+'</li><li>News with sources and evidence grades</li><li>Calendar of what is coming</li><li>Your numbers and what-if scenarios</li><li>'+T("Market basics and the first lesson of every course","Lo b\u00e1sico del mercado y la primera lecci\u00f3n de cada curso")+'</li><li>'+T("Glossary, calculators, streaks and certificates","Glosario, calculadoras, racha y certificados")+'</li><li>A list of up to '+FREE_LIST+' markets</li></ul></article>'+
    '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>SignalPoint Pro</h2><p class="pl-price">'+T("COP 14,900","COP 14.900")+'<small> '+T("/ month","/ mes")+'</small></p><p class="note">'+T("or COP 119,000 a year (two months free). Students: COP 9,900 a month. About US$4.50 a month.","o COP 119.000 al a\u00f1o (dos meses gratis). Estudiantes: COP 9.900 al mes.")+'</p><p class="note">Everything in Free, plus:</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
-  '</div><p class="note plfoot">SignalPoint gives no investment advice, trading recommendations or price targets.</p>';
+  '</div><section class="paper who"><h3>'+T("Who is behind SignalPoint","Qui\u00e9n est\u00e1 detr\u00e1s de SignalPoint")+'</h3><p>'+T("An independent project built in Cali, Colombia. SignalPoint does not sell or promote financial products, takes no commissions and is paid only by its readers.","Un proyecto independiente hecho en Cali, Colombia. SignalPoint no vende ni promociona productos financieros, no cobra comisiones y solo le pagan sus lectores.")+'</p><p>'+T("Every event cites its source and evidence grade; every pattern shows its sample and whether it survives a statistical test. ","Cada noticia cita su fuente y su nivel de evidencia; cada patr\u00f3n muestra su muestra y si se sostiene en una prueba estad\u00edstica. ")+'<button class="linkish" data-view="method">'+T("How SignalPoint works","C\u00f3mo funciona SignalPoint")+'</button></p></section><p class="note plfoot">SignalPoint gives no investment advice, trading recommendations or price targets.</p>';
 }
 /* ---------- Tools: one block, two tabs ---------- */
 function toolsBlock(){
@@ -1725,7 +1728,7 @@ function statsBar(){
   return '<div class="lstats"><div class="lst"><span class="lst-i" aria-hidden="true">🔥</span><b>'+streakNow()+'</b><small>'+T("day streak","días de racha")+'</small></div>'+
     '<div class="lst"><span class="lst-i" aria-hidden="true">⚡</span><b>'+(+p.xp||0)+'</b><small>XP</small></div>'+
     '<div class="lst goal"><div class="ring" style="--p:'+pct+'"><span>'+today+'/'+goalXP()+'</span></div><small>'+T("Daily goal (XP)","Meta diaria (XP)")+'</small></div>'+
-    '<div class="lst"><span class="lst-i" aria-hidden="true">🎓</span><b>'+done+'/'+acc+'</b><small>'+T("lessons","lecciones")+'</small></div></div>'+
+    '<div class="lst"><span class="lst-i" aria-hidden="true">🎓</span><b>'+done+'/'+acc+'</b><small>'+(typeof isPro==="function"&&isPro()?T("lessons","lecciones"):T("free lessons","lecciones gratis"))+'</small></div></div>'+
     '<p class="note sr">'+done+" of "+acc+" lessons done.</p>";
 }
 function unitHead(id,n,title,blurb,count,done,pro,open){
@@ -2015,7 +2018,8 @@ function allLessonRefs(){
 function lessonRef(id){var a=allLessonRefs();for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null}
 function dailyLesson(){
   var bs=S.briefs.filter(function(b){return !b.private}).slice().sort(function(a,b){return a.eventDate<b.eventDate?1:a.eventDate>b.eventDate?-1:0});
-  var refs=allLessonRefs();
+  var all_=allLessonRefs(),free=all_.filter(function(r){return r.full}),lists=free.length?[free,all_]:[all_];
+  for(var L=0;L<lists.length;L++){var refs=lists[L];
   for(var i=0;i<bs.length;i++){
     var b=bs[i],mids=Object.keys(S.markets).filter(function(id){return (S.markets[id].related||[]).indexOf(b.id)>=0});
     if(!mids.length)continue;
@@ -2023,7 +2027,7 @@ function dailyLesson(){
     ["colombia",null].forEach(function(pref){if(pick)return;refs.forEach(function(r){if(!pick&&r.course===pref&&(r.meta.markets||[]).some(function(m){return mids.indexOf(m)>=0}))pick=r})});
     if(!pick)refs.forEach(function(r){if(!pick&&(r.meta.markets||[]).some(function(m){return mids.indexOf(m)>=0}))pick=r});
     if(pick)return {brief:b,ref:pick};
-  }
+  }}
   return null;
 }
 function dailyBlock(){
@@ -2203,6 +2207,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.view)return go(t.dataset.view);
   if(t.dataset.example)return useExample(t.dataset.example);
   if(t.dataset.prof)return toggleProf(t.dataset.prof);
+  if(t.dataset.evq){S.evq=!S.evq;return render()}
   if(t.dataset.fyjump){var r=$("fy-r");if(r)r.scrollIntoView({behavior:"smooth",block:"start"});return}
   if(t.dataset.id){S.sel=t.dataset.id;S.selectionTouched=true;if(S.view==="briefing"){S.anim="paper";render();if(!window.matchMedia("(min-width:881px)").matches)window.scrollTo(0,0);return}return go("briefing")}
   if(t.dataset.open){S.sel=t.dataset.open;S.selectionTouched=true;S.cat="All";S.q="";S.mine=false;return go("briefing")}
