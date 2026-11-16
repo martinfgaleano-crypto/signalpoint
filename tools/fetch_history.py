@@ -32,6 +32,11 @@ for sym in ["^GSPC", "COP=X", "COLO", "EC", "CIB", "BZ=F", "^TNX"]:
     q = urllib.parse.quote(sym)
     save(f"yahoo_{sym.replace('^','').replace('=','_')}.json", f"https://query2.finance.yahoo.com/v8/finance/chart/{q}?period1=946684800&period2={now}&interval=1d")
     time.sleep(1)
+# Central bank policy rates (BIS), daily: Colombia and US
+save("bis_cbpol_CO.csv", "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.CO?format=csv")
+if not log["bis_cbpol_CO.csv"]["ok"]:
+    save("bis_cbpol_CO.csv", "https://stats.bis.org/api/v1/data/WS_CBPOL/D.CO/all?format=csv")
+save("fred_COLCPIALLMINMEI.csv", FRED + "COLCPIALLMINMEI")
 # Look for Banco de la República policy-rate datasets on datos.gov.co
 save("catalog_banrep.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("tasa de intervención política monetaria") + "&limit=20")
 save("catalog_ipc.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("IPC variación mensual") + "&limit=20")
