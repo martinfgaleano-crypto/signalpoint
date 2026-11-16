@@ -133,6 +133,78 @@ for k,(es,en,evs) in EV.items():
             p=res["baseline"][ak][h]["up"]/100;n=v["n"];z=(v["up"]-n*p)/((n*p*(1-p))**0.5) if 0<p<1 else 0
             v["base"]=res["baseline"][ak][h]["up"];v["sig"]=abs(z)>=1.96
     res["events"][k]=blk
+# Multiple testing: many event x market x horizon tests. Control the false discovery rate (Benjamini-Hochberg, q=0.05).
+import math
+def pval(z): return math.erfc(abs(z)/math.sqrt(2))
+tests=[]
+for k,b in res["events"].items():
+    for ak,a in b["assets"].items():
+        for h,v in a["h"].items():
+            p=v["base"]/100;n=v["n"];z=(v["up"]-n*p)/math.sqrt(n*p*(1-p)) if 0<p<1 else 0
+            v["p"]=pval(z);tests.append(v)
+tests.sort(key=lambda v:v["p"]);m=len(tests);cut=0
+for i,v in enumerate(tests,1):
+    if v["p"]<=0.10*i/m: cut=i
+for i,v in enumerate(tests,1):
+    v["sig"]=i<=cut and v["n"]>=10; v["hint"]=(not v["sig"]) and v["p"]<0.05 and v["n"]>=10; v["p"]=round(v["p"],4)
+res["tests"]=m;res["discoveries"]=sum(1 for v in tests if v["sig"]);res["hints"]=sum(1 for v in tests if v["hint"])
+# Similar days: describe each market day by its recent context and find the closest past days (k-nearest neighbours).
+def asof_map(series):
+    return dict(series)
+def ret(series,i,n): return (series[i][1]/series[i-n][1]-1)*100 if i-n>=0 and series[i-n][1] else None
+spx=A["sp500"][2];trs=A["usdcop"][2];brs=A["brent"][2];cos=A["colo"][2]
+d2=sorted(dgs2.items());d10=dgs10
+def idx_on(series,dd):
+    lo,hi=0,len(series)-1;best=None
+    while lo<=hi:
+        mid=(lo+hi)//2
+        if series[mid][0]<=dd: best=mid;lo=mid+1
+        else: hi=mid-1
+    return best
+def feats(dd):
+    out=[]
+    for ser,n in ((trs,20),(trs,5),(spx,20),(brs,20)):
+        i=idx_on(ser,dd)
+        if i is None: return None
+        r=ret(ser,i,n)
+        if r is None: return None
+        out.append(r)
+    i=idx_on(spx,dd)
+    if i is None or i<21: return None
+    rs=[(spx[j][1]/spx[j-1][1]-1)*100 for j in range(i-19,i+1)];out.append(st.pstdev(rs)*math.sqrt(252))
+    i=idx_on(d2,dd)
+    if i is None or i<60: return None
+    out.append(d2[i][1]-d2[i-60][1])
+    i=idx_on(d10,dd)
+    if i is None or i<20: return None
+    out.append(d10[i][1]-d10[i-20][1])
+    return out
+FN=[("Dólar en pesos, últimas 4 semanas","Dollar in pesos, last 4 weeks","%"),("Dólar en pesos, última semana","Dollar in pesos, last week","%"),("S&P 500, últimas 4 semanas","S&P 500, last 4 weeks","%"),("Brent, últimas 4 semanas","Brent, last 4 weeks","%"),("Volatilidad del S&P 500 (anualizada)","S&P 500 volatility (annualised)","%"),("Bono a 2 años de EE. UU., últimos 3 meses","US 2-year yield, last 3 months","pts"),("Bono a 10 años de EE. UU., últimas 4 semanas","US 10-year yield, last 4 weeks","pts")]
+days=[x[0] for x in spx if x[0]>=date(2001,1,1)]
+rows=[(dd,feats(dd)) for dd in days]; rows=[(dd,f) for dd,f in rows if f]
+today_d,today_f=rows[-1]
+mu=[st.mean(f[j] for _,f in rows) for j in range(len(FN))];sd=[st.pstdev(f[j] for _,f in rows) or 1 for j in range(len(FN))]
+zf=lambda f:[(f[j]-mu[j])/sd[j] for j in range(len(FN))]
+tz=zf(today_f)
+cands=sorted(((sum((a-b)**2 for a,b in zip(zf(f),tz))**0.5,dd) for dd,f in rows if (today_d-dd).days>90))
+K=20;pick=[]
+for dist,dd in cands:
+    if all(abs((dd-p).days)>=20 for _,p in pick): pick.append((dist,dd))
+    if len(pick)>=K: break
+sim={"date":str(today_d),"k":len(pick),"features":[{"es":FN[j][0],"en":FN[j][1],"unit":FN[j][2],"today":round(today_f[j],2),"typical":round(mu[j],2)} for j in range(len(FN))],"days":[str(dd) for _,dd in sorted(pick,key=lambda x:x[1])],"assets":{}}
+for ak,(aes,aen,ser) in A.items():
+    out={}
+    for h in [5,20,60]:
+        xs=[]
+        for _,dd in pick:
+            i=idx_on(ser,dd)
+            if i is not None and i+h<len(ser): xs.append((ser[i+h][1]/ser[i][1]-1)*100)
+        if len(xs)<10: continue
+        bl=baseline(ser,h) if str(h) not in res["baseline"].get(ak,{}) else res["baseline"][ak][str(h)]
+        p=bl["up"]/100;n=len(xs);up=sum(1 for x in xs if x>0);z=(up-n*p)/math.sqrt(n*p*(1-p))
+        out[str(h)]={"n":n,"up":up,"med":round(st.median(xs),2),"base":bl["up"],"sig":abs(z)>=1.96}
+    if out: sim["assets"][ak]={"es":aes,"en":aen,"h":out}
+res["similar"]=sim
 json.dump(res,open('history.json','w'),ensure_ascii=False,indent=1)
 for k,b in res["events"].items():
     print(f"\n{b['es']}  n={b['n']}  ({b['first']} → {b['last']})")
