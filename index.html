@@ -672,6 +672,70 @@ header.top nav .n{display:none}
 .gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin:0}
 .gloss div{background:#fff;border:1px solid #DDE1EA;border-radius:8px;padding:12px 14px}.gloss dt{font-weight:700;margin-bottom:4px}.gloss dd{margin:0;font-size:.9rem;line-height:1.5}
 @media print{body.printing-cert *{visibility:hidden}body.printing-cert .cert.print-me,body.printing-cert .cert.print-me .cert-in,body.printing-cert .cert.print-me .cert-in *{visibility:visible}body.printing-cert .cert.print-me{position:fixed;inset:0;margin:0}body.printing-cert .cert-f{display:none}}
+
+/* Learn path */
+.lstats{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 4px}
+.lst{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid #E3E7F0;border-bottom-width:4px;border-radius:16px;padding:10px 16px}
+.lst b{font-size:1.25rem}.lst small{color:#5B6478;font-size:.8rem}.lst-i{font-size:1.3rem}
+.ring{--p:0;width:44px;height:44px;border-radius:50%;background:conic-gradient(#FFB200 calc(var(--p)*1%),#EEF0F5 0);display:grid;place-items:center}
+.ring span{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:.68rem;font-weight:700}
+.units{display:flex;flex-direction:column;gap:18px;margin-top:10px}
+.unit-h{display:grid;grid-template-columns:1fr auto;gap:2px 12px;width:100%;text-align:left;background:var(--u);color:#fff;border:0;border-bottom:5px solid rgba(0,0,0,.22);border-radius:18px;padding:16px 20px;font:inherit;cursor:pointer}
+div.unit-h{cursor:default}
+.unit-h .u-k{grid-column:1;font-size:.78rem;font-weight:700;opacity:.92;display:flex;gap:8px;align-items:center}
+.unit-h b{grid-column:1;font-size:1.3rem}.unit-h .u-b{grid-column:1;font-size:.9rem;opacity:.92}
+.unit-h .u-p{grid-column:1;height:8px;border-radius:99px;background:rgba(255,255,255,.3);overflow:hidden;margin-top:8px}.unit-h .u-p i{display:block;height:100%;background:#fff;border-radius:99px}
+.unit-h .u-c{grid-column:2;grid-row:4;font-size:.8rem;font-weight:700;align-self:center}
+.unit-h .u-t{grid-column:2;grid-row:1/3;font-size:1.6rem;font-weight:700;align-self:center}
+.unit-h .protag{color:#fff;border-color:rgba(255,255,255,.8)}.unit-h .freetag{background:#fff}
+.unit-h.on{box-shadow:none}
+.path{display:flex;flex-direction:column;align-items:center;gap:22px;padding:26px 0 14px}
+.pn-wrap{position:relative;display:flex;flex-direction:column;align-items:center;transform:translateX(var(--x));border:0;background:none;padding:0;margin:0}
+.pnode{width:76px;height:76px;border-radius:50%;border:0;background:var(--u);color:#fff;font-size:1.7rem;font-weight:700;display:grid;place-items:center;box-shadow:0 7px 0 rgba(0,0,0,.25);cursor:pointer;transition:transform .12s,box-shadow .12s;padding:0}
+.pnode:active{transform:translateY(5px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.pnode.done{background:#FFB200}
+.pnode.cur{outline:6px solid color-mix(in srgb,var(--u) 25%,transparent);outline-offset:4px;animation:pnpulse 1.8s ease-in-out infinite}
+.pnode.lockd{background:#E3E7F0;color:#9AA3B5;box-shadow:0 7px 0 #C9CFDC;cursor:default}
+.pn-start{position:absolute;top:-34px;background:#fff;color:var(--u);border:2px solid #E3E7F0;font-weight:800;font-size:.8rem;padding:4px 10px;border-radius:10px;text-transform:none;animation:pnbob 1.6s ease-in-out infinite}
+.pn-l{margin-top:12px;text-align:center;max-width:240px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.pn-l .ltitle{font-weight:700;font-size:.92rem}.pn-l .ltitle small{display:block;font-weight:400;color:#5B6478;font-size:.78rem;margin-top:2px}.pn-l .lmin{font-size:.75rem;color:#5B6478}
+@keyframes pnpulse{50%{transform:scale(1.06)}}@keyframes pnbob{50%{transform:translateY(-4px)}}
+body.lp-open{overflow:hidden}
+.lplayer{position:fixed;inset:0;z-index:60;background:#fff;display:flex;flex-direction:column;animation:lpin .22s ease-out}
+@keyframes lpin{from{opacity:0;transform:translateY(16px)}}
+.lp-top{display:flex;align-items:center;gap:14px;padding:16px max(16px,calc(50% - 340px));border-bottom:1px solid #EEF0F5}
+.lp-x{border:0;background:none;font-size:1.9rem;line-height:1;color:#9AA3B5;cursor:pointer;padding:0 4px}
+.lp-bar{flex:1;height:16px;border-radius:99px;background:#EEF0F5;overflow:hidden}.lp-bar i{display:block;height:100%;background:var(--u);border-radius:99px;transition:width .35s ease}
+.lp-xp{font-weight:800;color:#E08A00}
+.lp-body{flex:1;overflow:auto;padding:28px max(18px,calc(50% - 320px)) 120px}
+.lp-t{font-size:1.5rem;margin:0 0 14px}
+.lplayer .lesson-b{border:0;padding:0;background:none}
+.lplayer .lsteps{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lplayer .lread{font-size:1.2rem;line-height:1.65}
+.lplayer .lnav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid #EEF0F5;padding:16px max(18px,calc(50% - 320px));justify-content:flex-end;gap:12px}
+.lplayer .lnav .btn{min-width:150px;padding:14px 22px;font-size:1rem;font-weight:800;border-radius:14px;background:var(--u);border:0;box-shadow:0 5px 0 rgba(0,0,0,.25);color:#fff}
+.lplayer .lnav .btn.ghost{background:#fff;color:#3A4466;border:2px solid #E3E7F0;box-shadow:0 5px 0 #E3E7F0}
+.lplayer .lq-q{font-size:1.25rem;font-weight:700}
+.lplayer .lq-o{display:flex;flex-direction:column;gap:12px;margin:16px 0}
+.lplayer .lq-o button{text-align:left;font:inherit;font-size:1.02rem;padding:16px 18px;border:2px solid #E3E7F0;border-bottom-width:5px;border-radius:16px;background:#fff;cursor:pointer}
+.lplayer .lq-o button:hover:not([disabled]){background:#F5F8FF;border-color:var(--u)}
+.lplayer .lq-o button.right{background:#E6F8EE;border-color:#1FA971;color:#0B6B42}
+.lplayer .lq-o button.wrong{background:#FDECEC;border-color:#E04848;color:#9B1C1C}
+.lplayer .lq-f{padding:16px 18px;border-radius:14px;font-size:1rem;animation:lpin .2s ease-out}
+.lplayer .lq-f.ok{background:#E6F8EE;color:#0B6B42}.lplayer .lq-f.no{background:#FDECEC;color:#9B1C1C}
+.lp-win{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:26px;border-radius:20px;background:linear-gradient(180deg,#FFF6D6,#fff);animation:lpwin .45s cubic-bezier(.2,1.6,.4,1)}
+.lp-win b{font-size:1.5rem}.lp-burst{font-size:3rem}
+@keyframes lpwin{from{transform:scale(.7);opacity:0}}
+.lplayer .ltry{margin-top:6px}
+@media (prefers-reduced-motion:reduce){.pnode.cur,.pn-start,.lplayer,.lp-win,.lplayer .lq-f{animation:none}}
+@media (max-width:600px){.pnode{width:66px;height:66px}.pn-wrap{transform:translateX(calc(var(--x)*.6))}.lplayer .lnav .btn{flex:1}}
+.pn-wrap.lesson,.pn-wrap.lesson.open,.pn-wrap.lesson.ok{border:0;background:none;box-shadow:none;padding:0;border-radius:0}
+.pnode span{line-height:1}
+.lplayer.won .lnav{display:none}
+.lplayer.won .lp-win{position:fixed;left:0;right:0;bottom:0;margin:0;border-radius:22px 22px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.12);padding:22px max(18px,calc(50% - 320px)) 26px}
+.lplayer.won .lp-win .btn{width:100%;max-width:420px;padding:15px;font-size:1.05rem;font-weight:800;border-radius:14px;background:#1FA971;border:0;box-shadow:0 5px 0 #138356;color:#fff}
+.pn-wrap .lesson-h.pnode{display:flex;align-items:center;justify-content:center;gap:0;width:76px;padding:0;text-align:center}@media (max-width:600px){.pn-wrap .lesson-h.pnode{width:66px}}
+.path{padding-top:56px}.pn-start{z-index:2;white-space:nowrap}
 </style>
 <meta name="robots" content="noindex">
 <meta name="description" content="SignalPoint: the market in plain words. What moved, why it matters and what comes next, with the source one click away. Pilot; not real time; not advice.">
@@ -1352,13 +1416,61 @@ function lBody(l){
   var nextLabel=st===n-1?(hasTry?"Try it":"Check yourself"):(hasTry&&st===n)?"Check yourself":"Next";
   return '<div class="lesson-b">'+dots+'<div class="lstage">'+main+'</div><div class="row lnav">'+(st>0?'<button class="btn ghost" data-lgo="'+l.id+'" data-lgi="'+(st-1)+'">Back</button>':"")+(st<last?'<button class="btn" data-lgo="'+l.id+'" data-lgi="'+(st+1)+'">'+nextLabel+"</button>":"")+"</div>"+(mk?'<div class="lmks"><span>On the board:</span>'+mk+"</div>":"")+"</div>";
 }
+/* ---------- Learn as a path: units, nodes, player, XP and streak ---------- */
+var UCOL={basics:"#2F5BFF",colombia:"#E8A600",investing:"#1FA971",fedpath:"#8B3DF0",results:"#F2730B",dollar:"#0E9F9A"};
+var PKEY="signalpoint.progress";
+function prog(){try{var p=JSON.parse(localStorage.getItem(PKEY)||"null");if(p&&typeof p==="object")return p}catch(e){}return {xp:0,streak:0,last:"",days:{}}}
+function saveProg(p){try{localStorage.setItem(PKEY,JSON.stringify(p))}catch(e){}}
+function todayISO(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function award(xp){
+  var p=prog(),t=todayISO(),y=new Date();y.setDate(y.getDate()-1);
+  var yi=y.getFullYear()+"-"+String(y.getMonth()+1).padStart(2,"0")+"-"+String(y.getDate()).padStart(2,"0");
+  p.xp=(+p.xp||0)+xp;p.days=p.days||{};p.days[t]=(p.days[t]||0)+xp;
+  if(p.last!==t){p.streak=p.last===yi?(+p.streak||0)+1:1;p.last=t}
+  saveProg(p);S.justXP=xp;
+}
+function streakNow(){var p=prog(),t=todayISO(),y=new Date();y.setDate(y.getDate()-1);var yi=y.getFullYear()+"-"+String(y.getMonth()+1).padStart(2,"0")+"-"+String(y.getDate()).padStart(2,"0");return p.last===t||p.last===yi?(+p.streak||0):0}
+var GOAL=20;
+function statsBar(){
+  var p=prog(),today=(p.days||{})[todayISO()]||0,pct=Math.min(100,today/GOAL*100),done=learnedCount(),acc=accessibleLessons().length;
+  return '<div class="lstats"><div class="lst"><span class="lst-i" aria-hidden="true">🔥</span><b>'+streakNow()+'</b><small>'+T("day streak","días de racha")+'</small></div>'+
+    '<div class="lst"><span class="lst-i" aria-hidden="true">⚡</span><b>'+(+p.xp||0)+'</b><small>XP</small></div>'+
+    '<div class="lst goal"><div class="ring" style="--p:'+pct+'"><span>'+today+'/'+GOAL+'</span></div><small>'+T("Daily goal (XP)","Meta diaria (XP)")+'</small></div>'+
+    '<div class="lst"><span class="lst-i" aria-hidden="true">🎓</span><b>'+done+'/'+acc+'</b><small>'+T("lessons","lecciones")+'</small></div></div>'+
+    '<p class="note sr">'+done+" of "+acc+" lessons done.</p>";
+}
+function unitHead(id,n,title,blurb,count,done,pro,open){
+  var col=UCOL[id]||"#2F5BFF";
+  var inner='<span class="u-k">'+T("Unit","Unidad")+" "+n+(pro?' <span class="protag">'+(isPro()?"Pro · unlocked":"Pro")+"</span>":' <span class="freetag">'+T("Free","Gratis")+"</span>")+'</span><b>'+esc(title)+'</b><span class="u-b">'+esc(blurb)+'</span><span class="u-p"><i style="width:'+(count?done/count*100:0)+'%"></i></span><span class="u-c">'+done+"/"+count+"</span>";
+  if(id==="basics")return '<div class="unit-h" style="--u:'+col+'">'+inner+"</div>";
+  return '<button class="unit-h ccard'+(open?" on":"")+'" style="--u:'+col+'" data-course="'+esc(id)+'" aria-expanded="'+open+'">'+inner+'<span class="u-t" aria-hidden="true">'+(open?"−":"+")+"</span></button>";
+}
+var ZZ=[0,1,2,1,0,-1,-2,-1];
+function pathNodes(unit,list){
+  var cur=null;list.forEach(function(x){if(!cur&&x.full&&!S.learned[x.l.id])cur=x.l.id});
+  return '<div class="path" style="--u:'+(UCOL[unit]||"#2F5BFF")+'">'+list.map(function(x,i){
+    var l=x.l,ok=!!S.learned[l.id],off=ZZ[i%ZZ.length]*46;
+    if(!x.full)return '<section class="lesson locked pn-wrap" style="--x:'+off+'px"><div class="lesson-h pnode lockd" title="'+esc(l.title)+'"><span aria-hidden="true">🔒</span></div><div class="pn-l"><span class="ltitle">'+esc(l.title)+"<small>"+esc(l.summary||"")+"</small></span>"+proLock(l.title)+"</div></section>";
+    return '<section class="lesson pn-wrap'+(ok?" ok":"")+'" style="--x:'+off+'px">'+(cur===l.id?'<span class="pn-start">'+T("Start","Empieza")+"</span>":"")+'<button class="lesson-h pnode'+(ok?" done":"")+(cur===l.id?" cur":"")+'" data-lesson="'+l.id+'" aria-label="'+esc(l.title)+'"><span aria-hidden="true">'+(ok?"✓":i===list.length-1?"★":(i+1))+'</span></button><div class="pn-l"><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">'+T("Free","Gratis")+"</span>":"")+'</span><span class="lmin">'+l.min+" min</span></div></section>";
+  }).join("")+"</div>";
+}
+function player(){
+  if(!S.lesson)return"";var r=lessonRef(S.lesson);if(!r||!r.full)return"";
+  var l=r.full,st=lStep(l.id),total=l.steps.length+(LTRY[l.id]?1:0)+1,ok=!!S.learned[l.id],col=UCOL[r.course||"basics"]||"#2F5BFF";
+  var win=ok&&S.lq[l.id]!=null&&S.lq[l.id]===(quizFor(l.id)||{}).a;
+  return '<div class="lplayer'+(win?" won":"")+'" role="dialog" aria-modal="true" aria-label="'+esc(l.title)+'" style="--u:'+col+'"><div class="lp-top"><button class="lp-x" data-lclose="1" aria-label="'+T("Close","Cerrar")+'">×</button><div class="lp-bar"><i style="width:'+(win?100:(st)/total*100)+'%"></i></div><span class="lp-xp">⚡ '+(+prog().xp||0)+'</span></div><div class="lp-body"><h2 class="lp-t">'+esc(l.title)+"</h2>"+lBody(l)+
+    (win?'<div class="lp-win"><div class="lp-burst" aria-hidden="true">🎉</div><b>'+T("Lesson complete!","¡Lección completada!")+"</b><span>"+(S.justXP?"+"+S.justXP+" XP · ":"")+"🔥 "+streakNow()+" "+(streakNow()===1?T("day streak","día de racha"):T("day streak","días de racha"))+'</span><button class="btn big" data-lclose="1">'+T("Continue","Continuar")+"</button></div>":"")+"</div></div>";
+}
 function vLearn(){
-  var acc=accessibleLessons(),done=learnedCount(),c=null;
-  SP_CONTENT.courses.forEach(function(x){if(x.id===S.course)c=x});
-  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with five courses: the first lesson of each is free.</div><div class="lprog" role="img" aria-label="'+done+" of "+acc.length+' lessons done"><span style="width:'+(acc.length?done/acc.length*100:0)+'%"></span></div><p class="note">'+done+" of "+acc.length+" lessons done.</p></div>"+
-    dailyBlock()+'<h2 class="lsec">Start here: market basics <span class="freetag">Free</span></h2><div class="lessons">'+LESSONS.map(function(l,i){return lessonRow(Object.assign({free:true,basic:true},l),i,Object.assign({quiz:LQUIZ[l.id]},l))}).join("")+"</div>"+certBlock("basics",T("Market basics","Lo b\u00e1sico del mercado"),LESSONS.map(function(l){return l.id}))+
-    '<h2 class="lsec">Courses</h2><div class="cgrid">'+SP_CONTENT.courses.map(courseCard).join("")+"</div>"+
-    (c?'<div class="lessons course-open" id="course-'+esc(c.id)+'"><h3 class="ctitle">'+esc(c.title)+"</h3>"+c.lessons.map(function(l,i){var full=l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null);return lessonRow(l,i,full)}).join("")+(isPro()?"":proCta("Unlock every lesson in all five courses"))+certBlock(c.id,c.title,c.lessons.map(function(l){return l.id}))+"</div>":"")+glossaryBlock();
+  var c=null;SP_CONTENT.courses.forEach(function(x){if(x.id===S.course)c=x});
+  var basics=LESSONS.map(function(l){return {l:Object.assign({free:true,basic:true},l),full:Object.assign({quiz:LQUIZ[l.id]},l)}});
+  var bdone=basics.filter(function(x){return S.learned[x.l.id]}).length;
+  var units='<div class="unit">'+unitHead("basics",1,T("Market basics","Lo básico del mercado"),T("Six short lessons tied to the board.","Seis lecciones cortas ligadas al tablero."),basics.length,bdone,false,true)+pathNodes("basics",basics)+certBlock("basics",T("Market basics","Lo básico del mercado"),LESSONS.map(function(l){return l.id}))+"</div>";
+  units+=SP_CONTENT.courses.map(function(x,k){
+    var open=S.course===x.id,list=x.lessons.map(function(l){return {l:l,full:l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null)}}),dn=x.lessons.filter(function(l){return S.learned[l.id]}).length;
+    return '<div class="unit">'+unitHead(x.id,k+2,x.title,x.blurb,x.lessons.length,dn,true,open)+(open?'<div class="lessons course-open" id="course-'+esc(x.id)+'">'+pathNodes(x.id,list)+(isPro()?"":proCta("Unlock every lesson in all five courses"))+certBlock(x.id,x.title,x.lessons.map(function(l){return l.id}))+"</div>":"")+"</div>";
+  }).join("");
+  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with five courses: the first lesson of each is free.</div>'+statsBar()+"</div>"+dailyBlock()+'<div class="units">'+units+"</div>"+glossaryBlock()+player();
 }
 /* ---------- Language: Spanish by default, English on request ---------- */
 var LANGKEY="signalpoint.lang";
@@ -1644,6 +1756,7 @@ function render(){
   var keep=document.activeElement&&document.activeElement.id,pos=keep&&document.activeElement.selectionStart;
   $("view").innerHTML=v;$("view").className="wrap"+(S.anim==="view"?" enter":S.anim==="paper"?" enter-paper":"");S.anim=null;
   if(keep&&$(keep)){$(keep).focus();try{$(keep).setSelectionRange(pos,pos)}catch(e){}}
+  document.body.classList.toggle("lp-open",S.view==="learn"&&!!S.lesson&&!!document.querySelector(".lplayer"));
   if($("tosign"))$("tosign").textContent=S.user?(S.plan==="pro"?"Pro account":"Account"):"Sign in";
   document.querySelectorAll("nav button,.topro,.tosign").forEach(function(b){if(b.dataset.view===S.view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
   $("n-briefs").textContent=S.briefs.length||"";
@@ -1670,13 +1783,14 @@ document.addEventListener("click",function(e){
   if(t.dataset.tool){S.tool=t.dataset.tool;return render()}
   if(t.dataset.lesson){S.lesson=S.view==="learn"&&S.lesson===t.dataset.lesson?null:t.dataset.lesson;if(S.view!=="learn")return go("learn");return render()}
   if(t.dataset.golesson)return goLesson(t.dataset.golesson);
+  if(t.dataset.lclose){S.lesson=null;S.justXP=0;return render()}
   if(t.dataset.certprint){document.body.classList.add("printing-cert");var ce=$("cert-"+t.dataset.certprint);if(ce)ce.classList.add("print-me");try{window.print()}catch(e){}setTimeout(function(){document.body.classList.remove("printing-cert");if(ce)ce.classList.remove("print-me")},500);return}
   if(t.dataset.course){S.course=S.course===t.dataset.course?null:t.dataset.course;S.lesson=null;render();var co=$("course-"+S.course);if(co&&co.scrollIntoView)co.scrollIntoView({block:"start",behavior:"smooth"});return}
   if(t.id==="signout")return authSignOut();
   if(t.id==="tolang")return setLang(S.lang==="es"?"en":"es");
   if(t.dataset.lgo){S.lstep[t.dataset.lgo]=+t.dataset.lgi;return render()}
   if(t.dataset.lw){S.lw[t.dataset.lw]=+t.dataset.lwv;return render()}
-  if(t.dataset.lqa){var qv=+t.dataset.lqv;S.lq[t.dataset.lqa]=qv;if(quizFor(t.dataset.lqa)&&qv===quizFor(t.dataset.lqa).a){S.learned[t.dataset.lqa]=true;persist()}return render()}
+  if(t.dataset.lqa){var qv=+t.dataset.lqv;S.lq[t.dataset.lqa]=qv;if(quizFor(t.dataset.lqa)&&qv===quizFor(t.dataset.lqa).a){if(!S.learned[t.dataset.lqa])award(10);S.learned[t.dataset.lqa]=true;persist()}return render()}
   if(t.dataset.lqr){delete S.lq[t.dataset.lqr];return render()}
   if(t.dataset.learned){if(S.learned[t.dataset.learned])delete S.learned[t.dataset.learned];else S.learned[t.dataset.learned]=true;persist();return render()}
   if(t.dataset.market){S.msel=t.dataset.market;S.mq="";S.listNote="";if(S.view!=="markets"){go("markets")}else{S.anim="paper";render()}var md=$("mdetail");if(md&&md.scrollIntoView)md.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
@@ -1687,6 +1801,7 @@ document.addEventListener("click",function(e){
   if(t.id==="lens-run")return runLens(t.dataset.lens);
   if(t.id==="desc-save")return saveProfile();
 });
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&S.view==="learn"&&S.lesson){S.lesson=null;S.justXP=0;render()}});
 document.addEventListener("input",function(e){
   if(e.target.dataset&&e.target.dataset.lwr){var lid=e.target.dataset.lwr,tt=LTRY[lid],lv=+e.target.value;S.lw[lid]=lv;var r=tt.out(lv),o=$("lwo-"+lid),b=$("lwv-"+lid);if(o)o.innerHTML="<b>"+esc(r.big)+"</b><p>"+esc(r.line)+"</p>";if(b)b.textContent=(tt.fmt?tt.fmt(lv):(lv>0&&lid!=="inflation"?"+":"")+lv)+tt.unit;return}
   if(e.target.id==="wi-amount"){S.wiAmount=e.target.value;var w1=$("wi-out");if(w1)w1.innerHTML=wiOut();return}
