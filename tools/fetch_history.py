@@ -20,10 +20,17 @@ for sid in ["DFEDTARU", "DFEDTAR", "SP500", "DCOILBRENTEU", "DEXUSAL", "DGS10", 
     save(f"fred_{sid}.csv", FRED + sid)
 # TRM (Superfinanciera via datos.gov.co, Socrata)
 save("trm.csv", "https://www.datos.gov.co/resource/32sa-8pi3.csv?$limit=20000&$order=vigenciadesde")
+if not log["trm.csv"]["ok"]:
+    time.sleep(5); save("trm.csv", "https://www.datos.gov.co/api/views/32sa-8pi3/rows.csv?accessType=DOWNLOAD")
+# Banco de la República pages that link to the policy-rate series (to discover the export URLs)
+save("banrep_tpm_page.html", "https://www.banrep.gov.co/es/estadisticas/tasas-de-interes-de-politica-monetaria")
+save("banrep_node50426.html", "https://www.banrep.gov.co/es/node/50426")
+save("uba_tasas.html", "https://uba.banrep.gov.co/htmlcommons/SeriesHistoricas/tasas-interes.html")
 # Yahoo daily history (long range)
-for sym in ["^GSPC", "COP=X", "ICOL", "GXG", "^COLCAP", "BZ=F"]:
+now = int(time.time())
+for sym in ["^GSPC", "COP=X", "COLO", "EC", "CIB", "BZ=F", "^TNX"]:
     q = urllib.parse.quote(sym)
-    save(f"yahoo_{sym.replace('^','').replace('=','_')}.json", f"https://query1.finance.yahoo.com/v8/finance/chart/{q}?range=max&interval=1d")
+    save(f"yahoo_{sym.replace('^','').replace('=','_')}.json", f"https://query2.finance.yahoo.com/v8/finance/chart/{q}?period1=946684800&period2={now}&interval=1d")
     time.sleep(1)
 # Look for Banco de la República policy-rate datasets on datos.gov.co
 save("catalog_banrep.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("tasa de intervención política monetaria") + "&limit=20")
