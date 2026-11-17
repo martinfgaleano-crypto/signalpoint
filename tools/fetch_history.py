@@ -37,6 +37,23 @@ save("bis_cbpol_CO.csv", "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPO
 if not log["bis_cbpol_CO.csv"]["ok"]:
     save("bis_cbpol_CO.csv", "https://stats.bis.org/api/v1/data/WS_CBPOL/D.CO/all?format=csv")
 save("fred_COLCPIALLMINMEI.csv", FRED + "COLCPIALLMINMEI")
+# Probe candidate sources for the MSCI Colcap (Bolsa de Valores de Colombia); results go to colcap_probe.json
+probe = {}
+for name, url in [
+    ("yahoo_ICOLCAP.CL", f"https://query2.finance.yahoo.com/v8/finance/chart/ICOLCAP.CL?range=1mo&interval=1d"),
+    ("yahoo_COLCAP.CL", f"https://query2.finance.yahoo.com/v8/finance/chart/COLCAP.CL?range=1mo&interval=1d"),
+    ("yahoo_^MXCO", f"https://query2.finance.yahoo.com/v8/finance/chart/%5EMXCO?range=1mo&interval=1d"),
+    ("stooq_colcap", "https://stooq.com/q/d/l/?s=%5Ecolcap&i=d"),
+    ("bvc_rest", "https://rest.bvc.com.co/market-information/rv/lvl-2/index/history?filters[marketDataRv][indexCode]=COLCAP"),
+    ("bvc_site", "https://www.bvc.com.co/indices/colcap"),
+    ("investing", "https://www.investing.com/indices/colcap-historical-data"),
+    ("wsj", "https://www.wsj.com/market-data/quotes/index/CO/XBOG/COLCAP/historical-prices"),
+]:
+    try:
+        b = get(url, timeout=30); probe[name] = {"ok": True, "bytes": len(b), "head": b[:400].decode("utf-8", "replace")}
+    except Exception as e:
+        probe[name] = {"ok": False, "error": repr(e)[:200]}
+json.dump(probe, open(os.path.join(OUT, "colcap_probe.json"), "w"), indent=1, ensure_ascii=False)
 # Look for Banco de la República policy-rate datasets on datos.gov.co
 save("catalog_banrep.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("tasa de intervención política monetaria") + "&limit=20")
 save("catalog_ipc.json", "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=" + urllib.parse.quote("IPC variación mensual") + "&limit=20")
