@@ -20,7 +20,7 @@ FEEDS = [
     ("Federal Reserve (monetary policy)", "https://www.federalreserve.gov/feeds/press_monetary.xml", "A"),
 ]
 PRIORITY = re.compile(r"banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
-SKIP = re.compile(r"entrevista|festival|expo|vacantes|navide|concierto|turismo|viajeros", re.I)
+SKIP = re.compile(r"entrevista|festival|\bexpo\b|vacantes|navide|concierto|turismo|viajeros", re.I)
 def get(url, timeout=40):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read()
 def text_of(raw):
@@ -124,10 +124,12 @@ def main():
     today = datetime.now(timezone.utc).date().isoformat()
     seen_p = os.path.join(OUT, "seen.json"); seen = set(json.load(open(seen_p))) if os.path.exists(seen_p) else set()
     cand, feedlog = items()
+    raw_cand = list(cand)
     def score(c): return len(PRIORITY.findall(c["title"] + " " + c["desc"]))
     cand = [c for c in cand if c["link"] not in seen and not SKIP.search(c["title"]) and (c["grade"] == "A" or score(c) >= 1)]
     cand.sort(key=lambda c: (c["grade"], -score(c)))
     report = {"generatedAt": datetime.now(timezone.utc).isoformat(), "model": MODEL, "feeds": feedlog, "briefs": [], "rejected": []}
+    report["candidates"] = {"from_feeds": len(raw_cand), "after_filter": len(cand), "sample": [c["title"][:90] for c in cand[:8]]}
     if not KEY:
         report["note"] = "ANTHROPIC_API_KEY is not set: candidates listed, no drafts written."
         report["candidates"] = cand[:20]
