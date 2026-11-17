@@ -938,7 +938,7 @@ body.ck-open{overflow:hidden}
 .chal{background:#fff;border:2px solid #E6E9F2;border-bottom-width:5px;border-radius:20px;padding:18px 20px;margin:18px 0}.chal-k{font-size:.78rem;font-weight:800;color:#6B4DE6}.chal h3{margin:6px 0 4px;font-size:1.05rem}.chal-o{display:grid;gap:8px;margin-top:10px}.chal-o .lq-o{width:100%;text-align:left;background:var(--surface);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);border-radius:12px;padding:12px 16px;font:inherit;font-size:15px;cursor:pointer;min-height:44px}@media (hover:hover) and (pointer:fine){.chal-o .lq-o:hover{box-shadow:inset 0 0 0 2px #2F5BFF}}.chal-o .lq-o:active{transform:scale(.98)}.chal-o .lq-o:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}.chal-r{border-radius:12px;padding:10px 12px;margin-top:10px}.chal-r.ok{background:#E8F7EE}.chal-r.no{background:#FFF1E6}
 .pf-bt{margin:18px 0 2px;font-size:1rem}
 /* Home hero, MotionSites pass */
-.strip h1{font-size:clamp(40px,6.2vw,84px);line-height:.98;letter-spacing:-.045em;font-weight:650;max-width:none}
+.strip h1{font-size:clamp(40px,5.4vw,76px);line-height:.98;letter-spacing:-.045em;font-weight:650;max-width:none}@media (min-width:900px){.strip h1 .hl{white-space:nowrap}}
 .strip h1 .hl{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}.strip h1 .hl>span{display:inline-block}
 .strip h1 .hl2{color:#7A8194}
 .hlive{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 2px}
@@ -1439,8 +1439,8 @@ function spark(m,w,h){
 
 /* Home hero (MotionSites pass): the headline rises line by line once, the last closes of four reference markets sit under it, and the counts run up once. */
 function heroLive(){
-  var ids=["usdcop","colcap","sp500","brent"],out=ids.map(function(id){var m=S.markets&&S.markets[id];if(!m||m.kind==="stat"||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2),d=mDir(c.v);
-    return '<button class="hlv" data-market="'+esc(id)+'"><span class="hlv-n">'+esc(m.name)+'</span><span class="hlv-v">'+esc(mNum(mLast(m)[1],m))+'</span><span class="hlv-c '+d+'">'+esc(c.text)+"</span></button>"}).filter(Boolean);
+  var ids=["usdcop","colcap","sp500","brent"],SH={usdcop:"TRM",colcap:"Colcap",sp500:"S&P 500",brent:"Brent"},out=ids.map(function(id){var m=S.markets&&S.markets[id];if(!m||m.kind==="stat"||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2),d=mDir(c.v);
+    return '<button class="hlv" data-market="'+esc(id)+'"><span class="hlv-n" title="'+esc(m.name)+'">'+esc(SH[id])+'</span><span class="hlv-v">'+esc(mNum(mLast(m)[1],m))+'</span><span class="hlv-c '+d+'">'+esc(c.text)+"</span></button>"}).filter(Boolean);
   return out.length?'<div class="hlive" aria-label="'+T("Last close of four reference markets","\u00daltimo cierre de cuatro mercados de referencia")+'">'+out.join("")+"</div>":"";
 }
 function heroCount(){
