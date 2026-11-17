@@ -14,9 +14,10 @@ FEEDS = [
     ("US Energy Information Administration", "https://www.eia.gov/rss/todayinenergy.xml", "A"),
     ("Valora Analitik", "https://www.valoraanalitik.com/feed/", "B"),
     ("Portafolio", "https://www.portafolio.co/rss/economia.xml", "B"),
-    ("La República", "https://www.larepublica.co/rss/economia.xml", "B"),
+    ("Federal Reserve (monetary policy)", "https://www.federalreserve.gov/feeds/press_monetary.xml", "A"),
 ]
-PRIORITY = re.compile(r"banrep|banco de la rep|dane|ipc|inflaci|trm|d[oó]lar|peso colombiano|colcap|bvc|ecopetrol|bancolombia|cibest|isa\b|grupo argos|tes\b|tasa|fed|fomc|cpi|ppi|payroll|empleo|petr[oó]leo|brent|crude|treasury|rendimiento", re.I)
+PRIORITY = re.compile(r"banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
+SKIP = re.compile(r"entrevista|festival|expo|vacantes|navide|concierto|turismo|viajeros", re.I)
 def get(url, timeout=40):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read()
 def text_of(raw):
@@ -74,8 +75,9 @@ def main():
     today = datetime.now(timezone.utc).date().isoformat()
     seen_p = os.path.join(OUT, "seen.json"); seen = set(json.load(open(seen_p))) if os.path.exists(seen_p) else set()
     cand, feedlog = items()
-    cand = [c for c in cand if c["link"] not in seen]
-    cand.sort(key=lambda c: (0 if PRIORITY.search(c["title"] + " " + c["desc"]) else 1, c["grade"]))
+    def score(c): return len(PRIORITY.findall(c["title"] + " " + c["desc"]))
+    cand = [c for c in cand if c["link"] not in seen and not SKIP.search(c["title"]) and (c["grade"] == "A" or score(c) >= 1)]
+    cand.sort(key=lambda c: (c["grade"], -score(c)))
     report = {"generatedAt": datetime.now(timezone.utc).isoformat(), "model": MODEL, "feeds": feedlog, "briefs": [], "rejected": []}
     if not KEY:
         report["note"] = "ANTHROPIC_API_KEY is not set: candidates listed, no drafts written."
