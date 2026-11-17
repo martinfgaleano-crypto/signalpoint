@@ -920,6 +920,7 @@ body.ck-open{overflow:hidden}
 .pf-hero .up,.pf-t2 .up,.pf-mv em.up{color:#128C40}.pf-hero .down,.pf-t2 .down,.pf-mv em.down{color:#D92D20}
 .pf-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.pf-tabs button{font:inherit;font-weight:700;font-size:.88rem;padding:8px 14px;border-radius:999px;border:2px solid #E3E6EE;background:#fff;cursor:pointer}.pf-tabs button[aria-selected="true"]{background:#111;color:#fff;border-color:#111}
 .pf-rev{background:#F5F6FA;border-radius:12px;padding:10px 12px;margin-top:8px}.pf-rev h4{margin:0 0 6px;font-size:.9rem}.pf-rl{list-style:none;margin:6px 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem}.pf-vd{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.pf-vd .pf-t{font-size:.8rem;padding:6px 10px}.pf-t.on{border-color:#2F5BFF;background:#EEF2FF}.pf-lf{display:flex;gap:6px}.pf-lf input{flex:1}.pill.vd{background:#E8F7EE;color:#128C40}.pf-les{color:#2B3345}
+.autotag{font-size:.68rem;font-weight:800;color:#6B4DE6;background:#F1ECFF;border-radius:999px;padding:1px 7px}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1136,7 +1137,7 @@ function impChip(a){var i=imp(a.impact);return '<span class="imp '+i[0]+'" title
 function slip(b){
   return '<button class="slip s-'+lead(b)+'" data-id="'+esc(b.id)+'" aria-selected="'+(S.sel===b.id)+'">'+
     '<div class="meta"><span>'+fmtDate(b.eventDate)+"</span><span>"+esc(b.category||"")+"</span>"+(b.region?"<span>"+esc(b.region)+"</span>":"")+
-    (b.private?'<span class="star">Yours</span>':"")+(matchWl(b)?'<span class="star">★ '+T("Reaches you","Te toca")+'</span>':"")+"</div>"+
+    (b.private?'<span class="star">Yours</span>':"")+(S.autoIds&&S.autoIds[b.id]?'<span class="autotag" title="'+T("Written with AI from the cited source and checked by an automatic editor; audited afterwards.","Redactada con IA a partir de la fuente citada y revisada por un editor autom\u00e1tico; se audita despu\u00e9s.")+'">'+T("AI · auto-checked","IA · revisi\u00f3n autom\u00e1tica")+"</span>":"")+(matchWl(b)?'<span class="star">★ '+T("Reaches you","Te toca")+'</span>':"")+"</div>"+
     "<h3>"+esc(b.title)+"</h3>"+numbersChip(b)+(matchWl(b)?'<p class="note">'+T("Keyword match: ","Coincide con: ")+matchingTerms(b).slice(0,3).map(esc).join(", ")+"</p>":"")+'<div class="tags">'+(b.actors||[]).slice(0,4).map(impChip).join("")+"</div></button>";
 }
 /* ---------- What happened the other times: event studies on public daily series (tools/event_study.py). History, not a forecast. ---------- */
@@ -1184,6 +1185,12 @@ function liveRefresh(){
       if(typeof l.name==="string"&&l.name){["prefix","decimals"].forEach(function(f){if(l[f]!=null)cur[f]=l[f]});
         ["name","note"].forEach(function(f){if(typeof l[f]!=="string")return;var es=l.es&&typeof l.es[f]==="string"?l.es[f]:l[f];if(cur.__en)cur.__en[f]=l[f];if(cur.es)cur.es[f]=es;cur[f]=S.lang==="es"?es:l[f]})}});
     if(changed){S.liveAsOf=j.asOf;render()}
+  });
+  fetch("https://raw.githubusercontent.com/martinfgaleano-crypto/signalpoint/drafts/live/briefs-live.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(j){
+    if(!j||!Array.isArray(j.briefs))return;var have={},urls={},n=0,ret=(j.retracted||[]);S.briefs.forEach(function(b){have[b.id]=1;if(b.source)urls[b.source.url]=1});
+    S.briefs=S.briefs.filter(function(b){return ret.indexOf(b.id)<0});
+    j.briefs.slice(0,40).forEach(function(b){if(!b||typeof b.id!=="string"||have[b.id]||(b.source&&urls[b.source.url])||ret.indexOf(b.id)>=0)return;var c=JSON.parse(JSON.stringify(b));if(!validBrief(c))return;S.autoIds=S.autoIds||{};S.autoIds[c.id]=1;S.briefs.push(c);n++});
+    if(n){S.briefs.sort(function(a,b){return a.eventDate<b.eventDate?1:a.eventDate>b.eventDate?-1:0});applyLang();render()}
   });
   liveGet("history.json").then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}});
 }

@@ -7,6 +7,9 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else "drafts"
 KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("SP_MODEL", "claude-sonnet-5-5")
 MAX_ITEMS = int(os.environ.get("SP_MAX_ITEMS", "6"))
+REVIEW_MODEL = os.environ.get("SP_REVIEW_MODEL", "claude-opus-5-5")
+MAX_PUBLISH = int(os.environ.get("SP_MAX_PUBLISH", "5"))
+KEEP_LIVE = 40
 UA = {"User-Agent": "Mozilla/5.0 (SignalPoint news drafts; github.com/martinfgaleano-crypto/signalpoint)"}
 FEEDS = [
     ("Federal Reserve", "https://www.federalreserve.gov/feeds/press_all.xml", "A"),
@@ -64,8 +67,8 @@ SCHEMA = """Return ONE JSON object, no prose, with exactly these keys:
  "es": {"title": Spanish title, "summary": Spanish summary, "actors": [{"name","reason"} same order], "watch": [{"text","note"} same order], "unknowns": [same order]}}
 Rules: use ONLY the source text provided; never invent numbers, quotes or dates; if the text does not support a field, be conservative ("undetermined").
 Never recommend buying, selling or holding anything, never give price targets or confidence scores. Spanish must be neutral Colombian Spanish (no voseo)."""
-def _call(messages):
-    body = json.dumps({"model": MODEL, "max_tokens": 4000, "messages": messages}).encode()
+def _call(messages, model=None):
+    body = json.dumps({"model": model or MODEL, "max_tokens": 4000, "messages": messages}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={"x-api-key": KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
     with urllib.request.urlopen(req, timeout=180) as r: j = json.load(r)
     return "".join(c.get("text", "") for c in j.get("content", []))
@@ -81,6 +84,35 @@ def claude(prompt):
     except Exception as e:
         msgs += [{"role": "assistant", "content": t}, {"role": "user", "content": "That was not valid JSON (" + str(e)[:120] + "). Return the same brief again as one valid JSON object and nothing else."}]
         return _parse(_call(msgs))
+NUM = re.compile(r"(?<![\w.,])(\d{1,3}(?:[.,]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?)")
+def _norm(n):
+    n = n.strip(".,")
+    if re.fullmatch(r"\d{1,3}(?:[.,]\d{3})+", n): return [n.replace(".", "").replace(",", "")]   # thousands only
+    if re.fullmatch(r"\d{1,3}(?:[.,]\d{3})+[.,]\d+", n): body, dec = n[:-len(re.split(r"[.,]", n)[-1]) - 1], re.split(r"[.,]", n)[-1]; return [body.replace(".", "").replace(",", "") + "." + dec]
+    return [n.replace(",", ".")]
+def numbers_supported(b, src):
+    """Every number in the summaries (except years and small integers) must appear in the source text."""
+    pool = set()
+    for m in NUM.finditer(src):
+        for v in _norm(m.group(1)): pool.add(v); pool.add(v.rstrip("0").rstrip(".") if "." in v else v)
+    missing = []
+    for text in (b.get("summary", ""), (b.get("es") or {}).get("summary", "")):
+        for m in NUM.finditer(text):
+            for v in _norm(m.group(1)):
+                if re.fullmatch(r"(19|20)\d\d", v) or (re.fullmatch(r"\d", v)): continue
+                vv = v.rstrip("0").rstrip(".") if "." in v else v
+                if v not in pool and vv not in pool: missing.append(m.group(1))
+    return sorted(set(missing))
+REVIEW = """You are SignalPoint's fact-checking editor. Compare the DRAFT brief with the SOURCE TEXT.
+Return ONE JSON object: {"pass": true|false, "relevance": 1-5, "issues": ["..."]}.
+Fail ("pass": false) if ANY of these is true: a fact, number, date, name or attribution in the draft is not supported by the source;
+the eventDate is not the date of the event or publication in the source; the evidence grade is too high for the source (press = B);
+the text recommends buying, selling or holding, or gives a price target; the Spanish and English versions disagree;
+an actor's impact is asserted without support in the source. relevance: how useful this is for a young Colombian following markets
+(5 = central bank, inflation, GDP, the peso, major listed companies; 1 = lifestyle or minor local news). List concrete issues; empty if none."""
+def review(b, src):
+    t = _call([{"role": "user", "content": REVIEW + "\n\nDRAFT:\n" + json.dumps(b, ensure_ascii=False) + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
+    return _parse(t)
 def validate(b, today):
     js = "const q=require('./tools/quality.cjs');const b=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(q.validateBrief(b,{today:process.argv[1],maxAgeDays:4})))"
     r = subprocess.run(["node", "-e", js, today], input=json.dumps(b), capture_output=True, text=True)
@@ -114,9 +146,17 @@ def main():
         v = validate(b, today)
         seen.add(c["link"])
         if v["ok"]:
-            report["briefs"].append(dict({"id": f"{b['eventDate']}-{slug(b['title'])}"}, **b))
+            bid = f"{b['eventDate']}-{slug(b['title'])}"
+            miss = numbers_supported(b, src)
+            try: rv = review(b, src)
+            except Exception as e: rv = {"pass": False, "relevance": 0, "issues": ["review failed: " + repr(e)[:120]]}
+            ok = (not miss) and rv.get("pass") is True and int(rv.get("relevance") or 0) >= 3
+            report["briefs"].append(dict({"id": bid}, **b))
+            report.setdefault("audit", []).append({"id": bid, "title": b["title"], "url": c["link"], "gate": "pass", "numbers_missing": miss,
+                "review": rv, "decision": "publish" if ok else "hold", "reviewModel": REVIEW_MODEL})
         else:
             report["rejected"].append({"title": c["title"], "url": c["link"], "errors": v["errors"][:6]})
+            report.setdefault("audit", []).append({"title": c["title"], "url": c["link"], "gate": "fail", "errors": v["errors"][:6], "decision": "reject"})
         time.sleep(2)
     day = os.path.join(OUT, f"{today}.json")
     if os.path.exists(day):   # several runs in one day add to the same file instead of replacing it
@@ -124,8 +164,38 @@ def main():
             old = json.load(open(day)); ids = {b["id"] for b in report["briefs"]}
             report["briefs"] = [b for b in old.get("briefs", []) if b["id"] not in ids] + report["briefs"]
             report["rejected"] = old.get("rejected", []) + report["rejected"]
+            report["audit"] = old.get("audit", []) + report.get("audit", [])
         except Exception: pass
     json.dump(report, open(day, "w"), ensure_ascii=False, indent=1)
     json.dump(sorted(seen), open(seen_p, "w"))
+    publish(report, today)
+def publish(report, today):
+    """Automatic publication with self-review: only drafts that passed the gate, the number check and the editor review."""
+    os.makedirs(os.path.join(OUT, "live"), exist_ok=True)
+    lp = os.path.join(OUT, "live", "briefs-live.json")
+    live = json.load(open(lp)) if os.path.exists(lp) else {"briefs": []}
+    retracted = set(json.load(open(os.path.join(OUT, "retracted.json")))) if os.path.exists(os.path.join(OUT, "retracted.json")) else set()
+    have = {b["id"] for b in live["briefs"]} | {b["source"]["url"] for b in live["briefs"]}
+    ok_ids = [a["id"] for a in report.get("audit", []) if a.get("decision") == "publish"]
+    byid = {b["id"]: b for b in report["briefs"]}
+    added = 0
+    for i in ok_ids:
+        b = byid.get(i)
+        if not b or i in have or b["source"]["url"] in have or i in retracted: continue
+        if added >= MAX_PUBLISH: break
+        live["briefs"].insert(0, b); added += 1
+        for a in report["audit"]:
+            if a.get("id") == i: a["publishedAt"] = datetime.now(timezone.utc).isoformat()
+    live["briefs"] = [b for b in live["briefs"] if b["id"] not in retracted][:KEEP_LIVE]
+    live["updatedAt"] = datetime.now(timezone.utc).isoformat(); live["retracted"] = sorted(retracted)
+    json.dump(live, open(lp, "w"), ensure_ascii=False, indent=1)
+    json.dump(report, open(os.path.join(OUT, f"{today}.json"), "w"), ensure_ascii=False, indent=1)
+    # running audit summary
+    sp = os.path.join(OUT, "audit-summary.json"); summ = json.load(open(sp)) if os.path.exists(sp) else {"days": {}}
+    au = report.get("audit", [])
+    summ["days"][today] = {"drafted": sum(1 for a in au if a.get("gate") == "pass"), "rejected_by_gate": sum(1 for a in au if a.get("gate") == "fail"),
+        "held_by_review": sum(1 for a in au if a.get("decision") == "hold"), "published": sum(1 for a in au if a.get("publishedAt"))}
+    json.dump(summ, open(sp, "w"), indent=1)
+    print("published", added)
     print(json.dumps({"feeds": feedlog, "drafts": len(report["briefs"]), "rejected": len(report["rejected"])}))
 if __name__ == "__main__": main()
