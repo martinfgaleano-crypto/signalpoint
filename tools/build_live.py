@@ -33,6 +33,22 @@ SRC = {
   "brent": (fred("DCOILBRENTEU"), 2, 0.25, {"name": "US Energy Information Administration, Europe Brent spot price, via FRED (series DCOILBRENTEU)", "url": "https://fred.stlouisfed.org/series/DCOILBRENTEU"}),
   "btc": (fred("CBBTCUSD"), 0, 0.35, {"name": "Coinbase, via FRED (series CBBTCUSD)", "url": "https://fred.stlouisfed.org/series/CBBTCUSD"}),
 }
+def yahoo(sym):
+    p = os.path.join(D, f"yahoo_{sym}.json")
+    if not os.path.exists(p): return []
+    from datetime import datetime, timezone
+    try:
+        j = json.load(open(p))["chart"]["result"][0]
+        rows = {}
+        for t, c in zip(j["timestamp"], j["indicators"]["quote"][0]["close"]):
+            if c is not None: rows[datetime.fromtimestamp(t, timezone.utc).date().isoformat()] = float(c)
+        return sorted(rows.items())
+    except Exception:
+        return []
+# Colombian stocks: the iShares MSCI COLCAP ETF traded on the Bolsa de Valores de Colombia (no free feed of the index itself).
+SRC["colcap"] = (yahoo("ICOLCAP.CL"), 0, 0.12, {"name": "iShares MSCI COLCAP ETF (ICOLCAP) on the Bolsa de Valores de Colombia, via Yahoo Finance", "url": "https://finance.yahoo.com/quote/ICOLCAP.CL/"})
+OVERRIDE = {"colcap": {"name": "Colombian stocks (MSCI Colcap ETF)", "prefix": "$", "decimals": 0, "note": "Price of one unit of the iShares MSCI COLCAP ETF, in pesos. It follows the MSCI Colcap index; it is not the index level.",
+                        "es": {"name": "Acciones colombianas (ETF del MSCI Colcap)", "note": "Precio de una unidad del ETF iShares MSCI COLCAP, en pesos. Sigue al índice MSCI Colcap; no es el nivel del índice."}}}
 today = date.today(); out = {"asOf": today.isoformat(), "markets": {}, "skipped": {}}
 for k, (ser, dec, maxjump, src) in SRC.items():
     ser = ser[-N:]
@@ -41,6 +57,6 @@ for k, (ser, dec, maxjump, src) in SRC.items():
     jumps = [abs(ser[i][1] / ser[i - 1][1] - 1) for i in range(1, len(ser)) if ser[i - 1][1]]
     if k in ("us2y", "us10y", "us30y"): jumps = [abs(ser[i][1] - ser[i - 1][1]) for i in range(1, len(ser))]
     if max(jumps) > maxjump: out["skipped"][k] = "implausible jump"; continue
-    out["markets"][k] = {"series": [[d, round(v, dec if dec else 2)] for d, v in ser], "source": src}
+    out["markets"][k] = dict({"series": [[d, round(v, dec) if dec else round(v)] for d, v in ser], "source": src}, **OVERRIDE.get(k, {}))
 json.dump(out, open(os.path.join(D, "markets-live.json"), "w"), indent=1)
 print("live:", sorted(out["markets"]), "skipped:", out["skipped"])

@@ -28,7 +28,7 @@ save("banrep_node50426.html", "https://www.banrep.gov.co/es/node/50426")
 save("uba_tasas.html", "https://uba.banrep.gov.co/htmlcommons/SeriesHistoricas/tasas-interes.html")
 # Yahoo daily history (long range)
 now = int(time.time())
-for sym in ["^GSPC", "COP=X", "COLO", "EC", "CIB", "BZ=F", "^TNX"]:
+for sym in ["^GSPC", "COP=X", "COLO", "EC", "CIB", "BZ=F", "^TNX", "ICOLCAP.CL"]:
     q = urllib.parse.quote(sym)
     save(f"yahoo_{sym.replace('^','').replace('=','_')}.json", f"https://query2.finance.yahoo.com/v8/finance/chart/{q}?period1=946684800&period2={now}&interval=1d")
     time.sleep(1)
