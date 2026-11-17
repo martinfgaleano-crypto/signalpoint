@@ -168,6 +168,17 @@ def main():
         except Exception: pass
     json.dump(report, open(day, "w"), ensure_ascii=False, indent=1)
     json.dump(sorted(seen), open(seen_p, "w"))
+    # drafts from earlier runs that were never reviewed (e.g. written before self-review existed) get reviewed now
+    audited = {a.get("id") for a in report.get("audit", [])}
+    for b in report["briefs"]:
+        if b["id"] in audited or not KEY: continue
+        try: src = text_of(get(b["source"]["url"]))[:9000]
+        except Exception: continue
+        miss = numbers_supported(b, src)
+        try: rv = review({k: v for k, v in b.items() if k != "id"}, src)
+        except Exception as e: rv = {"pass": False, "relevance": 0, "issues": ["review failed: " + repr(e)[:120]]}
+        ok = (not miss) and rv.get("pass") is True and int(rv.get("relevance") or 0) >= 3
+        report.setdefault("audit", []).append({"id": b["id"], "title": b["title"], "url": b["source"]["url"], "gate": "pass", "numbers_missing": miss, "review": rv, "decision": "publish" if ok else "hold", "reviewModel": REVIEW_MODEL})
     publish(report, today)
 def publish(report, today):
     """Automatic publication with self-review: only drafts that passed the gate, the number check and the editor review."""
