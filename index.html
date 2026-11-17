@@ -1180,7 +1180,9 @@ function liveRefresh(){
       var cand=Object.assign({},cur,{series:l.series.filter(function(p){return Array.isArray(p)&&typeof p[0]==="string"&&typeof p[1]==="number"&&isFinite(p[1])}),source:l.source&&l.source.url?l.source:cur.source});
       if(cand.series.length<5||!validMarket(cand))return;
       if(String(cand.series[cand.series.length-1][0])<=String(mLast(cur)[0]))return;
-      cur.series=cand.series;cur.source=cand.source;cur.live=j.asOf;changed=true});
+      cur.series=cand.series;cur.source=cand.source;cur.live=j.asOf;changed=true;
+      if(typeof l.name==="string"&&l.name){["prefix","decimals"].forEach(function(f){if(l[f]!=null)cur[f]=l[f]});
+        ["name","note"].forEach(function(f){if(typeof l[f]!=="string")return;var es=l.es&&typeof l.es[f]==="string"?l.es[f]:l[f];if(cur.__en)cur.__en[f]=l[f];if(cur.es)cur.es[f]=es;cur[f]=S.lang==="es"?es:l[f]})}});
     if(changed){S.liveAsOf=j.asOf;render()}
   });
   liveGet("history.json").then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}});
