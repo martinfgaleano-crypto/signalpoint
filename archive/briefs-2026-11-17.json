@@ -125,7 +125,7 @@
      "name": "Colombian households and consumers",
      "ticker": "",
      "impact": "adverse",
-     "reason": "Higher food and utility prices and restrictive monetary and fiscal conditions have moderated private consumption."
+     "reason": "High interest rates, restrictive monetary policy and the government's fiscal adjustment have moderated private consumption."
     },
     {
      "name": "Banco de la República",
@@ -143,7 +143,7 @@
      "name": "Fixed investment and businesses",
      "ticker": "",
      "impact": "adverse",
-     "reason": "High interest rates, fiscal adjustment and the August 10 earthquake have weighed on investment and growth."
+     "reason": "High interest rates and the fiscal adjustment weigh on investment."
     }
    ],
    "watch": [
@@ -188,7 +188,7 @@
     "actors": [
      {
       "name": "Hogares y consumidores colombianos",
-      "reason": "Los mayores precios de alimentos y servicios públicos, junto con condiciones monetarias y fiscales restrictivas, han moderado el consumo privado."
+      "reason": "Las tasas de interés altas, la política monetaria restrictiva y el ajuste fiscal del Gobierno han moderado el consumo privado."
      },
      {
       "name": "Banco de la República",
@@ -200,7 +200,7 @@
      },
      {
       "name": "Inversión fija y empresas",
-      "reason": "Las tasas de interés altas, el ajuste fiscal y el terremoto del 10 de agosto han afectado la inversión y el crecimiento."
+      "reason": "Las tasas de interés altas y el ajuste fiscal pesan sobre la inversión."
      }
     ],
     "watch": [
@@ -332,7 +332,7 @@
   },
   {
    "id": "2026-11-16-colombia-august-quake-may-have-cut-up-to-0-8-pp-",
-   "title": "Colombia: August quake may have cut up to 0.8 pp from Q3 2026 GDP growth, Banco de Bogotá says",
+   "title": "Colombia: August quake may have cut up to 0.8 pp from Q3 2026 GDP growth, per Banco de la República estimates",
    "category": "Macro data",
    "region": "Colombia",
    "eventDate": "2026-11-16",
@@ -370,7 +370,7 @@
    ],
    "watch": [
     {
-     "text": "Dane publishes Q3 2026 GDP and the result is compared with forecasts ranging from about 1% to 2.2%.",
+     "text": "Dane publishes Q3 2026 GDP and the result is compared with analysts' forecasts",
      "due": "2026-11-17",
      "status": "open",
      "kind": "observation",
@@ -388,7 +388,7 @@
      "due": "",
      "status": "open",
      "kind": "observation",
-     "note": "Compare the updated LatinFocus and Fedesarrollo survey medians with the current 2.3% for 2027."
+     "note": "Compare updated analyst surveys, such as Fedesarrollo's, with their current 2027 medians."
     }
    ],
    "unknowns": [
@@ -405,7 +405,7 @@
     "growth forecasts"
    ],
    "es": {
-    "title": "Colombia: el terremoto de agosto habría restado hasta 0,8 p. p. al PIB del tercer trimestre de 2026, según el Banco de Bogotá",
+    "title": "Colombia: el terremoto de agosto habría restado hasta 0,8 p. p. al PIB del tercer trimestre de 2026, según estimaciones del Banco de la República",
     "summary": "Portafolio informa que el terremoto del 10 de agosto habría restado entre 0,3 y 0,8 puntos porcentuales al crecimiento de Colombia en el tercer trimestre de 2026, según estimaciones del Banco de la República citadas por Alejandro Rojas, economista del Banco de Bogotá. Este banco espera un crecimiento cercano a 1%, mientras que el NowCast de Grupo Cibest apunta a 2,2%. El Dane publicará el PIB del tercer trimestre el 17 de noviembre. Otros factores citados son el fin del impulso de consumo del Mundial y el menor gasto público.",
     "actors": [
      {
@@ -427,7 +427,7 @@
     ],
     "watch": [
      {
-      "text": "El Dane publica el PIB del tercer trimestre de 2026 y el resultado se compara con pronósticos que van de cerca de 1% a 2,2%.",
+      "text": "El Dane publica el PIB del tercer trimestre de 2026 y el resultado se compara con los pronósticos de los analistas",
       "note": "Contrastar la publicación del Dane con las estimaciones del Banco de Bogotá, Grupo Cibest, LatinFocus y Fedesarrollo."
      },
      {
@@ -436,7 +436,7 @@
      },
      {
       "text": "Ajustes de los analistas a los pronósticos de crecimiento de 2026 y 2027 tras la publicación del PIB.",
-      "note": "Comparar las nuevas encuestas de LatinFocus y Fedesarrollo con el 2,3% actual para 2027."
+      "note": "Comparar las nuevas encuestas de analistas, como la de Fedesarrollo, con sus medianas actuales para 2027."
      }
     ],
     "unknowns": [

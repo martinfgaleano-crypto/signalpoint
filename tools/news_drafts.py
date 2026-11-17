@@ -110,8 +110,8 @@ the eventDate is not the date of the event or publication in the source; the evi
 the text recommends buying, selling or holding, or gives a price target; the Spanish and English versions disagree;
 an actor's impact is asserted without support in the source. relevance: how useful this is for a young Colombian following markets
 (5 = central bank, inflation, GDP, the peso, major listed companies; 1 = lifestyle or minor local news). List concrete issues; empty if none."""
-def review(b, src):
-    t = _call([{"role": "user", "content": REVIEW + "\n\nDRAFT:\n" + json.dumps(b, ensure_ascii=False) + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
+def review(b, src, feed_date=""):
+    t = _call([{"role": "user", "content": REVIEW + "\n\nDRAFT:\n" + json.dumps(b, ensure_ascii=False) + "\n\nPUBLICATION DATE (from the publisher's feed): " + (feed_date or "unknown") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
     return _parse(t)
 def validate(b, today):
     js = "const q=require('./tools/quality.cjs');const b=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(q.validateBrief(b,{today:process.argv[1],maxAgeDays:4})))"
@@ -148,7 +148,7 @@ def main():
         if v["ok"]:
             bid = f"{b['eventDate']}-{slug(b['title'])}"
             miss = numbers_supported(b, src)
-            try: rv = review(b, src)
+            try: rv = review(b, src, c["date"])
             except Exception as e: rv = {"pass": False, "relevance": 0, "issues": ["review failed: " + repr(e)[:120]]}
             ok = (not miss) and rv.get("pass") is True and int(rv.get("relevance") or 0) >= 3
             report["briefs"].append(dict({"id": bid}, **b))
