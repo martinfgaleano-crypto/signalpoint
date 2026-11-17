@@ -3,6 +3,450 @@
  "note": "Mirror of the live briefs collection, updated by Fable after every reviewed write. Not a byte export of the database.",
  "briefs": [
   {
+   "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
+   "title": "Ecopetrol's Windpeshi wind farm in La Guajira reaches 25% progress; LNG cargo purchases paused",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-14",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/megaproyecto-eolico-ecopetrol-la-guajira-llega-25-avance/"
+   },
+   "summary": "Ecopetrol said at its third-quarter 2026 results presentation that the Windpeshi wind farm in La Guajira is 25% complete and is expected to start operating in the fourth quarter of 2028. The group's renewables portfolio reached 1,210 MW of incorporated capacity at the end of the first nine months of 2026, of which 414 MW are in commercial operation, 298 MW are power purchase contracts and 498 MW are under execution and construction. The company also paused LNG cargo purchase processes for the Buenaventura and Puerto Bahía terminals, citing higher international prices linked to Middle East tensions that affected flows equal to 18% of global LNG supply. Buenaventura is about 90% complete and Puerto Bahía 53%.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "mixed",
+     "reason": "Renewable capacity and construction are advancing, but the pause in LNG purchases leaves the new regasification terminals without confirmed cargo supply under current market conditions."
+    },
+    {
+     "name": "AES",
+     "ticker": "AES",
+     "impact": "undetermined",
+     "reason": "It is Ecopetrol's partner in the JK1 and JK2 wind parks, which are still in structuring and due diligence ahead of a targeted final investment decision."
+    },
+    {
+     "name": "SPEC LNG regasification plant (Cartagena)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The Puerto Bahía terminal is meant to reduce reliance on the SPEC plant, but the pause in LNG purchases makes the timing of any shift unclear."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Start of operations at the Buenaventura regasification terminal, estimated for the end of 2026",
+     "due": "2026-12-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol announcements and press coverage for confirmation of start-up."
+    },
+    {
+     "text": "Start of operations at the Puerto Bahía (Caribbean) regasification terminal, expected in the first two months of 2027",
+     "due": "2027-02-28",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol statements and sector press for the commissioning date."
+    },
+    {
+     "text": "Financial close and final investment decision (FID) for the JK1 and JK2 wind parks with AES, targeted for the first quarter of 2027",
+     "due": "2027-03-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol and AES releases for an FID announcement."
+    }
+   ],
+   "unknowns": [
+    "When will Ecopetrol resume LNG cargo purchases for the Buenaventura and Puerto Bahía terminals?",
+    "What are the investment size and capacity of the JK1 and JK2 wind parks?",
+    "Will the terminals start operating on schedule without secured LNG supply?"
+   ],
+   "tags": [
+    "Ecopetrol",
+    "Windpeshi",
+    "wind energy",
+    "LNG",
+    "regasification",
+    "La Guajira"
+   ],
+   "es": {
+    "title": "Parque eólico Windpeshi de Ecopetrol en La Guajira llega a 25 % de avance; se pausan compras de GNL",
+    "summary": "Ecopetrol informó en la presentación de resultados del tercer trimestre de 2026 que el parque eólico Windpeshi, en La Guajira, tiene un avance de 25 % y se espera que entre en operación en el cuarto trimestre de 2028. El portafolio de renovables del grupo alcanzó 1.210 MW de capacidad incorporada al cierre de los primeros nueve meses de 2026: 414 MW en operación comercial, 298 MW de contratos de compra de energía y 498 MW en ejecución y construcción. La compañía también pausó los procesos de compra de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía, por el encarecimiento internacional asociado a las tensiones en Medio Oriente, que afectaron flujos equivalentes al 18 % de la oferta mundial de GNL. Buenaventura registra un avance cercano al 90 % y Puerto Bahía, 53 %.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "La capacidad renovable y las obras avanzan, pero la pausa en las compras de GNL deja a las nuevas regasificadoras sin suministro confirmado bajo las condiciones actuales de mercado."
+     },
+     {
+      "name": "AES",
+      "reason": "Es el socio de Ecopetrol en los parques eólicos JK1 y JK2, que siguen en estructuración y debida diligencia antes de la decisión final de inversión prevista."
+     },
+     {
+      "name": "Planta de regasificación SPEC LNG (Cartagena)",
+      "reason": "La terminal de Puerto Bahía busca reducir la dependencia de la planta de SPEC, pero la pausa en las compras de GNL hace incierto el momento de ese cambio."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Inicio de operación de la regasificadora de Buenaventura, estimado para finales de 2026",
+      "note": "Revisar los anuncios de Ecopetrol y la prensa para confirmar la puesta en marcha."
+     },
+     {
+      "text": "Inicio de operación de la regasificadora del Caribe en Puerto Bahía, prevista para los primeros dos meses de 2027",
+      "note": "Revisar comunicados de Ecopetrol y prensa sectorial sobre la fecha de entrada en operación."
+     },
+     {
+      "text": "Cierre financiero y decisión final de inversión (FID) de los parques eólicos JK1 y JK2 con AES, previstos para el primer trimestre de 2027",
+      "note": "Revisar comunicados de Ecopetrol y AES sobre un anuncio de FID."
+     }
+    ],
+    "unknowns": [
+     "¿Cuándo retomará Ecopetrol las compras de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía?",
+     "¿Cuáles son el monto de inversión y la capacidad de los parques eólicos JK1 y JK2?",
+     "¿Las terminales entrarán en operación según el cronograma sin suministro de GNL asegurado?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-14-banco-de-bogot-projects-colombian-stagnation-and",
+   "title": "Banco de Bogotá projects Colombian stagnation and high inflation into 2027 after BanRep revisions",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-14",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/colombia-viviria-2027-estancamiento-economico-alta-inflacion/"
+   },
+   "summary": "Banco de Bogotá's economic research team projects a prolonged period of stagnation with high inflation from the second half of 2026 through much of 2027, after Banco de la República staff revised its estimates. GDP growth for 2026 was cut from 2.5% to 2% and for 2027 from 1.9% to 1.7%, while year-end inflation was raised to 7.1% for 2026 (from 6.9%) and 4.8% for 2027 (from 4.3%). Convergence to the 2%-4% target range has been pushed back to the first quarter of 2028. The policy rate was held at 12.25% in late October, and the implied path points to cuts resuming probably in April 2027, closing 2027 near 10.25%.",
+   "actors": [
+    {
+     "name": "Colombian households and consumers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Higher food and utility prices and restrictive monetary and fiscal conditions have moderated private consumption."
+    },
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Inflation forecasts above the 2%-4% target push back the timing of rate cuts, while the bank's path depends on fiscal and wage outcomes."
+    },
+    {
+     "name": "Colombian government and Congress",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Approval of the economic rescue law with an effective fiscal adjustment is a condition for the projected rate path, but the adjustment also weighs on consumption and investment."
+    },
+    {
+     "name": "Fixed investment and businesses",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "High interest rates, fiscal adjustment and the August 10 earthquake have weighed on investment and growth."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Congress decision on the economic rescue law with fiscal adjustment",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check congressional records and official government announcements."
+    },
+    {
+     "text": "Setting of the 2027 minimum wage and whether it follows technical criteria",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the government decree and statements from the wage negotiation."
+    },
+    {
+     "text": "Banco de la República rate decisions through year-end and the possible start of cuts in April 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare policy rate decisions and minutes against the 12.25%-12.50% implied path."
+    }
+   ],
+   "unknowns": [
+    "Will Congress approve the rescue law with an effective fiscal adjustment?",
+    "How large will the earthquake's final impact on GDP be beyond the estimated 0.3 to 0.8 percentage points in Q3?",
+    "How persistent will the El Niño and oil price supply shocks prove to be?"
+   ],
+   "tags": [
+    "Colombia",
+    "inflation",
+    "GDP",
+    "Banco de la República",
+    "Banco de Bogotá",
+    "2027 outlook"
+   ],
+   "es": {
+    "title": "Banco de Bogotá proyecta estancamiento y alta inflación en Colombia hasta 2027 tras revisiones del BanRep",
+    "summary": "El equipo de Investigaciones Económicas del Banco de Bogotá proyecta un periodo prolongado de estancamiento con alta inflación desde el segundo semestre de 2026 y durante buena parte de 2027, tras las revisiones de estimaciones del equipo técnico del Banco de la República. El crecimiento del PIB de 2026 se recortó del 2,5 % al 2 % y el de 2027 del 1,9 % al 1,7 %, mientras que la inflación de cierre de año se elevó al 7,1 % para 2026 (desde 6,9 %) y al 4,8 % para 2027 (desde 4,3 %). La convergencia al rango meta del 2 % al 4 % se aplazó hasta el primer trimestre de 2028. La tasa de intervención se mantuvo en 12,25 % a finales de octubre y la senda implícita apunta a que los recortes se retomarían probablemente en abril de 2027, para cerrar ese año cerca de 10,25 %.",
+    "actors": [
+     {
+      "name": "Hogares y consumidores colombianos",
+      "reason": "Los mayores precios de alimentos y servicios públicos, junto con condiciones monetarias y fiscales restrictivas, han moderado el consumo privado."
+     },
+     {
+      "name": "Banco de la República",
+      "reason": "Unas proyecciones de inflación por encima del rango meta del 2 % al 4 % aplazan el momento de los recortes de tasas, y su senda depende de resultados fiscales y salariales."
+     },
+     {
+      "name": "Gobierno colombiano y Congreso",
+      "reason": "La aprobación de la ley de rescate económico con un ajuste fiscal efectivo es una condición para la senda de tasas proyectada, aunque el ajuste también pesa sobre el consumo y la inversión."
+     },
+     {
+      "name": "Inversión fija y empresas",
+      "reason": "Las tasas de interés altas, el ajuste fiscal y el terremoto del 10 de agosto han afectado la inversión y el crecimiento."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del Congreso sobre la ley de rescate económico con ajuste fiscal",
+      "note": "Revisar los registros del Congreso y los anuncios oficiales del Gobierno."
+     },
+     {
+      "text": "Fijación del salario mínimo de 2027 y si atiende criterios técnicos",
+      "note": "Revisar el decreto del Gobierno y las declaraciones de la concertación salarial."
+     },
+     {
+      "text": "Decisiones de tasas del Banco de la República hasta fin de año y posible inicio de recortes en abril de 2027",
+      "note": "Comparar las decisiones y actas de política monetaria con la senda implícita de 12,25 % a 12,50 %."
+     }
+    ],
+    "unknowns": [
+     "¿Aprobará el Congreso la ley de rescate con un ajuste fiscal efectivo?",
+     "¿Cuál será el impacto final del terremoto sobre el PIB, más allá de los 0,3 a 0,8 puntos porcentuales estimados para el tercer trimestre?",
+     "¿Qué tan persistentes serán los choques de oferta por El Niño y por el petróleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-moody-s-projects-colombian-gdp-growth-of-2-2-in-",
+   "title": "Moody's projects Colombian GDP growth of 2.2% in 2026, 2% in 2027 and 2.6% in 2028",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/colombia-retornara-a-un-crecimiento-economico-cercano-al-3-en-2028-tras-dos-anos-de-moderacion-moodys/"
+   },
+   "summary": "Per Valora Analitik's account of a Moody's Ratings emerging markets outlook, Colombia's GDP is projected to grow 2.2% in 2026 and 2% in 2027, after 2.6% in 2025, and to reach 2.6% in 2028. Moody's estimates inflation at 6% in 2026, 5.9% in 2027 and 4.6% in 2028, above the Banco de la República target range of 3% +/- 1%. The report says this keeps local interest rates high and weighs on corporate refinancing. Colombia's rating is Baa3 with a stable outlook.",
+   "actors": [
+    {
+     "name": "Colombian non-financial corporations",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "High real rates raise refinancing costs, compress free cash flow and weigh on long-term investment programs, according to the report."
+    },
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Inflation projected above the target range through 2027 limits room for aggressive cuts to the policy rate."
+    },
+    {
+     "name": "Colombian sovereign (Baa3, stable)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The rating is supported by credible institutional frameworks but pressured by reduced fiscal room and tight financial conditions."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Colombia's reported annual GDP growth compared with Moody's 2.2% projection for 2026",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare DANE's GDP releases with the Moody's figure."
+    },
+    {
+     "text": "Colombian annual inflation relative to Moody's 6% estimate for 2026 and the 3% +/- 1% target range",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check DANE's CPI releases and Banco de la República communications."
+    },
+    {
+     "text": "Any change to Colombia's Baa3 rating or stable outlook from Moody's",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Moody's Ratings announcements on Colombia."
+    }
+   ],
+   "unknowns": [
+    "What assumptions on fiscal policy and policy rate underlie Moody's projections?",
+    "How do Moody's figures compare with local government and Banco de la República forecasts?",
+    "How quickly will corporate deleveraging proceed under high rates?"
+   ],
+   "tags": [
+    "Colombia",
+    "Moody's",
+    "GDP",
+    "inflation",
+    "interest rates",
+    "emerging markets"
+   ],
+   "es": {
+    "title": "Moody's proyecta que el PIB de Colombia crecerá 2,2 % en 2026, 2 % en 2027 y 2,6 % en 2028",
+    "summary": "Según el relato de Valora Analitik sobre un informe de perspectivas de mercados emergentes de Moody's Ratings, el PIB de Colombia crecería 2,2 % en 2026 y 2 % en 2027, tras el 2,6 % de 2025, y llegaría a 2,6 % en 2028. Moody's estima una inflación de 6 % en 2026, 5,9 % en 2027 y 4,6 % en 2028, por encima del rango meta del Banco de la República de 3 % +/- 1 %. El informe indica que esto mantiene altas las tasas de interés locales y presiona la refinanciación de las empresas. La calificación de Colombia es Baa3 con perspectiva estable.",
+    "actors": [
+     {
+      "name": "Empresas no financieras colombianas",
+      "reason": "Las tasas reales elevadas encarecen la refinanciación, comprimen el flujo de caja libre y afectan los programas de inversión de largo plazo, según el informe."
+     },
+     {
+      "name": "Banco de la República",
+      "reason": "Una inflación proyectada por encima del rango meta hasta 2027 limita el margen para recortes agresivos de la tasa de intervención."
+     },
+     {
+      "name": "Soberano colombiano (Baa3, estable)",
+      "reason": "La calificación se apoya en marcos institucionales creíbles, pero está presionada por una menor holgura fiscal y condiciones financieras estrictas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Crecimiento anual del PIB de Colombia reportado frente a la proyección de 2,2 % de Moody's para 2026",
+      "note": "Comparar las publicaciones de PIB del DANE con la cifra de Moody's."
+     },
+     {
+      "text": "Inflación anual de Colombia frente al estimado de 6 % de Moody's para 2026 y el rango meta de 3 % +/- 1 %",
+      "note": "Revisar los boletines del IPC del DANE y las comunicaciones del Banco de la República."
+     },
+     {
+      "text": "Cualquier cambio en la calificación Baa3 o la perspectiva estable de Colombia por parte de Moody's",
+      "note": "Revisar los comunicados de Moody's Ratings sobre Colombia."
+     }
+    ],
+    "unknowns": [
+     "¿Qué supuestos de política fiscal y de tasa de interés sustentan las proyecciones de Moody's?",
+     "¿Cómo se comparan las cifras de Moody's con los pronósticos del Gobierno y del Banco de la República?",
+     "¿Qué tan rápido avanzará el desapalancamiento empresarial con tasas altas?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-colombia-august-quake-may-have-cut-up-to-0-8-pp-",
+   "title": "Colombia: August quake may have cut up to 0.8 pp from Q3 2026 GDP growth, Banco de Bogotá says",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Portafolio",
+    "url": "https://www.portafolio.co/economia/terremoto-de-agosto-habria-restado-hasta-0-8-puntos-porcentuales-al-crecimiento-del-pib-del-tercer-trimestre-506287"
+   },
+   "summary": "Portafolio reports that the 10 August earthquake would have subtracted between 0.3 and 0.8 percentage points from Colombia's Q3 2026 growth, according to Banco de la República estimates cited by Banco de Bogotá economist Alejandro Rojas. Banco de Bogotá expects growth near 1%, while Grupo Cibest's NowCast points to 2.2%. Dane is due to publish Q3 GDP on 17 November. Other cited factors include the fading of the World Cup consumption boost and lower public spending.",
+   "actors": [
+    {
+     "name": "Colombian manufacturing and construction",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The source says the quake hit these sectors hardest, with limited recovery in September and construction still contracting in October."
+    },
+    {
+     "name": "Colombian households",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The end of the World Cup spending boost and a stronger peso that lowers the local-currency value of remittances may weigh on spending capacity."
+    },
+    {
+     "name": "Financial services, agriculture and utilities",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The source lists these among the better-performing activities in the three months to October."
+    },
+    {
+     "name": "Affected regions in reconstruction",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Itaú's analyst says reconstruction could support activity in Q4 and early 2027, but the extent depends on public, private and insurer funds."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Dane publishes Q3 2026 GDP and the result is compared with forecasts ranging from about 1% to 2.2%.",
+     "due": "2026-11-17",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Dane GDP release against the Banco de Bogotá, Grupo Cibest, LatinFocus and Fedesarrollo estimates."
+    },
+    {
+     "text": "Sector data for manufacturing and construction show whether the recovery is broadening beyond September.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review subsequent Dane sector releases and Grupo Cibest's sector tracking."
+    },
+    {
+     "text": "Analyst revisions to 2026 and 2027 growth forecasts after the GDP release.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the updated LatinFocus and Fedesarrollo survey medians with the current 2.3% for 2027."
+    }
+   ],
+   "unknowns": [
+    "What is the official Q3 GDP figure from Dane?",
+    "How large is the quake effect relative to other factors such as lower public spending?",
+    "How quickly will reconstruction translate into activity in Q4 2026 and 2027?"
+   ],
+   "tags": [
+    "Colombia",
+    "GDP",
+    "earthquake",
+    "Dane",
+    "Banco de Bogotá",
+    "growth forecasts"
+   ],
+   "es": {
+    "title": "Colombia: el terremoto de agosto habría restado hasta 0,8 p. p. al PIB del tercer trimestre de 2026, según el Banco de Bogotá",
+    "summary": "Portafolio informa que el terremoto del 10 de agosto habría restado entre 0,3 y 0,8 puntos porcentuales al crecimiento de Colombia en el tercer trimestre de 2026, según estimaciones del Banco de la República citadas por Alejandro Rojas, economista del Banco de Bogotá. Este banco espera un crecimiento cercano a 1%, mientras que el NowCast de Grupo Cibest apunta a 2,2%. El Dane publicará el PIB del tercer trimestre el 17 de noviembre. Otros factores citados son el fin del impulso de consumo del Mundial y el menor gasto público.",
+    "actors": [
+     {
+      "name": "Industria manufacturera y construcción de Colombia",
+      "reason": "La fuente indica que el terremoto golpeó con más fuerza a estos sectores, con recuperación limitada en septiembre y la construcción aún en terreno contractivo en octubre."
+     },
+     {
+      "name": "Hogares colombianos",
+      "reason": "El fin del impulso de gasto del Mundial y un peso más fuerte que reduce el valor en moneda local de las remesas pueden afectar la capacidad de gasto."
+     },
+     {
+      "name": "Servicios financieros, agricultura y servicios públicos",
+      "reason": "La fuente los menciona entre las actividades con mejor desempeño en el trimestre móvil terminado en octubre."
+     },
+     {
+      "name": "Regiones afectadas en reconstrucción",
+      "reason": "La analista de Itaú dice que la reconstrucción podría apoyar la actividad en el cuarto trimestre y comienzos de 2027, pero depende de recursos públicos, privados y de aseguradoras."
+     }
+    ],
+    "watch": [
+     {
+      "text": "El Dane publica el PIB del tercer trimestre de 2026 y el resultado se compara con pronósticos que van de cerca de 1% a 2,2%.",
+      "note": "Contrastar la publicación del Dane con las estimaciones del Banco de Bogotá, Grupo Cibest, LatinFocus y Fedesarrollo."
+     },
+     {
+      "text": "Los datos sectoriales de industria y construcción muestran si la recuperación se amplía más allá de septiembre.",
+      "note": "Revisar las próximas publicaciones sectoriales del Dane y el seguimiento sectorial de Grupo Cibest."
+     },
+     {
+      "text": "Ajustes de los analistas a los pronósticos de crecimiento de 2026 y 2027 tras la publicación del PIB.",
+      "note": "Comparar las nuevas encuestas de LatinFocus y Fedesarrollo con el 2,3% actual para 2027."
+     }
+    ],
+    "unknowns": [
+     "¿Cuál es la cifra oficial del PIB del tercer trimestre del Dane?",
+     "¿Qué tan grande es el efecto del terremoto frente a otros factores, como el menor gasto público?",
+     "¿Qué tan rápido se traducirá la reconstrucción en actividad en el cuarto trimestre de 2026 y en 2027?"
+    ]
+   }
+  },
+  {
    "id": "2026-11-13-chip-selloff-nvidia-below-4tn",
    "title": "Chip stocks fall and Nvidia ends below $4 trillion in value; US indexes still gain for the week",
    "category": "Corporate",

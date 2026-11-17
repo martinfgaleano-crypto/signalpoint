@@ -118,7 +118,14 @@ def main():
         else:
             report["rejected"].append({"title": c["title"], "url": c["link"], "errors": v["errors"][:6]})
         time.sleep(2)
-    json.dump(report, open(os.path.join(OUT, f"{today}.json"), "w"), ensure_ascii=False, indent=1)
+    day = os.path.join(OUT, f"{today}.json")
+    if os.path.exists(day):   # several runs in one day add to the same file instead of replacing it
+        try:
+            old = json.load(open(day)); ids = {b["id"] for b in report["briefs"]}
+            report["briefs"] = [b for b in old.get("briefs", []) if b["id"] not in ids] + report["briefs"]
+            report["rejected"] = old.get("rejected", []) + report["rejected"]
+        except Exception: pass
+    json.dump(report, open(day, "w"), ensure_ascii=False, indent=1)
     json.dump(sorted(seen), open(seen_p, "w"))
     print(json.dumps({"feeds": feedlog, "drafts": len(report["briefs"]), "rejected": len(report["rejected"])}))
 if __name__ == "__main__": main()
