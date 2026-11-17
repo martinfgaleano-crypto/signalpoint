@@ -3,6 +3,112 @@
  "note": "Mirror of the live briefs collection, updated by Fable after every reviewed write. Not a byte export of the database.",
  "briefs": [
   {
+   "id": "2026-11-17-colombia-s-2027-minimum-wage-talks-workers-propo",
+   "title": "Colombia's 2027 minimum wage talks: some workers propose a 38% rise, some employers a 9% cap",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/la-variable-clave-que-pediran-tener-en-la-definicion-del-salario-minimo-en-colombia-del-2027/"
+   },
+   "summary": "Valora Analitik reports that the definition of Colombia's 2027 minimum wage is expected to begin in the coming days, with the Government expected to formally convene workers and employers. Part of the workers propose a 38% increase, and workers argue the adjustment should reflect high food inflation, while some employers propose a 9% ceiling, arguing the adjustment should not exceed inflation plus labor productivity change per DANE figures. Employers also stress protecting employment levels, and DANE reports reflect concern over falling formal employment and rising self-employment.",
+   "actors": [
+    {
+     "name": "Formal-sector workers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The size of the adjustment will determine real income for minimum-wage earners, and the gap between proposals is large."
+    },
+    {
+     "name": "Employers / businesses",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A higher adjustment would raise labor costs, while employers argue for a cap tied to inflation and productivity."
+    },
+    {
+     "name": "Ministry of Labor (Government)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It is expected to convene the parties and seek a decision based on agreement between them."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Formal convening of workers and employers by the Government to start the minimum wage negotiation",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check announcements from the Ministry of Labor and national press."
+    },
+    {
+     "text": "Whether the parties reach a consensus on the 2027 adjustment or the decision is made without agreement",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the official decision announcement and the resulting decree."
+    },
+    {
+     "text": "Latest DANE data on inflation, productivity and formal employment used as reference in the talks",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review DANE releases and how the parties cite them."
+    }
+   ],
+   "unknowns": [
+    "What final percentage increase will be set for 2027?",
+    "Will the negotiation reach a consensus between workers and employers?",
+    "How will the proposals weigh inflation, productivity and employment protection?"
+   ],
+   "tags": [
+    "Colombia",
+    "minimum wage",
+    "2027",
+    "DANE",
+    "inflation",
+    "employment"
+   ],
+   "es": {
+    "title": "Salario mínimo 2027 en Colombia: parte de los trabajadores propone 38 % y algunos empresarios un tope de 9 %",
+    "summary": "Valora Analitik informa que la definición del salario mínimo de Colombia para 2027 comenzaría en los próximos días, y que se espera que el Gobierno convoque formalmente a trabajadores y empresarios. Una parte de los trabajadores propone un aumento de 38 %, y los trabajadores sostienen que el ajuste debe reflejar la alta inflación de los alimentos, mientras que algunos empresarios plantean un tope de 9 %, al argumentar que el ajuste no debe superar la inflación más la variación de la productividad laboral según cifras del DANE. Los empresarios también destacan la necesidad de proteger el empleo, y los informes del DANE reflejan preocupación por la caída del empleo formal y el aumento del trabajo independiente.",
+    "actors": [
+     {
+      "name": "Trabajadores del sector formal",
+      "reason": "El tamaño del ajuste determinará el ingreso real de quienes devengan el mínimo, y la brecha entre las propuestas es grande."
+     },
+     {
+      "name": "Empresarios / empresas",
+      "reason": "Un ajuste mayor elevaría los costos laborales, mientras que los empresarios piden un tope ligado a la inflación y la productividad."
+     },
+     {
+      "name": "Ministerio del Trabajo (Gobierno)",
+      "reason": "Se espera que convoque a las partes y busque una decisión a partir de la concertación entre ellas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Convocatoria formal del Gobierno a trabajadores y empresarios para iniciar la negociación del salario mínimo",
+      "note": "Revisar anuncios del Ministerio del Trabajo y la prensa nacional."
+     },
+     {
+      "text": "Si las partes llegan a un consenso sobre el ajuste de 2027 o si la decisión se toma sin acuerdo",
+      "note": "Revisar el anuncio oficial de la decisión y el decreto resultante."
+     },
+     {
+      "text": "Últimos datos del DANE sobre inflación, productividad y empleo formal usados como referencia en la negociación",
+      "note": "Consultar las publicaciones del DANE y cómo las citan las partes."
+     }
+    ],
+    "unknowns": [
+     "¿Qué porcentaje final de aumento se fijará para 2027?",
+     "¿Habrá consenso entre trabajadores y empresarios en la negociación?",
+     "¿Cómo se ponderarán en las propuestas la inflación, la productividad y la protección del empleo?"
+    ]
+   }
+  },
+  {
    "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
    "title": "Ecopetrol's Windpeshi wind farm in La Guajira reaches 25% progress; LNG cargo purchases paused",
    "category": "Corporate",

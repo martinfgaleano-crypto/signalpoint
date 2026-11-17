@@ -52,8 +52,9 @@ def items():
         except Exception as e:
             log[name] = "error: " + repr(e)[:120]
     return out, log
-SCHEMA = """Return ONE JSON object, no prose, with exactly these keys:
-{"title": English headline <= 110 chars, factual, no hype,
+SCHEMA = """Number format: in English fields use English notation (US$2,540 million, 144.7); in Spanish fields use Colombian notation (US$2.540 millones, 144,7). Never copy Spanish number notation into English text.
+Return ONE JSON object, no prose, with exactly these keys:
+{"title": English headline of at most 95 characters (count them; Spanish title also at most 105), factual, no hype, attribute claims to who made them (say "some workers", not "workers", when the source says only part of a group),
  "category": one of "Central banks","Macro data","Earnings","M&A","Corporate","Regulation","Commodities","Geopolitics","Other",
  "region": e.g. "Colombia", "US", "US / Global",
  "eventDate": "YYYY-MM-DD" (the day the event happened, not in the future),
