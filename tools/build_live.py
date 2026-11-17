@@ -16,11 +16,11 @@ def fred(name):
 def trm():
     p = os.path.join(D, "trm.csv")
     if not os.path.exists(p): return []
-    rows = {}
-    for r in csv.DictReader(open(p)):
-        d = r["vigenciadesde"][:10]
-        if date.fromisoformat(d).weekday() < 5: rows[d] = float(r["valor"])
-    return sorted(rows.items())
+    rows = sorted({r["vigenciadesde"][:10]: float(r["valor"]) for r in csv.DictReader(open(p))}.items())
+    out = []
+    for d, v in rows:   # weekday rates always; a weekend date only when it carries a new rate (as on the board)
+        if date.fromisoformat(d).weekday() < 5 or not out or out[-1][1] != v: out.append((d, v))
+    return out
 SRC = {
   "sp500": (fred("SP500"), 2, 0.12, {"name": "S&P Dow Jones Indices, via FRED (series SP500)", "url": "https://fred.stlouisfed.org/series/SP500"}),
   "nasdaq": (fred("NASDAQCOM"), 2, 0.15, {"name": "Nasdaq, Inc., via FRED (series NASDAQCOM)", "url": "https://fred.stlouisfed.org/series/NASDAQCOM"}),
