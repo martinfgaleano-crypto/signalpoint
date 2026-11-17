@@ -962,7 +962,7 @@ body.ck-open{overflow:hidden}
 .bh-grain{position:absolute;inset:0;z-index:-1;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .bh-live{margin:0;font-size:13px;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:8px}.bh-live i{width:7px;height:7px;border-radius:50%;background:#2FD07A;box-shadow:0 0 0 4px rgba(47,208,122,.15)}
 .bh-main{align-self:end;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end;padding-bottom:34px}
-.bh-h{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(52px,8.4vw,136px);line-height:.92;letter-spacing:-.052em}
+.bh-h{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(52px,6.6vw,112px);line-height:.92;letter-spacing:-.052em}.bh-main>div:first-child,.bh-h{min-width:0}
 .bh-h .hl{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}.bh-h .hl>span{display:inline-block}
 @media (min-width:900px){.bh-h .hl{white-space:nowrap}}
 .bh-dim{color:rgba(255,255,255,.42)}
@@ -1477,7 +1477,8 @@ function boldHero(intro){
     var d=v.map(function(x,i){return (i?"L":"M")+(i/(v.length-1)*W).toFixed(1)+" "+(top+band-(x-lo)/r*band).toFixed(1)}).join(" ");lines.push({id:id,d:d,hot:id==="usdcop"})});
   var svg='<svg class="bh-lines" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" aria-hidden="true">'+lines.map(function(l,i){return '<path d="'+l.d+'" pathLength="1" class="'+(l.hot?"hot":"")+'" style="--i:'+i+'"/>'}).join("")+"</svg>";
   var sh={usdcop:"TRM",colcap:"Colcap",sp500:"S&P 500",brent:"Brent"},strip=["usdcop","colcap","sp500","brent"].map(function(id){var m=S.markets&&S.markets[id];if(!m||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2);return '<button class="bh-m" data-market="'+id+'"><span>'+sh[id]+"</span><b>"+esc(mNum(mLast(m)[1],m))+'</b><em class="'+mDir(c.v)+'">'+esc(c.text)+"</em></button>"}).join("");
-  var last=S.markets&&S.markets.sp500&&S.markets.sp500.series?fmtDate(mLast(S.markets.sp500)[0]):"";
+  var lastIso="";Object.keys(S.markets||{}).forEach(function(k){var m=S.markets[k];if(m&&m.series&&m.series.length){var d=mLast(m)[0];if(d>lastIso)lastIso=d}});
+  var last=lastIso?new Date(lastIso+"T12:00:00Z").toLocaleDateString(S.lang==="es"?"es-CO":"en-US",{day:"numeric",month:"long",timeZone:"UTC"}):"";
   return '<section class="bh'+(intro?" intro":"")+'" aria-label="SignalPoint"><div class="bh-bg">'+svg+'</div><div class="bh-grain" aria-hidden="true"></div>'+
     '<p class="bh-live"><i></i>'+T("Last close ","Último cierre ")+esc(last)+"</p>"+
     '<div class="bh-main"><h1 class="bh-h"><span class="hl"><span>'+T("The news","Las noticias")+'</span></span><span class="hl"><span class="bh-dim">'+T("behind the numbers.","detrás de los números.")+'</span></span></h1>'+
