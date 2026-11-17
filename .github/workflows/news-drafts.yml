@@ -1,0 +1,27 @@
+name: news-drafts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 11 * * 1-5'   # weekdays, 06:23 Bogotá
+  push:
+    branches: [main]
+    paths: ['tools/news_drafts.py', '.github/workflows/news-drafts.yml']
+permissions:
+  contents: write
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bring previous drafts (keeps the list of items already processed)
+        run: |
+          git fetch -q origin drafts && git worktree add -q d origin/drafts || mkdir -p d
+      - name: Write drafts (nothing is published)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/news_drafts.py d
+      - name: Save drafts to the drafts branch
+        run: |
+          cd d && rm -rf .git && git init -q && git checkout -q -b drafts && git add -A
+          git -c user.name="signalpoint-bot" -c user.email="signalpoint-bot@users.noreply.github.com" commit -qm "Drafts $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" drafts
