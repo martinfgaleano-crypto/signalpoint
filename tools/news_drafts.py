@@ -30,8 +30,9 @@ def items():
     cutoff = datetime.now(timezone.utc) - timedelta(hours=40)
     for name, url, grade in FEEDS:
         try:
-            root = ET.fromstring(get(url)); n = 0
+            root = ET.fromstring(get(url)); n = 0; sample = ""
             for it in root.iter("item"):
+                if not sample: sample = (it.findtext("pubDate") or it.findtext("{http://purl.org/dc/elements/1.1/}date") or "none")[:40]
                 title = (it.findtext("title") or "").strip(); link = (it.findtext("link") or "").strip()
                 desc = text_of((it.findtext("description") or "").encode()); pub = it.findtext("pubDate") or ""
                 try:
@@ -40,7 +41,7 @@ def items():
                 except Exception: when = None
                 if not title or not link.startswith("https://") or not when or when < cutoff: continue
                 out.append({"feed": name, "grade": grade, "title": title, "link": link, "desc": desc[:600], "date": (when or datetime.now(timezone.utc)).date().isoformat()}); n += 1
-            log[name] = n
+            log[name] = f"{n} (first date: {sample})"
         except Exception as e:
             log[name] = "error: " + repr(e)[:120]
     return out, log
