@@ -19,7 +19,7 @@ FEEDS = [
     ("Portafolio", "https://www.portafolio.co/rss/economia.xml", "B"),
     ("Federal Reserve (monetary policy)", "https://www.federalreserve.gov/feeds/press_monetary.xml", "A"),
 ]
-PRIORITY = re.compile(r"banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
+PRIORITY = re.compile(r"salario m[ií]nimo|econom[ií]a|bolsas?\b|premercado|mercados?\b|aranceles?|d[eé]ficit|deuda|fiscal|desempleo|exportaciones|importaciones|remesas|tasas?\b|recesi[oó]n|crecimiento|banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
 SKIP = re.compile(r"entrevista|festival|\bexpo\b|vacantes|navide|concierto|turismo|viajeros", re.I)
 def get(url, timeout=40):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read()
