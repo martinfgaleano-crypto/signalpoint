@@ -1,4 +1,4 @@
-"""SignalPoint news drafts. Collects recent items from public feeds, asks Claude to write each as a SignalPoint brief
+"""SignalPoint news drafts (v1). Collects recent items from public feeds, asks Claude to write each as a SignalPoint brief
 grounded ONLY in the fetched source text, validates every draft with the publication gate (tools/quality.cjs) and writes
 the result to drafts/<date>.json. Nothing is published: a person reviews the drafts before they reach the site."""
 import json, os, re, sys, time, html, subprocess, urllib.request, xml.etree.ElementTree as ET
