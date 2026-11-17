@@ -960,6 +960,7 @@ body.ck-open{overflow:hidden}
 .bh-lines path.hot{stroke:#4D74FF;stroke-width:2.2}
 .bh-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,8,0) 35%,rgba(5,6,8,.85) 78%,#050608)}
 .bh-grain{position:absolute;inset:0;z-index:-1;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.bh-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.bh-key{margin:0;font-size:12.5px;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:8px}.bh-key span{display:inline-block;width:18px;height:2px;border-radius:2px}.bh-key .k1{background:#4D74FF}.bh-key .k2{background:rgba(255,255,255,.35);margin-left:10px}
 .bh-live{margin:0;font-size:13px;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:8px}.bh-live i{width:7px;height:7px;border-radius:50%;background:#2FD07A;box-shadow:0 0 0 4px rgba(47,208,122,.15)}
 .bh-main{align-self:end;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end;padding-bottom:34px}
 .bh-h{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(52px,6.6vw,112px);line-height:.92;letter-spacing:-.052em}.bh-main>div:first-child,.bh-h{min-width:0}
@@ -980,7 +981,7 @@ body.ck-open{overflow:hidden}
 @media (prefers-reduced-motion:no-preference){
 .bh.intro .bh-lines path{stroke-dasharray:1;stroke-dashoffset:1;animation:bhdraw 1.6s var(--ease-expo) both;animation-delay:calc(var(--i) * 90ms)}
 .bh.intro .bh-h .hl>span{animation:hlrise .9s var(--ease-expo) .15s both}.bh.intro .bh-h .hl+.hl>span{animation-delay:.25s}
-.bh.intro .bh-live{animation:hfade .6s var(--ease-out) .05s both}.bh.intro .bh-side{animation:hfade .8s var(--ease-out) .4s both}.bh.intro .bh-strip{animation:hfade .8s var(--ease-out) .55s both}
+.bh.intro .bh-top{animation:hfade .6s var(--ease-out) .05s both}.bh.intro .bh-side{animation:hfade .8s var(--ease-out) .4s both}.bh.intro .bh-strip{animation:hfade .8s var(--ease-out) .55s both}
 @keyframes bhdraw{to{stroke-dashoffset:0}}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
@@ -1480,7 +1481,7 @@ function boldHero(intro){
   var lastIso="";Object.keys(S.markets||{}).forEach(function(k){var m=S.markets[k];if(m&&m.series&&m.series.length){var d=mLast(m)[0];if(d>lastIso)lastIso=d}});
   var last=lastIso?new Date(lastIso+"T12:00:00Z").toLocaleDateString(S.lang==="es"?"es-CO":"en-US",{day:"numeric",month:"long",timeZone:"UTC"}):"";
   return '<section class="bh'+(intro?" intro":"")+'" aria-label="SignalPoint"><div class="bh-bg">'+svg+'</div><div class="bh-grain" aria-hidden="true"></div>'+
-    '<p class="bh-live"><i></i>'+T("Last close ","Último cierre ")+esc(last)+"</p>"+
+'<div class="bh-top"><p class="bh-live"><i></i>'+T("Last close ","Último cierre ")+esc(last)+'</p><p class="bh-key"><span class="k1"></span>'+T("The dollar in pesos","El dólar en pesos")+'<span class="k2"></span>'+T("Other markets on the board","Otros mercados del tablero")+"</p></div>"+
     '<div class="bh-main"><h1 class="bh-h"><span class="hl"><span>'+T("The news","Las noticias")+'</span></span><span class="hl"><span class="bh-dim">'+T("behind the numbers.","detrás de los números.")+'</span></span></h1>'+
     '<div class="bh-side"><p>'+T("Every move on the board, explained in plain words: who it affects, what history says, and what nobody knows yet.","Cada movimiento del tablero explicado en palabras simples: a quién afecta, qué dice la historia y qué no sabe nadie todavía.")+'</p><div class="bh-cta"><button class="bh-btn" data-bhgo="1">'+T("Read today’s news","Leer las noticias de hoy")+'</button><button class="bh-btn ghost" data-view="markets">'+T("See the board","Ver el tablero")+"</button></div></div></div>"+
     '<div class="bh-strip">'+strip+"</div></section>";
