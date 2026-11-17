@@ -173,7 +173,7 @@ td button:hover{text-decoration:underline}
 .mgroup h4,.mh{font-family:var(--display);font-weight:600;font-size:13px;color:var(--muted);margin:0 0 10px}
 .mgroup{margin-bottom:8px}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
-.tile-m{display:grid;grid-template-columns:1fr auto;grid-template-areas:"name name" "val val" "chg spark";gap:4px 10px;align-items:end;text-align:left;background:var(--surface);border:0;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s var(--ease);min-width:0;animation:rise .5s var(--ease) both}
+.tile-m{display:grid;grid-template-columns:1fr auto;grid-template-areas:"name name" "val val" "chg spark";gap:4px 10px;align-items:end;text-align:left;background:var(--surface);border:0;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s var(--ease);min-width:0;animation:rise .28s var(--ease-out) both}
 .tile-m:hover{transform:translateY(-2px)}
 .tile-m[aria-current]{outline:2px solid var(--accent);outline-offset:-2px}
 .tm-name{grid-area:name;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -243,7 +243,7 @@ td button:hover{text-decoration:underline}
 @media (max-width:880px){.mhero{padding:30px 24px 0;border-radius:22px;margin-top:16px}.tape{margin:26px -24px 0;border-radius:0 0 22px 22px}.mchart{height:160px}}
 @media (prefers-reduced-motion: reduce){.enter .clause,.enter .mchart .area,.enter-paper .mchart .area{opacity:1}.enter .spark polyline,.enter .mchart .ln,.enter-paper .mchart .ln{stroke-dasharray:none;stroke-dashoffset:0}.tape-run{animation:none}}
 
-.trybar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:start;background:var(--surface);border-radius:22px;padding:30px 34px;margin:0 0 30px;box-shadow:var(--shadow);animation:rise .6s var(--ease) both}
+.trybar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:start;background:var(--surface);border-radius:22px;padding:30px 34px;margin:0 0 30px;box-shadow:var(--shadow);animation:rise .3s var(--ease-out) both}
 .trybar h2{font-family:var(--display);font-weight:650;font-size:24px;letter-spacing:-.025em;margin:0 0 6px}
 .trybar .row{flex-wrap:wrap}
 .trybar select.search{flex:1 1 220px;max-width:none}
@@ -271,17 +271,17 @@ footer{padding:22px 0 40px;color:var(--muted);font-size:12px;border-top:1px soli
 footer .wrap{max-width:1180px}
 .skel{height:96px;border-radius:16px;background:linear-gradient(90deg,var(--surface),var(--sunk),var(--surface));background-size:200% 100%;animation:sh 1.4s linear infinite}
 @keyframes sh{to{background-position:-200% 0}}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes draw{from{stroke-dasharray:0 340}to{stroke-dasharray:var(--len) 340}}
-.enter .strip>*,.enter .pulse,.enter .slip,.enter .paper,.enter .empty,.enter .ledger,.enter .tools{animation:rise .7s var(--ease) both}
+.enter .strip>*,.enter .pulse,.enter .slip,.enter .paper,.enter .empty,.enter .ledger,.enter .tools{animation:rise .32s var(--ease-out) both}
 .enter .strip>*:nth-child(2){animation-delay:.06s}.enter .strip>*:nth-child(3){animation-delay:.12s}
 .enter .pulse{animation-delay:.14s}.enter .tools{animation-delay:.16s}
 .enter .slip:nth-child(1){animation-delay:.18s}.enter .slip:nth-child(2){animation-delay:.23s}.enter .slip:nth-child(3){animation-delay:.28s}.enter .slip:nth-child(4){animation-delay:.33s}.enter .slip:nth-child(n+5){animation-delay:.38s}
 .enter .paper,.enter .paperwrap .empty{animation-delay:.22s}
 .enter .pulse circle{animation:pop .5s var(--ease) both;animation-delay:calc(.35s + var(--i,0)*45ms);transform-box:fill-box;transform-origin:center}
-.enter-paper .paper{animation:rise .5s var(--ease) both}
+.enter-paper .paper{animation:rise .28s var(--ease-out) both}
 .enter .bar i,.enter-paper .bar i{animation:grow .8s var(--ease) both;animation-delay:.3s}
 .enter .ring .seg{animation:draw 1.1s var(--ease) both;animation-delay:.25s}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -816,7 +816,7 @@ footer{background:#fff;border-top:2px solid #E6E9F2}
 @media (max-width:600px){.tosearch .ks{display:none}.tosearch{padding:6px 8px}.tolang{margin-left:6px}}
 body.ck-open{overflow:hidden}
 .ck-back{position:fixed;inset:0;background:rgba(10,14,30,.45);backdrop-filter:blur(3px);z-index:80;animation:ckfade .15s ease-out}
-.ck{position:fixed;left:50%;top:12vh;transform:translateX(-50%);width:min(640px,94vw);max-height:70vh;display:flex;flex-direction:column;background:#fff;border-radius:20px;border:2px solid #E6E9F2;border-bottom-width:6px;box-shadow:0 30px 80px rgba(10,14,30,.35);z-index:81;overflow:hidden;animation:ckin .18s cubic-bezier(.2,1.2,.4,1)}
+.ck{position:fixed;left:50%;top:12vh;transform:translateX(-50%);width:min(640px,94vw);max-height:70vh;display:flex;flex-direction:column;background:#fff;border-radius:20px;border:2px solid #E6E9F2;border-bottom-width:6px;box-shadow:0 30px 80px rgba(10,14,30,.35);z-index:81;overflow:hidden;animation:ckin .18s var(--ease-out);transform-origin:50% 0}
 @keyframes ckin{from{opacity:0;transform:translate(-50%,10px) scale(.98)}}@keyframes ckfade{from{opacity:0}}
 .ck-in{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #EEF0F5}
 .ck-in input{flex:1;border:0;font:inherit;font-size:1.1rem;outline:none;background:none}
@@ -921,6 +921,19 @@ body.ck-open{overflow:hidden}
 .pf-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.pf-tabs button{font:inherit;font-weight:700;font-size:.88rem;padding:8px 14px;border-radius:999px;border:2px solid #E3E6EE;background:#fff;cursor:pointer}.pf-tabs button[aria-selected="true"]{background:#111;color:#fff;border-color:#111}
 .pf-rev{background:#F5F6FA;border-radius:12px;padding:10px 12px;margin-top:8px}.pf-rev h4{margin:0 0 6px;font-size:.9rem}.pf-rl{list-style:none;margin:6px 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem}.pf-vd{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.pf-vd .pf-t{font-size:.8rem;padding:6px 10px}.pf-t.on{border-color:#2F5BFF;background:#EEF2FF}.pf-lf{display:flex;gap:6px}.pf-lf input{flex:1}.pill.vd{background:#E8F7EE;color:#128C40}.pf-les{color:#2B3345}
 .autotag{font-size:.68rem;font-weight:800;color:#6B4DE6;background:#F1ECFF;border-radius:999px;padding:1px 7px}
+/* Motion and interaction layer: short, ease-out, interruptible; hover only where a pointer can hover; press feedback everywhere. */
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-in-out:cubic-bezier(.77,0,.175,1)}
+@keyframes ckin{from{opacity:0;transform:translateX(-50%) scale(.96)}to{opacity:1;transform:translateX(-50%) scale(1)}}
+#toast{transition:opacity .15s ease-in,transform .22s var(--ease-out);transform:translate(-50%,12px) scale(.96)}#toast.show{transform:translate(-50%,0) scale(1);transition:opacity .2s var(--ease-out),transform .3s var(--ease-out)}
+.slip,.hc,.ccard,.pf-t,.fy-o,.pl,.chip,.cal-ev,.pnode,.lq-o,.mrange button,.pf-tabs button,.ev-q{transition:transform .16s var(--ease-out),background-color .16s,border-color .16s,box-shadow .16s}
+.slip:active,.hc:active,.ccard:active,.pf-t:active,.fy-o:active,.pl:active,.chip:active,.pf-tabs button:active,.lq-o:active{transform:scale(.98)}
+@media (hover:none){.hc:hover,.slip:hover,.ccard:hover,.pl:hover,.pf-t:hover,.fy-o:hover{transform:none;filter:none}}
+.desk.open .paperwrap.dragging{transition:none}.desk.open .paperwrap.snap{transition:transform .3s var(--ease-out)}
+.rd-grab{display:none}
+@media (max-width:880px){.rd-grab{display:block;width:40px;height:5px;border-radius:3px;background:#C9CEDB;margin:0 auto 8px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;animation-delay:0s!important;transition-duration:1ms!important}.slip:active,.hc:active,.ccard:active,.pf-t:active,.fy-o:active,.pl:active,.chip:active{transform:none}}
+.pfh{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:linear-gradient(135deg,#EEF2FF,#fff);border:2px solid #DCE3FF;border-bottom-width:5px;border-radius:20px;padding:18px 22px;margin:22px 0}.pfh b{font-size:1.1rem}.pfh p{margin:4px 0 0;max-width:620px;color:#2B3345}.pfh-v{font-weight:800;font-size:1.25rem}.pfh .up{color:#128C40;font-weight:800}.pfh .down{color:#D92D20;font-weight:800}
+.chal{background:#fff;border:2px solid #E6E9F2;border-bottom-width:5px;border-radius:20px;padding:18px 20px;margin:18px 0}.chal-k{font-size:.78rem;font-weight:800;color:#6B4DE6}.chal h3{margin:6px 0 4px;font-size:1.05rem}.chal-o{display:grid;gap:8px;margin-top:10px}.chal-r{border-radius:12px;padding:10px 12px;margin-top:10px}.chal-r.ok{background:#E8F7EE}.chal-r.no{background:#FFF1E6}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1277,7 +1290,7 @@ function vBriefing(){
     '<div class="chips">'+cats.map(function(c){return '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c)+"</button>"}).join("")+
     (S.wl.length?'<button class="chip" id="mine" aria-pressed="'+S.mine+'">★ My exposure</button>':"")+"</div></div>"+
     (S.wl.length?'<p class="note">Keyword matches first. Open an event for a source-based reading.</p>':"")+'<div id="rail" style="display:flex;flex-direction:column;gap:10px">'+rail+"</div></div>"+
-    '<div class="paperwrap"><div class="rd-bar"><button class="btn ghost back" id="back">← All events</button>'+(function(){var ix=(S.shownIds||[]).indexOf(S.sel),n=(S.shownIds||[]).length;return ix<0?"":'<span class="rd-pos">'+(ix+1)+" / "+n+'</span><span class="rd-nav"><button class="btn ghost" data-rdstep="-1" aria-label="'+T("Previous event","Evento anterior")+'"'+(ix<=0?" disabled":"")+'>\u2039</button><button class="btn ghost" data-rdstep="1" aria-label="'+T("Next event","Siguiente evento")+'"'+(ix>=n-1?" disabled":"")+">\u203a</button></span>"})()+"</div>"+paper(byId(S.sel))+"</div></div>";
+    '<div class="paperwrap"><div class="rd-bar"><span class="rd-grab" aria-hidden="true"></span><button class="btn ghost back" id="back">← All events</button>'+(function(){var ix=(S.shownIds||[]).indexOf(S.sel),n=(S.shownIds||[]).length;return ix<0?"":'<span class="rd-pos">'+(ix+1)+" / "+n+'</span><span class="rd-nav"><button class="btn ghost" data-rdstep="-1" aria-label="'+T("Previous event","Evento anterior")+'"'+(ix<=0?" disabled":"")+'>\u2039</button><button class="btn ghost" data-rdstep="1" aria-label="'+T("Next event","Siguiente evento")+'"'+(ix>=n-1?" disabled":"")+">\u203a</button></span>"})()+"</div>"+paper(byId(S.sel))+"</div></div>";
 }
 /* Follow-ups from different briefs that watch the same thing are shown once in the calendar (each brief keeps its own list). */
 var CALSAME=[[/FOMC minutes/i,"fomc-minutes"],[/\b(Fed|Committee)\b.*\braises\b.*December 8-9/i,"fed-dec-hike"],[/Nvidia reports fiscal Q3 2027 results/i,"nvda-q3"],[/(Banco de la Rep\u00fablica|\bBoard\b)\s+(changes|raises)\s+(its|the)\b.*\brate\b.*December/i,"banrep-dec"]];
@@ -1508,7 +1521,7 @@ function vMarkets(){
   if(!list.length)return '<div class="strip"><h1>The market in plain words.</h1><div class="facts">Market data has not been loaded for this edition.</div></div>'+'<button class="btn" data-view="briefing">Read the news</button>';
   if(S.msel&&!S.markets[S.msel])S.msel=null;
   if(!S.msel)S.msel=(watched()[0])||list[0].id;
-  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+mAhead()+toolsBlock();
+  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+(typeof pfHome==="function"?pfHome():"")+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+mAhead()+toolsBlock();
 }
 /* ---------- My list, What if, Learn, The week ahead ---------- */
 var MHEAD={usdcop:{head:"The dollar in pesos",up:"rose",down:"fell"},colcap:{head:"Colombian stocks",up:"rose",down:"fell"},sp500:{head:"Stocks",up:"rose",down:"fell"},nasdaq:{head:"Tech stocks",up:"rose",down:"fell"},dow:{head:"The Dow",up:"rose",down:"fell"},us2y:{head:"Short-term rates",up:"climbed",down:"eased"},us10y:{head:"Long-term rates",up:"climbed",down:"eased"},us30y:{head:"30-year rates",up:"climbed",down:"eased"},eurusd:{head:"The dollar",up:"gained",down:"lost",tail:" on the euro",invert:true},usdcop:{head:"The dollar",up:"gained",down:"lost",tail:" against the peso"},brent:{head:"Oil",up:"rose",down:"fell"},btc:{head:"Bitcoin",up:"rose",down:"fell"}};
@@ -1916,7 +1929,7 @@ function vLearn(){
     var open=S.course===x.id,list=x.lessons.map(function(l){return {l:l,full:l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null)}}),dn=x.lessons.filter(function(l){return S.learned[l.id]}).length;
     return '<div class="unit">'+unitHead(x.id,k+2,x.title,x.blurb,x.lessons.length,dn,true,open)+(open?'<div class="lessons course-open" id="course-'+esc(x.id)+'">'+pathNodes(x.id,list)+(isPro()?"":proCta("Unlock every lesson in all seven courses"))+certBlock(x.id,x.title,x.lessons.map(function(l){return l.id}))+"</div>":"")+"</div>";
   }).join("");
-  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with seven courses: the first lesson of each is free.</div>'+statsBar()+"</div>"+reviewBlock()+dailyBlock()+'<div class="units">'+units+"</div>"+calcBlock()+glossaryBlock()+(S.exam?examView():needsOnboarding()?onboardView():player());
+  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with seven courses: the first lesson of each is free.</div>'+statsBar()+"</div>"+reviewBlock()+dailyBlock()+(typeof chBlock==="function"?chBlock():"")+'<div class="units">'+units+"</div>"+calcBlock()+glossaryBlock()+(S.exam?examView():needsOnboarding()?onboardView():player());
 }
 /* ---------- Language: Spanish by default, English on request ---------- */
 var LANGKEY="signalpoint.lang";
@@ -2075,6 +2088,24 @@ function dailyLesson(){
   }}
   return null;
 }
+/* ---------- History challenge: guess what usually followed an event, then see the real base rate. ---------- */
+var CHKEY="signalpoint.challenge";
+function chPool(){var h=S.hist;if(!h||!h.events)return [];var out=[],HN={"1":["the next day","al día siguiente"],"5":["a week later","una semana después"],"20":["a month later","un mes después"]};
+  Object.keys(h.events).sort().forEach(function(k){var e=h.events[k];if(!e||e.n<20)return;Object.keys(e.assets||{}).sort().forEach(function(a){var x=e.assets[a];["5","20"].forEach(function(hz){var v=x.h&&x.h[hz];if(!v||v.n<20)return;if(k.indexOf(a==="usdcop"?"trm":a==="colo"?"colo":"zz")===0)return;
+    out.push({k:k,a:a,hz:hz,e:e,x:x,v:v,hn:HN[hz]})})})});return out}
+function chToday(){var pool=chPool();if(!pool.length)return null;var d=new Date(),seed=d.getFullYear()*1000+Math.floor((d-new Date(d.getFullYear(),0,0))/864e5);
+  var strong=pool.filter(function(q){return q.v.sig||q.v.hint}),plain=pool.filter(function(q){return !(q.v.sig||q.v.hint)});
+  var list=(seed%3===2&&plain.length)?plain:(strong.length?strong:pool);return list[seed%list.length]}
+function chState(){try{return JSON.parse(localStorage.getItem(CHKEY)||"{}")}catch(e){return {}}}
+function chBlock(){
+  var q=chToday();if(!q)return"";var st=chState(),key=todayISO(),ans=st.d===key?st.a:null,p=Math.round(q.v.up/q.v.n*100),diff=p-q.v.base;
+  var right=(q.v.sig||q.v.hint)?(diff>0?"more":"less"):"same";
+  var opts=[["more",T("Up more often than normal","Subió más veces de lo normal")],["same",T("About as often as normal","Más o menos igual que siempre")],["less",T("Up less often than normal","Subió menos veces de lo normal")]];
+  var head='<section class="chal"><div class="chal-k">'+T("History challenge","Reto de historia")+' <span class="note">+10 XP</span></div><h3>'+T("When this happened: ","Cuando pasó esto: ")+esc(T(q.e.en,q.e.es))+"</h3><p>"+T("What did ","¿Qué hizo ")+"<b>"+esc(T(q.x.en,q.x.es))+"</b> "+esc(T(q.hn[0],q.hn[1]))+"?"+T(""," ")+"</p>";
+  if(!ans)return head+'<div class="chal-o">'+opts.map(function(o){return '<button class="lq-o" data-chal="'+o[0]+'">'+esc(o[1])+"</button>"}).join("")+"</div></section>";
+  var ok=ans===right;
+  return head+'<div class="chal-r '+(ok?"ok":"no")+'"><b>'+(ok?T("Right.","Correcto."):T("Not quite.","No exactamente."))+"</b> "+T("Of "+q.v.n+" times since "+String(q.e.first).slice(0,4)+", it was up "+q.v.up+" times ("+p+"%), against "+q.v.base+"% in any period of the same length.","De "+q.v.n+" veces desde "+String(q.e.first).slice(0,4)+", subió "+q.v.up+" ("+p+"%), frente a "+q.v.base+"% en cualquier periodo del mismo largo.")+" "+(q.v.sig?T("The difference holds up after statistical correction.","La diferencia se sostiene después de la corrección estadística."):q.v.hint?T("A possible pattern; it may be chance.","Un posible patrón; puede ser azar."):T("No clear pattern: on its own this event has not told much.","Sin patrón claro: por sí solo este evento no ha dicho mucho."))+'</div><p class="note">'+T("History, not a forecast or a recommendation. A new challenge every day.","Es historia, no un pronóstico ni una recomendación. Un reto nuevo cada día.")+"</p></section>";
+}
 function dailyBlock(){
   var d=dailyLesson();if(!d)return"";
   var l=d.ref.meta,locked=!d.ref.full;
@@ -2186,6 +2217,8 @@ function plansBlock(){
 }
 /* ---------- Practice portfolio: virtual pesos, real prices from the board. No real money, no recommendations. ---------- */
 var PFKEY="signalpoint.pf";
+var PF_PILOT_OPEN=true; /* journal and real portfolio are Pro features, open to everyone during the pilot */
+function pfPro(){return PF_PILOT_OPEN||isPro()}
 var PFA={sp500:{usd:1},nasdaq:{usd:1},colcap:{},usdcop:{},brent:{usd:1},btc:{usd:1},cdt:{rate:0.115}};
 var PFT=[["conservador",{cdt:0.7,sp500:0.2,colcap:0.1},"Conservative · 70% CDT","Conservador · 70% CDT"],["balanceado",{sp500:0.6,cdt:0.4},"Balanced · 60/40","Balanceado · 60/40"],["colombia",{colcap:0.6,cdt:0.4},"Colombia · Colcap + CDT","Colombia · Colcap + CDT"],["eeuu",{sp500:0.5,nasdaq:0.5},"US stocks in pesos","EE. UU. en pesos"]];
 function pfValid(p){return !!(p&&p.holds&&typeof p.cap==="number"&&p.cap>0&&p.cap<=1e13)}
@@ -2228,7 +2261,7 @@ function pfMoney(x){return (x<0?"−":"")+"$"+Math.round(Math.abs(x)).toLocaleSt
 function pfPct(x){return (x>0?"+":x<0?"−":"")+Math.abs(x).toFixed(2).replace(".",S.lang==="es"?",":".")+"%"}
 function pfDD(v){var pk=v[0],mx=0;v.forEach(function(x){pk=Math.max(pk,x);mx=Math.min(mx,x/pk-1)});return mx*100}
 function pfTabs(){
-  return '<div class="pf-tabs" role="tablist"><button role="tab" data-pfmode="practice" aria-selected="'+(S.pfMode!=="real")+'">'+T("Practice","Práctica")+(S.pf?" · "+esc(pfMoney(S.pf.cap)):"")+'</button><button role="tab" data-pfmode="real" aria-selected="'+(S.pfMode==="real")+'">'+T("My real portfolio (manual)","Mi cartera real (manual)")+' <span class="protag">Pro</span></button></div>'
+  return '<div class="pf-tabs" role="tablist"><button role="tab" data-pfmode="practice" aria-selected="'+(S.pfMode!=="real")+'">'+T("Practice","Práctica")+(S.pf?" · "+esc(pfMoney(S.pf.cap)):"")+'</button><button role="tab" data-pfmode="real" aria-selected="'+(S.pfMode==="real")+'">'+T("My real portfolio (manual)","Mi cartera real (manual)")+' <span class="protag">'+(PF_PILOT_OPEN&&!isPro()?T("Pro · open","Pro · abierto"):"Pro")+'</span></button></div>'
 }
 function pfReview(p,j,idx){
   var c=pfCalc(p.holds,j.d,p.cap);
@@ -2242,11 +2275,19 @@ function pfVerdict(j,idx){
   var o=[["again",T("I would do it again","Lo volvería a hacer")],["differ",T("I would do it differently","Lo haría distinto")],["unsure",T("Too early to say","Aún es pronto para saber")]];
   return '<div class="pf-vd">'+o.map(function(x){return '<button class="pf-t'+(j.verdict===x[0]?" on":"")+'" data-pfverdict="'+idx+'|'+x[0]+'">'+esc(x[1])+"</button>"}).join("")+'</div><form class="pf-lf" data-pflesson="'+idx+'"><input class="search" maxlength="160" placeholder="'+T("What did you learn? (optional)","¿Qué aprendiste? (opcional)")+'" value="'+esc(j.lesson||"")+'"><button class="btn ghost" type="submit">'+T("Save","Guardar")+"</button></form>"
 }
+function pfHome(){
+  if(!S.pf&&!S.pfLoaded){S.pf=pfLoad();S.pfLoaded=true}
+  var p=S.pf;
+  if(!p)return '<section class="pfh"><div><b>'+T("Practise with real prices","Practica con precios reales")+'</b><p>'+T("Build a practice portfolio with COP 10 million of play money and see, day by day, which news moves it and how it compares with a CDT or the S&P 500.","Arma un portafolio de pr\u00e1ctica con COP 10 millones de juego y mira, d\u00eda a d\u00eda, qu\u00e9 noticias lo mueven y c\u00f3mo va frente a un CDT o el S&P 500.")+'</p></div><button class="btn" data-view="exposure">'+T("Build my portfolio","Armar mi portafolio")+"</button></section>";
+  var c=pfCalc(p.holds,p.start,p.cap);if(!c||c.days.length<2)return"";
+  var v=c.vals,ch=(v[v.length-1]/v[0]-1)*100,dd=(v[v.length-1]/v[v.length-2]-1)*100;
+  return '<section class="pfh on"><div><b>'+T("My practice portfolio","Mi portafolio de pr\u00e1ctica")+'</b><p><span class="pfh-v">'+esc(pfMoney(v[v.length-1]))+'</span> <span class="'+(ch>=0?"up":"down")+'">'+pfPct(ch)+'</span> <span class="note">'+T("since you started","desde que empezaste")+" \u00b7 "+T("last day ","\u00faltimo d\u00eda ")+pfPct(dd)+'</span></p></div><button class="btn ghost" data-view="exposure">'+T("See what moved it","Ver qu\u00e9 lo movi\u00f3")+"</button></section>";
+}
 function vPortfolio(){
   if(!S.pf&&!S.pfReal&&!S.pfLoaded){S.pf=pfLoad();S.pfLoaded=true}
   var real=S.pfMode==="real",p=pfCur();
   var intro='<div class="strip"><h1>'+(real?T("My real portfolio","Mi cartera real"):T("My practice portfolio","Mi portafolio de práctica"))+'</h1><div class="facts">'+(real?T("Write down what you actually hold, in pesos. SignalPoint follows it with board prices and explains what moves it. Nothing is connected to your broker or bank.","Anota lo que de verdad tienes, en pesos. SignalPoint lo sigue con los precios del tablero y te explica qué lo mueve. Nada se conecta con tu comisionista ni tu banco."):T("Practice money, real prices. Learn to decide without risking money: SignalPoint explains what moves it and compares it with simple alternatives.","Dinero de práctica, precios reales. Aprende a decidir sin arriesgar plata: SignalPoint te explica qué lo mueve y lo compara con alternativas simples."))+"</div></div>"+pfTabs();
-  if(real&&!isPro())return intro+'<section class="paper"><p>'+T("Follow your own investments next to the news: see what moved them today and how they compare with simple alternatives. Amounts stay private in your account.","Sigue tus propias inversiones junto a las noticias: mira qué las movió hoy y cómo van frente a alternativas simples. Los montos quedan privados en tu cuenta.")+"</p>"+proCta(T("Your real portfolio, followed with the news","Tu cartera real, seguida con las noticias"))+"</section>";
+  if(real&&!pfPro())return intro+'<section class="paper"><p>'+T("Follow your own investments next to the news: see what moved them today and how they compare with simple alternatives. Amounts stay private in your account.","Sigue tus propias inversiones junto a las noticias: mira qué las movió hoy y cómo van frente a alternativas simples. Los montos quedan privados en tu cuenta.")+"</p>"+proCta(T("Your real portfolio, followed with the news","Tu cartera real, seguida con las noticias"))+"</section>";
   var tpl='<div class="pf-tpl">'+PFT.map(function(t){return '<button class="pf-t" data-pft="'+t[0]+'">'+esc(T(t[2],t[3]))+"</button>"}).join("")+'<button class="pf-t ghost" data-pfcustom="1">'+T("+ Custom","+ Personalizado")+"</button></div>";
   if(S.pfEdit)return intro+pfEditor();
   if(!p)return intro+(real?'<section class="paper pf-start"><h3>'+T("Add what you hold","Agrega lo que tienes")+'</h3><p class="note">'+T("Enter today’s value of each position in pesos. You can update it any time.","Escribe el valor de hoy de cada posición en pesos. Puedes actualizarlo cuando quieras.")+'</p><button class="btn" data-pfcustom="1">'+T("Add positions","Agregar posiciones")+"</button></section>":'<section class="paper pf-start"><h3>'+T("Start with a template","Empieza con una plantilla")+'</h3><p class="note">'+T("COP 10,000,000 of practice money. You can change everything later.","COP 10.000.000 de práctica. Puedes cambiar todo después.")+"</p>"+tpl+'<p class="note">'+T("No rankings or points. This is not a recommendation: it is practice to learn how to decide.","Sin rankings ni puntos. Esto no es una recomendación: es práctica para aprender a decidir.")+"</p></section>");
@@ -2265,9 +2306,9 @@ function vPortfolio(){
     return {d:d,html:'<li><div><b>'+esc(pfName(k))+"</b><span>"+esc(why)+"</span>"+(rel?'<button class="linkish" data-open="'+esc(rel.id)+'">'+esc(rel.title)+" →</button>":"")+'<button class="linkish pf-hx" data-market="'+esc(k)+'" data-pfmk="1">'+T("What happened the other times","Qué pasó las otras veces")+'</button></div><em class="'+(d>0?"up":d<0?"down":"")+'">'+(d>0?"+":"")+esc(pfMoney(d))+"</em></li>"}}).sort(function(a,b){return Math.abs(b.d)-Math.abs(a.d)});
   var hold=c.ids.map(function(k){var p0=p.holds[k]*c.cap,pn=P1[k];return "<tr><td><b>"+esc(pfName(k))+"</b></td><td>"+(real?esc(pfMoney(p0)):Math.round(p.holds[k]*100)+"%")+"</td><td>"+esc(pfMoney(pn))+'</td><td class="'+(pn>=p0?"up":"down")+'">'+pfPct((pn/p0-1)*100)+"</td></tr>"}).join("");
   var J=(p.journal||[]),today=new Date().toISOString().slice(0,10);
-  var journal=isPro()?'<ul class="pf-j">'+(J.length?J.map(function(j,i){return {j:j,i:i}}).reverse().map(function(o){var j=o.j,due=j.review<=today,open=S.pfRev===o.i;return '<li><b><span>'+esc(fmtDate(j.d))+"</span> · "+esc(j.text)+'</b> <span class="pill'+(due?" due":"")+'">'+(due?T("Review now","Revisar ahora"):T("Review ","Revisar ")+"<span>"+esc(fmtDate(j.review))+"</span>")+"</span>"+(j.verdict?' <span class="pill vd">'+esc({again:T("Would do again","Lo volvería a hacer"),differ:T("Would do differently","Lo haría distinto"),unsure:T("Too early","Aún es pronto")}[j.verdict]||"")+"</span>":"")+(j.why?"<br><small>“"+esc(j.why)+"”</small>":"")+(j.lesson?'<br><small class="pf-les">'+T("Learned: ","Aprendí: ")+esc(j.lesson)+"</small>":"")+'<br><button class="linkish" data-pfrev="'+o.i+'">'+(open?T("Hide review","Ocultar revisión"):T("See how it went","Ver cómo va"))+"</button>"+(open?pfReview(p,j,o.i):"")+"</li>"}).join(""):'<li class="note">'+T("No decisions yet. Write each decision and its reason in one line; in 30 days SignalPoint shows you what happened.","Aún no hay decisiones. Escribe cada decisión y su razón en una línea; a los 30 días SignalPoint te muestra qué pasó.")+"</li>")+'</ul><form id="pf-jform" class="pf-jf"><input class="search" id="pf-jt" maxlength="120" required placeholder="'+T("Decision (e.g. I kept Colcap)","Decisión (ej.: mantuve el Colcap)")+'"><input class="search" id="pf-jw" maxlength="160" placeholder="'+T("Why, in one line","Por qué, en una línea")+'"><button class="btn" type="submit">'+T("Record","Registrar")+"</button></form>":'<p>'+T("Write down each decision and why. In 30 days SignalPoint shows you what happened and what history said: the fastest way to learn from your own calls.","Anota cada decisión y por qué. A los 30 días SignalPoint te muestra qué pasó y qué decía la historia: la forma más rápida de aprender de tus propias decisiones.")+"</p>"+proCta(T("Decision journal with 30-day review","Diario de decisiones con revisión a 30 días"));
+  var journal=pfPro()?'<ul class="pf-j">'+(J.length?J.map(function(j,i){return {j:j,i:i}}).reverse().map(function(o){var j=o.j,due=j.review<=today,open=S.pfRev===o.i;return '<li><b><span>'+esc(fmtDate(j.d))+"</span> · "+esc(j.text)+'</b> <span class="pill'+(due?" due":"")+'">'+(due?T("Review now","Revisar ahora"):T("Review ","Revisar ")+"<span>"+esc(fmtDate(j.review))+"</span>")+"</span>"+(j.verdict?' <span class="pill vd">'+esc({again:T("Would do again","Lo volvería a hacer"),differ:T("Would do differently","Lo haría distinto"),unsure:T("Too early","Aún es pronto")}[j.verdict]||"")+"</span>":"")+(j.why?"<br><small>“"+esc(j.why)+"”</small>":"")+(j.lesson?'<br><small class="pf-les">'+T("Learned: ","Aprendí: ")+esc(j.lesson)+"</small>":"")+'<br><button class="linkish" data-pfrev="'+o.i+'">'+(open?T("Hide review","Ocultar revisión"):T("See how it went","Ver cómo va"))+"</button>"+(open?pfReview(p,j,o.i):"")+"</li>"}).join(""):'<li class="note">'+T("No decisions yet. Write each decision and its reason in one line; in 30 days SignalPoint shows you what happened.","Aún no hay decisiones. Escribe cada decisión y su razón en una línea; a los 30 días SignalPoint te muestra qué pasó.")+"</li>")+'</ul><form id="pf-jform" class="pf-jf"><input class="search" id="pf-jt" maxlength="120" required placeholder="'+T("Decision (e.g. I kept Colcap)","Decisión (ej.: mantuve el Colcap)")+'"><input class="search" id="pf-jw" maxlength="160" placeholder="'+T("Why, in one line","Por qué, en una línea")+'"><button class="btn" type="submit">'+T("Record","Registrar")+"</button></form>":'<p>'+T("Write down each decision and why. In 30 days SignalPoint shows you what happened and what history said: the fastest way to learn from your own calls.","Anota cada decisión y por qué. A los 30 días SignalPoint te muestra qué pasó y qué decía la historia: la forma más rápida de aprender de tus propias decisiones.")+"</p>"+proCta(T("Decision journal with 30-day review","Diario de decisiones con revisión a 30 días"));
   return intro+'<section class="paper pf-hero"><div><div class="pf-k">'+T("Value today","Valor hoy")+" · "+T("since ","desde el ")+"<span>"+esc(fmtDate(c.days[0]))+'</span></div><div class="pf-big">'+esc(pfMoney(last))+'</div><div class="'+(ch>=0?"up":"down")+' pf-ch1">'+pfPct(ch)+" · "+(last>=v[0]?"+":"")+esc(pfMoney(last-v[0]))+'</div><div class="pf-st"><div>'+T("Max drawdown","Caída máxima")+"<b>"+pfPct(pfDD(v))+"</b></div><div>"+T("Last day","Último día")+'<b class="'+(last>=prev?"up":"down")+'">'+pfPct((last/prev-1)*100)+"</b></div><div>"+T("Days","Días")+"<b>"+c.days.length+'</b></div></div><p class="pf-warn">'+(c.days.length<30?T("With "+c.days.length+" days of history no comparison says whether you decided well: we review at 30 and 90 days.","Con "+c.days.length+" días de historia, ninguna comparación dice si decidiste bien: la revisamos a los 30 y 90 días."):T("Compare over months, not days.","Compara en meses, no en días."))+'</p><p class="note" id="pf-sync">'+esc(pfSyncText())+'</p></div><div><div class="pf-k">'+T("You against simple alternatives","Tú frente a alternativas simples")+"</div>"+chart+lg+"</div></section>"+
-    '<div class="pf-g"><section class="paper"><h3>'+T("What moved your portfolio on the last day","Qué movió tu portafolio el último día")+' <small class="note"><span>'+esc(fmtDate(dl))+'</span></small></h3><ul class="pf-mv">'+moved.map(function(x){return x.html}).join("")+'</ul></section><section class="paper"><h3>'+T("Decision journal","Diario de decisiones")+' <span class="protag">Pro</span></h3>'+journal+"</section></div>"+
+    '<div class="pf-g"><section class="paper"><h3>'+T("What moved your portfolio on the last day","Qué movió tu portafolio el último día")+' <small class="note"><span>'+esc(fmtDate(dl))+'</span></small></h3><ul class="pf-mv">'+moved.map(function(x){return x.html}).join("")+'</ul></section><section class="paper"><h3>'+T("Decision journal","Diario de decisiones")+' <span class="protag">'+(PF_PILOT_OPEN&&!isPro()?T("Pro · open in the pilot","Pro · abierto en el piloto"):"Pro")+'</span></h3>'+journal+"</section></div>"+
     '<section class="paper"><h3>'+T("Your positions","Tus posiciones")+'</h3><div class="hx-wrap"><table class="pf-t2"><tr><th>'+T("Asset","Activo")+"</th><th>"+(real?T("Amount at start","Monto al inicio"):T("Starting weight","Peso inicial"))+"</th><th>"+T("Value","Valor")+"</th><th>"+T("Since you started","Desde que empezaste")+"</th></tr>"+hold+'</table></div><p class="note">'+T("US assets are measured in pesos: they include the dollar effect, as for anyone investing from Colombia. The CDT uses an example fixed rate. Prices update with each edition of the board.","Los activos de EE. UU. se miden en pesos: incluyen el efecto del dólar, como le pasa a quien invierte desde Colombia. El CDT usa una tasa fija de ejemplo. Los precios se actualizan con cada edición del tablero.")+'</p><div class="row"><button class="btn ghost" data-pfedit="1">'+(real?T("Update positions","Actualizar posiciones"):T("Change weights","Cambiar pesos"))+'</button><button class="btn ghost" data-pfreset="1">'+T("Start over","Empezar de nuevo")+"</button></div></section>"+
     '<p class="note pf-foot">'+(real?T("Only you can see these amounts. This is not a recommendation or advice.","Solo tú ves estos montos. Esto no es una recomendación ni una asesoría."):T("No rankings or points. Practice money only. This is not a recommendation or advice.","Sin rankings ni puntos. Solo dinero de práctica. Esto no es una recomendación ni una asesoría."))+"</p>";
 }
@@ -2352,6 +2393,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.pfreset){pfSetCur(null);S.pfRev=null;pfSave();return render()}
   if(t.dataset.pfmk){S.view="markets";S.msel=t.dataset.market;render();var md=$("mdetail");if(md)md.scrollIntoView({block:"start"});return}
   if(t.dataset.evq){S.evq=!S.evq;return render()}
+  if(t.dataset.chal){var cs=chState();if(cs.d!==todayISO()){try{localStorage.setItem(CHKEY,JSON.stringify({d:todayISO(),a:t.dataset.chal}))}catch(x){}award(10)}return render()}
   if(t.dataset.fyjump){var r=$("fy-r");if(r)r.scrollIntoView({behavior:"smooth",block:"start"});return}
   if(t.dataset.id){S.sel=t.dataset.id;S.selectionTouched=true;if(S.view==="briefing"){S.anim="paper";render();if(!window.matchMedia("(min-width:881px)").matches)window.scrollTo(0,0);return}return go("briefing")}
   if(t.dataset.open){S.sel=t.dataset.open;S.selectionTouched=true;S.cat="All";S.q="";S.mine=false;return go("briefing")}
@@ -2413,7 +2455,11 @@ document.addEventListener("input",function(e){
   if(e.target.id==="desc")S.descDraft=e.target.value;
 });
 document.addEventListener("change",function(e){if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
-var swX=null,swY=null;
+var swX=null,swY=null,dgY=null,dgT=0,dgEl=null;
+document.addEventListener("touchstart",function(e){var bar=e.target&&e.target.closest&&e.target.closest(".desk.open .rd-bar");if(!bar||!e.touches[0]||window.matchMedia("(min-width:881px)").matches)return;dgEl=bar.parentNode;dgY=e.touches[0].clientY;dgT=Date.now();dgEl.classList.add("dragging")},{passive:true});
+document.addEventListener("touchmove",function(e){if(dgY==null||!dgEl||!e.touches[0])return;var dy=Math.max(0,e.touches[0].clientY-dgY);dgEl.style.transform="translateY("+dy+"px)"},{passive:true});
+document.addEventListener("touchend",function(e){if(dgY==null||!dgEl)return;var dy=Math.max(0,((e.changedTouches[0]||{}).clientY||dgY)-dgY),v=dy/Math.max(1,Date.now()-dgT),el=dgEl;dgY=null;dgEl=null;el.classList.remove("dragging");
+  if(dy>140||v>0.6){el.classList.add("snap");el.style.transform="translateY(100%)";setTimeout(function(){var b=document.getElementById("back");if(b)b.click()},220)}else{el.classList.add("snap");el.style.transform="";setTimeout(function(){el.classList.remove("snap")},320)}},{passive:true});
 document.addEventListener("touchstart",function(e){var p=e.target&&e.target.closest&&e.target.closest(".desk.open .paperwrap");if(!p||!e.touches[0])return;swX=e.touches[0].clientX;swY=e.touches[0].clientY},{passive:true});
 document.addEventListener("touchend",function(e){if(swX==null||!e.changedTouches[0])return;var dx=e.changedTouches[0].clientX-swX,dy=e.changedTouches[0].clientY-swY;swX=null;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.6){var b=document.querySelector('[data-rdstep="'+(dx<0?1:-1)+'"]:not([disabled])');if(b)b.click()}},{passive:true});
 document.addEventListener("pointermove",function(e){
