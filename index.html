@@ -937,6 +937,20 @@ body.ck-open{overflow:hidden}
 .pfh{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:#EEF2FF;border:2px solid #DCE3FF;border-bottom-width:5px;border-radius:20px;padding:18px 22px;margin:22px 0}.pfh b{font-size:1.1rem}.pfh p{margin:4px 0 0;max-width:620px;color:#2B3345}.pfh-v{font-weight:800;font-size:1.25rem}.pfh .up{color:#128C40;font-weight:800}.pfh .down{color:#D92D20;font-weight:800}
 .chal{background:#fff;border:2px solid #E6E9F2;border-bottom-width:5px;border-radius:20px;padding:18px 20px;margin:18px 0}.chal-k{font-size:.78rem;font-weight:800;color:#6B4DE6}.chal h3{margin:6px 0 4px;font-size:1.05rem}.chal-o{display:grid;gap:8px;margin-top:10px}.chal-o .lq-o{width:100%;text-align:left;background:var(--surface);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);border-radius:12px;padding:12px 16px;font:inherit;font-size:15px;cursor:pointer;min-height:44px}@media (hover:hover) and (pointer:fine){.chal-o .lq-o:hover{box-shadow:inset 0 0 0 2px #2F5BFF}}.chal-o .lq-o:active{transform:scale(.98)}.chal-o .lq-o:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}.chal-r{border-radius:12px;padding:10px 12px;margin-top:10px}.chal-r.ok{background:#E8F7EE}.chal-r.no{background:#FFF1E6}
 .pf-bt{margin:18px 0 2px;font-size:1rem}
+/* Home hero, MotionSites pass */
+.strip h1{font-size:clamp(40px,6.2vw,84px);line-height:.98;letter-spacing:-.045em;font-weight:650;max-width:none}
+.strip h1 .hl{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}.strip h1 .hl>span{display:inline-block}
+.strip h1 .hl2{color:#7A8194}
+.hlive{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 2px}
+.hlv{display:grid;grid-template-columns:auto auto;grid-template-areas:"n n" "v c";gap:1px 10px;align-items:baseline;text-align:left;background:var(--surface);border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);border-radius:14px;padding:9px 14px;min-height:44px;cursor:pointer;color:var(--ink);font:inherit;transition:box-shadow var(--t-hover) ease,transform var(--t-press) var(--ease-out)}
+.hlv-n{grid-area:n;font-size:12px;color:var(--muted)}.hlv-v{grid-area:v;font-weight:650;font-size:16px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.hlv-c{grid-area:c;font-size:12.5px;font-variant-numeric:tabular-nums}.hlv-c.up{color:#128C40}.hlv-c.down{color:#D92D20}.hlv-c.flat{color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.hlv:hover{box-shadow:inset 0 0 0 1.5px #2F5BFF}}.hlv:active{transform:scale(.97)}.hlv:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}
+@media (max-width:560px){.hlive{display:grid;grid-template-columns:1fr 1fr}.strip h1{font-size:clamp(36px,10.5vw,48px)}}
+@media (prefers-reduced-motion:no-preference){
+.hero.intro .hl>span{animation:hlrise .8s var(--ease-expo) both}.hero.intro .hl+.hl>span,.hero.intro .hl:nth-of-type(2)>span{animation-delay:.09s}
+.hero.intro .facts{animation:hfade .7s var(--ease-out) .2s both}.hero.intro .hlive{animation:hfade .7s var(--ease-out) .28s both}.hero.intro .stats{animation:hfade .7s var(--ease-out) .36s both}.hero.intro .status{animation:hfade .6s var(--ease-out) .44s both}.hero.intro>*:last-child:not(.strip){animation:hfade .8s var(--ease-out) .4s both}
+@keyframes hlrise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes hfade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1288,7 +1302,8 @@ function vBriefing(){
   var prim=S.briefs.filter(function(b){return b.evidence==="A"}).length;
   var rail=!S.loaded?'<div class="skel"></div><div class="skel"></div><div class="skel"></div>':
     shown.length?shown.map(slip).join(""):'<div class="empty">'+(list.length?"No events match these filters.":esc(S.loadNote||"No briefs published yet."))+"</div>";
-  return '<div class="hero"><div class="strip"><h1>The news behind the numbers.</h1><div class="facts">Who is affected, what would prove the reading wrong, and what nobody knows yet.</div><div class="stats"><div class="stat"><b>'+S.briefs.length+"</b><span>events briefed</span></div><div class=\"stat\"><b>"+prim+"</b><span>from primary documents</span></div><div class=\"stat\"><b>"+open+"</b><span>open checkpoints</span></div></div>"+statusLine()+"</div>"+pulse()+"</div>"+
+  var intro=!S.heroIntro;if(intro){S.heroIntro=1;setTimeout(heroCount,60)}else if(S.loaded&&!S.heroCounted)setTimeout(heroCount,0);
+  return '<div class="hero'+(intro?" intro":"")+'"><div class="strip"><h1><span class="hl"><span>'+T("The news","Las noticias")+'</span></span> <span class="hl"><span class="hl2">'+T("behind the numbers.","detr\u00e1s de los n\u00fameros.")+'</span></span></h1><div class="facts">Who is affected, what would prove the reading wrong, and what nobody knows yet.</div>'+heroLive()+'<div class="stats"><div class="stat"><b data-n="'+S.briefs.length+'">'+S.briefs.length+"</b><span>events briefed</span></div><div class=\"stat\"><b data-n=\""+prim+"\">"+prim+"</b><span>from primary documents</span></div><div class=\"stat\"><b data-n=\""+open+"\">"+open+"</b><span>open checkpoints</span></div></div>"+statusLine()+"</div>"+pulse()+"</div>"+
     weekBlock()+'<div class="desk'+(S.sel&&byId(S.sel)?" open":"")+'"><div class="rail"><div class="tools"><input class="search" id="q" type="search" placeholder="Search company, ticker or theme" value="'+esc(S.q)+'" aria-label="Search events">'+
     '<div class="chips">'+cats.map(function(c){return '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c)+"</button>"}).join("")+
     (S.wl.length?'<button class="chip" id="mine" aria-pressed="'+S.mine+'">★ My exposure</button>':"")+"</div></div>"+
@@ -1422,6 +1437,20 @@ function spark(m,w,h){
   return '<svg class="spark" viewBox="0 0 '+w+" "+h+'" preserveAspectRatio="none" aria-hidden="true"><polyline points="'+pts+'" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>';
 }
 
+/* Home hero (MotionSites pass): the headline rises line by line once, the last closes of four reference markets sit under it, and the counts run up once. */
+function heroLive(){
+  var ids=["usdcop","colcap","sp500","brent"],out=ids.map(function(id){var m=S.markets&&S.markets[id];if(!m||m.kind==="stat"||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2),d=mDir(c.v);
+    return '<button class="hlv" data-market="'+esc(id)+'"><span class="hlv-n">'+esc(m.name)+'</span><span class="hlv-v">'+esc(mNum(mLast(m)[1],m))+'</span><span class="hlv-c '+d+'">'+esc(c.text)+"</span></button>"}).filter(Boolean);
+  return out.length?'<div class="hlive" aria-label="'+T("Last close of four reference markets","\u00daltimo cierre de cuatro mercados de referencia")+'">'+out.join("")+"</div>":"";
+}
+function heroCount(){
+  if(!S.loaded)return;S.heroCounted=1;
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var els=[].slice.call(document.querySelectorAll(".hero .stat b[data-n]"));if(!els.length)return;
+  var t0=null,D=900;function ease(x){return 1-Math.pow(1-x,4)}
+  function step(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/D);els.forEach(function(e){var n=+e.dataset.n||0;e.textContent=String(Math.round(n*ease(k)))});if(k<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
 function mTile(m){
   var sel=S.msel===m.id?' aria-current="true"':"";
   if(m.kind==="stat")return '<button class="tile-m" data-market="'+esc(m.id)+'"'+sel+'><span class="tm-name">'+esc(m.name)+'</span><span class="tm-spark"></span><span class="tm-val">'+esc(m.valueText)+'</span><span class="tm-chg flat">'+esc(fmtDate(m.asOf))+"</span></button>";
