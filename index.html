@@ -951,6 +951,37 @@ body.ck-open{overflow:hidden}
 .hero.intro .facts{animation:hfade .7s var(--ease-out) .2s both}.hero.intro .hlive{animation:hfade .7s var(--ease-out) .28s both}.hero.intro .stats{animation:hfade .7s var(--ease-out) .36s both}.hero.intro .status{animation:hfade .6s var(--ease-out) .44s both}.hero.intro>*:last-child:not(.strip){animation:hfade .8s var(--ease-out) .4s both}
 @keyframes hlrise{from{transform:translateY(105%)}to{transform:none}}
 @keyframes hfade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}}
+/* Bold home preview (MotionSites) */
+.bh{position:relative;width:100vw;margin-left:calc(50% - 50vw);min-height:calc(100svh - 62px);background:#050608;color:#fff;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:28px max(22px,calc(50vw - 640px)) 26px;isolation:isolate}
+.bh ::selection{background:rgba(47,91,255,.45)}
+.bh-bg{position:absolute;inset:0;z-index:-2}
+.bh-lines{position:absolute;left:0;right:0;top:6%;width:100%;height:70%}
+.bh-lines path{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1.2;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.bh-lines path.hot{stroke:#4D74FF;stroke-width:2.2}
+.bh-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,8,0) 35%,rgba(5,6,8,.85) 78%,#050608)}
+.bh-grain{position:absolute;inset:0;z-index:-1;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.bh-live{margin:0;font-size:13px;color:rgba(255,255,255,.62);display:flex;align-items:center;gap:8px}.bh-live i{width:7px;height:7px;border-radius:50%;background:#2FD07A;box-shadow:0 0 0 4px rgba(47,208,122,.15)}
+.bh-main{align-self:end;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:end;padding-bottom:34px}
+.bh-h{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(52px,8.4vw,136px);line-height:.92;letter-spacing:-.052em}
+.bh-h .hl{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}.bh-h .hl>span{display:inline-block}
+@media (min-width:900px){.bh-h .hl{white-space:nowrap}}
+.bh-dim{color:rgba(255,255,255,.42)}
+.bh-side p{margin:0 0 20px;font-size:16.5px;line-height:1.55;color:rgba(255,255,255,.72);max-width:34ch}
+.bh-cta{display:flex;gap:10px;flex-wrap:wrap}
+.bh-btn{border:0;border-radius:999px;padding:13px 22px;min-height:46px;font:inherit;font-size:15px;font-weight:600;background:#fff;color:#050608;cursor:pointer;transition:transform var(--t-press) var(--ease-out),background-color var(--t-hover) ease}
+.bh-btn.ghost{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+@media (hover:hover) and (pointer:fine){.bh-btn:hover{background:#E8ECFF}.bh-btn.ghost:hover{background:rgba(255,255,255,.16)}.bh-m:hover b{color:#9DB3FF}}
+.bh-btn:active,.bh-m:active{transform:scale(.97)}.bh-btn:focus-visible,.bh-m:focus-visible{outline:2px solid #4D74FF;outline-offset:3px}
+.bh-strip{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+.bh-m{flex:1;display:flex;align-items:baseline;gap:10px;background:none;border:0;color:#fff;font:inherit;cursor:pointer;padding:4px 0;min-height:44px;text-align:left}
+.bh-m+.bh-m{padding-left:20px;border-left:1px solid rgba(255,255,255,.12);margin-left:20px}
+.bh-m span{font-size:13px;color:rgba(255,255,255,.55)}.bh-m b{font-weight:600;font-variant-numeric:tabular-nums;font-size:16px;transition:color var(--t-hover) ease}.bh-m em{font-style:normal;font-size:13px;font-variant-numeric:tabular-nums}.bh-m em.up{color:#3DDC84}.bh-m em.down{color:#FF6B5E}.bh-m em.flat{color:rgba(255,255,255,.5)}
+@media (max-width:880px){.bh{min-height:calc(100svh - 120px);padding-top:20px}.bh-main{grid-template-columns:1fr;gap:22px;padding-bottom:24px}.bh-h{font-size:clamp(44px,12.5vw,72px)}.bh-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}.bh-m+.bh-m{padding-left:0;border-left:0;margin-left:0}.bh-m{flex-direction:column;gap:0}.bh-lines{height:55%}}
+@media (prefers-reduced-motion:no-preference){
+.bh.intro .bh-lines path{stroke-dasharray:1;stroke-dashoffset:1;animation:bhdraw 1.6s var(--ease-expo) both;animation-delay:calc(var(--i) * 90ms)}
+.bh.intro .bh-h .hl>span{animation:hlrise .9s var(--ease-expo) .15s both}.bh.intro .bh-h .hl+.hl>span{animation-delay:.25s}
+.bh.intro .bh-live{animation:hfade .6s var(--ease-out) .05s both}.bh.intro .bh-side{animation:hfade .8s var(--ease-out) .4s both}.bh.intro .bh-strip{animation:hfade .8s var(--ease-out) .55s both}
+@keyframes bhdraw{to{stroke-dashoffset:0}}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1303,7 +1334,7 @@ function vBriefing(){
   var rail=!S.loaded?'<div class="skel"></div><div class="skel"></div><div class="skel"></div>':
     shown.length?shown.map(slip).join(""):'<div class="empty">'+(list.length?"No events match these filters.":esc(S.loadNote||"No briefs published yet."))+"</div>";
   var intro=!S.heroIntro;if(intro){S.heroIntro=1;setTimeout(heroCount,60)}else if(S.loaded&&!S.heroCounted)setTimeout(heroCount,0);
-  return '<div class="hero'+(intro?" intro":"")+'"><div class="strip"><h1><span class="hl"><span>'+T("The news","Las noticias")+'</span></span> <span class="hl"><span class="hl2">'+T("behind the numbers.","detr\u00e1s de los n\u00fameros.")+'</span></span></h1><div class="facts">Who is affected, what would prove the reading wrong, and what nobody knows yet.</div>'+heroLive()+'<div class="stats"><div class="stat"><b data-n="'+S.briefs.length+'">'+S.briefs.length+"</b><span>events briefed</span></div><div class=\"stat\"><b data-n=\""+prim+"\">"+prim+"</b><span>from primary documents</span></div><div class=\"stat\"><b data-n=\""+open+"\">"+open+"</b><span>open checkpoints</span></div></div>"+statusLine()+"</div>"+pulse()+"</div>"+
+  return (SP_BOLD?boldHero(intro):"")+'<div id="bh-next"></div><div class="hero'+(intro?" intro":"")+'"><div class="strip"><h1><span class="hl"><span>'+T("The news","Las noticias")+'</span></span> <span class="hl"><span class="hl2">'+T("behind the numbers.","detr\u00e1s de los n\u00fameros.")+'</span></span></h1><div class="facts">Who is affected, what would prove the reading wrong, and what nobody knows yet.</div>'+heroLive()+'<div class="stats"><div class="stat"><b data-n="'+S.briefs.length+'">'+S.briefs.length+"</b><span>events briefed</span></div><div class=\"stat\"><b data-n=\""+prim+"\">"+prim+"</b><span>from primary documents</span></div><div class=\"stat\"><b data-n=\""+open+"\">"+open+"</b><span>open checkpoints</span></div></div>"+statusLine()+"</div>"+pulse()+"</div>"+
     weekBlock()+'<div class="desk'+(S.sel&&byId(S.sel)?" open":"")+'"><div class="rail"><div class="tools"><input class="search" id="q" type="search" placeholder="Search company, ticker or theme" value="'+esc(S.q)+'" aria-label="Search events">'+
     '<div class="chips">'+cats.map(function(c){return '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c)+"</button>"}).join("")+
     (S.wl.length?'<button class="chip" id="mine" aria-pressed="'+S.mine+'">★ My exposure</button>':"")+"</div></div>"+
@@ -1438,6 +1469,21 @@ function spark(m,w,h){
 }
 
 /* Home hero (MotionSites pass): the headline rises line by line once, the last closes of four reference markets sit under it, and the counts run up once. */
+/* Bold home (preview at /nuevo/): a full-screen night hero drawn from the board's own three-month lines. */
+var SP_BOLD=/\/nuevo\/?$/.test(location.pathname)||/[?&]bold=1/.test(location.search);
+function boldHero(intro){
+  var ids=["sp500","nasdaq","colcap","usdcop","brent","us10y","btc"],W=1200,H=520,lines=[];
+  ids.forEach(function(id,ix){var m=S.markets&&S.markets[id];if(!m||m.kind==="stat"||!m.series||m.series.length<10)return;var v=m.series.slice(-90).map(function(p){return p[1]}),lo=Math.min.apply(null,v),hi=Math.max.apply(null,v),r=hi-lo||1,band=H*0.62,top=H*0.08+ix*(H*0.035);
+    var d=v.map(function(x,i){return (i?"L":"M")+(i/(v.length-1)*W).toFixed(1)+" "+(top+band-(x-lo)/r*band).toFixed(1)}).join(" ");lines.push({id:id,d:d,hot:id==="usdcop"})});
+  var svg='<svg class="bh-lines" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" aria-hidden="true">'+lines.map(function(l,i){return '<path d="'+l.d+'" pathLength="1" class="'+(l.hot?"hot":"")+'" style="--i:'+i+'"/>'}).join("")+"</svg>";
+  var sh={usdcop:"TRM",colcap:"Colcap",sp500:"S&P 500",brent:"Brent"},strip=["usdcop","colcap","sp500","brent"].map(function(id){var m=S.markets&&S.markets[id];if(!m||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2);return '<button class="bh-m" data-market="'+id+'"><span>'+sh[id]+"</span><b>"+esc(mNum(mLast(m)[1],m))+'</b><em class="'+mDir(c.v)+'">'+esc(c.text)+"</em></button>"}).join("");
+  var last=S.markets&&S.markets.sp500&&S.markets.sp500.series?fmtDate(mLast(S.markets.sp500)[0]):"";
+  return '<section class="bh'+(intro?" intro":"")+'" aria-label="SignalPoint"><div class="bh-bg">'+svg+'</div><div class="bh-grain" aria-hidden="true"></div>'+
+    '<p class="bh-live"><i></i>'+T("Last close ","Último cierre ")+esc(last)+"</p>"+
+    '<div class="bh-main"><h1 class="bh-h"><span class="hl"><span>'+T("The news","Las noticias")+'</span></span><span class="hl"><span class="bh-dim">'+T("behind the numbers.","detrás de los números.")+'</span></span></h1>'+
+    '<div class="bh-side"><p>'+T("Every move on the board, explained in plain words: who it affects, what history says, and what nobody knows yet.","Cada movimiento del tablero explicado en palabras simples: a quién afecta, qué dice la historia y qué no sabe nadie todavía.")+'</p><div class="bh-cta"><button class="bh-btn" data-bhgo="1">'+T("Read today’s news","Leer las noticias de hoy")+'</button><button class="bh-btn ghost" data-view="markets">'+T("See the board","Ver el tablero")+"</button></div></div></div>"+
+    '<div class="bh-strip">'+strip+"</div></section>";
+}
 function heroLive(){
   var ids=["usdcop","colcap","sp500","brent"],SH={usdcop:"TRM",colcap:"Colcap",sp500:"S&P 500",brent:"Brent"},out=ids.map(function(id){var m=S.markets&&S.markets[id];if(!m||m.kind==="stat"||!m.series||m.series.length<2)return"";var c=mChange(m,m.series.length-2),d=mDir(c.v);
     return '<button class="hlv" data-market="'+esc(id)+'"><span class="hlv-n" title="'+esc(m.name)+'">'+esc(SH[id])+'</span><span class="hlv-v">'+esc(mNum(mLast(m)[1],m))+'</span><span class="hlv-c '+d+'">'+esc(c.text)+"</span></button>"}).filter(Boolean);
@@ -2432,6 +2478,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.pfcancel){S.pfEdit=false;S.pfDraft=null;S.pfErr="";return render()}
   if(t.dataset.pfreset){pfSetCur(null);S.pfRev=null;pfSave();return render()}
   if(t.dataset.pfmk){S.view="markets";S.msel=t.dataset.market;render();var md=$("mdetail");if(md)md.scrollIntoView({block:"start"});return}
+  if(t.dataset.bhgo){var nx=document.getElementById("bh-next");if(nx)nx.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
   if(t.dataset.evq){S.evq=!S.evq;return render()}
   if(t.dataset.chal){var cs=chState();if(cs.d!==todayISO()){try{localStorage.setItem(CHKEY,JSON.stringify({d:todayISO(),a:t.dataset.chal}))}catch(x){}award(10)}return render()}
   if(t.dataset.fyjump){var r=$("fy-r");if(r)r.scrollIntoView({behavior:"smooth",block:"start"});return}
