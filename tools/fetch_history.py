@@ -16,7 +16,7 @@ def save(name, url):
     except Exception as e:
         log[name] = {"ok": False, "url": url, "error": repr(e)[:300]}
 FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv?id="
-for sid in ["DFEDTARU", "DFEDTAR", "SP500", "DCOILBRENTEU", "DEXUSAL", "DGS10", "DGS2", "DTB3", "CPIAUCSL"]:
+for sid in ["DFEDTARU", "DFEDTAR", "SP500", "NASDAQCOM", "DJIA", "DCOILBRENTEU", "DEXUSEU", "DEXUSAL", "DGS10", "DGS2", "DGS30", "DTB3", "CBBTCUSD", "CPIAUCSL"]:
     save(f"fred_{sid}.csv", FRED + sid)
 # TRM (Superfinanciera via datos.gov.co, Socrata)
 save("trm.csv", "https://www.datos.gov.co/resource/32sa-8pi3.csv?$limit=20000&$order=vigenciadesde")

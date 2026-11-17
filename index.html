@@ -1169,6 +1169,22 @@ function hxBlock(b){
   var foot=small+(sig?T("Solid blue: holds up after correcting for the "+((S.hist&&S.hist.tests)||"many")+" comparisons SignalPoint runs. Dotted outline: a possible pattern that may be chance. ","Azul s\u00f3lido: se sostiene despu\u00e9s de corregir por las "+((S.hist&&S.hist.tests)||"muchas")+" comparaciones que hace SignalPoint. Borde punteado: posible patr\u00f3n, puede ser azar. "):dec?T("No reaction stands out from a normal period: markets usually anticipate these decisions; prices move on the surprise. ","Ninguna reacci\u00f3n se aparta de un periodo normal: el mercado suele anticipar estas decisiones; lo que mueve los precios es la sorpresa. "):T("No reaction stands out from a normal period: on its own, this move has not told much about what comes next. ","Ninguna reacci\u00f3n se aparta de un periodo normal: por s\u00ed solo, este movimiento no ha dicho mucho sobre lo que viene. "));
   return '<section class="sec hx"><h4>'+T("What happened the other times","Qué pasó las otras veces")+'</h4><p class="hx-lead">'+lead+" "+T("Share of times each market was up afterwards, against a normal period.","Porcentaje de veces que cada mercado subió después, frente a un periodo normal.")+'</p><div class="hx-wrap"><table class="hx-t"><thead><tr><th></th>'+HXH.map(function(h){return "<th>"+T(h[1],h[2])+"</th>"}).join("")+"</tr></thead><tbody>"+rows+'</tbody></table></div><p class="note">'+foot+T("Normal: share of all periods of the same length since 2000 when the market was up. Median: the typical move (half were larger, half smaller). This is not a buy or sell signal. ","Normal: porcentaje de todos los periodos del mismo largo desde 2000 en que el mercado subi\u00f3. Mediana: el movimiento t\u00edpico (la mitad fue mayor y la mitad menor). Esto no es una se\u00f1al de compra o venta. ")+T("History, not a forecast and not advice. Sources: FRED, BIS, Superfinanciera (TRM), Yahoo Finance. Colombian stocks through the COLO ETF in dollars, since 2009.","Es historia: no es un pronóstico ni una recomendación. Fuentes: FRED, BIS, Superfinanciera (TRM), Yahoo Finance. Acciones colombianas medidas con el ETF COLO en dólares, desde 2009.")+"</p></section>";
 }
+/* ---------- Nightly data: board prices and event studies published by the GitHub job to the data branch. ---------- */
+var LIVE_BASE="https://raw.githubusercontent.com/martinfgaleano-crypto/signalpoint/data/";
+function liveGet(name){return fetch(LIVE_BASE+name,{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
+function liveRefresh(){
+  try{if(!/^https?:/.test(location.protocol)||typeof fetch!=="function")return}catch(e){return}
+  liveGet("markets-live.json").then(function(j){
+    if(!j||!j.markets)return;var changed=false;
+    Object.keys(j.markets).forEach(function(id){var cur=S.markets[id],l=j.markets[id];if(!cur||cur.kind==="stat"||!l||!Array.isArray(l.series))return;
+      var cand=Object.assign({},cur,{series:l.series.filter(function(p){return Array.isArray(p)&&typeof p[0]==="string"&&typeof p[1]==="number"&&isFinite(p[1])}),source:l.source&&l.source.url?l.source:cur.source});
+      if(cand.series.length<5||!validMarket(cand))return;
+      if(String(cand.series[cand.series.length-1][0])<=String(mLast(cur)[0]))return;
+      cur.series=cand.series;cur.source=cand.source;cur.live=j.asOf;changed=true});
+    if(changed){S.liveAsOf=j.asOf;render()}
+  });
+  liveGet("history.json").then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}});
+}
 function hxSimilar(){
   var x=S.hist&&S.hist.similar;if(!x||!x.assets)return"";
   var A=["usdcop","colo","sp500","brent"].filter(function(a){return x.assets[a]}),HS=[["5","1 week","1 semana"],["20","1 month","1 mes"],["60","3 months","3 meses"]];
@@ -1426,7 +1442,7 @@ function mHero(){
   var tape=list.map(function(m){var c=mChange(m,m.series.length-2),d=mDir(c.v);return '<span class="tp"><b>'+esc(m.name)+"</b> "+esc(mNum(mLast(m)[1],m))+' <i class="'+d+'">'+esc(c.text)+"</i></span>"}).join("");
   return '<section class="mhero" aria-labelledby="mh1"><div class="mh-in"><div class="mh-l"><p class="mh-k">'+(from?T("What moved between ","Lo que se movió entre el ")+"<span>"+esc(fmtDate(from))+"</span>"+T(" and "," y el ")+"<span>"+esc(fmtDate(to))+"</span>":"")+'</p><h1 id="mh1">'+(cl.length?cl.map(function(c,i){return '<button class="clause" data-market="'+esc(c.id)+'" style="--i:'+i+'">'+esc(c.lead)+' <span class="'+c.dir+'">'+esc(c.num)+"</span>"+esc(c.tail||"")+".</button>"}).join(" "):"The market in plain words.")+"</h1>"+
     '<div class="cmd"><label class="sr" for="mq">Search markets, companies and events</label><input class="search" id="mq" type="search" autocomplete="off" placeholder="Search a market, a company or a theme" value="'+esc(S.mq||"")+'"><div id="mq-out" aria-live="polite">'+mSearch()+"</div></div>"+
-    '<p class="mwhen">Closing values entered by hand from the source named on each market. Not real time. Colour shows direction, not good or bad.</p></div><div class="mh-r" aria-label="Key markets">'+mPulse()+"</div></div>"+
+    '<p class="mwhen">'+T("Closing values from the source named on each market, updated each weeknight; Colombian stocks and monthly figures are updated by hand. Not real time. Colour shows direction, not good or bad.","Valores de cierre de la fuente indicada en cada mercado, actualizados cada noche entre semana; las acciones colombianas y los datos mensuales se actualizan a mano. No es en tiempo real. El color muestra la direcci\u00f3n, no si es bueno o malo.")+'</p></div><div class="mh-r" aria-label="Key markets">'+mPulse()+"</div></div>"+
     "</section>";
 }
 function mRelated(m){var ids=arr(m.related).map(String);return all().filter(function(b){return !b.private&&ids.indexOf(b.id)>=0})}
@@ -2508,7 +2524,7 @@ var timer=setTimeout(function(){if(!S.loaded){S.loaded=true;S.loadNote="Live bri
     var mv={};Object.keys(T.moves||{}).forEach(function(id){var it=arr(T.moves[id].items).filter(validMove).slice(0,4);if(it.length)mv[id]=it});S.moves=mv;
     var mk={};Object.keys(T.markets||{}).forEach(function(id){var v=mNorm(JSON.parse(JSON.stringify(T.markets[id])));if(validMarket(v))mk[id]=v});S.markets=mk;
     S.hist=(T.history&&T.history.events)?T.history:null;
-    try{if(/^https?:/.test(location.protocol)&&typeof fetch==="function")fetch("history.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}}).catch(function(){})}catch(e){}S.runs=arr(T.runs);S.auto=T.auto||null;S.loaded=true;S.marketsReady=true;S.anim="view";
+    liveRefresh();S.runs=arr(T.runs);S.auto=T.auto||null;S.loaded=true;S.marketsReady=true;S.anim="view";
     loadLocal(LS+".public");authLoad();return;
   }
   if(!window.claude||!window.claude.use){clearTimeout(timer);S.loaded=true;S.loadNote="Live briefs load when this page is opened on claude.ai.";return loadLocal(LS+".anon")}
