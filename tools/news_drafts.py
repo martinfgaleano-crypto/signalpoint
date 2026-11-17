@@ -196,6 +196,5 @@ def publish(report, today):
     summ["days"][today] = {"drafted": sum(1 for a in au if a.get("gate") == "pass"), "rejected_by_gate": sum(1 for a in au if a.get("gate") == "fail"),
         "held_by_review": sum(1 for a in au if a.get("decision") == "hold"), "published": sum(1 for a in au if a.get("publishedAt"))}
     json.dump(summ, open(sp, "w"), indent=1)
-    print("published", added)
-    print(json.dumps({"feeds": feedlog, "drafts": len(report["briefs"]), "rejected": len(report["rejected"])}))
+    print("published", added, json.dumps({"feeds": report.get("feeds"), "drafts": len(report["briefs"]), "rejected": len(report["rejected"])}))
 if __name__ == "__main__": main()
