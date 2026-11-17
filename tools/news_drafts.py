@@ -27,7 +27,7 @@ def text_of(raw):
     return re.sub(r"\s+", " ", s).strip()
 def items():
     out, log = [], {}
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=40)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=72)
     for name, url, grade in FEEDS:
         try:
             root = ET.fromstring(get(url)); n = 0; sample = ""
@@ -38,7 +38,11 @@ def items():
                 try:
                     from email.utils import parsedate_to_datetime
                     when = parsedate_to_datetime(pub).astimezone(timezone.utc)
-                except Exception: when = None
+                except Exception:
+                    try:
+                        w = datetime.fromisoformat(pub.strip().replace(" ", "T"))
+                        when = (w if w.tzinfo else w.replace(tzinfo=timezone(timedelta(hours=-5)))).astimezone(timezone.utc)
+                    except Exception: when = None
                 if not title or not link.startswith("https://") or not when or when < cutoff: continue
                 out.append({"feed": name, "grade": grade, "title": title, "link": link, "desc": desc[:600], "date": (when or datetime.now(timezone.utc)).date().isoformat()}); n += 1
             log[name] = f"{n} (first date: {sample})"
