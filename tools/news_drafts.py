@@ -34,9 +34,11 @@ def items():
             for it in root.iter("item"):
                 title = (it.findtext("title") or "").strip(); link = (it.findtext("link") or "").strip()
                 desc = text_of((it.findtext("description") or "").encode()); pub = it.findtext("pubDate") or ""
-                try: when = datetime.strptime(pub[:25].strip(), "%a, %d %b %Y %H:%M:%S").replace(tzinfo=timezone.utc)
+                try:
+                    from email.utils import parsedate_to_datetime
+                    when = parsedate_to_datetime(pub).astimezone(timezone.utc)
                 except Exception: when = None
-                if not title or not link.startswith("https://") or (when and when < cutoff): continue
+                if not title or not link.startswith("https://") or not when or when < cutoff: continue
                 out.append({"feed": name, "grade": grade, "title": title, "link": link, "desc": desc[:600], "date": (when or datetime.now(timezone.utc)).date().isoformat()}); n += 1
             log[name] = n
         except Exception as e:
@@ -57,13 +59,23 @@ SCHEMA = """Return ONE JSON object, no prose, with exactly these keys:
  "es": {"title": Spanish title, "summary": Spanish summary, "actors": [{"name","reason"} same order], "watch": [{"text","note"} same order], "unknowns": [same order]}}
 Rules: use ONLY the source text provided; never invent numbers, quotes or dates; if the text does not support a field, be conservative ("undetermined").
 Never recommend buying, selling or holding anything, never give price targets or confidence scores. Spanish must be neutral Colombian Spanish (no voseo)."""
-def claude(prompt):
-    body = json.dumps({"model": MODEL, "max_tokens": 2500, "messages": [{"role": "user", "content": prompt}]}).encode()
+def _call(messages):
+    body = json.dumps({"model": MODEL, "max_tokens": 4000, "messages": messages}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={"x-api-key": KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r: j = json.load(r)
-    t = "".join(c.get("text", "") for c in j.get("content", []))
-    m = re.search(r"\{.*\}", t, re.S)
-    return json.loads(m.group(0)) if m else None
+    with urllib.request.urlopen(req, timeout=180) as r: j = json.load(r)
+    return "".join(c.get("text", "") for c in j.get("content", []))
+def _parse(t):
+    i = t.find("{")
+    if i < 0: raise ValueError("no JSON object")
+    obj, _ = json.JSONDecoder().raw_decode(t[i:])
+    return obj
+def claude(prompt):
+    msgs = [{"role": "user", "content": prompt + "\n\nOutput only the JSON object. Use straight double quotes for JSON strings; inside text use « » or single quotes, never unescaped double quotes."}]
+    t = _call(msgs)
+    try: return _parse(t)
+    except Exception as e:
+        msgs += [{"role": "assistant", "content": t}, {"role": "user", "content": "That was not valid JSON (" + str(e)[:120] + "). Return the same brief again as one valid JSON object and nothing else."}]
+        return _parse(_call(msgs))
 def validate(b, today):
     js = "const q=require('./tools/quality.cjs');const b=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(q.validateBrief(b,{today:process.argv[1],maxAgeDays:4})))"
     r = subprocess.run(["node", "-e", js, today], input=json.dumps(b), capture_output=True, text=True)
