@@ -129,7 +129,7 @@ def main():
     cand = [c for c in cand if c["link"] not in seen and not SKIP.search(c["title"]) and (c["grade"] == "A" or score(c) >= 1)]
     cand.sort(key=lambda c: (c["grade"], -score(c)))
     report = {"generatedAt": datetime.now(timezone.utc).isoformat(), "model": MODEL, "feeds": feedlog, "briefs": [], "rejected": []}
-    report["candidates"] = {"from_feeds": len(raw_cand), "after_filter": len(cand), "sample": [c["title"][:90] for c in cand[:8]]}
+    report["candidates"] = {"from_feeds": len(raw_cand), "after_filter": len(cand), "sample": [c["title"][:90] for c in cand[:8]], "dropped": {"seen": sum(1 for c in raw_cand if c["link"] in seen), "skip": sum(1 for c in raw_cand if SKIP.search(c["title"])), "no_topic": sum(1 for c in raw_cand if c["grade"] != "A" and score(c) < 1)}, "raw_sample": [[c["grade"], score(c), c["title"][:70]] for c in raw_cand[:6]]}
     if not KEY:
         report["note"] = "ANTHROPIC_API_KEY is not set: candidates listed, no drafts written."
         report["candidates"] = cand[:20]
