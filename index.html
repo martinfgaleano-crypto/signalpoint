@@ -985,6 +985,8 @@ body.ck-open{overflow:hidden}
 .bh.intro .bh-top{animation:hfade .6s var(--ease-out) .05s both}.bh.intro .bh-side{animation:hfade .8s var(--ease-out) .4s both}.bh.intro .bh-strip{animation:hfade .8s var(--ease-out) .55s both}
 @keyframes bhdraw{to{stroke-dashoffset:0}}}
 .ask-f{display:flex;gap:8px;flex-wrap:wrap}.ask-f input{flex:1;min-width:200px}.ask-a{margin-top:12px;background:var(--sunk);border-radius:12px;padding:12px 14px}.ask-q{font-weight:600;margin:0 0 6px}.ask-a p{margin:0 0 6px}
+.tudia{margin:22px 0}.td-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}.td-h h2{margin:0 0 8px;font-size:1.25rem}.tudia ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}.tudia li{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:4px 16px;align-items:center;background:var(--surface);border-radius:14px;padding:10px 14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.07)}.td-m{display:flex;gap:10px;align-items:baseline;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;min-height:32px}.td-m b{font-weight:600}.td-v{font-variant-numeric:tabular-nums}.td-m em{font-style:normal;font-variant-numeric:tabular-nums}.td-m em.up{color:#128C40}.td-m em.down{color:#D92D20}.td-n{text-align:left}.td-d{grid-column:2}
+@media (max-width:640px){.tudia li{grid-template-columns:1fr}.td-d{grid-column:1}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1623,7 +1625,7 @@ function vMarkets(){
   if(!list.length)return '<div class="strip"><h1>The market in plain words.</h1><div class="facts">Market data has not been loaded for this edition.</div></div>'+'<button class="btn" data-view="briefing">Read the news</button>';
   if(S.msel&&!S.markets[S.msel])S.msel=null;
   if(!S.msel)S.msel=(watched()[0])||list[0].id;
-  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+(typeof pfHome==="function"?pfHome():"")+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+mAhead()+toolsBlock();
+  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+(typeof tuDia==="function"?tuDia():"")+(typeof pfHome==="function"?pfHome():"")+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+mAhead()+toolsBlock();
 }
 /* ---------- My list, What if, Learn, The week ahead ---------- */
 var MHEAD={usdcop:{head:"The dollar in pesos",up:"rose",down:"fell"},colcap:{head:"Colombian stocks",up:"rose",down:"fell"},sp500:{head:"Stocks",up:"rose",down:"fell"},nasdaq:{head:"Tech stocks",up:"rose",down:"fell"},dow:{head:"The Dow",up:"rose",down:"fell"},us2y:{head:"Short-term rates",up:"climbed",down:"eased"},us10y:{head:"Long-term rates",up:"climbed",down:"eased"},us30y:{head:"30-year rates",up:"climbed",down:"eased"},eurusd:{head:"The dollar",up:"gained",down:"lost",tail:" on the euro",invert:true},usdcop:{head:"The dollar",up:"gained",down:"lost",tail:" against the peso"},brent:{head:"Oil",up:"rose",down:"fell"},btc:{head:"Bitcoin",up:"rose",down:"fell"}};
@@ -1715,6 +1717,20 @@ function aEvents(){
   checkpoints().forEach(function(c){if(!c.w.due||stOf(c.w)!=="open"||c.b.private||dayDiff(c.w.due)>60)return;var k=aKind(c.w.en||c.w.text),key=c.w.due+"|"+k+(k==="colombia"?"|"+aTitle(k,[c]):"");if(!g[key]){g[key]={due:c.w.due,kind:k,items:[]};order.push(key)}g[key].items.push(c)});
   return order.map(function(k){var e=g[k],seen={};e.items=e.items.filter(function(c){var x=String(c.w.text).toLowerCase().replace(/[^a-z0-9]+/g," ").split(" ").slice(0,4).join(" ");if(seen[x])return false;seen[x]=1;return true});e.title=aTitle(e.kind,e.items);return e}).sort(function(a,b){return a.due.localeCompare(b.due)});
 }
+/* Calendar alerts without a server: an .ics file with reminders the day before and the morning of each date. */
+function icsEsc(t){return String(t||"").replace(/\\/g,"\\\\").replace(/;/g,"\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n")}
+function icsFile(evs){
+  var now=new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//SignalPoint//Calendar//"+(S.lang==="es"?"ES":"EN"),"CALSCALE:GREGORIAN","METHOD:PUBLISH"];
+  evs.forEach(function(e){var c=ACAT[e.kind]||{},d=e.due.replace(/-/g,""),nx=new Date(Date.parse(e.due+"T12:00:00Z")+864e5).toISOString().slice(0,10).replace(/-/g,"");
+    var desc=(c.why||"")+"\n\n"+e.items.slice(0,3).map(function(x){return "- "+x.w.text}).join("\n")+"\n\n"+T("Read it on SignalPoint: ","L\u00e9elo en SignalPoint: ")+"https://martinfgaleano-crypto.github.io/signalpoint/#calendar";
+    L.push("BEGIN:VEVENT","UID:"+d+"-"+e.kind+"@signalpoint","DTSTAMP:"+now,"DTSTART;VALUE=DATE:"+d,"DTEND;VALUE=DATE:"+nx,"SUMMARY:"+icsEsc("SignalPoint \u00b7 "+((S.lang==="es"&&typeof UI_ES!=="undefined"&&UI_ES[e.title])||e.title)),"DESCRIPTION:"+icsEsc(desc),
+      "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+icsEsc(e.title),"TRIGGER:-PT15H","END:VALARM","BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+icsEsc(e.title),"TRIGGER:PT8H","END:VALARM","END:VEVENT")});
+  L.push("END:VCALENDAR");return L.join("\r\n");
+}
+function icsDownload(key){
+  var ev=aEvents(),pick=key==="all"?ev.filter(function(e){return dayDiff(e.due)>=0}):ev.filter(function(e){return e.due+"|"+e.kind===key});if(!pick.length)return;
+  try{var blob=new Blob([icsFile(pick)],{type:"text/calendar;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=key==="all"?"signalpoint-fechas.ics":"signalpoint-"+pick[0].due+".ics";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);track("ics");toast(T("Calendar file downloaded. Open it to add the dates.","Archivo de calendario descargado. \u00c1brelo para a\u00f1adir las fechas."))}catch(x){}
+}
 function mAhead(){
   var ev=aEvents();if(!ev.length)return"";
   var first=dayDiff(ev[0].due),lastD=dayDiff(ev[ev.length-1].due),span=Math.max(1,lastD-Math.min(0,first)),base=Math.min(0,first);
@@ -1724,7 +1740,7 @@ function mAhead(){
   return '<section class="ahead" aria-labelledby="ah-h"><div class="heat-head"><h2 id="ah-h">What is coming</h2>'+legend+"</div>"+line+'<div class="ahead-grid">'+ev.map(function(e){
     var c=ACAT[e.kind],dd=dayDiff(e.due),d=new Date(e.due+"T12:00:00Z"),when=dd===0?"Today":dd===1?"Tomorrow":dd>1?"In "+dd+" days":"Date passed, awaiting confirmation";
     var mv=c.moves.filter(function(id){return S.markets[id]}).map(function(id){return '<button class="amv" data-market="'+esc(id)+'">'+esc(S.markets[id].name)+"</button>"}).join("");
-    return '<article class="aev" style="--c:'+c.col+'"><div class="aev-top"><span class="aev-d"><b>'+d.getUTCDate()+"</b>"+esc(d.toLocaleDateString("en-US",{month:"short",timeZone:"UTC"}))+'</span><div><span class="aev-k">'+esc(c.label)+'</span><h3>'+esc(e.title)+'</h3><span class="aev-w">'+esc(when)+'</span></div></div><p class="aev-why">'+esc(c.why)+'</p>'+(mv?'<p class="aev-h">Can move</p><div class="amvs">'+mv+"</div>":"")+'<details class="aev-more"><summary>What the news is watching for ('+Math.min(3,e.items.length)+')</summary><ul>'+e.items.slice(0,3).map(function(x){return '<li><button class="linkish" data-open="'+esc(x.b.id)+'">'+esc(x.w.text)+"</button></li>"}).join("")+'</ul></details><div class="aev-alert">'+proLock("An alert before this date")+'<span>Alert me before this date</span></div></article>'}).join("")+'</div><p class="note" style="margin-top:12px">These are scheduled dates and open questions, not predictions. Each is closed later with a dated source.</p></section>';
+    return '<article class="aev" style="--c:'+c.col+'"><div class="aev-top"><span class="aev-d"><b>'+d.getUTCDate()+"</b>"+esc(d.toLocaleDateString("en-US",{month:"short",timeZone:"UTC"}))+'</span><div><span class="aev-k">'+esc(c.label)+'</span><h3>'+esc(e.title)+'</h3><span class="aev-w">'+esc(when)+'</span></div></div><p class="aev-why">'+esc(c.why)+'</p>'+(mv?'<p class="aev-h">Can move</p><div class="amvs">'+mv+"</div>":"")+'<details class="aev-more"><summary>What the news is watching for ('+Math.min(3,e.items.length)+')</summary><ul>'+e.items.slice(0,3).map(function(x){return '<li><button class="linkish" data-open="'+esc(x.b.id)+'">'+esc(x.w.text)+"</button></li>"}).join("")+'</ul></details><div class="aev-alert">'+((typeof pfPro==="function"&&pfPro())?'<button class="btn ghost" data-ics="'+esc(e.due+"|"+e.kind)+'">'+T("Add to my calendar","A\u00f1adir a mi calendario")+"</button>":proLock("An alert before this date")+"<span>Alert me before this date</span>")+'</div></article>'}).join("")+'</div>'+((typeof pfPro==="function"&&pfPro())?'<p class="row" style="margin-top:12px"><button class="btn ghost" data-ics="all">'+T("Add all these dates to my calendar","A\u00f1adir todas estas fechas a mi calendario")+'</button><span class="note">'+T("Your calendar app reminds you the day before and the morning of each date. Works with Google, Apple and Outlook.","Tu app de calendario te avisa el d\u00eda anterior y la ma\u00f1ana de cada fecha. Funciona con Google, Apple y Outlook.")+"</span></p>":"")+'<p class="note" style="margin-top:12px">These are scheduled dates and open questions, not predictions. Each is closed later with a dated source.</p></section>';
 }
 /* ---------- Plans: what is free, what Pro adds. Nothing is sold yet. ---------- */
 var WAITLIST_URL="";
@@ -1738,12 +1754,16 @@ var PRO_FEATS=[
  ["Ask about any event","An answer with its source, never a tip"]
 ];
 function proLock(what){return '<button class="prolock" data-view="plans" aria-label="'+esc(what)+' is part of Pro. See plans"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pro</button>'}
+/* Prices by market: COP for visitors in Colombia, USD for everyone else. */
+function priceCOP(){try{if((Intl.DateTimeFormat().resolvedOptions().timeZone||"")==="America/Bogota")return true}catch(e){}var L=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();return L==="es-co"}
+function priceMain(){return priceCOP()?T("COP 14,900","COP 14.900"):"US$5.99"}
+function priceNote(){return priceCOP()?T("or COP 119,000 a year (two months free). Students: COP 9,900 a month.","o COP 119.000 al año (dos meses gratis). Estudiantes: COP 9.900 al mes."):T("or US$49 a year (about two months free). Students: US$3.99 a month.","o US$49 al año (cerca de dos meses gratis). Estudiantes: US$3,99 al mes.")}
 function vPlans(){
   var cta=WAITLIST_URL?'<a class="btn big" href="'+esc(WAITLIST_URL)+'" target="_blank" rel="noopener noreferrer">Join the Pro waitlist</a>':''+waitBlock()+'';var startCta='<button class="btn big" data-view="learn">'+T("Start free","Empieza gratis")+"</button>";
   return '<section class="plhero"><h1>'+T("Free to start. Pro to go deeper.","Gratis para empezar. Pro para ir m\u00e1s a fondo.")+'</h1><p class="facts">'+T("The board, the news, the basics course, the glossary and the calculators are free. Pro unlocks every course, the insight on every event and alerts that come to you.","El tablero, las noticias, el curso b\u00e1sico, el glosario y las calculadoras son gratis. Pro desbloquea todos los cursos, el an\u00e1lisis de cada evento y alertas que te llegan.")+'</p>'+startCta+'<p class="note">'+T("Pro is not on sale yet. The price below is what we plan to charge; nothing is billed and no card is asked for. ","Pro todav\u00eda no est\u00e1 a la venta. El precio es el que planeamos cobrar; no se cobra nada ni se pide tarjeta. ")+T("Have early access? ","\u00bfTienes acceso anticipado? ")+'<button class="linkish" data-view="account">'+T("Sign in","Inicia sesi\u00f3n")+'</button>.</p></section>'+
   '<div class="plgrid two-col">'+
    '<article class="pl-card"><h2>Free</h2><p class="pl-price">$0</p><p class="note">To understand what the market did today.</p><ul><li>'+T("The board: "+Object.keys(S.markets).length+" markets in plain words","El tablero: "+Object.keys(S.markets).length+" mercados en palabras simples")+'</li><li>News with sources and evidence grades</li><li>Calendar of what is coming</li><li>Your numbers and what-if scenarios</li><li>'+T("Market basics and the first lesson of every course","Lo b\u00e1sico del mercado y la primera lecci\u00f3n de cada curso")+'</li><li>'+T("Glossary, calculators, streaks and certificates","Glosario, calculadoras, racha y certificados")+'</li><li>A list of up to '+FREE_LIST+' markets</li></ul></article>'+
-   '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>SignalPoint Pro</h2><p class="pl-price">'+T("COP 14,900","COP 14.900")+'<small> '+T("/ month","/ mes")+'</small></p><p class="note">'+T("or COP 119,000 a year (two months free). Students: COP 9,900 a month. About US$4.50 a month.","o COP 119.000 al a\u00f1o (dos meses gratis). Estudiantes: COP 9.900 al mes.")+'</p><p class="note">Everything in Free, plus:</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
+   '<article class="pl-card pro"><span class="pl-tag">Planned</span><h2>SignalPoint Pro</h2><p class="pl-price">'+esc(priceMain())+'<small> '+T("/ month","/ mes")+'</small></p><p class="note">'+esc(priceNote())+'</p><p class="note">Everything in Free, plus:</p><ul>'+PRO_FEATS.map(function(f){return "<li><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></li>"}).join("")+'</ul>'+cta+'</article>'+
   '</div><section class="paper who"><h3>'+T("Who is behind SignalPoint","Qui\u00e9n est\u00e1 detr\u00e1s de SignalPoint")+'</h3><p>'+T("An independent project built in Cali, Colombia. SignalPoint does not sell or promote financial products, takes no commissions and is paid only by its readers.","Un proyecto independiente hecho en Cali, Colombia. SignalPoint no vende ni promociona productos financieros, no cobra comisiones y solo le pagan sus lectores.")+'</p><p>'+T("Every event cites its source and evidence grade; every pattern shows its sample and whether it survives a statistical test. ","Cada noticia cita su fuente y su nivel de evidencia; cada patr\u00f3n muestra su muestra y si se sostiene en una prueba estad\u00edstica. ")+'<button class="linkish" data-view="method">'+T("How SignalPoint works","C\u00f3mo funciona SignalPoint")+'</button></p></section><p class="note plfoot">SignalPoint gives no investment advice, trading recommendations or price targets.</p>';
 }
 /* ---------- Tools: one block, two tabs ---------- */
@@ -2379,6 +2399,18 @@ function pfVerdict(j,idx){
   var o=[["again",T("I would do it again","Lo volvería a hacer")],["differ",T("I would do it differently","Lo haría distinto")],["unsure",T("Too early to say","Aún es pronto para saber")]];
   return '<div class="pf-vd">'+o.map(function(x){return '<button class="pf-t'+(j.verdict===x[0]?" on":"")+'" data-pfverdict="'+idx+'|'+x[0]+'">'+esc(x[1])+"</button>"}).join("")+'</div><form class="pf-lf" data-pflesson="'+idx+'"><input class="search" maxlength="160" placeholder="'+T("What did you learn? (optional)","¿Qué aprendiste? (opcional)")+'" value="'+esc(j.lesson||"")+'"><button class="btn ghost" type="submit">'+T("Save","Guardar")+"</button></form>"
 }
+/* "Your day": one card per followed market with today's move, the newest news about it and its next date. */
+function tuDia(){
+  var ids=(S.watch&&S.watch.length?S.watch:["usdcop","colcap","sp500"]).filter(function(id){var m=S.markets[id];return m&&m.kind!=="stat"&&m.series&&m.series.length>1}).slice(0,4);if(!ids.length)return"";
+  var ev=typeof aEvents==="function"?aEvents():[];
+  var rows=ids.map(function(id){var m=S.markets[id],c=mChange(m,m.series.length-2),d=mDir(c.v);
+    var rel=(m.related||[]).map(byId).filter(Boolean).sort(function(a,b){return a.eventDate<b.eventDate?1:-1})[0];
+    var nx=ev.filter(function(e){return (ACAT[e.kind]&&ACAT[e.kind].moves||[]).indexOf(id)>=0&&dayDiff(e.due)>=0})[0];
+    return '<li><button class="td-m" data-market="'+esc(id)+'"><b>'+esc(m.name)+'</b><span class="td-v">'+esc(mNum(mLast(m)[1],m))+'</span><em class="'+d+'">'+esc(c.text)+"</em></button>"+
+      (rel?'<button class="linkish td-n" data-open="'+esc(rel.id)+'">'+esc(rel.title)+"</button>":'<span class="note">'+T("No new news about it.","Sin noticias nuevas sobre este mercado.")+"</span>")+
+      (nx?'<span class="note td-d">'+T("Next date: ","Próxima fecha: ")+esc(new Date(nx.due+"T12:00:00Z").toLocaleDateString(S.lang==="es"?"es-CO":"en-US",{day:"numeric",month:"short",timeZone:"UTC"}))+" · "+esc((S.lang==="es"&&typeof UI_ES!=="undefined"&&UI_ES[nx.title])||nx.title)+"</span>":"")+"</li>"}).join("");
+  return '<section class="tudia"><div class="td-h"><h2>'+T("Your day","Tu día")+'</h2><span class="note">'+(S.watch&&S.watch.length?T("The markets you follow","Los mercados que sigues"):T("Follow markets to make this yours","Sigue mercados para que esto sea tuyo"))+"</span></div><ul>"+rows+"</ul></section>";
+}
 function pfHome(){
   if(!S.pf&&!S.pfLoaded){S.pf=pfLoad();S.pfLoaded=true}
   var p=S.pf;
@@ -2505,6 +2537,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.pfreset){pfSetCur(null);S.pfRev=null;pfSave();return render()}
   if(t.dataset.pfmk){S.view="markets";S.msel=t.dataset.market;render();var md=$("mdetail");if(md)md.scrollIntoView({block:"start"});return}
   if(t.dataset.bhgo){var nx=document.getElementById("bh-next");if(nx)nx.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
+  if(t.dataset.ics){return icsDownload(t.dataset.ics)}
   if(t.dataset.evq){S.evq=!S.evq;return render()}
   if(t.dataset.chal){var cs=chState();if(cs.d!==todayISO()){try{localStorage.setItem(CHKEY,JSON.stringify({d:todayISO(),a:t.dataset.chal}))}catch(x){}award(10)}return render()}
   if(t.dataset.fyjump){var r=$("fy-r");if(r)r.scrollIntoView({behavior:"smooth",block:"start"});return}
