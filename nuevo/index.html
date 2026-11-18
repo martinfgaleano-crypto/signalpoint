@@ -664,7 +664,7 @@ header.top nav .n{display:none}
 @media (max-width:440px){.tosign{display:none}.tolang{margin-left:auto}.topro{margin-left:8px}}
 .ccard.feat{grid-column:1/-1;background:#15204A;color:#fff;border-color:#1C2A5A;padding:22px}.ccard.feat b{font-size:1.25rem}.ccard.feat .cc-n,.ccard.feat .cc-f{color:#C9D2EA}.ccard.feat .protag{color:#fff;border-color:#fff}.newtag{font-size:.7rem;font-weight:700;color:#0F1322;background:#FFD24D;border-radius:999px;padding:2px 8px;margin-left:6px;margin-right:auto}
 .daily{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin:26px 0;padding:18px 20px;border-radius:10px;background:#FFF8E1;border:1px solid #F2D27A}
-.daily-k{font-weight:700;font-size:.8rem;color:#7A5A00;background:#FFD24D;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.daily-k{font-weight:700;font-size:.8rem;color:#5C4300;background:#FFD24D;border-radius:999px;padding:4px 10px;white-space:nowrap}
 .daily-b h2{margin:0 0 4px;font-size:1.15rem}.daily-b p{margin:2px 0}
 @media (max-width:700px){.daily{grid-template-columns:1fr}}
 .cert{margin:18px 0}.cert-in{border:2px solid #1C2A5A;border-radius:10px;padding:26px;text-align:center;background:#F6F8FF}
@@ -1603,6 +1603,8 @@ function heroCount(){
   function step(t){if(t0===null)t0=t;var k=Math.min(1,(t-t0)/D);els.forEach(function(e){var n=+e.dataset.n||0;e.textContent=String(Math.round(n*ease(k)))});if(k<1)requestAnimationFrame(step)}
   requestAnimationFrame(step);
 }
+/* Heatmap text: white or ink, whichever has more contrast on the blended tile colour */
+function hcInk(c,a){function L(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}var b=c.map(function(x){return 255-a*(255-x)}),l=.2126*L(b[0])+.7152*L(b[1])+.0722*L(b[2]);return (1.05/(l+.05))>((l+.05)/.05)?"#fff":"var(--ink)"}
 function mTile(m){
   var sel=S.msel===m.id?' aria-current="true"':"";
   if(m.kind==="stat")return '<button class="tile-m" data-market="'+esc(m.id)+'"'+sel+'><span class="tm-name">'+esc(m.name)+'</span><span class="tm-spark"></span><span class="tm-val">'+esc(m.valueText)+'</span><span class="tm-chg flat">'+esc(fmtDate(m.asOf))+"</span></button>";
@@ -1633,7 +1635,7 @@ function heatT(m){if(m.kind==="stat")return null;var c=mChange(m,m.series.length
 function hTile(m){
   var t=heatT(m),bg,fg,val,chg,sel=S.msel===m.id?' aria-current="true"':"";
   if(t===null){bg="#fff";fg="var(--ink)";val=m.valueText;chg=null}
-  else{var a=(0.10+0.78*Math.abs(t)).toFixed(2);bg=t>=0?"rgba(18,140,64,"+a+")":"rgba(220,38,38,"+a+")";fg=Math.abs(t)>0.45?"#fff":"var(--ink)";val=mNum(mLast(m)[1],m);chg=mChange(m,m.series.length-2).text}
+  else{var a=(0.10+0.78*Math.abs(t)).toFixed(2);var base=t>=0?[14,122,55]:[180,30,30];bg="rgba("+base.join(",")+","+a+")";fg=typeof hcInk==="function"?hcInk(base,+a):(Math.abs(t)>0.45?"#fff":"var(--ink)");val=mNum(mLast(m)[1],m);chg=mChange(m,m.series.length-2).text}
   return '<button class="hc'+(t===null?" hc-stat":"")+'" data-market="'+esc(m.id)+'"'+sel+' style="background:'+bg+';color:'+fg+'"><span class="hc-n">'+esc(m.name)+(S.watch.indexOf(m.id)>=0?' <span class="hc-star" aria-label="in your list">★</span>':"")+'</span><span class="hc-v">'+esc(val)+'</span><span class="hc-c">'+(chg===null?T("as of ","al ")+'<span>'+esc(fmtDate(m.asOf))+"</span>":esc(chg))+"</span></button>";
 }
 function mBoard(){
