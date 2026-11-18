@@ -1019,6 +1019,21 @@ body.ck-open{overflow:hidden}
 .lp-win{position:fixed;overflow:visible}
 @media (max-width:600px){.pnode.cur,.pn-wrap .lesson-h.pnode.cur{width:74px;height:74px}.lstats{top:56px}}
 .lp-win .sharebtn{background:#fff;color:#128C5A;border:2px solid #CDEFDC;box-shadow:0 4px 0 #CDEFDC}
+/* Learn, second pass: progress reads like a chart that goes up */
+.ltick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#0B0F1A;color:#fff;border-radius:18px;padding:12px 6px;margin:14px 0 0;position:sticky;top:62px;z-index:5;box-shadow:0 6px 0 #05070D}
+.lt{display:flex;flex-direction:column;gap:1px;padding:0 12px;min-width:0}.lt+.lt{border-left:1px solid rgba(255,255,255,.12)}
+.lt small{font-size:.72rem;color:rgba(255,255,255,.55);font-weight:600}.lt b{font-size:1.45rem;font-weight:750;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}.lt-u{font-size:.85rem;color:rgba(255,255,255,.5);font-weight:600}
+.lt em{font-style:normal;font-size:.75rem;color:rgba(255,255,255,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.lt em.up{color:#3DDC84}
+.lt-bar{display:block;height:6px;border-radius:9px;background:rgba(255,255,255,.14);margin-top:5px;overflow:hidden}.lt-bar i{display:block;height:100%;background:#FFC800;border-radius:9px}
+.path{position:relative}
+.pline{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:0;overflow:visible;pointer-events:none}
+.pline path{fill:none;stroke-linecap:round}.pline .pl-done{stroke:#FFC800;stroke-width:8}.pline .pl-todo{stroke:color-mix(in srgb,var(--u) 28%,#E3E7F0);stroke-width:6;stroke-dasharray:2 14}
+.path .pn-wrap{height:150px;justify-content:flex-start;z-index:1;margin:0;padding-top:10px}
+.path .pn-wrap .pn-l{max-width:210px}.path .pn-wrap .ltitle{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.path .pn-wrap .pn-l small{display:none}
+.path .exam-wrap{height:170px}
+.pnode svg{display:block}
+@media (max-width:600px){.pline{transform:translateX(-50%) scaleX(.6)}.ltick{top:56px;padding:10px 2px}.lt{padding:0 8px}.lt b{font-size:1.2rem}.lt em{font-size:.68rem}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1937,12 +1952,14 @@ function doShare(text){
 
 function statsBar(){
   var p=prog(),today=(p.days||{})[todayISO()]||0,pct=Math.min(100,today/goalXP()*100),done=learnedCount(),acc=accessibleLessons().length;
-  return '<div class="lstats"><div class="lst"><span class="lst-i" aria-hidden="true">🔥</span><b>'+streakNow()+'</b><small>'+T("streak","racha")+'</small></div>'+
-    '<div class="lst"><span class="lst-i" aria-hidden="true">⚡</span><b>'+(+p.xp||0)+'</b><small>XP</small></div>'+
-    '<div class="lst goal"><div class="ring" style="--p:'+pct+'"><span>'+today+'/'+goalXP()+'</span></div><small>'+T("today's goal","meta de hoy")+'</small></div>'+
-    '<div class="lst"><span class="lst-i" aria-hidden="true">🎓</span><b>'+done+'/'+acc+'</b><small>'+T("lessons","lecciones")+'</small></div></div>'+
+  return '<div class="ltick" role="group" aria-label="'+T("Your progress","Tu progreso")+'">'+
+    '<div class="lt"><small>XP</small><b>'+(+p.xp||0)+'</b><em class="'+(today?"up":"")+'">'+(today?"▲ +"+today+T(" today"," hoy"):T("no XP today","sin XP hoy"))+"</em></div>"+
+    '<div class="lt"><small>'+T("Streak","Racha")+'</small><b>'+streakNow()+'<span class="lt-u">'+T(" d"," d")+'</span></b><em>'+(streakNow()?"🔥":T("start today","empieza hoy"))+"</em></div>"+
+    '<div class="lt lt-g"><small>'+T("Today’s goal","Meta de hoy")+'</small><b>'+today+'<span class="lt-u">/'+goalXP()+'</span></b><span class="lt-bar"><i style="width:'+pct+'%"></i></span></div>'+
+    '<div class="lt"><small>'+T("Lessons","Lecciones")+'</small><b>'+done+'<span class="lt-u">/'+acc+"</span></b><em>"+Math.round(acc?done/acc*100:0)+"%</em></div></div>"+
     '<p class="note sr">'+done+" of "+acc+" lessons done.</p>";
 }
+
 function unitHead(id,n,title,blurb,count,done,pro,open){
   var col=UCOL[id]||"#2F5BFF";
   var inner='<span class="u-k">'+(medals()[id]?"\uD83C\uDFC5 ":"")+T("Unit","Unidad")+" "+n+(pro?' <span class="protag">'+(isPro()?"Pro · unlocked":"Pro")+"</span>":' <span class="freetag">'+T("Free","Gratis")+"</span>")+'</span><b>'+esc(title)+'</b><span class="u-b">'+esc(blurb)+'</span><span class="u-p"><i style="width:'+(count?done/count*100:0)+'%"></i></span><span class="u-c">'+done+"/"+count+"</span>";
@@ -1950,12 +1967,20 @@ function unitHead(id,n,title,blurb,count,done,pro,open){
   return '<button class="unit-h ccard'+(open?" on":"")+'" style="--u:'+col+'" data-course="'+esc(id)+'" aria-expanded="'+open+'">'+inner+'<span class="u-t" aria-hidden="true">'+(open?"−":"+")+"</span></button>";
 }
 var ZZ=[0,1,2,1,0,-1,-2,-1];
+var LICON={index:'<path d="M5 19V11M12 19V5M19 19v-6"/>',yields:'<path d="M4 8h12l-3-3M20 16H8l3 3"/>',fed:'<path d="M3 10l9-5 9 5M6 10v8M10 10v8M14 10v8M18 10v8M3 20h18"/>',inflation:'<path d="M6 18L18 6"/><circle cx="7.5" cy="7.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/>',fx:'<path d="M4 9h13l-3-3M20 15H7l3 3"/>',oil:'<path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/>'};
+function lIcon(id){return LICON[id]?'<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+LICON[id]+"</svg>":""}
+var PROW=150;
+function pathLine(list){
+  var pts=list.map(function(x,i){return {x:ZZ[i%ZZ.length]*46,y:i*PROW+48,ok:!!S.learned[x.l.id]}});pts.push({x:0,y:list.length*PROW+56,ok:false});
+  var H=pts.length*PROW,seg="";for(var i=0;i<pts.length-1;i++){var a=pts[i],b=pts[i+1],my=(a.y+b.y)/2;seg+='<path d="M'+a.x+" "+a.y+" C"+a.x+" "+my+" "+b.x+" "+my+" "+b.x+" "+b.y+'" class="'+(a.ok?"pl-done":"pl-todo")+'"/>'}
+  return '<svg class="pline" viewBox="-170 0 340 '+H+'" width="340" height="'+H+'" aria-hidden="true">'+seg+"</svg>";
+}
 function pathNodes(unit,list){
   var cur=null;list.forEach(function(x){if(!cur&&x.full&&!S.learned[x.l.id])cur=x.l.id});
-  return '<div class="path" style="--u:'+(UCOL[unit]||"#2F5BFF")+'">'+list.map(function(x,i){
+  return '<div class="path" style="--u:'+(UCOL[unit]||"#2F5BFF")+'">'+pathLine(list)+list.map(function(x,i){
     var l=x.l,ok=!!S.learned[l.id],off=ZZ[i%ZZ.length]*46;
     if(!x.full)return '<section class="lesson locked pn-wrap" style="--x:'+off+'px"><div class="lesson-h pnode lockd" title="'+esc(l.title)+'"><span aria-hidden="true">🔒</span></div><div class="pn-l"><span class="ltitle">'+esc(l.title)+"<small>"+esc(l.summary||"")+"</small></span>"+proLock(l.title)+"</div></section>";
-    return '<section class="lesson pn-wrap'+(ok?" ok":"")+'" style="--x:'+off+'px">'+(cur===l.id?'<span class="pn-start">'+T("Start","Empieza")+"</span>":"")+'<button class="lesson-h pnode'+(ok?" done":"")+(cur===l.id?" cur":(!ok?" todo":""))+'" data-lesson="'+l.id+'" aria-label="'+esc(l.title)+'"><span aria-hidden="true">'+(ok?"✓":i===list.length-1?"\uD83C\uDFC6":(i+1))+'</span></button><div class="pn-l"><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">'+T("Free","Gratis")+"</span>":"")+'</span><span class="lmin">'+l.min+" min</span></div></section>";
+    return '<section class="lesson pn-wrap'+(ok?" ok":"")+'" style="--x:'+off+'px">'+(cur===l.id?'<span class="pn-start">'+T("Start","Empieza")+"</span>":"")+'<button class="lesson-h pnode'+(ok?" done":"")+(cur===l.id?" cur":(!ok?" todo":""))+'" data-lesson="'+l.id+'" aria-label="'+esc(l.title)+'"><span aria-hidden="true">'+(ok?"✓":(lIcon(l.id)||(i+1)))+'</span></button><div class="pn-l"><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">'+T("Free","Gratis")+"</span>":"")+'</span><span class="lmin">'+l.min+" min</span></div></section>";
   }).join("")+examNode(unit)+"</div>";
 }
 function player(){
