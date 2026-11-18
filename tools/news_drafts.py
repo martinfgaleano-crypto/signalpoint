@@ -136,6 +136,12 @@ def main():
     cand = [c for c in cand if c["link"] not in seen and not SKIP.search(c["title"]) and (c["grade"] == "A" or score(c) >= 1)]
     cand.sort(key=lambda c: (c["grade"], -score(c)))
     cand = [c for c in cand if not (c["feed"].startswith("US Securities") and score(c) < 1)]
+    _seen_t = set(); _dedup = []
+    for c in cand:   # the same release often comes through two feeds (e.g. both Fed feeds)
+        k = re.sub(r"[^a-z0-9]+", "", c["title"].lower())[:60]
+        if k in _seen_t: continue
+        _seen_t.add(k); _dedup.append(c)
+    cand = _dedup
     us_q = [c for c in cand if c["feed"] in US_FEEDS]; co_q = [c for c in cand if c["feed"] not in US_FEEDS]; mixed = []
     while us_q or co_q:   # alternate the two markets so each run covers the US and Colombia
         if us_q: mixed.append(us_q.pop(0))
