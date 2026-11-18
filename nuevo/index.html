@@ -1056,6 +1056,12 @@ body.ck-open{overflow:hidden}
 .xc-clean{margin:14px 0 0;color:#3DDC84;font-weight:600}
 .xclose-wrap .lp-body{padding-bottom:180px}
 @media (prefers-reduced-motion:no-preference){.xclose{animation:hfade .5s var(--ease-out) both}.xc-gauge i{animation:xcg .9s var(--ease-expo) .2s both}@keyframes xcg{from{width:0}}}
+/* Tap targets: every control at least 24px (WCAG 2.2 AA), most at 28px+ */
+.prolock{min-height:28px;display:inline-flex;align-items:center}.linkish{min-height:24px;padding-top:2px;padding-bottom:2px}.ev-q{min-width:28px;min-height:28px}.src a{display:inline-block;padding:4px 0}
+/* Calendar ledger: the status ring was shrunk by the Learn goal ring's styles */
+.ledger svg.ring{width:150px;height:150px;background:none;border-radius:0;display:block;justify-self:center}
+.cal-ev{min-height:24px}
+@media (max-width:600px){.ledger{grid-template-columns:120px 1fr;gap:16px;padding:18px}.ledger svg.ring{width:120px;height:120px}.ledger .tally{grid-template-columns:1fr 1fr;gap:10px 12px}.ledger .tally .tile span{white-space:nowrap}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
