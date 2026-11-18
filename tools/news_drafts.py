@@ -18,8 +18,14 @@ FEEDS = [
     ("Valora Analitik", "https://www.valoraanalitik.com/feed/", "B"),
     ("Portafolio", "https://www.portafolio.co/rss/economia.xml", "B"),
     ("Federal Reserve (monetary policy)", "https://www.federalreserve.gov/feeds/press_monetary.xml", "A"),
+    ("US Bureau of Economic Analysis", "https://apps.bea.gov/rss/rss.xml", "A"),
+    ("US Securities and Exchange Commission", "https://www.sec.gov/news/pressreleases.rss", "A"),
+    ("US Census Bureau (economic indicators)", "https://www.census.gov/economic-indicators/indicator.xml", "A"),
+    ("CNBC Economy", "https://www.cnbc.com/id/20910258/device/rss/rss.html", "B"),
+    ("CNBC Finance", "https://www.cnbc.com/id/10000664/device/rss/rss.html", "B"),
 ]
-PRIORITY = re.compile(r"salario m[ií]nimo|econom[ií]a|bolsas?\b|premercado|mercados?\b|aranceles?|d[eé]ficit|deuda|fiscal|desempleo|exportaciones|importaciones|remesas|tasas?\b|recesi[oó]n|crecimiento|banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
+US_FEEDS = {"Federal Reserve", "US Bureau of Labor Statistics", "US Energy Information Administration", "Federal Reserve (monetary policy)", "US Bureau of Economic Analysis", "US Securities and Exchange Commission", "US Census Bureau (economic indicators)", "CNBC Economy", "CNBC Finance"}
+PRIORITY = re.compile(r"\bstocks?\b|\byields?\b|treasur|earnings|inflation|\bjobs\b|payrolls|unemployment|tariffs?|\bdollar\b|\bgdp\b|recession|interest rates?|rate (cut|hike)|nasdaq|s&p|dow\b|oil prices?|consumer spending|retail sales|housing starts|salario m[ií]nimo|econom[ií]a|bolsas?\b|premercado|mercados?\b|aranceles?|d[eé]ficit|deuda|fiscal|desempleo|exportaciones|importaciones|remesas|tasas?\b|recesi[oó]n|crecimiento|banrep|banco de la rep|\bdane\b|\bipc\b|inflaci|\btrm\b|d[oó]lar|peso colombiano|colcap|\bbvc\b|bolsa de valores|acci[oó]n(es)? de|ecopetrol|bancolombia|cibest|grupo argos|grupo sura|\bisa\b|\btes\b|tasa de (inter[eé]s|pol[ií]tica)|\bfed\b|fomc|\bcpi\b|\bppi\b|petr[oó]leo|brent|crude|treasury|bonos?|utilidad(es)?|resultados (trimestrales|financieros)|pib\b|calificaci[oó]n|fitch|moody|s&p", re.I)
 SKIP = re.compile(r"entrevista|festival|\bexpo\b|vacantes|navide|concierto|turismo|viajeros", re.I)
 def get(url, timeout=40):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r: return r.read()
@@ -129,6 +135,12 @@ def main():
     def score(c): return len(PRIORITY.findall(c["title"] + " " + c["desc"]))
     cand = [c for c in cand if c["link"] not in seen and not SKIP.search(c["title"]) and (c["grade"] == "A" or score(c) >= 1)]
     cand.sort(key=lambda c: (c["grade"], -score(c)))
+    cand = [c for c in cand if not (c["feed"].startswith("US Securities") and score(c) < 1)]
+    us_q = [c for c in cand if c["feed"] in US_FEEDS]; co_q = [c for c in cand if c["feed"] not in US_FEEDS]; mixed = []
+    while us_q or co_q:   # alternate the two markets so each run covers the US and Colombia
+        if us_q: mixed.append(us_q.pop(0))
+        if co_q: mixed.append(co_q.pop(0))
+    cand = mixed
     report = {"generatedAt": datetime.now(timezone.utc).isoformat(), "model": MODEL, "feeds": feedlog, "briefs": [], "rejected": []}
     report["candidates"] = {"from_feeds": len(raw_cand), "after_filter": len(cand), "sample": [c["title"][:90] for c in cand[:8]], "dropped": {"seen": sum(1 for c in raw_cand if c["link"] in seen), "skip": sum(1 for c in raw_cand if SKIP.search(c["title"])), "no_topic": sum(1 for c in raw_cand if c["grade"] != "A" and score(c) < 1)}, "raw_sample": [[c["grade"], score(c), c["title"][:70]] for c in raw_cand[:6]]}
     if not KEY:
