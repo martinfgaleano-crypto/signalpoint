@@ -5,7 +5,7 @@ on:
     - cron: '23 11 * * 1-5'   # weekdays, 06:23 Bogotá
   push:
     branches: [main]
-    paths: ['tools/news_drafts.py', '.github/workflows/news-drafts.yml']
+    paths: ['tools/news_drafts.py', 'tools/social_cards.py', '.github/workflows/news-drafts.yml']
 permissions:
   contents: write
 jobs:
@@ -20,6 +20,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 tools/news_drafts.py d
+      - name: Social cards for new briefs (images + captions, nothing is posted)
+        run: pip install -q pillow==12.0.0 && python3 tools/social_cards.py d
       - name: Save drafts to the drafts branch
         run: |
           cd d && rm -rf .git && git init -q && git checkout -q -b drafts && git add -A
