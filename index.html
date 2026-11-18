@@ -984,6 +984,7 @@ body.ck-open{overflow:hidden}
 .bh.intro .bh-h .hl>span{animation:hlrise .9s var(--ease-expo) .15s both}.bh.intro .bh-h .hl+.hl>span{animation-delay:.25s}
 .bh.intro .bh-top{animation:hfade .6s var(--ease-out) .05s both}.bh.intro .bh-side{animation:hfade .8s var(--ease-out) .4s both}.bh.intro .bh-strip{animation:hfade .8s var(--ease-out) .55s both}
 @keyframes bhdraw{to{stroke-dashoffset:0}}}
+.ask-f{display:flex;gap:8px;flex-wrap:wrap}.ask-f input{flex:1;min-width:200px}.ask-a{margin-top:12px;background:var(--sunk);border-radius:12px;padding:12px 14px}.ask-q{font-weight:600;margin:0 0 6px}.ask-a p{margin:0 0 6px}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1274,6 +1275,26 @@ function hxMarket(id){
   rows.sort(function(a,b){return (b.v.sig?2:b.v.hint?1:0)-(a.v.sig?2:a.v.hint?1:0)||Math.abs(b.v.up/b.v.n*100-b.v.base)-Math.abs(a.v.up/a.v.n*100-a.v.base)});
   return '<section class="sec hx"><h4>'+T("What this market did a week after…","Qué hizo este mercado una semana después de…")+'</h4><ul class="plain hx-m">'+rows.slice(0,6).map(function(r){var p=Math.round(r.v.up/r.v.n*100);return '<li class="cp'+(r.v.sig?" hx-sig":r.v.hint?" hx-hintl":"")+'"><span>'+esc(T(r.e.en,r.e.es))+' <small class="note">('+r.v.n+T(" times",' veces')+')</small></span><span class="due">'+T("up ","subió ")+p+"%"+T(" of the time"," de las veces")+' <small>· normal '+r.v.base+"%</small></span></li>"}).join("")+'</ul><p class="note">'+T("Highlighted rows differ clearly from a normal week. History, not a forecast.","Las filas resaltadas se apartan claramente de una semana normal. Es historia, no un pronóstico.")+(ak==="colo"?T(" Measured with the COLO ETF (Colombian stocks, in dollars)."," Medido con el ETF COLO (acciones colombianas, en d\u00f3lares)."):"")+"</p></section>";
 }
+/* Ask about this event: a signed-in reader asks one question; the Supabase function "ask" answers from the brief only. Off until the function is deployed. */
+var ASK_ON=false;function askUrl(){return SP_AUTH.url+"/functions/v1/ask"}
+function askBlock(b){
+  if(!ASK_ON)return"";var st=(S.ask||{})[b.id]||{};
+  var head='<section class="sec ask"><h4>'+T("Ask about this event","Pregunta sobre este evento")+"</h4>";
+  if(!S.user)return head+'<p class="note">'+T("Sign in to ask a question. The answer stays inside this brief and never tells you what to buy or sell.","Inicia sesión para preguntar. La respuesta se queda dentro de esta noticia y nunca te dice qué comprar o vender.")+'</p><button class="btn ghost" data-view="account">'+T("Sign in","Iniciar sesión")+"</button></section>";
+  return head+'<form class="ask-f" data-ask="'+esc(b.id)+'"><label class="sr" for="ask-q">'+T("Your question","Tu pregunta")+'</label><input class="search" id="ask-q" maxlength="300" placeholder="'+esc(T("Example: why would this move the dollar?","Ejemplo: ¿por qué esto movería el dólar?"))+'"'+(st.busy?" disabled":"")+'><button class="btn" type="submit"'+(st.busy?" disabled":"")+">"+(st.busy?T("Thinking…","Pensando…"):T("Ask","Preguntar"))+"</button></form>"+
+    (st.q?'<div class="ask-a"><p class="ask-q">'+esc(st.q)+"</p>"+(st.a?"<p>"+esc(st.a)+"</p>":"")+(st.err?'<p class="note" role="status">'+esc(st.err)+"</p>":"")+(st.left!=null?'<p class="note">'+T(st.left+" questions left today.","Te quedan "+st.left+" preguntas hoy.")+"</p>":"")+"</div>":"")+
+    '<p class="note">'+T("AI answer from this brief and general economics. It can be wrong and it is not advice.","Respuesta de IA a partir de esta noticia y de economía general. Puede equivocarse y no es asesoría.")+"</p></section>";
+}
+async function askSend(id,q){
+  var b=byId(id);if(!b||!q||q.length<4)return;S.ask=S.ask||{};S.ask[id]={q:q,busy:true};render();
+  var st=S.ask[id];
+  try{var r=await fetch(askUrl(),{method:"POST",headers:{apikey:SP_AUTH.key,Authorization:"Bearer "+authToken(),"Content-Type":"application/json"},body:JSON.stringify({question:q,lang:S.lang,brief:{id:b.id,title:b.title,summary:b.summary,actors:b.actors,watch:b.watch,unknowns:b.unknowns,source:b.source,eventDate:b.eventDate}})});
+    var j=await r.json().catch(function(){return{}});
+    if(r.ok){st.a=j.answer;st.left=j.left}
+    else st.err=j.error==="limit"?T("You have used today's questions. Pro gives you more.","Ya usaste las preguntas de hoy. Pro te da más."):j.error==="sign_in"?T("Your session ended. Sign in again.","Tu sesión terminó. Vuelve a iniciar sesión."):T("The answer could not be generated. Try again in a minute.","No se pudo generar la respuesta. Intenta de nuevo en un minuto.");
+  }catch(e){st.err=T("No connection. Try again.","Sin conexión. Intenta de nuevo.")}
+  st.busy=false;render();
+}
 function paper(b,opts){
   opts=opts||{};
   if(!b)return '<div class="empty">Select an event to read its brief.</div>';
@@ -1285,7 +1306,7 @@ function paper(b,opts){
     '<p class="lede">'+esc(b.summary)+"</p>"+(opts.save||b.private?"":insightBlock(b)+hxBlock(b)+lensBlock(b)+numbersBlock(b))+
     '<section class="sec"><h4>Impact by actor</h4><p class="note implegend">'+T("\u25b2 favorable \u00b7 \u25bc adverse \u00b7 \u25c6 mixed \u00b7 \u25cb undetermined: the effect on that actor through the channel described, not a call on its share price.","\u25b2 favorable \u00b7 \u25bc desfavorable \u00b7 \u25c6 mixto \u00b7 \u25cb indeterminado: el efecto sobre ese actor por el canal descrito, no una predicci\u00f3n del precio de su acci\u00f3n.")+'</p>'+((b.actors||[]).length?'<div class="bar" aria-hidden="true">'+(b.actors||[]).map(function(a){return '<i class="'+imp(a.impact)[0]+'" style="flex:1"></i>'}).join("")+"</div>":"")+'<div class="actors">'+((b.actors||[]).map(function(a){var i=imp(a.impact);return '<div class="actor"><div><span class="who">'+esc(a.name)+"</span>"+(a.ticker?'<span class="tk">'+esc(a.ticker)+"</span>":"")+'</div><div><span class="imp '+i[0]+'">'+i[1]+" "+impL(i[2])+"</span></div><p>"+esc(a.reason)+"</p></div>"}).join("")||'<p class="note">No actor could be assessed from the source.</p>')+"</div></section>"+
     '<section class="sec"><h4>What to watch · observable follow-ups</h4><ul class="plain">'+((b.watch||[]).map(function(w){var st=stOf(w);return '<li class="cp"><span class="box '+esc(st)+'" title="'+esc(st)+'">'+(st==="observed"?"✓":st==="not_observed"?"✕":"")+"</span><span>"+esc(w.text)+((w.outcome||w.note)?'<br><span class="note">'+esc(w.outcome||w.note)+"</span>":"")+'</span><span class="due">'+(w.due?"by "+fmtDate(w.due):"")+"</span></li>"}).join("")||"<li class=\"note\">None stated.</li>")+"</ul></section>"+
-    '<section class="sec"><h4>What we do not know</h4><ul class="plain unk">'+((b.unknowns||[]).map(function(x){return"<li>"+esc(x)+"</li>"}).join("")||"<li>Nothing flagged.</li>")+"</ul></section>"+
+    '<section class="sec"><h4>What we do not know</h4><ul class="plain unk">'+((b.unknowns||[]).map(function(x){return"<li>"+esc(x)+"</li>"}).join("")||"<li>Nothing flagged.</li>")+"</ul></section>"+(opts.save||b.private?"":askBlock(b))+
     '<div class="src"><span>Source: '+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(src.name||u)+"</a>":esc(src.name||"Pasted text"))+"</span>"+
     (opts.save?'<button class="btn" id="save" '+(S.canSave?"":"disabled")+">Save to my briefs</button>":"")+
     (b.private&&!opts.save?'<button class="btn ghost" data-del="'+esc(b.id)+'">Delete</button>':"")+"</div></article>";
@@ -2591,6 +2612,7 @@ document.addEventListener("submit",function(e){
   }
   if(e.target.dataset&&e.target.dataset.certform){var ci=e.target.querySelector("input");try{localStorage.setItem(CERTKEY,(ci?ci.value:"").trim().slice(0,60))}catch(x){}return render()}
   if(e.target.id==="signin-form"){var em=$("si-email");return authSignIn(em?em.value.trim():"")}
+  if(e.target.dataset&&e.target.dataset.ask){var aq=e.target.querySelector("input");return askSend(e.target.dataset.ask,aq?aq.value.trim():"")}
   if(e.target.id==="item-form"){
     var kind=$("item-kind").value,amount=Number($("item-amount").value);
     if(!KINDS[kind]||!isFinite(amount)||amount<=0||amount>1e12)S.itemErr=T("Enter an amount above zero, in pesos.","Escribe un monto mayor que cero, en pesos.");
