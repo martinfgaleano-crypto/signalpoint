@@ -2098,7 +2098,9 @@ PRO_FEATS_ES=[
  ["Pregunta sobre cualquier evento","Una respuesta con su fuente, nunca un dato de inversión"]
 ];
 /*UI-ES-END*/
-function initLang(){var q=/[?&]lang=(en|es)\b/.exec(location.search);if(q)return q[1];try{var v=localStorage.getItem(LANGKEY);if(v==="en"||v==="es")return v}catch(e){}return "es"}
+function initLang(){var q=/[?&]lang=(en|es)\b/.exec(location.search);if(q)return q[1];try{var v=localStorage.getItem(LANGKEY);if(v==="en"||v==="es")return v}catch(e){}
+  /* No saved choice: follow the browser. Spanish browsers, and anyone in Colombia, get Spanish; everyone else English. */
+  try{var L=((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();if(L.indexOf("es")===0)return "es";var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||"");if(tz==="America/Bogota")return "es";if(L)return "en"}catch(e){}return "es"}
 function ovl(en,es){
   if(Array.isArray(es)&&Array.isArray(en))return es.map(function(x,i){return x&&typeof x==="object"&&!Array.isArray(x)&&en[i]&&typeof en[i]==="object"?Object.assign({},en[i],x,typeof en[i].text==="string"?{en:en[i].text}:{}):x});
   return es;
