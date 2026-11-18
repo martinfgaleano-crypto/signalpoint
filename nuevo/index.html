@@ -1030,16 +1030,17 @@ body.ck-open{overflow:hidden}
 .path{position:relative}
 .pline{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:0;overflow:visible;pointer-events:none}
 .pline path{fill:none;stroke-linecap:round}.pline .pl-done{stroke:#FFC800;stroke-width:8}.pline .pl-todo{stroke:color-mix(in srgb,var(--u) 28%,#E3E7F0);stroke-width:6;stroke-dasharray:2 14}
-.path .pn-wrap{height:150px;justify-content:flex-start;z-index:1;margin:0;padding-top:10px}
+.path .pn-wrap{height:172px;justify-content:flex-start;z-index:1;margin:0;padding-top:26px}
 .path .pn-wrap .pn-l{max-width:210px}.path .pn-wrap .ltitle{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .path .pn-wrap .pn-l small{display:none}
 .path .exam-wrap{height:170px}
 .pnode svg{display:block}
 @media (max-width:600px){.pline{transform:translateX(-50%) scaleX(.6)}.ltick{top:56px;padding:10px 2px}.lt{padding:0 8px}.lt b{font-size:1.2rem}.lt em{font-size:.68rem}}
-.path .pn-wrap .pn-l{background:color-mix(in srgb,var(--bg,#F5F6FA) 94%,transparent);border-radius:10px;padding:4px 8px;position:relative;z-index:2}
-.path .pn-start{top:30px;left:calc(50% + 50px);right:auto;transform:none;background:var(--u);color:#fff;border:0;box-shadow:0 3px 0 rgba(0,0,0,.2);z-index:3;opacity:1}
-.path .pn-start::before{content:"";position:absolute;left:-6px;top:50%;margin-top:-6px;border:6px solid transparent;border-left:0;border-right-color:var(--u)}
+.path .pn-wrap .pn-l{background:#F5F6FA;border-radius:10px;padding:4px 8px;position:relative;z-index:2}
+.path .pn-start{top:-24px;left:50%;right:auto;transform:translateX(-50%);background:var(--u);color:#fff;border:0;box-shadow:0 3px 0 rgba(0,0,0,.2);z-index:3;opacity:1}
+.path .pn-start::before{content:"";position:absolute;left:50%;bottom:-6px;margin-left:-6px;border:6px solid transparent;border-bottom:0;border-top-color:var(--u)}
 .ltick .lt-g small{white-space:nowrap}
+.path .pn-start{animation:none}@media (prefers-reduced-motion:no-preference){.path .pn-start{animation:pnbob2 1.6s ease-in-out infinite}}@keyframes pnbob2{50%{transform:translate(-50%,-4px)}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1975,9 +1976,9 @@ function unitHead(id,n,title,blurb,count,done,pro,open){
 var ZZ=[0,1,2,1,0,-1,-2,-1];
 var LICON={index:'<path d="M5 19V11M12 19V5M19 19v-6"/>',yields:'<path d="M4 8h12l-3-3M20 16H8l3 3"/>',fed:'<path d="M3 10l9-5 9 5M6 10v8M10 10v8M14 10v8M18 10v8M3 20h18"/>',inflation:'<path d="M6 18L18 6"/><circle cx="7.5" cy="7.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/>',fx:'<path d="M4 9h13l-3-3M20 15H7l3 3"/>',oil:'<path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/>'};
 function lIcon(id){return LICON[id]?'<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+LICON[id]+"</svg>":""}
-var PROW=150;
+var PROW=172;
 function pathLine(list){
-  var pts=list.map(function(x,i){return {x:ZZ[i%ZZ.length]*46,y:i*PROW+48,ok:!!S.learned[x.l.id]}});pts.push({x:0,y:list.length*PROW+56,ok:false});
+  var pts=list.map(function(x,i){return {x:ZZ[i%ZZ.length]*46,y:i*PROW+64,ok:!!S.learned[x.l.id]}});pts.push({x:0,y:list.length*PROW+72,ok:false});
   var H=pts.length*PROW,seg="";for(var i=0;i<pts.length-1;i++){var a=pts[i],b=pts[i+1],my=(a.y+b.y)/2;seg+='<path d="M'+a.x+" "+a.y+" C"+a.x+" "+my+" "+b.x+" "+my+" "+b.x+" "+b.y+'" class="'+(a.ok?"pl-done":"pl-todo")+'"/>'}
   return '<svg class="pline" viewBox="-170 0 340 '+H+'" width="340" height="'+H+'" aria-hidden="true">'+seg+"</svg>";
 }
