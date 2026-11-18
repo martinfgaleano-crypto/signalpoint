@@ -1036,6 +1036,10 @@ body.ck-open{overflow:hidden}
 .path .exam-wrap{height:170px}
 .pnode svg{display:block}
 @media (max-width:600px){.pline{transform:translateX(-50%) scaleX(.6)}.ltick{top:56px;padding:10px 2px}.lt{padding:0 8px}.lt b{font-size:1.2rem}.lt em{font-size:.68rem}}
+.path .pn-wrap .pn-l{background:color-mix(in srgb,var(--bg,#F5F6FA) 94%,transparent);border-radius:10px;padding:4px 8px;position:relative;z-index:2}
+.path .pn-start{top:30px;left:calc(50% + 50px);right:auto;transform:none;background:var(--u);color:#fff;border:0;box-shadow:0 3px 0 rgba(0,0,0,.2);z-index:3;opacity:1}
+.path .pn-start::before{content:"";position:absolute;left:-6px;top:50%;margin-top:-6px;border:6px solid transparent;border-left:0;border-right-color:var(--u)}
+.ltick .lt-g small{white-space:nowrap}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1957,7 +1961,7 @@ function statsBar(){
   return '<div class="ltick" role="group" aria-label="'+T("Your progress","Tu progreso")+'">'+
     '<div class="lt"><small>XP</small><b>'+(+p.xp||0)+'</b><em class="'+(today?"up":"")+'">'+(today?"▲ +"+today+T(" today"," hoy"):T("no XP today","sin XP hoy"))+"</em></div>"+
     '<div class="lt"><small>'+T("Streak","Racha")+'</small><b>'+streakNow()+'<span class="lt-u">'+T(" d"," d")+'</span></b><em>'+(streakNow()?"🔥":T("start today","empieza hoy"))+"</em></div>"+
-    '<div class="lt lt-g"><small>'+T("Today’s goal","Meta de hoy")+'</small><b>'+today+'<span class="lt-u">/'+goalXP()+'</span></b><span class="lt-bar"><i style="width:'+pct+'%"></i></span></div>'+
+    '<div class="lt lt-g"><small>'+T("Goal","Meta")+'</small><b>'+today+'<span class="lt-u">/'+goalXP()+'</span></b><span class="lt-bar"><i style="width:'+pct+'%"></i></span></div>'+
     '<div class="lt"><small>'+T("Lessons","Lecciones")+'</small><b>'+done+'<span class="lt-u">/'+acc+"</span></b><em>"+Math.round(acc?done/acc*100:0)+"%</em></div></div>"+
     '<p class="note sr">'+done+" of "+acc+" lessons done.</p>";
 }
@@ -2110,7 +2114,7 @@ function vLearn(){
     var open=S.course===x.id,list=x.lessons.map(function(l){return {l:l,full:l.free?l:(isPro()&&S.prem.lessons[l.id]?Object.assign({},l,S.prem.lessons[l.id]):null)}}),dn=x.lessons.filter(function(l){return S.learned[l.id]}).length;
     return '<div class="unit">'+unitHead(x.id,k+2,x.title,x.blurb,x.lessons.length,dn,true,open)+(open?'<div class="lessons course-open" id="course-'+esc(x.id)+'">'+pathNodes(x.id,list)+(isPro()?"":proCta("Unlock every lesson in all eight courses"))+certBlock(x.id,x.title,x.lessons.map(function(l){return l.id}))+"</div>":"")+"</div>";
   }).join("");
-  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with eight courses: the first lesson of each is free.</div>'+statsBar()+"</div>"+reviewBlock()+dailyBlock()+(typeof chBlock==="function"?chBlock():"")+'<div class="units">'+units+"</div>"+calcBlock()+glossaryBlock()+(S.exam?examView():needsOnboarding()?onboardView():player());
+  return '<div class="strip lhead"><h1>Learn while you look.</h1><div class="facts">Start with six free lessons tied to the board. Then go deeper with eight courses: the first lesson of each is free.</div>'+statsBar()+"</div>"+reviewBlock()+'<div class="units">'+units+"</div>"+dailyBlock()+(typeof chBlock==="function"?chBlock():"")+calcBlock()+glossaryBlock()+(S.exam?examView():needsOnboarding()?onboardView():player());
 }
 /* ---------- Language: Spanish by default, English on request ---------- */
 var LANGKEY="signalpoint.lang";
