@@ -989,6 +989,37 @@ body.ck-open{overflow:hidden}
 .ask-f{display:flex;gap:8px;flex-wrap:wrap}.ask-f input{flex:1;min-width:200px}.ask-a{margin-top:12px;background:var(--sunk);border-radius:12px;padding:12px 14px}.ask-q{font-weight:600;margin:0 0 6px}.ask-a p{margin:0 0 6px}
 .tudia{margin:22px 0}.td-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}.td-h h2{margin:0 0 8px;font-size:1.25rem}.tudia ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}.tudia li{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:4px 16px;align-items:center;background:var(--surface);border-radius:14px;padding:10px 14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.07)}.td-m{display:flex;gap:10px;align-items:baseline;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;min-height:32px}.td-m b{font-weight:600}.td-v{font-variant-numeric:tabular-nums}.td-m em{font-style:normal;font-variant-numeric:tabular-nums}.td-m em.up{color:#128C40}.td-m em.down{color:#D92D20}.td-n{text-align:left}.td-d{grid-column:2}
 @media (max-width:640px){.tudia li{grid-template-columns:1fr}.td-d{grid-column:1}}
+/* Learn, Duolingo pass */
+.lhead h1{font-size:clamp(30px,6vw,52px)}
+.lstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:sticky;top:62px;z-index:5;background:color-mix(in srgb,var(--bg,#F5F6FA) 92%,transparent);backdrop-filter:saturate(1.2);padding:8px 0;margin:10px 0 0}
+.lstats .lst{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;padding:8px 6px;min-width:0;border-radius:14px}
+.lstats .lst b{font-size:1.15rem;line-height:1.1}.lstats .lst small{font-size:.7rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.lstats .lst-i{font-size:1.1rem}.lstats .goal .ring{width:38px;height:38px}.lstats .goal .ring span{font-size:.62rem}
+.pnode.todo{background:color-mix(in srgb,var(--u) 22%,#fff);color:color-mix(in srgb,var(--u) 80%,#000);box-shadow:0 7px 0 color-mix(in srgb,var(--u) 38%,#C9CFDC)}
+.pnode.done{background:#FFC800;color:#fff;box-shadow:0 7px 0 #E0A100;text-shadow:0 1px 0 rgba(0,0,0,.15)}
+.pnode.cur{width:84px;height:84px;font-size:1.9rem}
+.pn-wrap .lesson-h.pnode.cur{width:84px}
+.pnode{transition:transform var(--t-press) var(--ease-out),box-shadow var(--t-press) var(--ease-out)}
+.pn-wrap .ltitle{font-size:.92rem}.pn-wrap:has(.todo) .ltitle{color:var(--muted)}
+.lplayer .lq-o button{border:2px solid #E3E7F0;border-bottom-width:5px;box-shadow:none;border-radius:16px;padding:14px 16px;font-size:1rem;min-height:56px;transition:transform var(--t-press) var(--ease-out),background-color var(--t-hover) ease,border-color var(--t-hover) ease}
+.lplayer .lq-o button:active:not(:disabled){transform:translateY(3px);border-bottom-width:2px}
+@media (hover:hover) and (pointer:fine){.lplayer .lq-o button:hover:not(:disabled){background:#F5F7FF;border-color:#C9D3FF;box-shadow:none}}
+.lplayer .lq-o button.right{background:#E6F8EE;border-color:#5BC88A;color:#0B6B42;box-shadow:none}
+.lplayer .lq-o button.wrong{background:#FDECEC;border-color:#F08A8A;color:#9B1C1C;box-shadow:none}
+.lq-f{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start}.lq-f .lq-ic{grid-row:span 2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff}.lq-f.ok .lq-ic{background:#1FA971}.lq-f.no .lq-ic{background:#E5484D}.lq-f b{font-size:1.05rem}
+.lp-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:420px;margin:6px 0 4px}
+.lpt{border-radius:14px;border:2px solid;overflow:hidden;text-align:center;background:#fff}.lpt small{display:block;font-size:.72rem;font-weight:800;color:#fff;padding:4px 0}.lpt b{display:block;font-size:1.2rem;padding:8px 0}
+.lpt.xp{border-color:#FFC800}.lpt.xp small{background:#FFC800}.lpt.st{border-color:#FF9600}.lpt.st small{background:#FF9600}.lpt.ac{border-color:#1FA971}.lpt.ac small{background:#1FA971}.lpt.ac b{color:#1FA971}
+.lp-burst{font-size:3rem;line-height:1}
+.lp-confetti{position:absolute;left:50%;top:0;width:0;height:0;pointer-events:none}
+.lp-confetti i{position:absolute;width:8px;height:14px;border-radius:2px;opacity:0;background:hsl(calc(var(--i)*47) 85% 58%)}
+@media (prefers-reduced-motion:no-preference){
+.lp-burst{animation:lpwin .6s var(--ease-out) both}
+.lp-confetti i{animation:cf 1.1s var(--ease-out) calc(var(--i)*18ms) both}
+@keyframes cf{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(calc((var(--i) - 6.5)*28px),calc(-90px - (var(--i)*7px % 60px))) rotate(calc(var(--i)*65deg))}}
+.lq-f{animation:lqup .28s var(--ease-out) both}@keyframes lqup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}}
+.lp-win{position:fixed;overflow:visible}
+@media (max-width:600px){.pnode.cur,.pn-wrap .lesson-h.pnode.cur{width:74px;height:74px}.lstats{top:56px}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1864,7 +1895,7 @@ function learnedCount(){return accessibleLessons().filter(function(id){return S.
 function lQuiz(l){
   var id=l.id,z=l.quiz||LQUIZ[id],pick=S.lq[id];if(!z)return"";
   return '<div class="lquiz"><p class="lq-q">'+esc(z.q)+'</p><div class="lq-o">'+z.o.map(function(o,i){var st=pick==null?"":i===z.a?" right":i===pick?" wrong":"";return '<button data-lqa="'+id+'" data-lqv="'+i+'" class="'+st.trim()+'"'+(pick!=null?" disabled":"")+">"+esc(o)+"</button>"}).join("")+"</div>"+
-    (pick!=null?'<p class="lq-f '+(pick===z.a?"ok":"no")+'" role="status"><b>'+(pick===z.a?"Right.":"Not quite.")+"</b> "+esc(z.why)+"</p>"+(pick===z.a?"":'<button class="btn ghost" data-lqr="'+id+'">Try again</button>'):"")+"</div>";
+    (pick!=null?'<p class="lq-f '+(pick===z.a?"ok":"no")+'" role="status"><span class="lq-ic" aria-hidden="true">'+(pick===z.a?"\u2713":"\u2715")+'</span><b>'+(pick===z.a?"Right.":"Not quite.")+"</b> "+esc(z.why)+"</p>"+(pick===z.a?"":'<button class="btn ghost" data-lqr="'+id+'">Try again</button>'):"")+"</div>";
 }
 function lBody(l){
   var st=lStep(l.id),n=l.steps.length,hasTry=!!LTRY[l.id],last=n+(hasTry?1:0),labels=l.steps.map(function(_,i){return "Read "+(i+1)}).concat(hasTry?["Try it","Check"]:["Check"]);
@@ -1925,7 +1956,7 @@ function pathNodes(unit,list){
   return '<div class="path" style="--u:'+(UCOL[unit]||"#2F5BFF")+'">'+list.map(function(x,i){
     var l=x.l,ok=!!S.learned[l.id],off=ZZ[i%ZZ.length]*46;
     if(!x.full)return '<section class="lesson locked pn-wrap" style="--x:'+off+'px"><div class="lesson-h pnode lockd" title="'+esc(l.title)+'"><span aria-hidden="true">🔒</span></div><div class="pn-l"><span class="ltitle">'+esc(l.title)+"<small>"+esc(l.summary||"")+"</small></span>"+proLock(l.title)+"</div></section>";
-    return '<section class="lesson pn-wrap'+(ok?" ok":"")+'" style="--x:'+off+'px">'+(cur===l.id?'<span class="pn-start">'+T("Start","Empieza")+"</span>":"")+'<button class="lesson-h pnode'+(ok?" done":"")+(cur===l.id?" cur":"")+'" data-lesson="'+l.id+'" aria-label="'+esc(l.title)+'"><span aria-hidden="true">'+(ok?"✓":i===list.length-1?"★":(i+1))+'</span></button><div class="pn-l"><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">'+T("Free","Gratis")+"</span>":"")+'</span><span class="lmin">'+l.min+" min</span></div></section>";
+    return '<section class="lesson pn-wrap'+(ok?" ok":"")+'" style="--x:'+off+'px">'+(cur===l.id?'<span class="pn-start">'+T("Start","Empieza")+"</span>":"")+'<button class="lesson-h pnode'+(ok?" done":"")+(cur===l.id?" cur":(!ok?" todo":""))+'" data-lesson="'+l.id+'" aria-label="'+esc(l.title)+'"><span aria-hidden="true">'+(ok?"✓":i===list.length-1?"\uD83C\uDFC6":(i+1))+'</span></button><div class="pn-l"><span class="ltitle">'+esc(l.title)+(l.free&&!isPro()&&!l.basic?' <span class="freetag">'+T("Free","Gratis")+"</span>":"")+'</span><span class="lmin">'+l.min+" min</span></div></section>";
   }).join("")+examNode(unit)+"</div>";
 }
 function player(){
@@ -1933,7 +1964,7 @@ function player(){
   var l=r.full,st=lStep(l.id),total=l.steps.length+(LTRY[l.id]?1:0)+1,ok=!!S.learned[l.id],col=UCOL[r.course||"basics"]||"#2F5BFF";
   var win=ok&&S.lq[l.id]!=null&&S.lq[l.id]===(quizFor(l.id)||{}).a;
   return '<div class="lplayer'+(win?" won":"")+'" role="dialog" aria-modal="true" aria-label="'+esc(l.title)+'" style="--u:'+col+'"><div class="lp-top"><button class="lp-x" data-lclose="1" aria-label="'+T("Close","Cerrar")+'">×</button><div class="lp-bar"><i style="width:'+(win?100:(st)/total*100)+'%"></i></div><button class="lp-snd" data-soundtoggle="1" aria-label="'+(soundOn()?T("Mute sounds","Silenciar sonidos"):T("Turn sounds on","Activar sonidos"))+'">'+(soundOn()?"\uD83D\uDD0A":"\uD83D\uDD07")+'</button><span class="lp-xp">⚡ '+(+prog().xp||0)+'</span></div><div class="lp-body"><h2 class="lp-t">'+esc(l.title)+"</h2>"+lBody(l)+
-    (win?'<div class="lp-win"><div class="lp-burst" aria-hidden="true">🎉</div><b>'+T("Lesson complete!","¡Lección completada!")+"</b><span>"+(S.justXP?"+"+S.justXP+" XP · ":"")+"🔥 "+streakNow()+" "+(streakNow()===1?T("day streak","día de racha"):T("day streak","días de racha"))+'</span><button class="btn big" data-lclose="1">'+T("Continue","Continuar")+"</button>"+shareBtn(T("I just finished \u201c","Acabo de terminar \u201c")+l.title+T("\u201d on SignalPoint. \uD83D\uDD25 ","\u201d en SignalPoint. \uD83D\uDD25 ")+streakNow()+T("-day streak.","\u00a0d\u00edas de racha."))+"</div>":"")+"</div></div>";
+    (win?'<div class="lp-win"><div class="lp-confetti" aria-hidden="true">'+[0,1,2,3,4,5,6,7,8,9,10,11,12,13].map(function(i){return '<i style="--i:'+i+'"></i>'}).join("")+'</div><div class="lp-burst" aria-hidden="true">\uD83C\uDFC6</div><b>'+T("Lesson complete!","¡Lección completada!")+'</b><div class="lp-tiles"><div class="lpt xp"><small>'+T("XP earned","XP ganados")+"</small><b>+"+(S.justXP||0)+'</b></div><div class="lpt st"><small>'+T("Streak","Racha")+"</small><b>\uD83D\uDD25 "+streakNow()+'</b></div><div class="lpt ac"><small>'+T("Answer","Respuesta")+'</small><b>\u2713</b></div></div><button class="btn big" data-lclose="1">'+T("Continue","Continuar")+"</button>"+shareBtn(T("I just finished \u201c","Acabo de terminar \u201c")+l.title+T("\u201d on SignalPoint. \uD83D\uDD25 ","\u201d en SignalPoint. \uD83D\uDD25 ")+streakNow()+T("-day streak.","\u00a0d\u00edas de racha."))+"</div>":"")+"</div></div>";
 }
 /* ---------- Unit exams, mistake review, sounds ---------- */
 var SKEYS="signalpoint.sound";
