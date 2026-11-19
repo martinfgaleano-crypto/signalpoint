@@ -30,14 +30,17 @@ STOCKS = [
     ("ec", "EC", "Ecopetrol ADR (NYSE)", "co", "USD", ("Oil and gas", "Petróleo y gas"), ["ecopetrol"]),
 ]
 def fetch(sym):
-    url = f"https://query2.finance.yahoo.com/v8/finance/chart/{urllib.request.quote(sym)}?range=1y&interval=1d"
+    url = f"https://query2.finance.yahoo.com/v8/finance/chart/{urllib.request.quote(sym)}?range=1y&interval=1d&events=div"
     for _ in range(2):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r: j = json.load(r)
             res = j["chart"]["result"][0]; rows = {}
             for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]):
                 if c is not None: rows[datetime.fromtimestamp(t, timezone.utc).date().isoformat()] = float(c)
-            return sorted(rows.items()), res.get("meta", {})
+            meta = dict(res.get("meta", {}))
+            dv = ((res.get("events") or {}).get("dividends") or {}).values()
+            meta["_divs"] = sorted([[datetime.fromtimestamp(x["date"], timezone.utc).date().isoformat(), round(float(x["amount"]), 4)] for x in dv if x.get("amount")])
+            return sorted(rows.items()), meta
         except Exception as e:
             err = repr(e)[:120]; time.sleep(2)
     return [], {"error": err}
@@ -63,6 +66,7 @@ for sid, sym, name, region, cur, sector, words in STOCKS:
                           "prefix": "$" if cur == "COP" else "US$", "decimals": dec,
                           "series": [[d, round(v, dec) if dec else round(v)] for d, v in ser],
                           "source": {"name": f"Yahoo Finance ({sym}), daily close", "url": f"https://finance.yahoo.com/quote/{sym}/"}}
+    if meta.get("_divs"): out["stocks"][sid]["divs"] = meta["_divs"][-12:]
 
 # Benchmarks for the comparison chart (one year, daily).
 out["bench"] = {}
