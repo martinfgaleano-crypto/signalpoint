@@ -1089,6 +1089,7 @@ body.ck-open{overflow:hidden}
 .pf-stk{margin:12px 0;border-top:1px solid #EEF0F5;padding-top:10px}.pf-stk summary{font-weight:700;cursor:pointer;min-height:32px}
 .sc-dates{list-style:none;padding:0!important;margin:0}.sc-dates li{margin:6px 0}
 .sc-cmp select{margin:4px 0 10px;max-width:100%}.sc-cmpch{width:100%;height:150px;display:block}.sc-cmpch polyline{fill:none;vector-effect:non-scaling-stroke;stroke-linejoin:round}.sc-cmpch .ca{stroke:var(--ink,#141821);stroke-width:2.4}.sc-cmpch .cb{stroke:#9A7412;stroke-width:2}.sc-cmpch .c100{stroke:#C9CED8;stroke-dasharray:3 4;vector-effect:non-scaling-stroke}.sc-leg{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0;font-size:.9em}.sc-leg i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}.sc-leg .ka{background:var(--ink,#141821)}.sc-leg .kb{background:#9A7412}
+.stk-ah{margin:28px 0}.sah{list-style:none;padding:0;margin:8px 0;display:grid;gap:6px}.sah li{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;background:var(--card,#fff);border:1px solid #E3E6EC}.sah li.on{border-color:#9A7412}.sah-t{background:none;border:0;padding:0;cursor:pointer;min-width:84px;text-align:left}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1767,6 +1768,15 @@ function stkCmp(x,id){var B=S.bench||{},o=[];["sp500","nasdaq","colcap"].forEach
       x.ticker+" "+(ra>=0?"subió ":"bajó ")+stkPct(Math.abs(ra)).replace(/^[+−]/,"")+" "+per+" y "+onm+" "+(rb>=0?"subió ":"bajó ")+stkPct(Math.abs(rb)).replace(/^[+−]/,"")+": una diferencia de "+Math.abs(gap).toFixed(1).replace(".",",")+" puntos "+(gap>=0?"a favor de ":"en contra de ")+x.ticker+"."))+"</p>"+
     '<p class="note">'+T("Both lines start at 100 on the first shared day ("+days+" trading days). Past moves don't say what comes next.","Ambas líneas parten de 100 el primer día en común ("+days+" días de bolsa). Lo que pasó no dice lo que viene.")+(cur?" "+T("Each one is measured in its own currency.","Cada una se mide en su propia moneda."):"")+"</p></div>";
 }
+function stkUpcoming(){var o=S.stocks||{},w=S.watch||[],r=[];Object.keys(o).forEach(function(id){var c=o[id].calendar||{};[["earnings",c.earnings],["exdiv",c.exDividend]].forEach(function(p){if(p[1]&&dayDiff(p[1])>=0&&dayDiff(p[1])<=45)r.push({id:id,x:o[id],k:p[0],d:p[1],f:w.indexOf(id)>=0})})});
+  return r.sort(function(a,b){return (b.f-a.f)||a.d.localeCompare(b.d)})}
+function stkEvIcs(e){var t=(e.k==="earnings"?T("results","resultados"):T("ex-dividend date","fecha ex-dividendo"))+" · "+e.x.name,txt=icsFile([{due:e.d,kind:"results",title:t,items:[]}]);var a=txt.indexOf("BEGIN:VEVENT"),b=txt.indexOf("END:VEVENT")+10;return txt.slice(a,b).replace(/UID:[^\r\n]*/,"UID:"+e.d.replace(/-/g,"")+"-"+e.id+"-"+e.k+"@signalpoint")}
+function stkIcsAll(){var r=stkUpcoming();if(!r.length)return;var head=icsFile([]),k=head.indexOf("END:VCALENDAR"),txt=head.slice(0,k)+r.map(stkEvIcs).join("\r\n")+"\r\n"+head.slice(k);
+  try{var blob=new Blob([txt],{type:"text/calendar;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="signalpoint-acciones.ics";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);toast(T("Calendar file downloaded.","Archivo de calendario descargado."))}catch(e){}}
+function stkAhead(){var r=stkUpcoming();if(!r.length)return"";var nf=r.filter(function(e){return e.f}).length,full=STK_PILOT_OPEN||isPro();
+  return '<section class="stk-ah" aria-labelledby="sah-h"><div class="heat-head"><h2 id="sah-h">'+T("Stock dates","Fechas de tus acciones")+(STK_PILOT_OPEN&&!isPro()?' <span class="protag">Pro</span>':"")+'</h2><span class="note">'+(nf?T("Stocks you follow first","Primero las que sigues"):T("Follow a stock to put its dates first","Sigue una acción para ver sus fechas primero"))+'</span></div><ul class="sah">'+r.slice(0,8).map(function(e){var dd=dayDiff(e.d);
+    return '<li'+(e.f?' class="on"':"")+'><button class="sah-t" data-stockgo="'+esc(e.id)+'"><span class="stk-t">'+esc(e.x.ticker)+"</span></button><span><b>"+esc(new Date(e.d+"T12:00:00Z").toLocaleDateString(S.lang==="es"?"es-CO":"en-US",{day:"numeric",month:"short",timeZone:"UTC"}))+"</b> "+(e.k==="earnings"?T("Quarterly results","Resultados trimestrales"):T("Ex-dividend date","Fecha ex-dividendo"))+' <small class="note">'+(dd===0?T("today","hoy"):dd===1?T("tomorrow","mañana"):T("in "+dd+" days","en "+dd+" días"))+"</small></span></li>"}).join("")+"</ul>"+
+    (full?'<button class="linkish" data-stkicsall="1">'+T("Add all to my calendar, with reminders","Añadir todas a mi calendario, con recordatorios")+"</button>":"")+'<p class="note">'+T("Results can move a stock sharply the next day. To receive a dividend you must own the stock before the ex-dividend date.","Los resultados pueden mover mucho una acción al día siguiente. Para recibir un dividendo hay que tener la acción antes de la fecha ex-dividendo.")+"</p></section>"}
 function stockCard(x,id){
   var full=STK_PILOT_OPEN||isPro(),ser=full?x.series:x.series.slice(-22),last=mLast(x)[1],c1=stkChg(x,1),c22=stkChg(x,21),c63=stkChg(x,63),cy=stkChg(x,x.series.length-1);
   var v=ser.map(function(p){return p[1]}),lo=Math.min.apply(null,v),hi=Math.max.apply(null,v),W=640,H=180,up=v[v.length-1]>=v[0];
@@ -1790,7 +1800,7 @@ function vMarkets(){
   if(!list.length)return '<div class="strip"><h1>The market in plain words.</h1><div class="facts">Market data has not been loaded for this edition.</div></div>'+'<button class="btn" data-view="briefing">Read the news</button>';
   if(S.msel&&!S.markets[S.msel])S.msel=null;
   if(!S.msel)S.msel=(watched()[0])||list[0].id;
-  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+(typeof stocksBlock==="function"?stocksBlock():"")+(typeof tuDia==="function"?tuDia():"")+(typeof pfHome==="function"?pfHome():"")+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+mAhead()+toolsBlock();
+  return mHero()+mBoard()+'<div id="mdetail">'+mDetail(S.markets[S.msel])+"</div>"+(typeof stocksBlock==="function"?stocksBlock():"")+(typeof tuDia==="function"?tuDia():"")+(typeof pfHome==="function"?pfHome():"")+hxSimilar()+(typeof dailyBlock==="function"?dailyBlock():"")+(typeof stkAhead==="function"?stkAhead():"")+mAhead()+toolsBlock();
 }
 /* ---------- My list, What if, Learn, The week ahead ---------- */
 var MHEAD={usdcop:{head:"The dollar in pesos",up:"rose",down:"fell"},colcap:{head:"Colombian stocks",up:"rose",down:"fell"},sp500:{head:"Stocks",up:"rose",down:"fell"},nasdaq:{head:"Tech stocks",up:"rose",down:"fell"},dow:{head:"The Dow",up:"rose",down:"fell"},us2y:{head:"Short-term rates",up:"climbed",down:"eased"},us10y:{head:"Long-term rates",up:"climbed",down:"eased"},us30y:{head:"30-year rates",up:"climbed",down:"eased"},eurusd:{head:"The dollar",up:"gained",down:"lost",tail:" on the euro",invert:true},usdcop:{head:"The dollar",up:"gained",down:"lost",tail:" against the peso"},brent:{head:"Oil",up:"rose",down:"fell"},btc:{head:"Bitcoin",up:"rose",down:"fell"}};
@@ -2737,6 +2747,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.bhgo){var nx=document.getElementById("bh-next");if(nx)nx.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
   if(t.dataset.ics){return icsDownload(t.dataset.ics)}
   if(t.dataset.stockgo){var sx=S.stocks&&S.stocks[t.dataset.stockgo];if(sx){S.stkReg=sx.region;S.stock=t.dataset.stockgo;go("markets");setTimeout(function(){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"start"})},60)}return}
+  if(t.dataset.stkicsall){return stkIcsAll()}
   if(t.dataset.stkics){return stkIcs(t.dataset.stkics)}
   if(t.dataset.stkreg){S.stkReg=t.dataset.stkreg;S.stock=null;return render()}
   if(t.dataset.stock!=null&&t.closest&&t.closest(".stk")){S.stock=t.dataset.stock||null;render();if(S.stock){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"nearest"})}return}
