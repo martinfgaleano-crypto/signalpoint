@@ -64,6 +64,11 @@ for sid, sym, name, region, cur, sector, words in STOCKS:
                           "series": [[d, round(v, dec) if dec else round(v)] for d, v in ser],
                           "source": {"name": f"Yahoo Finance ({sym}), daily close", "url": f"https://finance.yahoo.com/quote/{sym}/"}}
 
+# Benchmarks for the comparison chart (one year, daily).
+out["bench"] = {}
+for bid, sym, nm in (("sp500", "^GSPC", "S&P 500"), ("nasdaq", "^IXIC", "Nasdaq"), ("colcap", "ICOLCAP.CL", "Colcap")):
+    ser, meta = fetch(sym); time.sleep(0.4)
+    if len(ser) > 20: out["bench"][bid] = {"name": nm, "series": [[d, round(v, 2)] for d, v in ser]}
 # Upcoming earnings and dividend dates for the US stocks, from Nasdaq's public calendars (next 45 days, weekdays).
 from datetime import timedelta
 want = {v["ticker"].replace("-", "."): k for k, v in out["stocks"].items() if v["region"] == "us"}
