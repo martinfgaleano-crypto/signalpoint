@@ -1085,6 +1085,8 @@ body.ck-open{overflow:hidden}
 .stk-card .row{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:600px){.stk-list{grid-template-columns:1fr}.stk-r{grid-template-columns:92px minmax(0,1fr) auto}.stk-s{display:none}}
 .pf-stk{margin:12px 0;border-top:1px solid #EEF0F5;padding-top:10px}.pf-stk summary{font-weight:700;cursor:pointer;min-height:32px}
+.sc-dates{list-style:none;padding:0!important;margin:0}.sc-dates li{margin:6px 0}
+.sc-cmp select{margin:4px 0 10px;max-width:100%}.sc-cmpch{width:100%;height:150px;display:block}.sc-cmpch polyline{fill:none;vector-effect:non-scaling-stroke;stroke-linejoin:round}.sc-cmpch .ca{stroke:var(--ink,#141821);stroke-width:2.4}.sc-cmpch .cb{stroke:#9A7412;stroke-width:2}.sc-cmpch .c100{stroke:#C9CED8;stroke-dasharray:3 4;vector-effect:non-scaling-stroke}.sc-leg{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0;font-size:.9em}.sc-leg i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}.sc-leg .ka{background:var(--ink,#141821)}.sc-leg .kb{background:#9A7412}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1357,7 +1359,7 @@ function liveRefresh(){
     if(j.insights&&typeof j.insights==="object"){Object.keys(j.insights).forEach(function(k){var v=j.insights[k];if(SP_CONTENT.insights[k]||!v||typeof v.tease!=="string"||!v.first||typeof v.first.p!=="string"||!Array.isArray(v.parts))return;SP_CONTENT.insights[k]=JSON.parse(JSON.stringify(v));if(S.lang==="es")swapLang(SP_CONTENT.insights[k]);n++})}
     if(n){S.briefs.sort(function(a,b){return a.eventDate<b.eventDate?1:a.eventDate>b.eventDate?-1:0});applyLang();render()}
   });
-  liveGet("stocks-live.json").then(function(j){if(j&&j.stocks&&typeof j.stocks==="object"){var ok={};Object.keys(j.stocks).forEach(function(k){var x=j.stocks[k];if(/^[a-z0-9]{1,16}$/.test(k)&&x&&Array.isArray(x.series)&&x.series.length>20)ok[k]=x});S.stocks=ok;S.stocksAsOf=j.asOf;if(S.view==="markets"||S.view==="exposure")render()}});
+  liveGet("stocks-live.json").then(function(j){if(j&&j.stocks&&typeof j.stocks==="object"){var ok={};Object.keys(j.stocks).forEach(function(k){var x=j.stocks[k];if(/^[a-z0-9]{1,16}$/.test(k)&&x&&Array.isArray(x.series)&&x.series.length>20)ok[k]=x});S.stocks=ok;S.stocksAsOf=j.asOf;var bk={};if(j.bench&&typeof j.bench==="object")["sp500","nasdaq","colcap"].forEach(function(b){var v=j.bench[b];if(v&&Array.isArray(v.series)&&v.series.length>20)bk[b]={name:String(v.name||b).slice(0,20),series:v.series}});S.bench=bk;if(S.view==="markets"||S.view==="exposure")render()}});
   liveGet("history.json").then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}});
 }
 function hxSimilar(){
@@ -1737,6 +1739,32 @@ function stocksBlock(){
   var rows=list.map(function(x){var c=stkChg(x,1),d=c>0?"up":c<0?"down":"flat";return '<button class="stk-r'+(S.stock===x.id?" on":"")+'" data-stock="'+esc(x.id)+'"><span class="stk-t">'+esc(x.ticker)+'</span><span class="stk-n"><b>'+esc(x.name)+"</b><small>"+esc(T(x.sector,x.sector_es))+'</small></span><span class="stk-s '+d+'">'+stkSpark(x.series.slice(-22),72,26)+'</span><span class="stk-p"><b>'+esc(stkPx(x,mLast(x)[1]))+'</b><em class="'+d+'">'+stkPct(c)+"</em></span></button>"}).join("");
   return head+(S.stock&&S.stocks[S.stock]?stockCard(S.stocks[S.stock],S.stock):"")+'<div class="stk-list">'+rows+'</div><p class="note">'+T("Daily closes from Yahoo Finance, not real time","Cierres diarios de Yahoo Finance, no en tiempo real")+(S.stocksAsOf?" · "+esc(fmtDate(S.stocksAsOf)):"")+". "+T("Not a recommendation to buy or sell.","No es una recomendación de compra o venta.")+"</p></section>";
 }
+function stkDates(x,id){var c=x.calendar||{},rows=[];if(c.earnings&&dayDiff(c.earnings)>=0)rows.push(["earnings",c.earnings,T("Quarterly results","Resultados trimestrales")]);if(c.exDividend&&dayDiff(c.exDividend)>=0)rows.push(["exdiv",c.exDividend,T("Ex-dividend date (buy before it to receive the next dividend)","Fecha ex-dividendo (hay que tener la acci\u00f3n antes para recibir el pr\u00f3ximo dividendo)")]);
+  if(!rows.length)return"";var full=STK_PILOT_OPEN||isPro();
+  return '<div class="sc-sec"><h4>'+T("Coming dates","Pr\u00f3ximas fechas")+(STK_PILOT_OPEN&&!isPro()?' <span class="protag">Pro</span>':"")+'</h4><ul class="sc-dates">'+rows.map(function(r){var dd=dayDiff(r[1]);return '<li><b>'+esc(new Date(r[1]+"T12:00:00Z").toLocaleDateString(S.lang==="es"?"es-CO":"en-US",{day:"numeric",month:"short",timeZone:"UTC"}))+"</b> "+esc(r[2])+' <small class="note">'+(dd===0?T("today","hoy"):dd===1?T("tomorrow","ma\u00f1ana"):T("in "+dd+" days","en "+dd+" d\u00edas"))+"</small>"+(full?' <button class="linkish" data-stkics="'+esc(id+"|"+r[0])+'">'+T("Add to calendar","A\u00f1adir al calendario")+"</button>":"")+"</li>"}).join("")+"</ul></div>";
+}
+function stkIcs(key){var p=key.split("|"),x=S.stocks&&S.stocks[p[0]];if(!x||!x.calendar)return;var d=p[1]==="earnings"?x.calendar.earnings:x.calendar.exDividend;if(!d)return;
+  var t=(p[1]==="earnings"?T("results","resultados"):T("ex-dividend date","fecha ex-dividendo"))+" \u00b7 "+x.name,ev={due:d,kind:"results",title:t,items:[]};
+  try{var txt=icsFile([ev]).replace("UID:"+d.replace(/-/g,"")+"-results@signalpoint","UID:"+d.replace(/-/g,"")+"-"+p[0]+"-"+p[1]+"@signalpoint"),blob=new Blob([txt],{type:"text/calendar;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="signalpoint-"+p[0]+"-"+d+".ics";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);toast(T("Calendar file downloaded.","Archivo de calendario descargado."))}catch(e){}
+}
+function stkCmp(x,id){var B=S.bench||{},o=[];["sp500","nasdaq","colcap"].forEach(function(b){if(B[b])o.push(["b:"+b,B[b].name+" ("+T("index","índice")+")"])});
+  Object.keys(S.stocks||{}).forEach(function(k){if(k!==id)o.push(["s:"+k,S.stocks[k].ticker+" · "+S.stocks[k].name])});if(!o.length)return"";
+  var def=x.region==="co"?"b:colcap":"b:sp500",sel=S.stkCmp&&o.some(function(p){return p[0]===S.stkCmp})&&S.stkCmp!=="s:"+id?S.stkCmp:(o.some(function(p){return p[0]===def})?def:o[0][0]);
+  var oth=sel.charAt(0)==="b"?B[sel.slice(2)]:S.stocks[sel.slice(2)],onm=sel.charAt(0)==="b"?oth.name:oth.ticker,full=STK_PILOT_OPEN||isPro(),m={};(oth.series||[]).forEach(function(p){m[p[0]]=p[1]});
+  var c=x.series.filter(function(p){return m[p[0]]!=null});if(!full)c=c.slice(-22);
+  var sel_='<select id="stkcmp" aria-label="'+T("Compare with","Comparar con")+'">'+o.map(function(p){return '<option value="'+esc(p[0])+'"'+(p[0]===sel?" selected":"")+">"+esc(p[1])+"</option>"}).join("")+"</select>";
+  var head='<div class="sc-sec sc-cmp"><h4>'+T("Compare","Comparar")+(STK_PILOT_OPEN&&!isPro()?' <span class="protag">Pro</span>':"")+"</h4>"+sel_;
+  if(c.length<10)return head+'<p class="note">'+T("Not enough shared days to compare.","No hay suficientes días en común para comparar.")+"</p></div>";
+  var a=c.map(function(p){return p[1]/c[0][1]*100}),b=c.map(function(p){return m[p[0]]/m[c[0][0]]*100}),all=a.concat(b),lo=Math.min.apply(null,all),hi=Math.max.apply(null,all),W=640,H=150;
+  function pl(v){return v.map(function(y,i){return (i/(v.length-1)*W).toFixed(1)+","+(H-10-(y-lo)/((hi-lo)||1)*(H-20)).toFixed(1)}).join(" ")}
+  var ra=a[a.length-1]-100,rb=b[b.length-1]-100,gap=ra-rb,y100=(H-10-(100-lo)/((hi-lo)||1)*(H-20)).toFixed(1),days=c.length,per=full?T("in the last year","en el último año"):T("in the last month","en el último mes");
+  var cur=(sel.charAt(0)==="s"&&oth.currency!==x.currency)||(sel==="b:colcap")!==(x.currency==="COP");
+  return head+'<svg class="sc-cmpch" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" role="img" aria-label="'+esc(x.ticker+" "+T("vs","vs")+" "+onm+", "+T("both start at 100","ambos parten de 100"))+'"><line x1="0" x2="'+W+'" y1="'+y100+'" y2="'+y100+'" class="c100"/><polyline points="'+pl(b)+'" class="cb"/><polyline points="'+pl(a)+'" class="ca"/></svg>'+
+    '<div class="sc-leg"><span><i class="ka"></i>'+esc(x.ticker)+" <b>"+stkPct(ra)+'</b></span><span><i class="kb"></i>'+esc(onm)+" <b>"+stkPct(rb)+"</b></span></div>"+
+    '<p>'+esc(T(x.ticker+" "+(ra>=0?"rose ":"fell ")+stkPct(Math.abs(ra)).replace(/^[+−]/,"")+" "+per+" and "+onm+" "+(rb>=0?"rose ":"fell ")+stkPct(Math.abs(rb)).replace(/^[+−]/,"")+": a gap of "+Math.abs(gap).toFixed(1)+" points "+(gap>=0?"in favor of ":"against ")+x.ticker+".",
+      x.ticker+" "+(ra>=0?"subió ":"bajó ")+stkPct(Math.abs(ra)).replace(/^[+−]/,"")+" "+per+" y "+onm+" "+(rb>=0?"subió ":"bajó ")+stkPct(Math.abs(rb)).replace(/^[+−]/,"")+": una diferencia de "+Math.abs(gap).toFixed(1).replace(".",",")+" puntos "+(gap>=0?"a favor de ":"en contra de ")+x.ticker+"."))+"</p>"+
+    '<p class="note">'+T("Both lines start at 100 on the first shared day ("+days+" trading days). Past moves don't say what comes next.","Ambas líneas parten de 100 el primer día en común ("+days+" días de bolsa). Lo que pasó no dice lo que viene.")+(cur?" "+T("Each one is measured in its own currency.","Cada una se mide en su propia moneda."):"")+"</p></div>";
+}
 function stockCard(x,id){
   var full=STK_PILOT_OPEN||isPro(),ser=full?x.series:x.series.slice(-22),last=mLast(x)[1],c1=stkChg(x,1),c22=stkChg(x,21),c63=stkChg(x,63),cy=stkChg(x,x.series.length-1);
   var v=ser.map(function(p){return p[1]}),lo=Math.min.apply(null,v),hi=Math.max.apply(null,v),W=640,H=180,up=v[v.length-1]>=v[0];
@@ -1747,7 +1775,9 @@ function stockCard(x,id){
     '<div class="sc-ch"><span>'+T("1 month","1 mes")+" <b class=\""+(c22>=0?"up":"down")+'">'+stkPct(c22)+'</b></span><span>'+T("3 months","3 meses")+" <b class=\""+(c63>=0?"up":"down")+'">'+stkPct(c63)+'</b></span><span>'+T("1 year","1 año")+" <b class=\""+(cy>=0?"up":"down")+'">'+(full?stkPct(cy):"🔒")+"</b></span></div>"+
     '<svg class="sc-chart '+(up?"up":"down")+'" viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" role="img" aria-label="'+esc(x.name)+" · "+(full?T("one year","un año"):T("one month","un mes"))+'"><polyline points="'+pts+'" fill="none" stroke="currentColor" stroke-width="2.4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>'+
     '<p class="note sc-range">'+(full?T("One year of daily closes","Un año de cierres diarios"):T("Last month. The full year is part of Pro.","Último mes. El año completo es parte de Pro."))+(STK_PILOT_OPEN&&!isPro()?' <span class="protag">'+T("Pro · open in the pilot","Pro · abierto en el piloto")+"</span>":"")+"</p>"+
+    stkCmp(x,id)+
     (why?'<div class="sc-sec"><h4>'+T("What usually moves it","Qué suele moverla")+"</h4><p>"+esc(T(why[0],why[1]))+"</p></div>":"")+
+    stkDates(x,id)+
     '<div class="sc-sec"><h4>'+T("News about this company","Noticias sobre esta empresa")+"</h4>"+(news.length?"<ul>"+news.map(function(b){return '<li><button class="linkish" data-open="'+esc(b.id)+'">'+esc(b.title)+"</button> <small>"+esc(fmtDate(b.eventDate))+"</small></li>"}).join("")+"</ul>":'<p class="note">'+T("No recent news about it in SignalPoint yet.","Todavía no hay noticias recientes sobre ella en SignalPoint.")+"</p>")+"</div>"+
     '<div class="row"><button class="btn'+(on?" ghost":"")+'" data-stkwatch="'+esc(id)+'">'+(on?T("Following ✓","Siguiendo ✓"):T("Follow","Seguir"))+'</button><a class="btn ghost" href="'+esc(safeUrl(x.source&&x.source.url)||"#")+'" target="_blank" rel="noopener noreferrer">'+T("Source","Fuente")+" ↗</a></div></article>";
 }
@@ -2704,6 +2734,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.bhgo){var nx=document.getElementById("bh-next");if(nx)nx.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
   if(t.dataset.ics){return icsDownload(t.dataset.ics)}
   if(t.dataset.stockgo){var sx=S.stocks&&S.stocks[t.dataset.stockgo];if(sx){S.stkReg=sx.region;S.stock=t.dataset.stockgo;go("markets");setTimeout(function(){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"start"})},60)}return}
+  if(t.dataset.stkics){return stkIcs(t.dataset.stkics)}
   if(t.dataset.stkreg){S.stkReg=t.dataset.stkreg;S.stock=null;return render()}
   if(t.dataset.stock!=null&&t.closest&&t.closest(".stk")){S.stock=t.dataset.stock||null;render();if(S.stock){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"nearest"})}return}
   if(t.dataset.stkwatch){var wid=t.dataset.stkwatch,ww=S.watch||[];S.watch=ww.indexOf(wid)>=0?ww.filter(function(z){return z!==wid}):ww.concat([wid]).slice(-13);persist();return render()}
@@ -2770,7 +2801,7 @@ document.addEventListener("input",function(e){
   if(e.target.id==="desc")S.descDraft=e.target.value;
 });
 document.addEventListener("change",function(e){
-  if(e.target.id==="dg-on"){return digestSave(!!e.target.checked)}if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
+  if(e.target.id==="dg-on"){return digestSave(!!e.target.checked)}if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="stkcmp"){S.stkCmp=e.target.value||null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
 var swX=null,swY=null,dgY=null,dgT=0,dgEl=null;
 document.addEventListener("touchstart",function(e){var bar=e.target&&e.target.closest&&e.target.closest(".desk.open .rd-bar");if(!bar||!e.touches[0]||window.matchMedia("(min-width:881px)").matches)return;dgEl=bar.parentNode;dgY=e.touches[0].clientY;dgT=Date.now();dgEl.classList.add("dragging")},{passive:true});
 document.addEventListener("touchmove",function(e){if(dgY==null||!dgEl||!e.touches[0])return;var dy=Math.max(0,e.touches[0].clientY-dgY);dgEl.style.transform="translateY("+dy+"px)"},{passive:true});
