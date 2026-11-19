@@ -1,7 +1,7 @@
 """SignalPoint news drafts (v1). Collects recent items from public feeds, asks Claude to write each as a SignalPoint brief
 grounded ONLY in the fetched source text, validates every draft with the publication gate (tools/quality.cjs) and writes
 the result to drafts/<date>.json. Nothing is published: a person reviews the drafts before they reach the site."""
-import json, os, re, sys, time, html, subprocess, urllib.request, xml.etree.ElementTree as ET
+import json, os, re, sys, time, html, subprocess, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 OUT = sys.argv[1] if len(sys.argv) > 1 else "drafts"
 KEY = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -77,7 +77,10 @@ Never recommend buying, selling or holding anything, never give price targets or
 def _call(messages, model=None):
     body = json.dumps({"model": model or MODEL, "max_tokens": 4000, "messages": messages}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={"x-api-key": KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=180) as r: j = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r: j = json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError("API %s: %s" % (e.code, e.read()[:300].decode("utf-8", "replace")))
     return "".join(c.get("text", "") for c in j.get("content", []))
 def _parse(t):
     i = t.find("{")
