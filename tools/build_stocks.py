@@ -63,8 +63,25 @@ for sid, sym, name, region, cur, sector, words in STOCKS:
                           "prefix": "$" if cur == "COP" else "US$", "decimals": dec,
                           "series": [[d, round(v, dec) if dec else round(v)] for d, v in ser],
                           "source": {"name": f"Yahoo Finance ({sym}), daily close", "url": f"https://finance.yahoo.com/quote/{sym}/"}}
-    cal = calendar(sym); time.sleep(0.4)
-    if "error" in cal: out.setdefault("calendarErrors", {})[sid] = cal["error"]
-    else: out["stocks"][sid]["calendar"] = cal
+
+# Upcoming earnings and dividend dates for the US stocks, from Nasdaq's public calendars (next 45 days, weekdays).
+from datetime import timedelta
+want = {v["ticker"].replace("-", "."): k for k, v in out["stocks"].items() if v["region"] == "us"}
+want.update({v["ticker"]: k for k, v in out["stocks"].items() if v["region"] == "us"})
+NH = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36", "Accept": "application/json"}
+cal_err = 0
+for n in range(0, 46):
+    d = today + timedelta(days=n)
+    if d.weekday() > 4: continue
+    for kind, key in (("earnings", "earnings"), ("dividends", "exDividend")):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(f"https://api.nasdaq.com/api/calendar/{kind}?date={d.isoformat()}", headers=NH), timeout=20) as r: j = json.load(r)
+            rows = ((j.get("data") or {}).get("rows") or ((j.get("data") or {}).get("calendar") or {}).get("rows") or [])
+            for row in rows:
+                sid = want.get(str(row.get("symbol", "")).upper())
+                if sid and key not in out["stocks"][sid].setdefault("calendar", {}): out["stocks"][sid]["calendar"][key] = d.isoformat()
+        except Exception as e:
+            cal_err += 1; out.setdefault("calendarErrors", []).append(f"{kind} {d}: {repr(e)[:60]}") if cal_err < 4 else None
+        time.sleep(0.25)
 json.dump(out, open(os.path.join(D, "stocks-live.json"), "w"), separators=(",", ":"))
 print("stocks:", sorted(out["stocks"]), "skipped:", out["skipped"])
