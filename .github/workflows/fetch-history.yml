@@ -5,7 +5,7 @@ on:
     - cron: '37 23 * * 1-5'   # weeknights, after the US close (18:37 Bogotá)
   push:
     branches: [main]
-    paths: ['tools/fetch_history.py', 'tools/event_study.py', 'tools/parse_fomc.py', 'tools/build_live.py', '.github/workflows/fetch-history.yml']
+    paths: ['tools/fetch_history.py', 'tools/event_study.py', 'tools/parse_fomc.py', 'tools/build_live.py', 'tools/build_stocks.py', '.github/workflows/fetch-history.yml']
 permissions:
   contents: write
 jobs:
@@ -20,6 +20,7 @@ jobs:
           python3 ../tools/parse_fomc.py fomc
           python3 ../tools/event_study.py > study.log 2>&1 || (cat study.log; exit 1)
           python3 ../tools/build_live.py .
+          python3 ../tools/build_stocks.py . || echo 'stocks step failed; board data still published'
       - name: Publish data (not site code) to the data branch
         run: |
           cd out
