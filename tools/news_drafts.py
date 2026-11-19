@@ -201,6 +201,34 @@ def main():
         ok = (not miss) and rv.get("pass") is True and int(rv.get("relevance") or 0) >= 3
         report.setdefault("audit", []).append({"id": b["id"], "title": b["title"], "url": b["source"]["url"], "gate": "pass", "numbers_missing": miss, "review": rv, "decision": "publish" if ok else "hold", "reviewModel": REVIEW_MODEL})
     publish(report, today)
+INSIGHT = """You write the SignalPoint Pro analysis of one market news brief. Use only the BRIEF and the SOURCE TEXT plus widely accepted economics.
+Return ONE JSON object: {"en": [[heading, paragraph], x4], "es": [[heading, paragraph], x4]} with exactly these headings in this order:
+en: "What it means", "Scenarios", "Who feels it first", "What would change the reading"
+es: "Qué significa", "Escenarios", "Quién lo siente primero", "Qué cambiaría la lectura"
+Rules: each paragraph 35-70 words, plain words; scenarios are conditional (if X, then Y tends to...), never predictions; never recommend buying, selling or holding anything and give no price targets;
+use only numbers that appear in the source text; English number notation in en, Colombian in es."""
+SB_URL = os.environ.get("SUPABASE_URL", "https://nfygddhczgwdurwuzjya.supabase.co")
+SB_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+def make_insight(b):
+    """Pro analysis for a published brief: public part (first section free) goes to briefs-live.json, the rest only to Supabase."""
+    if not KEY or not SB_KEY: return None
+    try: src = text_of(get(b["source"]["url"]))[:9000]
+    except Exception: return None
+    try: j = claude(INSIGHT + "\n\nBRIEF:\n" + json.dumps(b, ensure_ascii=False) + "\n\nSOURCE TEXT:\n" + src)
+    except Exception: return None
+    en, es = j.get("en"), j.get("es")
+    if not (isinstance(en, list) and isinstance(es, list) and len(en) == 4 and len(es) == 4 and all(isinstance(x, list) and len(x) == 2 and all(isinstance(y, str) and y.strip() for y in x) for x in en + es)): return None
+    if numbers_supported({"summary": " ".join(p for _, p in en), "es": {"summary": " ".join(p for _, p in es)}}, src + " " + json.dumps(b, ensure_ascii=False)): return None
+    body = {"p": [{"h": h, "p": t} for h, t in en], "es": {"p": [{"h": h, "p": t} for h, t in es]}}
+    req = urllib.request.Request(SB_URL + "/rest/v1/premium_content?on_conflict=id", data=json.dumps({"id": "insight:" + b["id"], "body": body}).encode(), method="POST",
+        headers={"apikey": SB_KEY, "Content-Type": "application/json", "Prefer": "resolution=merge-duplicates,return=minimal"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            if r.status >= 300: return None
+    except Exception as e:
+        print("insight upload failed", repr(e)[:160]); return None
+    return {"tease": en[0][1], "first": {"h": en[1][0], "p": en[1][1]}, "parts": [h for h, _ in en[2:]],
+            "es": {"tease": es[0][1], "first": {"h": es[1][0], "p": es[1][1]}, "parts": [h for h, _ in es[2:]]}}
 def publish(report, today):
     """Automatic publication with self-review: only drafts that passed the gate, the number check and the editor review."""
     os.makedirs(os.path.join(OUT, "live"), exist_ok=True)
@@ -216,9 +244,18 @@ def publish(report, today):
         if not b or i in have or b["source"]["url"] in have or i in retracted: continue
         if added >= MAX_PUBLISH: break
         live["briefs"].insert(0, b); added += 1
+        ins = make_insight(b)
+        if ins: live.setdefault("insights", {})[i] = ins
         for a in report["audit"]:
             if a.get("id") == i: a["publishedAt"] = datetime.now(timezone.utc).isoformat()
     live["briefs"] = [b for b in live["briefs"] if b["id"] not in retracted][:KEEP_LIVE]
+    keep = {b["id"] for b in live["briefs"]}; live["insights"] = {k: v for k, v in live.get("insights", {}).items() if k in keep}
+    done_back = 0
+    for b in live["briefs"]:   # briefs published before analysis existed get theirs a few per run
+        if done_back >= int(os.environ.get("SP_INSIGHT_BACKFILL", "4")): break
+        if b["id"] in live["insights"]: continue
+        ins = make_insight(b); done_back += 1
+        if ins: live["insights"][b["id"]] = ins
     live["updatedAt"] = datetime.now(timezone.utc).isoformat(); live["retracted"] = sorted(retracted)
     json.dump(live, open(lp, "w"), ensure_ascii=False, indent=1)
     json.dump(report, open(os.path.join(OUT, f"{today}.json"), "w"), ensure_ascii=False, indent=1)

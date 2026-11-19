@@ -1353,6 +1353,7 @@ function liveRefresh(){
     if(!j||!Array.isArray(j.briefs))return;var have={},urls={},n=0,ret=(j.retracted||[]);S.briefs.forEach(function(b){have[b.id]=1;if(b.source)urls[b.source.url]=1});
     S.briefs=S.briefs.filter(function(b){return ret.indexOf(b.id)<0});
     j.briefs.slice(0,40).forEach(function(b){if(!b||typeof b.id!=="string"||have[b.id]||(b.source&&urls[b.source.url])||ret.indexOf(b.id)>=0)return;var c=JSON.parse(JSON.stringify(b));if(!validBrief(c))return;S.autoIds=S.autoIds||{};S.autoIds[c.id]=1;S.briefs.push(c);n++});
+    if(j.insights&&typeof j.insights==="object"){Object.keys(j.insights).forEach(function(k){var v=j.insights[k];if(SP_CONTENT.insights[k]||!v||typeof v.tease!=="string"||!v.first||typeof v.first.p!=="string"||!Array.isArray(v.parts))return;SP_CONTENT.insights[k]=JSON.parse(JSON.stringify(v));if(S.lang==="es")swapLang(SP_CONTENT.insights[k]);n++})}
     if(n){S.briefs.sort(function(a,b){return a.eventDate<b.eventDate?1:a.eventDate>b.eventDate?-1:0});applyLang();render()}
   });
   liveGet("stocks-live.json").then(function(j){if(j&&j.stocks&&typeof j.stocks==="object"){var ok={};Object.keys(j.stocks).forEach(function(k){var x=j.stocks[k];if(/^[a-z0-9]{1,16}$/.test(k)&&x&&Array.isArray(x.series)&&x.series.length>20)ok[k]=x});S.stocks=ok;S.stocksAsOf=j.asOf;if(S.view==="markets")render()}});

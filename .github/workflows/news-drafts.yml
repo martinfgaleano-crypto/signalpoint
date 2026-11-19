@@ -19,6 +19,7 @@ jobs:
       - name: Write drafts (nothing is published)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python3 tools/news_drafts.py d
       - name: Social cards for new briefs (images + captions, nothing is posted)
         run: pip install -q pillow==12.0.0 && python3 tools/social_cards.py d
