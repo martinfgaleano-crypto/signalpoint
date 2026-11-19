@@ -1065,6 +1065,7 @@ body.ck-open{overflow:hidden}
 .aev-d{background:color-mix(in srgb,var(--c) 70%,#000)!important}
 .unit-h[style*="#E8A600"]{color:#2A1E00}.unit-h[style*="#E8A600"] .u-ic{color:#2A1E00;background:rgba(0,0,0,.08)}.unit-h[style*="#E8A600"] .u-p{background:rgba(0,0,0,.15)}.unit-h[style*="#E8A600"] .u-p i{background:#2A1E00}
 .unit-h[style*="#E8A600"] .protag,.unit-h[style*="#E8A600"] .freetag{color:#2A1E00;border-color:rgba(0,0,0,.35)}
+.digest{margin:22px 0;padding:18px 20px;background:#fff;border:2px solid #E6E9F2;border-bottom-width:5px;border-radius:20px}.digest h2{font-size:1.1rem;margin:0 0 4px}.dg-sw{display:flex;gap:10px;align-items:center;font-weight:600;min-height:44px;cursor:pointer}.dg-sw input{width:22px;height:22px}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1884,7 +1885,7 @@ function authCatch(){
   try{history.replaceState(null,"",location.pathname+location.search+"#account")}catch(e){location.hash="account"}
 }
 function authToken(){try{var s=JSON.parse(localStorage.getItem(SKEY)||"null");if(s&&s.t&&s.exp>Date.now())return s.t}catch(e){}return null}
-function authFetch(path,opt){opt=opt||{};var h={apikey:SP_AUTH.key,"Content-Type":"application/json"},t=authToken();if(t)h.Authorization="Bearer "+t;return fetch(SP_AUTH.url+path,{method:opt.method||"GET",headers:h,body:opt.body?JSON.stringify(opt.body):undefined})}
+function authFetch(path,opt){opt=opt||{};var h={apikey:SP_AUTH.key,"Content-Type":"application/json"},t=authToken();if(t)h.Authorization="Bearer "+t;if(opt.prefer)h.Prefer=opt.prefer;return fetch(SP_AUTH.url+path,{method:opt.method||"GET",headers:h,body:opt.body?JSON.stringify(opt.body):undefined})}
 /* ---------- Anonymous usage counts and the Pro waitlist. Insert-only tables; no cookies, no personal data in counts. ---------- */
 function spPost(table,row){
   if(!authReady()||typeof fetch!=="function"||location.protocol==="file:")return Promise.resolve(false);
@@ -1922,8 +1923,17 @@ async function authSignIn(email){
   S.authBusy=false;render();
 }
 function authSignOut(){try{localStorage.removeItem(SKEY)}catch(e){}S.user=null;S.plan=null;S.prem=window.SP_PREMIUM?mergedPremium(window.SP_PREMIUM):null;render()}
+/* Morning summary by email: the signed-in reader turns it on; the Supabase function "digest" sends it. */
+function digestLoad(){if(!S.user||S.digest!==undefined)return;S.digest=null;authFetch("/rest/v1/digest_subs?select=enabled").then(function(r){return r.ok?r.json():[]}).then(function(j){S.digest=!!(j[0]&&j[0].enabled);if(S.view==="account")render()}).catch(function(){S.digest=false})}
+function digestBlock(){digestLoad();var on=!!S.digest;
+  return '<section class="digest"><h2>'+T("Morning summary by email","Resumen de la mañana por correo")+'</h2><p class="note">'+T("Each weekday morning: the last close of the markets you follow and the news behind them, in one minute. You can turn it off any time.","Cada mañana entre semana: el último cierre de los mercados que sigues y las noticias detrás, en un minuto. Puedes apagarlo cuando quieras.")+'</p><label class="dg-sw"><input type="checkbox" id="dg-on"'+(on?" checked":"")+(S.digest===null?" disabled":"")+'><span>'+(on?T("On: you will get it at about 7:00 (Bogotá)","Activado: te llega hacia las 7:00 (Bogotá)"):T("Off","Apagado"))+"</span></label></section>";
+}
+function digestSave(on){
+  var w=(S.watch||[]).slice(0,8);S.digest=on;render();
+  authFetch("/rest/v1/digest_subs?on_conflict=user_id",{method:"POST",body:{user_id:S.user.id,email:S.user.email,lang:S.lang==="en"?"en":"es",watch:w,enabled:on,updated_at:new Date().toISOString()},prefer:"resolution=merge-duplicates,return=minimal"}).then(function(r){toast(r.ok?(on?T("Morning summary on.","Resumen de la mañana activado."):T("Morning summary off.","Resumen de la mañana apagado.")):T("Could not save. Try again.","No se pudo guardar. Intenta de nuevo."));if(!r.ok){S.digest=!on;render()}}).catch(function(){S.digest=!on;render()});
+}
 function vAccount(){
-  if(S.user)return '<section class="acct"><h1>Your account</h1><p class="facts">Signed in as <b>'+esc(S.user.email)+'</b>.</p><p><span class="plan-badge '+(S.plan==="pro"?"pro":"")+'">'+(S.plan==="pro"?"SignalPoint Pro":"Free plan")+"</span></p>"+(S.plan==="pro"?'<p class="note">Insight, the weekly reading and all courses are unlocked.</p>':'<p class="note">Pro is not on sale yet. <button class="linkish" data-view="plans">See what it adds</button>.</p>')+'<button class="btn ghost" id="signout">Sign out</button></section>';
+  if(S.user)return '<section class="acct"><h1>Your account</h1><p class="facts">Signed in as <b>'+esc(S.user.email)+'</b>.</p><p><span class="plan-badge '+(S.plan==="pro"?"pro":"")+'">'+(S.plan==="pro"?"SignalPoint Pro":"Free plan")+"</span></p>"+(S.plan==="pro"?'<p class="note">Insight, the weekly reading and all courses are unlocked.</p>':'<p class="note">Pro is not on sale yet. <button class="linkish" data-view="plans">See what it adds</button>.</p>')+digestBlock()+'<button class="btn ghost" id="signout">Sign out</button></section>';
   var on=authReady();
   return '<section class="acct"><h1>Sign in</h1><p class="facts">Use your email. We send you a link; no password to remember.</p><form id="signin-form" class="row"><label class="sr" for="si-email">Email</label><input class="search" id="si-email" type="email" autocomplete="email" placeholder="you@example.com"'+(on?"":" disabled")+'><button class="btn" type="submit"'+(on&&!S.authBusy?"":" disabled")+">"+(S.authBusy?"Sending…":"Send me a link")+"</button></form>"+
     (S.authNote?'<p class="note" role="status">'+esc(S.authNote)+"</p>":"")+(on?"":'<p class="note">Accounts open together with Pro. Until then, everything free works without signing in, and your list and progress stay in this browser.</p>')+"</section>";
@@ -2701,7 +2711,8 @@ document.addEventListener("input",function(e){
   if(e.target.id==="q"){S.q=e.target.value;S.sel=null;S.selectionTouched=false;render()}
   if(e.target.id==="desc")S.descDraft=e.target.value;
 });
-document.addEventListener("change",function(e){if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
+document.addEventListener("change",function(e){
+  if(e.target.id==="dg-on"){return digestSave(!!e.target.checked)}if(e.target.id==="wi-kind"){S.wiKind=e.target.value;S.wiMove=null;return render()}if(e.target.id==="mcmp"){S.mcmp=e.target.value||null;return render()}if(e.target.id==="try-kind"){S.tryKind=e.target.value;var o=$("try-out");if(o)o.innerHTML=tryOut()}});
 var swX=null,swY=null,dgY=null,dgT=0,dgEl=null;
 document.addEventListener("touchstart",function(e){var bar=e.target&&e.target.closest&&e.target.closest(".desk.open .rd-bar");if(!bar||!e.touches[0]||window.matchMedia("(min-width:881px)").matches)return;dgEl=bar.parentNode;dgY=e.touches[0].clientY;dgT=Date.now();dgEl.classList.add("dragging")},{passive:true});
 document.addEventListener("touchmove",function(e){if(dgY==null||!dgEl||!e.touches[0])return;var dy=Math.max(0,e.touches[0].clientY-dgY);dgEl.style.transform="translateY("+dy+"px)"},{passive:true});
