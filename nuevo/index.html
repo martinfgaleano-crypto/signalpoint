@@ -1086,6 +1086,7 @@ body.ck-open{overflow:hidden}
 .sc-sec{margin-top:14px}.sc-sec h4{margin:0 0 6px;font-size:.95rem}.sc-sec p{margin:0;color:#2B3345}.sc-sec ul{margin:0;padding-left:18px}.sc-sec li{margin:4px 0}
 .stk-card .row{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:600px){.stk-list{grid-template-columns:1fr}.stk-r{grid-template-columns:92px minmax(0,1fr) auto}.stk-s{display:none}}
+.pf-stk{margin:12px 0;border-top:1px solid #EEF0F5;padding-top:10px}.pf-stk summary{font-weight:700;cursor:pointer;min-height:32px}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2F5BFF">
@@ -1358,7 +1359,7 @@ function liveRefresh(){
     if(j.insights&&typeof j.insights==="object"){Object.keys(j.insights).forEach(function(k){var v=j.insights[k];if(SP_CONTENT.insights[k]||!v||typeof v.tease!=="string"||!v.first||typeof v.first.p!=="string"||!Array.isArray(v.parts))return;SP_CONTENT.insights[k]=JSON.parse(JSON.stringify(v));if(S.lang==="es")swapLang(SP_CONTENT.insights[k]);n++})}
     if(n){S.briefs.sort(function(a,b){return a.eventDate<b.eventDate?1:a.eventDate>b.eventDate?-1:0});applyLang();render()}
   });
-  liveGet("stocks-live.json").then(function(j){if(j&&j.stocks&&typeof j.stocks==="object"){var ok={};Object.keys(j.stocks).forEach(function(k){var x=j.stocks[k];if(/^[a-z0-9]{1,16}$/.test(k)&&x&&Array.isArray(x.series)&&x.series.length>20)ok[k]=x});S.stocks=ok;S.stocksAsOf=j.asOf;if(S.view==="markets")render()}});
+  liveGet("stocks-live.json").then(function(j){if(j&&j.stocks&&typeof j.stocks==="object"){var ok={};Object.keys(j.stocks).forEach(function(k){var x=j.stocks[k];if(/^[a-z0-9]{1,16}$/.test(k)&&x&&Array.isArray(x.series)&&x.series.length>20)ok[k]=x});S.stocks=ok;S.stocksAsOf=j.asOf;if(S.view==="markets"||S.view==="exposure")render()}});
   liveGet("history.json").then(function(j){if(j&&j.events&&(!S.hist||String(j.asOf)>=String(S.hist.asOf))){S.hist=j;if(S.view==="markets"||S.view==="briefing")render()}});
 }
 function hxSimilar(){
@@ -1879,12 +1880,12 @@ function mAhead(){
 var WAITLIST_URL="";
 var FREE_LIST=3;
 var PRO_FEATS=[
- ["Deeper insight on every event","What it means for prices, rates and your money, scenario by scenario, with sources"],
- ["The week explained","A weekly reading of what moved and what comes next, in plain words"],
+ ["Your real portfolio, explained every day","Add the stocks and funds you own; each day see what moved it and which news did it"],
+ ["Full stock cards","One year of prices, the news about each company and what usually moves it, for 22 US and Colombian stocks"],
+ ["Deeper insight on every event","What it means, scenarios, who feels it first and what would change the reading, with sources"],
+ ["Alerts before the dates that matter","Calendar reminders for rate decisions, inflation and results, plus a morning summary"],
  ["Every lesson in eight courses","Investing from Colombia, Credit and debt in Colombia, Taxes on your money in Colombia, Investing in the US from zero, Investing from zero, Reading the Fed, Understanding company results, The dollar and Latin America"],
- ["Alerts and a morning summary","A note before every date that moves your markets, and one minute each morning on your list"],
- ["Your whole list, full history","Unlimited markets, one and five years on every chart"],
- ["Ask about any event","An answer with its source, never a tip"]
+ ["Ask about any event","An answer from the news and its source, never a tip"]
 ];
 function proLock(what){return '<button class="prolock" data-view="plans" aria-label="'+esc(what)+' is part of Pro. See plans"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pro</button>'}
 /* Prices by market: COP for visitors in Colombia, USD for everyone else. */
@@ -2292,12 +2293,12 @@ LTRY_ES={
  oil:{label:"Si el Brent se moviera",out:function(v){var f=60*(1+v/100);return {big:money(f),line:"Un tanque de US$60 costaría "+money(f)+" solo si el precio en el surtidor siguiera al crudo por completo y el movimiento durara. En la práctica lo sigue en parte y más tarde."}},note:"Un techo, no un pronóstico."}
 };
 PRO_FEATS_ES=[
- ["Un análisis más profundo de cada evento","Qué significa para precios, tasas y tu dinero, escenario por escenario, con fuentes"],
- ["La semana explicada","Una lectura semanal de lo que se movió y lo que viene, en palabras simples"],
- ["Todas las lecciones de los siete cursos","Invertir desde Colombia, Crédito y deudas en Colombia, Impuestos y tu dinero en Colombia, Invertir desde cero, Cómo leer a la Fed, Entender los resultados de una empresa, El dólar y América Latina"],
- ["Alertas y un resumen cada mañana","Un aviso antes de cada fecha que mueve tus mercados, y un minuto cada mañana sobre tu lista"],
- ["Toda tu lista, con historia completa","Mercados ilimitados, uno y cinco años en cada gráfico"],
- ["Pregunta sobre cualquier evento","Una respuesta con su fuente, nunca un dato de inversión"]
+ ["Tu portafolio real, explicado cada día","Agrega las acciones y fondos que tienes; cada día ves qué lo movió y qué noticia fue"],
+ ["Fichas completas de acciones","Un año de precios, las noticias de cada empresa y qué suele moverla, para 22 acciones de EE. UU. y Colombia"],
+ ["Análisis completo de cada evento","Qué significa, escenarios, quién lo siente primero y qué cambiaría la lectura, con fuentes"],
+ ["Avisos antes de las fechas que importan","Recordatorios de calendario para decisiones de tasas, inflación y resultados, y un resumen cada mañana"],
+ ["Todas las lecciones de los ocho cursos","Invertir desde Colombia, Crédito y deudas en Colombia, Impuestos y tu dinero en Colombia, Invertir en EE. UU. desde cero, Invertir desde cero, Cómo leer a la Fed, Entender los resultados de una empresa, El dólar y América Latina"],
+ ["Pregunta sobre cualquier evento","Una respuesta a partir de la noticia y su fuente, nunca un dato de inversión"]
 ];
 /*UI-ES-END*/
 function initLang(){var q=/[?&]lang=(en|es)\b/.exec(location.search);if(q)return q[1];try{var v=localStorage.getItem(LANGKEY);if(v==="en"||v==="es")return v}catch(e){}
@@ -2503,6 +2504,9 @@ function plansBlock(){
   return '<section class="plans" aria-label="Planned offers"><h4>How SignalPoint could become a business</h4><p class="note">The pilot is free: nothing is charged. These are unvalidated offers and prices. Alerts, email, team seats, multiple profiles and exports are planned features, not available subscriptions.</p><div class="plan-grid">'+plans.map(function(p){return '<div class="plan"><b>'+p[0]+'</b><span class="plan-price">'+p[1]+'</span><p>'+p[2]+'</p></div>'}).join("")+"</div></section>";
 }
 /* ---------- Practice portfolio: virtual pesos, real prices from the board. No real money, no recommendations. ---------- */
+/* Portfolio assets: board markets plus individual stocks (stocks only in the real portfolio). */
+function pfMkt(id){return S.markets[id]||(S.stocks&&S.stocks[id])||null}
+function pfA(k){return PFA[k]||(S.stocks&&S.stocks[k]?{usd:S.stocks[k].currency==="USD",stock:true}:undefined)}
 var PFKEY="signalpoint.pf";
 var PF_PILOT_OPEN=true; /* journal and real portfolio are Pro features, open to everyone during the pilot */
 function pfPro(){return PF_PILOT_OPEN||isPro()}
@@ -2526,17 +2530,17 @@ async function pfPull(){
     else S.pfSync="ok";
   }catch(e){}
 }
-function pfName(id){return id==="cdt"?T("Reference CDT (11.5% a year, example)","CDT de referencia (11,5% E.A., ejemplo)"):id==="usdcop"?T("Dollars","Dólares"):(S.markets[id]?S.markets[id].name:id)+(PFA[id]&&PFA[id].usd?T(" (in pesos)"," (en pesos)"):"")}
-function pfMap(id){var m=S.markets[id];if(!m||!m.series)return null;var o={};m.series.forEach(function(p){o[p[0]]=p[1]});return o}
+function pfName(id){return id==="cdt"?T("Reference CDT (11.5% a year, example)","CDT de referencia (11,5% E.A., ejemplo)"):id==="usdcop"?T("Dollars","Dólares"):(pfMkt(id)?pfMkt(id).name:id)+(pfA(id)&&pfA(id).usd?T(" (in pesos)"," (en pesos)"):"")}
+function pfMap(id){var m=pfMkt(id);if(!m||!m.series)return null;var o={};m.series.forEach(function(p){o[p[0]]=p[1]});return o}
 function pfAt(map,d){var best=null,bd="";for(var k in map){if(k<=d&&k>bd){bd=k;best=map[k]}}return best}
-function pfDays(ids){var set={};ids.concat(["usdcop"]).forEach(function(id){var m=S.markets[id];if(m&&m.series)m.series.forEach(function(p){set[p[0]]=1})});return Object.keys(set).sort()}
+function pfDays(ids){var set={};ids.concat(["usdcop"]).forEach(function(id){var m=pfMkt(id);if(m&&m.series)m.series.forEach(function(p){set[p[0]]=1})});return Object.keys(set).sort()}
 function pfCalc(holds,start){
   var ids=Object.keys(holds).filter(function(k){return holds[k]>0}),mk=ids.filter(function(k){return k!=="cdt"}),maps={},trm=pfMap("usdcop");if(!trm)return null;
   mk.forEach(function(k){maps[k]=pfMap(k)});if(mk.some(function(k){return !maps[k]}))return null;
-  var first=start||"";mk.concat(["usdcop"]).forEach(function(k){var m=S.markets[k].series;if(m[0][0]>first)first=m[0][0]});
+  var first=start||"";mk.concat(["usdcop"]).forEach(function(k){var m=pfMkt(k).series;if(m[0][0]>first)first=m[0][0]});
   var days=pfDays(mk).filter(function(d){return d>=first});if(days.length<1)return null;
   var d0=days[0],cap=(arguments[2])||(pfCur()&&pfCur().cap)||10000000;
-  function px(k,d){if(k==="usdcop")return pfAt(trm,d);var v=pfAt(maps[k],d);return PFA[k].usd?v*pfAt(trm,d):v}
+  function px(k,d){if(k==="usdcop")return pfAt(trm,d);var v=pfAt(maps[k],d);return pfA(k).usd?v*pfAt(trm,d):v}
   var base={};mk.forEach(function(k){base[k]=px(k,d0)});
   function parts(d){var o={},n=(Date.parse(d)-Date.parse(d0))/864e5;ids.forEach(function(k){o[k]=k==="cdt"?holds[k]*cap*Math.pow(1+PFA.cdt.rate,n/365):holds[k]*cap*px(k,d)/base[k]});return o}
   var vals=days.map(function(d){var p=parts(d),t=0;for(var k in p)t+=p[k];return t});
@@ -2564,9 +2568,9 @@ function pfVerdict(j,idx){
 }
 /* "Your day": one card per followed market with today's move, the newest news about it and its next date. */
 function tuDia(){
-  var ids=(S.watch&&S.watch.length?S.watch:["usdcop","colcap","sp500"]).filter(function(id){var m=S.markets[id];return m&&m.kind!=="stat"&&m.series&&m.series.length>1}).slice(0,4);if(!ids.length)return"";
+  var ids=(S.watch&&S.watch.length?S.watch:["usdcop","colcap","sp500"]).filter(function(id){var m=pfMkt(id);return m&&m.kind!=="stat"&&m.series&&m.series.length>1}).slice(0,4);if(!ids.length)return"";
   var ev=typeof aEvents==="function"?aEvents():[];
-  var rows=ids.map(function(id){var m=S.markets[id],c=mChange(m,m.series.length-2),d=mDir(c.v);
+  var rows=ids.map(function(id){var m=pfMkt(id),c=mChange(m,m.series.length-2),d=mDir(c.v);
     var rel=(m.related||[]).map(byId).filter(Boolean).sort(function(a,b){return a.eventDate<b.eventDate?1:-1})[0];
     var nx=ev.filter(function(e){return (ACAT[e.kind]&&ACAT[e.kind].moves||[]).indexOf(id)>=0&&dayDiff(e.due)>=0})[0];
     return '<li><button class="td-m" data-market="'+esc(id)+'"><b>'+esc(m.name)+'</b><span class="td-v">'+esc(mNum(mLast(m)[1],m))+'</span><em class="'+d+'">'+esc(c.text)+"</em></button>"+
@@ -2607,10 +2611,10 @@ function vPortfolio(){
   var chart=c.days.length<2?"":'<svg viewBox="0 0 '+W+" "+H+'" preserveAspectRatio="none" class="pf-ch" role="img" aria-label="'+T("Your portfolio against simple alternatives","Tu portafolio frente a alternativas simples")+'">'+B.map(function(b){return pl(b.vals,b.col,1.6,1)}).join("")+pl(v,"#2F5BFF",2.6)+"</svg>";
   var lg='<div class="pf-lg"><span><i style="background:#2F5BFF"></i>'+T("Your portfolio","Tu portafolio")+" <b>"+pfPct(ch)+"</b></span>"+B.map(function(b){var e=b.vals.filter(function(x){return x!=null});return "<span><i style=\"background:"+b.col+"\"></i>"+esc(b.lab)+" <b>"+pfPct((e[e.length-1]/e[0]-1)*100)+"</b></span>"}).join("")+"</div>";
   var dl=c.days[c.days.length-1],dp=c.days[c.days.length-2],P1=c.parts(dl),P0=c.parts(dp);
-  var moved=c.ids.filter(function(k){return k!=="cdt"}).map(function(k){var d=P1[k]-P0[k],m=S.markets[k],pxnew=m&&m.series.some(function(q){return q[0]===dl}),own=k==="usdcop"?null:pfAt(pfMap(k),dl)/pfAt(pfMap(k),dp)-1,fx=pfAt(pfMap("usdcop"),dl)/pfAt(pfMap("usdcop"),dp)-1;
-    var why=k==="usdcop"?T("The TRM moved "+pfPct(fx*100)+".","La TRM se movió "+pfPct(fx*100)+"."):!pxnew?(PFA[k].usd?T("No new close for the market; it moved only with the dollar ("+pfPct(fx*100)+").","Sin cierre nuevo del mercado; se movió solo por el dólar ("+pfPct(fx*100)+")."):T("No new close for this market.","Sin cierre nuevo de este mercado.")):T(m.name+" moved "+pfPct(own*100)+(PFA[k].usd?" and the dollar "+pfPct(fx*100):"")+".",m.name+" se movió "+pfPct(own*100)+(PFA[k].usd?" y el dólar "+pfPct(fx*100):"")+".");
-    var rel=(m&&m.related||[]).map(byId).filter(Boolean).sort(function(a,b){return a.eventDate<b.eventDate?1:-1})[0];
-    return {d:d,html:'<li><div><b>'+esc(pfName(k))+"</b><span>"+esc(why)+"</span>"+(rel?'<button class="linkish" data-open="'+esc(rel.id)+'">'+esc(rel.title)+" →</button>":"")+'<button class="linkish pf-hx" data-market="'+esc(k)+'" data-pfmk="1">'+T("What happened the other times","Qué pasó las otras veces")+'</button></div><em class="'+(d>0?"up":d<0?"down":"")+'">'+(d>0?"+":"")+esc(pfMoney(d))+"</em></li>"}}).sort(function(a,b){return Math.abs(b.d)-Math.abs(a.d)});
+  var moved=c.ids.filter(function(k){return k!=="cdt"}).map(function(k){var d=P1[k]-P0[k],m=pfMkt(k),pxnew=m&&m.series.some(function(q){return q[0]===dl}),own=k==="usdcop"?null:pfAt(pfMap(k),dl)/pfAt(pfMap(k),dp)-1,fx=pfAt(pfMap("usdcop"),dl)/pfAt(pfMap("usdcop"),dp)-1;
+    var why=k==="usdcop"?T("The TRM moved "+pfPct(fx*100)+".","La TRM se movió "+pfPct(fx*100)+"."):!pxnew?(pfA(k).usd?T("No new close for the market; it moved only with the dollar ("+pfPct(fx*100)+").","Sin cierre nuevo del mercado; se movió solo por el dólar ("+pfPct(fx*100)+")."):T("No new close for this market.","Sin cierre nuevo de este mercado.")):T(m.name+" moved "+pfPct(own*100)+(pfA(k).usd?" and the dollar "+pfPct(fx*100):"")+".",m.name+" se movió "+pfPct(own*100)+(pfA(k).usd?" y el dólar "+pfPct(fx*100):"")+".");
+    var rel=(m&&m.ticker&&typeof stkNews==="function"?stkNews(m):(m&&m.related||[]).map(byId)).filter(Boolean).sort(function(a,b){return a.eventDate<b.eventDate?1:-1})[0];
+    return {d:d,html:'<li><div><b>'+esc(pfName(k))+"</b><span>"+esc(why)+"</span>"+(rel?'<button class="linkish" data-open="'+esc(rel.id)+'">'+esc(rel.title)+" →</button>":"")+(S.markets[k]?'<button class="linkish pf-hx" data-market="'+esc(k)+'" data-pfmk="1">'+T("What happened the other times","Qué pasó las otras veces")+'</button>':'<button class="linkish pf-hx" data-stockgo="'+esc(k)+'">'+T("See the stock card","Ver la ficha de la acción")+'</button>')+'</div><em class="'+(d>0?"up":d<0?"down":"")+'">'+(d>0?"+":"")+esc(pfMoney(d))+"</em></li>"}}).sort(function(a,b){return Math.abs(b.d)-Math.abs(a.d)});
   var hold=c.ids.map(function(k){var p0=p.holds[k]*c.cap,pn=P1[k];return "<tr><td><b>"+esc(pfName(k))+"</b></td><td>"+(real?esc(pfMoney(p0)):Math.round(p.holds[k]*100)+"%")+"</td><td>"+esc(pfMoney(pn))+'</td><td class="'+(pn>=p0?"up":"down")+'">'+pfPct((pn/p0-1)*100)+"</td></tr>"}).join("");
   var J=(p.journal||[]),today=new Date().toISOString().slice(0,10);
   var journal=pfPro()?'<ul class="pf-j">'+(J.length?J.map(function(j,i){return {j:j,i:i}}).reverse().map(function(o){var j=o.j,due=j.review<=today,open=S.pfRev===o.i;return '<li><b><span>'+esc(fmtDate(j.d))+"</span> · "+esc(j.text)+'</b> <span class="pill'+(due?" due":"")+'">'+(due?T("Review now","Revisar ahora"):T("Review ","Revisar ")+"<span>"+esc(fmtDate(j.review))+"</span>")+"</span>"+(j.verdict?' <span class="pill vd">'+esc({again:T("Would do again","Lo volvería a hacer"),differ:T("Would do differently","Lo haría distinto"),unsure:T("Too early","Aún es pronto")}[j.verdict]||"")+"</span>":"")+(j.why?"<br><small>“"+esc(j.why)+"”</small>":"")+(j.lesson?'<br><small class="pf-les">'+T("Learned: ","Aprendí: ")+esc(j.lesson)+"</small>":"")+'<br><button class="linkish" data-pfrev="'+o.i+'">'+(open?T("Hide review","Ocultar revisión"):T("See how it went","Ver cómo va"))+"</button>"+(open?pfReview(p,j,o.i):"")+"</li>"}).join(""):'<li class="note">'+T("No decisions yet. Write each decision and its reason in one line; in 30 days SignalPoint shows you what happened.","Aún no hay decisiones. Escribe cada decisión y su razón en una línea; a los 30 días SignalPoint te muestra qué pasó.")+"</li>")+'</ul><form id="pf-jform" class="pf-jf"><input class="search" id="pf-jt" maxlength="120" required placeholder="'+T("Decision (e.g. I kept Colcap)","Decisión (ej.: mantuve el Colcap)")+'"><input class="search" id="pf-jw" maxlength="160" placeholder="'+T("Why, in one line","Por qué, en una línea")+'"><button class="btn" type="submit">'+T("Record","Registrar")+"</button></form>":'<p>'+T("Write down each decision and why. In 30 days SignalPoint shows you what happened and what history said: the fastest way to learn from your own calls.","Anota cada decisión y por qué. A los 30 días SignalPoint te muestra qué pasó y qué decía la historia: la forma más rápida de aprender de tus propias decisiones.")+"</p>"+proCta(T("Decision journal with 30-day review","Diario de decisiones con revisión a 30 días"));
@@ -2621,7 +2625,7 @@ function vPortfolio(){
 }
 function pfEditor(){
   var real=S.pfMode==="real",p=pfCur(),h=S.pfDraft||(p&&p.holds)||{},cap=(p&&p.cap)||10000000;
-  return '<section class="paper pf-ed"><h3>'+(real?T("Your positions today","Tus posiciones hoy"):T("Choose your weights","Elige tus pesos"))+'</h3><p class="note">'+(real?T("Value of each position today, in pesos. Leave empty what you do not hold.","Valor de cada posición hoy, en pesos. Deja vacío lo que no tienes."):T("Whole percentages that add up to 100.","Porcentajes enteros que sumen 100."))+'</p><form id="pf-ef">'+Object.keys(PFA).filter(function(k){return k==="cdt"||(S.markets[k]&&S.markets[k].series)}).map(function(k){var val=real?(S.pfDraft?(h[k]||""):(h[k]?Math.round(h[k]*cap):"")):Math.round((h[k]||0)*100);return '<label class="pf-w"><span>'+esc(pfName(k))+'</span><input class="search" type="number" min="0" '+(real?'step="1000" placeholder="0"':'max="100" step="1"')+' data-pfw="'+k+'" value="'+val+'">'+(real?"":"%")+"</label>"}).join("")+(S.pfErr?'<p class="note problem" role="alert">'+esc(S.pfErr)+"</p>":"")+'<div class="row"><button class="btn" type="submit">'+T("Save","Guardar")+'</button><button class="btn ghost" type="button" data-pfcancel="1">'+T("Cancel","Cancelar")+"</button></div></form></section>";
+  return '<section class="paper pf-ed"><h3>'+(real?T("Your positions today","Tus posiciones hoy"):T("Choose your weights","Elige tus pesos"))+'</h3><p class="note">'+(real?T("Value of each position today, in pesos. Leave empty what you do not hold.","Valor de cada posición hoy, en pesos. Deja vacío lo que no tienes."):T("Whole percentages that add up to 100.","Porcentajes enteros que sumen 100."))+'</p><form id="pf-ef">'+Object.keys(PFA).filter(function(k){return k==="cdt"||(pfMkt(k)&&pfMkt(k).series)}).map(function(k){var val=real?(S.pfDraft?(h[k]||""):(h[k]?Math.round(h[k]*cap):"")):Math.round((h[k]||0)*100);return '<label class="pf-w"><span>'+esc(pfName(k))+'</span><input class="search" type="number" min="0" '+(real?'step="1000" placeholder="0"':'max="100" step="1"')+' data-pfw="'+k+'" value="'+val+'">'+(real?"":"%")+"</label>"}).join("")+(real&&S.stocks?'<details class="pf-stk"'+(Object.keys(h).some(function(k){return S.stocks[k]})?" open":"")+'><summary>'+T("Individual stocks","Acciones individuales")+'</summary><p class="note">'+T("Value today in pesos of the shares you own.","Valor hoy en pesos de las acciones que tienes.")+"</p>"+Object.keys(S.stocks).map(function(k){var x=S.stocks[k],val=S.pfDraft?(h[k]||""):(h[k]?Math.round(h[k]*cap):"");return '<label class="pf-w"><span>'+esc(x.name)+' <small class="note">'+esc(x.ticker)+'</small></span><input class="search" type="number" min="0" step="1000" placeholder="0" data-pfw="'+esc(k)+'" value="'+val+'"></label>'}).join("")+"</details>":"")+(S.pfErr?'<p class="note problem" role="alert">'+esc(S.pfErr)+"</p>":"")+'<div class="row"><button class="btn" type="submit">'+T("Save","Guardar")+'</button><button class="btn ghost" type="button" data-pfcancel="1">'+T("Cancel","Cancelar")+"</button></div></form></section>";
 }
 function vExposure(){return vPortfolio()+'<details class="pf-more"'+(hasProfile()?" open":"")+'><summary>'+T("News that reaches you and your amounts","Noticias que te tocan y tus montos")+"</summary>"+vExposureBase()+"</details>"}
 var PROFS=[
@@ -2701,6 +2705,7 @@ document.addEventListener("click",function(e){
   if(t.dataset.pfmk){S.view="markets";S.msel=t.dataset.market;render();var md=$("mdetail");if(md)md.scrollIntoView({block:"start"});return}
   if(t.dataset.bhgo){var nx=document.getElementById("bh-next");if(nx)nx.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});return}
   if(t.dataset.ics){return icsDownload(t.dataset.ics)}
+  if(t.dataset.stockgo){var sx=S.stocks&&S.stocks[t.dataset.stockgo];if(sx){S.stkReg=sx.region;S.stock=t.dataset.stockgo;go("markets");setTimeout(function(){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"start"})},60)}return}
   if(t.dataset.stkreg){S.stkReg=t.dataset.stkreg;S.stock=null;return render()}
   if(t.dataset.stock!=null&&t.closest&&t.closest(".stk")){S.stock=t.dataset.stock||null;render();if(S.stock){var sc=document.querySelector(".stk-card");if(sc)sc.scrollIntoView({block:"nearest"})}return}
   if(t.dataset.stkwatch){var wid=t.dataset.stkwatch,ww=S.watch||[];S.watch=ww.indexOf(wid)>=0?ww.filter(function(z){return z!==wid}):ww.concat([wid]).slice(-13);persist();return render()}
