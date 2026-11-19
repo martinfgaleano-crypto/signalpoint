@@ -39,8 +39,9 @@ RULES = [
 def match_events(b):
     t = " ".join([b.get("title", ""), b.get("summary", ""), (b.get("es") or {}).get("title", ""), (b.get("es") or {}).get("summary", "")]).lower()
     out = []
-    for key, subj, verb in RULES:
-        if re.search(subj, t) and re.search(verb, t): out.append(key)
+    sents = re.split(r"(?<=[.!?;])\s+|\s+[|\u2013\u2014-]\s+", t)
+    for key, subj, verb in RULES:   # subject and movement must appear in the same sentence
+        if any(re.search(subj, x) and re.search(verb, x) for x in sents): out.append(key)
     if "fed_hike" in out or "fed_cut" in out:
         out = [k for k in out if k != "fed_meeting"]
     if "trm_up" in out and "trm_down" in out:

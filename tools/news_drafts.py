@@ -233,7 +233,7 @@ def make_insight(b):
     feedback = ""
     for rnd in range(2):
         try: j = claude(prompt + feedback)
-        except Exception: log["result"] = "model error"; return None
+        except Exception as e: log["result"] = "model error: " + repr(e)[:200]; print("insight model error", repr(e)[:300]); return None
         if not _shape_ok(j): log["rounds"].append({"shape": False}); feedback = "\n\nYour last answer did not have exactly four [heading, paragraph] pairs per language. Follow the format."; continue
         en, es = j["en"], j["es"]
         miss = numbers_supported({"summary": " ".join(p for _, p in en), "es": {"summary": " ".join(p for _, p in es)}}, src + " " + json.dumps(b, ensure_ascii=False) + " " + ev)
