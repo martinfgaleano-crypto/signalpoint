@@ -152,7 +152,7 @@ res["tests"]=m;res["discoveries"]=sum(1 for v in tests if v["sig"]);res["hints"]
 def asof_map(series):
     return dict(series)
 def ret(series,i,n): return (series[i][1]/series[i-n][1]-1)*100 if i-n>=0 and series[i-n][1] else None
-spx=A["sp500"][2];trs=A["usdcop"][2];brs=A["brent"][2];cos=A["colo"][2]
+spx=A["sp500"][2];trs=A["usdcop"][2];brs=A["brent"][2];cos=A["colo"][2];brl=bis()
 d2=sorted(dgs2.items());d10=dgs10
 def idx_on(series,dd):
     lo,hi=0,len(series)-1;best=None
@@ -178,8 +178,18 @@ def feats(dd):
     i=idx_on(d10,dd)
     if i is None or i<20: return None
     out.append(d10[i][1]-d10[i-20][1])
+    i=idx_on(cos,dd)
+    if i is None: return None
+    r=ret(cos,i,20)
+    if r is None: return None
+    out.append(r)
+    i=idx_on(brl,dd)
+    if i is None: return None
+    j=idx_on(brl,dd-timedelta(days=91))
+    if j is None: return None
+    out.append(brl[i][1]-brl[j][1])
     return out
-FN=[("Dólar en pesos, últimas 4 semanas","Dollar in pesos, last 4 weeks","%"),("Dólar en pesos, última semana","Dollar in pesos, last week","%"),("S&P 500, últimas 4 semanas","S&P 500, last 4 weeks","%"),("Brent, últimas 4 semanas","Brent, last 4 weeks","%"),("Volatilidad del S&P 500 (anualizada)","S&P 500 volatility (annualised)","%"),("Bono a 2 años de EE. UU., últimos 3 meses","US 2-year yield, last 3 months","pts"),("Bono a 10 años de EE. UU., últimas 4 semanas","US 10-year yield, last 4 weeks","pts")]
+FN=[("Dólar en pesos, últimas 4 semanas","Dollar in pesos, last 4 weeks","%"),("Dólar en pesos, última semana","Dollar in pesos, last week","%"),("S&P 500, últimas 4 semanas","S&P 500, last 4 weeks","%"),("Brent, últimas 4 semanas","Brent, last 4 weeks","%"),("Volatilidad del S&P 500 (anualizada)","S&P 500 volatility (annualised)","%"),("Bono a 2 años de EE. UU., últimos 3 meses","US 2-year yield, last 3 months","pts"),("Bono a 10 años de EE. UU., últimas 4 semanas","US 10-year yield, last 4 weeks","pts"),("Acciones colombianas (COLO), últimas 4 semanas","Colombian stocks (COLO), last 4 weeks","%"),("Tasa del Banco de la República, últimos 3 meses","Banco de la República rate, last 3 months","pts")]
 days=[x[0] for x in spx if x[0]>=date(2001,1,1)]
 rows=[(dd,feats(dd)) for dd in days]; rows=[(dd,f) for dd,f in rows if f]
 today_d,today_f=rows[-1]
@@ -204,8 +214,42 @@ for ak,(aes,aen,ser) in A.items():
         p=bl["up"]/100;n=len(xs);up=sum(1 for x in xs if x>0);z=(up-n*p)/math.sqrt(n*p*(1-p))
         out[str(h)]={"n":n,"up":up,"med":round(st.median(xs),2),"base":bl["up"],"sig":abs(z)>=1.96}
     if out: sim["assets"][ak]={"es":aes,"en":aen,"h":out}
+# Out-of-sample check (walk-forward): for test days since 2008, neighbours come only from days at least 90 days earlier,
+# and the baseline is the up-share known before that day. Brier score: lower is better; skill > 0 means the method beats the baseline.
+def knn_val(ak,ser,h=20,step=10,k=20):
+    rr=[(dd,zf(f)) for dd,f in rows]; out=[]
+    for t in range(0,len(rr),step):
+        dd,tzz=rr[t]
+        if dd<date(2008,1,1): continue
+        i0=idx_on(ser,dd)
+        if i0 is None or i0+h>=len(ser) or ser[i0][0]>dd: continue
+        real=1 if ser[i0+h][1]>ser[i0][1] else 0
+        past=[(sum((a-b)**2 for a,b in zip(z,tzz)),d2_) for d2_,z in rr if (dd-d2_).days>90]
+        past.sort();pk=[];
+        for _,d2_ in past:
+            if all(abs((d2_-q).days)>=20 for q in pk): pk.append(d2_)
+            if len(pk)>=k: break
+        ups=[];
+        for d2_ in pk:
+            j=idx_on(ser,d2_)
+            if j is not None and j+h<len(ser) and ser[j+h][0]<dd: ups.append(1 if ser[j+h][1]>ser[j][1] else 0)
+        if len(ups)<10: continue
+        pre=[x for x in ser if x[0]<dd and x[0]>=START]
+        if len(pre)<300: continue
+        base=sum(1 for q in range(len(pre)-h) if pre[q+h][1]>pre[q][1])/(len(pre)-h)
+        pk_=sum(ups)/len(ups); out.append((pk_,base,real))
+    if len(out)<30: return None
+    bk=sum((p-r)**2 for p,_,r in out)/len(out); bb=sum((b-r)**2 for _,b,r in out)/len(out)
+    return {"tests":len(out),"brier_knn":round(bk,4),"brier_base":round(bb,4),"skill":round(1-bk/bb,3),"hit_knn":round(sum(1 for p,_,r in out if (p>0.5)==(r==1))/len(out)*100),"hit_base":round(sum(1 for _,b,r in out if (b>0.5)==(r==1))/len(out)*100)}
+sim["validation"]={}
+for ak,(aes,aen,ser) in A.items():
+    try:
+        v=knn_val(ak,ser)
+        if v: sim["validation"][ak]=v
+    except Exception as e: print("validation failed",ak,repr(e)[:80])
 res["similar"]=sim
 json.dump(res,open('history.json','w'),ensure_ascii=False,indent=1)
+print('validation',json.dumps(sim.get('validation')))
 for k,b in res["events"].items():
     print(f"\n{b['es']}  n={b['n']}  ({b['first']} → {b['last']})")
     for ak,a in b["assets"].items():

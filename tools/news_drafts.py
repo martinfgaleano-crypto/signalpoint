@@ -209,16 +209,44 @@ Rules: each paragraph 35-70 words, plain words; scenarios are conditional (if X,
 use only numbers that appear in the source text; English number notation in en, Colombian in es."""
 SB_URL = os.environ.get("SUPABASE_URL", "https://nfygddhczgwdurwuzjya.supabase.co")
 SB_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+import insight_ml
+HIST = None
+INSIGHT_LOG = []
+def _verify(an, src, b, ev):
+    t = _call([{"role": "user", "content": insight_ml.VERIFY + "\n\nANALYSIS:\n" + json.dumps(an, ensure_ascii=False) + "\n\nBRIEF:\n" + json.dumps(b, ensure_ascii=False)
+                + "\n\nHISTORICAL EVIDENCE:\n" + (ev or "(none)") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
+    j = _parse(t); return int(j.get("claims") or 0), [u for u in (j.get("unsupported") or []) if isinstance(u, dict) and u.get("text")]
+def _shape_ok(j):
+    en, es = j.get("en"), j.get("es")
+    return isinstance(en, list) and isinstance(es, list) and len(en) == 4 and len(es) == 4 and all(isinstance(x, list) and len(x) == 2 and all(isinstance(y, str) and y.strip() for y in x) for x in en + es)
 def make_insight(b):
-    """Pro analysis for a published brief: public part (first section free) goes to briefs-live.json, the rest only to Supabase."""
+    """Pro analysis for a published brief, grounded in SignalPoint's event studies and checked claim by claim.
+    Public part (first section free) goes to briefs-live.json; the rest only to Supabase."""
+    global HIST
     if not KEY or not SB_KEY: return None
     try: src = text_of(get(b["source"]["url"]))[:9000]
     except Exception: return None
-    try: j = claude(INSIGHT + "\n\nBRIEF:\n" + json.dumps(b, ensure_ascii=False) + "\n\nSOURCE TEXT:\n" + src)
-    except Exception: return None
-    en, es = j.get("en"), j.get("es")
-    if not (isinstance(en, list) and isinstance(es, list) and len(en) == 4 and len(es) == 4 and all(isinstance(x, list) and len(x) == 2 and all(isinstance(y, str) and y.strip() for y in x) for x in en + es)): return None
-    if numbers_supported({"summary": " ".join(p for _, p in en), "es": {"summary": " ".join(p for _, p in es)}}, src + " " + json.dumps(b, ensure_ascii=False)): return None
+    if HIST is None: HIST = insight_ml.load_history() or {}
+    keys = insight_ml.match_events(b); ev, pats = insight_ml.evidence(keys, HIST)
+    prompt = INSIGHT + "\n\n" + (insight_ml.GROUND.format(ev=ev) if ev else insight_ml.NOGROUND) + "\n\nBRIEF:\n" + json.dumps(b, ensure_ascii=False) + "\n\nSOURCE TEXT:\n" + src
+    log = {"id": b["id"], "events": keys, "rounds": []}; INSIGHT_LOG.append(log)
+    feedback = ""
+    for rnd in range(2):
+        try: j = claude(prompt + feedback)
+        except Exception: log["result"] = "model error"; return None
+        if not _shape_ok(j): log["rounds"].append({"shape": False}); feedback = "\n\nYour last answer did not have exactly four [heading, paragraph] pairs per language. Follow the format."; continue
+        en, es = j["en"], j["es"]
+        miss = numbers_supported({"summary": " ".join(p for _, p in en), "es": {"summary": " ".join(p for _, p in es)}}, src + " " + json.dumps(b, ensure_ascii=False) + " " + ev)
+        try: n, bad = _verify({"en": en, "es": es}, src, b, ev)
+        except Exception as e: n, bad = 0, [{"text": "(checker unavailable)", "why": repr(e)[:80]}]
+        log["rounds"].append({"claims": n, "unsupported": bad, "numbers_missing": miss})
+        if not miss and not bad: break
+        feedback = ("\n\nA checker reviewed your previous analysis. Rewrite it so that every claim is supported. Remove or fix these:\n"
+                    + "\n".join("- " + u["text"] + " (" + u.get("why", "") + ")" for u in bad)
+                    + ("\nNumbers not found in the source or evidence: " + ", ".join(map(str, miss)) if miss else ""))
+    else:
+        log["result"] = "rejected"; return None
+    log["result"] = "published"
     body = {"p": [{"h": h, "p": t} for h, t in en], "es": {"p": [{"h": h, "p": t} for h, t in es]}}
     req = urllib.request.Request(SB_URL + "/rest/v1/premium_content?on_conflict=id", data=json.dumps({"id": "insight:" + b["id"], "body": body}).encode(), method="POST",
         headers={"apikey": SB_KEY, "Content-Type": "application/json", "Prefer": "resolution=merge-duplicates,return=minimal"})
@@ -227,8 +255,15 @@ def make_insight(b):
             if r.status >= 300: return None
     except Exception as e:
         print("insight upload failed", repr(e)[:160]); return None
-    return {"tease": en[0][1], "first": {"h": en[1][0], "p": en[1][1]}, "parts": [h for h, _ in en[2:]],
+    basis = [{"event": k, "n": HIST["events"][k]["n"], "en": HIST["events"][k]["en"], "es": HIST["events"][k]["es"]} for k in keys if HIST.get("events", {}).get(k)]
+    return {"tease": en[0][1], "first": {"h": en[1][0], "p": en[1][1]}, "parts": [h for h, _ in en[2:]], "basis": basis,
+            "checked": log["rounds"][-1].get("claims", 0), "_pats": pats,
             "es": {"tease": es[0][1], "first": {"h": es[1][0], "p": es[1][1]}, "parts": [h for h, _ in es[2:]]}}
+def _track_add(track, b, ins):
+    for p in ins.pop("_pats", []) or []:
+        k = (b["id"], p["asset"], p["h"])
+        if any((q["id"], q["asset"], q["h"]) == k for q in track.get("open", []) + track.get("closed", [])): continue
+        track.setdefault("open", []).append(dict(p, id=b["id"], date=(b.get("eventDate") or datetime.now(timezone.utc).date().isoformat())[:10]))
 def publish(report, today):
     """Automatic publication with self-review: only drafts that passed the gate, the number check and the editor review."""
     os.makedirs(os.path.join(OUT, "live"), exist_ok=True)
@@ -239,13 +274,14 @@ def publish(report, today):
     ok_ids = [a["id"] for a in report.get("audit", []) if a.get("decision") == "publish"]
     byid = {b["id"]: b for b in report["briefs"]}
     added = 0
+    tp = os.path.join(OUT, "live", "track.json"); track = json.load(open(tp)) if os.path.exists(tp) else {"open": [], "closed": []}
     for i in ok_ids:
         b = byid.get(i)
         if not b or i in have or b["source"]["url"] in have or i in retracted: continue
         if added >= MAX_PUBLISH: break
         live["briefs"].insert(0, b); added += 1
         ins = make_insight(b)
-        if ins: live.setdefault("insights", {})[i] = ins
+        if ins: _track_add(track, b, ins); live.setdefault("insights", {})[i] = ins
         for a in report["audit"]:
             if a.get("id") == i: a["publishedAt"] = datetime.now(timezone.utc).isoformat()
     live["briefs"] = [b for b in live["briefs"] if b["id"] not in retracted][:KEEP_LIVE]
@@ -255,7 +291,12 @@ def publish(report, today):
         if done_back >= int(os.environ.get("SP_INSIGHT_BACKFILL", "4")): break
         if b["id"] in live["insights"]: continue
         ins = make_insight(b); done_back += 1
-        if ins: live["insights"][b["id"]] = ins
+        if ins: _track_add(track, b, ins); live["insights"][b["id"]] = ins
+    try: track = insight_ml.score(track)
+    except Exception as e: print("track scoring failed", repr(e)[:120])
+    json.dump(track, open(tp, "w"), ensure_ascii=False, indent=1)
+    live["track"] = dict(track.get("summary", {}), recent=[{k: p[k] for k in ("id", "event", "asset", "h", "dir", "share", "realized", "held", "closedOn")} for p in track.get("closed", [])[-8:]])
+    report["insight_checks"] = INSIGHT_LOG
     live["updatedAt"] = datetime.now(timezone.utc).isoformat(); live["retracted"] = sorted(retracted)
     json.dump(live, open(lp, "w"), ensure_ascii=False, indent=1)
     json.dump(report, open(os.path.join(OUT, f"{today}.json"), "w"), ensure_ascii=False, indent=1)

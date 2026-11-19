@@ -5,7 +5,7 @@ on:
     - cron: '23 11 * * 1-5'   # weekdays, 06:23 Bogotá
   push:
     branches: [main]
-    paths: ['tools/news_drafts.py', 'tools/social_cards.py', '.github/workflows/news-drafts.yml']
+    paths: ['tools/news_drafts.py', 'tools/insight_ml.py', 'tools/social_cards.py', '.github/workflows/news-drafts.yml']
 permissions:
   contents: write
 jobs:
