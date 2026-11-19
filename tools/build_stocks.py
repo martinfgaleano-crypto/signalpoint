@@ -41,6 +41,17 @@ def fetch(sym):
         except Exception as e:
             err = repr(e)[:120]; time.sleep(2)
     return [], {"error": err}
+def calendar(sym):
+    """Next earnings date and dividend dates, when Yahoo publishes them. Missing is fine."""
+    url = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{urllib.request.quote(sym)}?modules=calendarEvents"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=20) as r: j = json.load(r)
+        ce = j["quoteSummary"]["result"][0].get("calendarEvents", {})
+        f = lambda v: datetime.fromtimestamp(v["raw"], timezone.utc).date().isoformat() if isinstance(v, dict) and v.get("raw") else None
+        ed = [f(x) for x in (ce.get("earnings", {}).get("earningsDate") or [])]
+        return {k: v for k, v in {"earnings": next((d for d in ed if d), None), "exDividend": f(ce.get("exDividendDate")), "dividend": f(ce.get("dividendDate"))}.items() if v}
+    except Exception as e:
+        return {"error": repr(e)[:80]}
 today = date.today(); out = {"asOf": today.isoformat(), "stocks": {}, "skipped": {}}
 for sid, sym, name, region, cur, sector, words in STOCKS:
     ser, meta = fetch(sym); time.sleep(0.6)
@@ -52,5 +63,8 @@ for sid, sym, name, region, cur, sector, words in STOCKS:
                           "prefix": "$" if cur == "COP" else "US$", "decimals": dec,
                           "series": [[d, round(v, dec) if dec else round(v)] for d, v in ser],
                           "source": {"name": f"Yahoo Finance ({sym}), daily close", "url": f"https://finance.yahoo.com/quote/{sym}/"}}
+    cal = calendar(sym); time.sleep(0.4)
+    if "error" in cal: out.setdefault("calendarErrors", {})[sid] = cal["error"]
+    else: out["stocks"][sid]["calendar"] = cal
 json.dump(out, open(os.path.join(D, "stocks-live.json"), "w"), separators=(",", ":"))
 print("stocks:", sorted(out["stocks"]), "skipped:", out["skipped"])
