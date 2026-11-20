@@ -1,0 +1,1001 @@
+{
+ "generatedAt": "2026-11-19T19:30:56.314513+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "2 (first date: Thu, 19 Nov 2026 16:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "3 (first date: Thu, 19 Nov 2026 09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-19 19:24:00)",
+  "Portafolio": "10 (first date: 2026-11-19T14:27:19-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Wed, 18 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "1 (first date: Wed, 18 Nov 2026 10:00:00 EST)",
+  "US Securities and Exchange Commission": "1 (first date: Thu, 19 Nov 2026 09:39:02 -0500)",
+  "US Census Bureau (economic indicators)": "4 (first date: Thu, 19 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "5 (first date: Wed, 18 Nov 2026 14:09:26 GMT)",
+  "CNBC Finance": "12 (first date: Thu, 19 Nov 2026 09:02:00 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-16-fed-chair-warsh-convenes-ai-task-force-conferenc",
+   "title": "Fed Chair Warsh convenes AI task force conference, offers no rate conclusions",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html"
+   },
+   "summary": "Fed Chairman Kevin Warsh convened a conference in San Francisco on Nov. 16 on AI's effects on productivity and jobs. He said 'We are at a hinge point in the U.S. economy' and asked panelists whether AI could bring disinflation in services, which they largely said was possible. He offered no immediate conclusions on interest rates. CNBC reports the Fed is contemplating a rate increase in December because of heavy spending by AI firms, and that the task force members must still deliver a report to Warsh in the next few months.",
+   "actors": [
+    {
+     "name": "Federal Reserve",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "AI could push prices and employment in opposite directions, and the Fed has not said how it would shape monetary policy."
+    },
+    {
+     "name": "Service and white-collar workers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Warsh raised the possibility of a services 'China shock' in which AI does legal or administrative work more cheaply, lowering prices but costing jobs."
+    },
+    {
+     "name": "Anthropic",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "CNBC says it plans to price its IPO on Wednesday, and a task force member working there could not speak during the blackout period."
+    },
+    {
+     "name": "Data center developers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "CNBC says voters approved state-level measures in the Nov. 3 midterms to slow data center construction."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Anthropic prices its IPO, which CNBC says is planned for Wednesday",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the company's pricing announcement and exchange filings for the final raise and valuation."
+    },
+    {
+     "text": "Fed communications on a possible interest rate increase in December",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the FOMC statement and minutes for references to AI-related spending and inflation."
+    },
+    {
+     "text": "Task force report to Warsh, expected within the next few months",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Look for Fed announcements or publication of the task force's findings."
+    }
+   ],
+   "unknowns": [
+    "How Warsh personally views AI's effect on jobs and prices, and how it would feed into monetary policy.",
+    "Whether the Fed will in fact raise rates in December.",
+    "When the task force report will be delivered and how the Fed will use it."
+   ],
+   "tags": [
+    "Fed",
+    "Warsh",
+    "AI",
+    "productivity",
+    "jobs",
+    "interest rates"
+   ],
+   "es": {
+    "title": "El presidente de la Fed, Warsh, reúne a su grupo de trabajo sobre IA sin dar conclusiones sobre tasas",
+    "summary": "El presidente de la Fed, Kevin Warsh, convocó el 16 de noviembre una conferencia en San Francisco sobre los efectos de la IA en la productividad y el empleo. Dijo que 'estamos en un punto de inflexión en la economía de EE. UU.' y preguntó a los panelistas si la IA podría generar desinflación en los servicios, algo que ellos consideraron en general posible. No ofreció conclusiones inmediatas sobre las tasas de interés. CNBC reporta que la Fed contempla subir tasas en diciembre por el fuerte gasto de las empresas de IA, y que los integrantes del grupo de trabajo deben entregar un informe a Warsh en los próximos meses.",
+    "actors": [
+     {
+      "name": "Reserva Federal",
+      "reason": "La IA podría empujar los precios y el empleo en direcciones opuestas, y la Fed no ha dicho cómo influiría en la política monetaria."
+     },
+     {
+      "name": "Trabajadores de servicios y de oficina",
+      "reason": "Warsh planteó la posibilidad de un 'choque chino' en servicios, en el que la IA haría trabajo legal o administrativo a menor costo, bajando precios pero eliminando empleos."
+     },
+     {
+      "name": "Anthropic",
+      "reason": "CNBC dice que planea fijar el precio de su IPO el miércoles, y un miembro del grupo que trabaja allí no pudo hablar por el periodo de silencio."
+     },
+     {
+      "name": "Desarrolladores de centros de datos",
+      "reason": "CNBC indica que los votantes aprobaron medidas estatales en las elecciones del 3 de noviembre para frenar la construcción de centros de datos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Anthropic fija el precio de su IPO, que según CNBC está prevista para el miércoles",
+      "note": "Revisar el anuncio de precio de la compañía y los documentos presentados ante la bolsa para ver el monto y la valoración finales."
+     },
+     {
+      "text": "Comunicaciones de la Fed sobre un posible aumento de tasas en diciembre",
+      "note": "Revisar el comunicado y las actas del FOMC en busca de referencias al gasto en IA y la inflación."
+     },
+     {
+      "text": "Informe del grupo de trabajo a Warsh, esperado en los próximos meses",
+      "note": "Buscar anuncios de la Fed o la publicación de los hallazgos del grupo."
+     }
+    ],
+    "unknowns": [
+     "Cuál es la opinión personal de Warsh sobre el efecto de la IA en empleo y precios, y cómo se traduciría en política monetaria.",
+     "Si la Fed efectivamente subirá las tasas en diciembre.",
+     "Cuándo se entregará el informe del grupo de trabajo y cómo lo usará la Fed."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-19-grupo-argos-wins-social-impact-branding-category",
+   "title": "Grupo Argos wins social-impact branding category at first Best Branding Awards Colombia",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-19",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/grupo-argos-gana-en-la-primera-edicion-de-los-best-branding-awards-colombia-con-iniciativa-ambiental-y-social/"
+   },
+   "summary": "Grupo Argos was named winner of the 'Branding con impacto social' category at the first Best Branding Awards Colombia, for its Re-evolución initiative. The project replaced water counterweights in stage structures at the Festival Estéreo Picnic with construction materials, avoiding the use of about 140,000 liters of water. The 85 tonnes of cement and 55 tonnes of sand used were later applied to building the Centro de Desarrollo Amparo Quin, a social infrastructure project. Grupo Argos was one of 16 finalists; only two organizations reached that stage with initiatives submitted by their own teams.",
+   "actors": [
+    {
+     "name": "Grupo Argos",
+     "ticker": "GRUPOARGOS",
+     "impact": "favorable",
+     "reason": "The award gives public recognition to an initiative conceived and led by its internal team, which supports its brand positioning."
+    },
+    {
+     "name": "Cementos Argos",
+     "ticker": "CEMARGOS",
+     "impact": "undetermined",
+     "reason": "It took part in the alliance, but the source does not describe any commercial effect on the company."
+    },
+    {
+     "name": "Centro de Desarrollo Amparo Quin",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The cement and sand used as counterweights were reused to help build the center, which supports children and young people with chronic conditions."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether Grupo Argos or its partners report further uses or repeat Re-evolución at future events",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Grupo Argos press releases and Festival Estéreo Picnic announcements."
+    },
+    {
+     "text": "Progress of the Centro de Desarrollo Amparo Quin construction",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check updates from Fundación Grupo Argos and Páramo Impacta."
+    }
+   ],
+   "unknowns": [
+    "On what date was the award ceremony held?",
+    "What were the judging criteria and scores behind the result?",
+    "Does the initiative have any measurable financial or commercial effect for Grupo Argos?"
+   ],
+   "tags": [
+    "Grupo Argos",
+    "Best Branding Awards",
+    "Cementos Argos",
+    "sustainability",
+    "Estéreo Picnic",
+    "Colombia"
+   ],
+   "es": {
+    "title": "Grupo Argos gana categoría de branding con impacto social en los primeros Best Branding Awards Colombia",
+    "summary": "Grupo Argos fue reconocida como ganadora de la categoría «Branding con impacto social» en la primera edición de los Best Branding Awards Colombia, por su iniciativa Re-evolución. El proyecto reemplazó el agua usada como contrapeso en las estructuras de las tarimas del Festival Estéreo Picnic por materiales de construcción, evitando el uso de cerca de 140.000 litros de agua. Las 85 toneladas de cemento y 55 toneladas de arena utilizadas se aprovecharon después en la construcción del Centro de Desarrollo Amparo Quin, un proyecto de infraestructura social. Grupo Argos fue una de las 16 finalistas, y solo dos organizaciones llegaron a esa instancia con iniciativas presentadas por sus propios equipos.",
+    "actors": [
+     {
+      "name": "Grupo Argos",
+      "reason": "El premio da reconocimiento público a una iniciativa concebida y liderada por su equipo interno, lo que respalda el posicionamiento de su marca."
+     },
+     {
+      "name": "Cementos Argos",
+      "reason": "Participó en la alianza, pero la fuente no describe ningún efecto comercial para la compañía."
+     },
+     {
+      "name": "Centro de Desarrollo Amparo Quin",
+      "reason": "El cemento y la arena usados como contrapesos se reutilizaron para ayudar a construir el centro, que acompaña a niños y jóvenes con condiciones crónicas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si Grupo Argos o sus aliados reportan nuevos usos o repiten Re-evolución en eventos futuros",
+      "note": "Revisar comunicados de Grupo Argos y anuncios del Festival Estéreo Picnic."
+     },
+     {
+      "text": "Avance de la construcción del Centro de Desarrollo Amparo Quin",
+      "note": "Revisar actualizaciones de la Fundación Grupo Argos y Páramo Impacta."
+     }
+    ],
+    "unknowns": [
+     "¿En qué fecha se realizó la ceremonia de premiación?",
+     "¿Cuáles fueron los criterios de evaluación y los puntajes detrás del resultado?",
+     "¿Tiene la iniciativa algún efecto financiero o comercial medible para Grupo Argos?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-uk-inflation-rises-to-3-6-in-october-a-one-year-",
+   "title": "UK inflation rises to 3.6% in October, a one-year high, as motor fuel costs jump 33.2%",
+   "category": "Macro data",
+   "region": "UK",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Economy",
+    "url": "https://www.cnbc.com/2026/11/18/uk-inflation-cpi-fuel-prices.html"
+   },
+   "summary": "U.K. inflation rose to 3.6% in the 12 months to October from 3.5% in September, in line with the Reuters poll of economists, according to CNBC citing the Office for National Statistics. The ONS said motor fuel costs, up 33.2% year-on-year, were the largest contributor. The average diesel price reached 199.5 pence per liter, the highest since ONS records began in 1996, and petrol averaged 174.7 pence per liter. Markets are pricing around an 80% chance of a Bank of England rate hike at its final meeting of the year, after a hike earlier this month.",
+   "actors": [
+    {
+     "name": "U.K. motorists and households",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Higher petrol and diesel prices raise running costs and feed into the headline inflation rate."
+    },
+    {
+     "name": "Bank of England",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Inflation at a one-year high and a warning of 5% by mid-2027 bear on policy, while the bank has already hiked rates this month."
+    },
+    {
+     "name": "U.K. economy as a net energy importer",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "CNBC notes the country is exposed to external energy shocks such as the disruption of trade through the Strait of Hormuz."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Bank of England decision at its final meeting of the year, where markets price around an 80% chance of a hike",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Bank of England's announcement after the December meeting."
+    },
+    {
+     "text": "Direction of oil and diesel prices after the recent decline in crude following the U.S. midterm elections",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare ONS fuel price data and oil benchmark quotes in the coming months."
+    },
+    {
+     "text": "Next ONS CPI release and whether inflation moves above or below 3.6%",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the ONS consumer price inflation release for November."
+    }
+   ],
+   "unknowns": [
+    "How much of the recent oil price retreat will reach pump prices?",
+    "Will the Bank of England hike in December as markets price?",
+    "Will inflation approach the 5% the Bank of England said it could reach by mid-2027?"
+   ],
+   "tags": [
+    "UK inflation",
+    "CPI",
+    "diesel",
+    "Bank of England",
+    "energy prices",
+    "ONS"
+   ],
+   "es": {
+    "title": "Inflación del Reino Unido sube a 3,6 % en octubre, máximo en un año, por combustibles",
+    "summary": "La inflación del Reino Unido subió a 3,6 % en los 12 meses a octubre, desde 3,5 % en septiembre, en línea con la encuesta de Reuters a economistas, según CNBC citando a la Oficina Nacional de Estadísticas (ONS). La ONS indicó que el mayor aporte fue el de los combustibles para vehículos, con un alza anual de 33,2 %. El precio promedio del diésel llegó a 199,5 peniques por litro, el más alto desde que comenzaron los registros de la ONS en 1996, y la gasolina promedió 174,7 peniques por litro. Los mercados descuentan cerca de 80 % de probabilidad de un alza de tasas del Banco de Inglaterra en su última reunión del año, tras la subida de este mes.",
+    "actors": [
+     {
+      "name": "Conductores y hogares del Reino Unido",
+      "reason": "Los precios más altos de la gasolina y el diésel elevan los costos de uso del vehículo y alimentan la inflación general."
+     },
+     {
+      "name": "Banco de Inglaterra",
+      "reason": "La inflación en máximo de un año y la advertencia de 5 % a mediados de 2027 inciden en su política, aunque ya subió tasas este mes."
+     },
+     {
+      "name": "Economía del Reino Unido como importador neto de energía",
+      "reason": "CNBC señala que el país es vulnerable a choques energéticos externos, como la interrupción del comercio por el estrecho de Ormuz."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del Banco de Inglaterra en su última reunión del año, en la que los mercados descuentan cerca de 80 % de probabilidad de alza",
+      "note": "Revisar el anuncio del Banco de Inglaterra tras la reunión de diciembre."
+     },
+     {
+      "text": "Rumbo de los precios del petróleo y el diésel tras la reciente baja del crudo posterior a las elecciones legislativas de mitad de mandato en EE. UU.",
+      "note": "Comparar los datos de precios de combustibles de la ONS y las cotizaciones del crudo de referencia en los próximos meses."
+     },
+     {
+      "text": "Próxima publicación del IPC de la ONS y si la inflación supera o queda por debajo de 3,6 %",
+      "note": "Revisar la publicación de inflación de precios al consumidor de la ONS para noviembre."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del reciente retroceso del petróleo llegará a los precios en las estaciones de servicio?",
+     "¿Subirá el Banco de Inglaterra las tasas en diciembre, como descuentan los mercados?",
+     "¿Se acercará la inflación al 5 % que el Banco de Inglaterra dijo que podría alcanzar a mediados de 2027?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-19-colombia-sets-2027-minimum-wage-talks-table-open",
+   "title": "Colombia sets 2027 minimum wage talks: table opens Nov 27, first legal deadline Dec 15",
+   "category": "Regulation",
+   "region": "Colombia",
+   "eventDate": "2026-11-19",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/empieza-la-puja-por-el-salario-minimo-de-2027-este-es-el-aumento-que-podria-destrabar-la-negociacion/"
+   },
+   "summary": "Colombia's Permanent Commission for Labor and Wage Policy approved the schedule for negotiating the 2027 minimum wage. The table will be installed on Nov 27, and the first legal deadline for an agreement is Dec 15 under Law 278 of 1996. The 2026 monthly minimum wage is COP 1,750,905 excluding the transport allowance, after a 23% increase. Lexacty SAS CEO Audrey Rodríguez argues for a rise of 8% to 9.5%, capped at 10%, which would imply roughly COP 1,890,977 to COP 1,925,996.",
+   "actors": [
+    {
+     "name": "Minimum wage workers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Unions seek to recover purchasing power, but the source says a larger increase could raise formal hiring costs for employers."
+    },
+    {
+     "name": "Micro and small businesses",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "According to Rodríguez, a rise near 10% or above would raise payroll, social security and benefit provisions for firms with less financial capacity."
+    },
+    {
+     "name": "Colombian government (Ministry of Labor)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It seeks a consensus, but if the parties do not agree the increase could be set by decree."
+    },
+    {
+     "name": "Independent workers earning above the minimum wage",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Rodríguez says the fiscal rescue bill, if approved as proposed, could bring new social security deductions and payments, which is not an obligation derived from the wage talks."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Official installation of the negotiating table and start of technical sessions",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ministry of Labor and press reports on the installation and the Productivity Subcommittee sessions."
+    },
+    {
+     "text": "Presentation of inflation and macroeconomic data (Dec 9) and wage proposals from unions, pensioners and employers (Dec 10)",
+     "due": "2026-12-10",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the proposed increases and see whether the business proposals stay in single digits and the union ones above 10%."
+    },
+    {
+     "text": "First legal deadline for an agreement under Law 278 of 1996",
+     "due": "2026-12-15",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check whether a concerted figure is announced or the government sets the increase by decree."
+    }
+   ],
+   "unknowns": [
+    "What increase will unions and business groups formally propose?",
+    "Will the parties reach a concerted agreement or will the government set the increase by decree?",
+    "Will the fiscal rescue bill in Congress change employer and worker social security costs?"
+   ],
+   "tags": [
+    "minimum wage",
+    "Colombia",
+    "2027",
+    "labor",
+    "negotiation",
+    "Law 278"
+   ],
+   "es": {
+    "title": "Salario mínimo 2027: la mesa se instala el 27 de noviembre; primer plazo legal, 15 de diciembre",
+    "summary": "La Comisión Permanente de Concertación de Políticas Salariales y Laborales aprobó el cronograma para negociar el salario mínimo de 2027. La mesa se instalará el 27 de noviembre y el primer plazo legal para un acuerdo es el 15 de diciembre, según la Ley 278 de 1996. El salario mínimo mensual de 2026 es de $1.750.905 sin auxilio de transporte, tras un aumento del 23 %. Audrey Rodríguez, CEO de Lexacty SAS, plantea un alza de entre 8 % y 9,5 %, con techo de 10 %, lo que implicaría cerca de $1.890.977 a $1.925.996.",
+    "actors": [
+     {
+      "name": "Trabajadores que devengan el salario mínimo",
+      "reason": "Los sindicatos buscan recuperar poder adquisitivo, pero la fuente indica que un aumento mayor podría elevar los costos de contratación formal para los empleadores."
+     },
+     {
+      "name": "Micro y pequeñas empresas",
+      "reason": "Según Rodríguez, un alza cercana al 10 % o superior aumentaría la nómina, la seguridad social y las provisiones de las empresas con menor capacidad financiera."
+     },
+     {
+      "name": "Gobierno colombiano (Ministerio del Trabajo)",
+      "reason": "Busca un consenso, pero si las partes no se ponen de acuerdo el aumento podría fijarse por decreto."
+     },
+     {
+      "name": "Trabajadores independientes con ingresos superiores al salario mínimo",
+      "reason": "Rodríguez señala que la Ley de Rescate Fiscal, si se aprueba como se plantea, podría traer nuevos descuentos y pagos de seguridad social, lo cual no es una obligación derivada de la negociación salarial."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Instalación oficial de la mesa de negociación e inicio de las sesiones técnicas",
+      "note": "Revisar el Ministerio del Trabajo y la prensa sobre la instalación y las sesiones de la Subcomisión de Productividad."
+     },
+     {
+      "text": "Presentación de indicadores de inflación y macroeconómicos (9 de diciembre) y de las propuestas salariales de sindicatos, pensionados y empleadores (10 de diciembre)",
+      "note": "Comparar los aumentos propuestos y ver si los de los gremios se mantienen en un dígito y los de las centrales superan el 10 %."
+     },
+     {
+      "text": "Primer plazo legal para un acuerdo según la Ley 278 de 1996",
+      "note": "Verificar si se anuncia una cifra concertada o si el Gobierno fija el aumento por decreto."
+     }
+    ],
+    "unknowns": [
+     "¿Qué aumento propondrán formalmente los sindicatos y los gremios empresariales?",
+     "¿Las partes lograrán un acuerdo concertado o el Gobierno fijará el aumento por decreto?",
+     "¿Cambiará la Ley de Rescate Fiscal en el Congreso los costos de seguridad social de empleadores y trabajadores?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-st-louis-fed-s-musalem-says-up-to-four-more-rate",
+   "title": "St. Louis Fed's Musalem says up to four more rate hikes may be needed by spring 2027",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/17/alberto-musalem-fed-interest-rates.html"
+   },
+   "summary": "St. Louis Fed President Alberto Musalem said in a speech delivered in Argentina that the economy will likely require several rate increases before spring 2027 to reach 2% inflation in a timely manner. He estimated that the real policy rate needs to be between 2%-2.5% by next spring and is currently about a full point below that range. The fed funds rate is now at 3.75%-4%. He also described an «unlikely but still plausible scenario» in which no further hikes are needed, for example if energy and shipping costs fall or productivity growth rises.",
+   "actors": [
+    {
+     "name": "Federal Reserve / FOMC",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Musalem presents views and provides input to the dot plot, but he does not vote on the FOMC until 2028, so the committee's actual path remains open."
+    },
+    {
+     "name": "US borrowers exposed to the policy rate",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "If the nominal policy rate does most of the work, as Musalem said it may, borrowing costs tied to the fed funds rate would rise."
+    },
+    {
+     "name": "AI-related spending",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Musalem cited a slowdown in AI spending as one way demand could decelerate and ease inflation pressures, but he called strong demand the more likely scenario."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether other FOMC participants echo Musalem's call for several hikes before spring 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check speeches and statements by Fed officials, and the FOMC decisions in December, January, March and April cited by CNBC."
+    },
+    {
+     "text": "Changes in energy prices and shipping costs that Musalem said could ease inflation pressures",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare upcoming inflation releases and energy and shipping price data with his stated scenarios."
+    },
+    {
+     "text": "Indications of slowing AI-related spending or higher productivity growth",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review upcoming economic data and Fed commentary for signs of weaker demand or higher potential output."
+    }
+   ],
+   "unknowns": [
+    "How many other FOMC members share the view that four hikes may be needed?",
+    "Which inflation measure underlies the estimate that the real policy rate is about a full point below the 2%-2.5% range?",
+    "Will incoming data support the energy, shipping or productivity scenario that would make further hikes unnecessary?"
+   ],
+   "tags": [
+    "Fed",
+    "Musalem",
+    "rate hikes",
+    "inflation",
+    "FOMC",
+    "fed funds rate"
+   ],
+   "es": {
+    "title": "Musalem, de la Fed, plantea que podrían hacer falta hasta cuatro alzas de tasas más",
+    "summary": "El presidente de la Fed de San Luis, Alberto Musalem, afirmó en un discurso pronunciado en Argentina que la economía probablemente requerirá varias alzas de tasas antes de la primavera de 2027 para llevar la inflación a 2% de manera oportuna. Estimó que la tasa de política real debe situarse entre 2% y 2,5% para la próxima primavera y que actualmente está cerca de un punto completo por debajo de ese rango. La tasa de los fondos federales se ubica hoy en 3,75%-4%. También describió un «escenario poco probable pero aún plausible» en el que no se necesitarían más alzas, por ejemplo si caen los precios de la energía y de los fletes o si aumenta el crecimiento de la productividad.",
+    "actors": [
+     {
+      "name": "Reserva Federal / FOMC",
+      "reason": "Musalem presenta sus puntos de vista y aporta al «dot plot», pero no vota en el FOMC hasta 2028, por lo que la trayectoria real del comité sigue abierta."
+     },
+     {
+      "name": "Deudores en EE. UU. expuestos a la tasa de política",
+      "reason": "Si la tasa de política nominal hace la mayor parte del trabajo, como dijo Musalem que podría ocurrir, subirían los costos de endeudamiento ligados a la tasa de los fondos federales."
+     },
+     {
+      "name": "Gasto relacionado con inteligencia artificial",
+      "reason": "Musalem mencionó una desaceleración del gasto en IA como una vía para que la demanda se modere y alivie las presiones inflacionarias, pero calificó la demanda fuerte como el escenario más probable."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si otros miembros del FOMC respaldan la idea de varias alzas antes de la primavera de 2027",
+      "note": "Revisar discursos y declaraciones de funcionarios de la Fed y las decisiones del FOMC de diciembre, enero, marzo y abril citadas por CNBC."
+     },
+     {
+      "text": "Cambios en los precios de la energía y de los fletes que Musalem dijo que podrían aliviar las presiones inflacionarias",
+      "note": "Comparar las próximas cifras de inflación y los datos de precios de energía y fletes con los escenarios que planteó."
+     },
+     {
+      "text": "Señales de menor gasto en IA o de mayor crecimiento de la productividad",
+      "note": "Revisar los próximos datos económicos y los comentarios de la Fed en busca de indicios de menor demanda o mayor producto potencial."
+     }
+    ],
+    "unknowns": [
+     "¿Cuántos otros miembros del FOMC comparten la visión de que podrían necesitarse cuatro alzas?",
+     "¿Qué medida de inflación sustenta la estimación de que la tasa de política real está cerca de un punto por debajo del rango de 2% a 2,5%?",
+     "¿Respaldarán los datos entrantes el escenario de energía, fletes o productividad que haría innecesarias más alzas?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-19-promigas-net-profit-falls-24-to-cop-674-672-mill",
+   "title": "Promigas' net profit falls 24% to COP 674,672 million through September 2026",
+   "category": "Earnings",
+   "region": "Colombia",
+   "eventDate": "2026-11-19",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/utilidad-promigas-redujo-septiembre-2026/"
+   },
+   "summary": "Promigas, a subsidiary of Corficolombiana (Grupo Aval), reported net profit of COP 674,672 million through September 2026, down 24% from the same period a year earlier. Consolidated revenue was COP 5.46 trillion, slightly below COP 5.47 trillion in 2025, and consolidated Ebitda was COP 1.81 trillion. Gas infrastructure accounted for 73% of Ebitda and low-emission businesses for 27%. The company reported about 184,000 new natural gas customers and a transported volume averaging 611 Mpcd, 25% above the third quarter of 2025.",
+   "actors": [
+    {
+     "name": "Promigas",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Net profit fell 24% while revenue was nearly flat and Ebitda was described by the company as stable."
+    },
+    {
+     "name": "Corficolombiana",
+     "ticker": "CORFICOLCF",
+     "impact": "undetermined",
+     "reason": "As Promigas' parent it consolidates the results, but the source does not say how the lower profit affects it."
+    },
+    {
+     "name": "Krelo (renewable energy business)",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The company said the Aurora solar and battery park and the Wimke financing allowed it to reach its 2026 goals early."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Promigas' next quarterly or full-year 2026 results, to see whether net profit keeps falling against 2025",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the company's results release and press coverage."
+    },
+    {
+     "text": "Progress of the 101 MW Wimke solar project in Colombia after its financing and start order",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review company announcements on project milestones."
+    }
+   ],
+   "unknowns": [
+    "What explains the 24% drop in net profit while Ebitda is described as stable?",
+    "How did the hybrid bond issue and debt prepayment affect financial expenses in the period?",
+    "What was the net profit figure for the same period of 2025?"
+   ],
+   "tags": [
+    "Promigas",
+    "Corficolombiana",
+    "Grupo Aval",
+    "natural gas",
+    "Krelo",
+    "results"
+   ],
+   "es": {
+    "title": "Utilidad neta de Promigas cae 24 % a $674.672 millones a septiembre de 2026",
+    "summary": "Promigas, filial de Corficolombiana (Grupo Aval), reportó una utilidad neta de $674.672 millones a septiembre de 2026, con una caída de 24 % frente al mismo periodo del año anterior. Los ingresos consolidados fueron de $5,46 billones, ligeramente inferiores a los $5,47 billones de 2025, y el Ebitda consolidado alcanzó $1,81 billones. La infraestructura de gas representó el 73 % del Ebitda y los negocios de bajas emisiones el 27 %. La compañía reportó cerca de 184.000 nuevos clientes de gas natural y un volumen transportado promedio de 611 Mpcd, 25 % superior al del tercer trimestre de 2025.",
+    "actors": [
+     {
+      "name": "Promigas",
+      "reason": "La utilidad neta cayó 24 % mientras los ingresos se mantuvieron casi planos y la compañía describió el Ebitda como estable."
+     },
+     {
+      "name": "Corficolombiana",
+      "reason": "Como matriz de Promigas consolida los resultados, pero la fuente no indica cómo le afecta la menor utilidad."
+     },
+     {
+      "name": "Krelo (negocio de energías renovables)",
+      "reason": "La compañía dijo que el parque Aurora con baterías y el financiamiento de Wimke permitieron alcanzar anticipadamente las metas de 2026."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próximos resultados trimestrales o del año completo 2026 de Promigas, para ver si la utilidad neta sigue cayendo frente a 2025",
+      "note": "Revisar el reporte de resultados de la compañía y la cobertura de prensa."
+     },
+     {
+      "text": "Avance del proyecto solar Wimke de 101 MW en Colombia tras su financiamiento y orden de inicio",
+      "note": "Revisar los anuncios de la compañía sobre hitos del proyecto."
+     }
+    ],
+    "unknowns": [
+     "¿Qué explica la caída de 24 % en la utilidad neta si el Ebitda se describe como estable?",
+     "¿Cómo afectaron la emisión de bonos híbridos y el prepago de deuda los gastos financieros del periodo?",
+     "¿Cuál fue la utilidad neta del mismo periodo de 2025?"
+    ]
+   }
+  }
+ ],
+ "rejected": [
+  {
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Acciones de ISA caen 7,82 % al cierre de la jornada",
+   "url": "https://www.valoraanalitik.com/acciones-de-isa-caen-782-al-cierre-de-la-jornada/",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Oil flows through Middle East chokepoints increased in the third quarter",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Dólar abre con impulso al alza tras la subida del miércoles: la cotización de la divisa este 19 de noviembre",
+   "url": "https://www.portafolio.co/economia/finanzas/dolar-abre-con-impulso-al-alza-tras-la-subida-del-miercoles-la-cotizacion-de-la-divisa-este-19-de-noviembre-506657",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Quarterly Services Survey",
+   "url": "https://www.census.gov/services/index.html",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "AV Villas generará utilidades en 2026 luego de cuatro años; habla de expectativas sobre inflación y salario mínimo",
+   "url": "https://www.valoraanalitik.com/av-villas-generara-utilidades-en-2026-luego-de-cuatro-anos-habla-de-expectativas-sobre-inflacion-y-salario-minimo/",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Acciones de ISA caen 7,82 % al cierre de la jornada",
+   "url": "https://www.valoraanalitik.com/acciones-de-isa-caen-782-al-cierre-de-la-jornada/",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Oil flows through Middle East chokepoints increased in the third quarter",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Dólar abre con impulso al alza tras la subida del miércoles: la cotización de la divisa este 19 de noviembre",
+   "url": "https://www.portafolio.co/economia/finanzas/dolar-abre-con-impulso-al-alza-tras-la-subida-del-miercoles-la-cotizacion-de-la-divisa-este-19-de-noviembre-506657",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Quarterly Services Survey",
+   "url": "https://www.census.gov/services/index.html",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "AV Villas generará utilidades en 2026 luego de cuatro años; habla de expectativas sobre inflación y salario mínimo",
+   "url": "https://www.valoraanalitik.com/av-villas-generara-utilidades-en-2026-luego-de-cuatro-anos-habla-de-expectativas-sobre-inflacion-y-salario-minimo/",
+   "errors": [
+    "model call failed: <HTTPError 400: 'Bad Request'>"
+   ]
+  },
+  {
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Acciones de ISA caen 7,82 % al cierre de la jornada",
+   "url": "https://www.valoraanalitik.com/acciones-de-isa-caen-782-al-cierre-de-la-jornada/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Oil flows through Middle East chokepoints increased in the third quarter",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Dólar abre con impulso al alza tras la subida del miércoles: la cotización de la divisa este 19 de noviembre",
+   "url": "https://www.portafolio.co/economia/finanzas/dolar-abre-con-impulso-al-alza-tras-la-subida-del-miercoles-la-cotizacion-de-la-divisa-este-19-de-noviembre-506657",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Quarterly Services Survey",
+   "url": "https://www.census.gov/services/index.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "AV Villas generará utilidades en 2026 luego de cuatro años; habla de expectativas sobre inflación y salario mínimo",
+   "url": "https://www.valoraanalitik.com/av-villas-generara-utilidades-en-2026-luego-de-cuatro-anos-habla-de-expectativas-sobre-inflacion-y-salario-minimo/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "MinHacienda busca modernizar el mercado de deuda pública en Colombia con bonos tokenizados",
+   "url": "https://www.valoraanalitik.com/minhacienda-presenta-plan-para-impulsar-el-mercado-de-deuda-publica-en-colombiaminhacienda-busca-modernizar-el-mercado-de-deuda-publica-en-colombia-con-bonos-tokenizados/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Oil flows through Middle East chokepoints increased in the third quarter",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Acciones de ISA caen 7,82 % al cierre de la jornada",
+   "url": "https://www.valoraanalitik.com/acciones-de-isa-caen-782-al-cierre-de-la-jornada/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Quarterly Services Survey",
+   "url": "https://www.census.gov/services/index.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "AV Villas generará utilidades en 2026 luego de cuatro años; habla de expectativas sobre inflación y salario mínimo",
+   "url": "https://www.valoraanalitik.com/av-villas-generara-utilidades-en-2026-luego-de-cuatro-anos-habla-de-expectativas-sobre-inflacion-y-salario-minimo/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  }
+ ],
+ "candidates": {
+  "from_feeds": 89,
+  "after_filter": 25,
+  "sample": [
+   "Federal Reserve Board issues enforcement action with former employee of First Security Ban",
+   "MinHacienda busca modernizar el mercado de deuda pública en Colombia con bonos tokenizados",
+   "Oil flows through Middle East chokepoints increased in the third quarter",
+   "Acciones de ISA caen 7,82 % al cierre de la jornada",
+   "Quarterly Services Survey",
+   "AV Villas generará utilidades en 2026 luego de cuatro años; habla de expectativas sobre in",
+   "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+   "Analistas ajustan a la baja proyección de inflación para cierre de año tras dos meses de a"
+  ],
+  "dropped": {
+   "seen": 16,
+   "skip": 0,
+   "no_topic": 47
+  },
+  "raw_sample": [
+   [
+    "A",
+    0,
+    "Federal Reserve Board issues enforcement action with former employee o"
+   ],
+   [
+    "A",
+    0,
+    "Minutes of the Federal Open Market Committee, October 27-28, 2026"
+   ],
+   [
+    "A",
+    0,
+    "Oil flows through Middle East chokepoints increased in the third quart"
+   ],
+   [
+    "A",
+    0,
+    "U.S. natural gas inventories end injection season above normal levels"
+   ],
+   [
+    "A",
+    0,
+    "How does EIA account for small differences between energy supply and d"
+   ],
+   [
+    "B",
+    1,
+    "CrossTech World 2026 reúne en Miami a líderes de la industria global d"
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-16-fed-chair-warsh-convenes-ai-task-force-conferenc",
+   "title": "Fed Chair Warsh convenes AI task force conference, offers no rate conclusions",
+   "url": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-19T02:34:47.141722+00:00"
+  },
+  {
+   "id": "2026-11-19-grupo-argos-wins-social-impact-branding-category",
+   "title": "Grupo Argos wins social-impact branding category at first Best Branding Awards Colombia",
+   "url": "https://www.valoraanalitik.com/grupo-argos-gana-en-la-primera-edicion-de-los-best-branding-awards-colombia-con-iniciativa-ambiental-y-social/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": []
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-uk-inflation-rises-to-3-6-in-october-a-one-year-",
+   "title": "UK inflation rises to 3.6% in October, a one-year high, as motor fuel costs jump 33.2%",
+   "url": "https://www.cnbc.com/2026/11/18/uk-inflation-cpi-fuel-prices.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-19T02:35:01.256372+00:00"
+  },
+  {
+   "id": "2026-11-19-colombia-sets-2027-minimum-wage-talks-table-open",
+   "title": "Colombia sets 2027 minimum wage talks: table opens Nov 27, first legal deadline Dec 15",
+   "url": "https://www.valoraanalitik.com/empieza-la-puja-por-el-salario-minimo-de-2027-este-es-el-aumento-que-podria-destrabar-la-negociacion/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Date error in the first watch item ('Official installation of the negotiating table and start of technical sessions', due 2026-11-27; ES: 'Instalación oficial de la mesa de negociación e inicio de las sesiones técnicas'): the source says the technical sessions with the Productivity Subcommittee begin on November 26, one day before the official installation on November 27. The item wrongly implies both happen on Nov 27.",
+     "Summary range is imprecise (EN and ES): it says Rodríguez argues for 8% to 9.5%, capped at 10%, implying roughly COP 1,890,977 to COP 1,925,996. COP 1,925,996 is the 10% ceiling figure, not the 9.5% figure; the source gives about COP 1,917,241 for 9.5%. Clarify that the upper bound is the 10% cap.",
+     "Attribution in the 'Minimum wage workers' actor reason (EN and ES): it says 'Unions seek to recover purchasing power', but the source attributes this goal to workers in general ('los trabajadores buscan'), not specifically to unions.",
+     "The 'Minimum wage workers' actor is rated 'mixed', but the reason only cites higher hiring costs for employers. It does not tie the downside to workers. The source's support is Rodríguez's warning that a double-digit rise would be 'un golpe muy duro al empleo formal'; the reason should cite that."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-17-st-louis-fed-s-musalem-says-up-to-four-more-rate",
+   "title": "St. Louis Fed's Musalem says up to four more rate hikes may be needed by spring 2027",
+   "url": "https://www.cnbc.com/2026/11/17/alberto-musalem-fed-interest-rates.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Minor, non-blocking: the Spanish title omits the 'by spring 2027' timeframe that appears in the English title. This is an omission rather than a contradiction, but the versions should be aligned.",
+     "Minor, non-blocking: the 'US borrowers' actor is not mentioned in the source. Its 'adverse' impact is an inference, though it follows directly from the source's statement that the fed funds rate would need to rise and the nominal rate 'may need to do most of the work'.",
+     "Minor, non-blocking: the AI spending slowdown is presented in the source as 'another possibility' in CNBC's framing, not as a direct quote from Musalem. 'Musalem cited' is a slightly strong attribution."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-19T02:35:14.976577+00:00"
+  },
+  {
+   "id": "2026-11-19-promigas-net-profit-falls-24-to-cop-674-672-mill",
+   "title": "Promigas' net profit falls 24% to COP 674,672 million through September 2026",
+   "url": "https://www.valoraanalitik.com/utilidad-promigas-redujo-septiembre-2026/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-19T02:35:27.782084+00:00"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "events": [
+    "fed_meeting"
+   ],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  }
+ ]
+}

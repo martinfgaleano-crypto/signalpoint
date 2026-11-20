@@ -1,0 +1,1480 @@
+{
+ "briefs": [
+  {
+   "id": "2026-11-19-promigas-net-profit-falls-24-to-cop-674-672-mill",
+   "title": "Promigas' net profit falls 24% to COP 674,672 million through September 2026",
+   "category": "Earnings",
+   "region": "Colombia",
+   "eventDate": "2026-11-19",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/utilidad-promigas-redujo-septiembre-2026/"
+   },
+   "summary": "Promigas, a subsidiary of Corficolombiana (Grupo Aval), reported net profit of COP 674,672 million through September 2026, down 24% from the same period a year earlier. Consolidated revenue was COP 5.46 trillion, slightly below COP 5.47 trillion in 2025, and consolidated Ebitda was COP 1.81 trillion. Gas infrastructure accounted for 73% of Ebitda and low-emission businesses for 27%. The company reported about 184,000 new natural gas customers and a transported volume averaging 611 Mpcd, 25% above the third quarter of 2025.",
+   "actors": [
+    {
+     "name": "Promigas",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Net profit fell 24% while revenue was nearly flat and Ebitda was described by the company as stable."
+    },
+    {
+     "name": "Corficolombiana",
+     "ticker": "CORFICOLCF",
+     "impact": "undetermined",
+     "reason": "As Promigas' parent it consolidates the results, but the source does not say how the lower profit affects it."
+    },
+    {
+     "name": "Krelo (renewable energy business)",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The company said the Aurora solar and battery park and the Wimke financing allowed it to reach its 2026 goals early."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Promigas' next quarterly or full-year 2026 results, to see whether net profit keeps falling against 2025",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the company's results release and press coverage."
+    },
+    {
+     "text": "Progress of the 101 MW Wimke solar project in Colombia after its financing and start order",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review company announcements on project milestones."
+    }
+   ],
+   "unknowns": [
+    "What explains the 24% drop in net profit while Ebitda is described as stable?",
+    "How did the hybrid bond issue and debt prepayment affect financial expenses in the period?",
+    "What was the net profit figure for the same period of 2025?"
+   ],
+   "tags": [
+    "Promigas",
+    "Corficolombiana",
+    "Grupo Aval",
+    "natural gas",
+    "Krelo",
+    "results"
+   ],
+   "es": {
+    "title": "Utilidad neta de Promigas cae 24 % a $674.672 millones a septiembre de 2026",
+    "summary": "Promigas, filial de Corficolombiana (Grupo Aval), reportó una utilidad neta de $674.672 millones a septiembre de 2026, con una caída de 24 % frente al mismo periodo del año anterior. Los ingresos consolidados fueron de $5,46 billones, ligeramente inferiores a los $5,47 billones de 2025, y el Ebitda consolidado alcanzó $1,81 billones. La infraestructura de gas representó el 73 % del Ebitda y los negocios de bajas emisiones el 27 %. La compañía reportó cerca de 184.000 nuevos clientes de gas natural y un volumen transportado promedio de 611 Mpcd, 25 % superior al del tercer trimestre de 2025.",
+    "actors": [
+     {
+      "name": "Promigas",
+      "reason": "La utilidad neta cayó 24 % mientras los ingresos se mantuvieron casi planos y la compañía describió el Ebitda como estable."
+     },
+     {
+      "name": "Corficolombiana",
+      "reason": "Como matriz de Promigas consolida los resultados, pero la fuente no indica cómo le afecta la menor utilidad."
+     },
+     {
+      "name": "Krelo (negocio de energías renovables)",
+      "reason": "La compañía dijo que el parque Aurora con baterías y el financiamiento de Wimke permitieron alcanzar anticipadamente las metas de 2026."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próximos resultados trimestrales o del año completo 2026 de Promigas, para ver si la utilidad neta sigue cayendo frente a 2025",
+      "note": "Revisar el reporte de resultados de la compañía y la cobertura de prensa."
+     },
+     {
+      "text": "Avance del proyecto solar Wimke de 101 MW en Colombia tras su financiamiento y orden de inicio",
+      "note": "Revisar los anuncios de la compañía sobre hitos del proyecto."
+     }
+    ],
+    "unknowns": [
+     "¿Qué explica la caída de 24 % en la utilidad neta si el Ebitda se describe como estable?",
+     "¿Cómo afectaron la emisión de bonos híbridos y el prepago de deuda los gastos financieros del periodo?",
+     "¿Cuál fue la utilidad neta del mismo periodo de 2025?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-st-louis-fed-s-musalem-says-up-to-four-more-rate",
+   "title": "St. Louis Fed's Musalem says up to four more rate hikes may be needed by spring 2027",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/17/alberto-musalem-fed-interest-rates.html"
+   },
+   "summary": "St. Louis Fed President Alberto Musalem said in a speech delivered in Argentina that the economy will likely require several rate increases before spring 2027 to reach 2% inflation in a timely manner. He estimated that the real policy rate needs to be between 2%-2.5% by next spring and is currently about a full point below that range. The fed funds rate is now at 3.75%-4%. He also described an «unlikely but still plausible scenario» in which no further hikes are needed, for example if energy and shipping costs fall or productivity growth rises.",
+   "actors": [
+    {
+     "name": "Federal Reserve / FOMC",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Musalem presents views and provides input to the dot plot, but he does not vote on the FOMC until 2028, so the committee's actual path remains open."
+    },
+    {
+     "name": "US borrowers exposed to the policy rate",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "If the nominal policy rate does most of the work, as Musalem said it may, borrowing costs tied to the fed funds rate would rise."
+    },
+    {
+     "name": "AI-related spending",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Musalem cited a slowdown in AI spending as one way demand could decelerate and ease inflation pressures, but he called strong demand the more likely scenario."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether other FOMC participants echo Musalem's call for several hikes before spring 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check speeches and statements by Fed officials, and the FOMC decisions in December, January, March and April cited by CNBC."
+    },
+    {
+     "text": "Changes in energy prices and shipping costs that Musalem said could ease inflation pressures",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare upcoming inflation releases and energy and shipping price data with his stated scenarios."
+    },
+    {
+     "text": "Indications of slowing AI-related spending or higher productivity growth",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review upcoming economic data and Fed commentary for signs of weaker demand or higher potential output."
+    }
+   ],
+   "unknowns": [
+    "How many other FOMC members share the view that four hikes may be needed?",
+    "Which inflation measure underlies the estimate that the real policy rate is about a full point below the 2%-2.5% range?",
+    "Will incoming data support the energy, shipping or productivity scenario that would make further hikes unnecessary?"
+   ],
+   "tags": [
+    "Fed",
+    "Musalem",
+    "rate hikes",
+    "inflation",
+    "FOMC",
+    "fed funds rate"
+   ],
+   "es": {
+    "title": "Musalem, de la Fed, plantea que podrían hacer falta hasta cuatro alzas de tasas más",
+    "summary": "El presidente de la Fed de San Luis, Alberto Musalem, afirmó en un discurso pronunciado en Argentina que la economía probablemente requerirá varias alzas de tasas antes de la primavera de 2027 para llevar la inflación a 2% de manera oportuna. Estimó que la tasa de política real debe situarse entre 2% y 2,5% para la próxima primavera y que actualmente está cerca de un punto completo por debajo de ese rango. La tasa de los fondos federales se ubica hoy en 3,75%-4%. También describió un «escenario poco probable pero aún plausible» en el que no se necesitarían más alzas, por ejemplo si caen los precios de la energía y de los fletes o si aumenta el crecimiento de la productividad.",
+    "actors": [
+     {
+      "name": "Reserva Federal / FOMC",
+      "reason": "Musalem presenta sus puntos de vista y aporta al «dot plot», pero no vota en el FOMC hasta 2028, por lo que la trayectoria real del comité sigue abierta."
+     },
+     {
+      "name": "Deudores en EE. UU. expuestos a la tasa de política",
+      "reason": "Si la tasa de política nominal hace la mayor parte del trabajo, como dijo Musalem que podría ocurrir, subirían los costos de endeudamiento ligados a la tasa de los fondos federales."
+     },
+     {
+      "name": "Gasto relacionado con inteligencia artificial",
+      "reason": "Musalem mencionó una desaceleración del gasto en IA como una vía para que la demanda se modere y alivie las presiones inflacionarias, pero calificó la demanda fuerte como el escenario más probable."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si otros miembros del FOMC respaldan la idea de varias alzas antes de la primavera de 2027",
+      "note": "Revisar discursos y declaraciones de funcionarios de la Fed y las decisiones del FOMC de diciembre, enero, marzo y abril citadas por CNBC."
+     },
+     {
+      "text": "Cambios en los precios de la energía y de los fletes que Musalem dijo que podrían aliviar las presiones inflacionarias",
+      "note": "Comparar las próximas cifras de inflación y los datos de precios de energía y fletes con los escenarios que planteó."
+     },
+     {
+      "text": "Señales de menor gasto en IA o de mayor crecimiento de la productividad",
+      "note": "Revisar los próximos datos económicos y los comentarios de la Fed en busca de indicios de menor demanda o mayor producto potencial."
+     }
+    ],
+    "unknowns": [
+     "¿Cuántos otros miembros del FOMC comparten la visión de que podrían necesitarse cuatro alzas?",
+     "¿Qué medida de inflación sustenta la estimación de que la tasa de política real está cerca de un punto por debajo del rango de 2% a 2,5%?",
+     "¿Respaldarán los datos entrantes el escenario de energía, fletes o productividad que haría innecesarias más alzas?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-uk-inflation-rises-to-3-6-in-october-a-one-year-",
+   "title": "UK inflation rises to 3.6% in October, a one-year high, as motor fuel costs jump 33.2%",
+   "category": "Macro data",
+   "region": "UK",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Economy",
+    "url": "https://www.cnbc.com/2026/11/18/uk-inflation-cpi-fuel-prices.html"
+   },
+   "summary": "U.K. inflation rose to 3.6% in the 12 months to October from 3.5% in September, in line with the Reuters poll of economists, according to CNBC citing the Office for National Statistics. The ONS said motor fuel costs, up 33.2% year-on-year, were the largest contributor. The average diesel price reached 199.5 pence per liter, the highest since ONS records began in 1996, and petrol averaged 174.7 pence per liter. Markets are pricing around an 80% chance of a Bank of England rate hike at its final meeting of the year, after a hike earlier this month.",
+   "actors": [
+    {
+     "name": "U.K. motorists and households",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Higher petrol and diesel prices raise running costs and feed into the headline inflation rate."
+    },
+    {
+     "name": "Bank of England",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Inflation at a one-year high and a warning of 5% by mid-2027 bear on policy, while the bank has already hiked rates this month."
+    },
+    {
+     "name": "U.K. economy as a net energy importer",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "CNBC notes the country is exposed to external energy shocks such as the disruption of trade through the Strait of Hormuz."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Bank of England decision at its final meeting of the year, where markets price around an 80% chance of a hike",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Bank of England's announcement after the December meeting."
+    },
+    {
+     "text": "Direction of oil and diesel prices after the recent decline in crude following the U.S. midterm elections",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare ONS fuel price data and oil benchmark quotes in the coming months."
+    },
+    {
+     "text": "Next ONS CPI release and whether inflation moves above or below 3.6%",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the ONS consumer price inflation release for November."
+    }
+   ],
+   "unknowns": [
+    "How much of the recent oil price retreat will reach pump prices?",
+    "Will the Bank of England hike in December as markets price?",
+    "Will inflation approach the 5% the Bank of England said it could reach by mid-2027?"
+   ],
+   "tags": [
+    "UK inflation",
+    "CPI",
+    "diesel",
+    "Bank of England",
+    "energy prices",
+    "ONS"
+   ],
+   "es": {
+    "title": "Inflación del Reino Unido sube a 3,6 % en octubre, máximo en un año, por combustibles",
+    "summary": "La inflación del Reino Unido subió a 3,6 % en los 12 meses a octubre, desde 3,5 % en septiembre, en línea con la encuesta de Reuters a economistas, según CNBC citando a la Oficina Nacional de Estadísticas (ONS). La ONS indicó que el mayor aporte fue el de los combustibles para vehículos, con un alza anual de 33,2 %. El precio promedio del diésel llegó a 199,5 peniques por litro, el más alto desde que comenzaron los registros de la ONS en 1996, y la gasolina promedió 174,7 peniques por litro. Los mercados descuentan cerca de 80 % de probabilidad de un alza de tasas del Banco de Inglaterra en su última reunión del año, tras la subida de este mes.",
+    "actors": [
+     {
+      "name": "Conductores y hogares del Reino Unido",
+      "reason": "Los precios más altos de la gasolina y el diésel elevan los costos de uso del vehículo y alimentan la inflación general."
+     },
+     {
+      "name": "Banco de Inglaterra",
+      "reason": "La inflación en máximo de un año y la advertencia de 5 % a mediados de 2027 inciden en su política, aunque ya subió tasas este mes."
+     },
+     {
+      "name": "Economía del Reino Unido como importador neto de energía",
+      "reason": "CNBC señala que el país es vulnerable a choques energéticos externos, como la interrupción del comercio por el estrecho de Ormuz."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del Banco de Inglaterra en su última reunión del año, en la que los mercados descuentan cerca de 80 % de probabilidad de alza",
+      "note": "Revisar el anuncio del Banco de Inglaterra tras la reunión de diciembre."
+     },
+     {
+      "text": "Rumbo de los precios del petróleo y el diésel tras la reciente baja del crudo posterior a las elecciones legislativas de mitad de mandato en EE. UU.",
+      "note": "Comparar los datos de precios de combustibles de la ONS y las cotizaciones del crudo de referencia en los próximos meses."
+     },
+     {
+      "text": "Próxima publicación del IPC de la ONS y si la inflación supera o queda por debajo de 3,6 %",
+      "note": "Revisar la publicación de inflación de precios al consumidor de la ONS para noviembre."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del reciente retroceso del petróleo llegará a los precios en las estaciones de servicio?",
+     "¿Subirá el Banco de Inglaterra las tasas en diciembre, como descuentan los mercados?",
+     "¿Se acercará la inflación al 5 % que el Banco de Inglaterra dijo que podría alcanzar a mediados de 2027?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-fed-chair-warsh-convenes-ai-task-force-conferenc",
+   "title": "Fed Chair Warsh convenes AI task force conference, offers no rate conclusions",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html"
+   },
+   "summary": "Fed Chairman Kevin Warsh convened a conference in San Francisco on Nov. 16 on AI's effects on productivity and jobs. He said 'We are at a hinge point in the U.S. economy' and asked panelists whether AI could bring disinflation in services, which they largely said was possible. He offered no immediate conclusions on interest rates. CNBC reports the Fed is contemplating a rate increase in December because of heavy spending by AI firms, and that the task force members must still deliver a report to Warsh in the next few months.",
+   "actors": [
+    {
+     "name": "Federal Reserve",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "AI could push prices and employment in opposite directions, and the Fed has not said how it would shape monetary policy."
+    },
+    {
+     "name": "Service and white-collar workers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Warsh raised the possibility of a services 'China shock' in which AI does legal or administrative work more cheaply, lowering prices but costing jobs."
+    },
+    {
+     "name": "Anthropic",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "CNBC says it plans to price its IPO on Wednesday, and a task force member working there could not speak during the blackout period."
+    },
+    {
+     "name": "Data center developers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "CNBC says voters approved state-level measures in the Nov. 3 midterms to slow data center construction."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Anthropic prices its IPO, which CNBC says is planned for Wednesday",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the company's pricing announcement and exchange filings for the final raise and valuation."
+    },
+    {
+     "text": "Fed communications on a possible interest rate increase in December",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the FOMC statement and minutes for references to AI-related spending and inflation."
+    },
+    {
+     "text": "Task force report to Warsh, expected within the next few months",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Look for Fed announcements or publication of the task force's findings."
+    }
+   ],
+   "unknowns": [
+    "How Warsh personally views AI's effect on jobs and prices, and how it would feed into monetary policy.",
+    "Whether the Fed will in fact raise rates in December.",
+    "When the task force report will be delivered and how the Fed will use it."
+   ],
+   "tags": [
+    "Fed",
+    "Warsh",
+    "AI",
+    "productivity",
+    "jobs",
+    "interest rates"
+   ],
+   "es": {
+    "title": "El presidente de la Fed, Warsh, reúne a su grupo de trabajo sobre IA sin dar conclusiones sobre tasas",
+    "summary": "El presidente de la Fed, Kevin Warsh, convocó el 16 de noviembre una conferencia en San Francisco sobre los efectos de la IA en la productividad y el empleo. Dijo que 'estamos en un punto de inflexión en la economía de EE. UU.' y preguntó a los panelistas si la IA podría generar desinflación en los servicios, algo que ellos consideraron en general posible. No ofreció conclusiones inmediatas sobre las tasas de interés. CNBC reporta que la Fed contempla subir tasas en diciembre por el fuerte gasto de las empresas de IA, y que los integrantes del grupo de trabajo deben entregar un informe a Warsh en los próximos meses.",
+    "actors": [
+     {
+      "name": "Reserva Federal",
+      "reason": "La IA podría empujar los precios y el empleo en direcciones opuestas, y la Fed no ha dicho cómo influiría en la política monetaria."
+     },
+     {
+      "name": "Trabajadores de servicios y de oficina",
+      "reason": "Warsh planteó la posibilidad de un 'choque chino' en servicios, en el que la IA haría trabajo legal o administrativo a menor costo, bajando precios pero eliminando empleos."
+     },
+     {
+      "name": "Anthropic",
+      "reason": "CNBC dice que planea fijar el precio de su IPO el miércoles, y un miembro del grupo que trabaja allí no pudo hablar por el periodo de silencio."
+     },
+     {
+      "name": "Desarrolladores de centros de datos",
+      "reason": "CNBC indica que los votantes aprobaron medidas estatales en las elecciones del 3 de noviembre para frenar la construcción de centros de datos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Anthropic fija el precio de su IPO, que según CNBC está prevista para el miércoles",
+      "note": "Revisar el anuncio de precio de la compañía y los documentos presentados ante la bolsa para ver el monto y la valoración finales."
+     },
+     {
+      "text": "Comunicaciones de la Fed sobre un posible aumento de tasas en diciembre",
+      "note": "Revisar el comunicado y las actas del FOMC en busca de referencias al gasto en IA y la inflación."
+     },
+     {
+      "text": "Informe del grupo de trabajo a Warsh, esperado en los próximos meses",
+      "note": "Buscar anuncios de la Fed o la publicación de los hallazgos del grupo."
+     }
+    ],
+    "unknowns": [
+     "Cuál es la opinión personal de Warsh sobre el efecto de la IA en empleo y precios, y cómo se traduciría en política monetaria.",
+     "Si la Fed efectivamente subirá las tasas en diciembre.",
+     "Cuándo se entregará el informe del grupo de trabajo y cómo lo usará la Fed."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "title": "Banco Popular cuts credit card range from 17 types to four, open from one minimum wage",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/banco-popular-relanza-tarjetas-credito/"
+   },
+   "summary": "Banco Popular, a Grupo Aval entity, relaunched its credit card portfolio, reducing 17 card types to four categories open to people earning from one minimum wage. The bank has about 160,000 cardholders and a card portfolio of about COP 500,000 million. Acting president Luis Fernando Gómez said the bank aims to double both users and portfolio size within three years. He also said the bank expects 2026 profit of COP 70,000 million to COP 75,000 million, after about COP 51,000 million through September.",
+   "actors": [
+    {
+     "name": "Banco Popular",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A simpler card range is meant to grow users and portfolio, but the outcome depends on uptake and on credit quality, which the source does not address."
+    },
+    {
+     "name": "Grupo Aval",
+     "ticker": "AVAL",
+     "impact": "undetermined",
+     "reason": "As parent of Banco Popular, it could be affected through the bank's earnings recovery, though the source gives no group-level figures."
+    },
+    {
+     "name": "Customers over 50",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are the bank's stated focus, with card benefits and no age limit on one product, but cost and credit terms are not detailed beyond some interest rate discounts."
+    },
+    {
+     "name": "Competing card issuers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Gómez cited new competitors as a reason for the change, but the source does not show any effect on them."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Banco Popular's reported profit for 2026 versus the COP 70,000 million to COP 75,000 million expected by management",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the bank's year-end 2026 financial results and press coverage of them."
+    },
+    {
+     "text": "Updates on the number of cardholders and card portfolio relative to the roughly 160,000 users and COP 500,000 million cited",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review later bank statements or interviews, and press reports on the three-year doubling goal."
+    },
+    {
+     "text": "Launch of the pension, payroll, insurance and term-deposit (CDT) products mentioned for the over-50 segment",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Look for bank announcements or press coverage of these products."
+    }
+   ],
+   "unknowns": [
+    "What interest rates, fees and approval criteria will apply to the four new cards?",
+    "How will the bank manage credit risk while seeking to double the card portfolio?",
+    "What happens to holders of the 13 discontinued card types?"
+   ],
+   "tags": [
+    "Banco Popular",
+    "Grupo Aval",
+    "credit cards",
+    "Colombia",
+    "banking",
+    "over 50s"
+   ],
+   "es": {
+    "title": "Banco Popular reduce de 17 a cuatro sus tarjetas de crédito; se accede desde un salario mínimo",
+    "summary": "Banco Popular, entidad del Grupo Aval, relanzó su portafolio de tarjetas de crédito y pasó de 17 tipos a cuatro categorías, a las que se accede desde un salario mínimo. El banco tiene cerca de 160.000 tarjetahabientes y una cartera de tarjetas cercana a $500.000 millones. El presidente encargado, Luis Fernando Gómez, dijo que se propone duplicar tanto los usuarios como el tamaño de la cartera en tres años. También afirmó que espera utilidades en 2026 de entre $70.000 millones y $75.000 millones, tras ganancias cercanas a $51.000 millones a septiembre.",
+    "actors": [
+     {
+      "name": "Banco Popular",
+      "reason": "Un portafolio más simple busca aumentar usuarios y cartera, pero el resultado depende de la acogida y de la calidad crediticia, que la fuente no aborda."
+     },
+     {
+      "name": "Grupo Aval",
+      "reason": "Como matriz de Banco Popular, podría verse afectada por la recuperación de utilidades del banco, aunque la fuente no da cifras del grupo."
+     },
+     {
+      "name": "Clientes mayores de 50 años",
+      "reason": "Son el foco declarado del banco, con beneficios en las tarjetas y un producto sin límite de edad, pero los costos y condiciones de crédito no se detallan más allá de algunos descuentos en la tasa de interés."
+     },
+     {
+      "name": "Otros emisores de tarjetas",
+      "reason": "Gómez mencionó a los nuevos competidores como motivo del cambio, pero la fuente no muestra efectos sobre ellos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Utilidades de Banco Popular en 2026 frente a los $70.000 millones a $75.000 millones que espera la administración",
+      "note": "Revisar los resultados financieros de cierre de 2026 del banco y su cobertura en prensa."
+     },
+     {
+      "text": "Actualizaciones sobre el número de tarjetahabientes y la cartera de tarjetas frente a los cerca de 160.000 usuarios y $500.000 millones citados",
+      "note": "Revisar futuros reportes o entrevistas del banco y notas de prensa sobre la meta de duplicar en tres años."
+     },
+     {
+      "text": "Lanzamiento de los productos de pensiones, nómina, seguros y CDT mencionados para el segmento mayor de 50 años",
+      "note": "Buscar anuncios del banco o cobertura de prensa sobre estos productos."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tasas de interés, comisiones y criterios de aprobación tendrán las cuatro nuevas tarjetas?",
+     "¿Cómo gestionará el banco el riesgo de crédito mientras busca duplicar la cartera de tarjetas?",
+     "¿Qué pasará con los titulares de los 13 tipos de tarjeta que se descontinúan?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "title": "Colombia's Q3 2026 GDP grew 0.5%, the weakest in over two years, DANE data show",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/economia-colombiana-tuvo-su-crecimiento-mas-bajo-en-mas-de-dos-anos-menos-gasto-estatal-y-terremoto-son-algunas-causas/"
+   },
+   "summary": "DANE reported Q3 2026 GDP growth of 0.5%, below the market forecasts cited by Valora Analitik, which ranged from 0.8% (Grupo Davivienda) to 2.2% (Bancolombia). Oil, gas and mining grew 7.8%, while public spending grew 1.6% versus 10.1% in the second quarter of 2026. Agriculture fell 6.7%, manufacturing 1.2% and financial and insurance activities 0.8%. Imports rose 9.8%, subtracting two percentage points from growth, and household consumption slowed from 2.8% to 1.7%. Analysts cited the August 10, 2026 earthquake among the factors.",
+   "actors": [
+    {
+     "name": "Agriculture, livestock and fishing",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The sector fell 6.7%, subtracting 0.8 points from total GDP, and coffee was cited as facing difficulties."
+    },
+    {
+     "name": "Mining (gold, silver, coal)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Mining output rebounded on gold, silver and coal, but Corficolombiana's economist described it as a rebound from a low base, and oil and gas output fell 2.9%."
+    },
+    {
+     "name": "Financial and insurance sector",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The sector fell 0.8%, and Corficolombiana's chief economist linked part of the weakness to earthquake-related insurance payments."
+    },
+    {
+     "name": "Construction and housing credit",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Construction grew 0.6% after several negative quarters, while a Bancolombia economist said high interest rates limit mortgage borrowing."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether reconstruction plans after the August 2026 earthquake and the housing program 'Mi Casa Milagro' lift construction activity.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the construction line in the next DANE quarterly GDP release and official announcements on the programs."
+    },
+    {
+     "text": "Behavior of utilities output when the El Niño peak arrives in the fourth quarter of 2026.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the utilities segment in DANE's fourth-quarter 2026 GDP report."
+    },
+    {
+     "text": "Whether imports keep growing near 10% and widen the external deficit, as a Bancolombia economist described.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future DANE GDP expenditure data and trade figures against the 9.8% import growth reported."
+    }
+   ],
+   "unknowns": [
+    "How much of the slowdown is attributable to the earthquake versus the moderation in public spending?",
+    "Is the 7.8% rebound in mining durable, given that oil and gas output kept falling?",
+    "How will high interest rates and the peso's appreciation affect household consumption and exports in coming quarters?"
+   ],
+   "tags": [
+    "Colombia",
+    "GDP",
+    "DANE",
+    "Q3 2026",
+    "public spending",
+    "earthquake"
+   ],
+   "es": {
+    "title": "PIB de Colombia creció 0,5 % en el tercer trimestre de 2026, el menor en más de dos años",
+    "summary": "El DANE reportó un crecimiento del PIB de 0,5 % en el tercer trimestre de 2026, por debajo de las previsiones del mercado citadas por Valora Analitik, que iban de 0,8 % (Grupo Davivienda) a 2,2 % (Bancolombia). Petróleo, gas y minería crecieron 7,8 %, mientras que el gasto público creció 1,6 %, frente a 10,1 % en el segundo trimestre de 2026. El agro cayó 6,7 %, la manufactura 1,2 % y las actividades financieras y de seguros 0,8 %. Las importaciones subieron 9,8 % y restaron dos puntos porcentuales al crecimiento, y el consumo de los hogares pasó de 2,8 % a 1,7 %. Los analistas mencionaron el terremoto del 10 de agosto de 2026 entre los factores.",
+    "actors": [
+     {
+      "name": "Agro, ganadería, caza y pesca",
+      "reason": "El sector cayó 6,7 % y restó 0,8 puntos al PIB total; se mencionó que el café enfrenta dificultades."
+     },
+     {
+      "name": "Minería (oro, plata, carbón)",
+      "reason": "La producción minera rebotó por oro, plata y carbón, pero el economista de Corficolombiana lo describió como un rebote desde una base baja, y el petróleo y el gas cayeron 2,9 %."
+     },
+     {
+      "name": "Sector financiero y de seguros",
+      "reason": "El sector cayó 0,8 %, y el economista jefe de Corficolombiana vinculó parte de la debilidad con los pagos de seguros por el terremoto."
+     },
+     {
+      "name": "Construcción y crédito de vivienda",
+      "reason": "La construcción creció 0,6 % tras varios trimestres negativos, mientras un economista de Bancolombia dijo que las tasas altas limitan el crédito hipotecario."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si los planes de reconstrucción tras el terremoto de agosto de 2026 y el programa de vivienda 'Mi Casa Milagro' impulsan la construcción.",
+      "note": "Revisar la línea de construcción en el próximo informe trimestral del PIB del DANE y los anuncios oficiales sobre los programas."
+     },
+     {
+      "text": "Comportamiento de los servicios públicos cuando llegue el pico de El Niño en el cuarto trimestre de 2026.",
+      "note": "Consultar el segmento de servicios públicos en el informe del PIB del cuarto trimestre de 2026 del DANE."
+     },
+     {
+      "text": "Si las importaciones siguen creciendo cerca de 10 % y amplían el déficit externo, como describió un economista de Bancolombia.",
+      "note": "Comparar los datos de gasto del PIB del DANE y las cifras de comercio con el crecimiento de 9,8 % de las importaciones reportado."
+     }
+    ],
+    "unknowns": [
+     "¿Cuánto de la desaceleración se debe al terremoto y cuánto a la moderación del gasto público?",
+     "¿Es duradero el rebote de 7,8 % en minería, dado que el petróleo y el gas siguieron cayendo?",
+     "¿Cómo afectarán las tasas de interés altas y la revaluación del peso al consumo de los hogares y a las exportaciones en los próximos trimestres?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "title": "Fed releases minutes of the October 27-28, 2026 FOMC meeting",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm"
+   },
+   "summary": "The Federal Reserve released the minutes of the Federal Open Market Committee meeting held on October 27-28, 2026, at 2:00 p.m. EST on November 18, 2026. The Fed says minutes for regularly scheduled meetings are generally published three weeks after the policy decision. It also says the descriptions of economic and financial conditions are based solely on information available to the Committee at the time of the meeting. The press release text provided does not include the content of the minutes.",
+   "actors": [
+    {
+     "name": "Federal Open Market Committee",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes document the Committee's October meeting, but the release text gives no details on discussions or decisions."
+    },
+    {
+     "name": "US financial market participants",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes may inform views on the policy outlook, but their content is not in the text provided."
+    },
+    {
+     "name": "Analysts of Fed policy",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They can review the full HTML or PDF minutes, which the release links, to assess the Committee's discussion."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Review of the full minutes (HTML or PDF) for the Committee's assessment of economic conditions and policy",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Read the minutes linked from the Federal Reserve press release and compare them with the October policy statement."
+    },
+    {
+     "text": "Public comments by Fed officials after the minutes release",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official Federal Reserve speeches and statements published after November 18, 2026."
+    }
+   ],
+   "unknowns": [
+    "What did the minutes say about the policy outlook and the Committee's views on the economy?",
+    "Did participants express differing views at the October 27-28 meeting?",
+    "How did financial markets react to the release?"
+   ],
+   "tags": [
+    "Fed",
+    "FOMC",
+    "minutes",
+    "monetary policy",
+    "United States"
+   ],
+   "es": {
+    "title": "La Fed publica las actas de la reunión del FOMC del 27 y 28 de octubre de 2026",
+    "summary": "La Reserva Federal publicó, a las 2:00 p. m. (hora del este) del 18 de noviembre de 2026, las actas de la reunión del Comité Federal de Mercado Abierto realizada el 27 y 28 de octubre de 2026. La Fed indica que las actas de las reuniones ordinarias se publican, por lo general, tres semanas después de la decisión de política. También señala que las descripciones de las condiciones económicas y financieras se basan únicamente en la información disponible para el Comité en el momento de la reunión. El texto del comunicado no incluye el contenido de las actas.",
+    "actors": [
+     {
+      "name": "Comité Federal de Mercado Abierto",
+      "reason": "Las actas documentan la reunión de octubre del Comité, pero el comunicado no da detalles sobre las discusiones ni las decisiones."
+     },
+     {
+      "name": "Participantes de los mercados financieros de EE. UU.",
+      "reason": "Las actas pueden orientar la visión sobre la política monetaria, pero su contenido no está en el texto disponible."
+     },
+     {
+      "name": "Analistas de la política de la Fed",
+      "reason": "Pueden revisar las actas completas en HTML o PDF, enlazadas en el comunicado, para evaluar la discusión del Comité."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Revisión de las actas completas (HTML o PDF) para conocer la evaluación del Comité sobre la economía y la política",
+      "note": "Leer las actas enlazadas en el comunicado de la Reserva Federal y compararlas con el comunicado de política de octubre."
+     },
+     {
+      "text": "Comentarios públicos de funcionarios de la Fed después de la publicación de las actas",
+      "note": "Consultar los discursos y declaraciones oficiales de la Reserva Federal publicados después del 18 de noviembre de 2026."
+     }
+    ],
+    "unknowns": [
+     "¿Qué dijeron las actas sobre la perspectiva de política y la visión del Comité sobre la economía?",
+     "¿Los participantes expresaron opiniones divergentes en la reunión del 27 y 28 de octubre?",
+     "¿Cómo reaccionaron los mercados financieros a la publicación?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "title": "Grupo Argos CEO outlines partial Cementos Argos stake sale, to keep about 51.5%",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/venta-acciones-grupo-argos-cementos-argos/"
+   },
+   "summary": "Grupo Argos CEO Juan Esteban Calle said on the third-quarter investor call that the company is contemplating a sale of part of its Cementos Argos stake, cutting it from 55% to about 51.5% (roughly four points) while keeping control. He described it as a tactical rebalancing meant to meet the free-float requirement for Cementos Argos to enter the MSCI Standard index, with execution expected by the end of the first quarter of 2027. Proceeds would be used to accelerate the share buyback under the ACE 1.0 program. Acciones & Valores estimated that about 46 million shares equal roughly COP 498,000 million, or 70.5 sessions of average Cementos Argos trading volume.",
+   "actors": [
+    {
+     "name": "Grupo Argos",
+     "ticker": "GRUPOARGOS",
+     "impact": "mixed",
+     "reason": "It would reduce its Cementos Argos stake to about 51.5% while keeping control and use the proceeds to speed up its share buyback."
+    },
+    {
+     "name": "Cementos Argos",
+     "ticker": "CEMARGOS",
+     "impact": "mixed",
+     "reason": "A larger free float could help it enter the MSCI Standard index, but the sale of a block equal to 70.5 sessions of average volume is a supply factor."
+    },
+    {
+     "name": "Foreign investors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Greater international visibility is the stated aim, but the source does not say whether it will draw new demand."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Announcement of the terms and execution of the Cementos Argos share sale by Grupo Argos",
+     "due": "2027-03-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check company disclosures and press reports for the sale and Grupo Argos's resulting stake near 51.5%."
+    },
+    {
+     "text": "Any expansion or acceleration of Grupo Argos's ACE 1.0 buyback program",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Grupo Argos filings and investor communications on the buyback."
+    },
+    {
+     "text": "Cementos Argos moving from MSCI Small Cap to the MSCI Standard index",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check MSCI index review announcements."
+    }
+   ],
+   "unknowns": [
+    "At what price and by what mechanism the shares would be sold.",
+    "Whether meeting the free-float requirement will be enough for MSCI to include Cementos Argos in the Standard index.",
+    "What final size and timing the sale will have, given the CEO's reference to the end of the first quarter of 2027."
+   ],
+   "tags": [
+    "Grupo Argos",
+    "Cementos Argos",
+    "MSCI",
+    "buyback",
+    "ACE 1.0",
+    "Colombia"
+   ],
+   "es": {
+    "title": "Grupo Argos plantea vender parte de Cementos Argos y conservar cerca de 51,5 %",
+    "summary": "El CEO de Grupo Argos, Juan Esteban Calle, dijo en la llamada con inversionistas del tercer trimestre que la compañía contempla vender parte de su participación en Cementos Argos, reduciéndola de 55 % a cerca de 51,5 % (unos cuatro puntos) y conservando el control. Lo describió como un rebalanceo táctico para cumplir el requisito de flotante y que Cementos Argos entre al índice MSCI Standard, con ejecución prevista hacia el cierre del primer trimestre de 2027. Los recursos se usarían para acelerar la recompra de acciones del programa ACE 1.0. Acciones & Valores estimó que cerca de 46 millones de acciones equivalen a unos $498.000 millones, o 70,5 jornadas del volumen promedio de Cementos Argos.",
+    "actors": [
+     {
+      "name": "Grupo Argos",
+      "reason": "Reduciría su participación en Cementos Argos a cerca de 51,5 % conservando el control, y usaría los recursos para acelerar su recompra de acciones."
+     },
+     {
+      "name": "Cementos Argos",
+      "reason": "Un mayor flotante podría ayudarle a entrar al índice MSCI Standard, pero la venta de un bloque equivalente a 70,5 jornadas de volumen promedio supone oferta adicional."
+     },
+     {
+      "name": "Inversionistas extranjeros",
+      "reason": "La mayor visibilidad internacional es el objetivo declarado, pero la fuente no indica si atraerá nueva demanda."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Anuncio de las condiciones y ejecución de la venta de acciones de Cementos Argos por parte de Grupo Argos",
+      "note": "Revisar comunicados de la compañía y prensa sobre la venta y la participación resultante cercana a 51,5 %."
+     },
+     {
+      "text": "Cualquier ampliación o aceleración del programa de recompra ACE 1.0 de Grupo Argos",
+      "note": "Revisar los reportes y comunicaciones a inversionistas de Grupo Argos sobre la recompra."
+     },
+     {
+      "text": "Paso de Cementos Argos del MSCI Small Cap al índice MSCI Standard",
+      "note": "Consultar los anuncios de las revisiones de índices de MSCI."
+     }
+    ],
+    "unknowns": [
+     "A qué precio y mediante qué mecanismo se venderían las acciones.",
+     "Si cumplir el requisito de flotante bastará para que MSCI incluya a Cementos Argos en el índice Standard.",
+     "Qué tamaño y calendario definitivos tendrá la venta, dada la referencia del CEO al cierre del primer trimestre de 2027."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombia-s-october-usury-cap-28-59-for-ordinary-",
+   "title": "Colombia's October usury cap: 28.59% for ordinary consumer loans, 66.66% for low-amount ones",
+   "category": "Regulation",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/tasa-de-usura-en-colombia-asi-puede-saber-si-le-cobran-intereses-por-encima-del-limite-legal/"
+   },
+   "summary": "Citing Superintendencia Financiera de Colombia figures relayed by the university IBERO, Valora Analitik reports that the usury limit for October 2026 was 28.59% effective annual for ordinary consumer loans and 66.66% for low-amount consumer loans. The cap equals 1.5 times the current bank interest rate certified by the regulator, so a rate above 60% is not necessarily illegal if the loan qualifies as low-amount. As an illustration on a constant $1 million balance, 28.59% annual is roughly 2.12% monthly (about $21,200 in interest), while 66.66% is roughly 4.35% monthly (about $43,500). IBERO's Mauricio Sabogal advises checking the loan category, the effective annual rate, whether the rate is fixed or variable, and extra charges.",
+   "actors": [
+    {
+     "name": "Consumer borrowers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The cap limits the interest they can be charged, but a higher ceiling applies to low-amount loans, so the category determines the cost."
+    },
+    {
+     "name": "Banks and credit institutions",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The cap is a ceiling, so each lender may price below it according to its policies and the applicant's profile."
+    },
+    {
+     "name": "Lenders and apps offering small loans",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A loan is not low-amount just because the sum is small, so the rate they may charge depends on meeting that category's requirements."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Next usury rate certified by the Superintendencia Financiera for each credit modality",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the regulator's published certification of the current bank interest rate and the resulting usury limit."
+    },
+    {
+     "text": "Whether the ordinary consumer and low-amount caps change from the October 2026 levels",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future Superfinanciera figures with 28.59% and 66.66% effective annual."
+    }
+   ],
+   "unknowns": [
+    "What the usury limits are for months after October 2026?",
+    "What requirements exactly define a low-amount consumer loan?",
+    "How widely are rates close to the cap actually charged in the market?"
+   ],
+   "tags": [
+    "usury rate",
+    "Colombia",
+    "consumer credit",
+    "Superfinanciera",
+    "interest rates",
+    "household debt"
+   ],
+   "es": {
+    "title": "Tasa de usura en Colombia en octubre: 28,59 % en consumo ordinario y 66,66 % en bajo monto",
+    "summary": "Con cifras de la Superintendencia Financiera de Colombia citadas por la IBERO, Valora Analitik informa que el límite de usura para octubre de 2026 fue de 28,59 % efectivo anual para créditos de consumo ordinario y de 66,66 % para créditos de consumo de bajo monto. El tope equivale a 1,5 veces el interés bancario corriente que certifica la Superfinanciera, por lo que una tasa superior al 60 % no es necesariamente ilegal si el crédito califica como de bajo monto. A modo de ejemplo sobre un saldo constante de $1 millón, 28,59 % anual equivale a cerca de 2,12 % mensual (unos $21.200 de intereses) y 66,66 % a cerca de 4,35 % mensual (unos $43.500). Mauricio Sabogal, de la IBERO, recomienda revisar la modalidad del crédito, la tasa efectiva anual, si la tasa es fija o variable y los cobros adicionales.",
+    "actors": [
+     {
+      "name": "Usuarios de crédito de consumo",
+      "reason": "El tope limita los intereses que se les pueden cobrar, pero para los créditos de bajo monto rige un límite más alto, así que la modalidad determina el costo."
+     },
+     {
+      "name": "Bancos y establecimientos de crédito",
+      "reason": "El límite es un techo, por lo que cada entidad puede fijar una tasa menor según sus políticas y el perfil del solicitante."
+     },
+     {
+      "name": "Prestamistas y aplicaciones de préstamos pequeños",
+      "reason": "Un préstamo no es de bajo monto solo por ser pequeño, así que la tasa que pueden cobrar depende de cumplir los requisitos de esa categoría."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próxima tasa de usura certificada por la Superintendencia Financiera para cada modalidad de crédito",
+      "note": "Revisar la certificación publicada por el regulador sobre el interés bancario corriente y el límite de usura resultante."
+     },
+     {
+      "text": "Si los topes de consumo ordinario y de bajo monto cambian frente a los niveles de octubre de 2026",
+      "note": "Comparar las futuras cifras de la Superfinanciera con 28,59 % y 66,66 % efectivo anual."
+     }
+    ],
+    "unknowns": [
+     "¿Cuáles serán los límites de usura en los meses posteriores a octubre de 2026?",
+     "¿Qué requisitos definen exactamente un crédito de consumo de bajo monto?",
+     "¿Qué tan frecuente es que el mercado cobre tasas cercanas al tope?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombian-peso-closes-at-cop-3-303-40-per-dollar",
+   "title": "Colombian peso closes at COP 3,303.40 per dollar as DANE reports 0.5% Q3 GDP growth",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-cierra-a-la-baja-en-3-30340-tras-conocerse-debil-crecimiento-del-pib-en-colombia/"
+   },
+   "summary": "The dollar closed at COP 3,303.40 in Colombia's interbank market, down COP 12.16 from the prior close of COP 3,315.56, with an intraday range of COP 3,293 to COP 3,327.40. Trading volume was US$1,195.6 million, according to JP Tactical. DANE reported that GDP grew 0.5% year on year in July-September 2026, with mining and quarrying up 7.8% and growth of 2.1% over the first nine months. Globally, the DXY index fell 0.14% to 103.40, while Brent rose 0.75% to US$93.13 and WTI rose 0.60% to US$84.98.",
+   "actors": [
+    {
+     "name": "Colombian peso market",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The dollar eased slightly but stayed above COP 3,300 for a third session, so the local currency was only marginally stronger as weak growth data arrived."
+    },
+    {
+     "name": "Mining and quarrying sector",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "According to DANE, it led sector growth with a 7.8% annual expansion, supporting overall GDP in the third quarter."
+    },
+    {
+     "name": "TES government bond holders",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The 2028 yield fell to 12.300% while the 2033 and 2036 yields rose to 12.780% and 12.720%, and the Global X index lost 0.20%."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the dollar closes below COP 3,300 in upcoming sessions, relative to the support at COP 3,240 cited by JP Tactical.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check daily interbank closing rates published by Valora Analitik or the Colombian financial regulator."
+    },
+    {
+     "text": "Direction of Brent and WTI after the reported incidents in Oman and Bahrain.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare daily Brent and WTI closes with US$93.13 and US$84.98."
+    },
+    {
+     "text": "Whether the DXY holds near 103.40 after reaching 19-month highs.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check daily DXY closes in market data."
+    }
+   ],
+   "unknowns": [
+    "How much of the peso's move is attributable to the GDP data versus global dollar and oil moves?",
+    "Which non-mining sectors drove the slowdown to 0.5% annual growth?",
+    "How long will the Middle East incidents keep oil prices supported?"
+   ],
+   "tags": [
+    "USD/COP",
+    "Colombia GDP",
+    "DANE",
+    "DXY",
+    "Brent",
+    "TES"
+   ],
+   "es": {
+    "title": "Dólar en Colombia cierra en $3.303,40 tras PIB del tercer trimestre de 0,5 % anual según el DANE",
+    "summary": "El dólar cerró en $3.303,40 en el mercado interbancario colombiano, $12,16 menos que el cierre previo de $3.315,56, con un rango intradiario de $3.293 a $3.327,40. El monto negociado fue de US$1.195,6 millones, según JP Tactical. El DANE reportó que el PIB creció 0,5 % anual entre julio y septiembre de 2026, con minas y canteras en 7,8 % y un acumulado de 2,1 % en los primeros nueve meses. A nivel global, el índice DXY cedió 0,14 % hasta 103,40, mientras el Brent subió 0,75 % a US$93,13 y el WTI 0,60 % a US$84,98.",
+    "actors": [
+     {
+      "name": "Mercado cambiario colombiano",
+      "reason": "El dólar cedió levemente pero se mantuvo por encima de $3.300 por tercera jornada, por lo que el peso solo se fortaleció de forma marginal mientras llegaban datos débiles de crecimiento."
+     },
+     {
+      "name": "Sector de minas y canteras",
+      "reason": "Según el DANE, lideró el crecimiento sectorial con una expansión anual de 7,8 %, lo que respaldó el PIB del tercer trimestre."
+     },
+     {
+      "name": "Tenedores de TES",
+      "reason": "La tasa del TES 2028 bajó a 12,300 %, mientras las de 2033 y 2036 subieron a 12,780 % y 12,720 %, y el índice de Global X perdió 0,20 %."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el dólar cierra por debajo de $3.300 en las próximas sesiones, frente al soporte de $3.240 citado por JP Tactical.",
+      "note": "Revisar los cierres diarios del mercado interbancario publicados por Valora Analitik o el regulador financiero colombiano."
+     },
+     {
+      "text": "Dirección del Brent y el WTI tras los incidentes reportados en Omán y Bahréin.",
+      "note": "Comparar los cierres diarios del Brent y el WTI con US$93,13 y US$84,98."
+     },
+     {
+      "text": "Si el DXY se mantiene cerca de 103,40 tras tocar máximos de 19 meses.",
+      "note": "Revisar los cierres diarios del DXY en datos de mercado."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del movimiento del peso se debe a los datos del PIB y qué parte al dólar global y al petróleo?",
+     "¿Qué sectores distintos de la minería explicaron la desaceleración a un crecimiento anual de 0,5 %?",
+     "¿Cuánto tiempo seguirán los incidentes en Oriente Medio sosteniendo los precios del petróleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-15-procafecol-juan-valdez-reports-cop-722-592-milli",
+   "title": "Procafecol (Juan Valdez) reports COP 722,592 million in nine-month revenue, up 13%",
+   "category": "Earnings",
+   "region": "Colombia",
+   "eventDate": "2026-11-15",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/juan-valdez-supero-los-722-000-millones-en-ingresos-crecimiento-fue-del-13-y-se-viene-apertura-de-tiendas/"
+   },
+   "summary": "Procafecol, which operates the Juan Valdez brand, reported operating revenue of COP 722,592 million for January-September 2026, up 13% from the same period of 2025. Operating profit was COP 40,741 million and net income was COP 6,023 million, with results affected by higher coffee costs, the stronger Colombian peso and the minimum wage increase. Sales outside Colombia totaled US$40.5 million, up 29%, or COP 141,065 million in local currency, up 9.1%. The company had 690 stores at the end of September (371 in Colombia and 319 abroad) and expects to reach 700 soon.",
+   "actors": [
+    {
+     "name": "Procafecol (Juan Valdez)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Revenue grew 13%, but higher coffee costs, the stronger peso and the minimum wage increase weighed on results, leaving net income at COP 6,023 million."
+    },
+    {
+     "name": "Fondo Nacional del Café",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Royalties transferred to the fund exceeded COP 43,775 million, growing more than 16%, according to the report."
+    },
+    {
+     "name": "Loblaw and Metro (Canada)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are named as commercial partners in Juan Valdez's start of operations in Canada, but the source gives no financial terms."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether Juan Valdez reaches 700 stores, as the company projected.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the next Procafecol results release or company statements for the store count."
+    },
+    {
+     "text": "Whether international sales keep growing in the coming reporting periods.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future Procafecol results with the US$40.5 million reported for the first nine months of 2026."
+    },
+    {
+     "text": "Whether coffee costs, the peso and wage costs keep pressuring margins.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review operating and net profit in the next results against COP 40,741 million and COP 6,023 million."
+    }
+   ],
+   "unknowns": [
+    "How net and operating profit compare with the same period of 2025, which the source does not state.",
+    "How large the Canadian operation is and what the terms of the Loblaw and Metro agreements are.",
+    "When exactly the 700-store target will be reached."
+   ],
+   "tags": [
+    "Juan Valdez",
+    "Procafecol",
+    "Colombia",
+    "coffee",
+    "earnings",
+    "retail"
+   ],
+   "es": {
+    "title": "Procafecol (Juan Valdez) reporta ingresos por $722.592 millones en nueve meses, un 13 % más",
+    "summary": "Procafecol, operadora de la marca Juan Valdez, registró ingresos operacionales por $722.592 millones entre enero y septiembre de 2026, un 13 % más que en el mismo periodo de 2025. La utilidad operacional fue de $40.741 millones y la ganancia neta de $6.023 millones, con resultados afectados por el alza en los costos del café, la apreciación del peso y el aumento del salario mínimo. Las ventas fuera de Colombia sumaron US$40,5 millones, un 29 % más, o $141.065 millones en moneda local, con alza del 9,1 %. A cierre de septiembre tenía 690 tiendas (371 en Colombia y 319 en el exterior) y espera llegar pronto a 700.",
+    "actors": [
+     {
+      "name": "Procafecol (Juan Valdez)",
+      "reason": "Los ingresos crecieron 13 %, pero el alza en los costos del café, la apreciación del peso y el aumento del salario mínimo pesaron sobre los resultados, y la ganancia neta quedó en $6.023 millones."
+     },
+     {
+      "name": "Fondo Nacional del Café",
+      "reason": "Las regalías transferidas al fondo superaron los $43.775 millones, con un crecimiento superior al 16 %, según el reporte."
+     },
+     {
+      "name": "Loblaw y Metro (Canadá)",
+      "reason": "Se mencionan como aliados comerciales en el inicio de operaciones de Juan Valdez en Canadá, pero la fuente no da condiciones financieras."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si Juan Valdez llega a las 700 tiendas, como proyectó la compañía.",
+      "note": "Revisar el próximo reporte de resultados de Procafecol o sus comunicados para ver el número de tiendas."
+     },
+     {
+      "text": "Si las ventas internacionales siguen creciendo en los próximos periodos reportados.",
+      "note": "Comparar los próximos resultados de Procafecol con los US$40,5 millones de los primeros nueve meses de 2026."
+     },
+     {
+      "text": "Si los costos del café, el peso y los costos salariales siguen presionando los márgenes.",
+      "note": "Revisar la utilidad operacional y la neta del próximo reporte frente a $40.741 millones y $6.023 millones."
+     }
+    ],
+    "unknowns": [
+     "Cómo se comparan la utilidad neta y la operacional con las del mismo periodo de 2025, que la fuente no indica.",
+     "Qué tamaño tiene la operación en Canadá y cuáles son las condiciones de los acuerdos con Loblaw y Metro.",
+     "Cuándo se alcanzará exactamente la meta de 700 tiendas."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombia-s-2027-minimum-wage-talks-workers-propo",
+   "title": "Colombia's 2027 minimum wage talks: workers propose 38% rise, some business groups cap at 9%",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/la-variable-clave-que-pediran-tener-en-la-definicion-del-salario-minimo-en-colombia-del-2027/"
+   },
+   "summary": "Valora Analitik reports that the definition of Colombia's 2027 minimum wage is expected to begin in the coming days, with the Government expected to formally convene workers and employers. Part of the workers propose a 38% increase, citing food-driven inflation, while some employers propose a 9% ceiling, arguing the adjustment should not exceed inflation plus labor productivity change per DANE figures. Employers also stress protecting employment levels, and DANE reports reflect concern over falling formal employment and rising self-employment.",
+   "actors": [
+    {
+     "name": "Formal-sector workers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The size of the adjustment will determine real income for minimum-wage earners, and the gap between proposals is large."
+    },
+    {
+     "name": "Employers / businesses",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A higher adjustment would raise labor costs, while employers argue for a cap tied to inflation and productivity."
+    },
+    {
+     "name": "Ministry of Labor (Government)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It is expected to convene the parties and seek a decision based on agreement between them."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Formal convening of workers and employers by the Government to start the minimum wage negotiation",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check announcements from the Ministry of Labor and national press."
+    },
+    {
+     "text": "Whether the parties reach a consensus on the 2027 adjustment or the decision is made without agreement",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the official decision announcement and the resulting decree."
+    },
+    {
+     "text": "Latest DANE data on inflation, productivity and formal employment used as reference in the talks",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review DANE releases and how the parties cite them."
+    }
+   ],
+   "unknowns": [
+    "What final percentage increase will be set for 2027?",
+    "Will the negotiation reach a consensus between workers and employers?",
+    "How will the proposals weigh inflation, productivity and employment protection?"
+   ],
+   "tags": [
+    "Colombia",
+    "minimum wage",
+    "2027",
+    "DANE",
+    "inflation",
+    "employment"
+   ],
+   "es": {
+    "title": "Salario mínimo 2027 en Colombia: trabajadores proponen alza de 38 % y algunos empresarios un tope de 9 %",
+    "summary": "Valora Analitik informa que la definición del salario mínimo de Colombia para 2027 comenzaría en los próximos días, y que se espera que el Gobierno convoque formalmente a trabajadores y empresarios. Una parte de los trabajadores propone un aumento de 38 %, con base en la inflación impulsada por los alimentos, mientras que algunos empresarios plantean un tope de 9 %, al argumentar que el ajuste no debe superar la inflación más la variación de la productividad laboral según cifras del DANE. Los empresarios también destacan la necesidad de proteger el empleo, y los informes del DANE reflejan preocupación por la caída del empleo formal y el aumento del trabajo independiente.",
+    "actors": [
+     {
+      "name": "Trabajadores del sector formal",
+      "reason": "El tamaño del ajuste determinará el ingreso real de quienes devengan el mínimo, y la brecha entre las propuestas es grande."
+     },
+     {
+      "name": "Empresarios / empresas",
+      "reason": "Un ajuste mayor elevaría los costos laborales, mientras que los empresarios piden un tope ligado a la inflación y la productividad."
+     },
+     {
+      "name": "Ministerio del Trabajo (Gobierno)",
+      "reason": "Se espera que convoque a las partes y busque una decisión a partir de la concertación entre ellas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Convocatoria formal del Gobierno a trabajadores y empresarios para iniciar la negociación del salario mínimo",
+      "note": "Revisar anuncios del Ministerio del Trabajo y la prensa nacional."
+     },
+     {
+      "text": "Si las partes llegan a un consenso sobre el ajuste de 2027 o si la decisión se toma sin acuerdo",
+      "note": "Revisar el anuncio oficial de la decisión y el decreto resultante."
+     },
+     {
+      "text": "Últimos datos del DANE sobre inflación, productividad y empleo formal usados como referencia en la negociación",
+      "note": "Consultar las publicaciones del DANE y cómo las citan las partes."
+     }
+    ],
+    "unknowns": [
+     "¿Qué porcentaje final de aumento se fijará para 2027?",
+     "¿Habrá consenso entre trabajadores y empresarios en la negociación?",
+     "¿Cómo se ponderarán en las propuestas la inflación, la productividad y la protección del empleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
+   "title": "Ecopetrol's Windpeshi wind farm in La Guajira reaches 25% progress; LNG cargo purchases paused",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-14",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/megaproyecto-eolico-ecopetrol-la-guajira-llega-25-avance/"
+   },
+   "summary": "Ecopetrol said at its third-quarter 2026 results presentation that the Windpeshi wind farm in La Guajira is 25% complete and is expected to start operating in the fourth quarter of 2028. The group's renewables portfolio reached 1,210 MW of incorporated capacity at the end of the first nine months of 2026, of which 414 MW are in commercial operation, 298 MW are power purchase contracts and 498 MW are under execution and construction. The company also paused LNG cargo purchase processes for the Buenaventura and Puerto Bahía terminals, citing higher international prices linked to Middle East tensions that affected flows equal to 18% of global LNG supply. Buenaventura is about 90% complete and Puerto Bahía 53%.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "mixed",
+     "reason": "Renewable capacity and construction are advancing, but the pause in LNG purchases leaves the new regasification terminals without confirmed cargo supply under current market conditions."
+    },
+    {
+     "name": "AES",
+     "ticker": "AES",
+     "impact": "undetermined",
+     "reason": "It is Ecopetrol's partner in the JK1 and JK2 wind parks, which are still in structuring and due diligence ahead of a targeted final investment decision."
+    },
+    {
+     "name": "SPEC LNG regasification plant (Cartagena)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The Puerto Bahía terminal is meant to reduce reliance on the SPEC plant, but the pause in LNG purchases makes the timing of any shift unclear."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Start of operations at the Buenaventura regasification terminal, estimated for the end of 2026",
+     "due": "2026-12-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol announcements and press coverage for confirmation of start-up."
+    },
+    {
+     "text": "Start of operations at the Puerto Bahía (Caribbean) regasification terminal, expected in the first two months of 2027",
+     "due": "2027-02-28",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol statements and sector press for the commissioning date."
+    },
+    {
+     "text": "Financial close and final investment decision (FID) for the JK1 and JK2 wind parks with AES, targeted for the first quarter of 2027",
+     "due": "2027-03-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol and AES releases for an FID announcement."
+    }
+   ],
+   "unknowns": [
+    "When will Ecopetrol resume LNG cargo purchases for the Buenaventura and Puerto Bahía terminals?",
+    "What are the investment size and capacity of the JK1 and JK2 wind parks?",
+    "Will the terminals start operating on schedule without secured LNG supply?"
+   ],
+   "tags": [
+    "Ecopetrol",
+    "Windpeshi",
+    "wind energy",
+    "LNG",
+    "regasification",
+    "La Guajira"
+   ],
+   "es": {
+    "title": "Parque eólico Windpeshi de Ecopetrol en La Guajira llega a 25 % de avance; se pausan compras de GNL",
+    "summary": "Ecopetrol informó en la presentación de resultados del tercer trimestre de 2026 que el parque eólico Windpeshi, en La Guajira, tiene un avance de 25 % y se espera que entre en operación en el cuarto trimestre de 2028. El portafolio de renovables del grupo alcanzó 1.210 MW de capacidad incorporada al cierre de los primeros nueve meses de 2026: 414 MW en operación comercial, 298 MW de contratos de compra de energía y 498 MW en ejecución y construcción. La compañía también pausó los procesos de compra de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía, por el encarecimiento internacional asociado a las tensiones en Medio Oriente, que afectaron flujos equivalentes al 18 % de la oferta mundial de GNL. Buenaventura registra un avance cercano al 90 % y Puerto Bahía, 53 %.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "La capacidad renovable y las obras avanzan, pero la pausa en las compras de GNL deja a las nuevas regasificadoras sin suministro confirmado bajo las condiciones actuales de mercado."
+     },
+     {
+      "name": "AES",
+      "reason": "Es el socio de Ecopetrol en los parques eólicos JK1 y JK2, que siguen en estructuración y debida diligencia antes de la decisión final de inversión prevista."
+     },
+     {
+      "name": "Planta de regasificación SPEC LNG (Cartagena)",
+      "reason": "La terminal de Puerto Bahía busca reducir la dependencia de la planta de SPEC, pero la pausa en las compras de GNL hace incierto el momento de ese cambio."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Inicio de operación de la regasificadora de Buenaventura, estimado para finales de 2026",
+      "note": "Revisar los anuncios de Ecopetrol y la prensa para confirmar la puesta en marcha."
+     },
+     {
+      "text": "Inicio de operación de la regasificadora del Caribe en Puerto Bahía, prevista para los primeros dos meses de 2027",
+      "note": "Revisar comunicados de Ecopetrol y prensa sectorial sobre la fecha de entrada en operación."
+     },
+     {
+      "text": "Cierre financiero y decisión final de inversión (FID) de los parques eólicos JK1 y JK2 con AES, previstos para el primer trimestre de 2027",
+      "note": "Revisar comunicados de Ecopetrol y AES sobre un anuncio de FID."
+     }
+    ],
+    "unknowns": [
+     "¿Cuándo retomará Ecopetrol las compras de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía?",
+     "¿Cuáles son el monto de inversión y la capacidad de los parques eólicos JK1 y JK2?",
+     "¿Las terminales entrarán en operación según el cronograma sin suministro de GNL asegurado?"
+    ]
+   }
+  }
+ ],
+ "updatedAt": "2026-11-20T19:10:03.333528+00:00",
+ "retracted": [
+  "2026-11-18-fed-releases-minutes-of-october-27-28-2026-fomc-"
+ ],
+ "insights": {
+  "2026-11-16-fed-chair-warsh-convenes-ai-task-force-conferenc": {
+   "tease": "The conference shows the Fed chair is still gathering views, not setting policy. AI could lower service prices while costing jobs, which would pull inflation and employment in opposite directions. CNBC also says heavy spending by AI firms has the Fed weighing a rate increase in December. Warsh gave no rate conclusions, so the link between AI and policy remains open.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If panelists are right that AI makes services cheaper, then price pressure tends to ease over the medium term, which could eventually leave room for lower rates. If spending by AI firms keeps heating the economy, then near-term inflation worries tend to dominate, keeping a December increase in play. If both happen at once, the signals tend to conflict."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "es": {
+    "tease": "La conferencia muestra que el presidente de la Fed aún recoge opiniones y no fija política. La IA podría bajar los precios de los servicios y a la vez costar empleos, lo que empujaría la inflación y el empleo en direcciones opuestas. CNBC dice además que el fuerte gasto de las empresas de IA lleva a la Fed a considerar subir tasas en diciembre. Warsh no dio conclusiones sobre tasas.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si los panelistas aciertan en que la IA abarata los servicios, la presión sobre los precios tiende a ceder en el mediano plazo, lo que con el tiempo podría dar espacio a tasas más bajas. Si el gasto de las empresas de IA sigue calentando la economía, la preocupación por la inflación tiende a pesar más y mantiene vigente un alza en diciembre. Si ocurren ambas cosas, las señales tienden a chocar."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
+  },
+  "2026-11-18-uk-inflation-rises-to-3-6-in-october-a-one-year-": {
+   "tease": "Inflation edged up to 3.6% from 3.5%, matching what economists expected, so the headline itself was no surprise. The driver was fuel: motor fuel prices rose 33.2% year-on-year, and diesel hit a record 199.5 pence per liter. This points to an energy shock feeding through to prices, rather than broad strength in demand.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If oil keeps easing after its retreat from wartime highs and pump prices follow, then fuel's push on inflation tends to fade and pressure on the Bank of England may soften. If Middle East disruption persists and energy costs stay high, then inflation tends to keep rising toward the 5% the Bank warned about by mid-2027."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "es": {
+    "tease": "La inflación subió a 3,6 % desde 3,5 %, en línea con lo que esperaban los economistas, así que el dato en sí no sorprendió. El motor fue el combustible: los precios para vehículos subieron 33,2 % anual y el diésel alcanzó un récord de 199,5 peniques por litro. Esto apunta a un choque energético que se traslada a los precios, no a una demanda general fuerte.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si el petróleo sigue cediendo tras su retroceso desde los máximos de la guerra y los precios en el surtidor lo acompañan, el empuje del combustible sobre la inflación tiende a diluirse y la presión sobre el Banco de Inglaterra podría aliviarse. Si la interrupción en Oriente Medio persiste y la energía sigue cara, la inflación tiende a seguir subiendo hacia el 5 % que el Banco advirtió para mediados de 2027."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
+  },
+  "2026-11-17-st-louis-fed-s-musalem-says-up-to-four-more-rate": {
+   "tease": "St. Louis Fed President Alberto Musalem argues that current policy is not holding the economy back much. He says the real policy rate, which is the Fed's rate minus inflation, needs to reach 2%-2.5% by spring. It is now about a full point lower. With the fed funds rate at 3.75%-4%, that could mean up to four hikes. This is one official's view, and he does not vote until 2028.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If strong demand and supply pressures persist, the nominal rate tends to do most of the work, with hikes possible in December, January, March and April. If energy and shipping costs fall, productivity growth rises, or AI spending slows, inflation could move toward 2% within 18 months, and fewer or no hikes tend to be needed. Musalem calls that case unlikely but plausible."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "es": {
+    "tease": "El presidente de la Fed de San Luis, Alberto Musalem, sostiene que la política actual no frena mucho la economía. Dice que la tasa de política real, es decir, la tasa de la Fed menos la inflación, debe llegar a 2%-2,5% en primavera. Hoy está cerca de un punto completo por debajo. Con la tasa de los fondos federales en 3,75%-4%, eso podría implicar hasta cuatro alzas. Es la opinión de un funcionario, y no vota hasta 2028.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si la demanda fuerte y las presiones de oferta persisten, la tasa nominal tiende a hacer la mayor parte del trabajo, con alzas posibles en diciembre, enero, marzo y abril. Si bajan los precios de la energía y de los fletes, sube la productividad o se frena el gasto en IA, la inflación podría acercarse a 2% en 18 meses y tenderían a hacer falta menos alzas o ninguna. Musalem lo llama poco probable, pero plausible."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
+  },
+  "2026-11-19-promigas-net-profit-falls-24-to-cop-674-672-mill": {
+   "tease": "Net profit fell 24% to COP 674,672 million, while revenue was almost flat at COP 5.46 trillion and Ebitda reached COP 1.81 trillion. So the weakness appears below operating earnings, though the source does not say where. Operations look steady: transported volume averaged 611 Mpcd, 25% above the third quarter of 2025.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If the gap comes from financial costs linked to the June US$920 million hybrid bond and the debt prepayment, then the profit pressure tends to be temporary and may ease as the longer term and lower average cost take hold. If it comes from other items, the decline could persist. The source does not say which applies."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "es": {
+    "tease": "La utilidad neta cayó 24 % a $674.672 millones, mientras los ingresos se mantuvieron casi planos en $5,46 billones y el Ebitda llegó a $1,81 billones. La debilidad parece estar por debajo de la utilidad operativa, aunque la fuente no dice dónde. La operación luce estable: el volumen transportado promedió 611 Mpcd, 25 % más que en el tercer trimestre de 2025.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si la diferencia viene de costos financieros ligados a los bonos híbridos de US$920 millones de junio y al prepago de deuda, la presión sobre la utilidad tiende a ser temporal y podría ceder a medida que se note el mayor plazo y el menor costo promedio. Si viene de otros rubros, la caída podría persistir. La fuente no aclara cuál aplica."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
+  }
+ },
+ "track": {
+  "open": 0,
+  "closed": 0,
+  "held": 0,
+  "expected": null,
+  "updatedAt": "2026-11-20",
+  "recent": []
+ }
+}

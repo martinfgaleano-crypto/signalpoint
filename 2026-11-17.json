@@ -1,0 +1,1899 @@
+{
+ "generatedAt": "2026-11-17T19:55:20.400603+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "0 (first date: Fri, 13 Nov 2026 21:15:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "1 (first date: Tue, 17 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-17 19:40:00)",
+  "Portafolio": "10 (first date: 2026-11-17T14:44:51-05:00)",
+  "Federal Reserve (monetary policy)": "0 (first date: Thu, 12 Nov 2026 17:45:00 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-16-moody-s-projects-colombian-gdp-growth-of-2-2-in-",
+   "title": "Moody's projects Colombian GDP growth of 2.2% in 2026, 2% in 2027 and 2.6% in 2028",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/colombia-retornara-a-un-crecimiento-economico-cercano-al-3-en-2028-tras-dos-anos-de-moderacion-moodys/"
+   },
+   "summary": "Per Valora Analitik's account of a Moody's Ratings emerging markets outlook, Colombia's GDP is projected to grow 2.2% in 2026 and 2% in 2027, after 2.6% in 2025, and to reach 2.6% in 2028. Moody's estimates inflation at 6% in 2026, 5.9% in 2027 and 4.6% in 2028, above the Banco de la República target range of 3% +/- 1%. The report says this keeps local interest rates high and weighs on corporate refinancing. Colombia's rating is Baa3 with a stable outlook.",
+   "actors": [
+    {
+     "name": "Colombian non-financial corporations",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "High real rates raise refinancing costs, compress free cash flow and weigh on long-term investment programs, according to the report."
+    },
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Inflation projected above the target range through 2027 limits room for aggressive cuts to the policy rate."
+    },
+    {
+     "name": "Colombian sovereign (Baa3, stable)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The rating is supported by credible institutional frameworks but pressured by reduced fiscal room and tight financial conditions."
+    },
+    {
+     "name": "Latin American commodity exporters",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Favorable terms of trade and demand for critical minerals support export income and foreign direct investment."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Colombia's reported annual GDP growth compared with Moody's 2.2% projection for 2026",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare DANE's GDP releases with the Moody's figure."
+    },
+    {
+     "text": "Colombian annual inflation relative to Moody's 6% estimate for 2026 and the 3% +/- 1% target range",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check DANE's CPI releases and Banco de la República communications."
+    },
+    {
+     "text": "Any change to Colombia's Baa3 rating or stable outlook from Moody's",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Moody's Ratings announcements on Colombia."
+    }
+   ],
+   "unknowns": [
+    "What assumptions on fiscal policy and policy rate underlie Moody's projections?",
+    "How do Moody's figures compare with local government and Banco de la República forecasts?",
+    "How quickly will corporate deleveraging proceed under high rates?"
+   ],
+   "tags": [
+    "Colombia",
+    "Moody's",
+    "GDP",
+    "inflation",
+    "interest rates",
+    "emerging markets"
+   ],
+   "es": {
+    "title": "Moody's proyecta que el PIB de Colombia crecerá 2,2 % en 2026, 2 % en 2027 y 2,6 % en 2028",
+    "summary": "Según el relato de Valora Analitik sobre un informe de perspectivas de mercados emergentes de Moody's Ratings, el PIB de Colombia crecería 2,2 % en 2026 y 2 % en 2027, tras el 2,6 % de 2025, y llegaría a 2,6 % en 2028. Moody's estima una inflación de 6 % en 2026, 5,9 % en 2027 y 4,6 % en 2028, por encima del rango meta del Banco de la República de 3 % +/- 1 %. El informe indica que esto mantiene altas las tasas de interés locales y presiona la refinanciación de las empresas. La calificación de Colombia es Baa3 con perspectiva estable.",
+    "actors": [
+     {
+      "name": "Empresas no financieras colombianas",
+      "reason": "Las tasas reales elevadas encarecen la refinanciación, comprimen el flujo de caja libre y afectan los programas de inversión de largo plazo, según el informe."
+     },
+     {
+      "name": "Banco de la República",
+      "reason": "Una inflación proyectada por encima del rango meta hasta 2027 limita el margen para recortes agresivos de la tasa de intervención."
+     },
+     {
+      "name": "Soberano colombiano (Baa3, estable)",
+      "reason": "La calificación se apoya en marcos institucionales creíbles, pero está presionada por una menor holgura fiscal y condiciones financieras estrictas."
+     },
+     {
+      "name": "Exportadores de materias primas de América Latina",
+      "reason": "Los términos de intercambio favorables y la demanda de minerales críticos respaldan los ingresos por exportación y la inversión extranjera directa."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Crecimiento anual del PIB de Colombia reportado frente a la proyección de 2,2 % de Moody's para 2026",
+      "note": "Comparar las publicaciones de PIB del DANE con la cifra de Moody's."
+     },
+     {
+      "text": "Inflación anual de Colombia frente al estimado de 6 % de Moody's para 2026 y el rango meta de 3 % +/- 1 %",
+      "note": "Revisar los boletines del IPC del DANE y las comunicaciones del Banco de la República."
+     },
+     {
+      "text": "Cualquier cambio en la calificación Baa3 o la perspectiva estable de Colombia por parte de Moody's",
+      "note": "Revisar los comunicados de Moody's Ratings sobre Colombia."
+     }
+    ],
+    "unknowns": [
+     "¿Qué supuestos de política fiscal y de tasa de interés sustentan las proyecciones de Moody's?",
+     "¿Cómo se comparan las cifras de Moody's con los pronósticos del Gobierno y del Banco de la República?",
+     "¿Qué tan rápido avanzará el desapalancamiento empresarial con tasas altas?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-cesa-study-consumption-by-colombians-over-55-cou",
+   "title": "CESA study: consumption by Colombians over 55 could equal 18.7% of GDP value added by 2042",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/consumo-mayores-55-anos-pib-colombia/"
+   },
+   "summary": "A CESA study led by Enrique Gilles estimates that consumption by people over 55 generated value added equal to 10.9% of GDP in 2018 and could reach 18.7% by 2042 under a demographic-change-only scenario. People over 55 would make up 27% of the population in 2042, up from 18% in 2018. The authors say the figures are not economic growth rates but an estimate of the weight of this group's consumption on the productive structure, using 2018 DANE data as the reference. A simulated monthly transfer of $230.000 to people over 65 without a pension would add 0,8 GDP points in 2026 and 1,2 points by 2042.",
+   "actors": [
+    {
+     "name": "Colombian companies serving older consumers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The study says the over-55 segment's weight in household consumption would rise, but its spending concentrates more on essential needs such as housing, water, electricity and gas."
+    },
+    {
+     "name": "Regions with high leakage of consumption value (Quibdó, Riohacha, Florencia, Neiva)",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "In these cities a large share of the economic impact of older people's spending shifts to other departments, so local value added captures less of the demand."
+    },
+    {
+     "name": "Cali, Armenia, Manizales and the Eje Cafetero",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are projected to have some of the highest shares of residents over 55 in 2042, but the source does not specify net economic effects."
+    },
+    {
+     "name": "Older adults without a pension",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The simulation of a monthly transfer of $230.000 for people over 65 without a pension shows an additional GDP impact versus the demographic-only scenario."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Publication of the full CESA/GEA study methodology and regional results",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check CESA and Valora Analitik for the full report on aging and territorial impact."
+    },
+    {
+     "text": "Update of the estimates using a base more recent than the 2018 DANE data",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review whether DANE or CESA publish newer data that revise the 10.9% and 18.7% figures."
+    },
+    {
+     "text": "Public policy discussion of transfers to older adults without a pension",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Monitor government or congressional statements citing the $230.000 monthly transfer simulation."
+    }
+   ],
+   "unknowns": [
+    "How would the estimates change with a base year more recent than 2018?",
+    "What assumptions underlie the demographic-only scenario for 2042?",
+    "What would be the fiscal cost and financing of the simulated monthly transfer?"
+   ],
+   "tags": [
+    "Colombia",
+    "CESA",
+    "aging",
+    "consumption",
+    "GDP",
+    "DANE"
+   ],
+   "es": {
+    "title": "Estudio del CESA: el consumo de los mayores de 55 años en Colombia podría equivaler al 18,7 % del valor agregado del PIB en 2042",
+    "summary": "Un estudio del CESA liderado por Enrique Gilles estima que el consumo de las personas mayores de 55 años generó un valor agregado equivalente al 10,9 % del PIB en 2018 y podría llegar al 18,7 % en 2042 bajo un escenario de cambio exclusivamente demográfico. Los mayores de 55 años representarían el 27 % de la población en 2042, frente al 18 % de 2018. Los autores aclaran que las cifras no son tasas de crecimiento económico, sino una estimación del peso del consumo de este grupo sobre la estructura productiva, con datos del DANE de 2018 como referencia. Una transferencia mensual simulada de $230.000 a mayores de 65 años sin pensión agregaría 0,8 puntos del PIB en 2026 y 1,2 puntos hacia 2042.",
+    "actors": [
+     {
+      "name": "Empresas colombianas que atienden a consumidores mayores",
+      "reason": "El estudio indica que el peso de los mayores de 55 años en el consumo de los hogares aumentaría, pero su gasto se concentra más en necesidades esenciales como vivienda, agua, electricidad y gas."
+     },
+     {
+      "name": "Regiones con alta fuga de valor del consumo (Quibdó, Riohacha, Florencia, Neiva)",
+      "reason": "En estas ciudades una parte importante del impacto económico del gasto de los mayores se traslada a otros departamentos, por lo que el valor agregado local captura menos de la demanda."
+     },
+     {
+      "name": "Cali, Armenia, Manizales y el Eje Cafetero",
+      "reason": "Se proyecta que tengan algunas de las mayores proporciones de habitantes mayores de 55 años en 2042, pero la fuente no precisa los efectos económicos netos."
+     },
+     {
+      "name": "Adultos mayores sin pensión",
+      "reason": "La simulación de una transferencia mensual de $230.000 para mayores de 65 años sin pensión muestra un impacto adicional en el PIB frente al escenario solo demográfico."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de la metodología completa y los resultados regionales del estudio del CESA/GEA",
+      "note": "Revisar el CESA y Valora Analitik para consultar el informe completo sobre envejecimiento e impacto territorial."
+     },
+     {
+      "text": "Actualización de las estimaciones con una base más reciente que los datos del DANE de 2018",
+      "note": "Verificar si el DANE o el CESA publican datos nuevos que modifiquen las cifras de 10,9 % y 18,7 %."
+     },
+     {
+      "text": "Discusión de política pública sobre transferencias a adultos mayores sin pensión",
+      "note": "Seguir pronunciamientos del Gobierno o del Congreso que citen la simulación de la transferencia mensual de $230.000."
+     }
+    ],
+    "unknowns": [
+     "¿Cómo cambiarían las estimaciones con un año base más reciente que 2018?",
+     "¿Qué supuestos sustentan el escenario exclusivamente demográfico para 2042?",
+     "¿Cuál sería el costo fiscal y la fuente de financiación de la transferencia mensual simulada?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
+   "title": "Ecopetrol's Windpeshi wind farm in La Guajira reaches 25% progress; LNG cargo purchases paused",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-14",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/megaproyecto-eolico-ecopetrol-la-guajira-llega-25-avance/"
+   },
+   "summary": "Ecopetrol said at its third-quarter 2026 results presentation that the Windpeshi wind farm in La Guajira is 25% complete and is expected to start operating in the fourth quarter of 2028. The group's renewables portfolio reached 1,210 MW of incorporated capacity at the end of the first nine months of 2026, of which 414 MW are in commercial operation, 298 MW are power purchase contracts and 498 MW are under execution and construction. The company also paused LNG cargo purchase processes for the Buenaventura and Puerto Bahía terminals, citing higher international prices linked to Middle East tensions that affected flows equal to 18% of global LNG supply. Buenaventura is about 90% complete and Puerto Bahía 53%.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "mixed",
+     "reason": "Renewable capacity and construction are advancing, but the pause in LNG purchases leaves the new regasification terminals without confirmed cargo supply under current market conditions."
+    },
+    {
+     "name": "AES",
+     "ticker": "AES",
+     "impact": "undetermined",
+     "reason": "It is Ecopetrol's partner in the JK1 and JK2 wind parks, which are still in structuring and due diligence ahead of a targeted final investment decision."
+    },
+    {
+     "name": "SPEC LNG regasification plant (Cartagena)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The Puerto Bahía terminal is meant to reduce reliance on the SPEC plant, but the pause in LNG purchases makes the timing of any shift unclear."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Start of operations at the Buenaventura regasification terminal, estimated for the end of 2026",
+     "due": "2026-12-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol announcements and press coverage for confirmation of start-up."
+    },
+    {
+     "text": "Start of operations at the Puerto Bahía (Caribbean) regasification terminal, expected in the first two months of 2027",
+     "due": "2027-02-28",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol statements and sector press for the commissioning date."
+    },
+    {
+     "text": "Financial close and final investment decision (FID) for the JK1 and JK2 wind parks with AES, targeted for the first quarter of 2027",
+     "due": "2027-03-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol and AES releases for an FID announcement."
+    }
+   ],
+   "unknowns": [
+    "When will Ecopetrol resume LNG cargo purchases for the Buenaventura and Puerto Bahía terminals?",
+    "What are the investment size and capacity of the JK1 and JK2 wind parks?",
+    "Will the terminals start operating on schedule without secured LNG supply?"
+   ],
+   "tags": [
+    "Ecopetrol",
+    "Windpeshi",
+    "wind energy",
+    "LNG",
+    "regasification",
+    "La Guajira"
+   ],
+   "es": {
+    "title": "Parque eólico Windpeshi de Ecopetrol en La Guajira llega a 25 % de avance; se pausan compras de GNL",
+    "summary": "Ecopetrol informó en la presentación de resultados del tercer trimestre de 2026 que el parque eólico Windpeshi, en La Guajira, tiene un avance de 25 % y se espera que entre en operación en el cuarto trimestre de 2028. El portafolio de renovables del grupo alcanzó 1.210 MW de capacidad incorporada al cierre de los primeros nueve meses de 2026: 414 MW en operación comercial, 298 MW de contratos de compra de energía y 498 MW en ejecución y construcción. La compañía también pausó los procesos de compra de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía, por el encarecimiento internacional asociado a las tensiones en Medio Oriente, que afectaron flujos equivalentes al 18 % de la oferta mundial de GNL. Buenaventura registra un avance cercano al 90 % y Puerto Bahía, 53 %.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "La capacidad renovable y las obras avanzan, pero la pausa en las compras de GNL deja a las nuevas regasificadoras sin suministro confirmado bajo las condiciones actuales de mercado."
+     },
+     {
+      "name": "AES",
+      "reason": "Es el socio de Ecopetrol en los parques eólicos JK1 y JK2, que siguen en estructuración y debida diligencia antes de la decisión final de inversión prevista."
+     },
+     {
+      "name": "Planta de regasificación SPEC LNG (Cartagena)",
+      "reason": "La terminal de Puerto Bahía busca reducir la dependencia de la planta de SPEC, pero la pausa en las compras de GNL hace incierto el momento de ese cambio."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Inicio de operación de la regasificadora de Buenaventura, estimado para finales de 2026",
+      "note": "Revisar los anuncios de Ecopetrol y la prensa para confirmar la puesta en marcha."
+     },
+     {
+      "text": "Inicio de operación de la regasificadora del Caribe en Puerto Bahía, prevista para los primeros dos meses de 2027",
+      "note": "Revisar comunicados de Ecopetrol y prensa sectorial sobre la fecha de entrada en operación."
+     },
+     {
+      "text": "Cierre financiero y decisión final de inversión (FID) de los parques eólicos JK1 y JK2 con AES, previstos para el primer trimestre de 2027",
+      "note": "Revisar comunicados de Ecopetrol y AES sobre un anuncio de FID."
+     }
+    ],
+    "unknowns": [
+     "¿Cuándo retomará Ecopetrol las compras de cargamentos de GNL para las terminales de Buenaventura y Puerto Bahía?",
+     "¿Cuáles son el monto de inversión y la capacidad de los parques eólicos JK1 y JK2?",
+     "¿Las terminales entrarán en operación según el cronograma sin suministro de GNL asegurado?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-14-banco-de-bogot-projects-colombian-stagnation-and",
+   "title": "Banco de Bogotá projects Colombian stagnation and high inflation into 2027 after BanRep revisions",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-14",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/colombia-viviria-2027-estancamiento-economico-alta-inflacion/"
+   },
+   "summary": "Banco de Bogotá's economic research team projects a prolonged period of stagnation with high inflation from the second half of 2026 through much of 2027, after Banco de la República staff revised its estimates. GDP growth for 2026 was cut from 2.5% to 2% and for 2027 from 1.9% to 1.7%, while year-end inflation was raised to 7.1% for 2026 (from 6.9%) and 4.8% for 2027 (from 4.3%). Convergence to the 2%-4% target range has been pushed back to the first quarter of 2028. The policy rate was held at 12.25% in late October, and the implied path points to cuts resuming probably in April 2027, closing 2027 near 10.25%.",
+   "actors": [
+    {
+     "name": "Colombian households and consumers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Higher food and utility prices and restrictive monetary and fiscal conditions have moderated private consumption."
+    },
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Inflation forecasts above the 2%-4% target push back the timing of rate cuts, while the bank's path depends on fiscal and wage outcomes."
+    },
+    {
+     "name": "Colombian government and Congress",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Approval of the economic rescue law with an effective fiscal adjustment is a condition for the projected rate path, but the adjustment also weighs on consumption and investment."
+    },
+    {
+     "name": "Fixed investment and businesses",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "High interest rates, fiscal adjustment and the August 10 earthquake have weighed on investment and growth."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Congress decision on the economic rescue law with fiscal adjustment",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check congressional records and official government announcements."
+    },
+    {
+     "text": "Setting of the 2027 minimum wage and whether it follows technical criteria",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the government decree and statements from the wage negotiation."
+    },
+    {
+     "text": "Banco de la República rate decisions through year-end and the possible start of cuts in April 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare policy rate decisions and minutes against the 12.25%-12.50% implied path."
+    }
+   ],
+   "unknowns": [
+    "Will Congress approve the rescue law with an effective fiscal adjustment?",
+    "How large will the earthquake's final impact on GDP be beyond the estimated 0.3 to 0.8 percentage points in Q3?",
+    "How persistent will the El Niño and oil price supply shocks prove to be?"
+   ],
+   "tags": [
+    "Colombia",
+    "inflation",
+    "GDP",
+    "Banco de la República",
+    "Banco de Bogotá",
+    "2027 outlook"
+   ],
+   "es": {
+    "title": "Banco de Bogotá proyecta estancamiento y alta inflación en Colombia hasta 2027 tras revisiones del BanRep",
+    "summary": "El equipo de Investigaciones Económicas del Banco de Bogotá proyecta un periodo prolongado de estancamiento con alta inflación desde el segundo semestre de 2026 y durante buena parte de 2027, tras las revisiones de estimaciones del equipo técnico del Banco de la República. El crecimiento del PIB de 2026 se recortó del 2,5 % al 2 % y el de 2027 del 1,9 % al 1,7 %, mientras que la inflación de cierre de año se elevó al 7,1 % para 2026 (desde 6,9 %) y al 4,8 % para 2027 (desde 4,3 %). La convergencia al rango meta del 2 % al 4 % se aplazó hasta el primer trimestre de 2028. La tasa de intervención se mantuvo en 12,25 % a finales de octubre y la senda implícita apunta a que los recortes se retomarían probablemente en abril de 2027, para cerrar ese año cerca de 10,25 %.",
+    "actors": [
+     {
+      "name": "Hogares y consumidores colombianos",
+      "reason": "Los mayores precios de alimentos y servicios públicos, junto con condiciones monetarias y fiscales restrictivas, han moderado el consumo privado."
+     },
+     {
+      "name": "Banco de la República",
+      "reason": "Unas proyecciones de inflación por encima del rango meta del 2 % al 4 % aplazan el momento de los recortes de tasas, y su senda depende de resultados fiscales y salariales."
+     },
+     {
+      "name": "Gobierno colombiano y Congreso",
+      "reason": "La aprobación de la ley de rescate económico con un ajuste fiscal efectivo es una condición para la senda de tasas proyectada, aunque el ajuste también pesa sobre el consumo y la inversión."
+     },
+     {
+      "name": "Inversión fija y empresas",
+      "reason": "Las tasas de interés altas, el ajuste fiscal y el terremoto del 10 de agosto han afectado la inversión y el crecimiento."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del Congreso sobre la ley de rescate económico con ajuste fiscal",
+      "note": "Revisar los registros del Congreso y los anuncios oficiales del Gobierno."
+     },
+     {
+      "text": "Fijación del salario mínimo de 2027 y si atiende criterios técnicos",
+      "note": "Revisar el decreto del Gobierno y las declaraciones de la concertación salarial."
+     },
+     {
+      "text": "Decisiones de tasas del Banco de la República hasta fin de año y posible inicio de recortes en abril de 2027",
+      "note": "Comparar las decisiones y actas de política monetaria con la senda implícita de 12,25 % a 12,50 %."
+     }
+    ],
+    "unknowns": [
+     "¿Aprobará el Congreso la ley de rescate con un ajuste fiscal efectivo?",
+     "¿Cuál será el impacto final del terremoto sobre el PIB, más allá de los 0,3 a 0,8 puntos porcentuales estimados para el tercer trimestre?",
+     "¿Qué tan persistentes serán los choques de oferta por El Niño y por el petróleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-colombia-august-quake-may-have-cut-up-to-0-8-pp-",
+   "title": "Colombia: August quake may have cut up to 0.8 pp from Q3 2026 GDP growth, Banco de Bogotá says",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Portafolio",
+    "url": "https://www.portafolio.co/economia/terremoto-de-agosto-habria-restado-hasta-0-8-puntos-porcentuales-al-crecimiento-del-pib-del-tercer-trimestre-506287"
+   },
+   "summary": "Portafolio reports that the 10 August earthquake would have subtracted between 0.3 and 0.8 percentage points from Colombia's Q3 2026 growth, according to Banco de la República estimates cited by Banco de Bogotá economist Alejandro Rojas. Banco de Bogotá expects growth near 1%, while Grupo Cibest's NowCast points to 2.2%. Dane is due to publish Q3 GDP on 17 November. Other cited factors include the fading of the World Cup consumption boost and lower public spending.",
+   "actors": [
+    {
+     "name": "Colombian manufacturing and construction",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The source says the quake hit these sectors hardest, with limited recovery in September and construction still contracting in October."
+    },
+    {
+     "name": "Colombian households",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The end of the World Cup spending boost and a stronger peso that lowers the local-currency value of remittances may weigh on spending capacity."
+    },
+    {
+     "name": "Financial services, agriculture and utilities",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The source lists these among the better-performing activities in the three months to October."
+    },
+    {
+     "name": "Affected regions in reconstruction",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Itaú's analyst says reconstruction could support activity in Q4 and early 2027, but the extent depends on public, private and insurer funds."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Dane publishes Q3 2026 GDP and the result is compared with forecasts ranging from about 1% to 2.2%.",
+     "due": "2026-11-17",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Dane GDP release against the Banco de Bogotá, Grupo Cibest, LatinFocus and Fedesarrollo estimates."
+    },
+    {
+     "text": "Sector data for manufacturing and construction show whether the recovery is broadening beyond September.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review subsequent Dane sector releases and Grupo Cibest's sector tracking."
+    },
+    {
+     "text": "Analyst revisions to 2026 and 2027 growth forecasts after the GDP release.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the updated LatinFocus and Fedesarrollo survey medians with the current 2.3% for 2027."
+    }
+   ],
+   "unknowns": [
+    "What is the official Q3 GDP figure from Dane?",
+    "How large is the quake effect relative to other factors such as lower public spending?",
+    "How quickly will reconstruction translate into activity in Q4 2026 and 2027?"
+   ],
+   "tags": [
+    "Colombia",
+    "GDP",
+    "earthquake",
+    "Dane",
+    "Banco de Bogotá",
+    "growth forecasts"
+   ],
+   "es": {
+    "title": "Colombia: el terremoto de agosto habría restado hasta 0,8 p. p. al PIB del tercer trimestre de 2026, según el Banco de Bogotá",
+    "summary": "Portafolio informa que el terremoto del 10 de agosto habría restado entre 0,3 y 0,8 puntos porcentuales al crecimiento de Colombia en el tercer trimestre de 2026, según estimaciones del Banco de la República citadas por Alejandro Rojas, economista del Banco de Bogotá. Este banco espera un crecimiento cercano a 1%, mientras que el NowCast de Grupo Cibest apunta a 2,2%. El Dane publicará el PIB del tercer trimestre el 17 de noviembre. Otros factores citados son el fin del impulso de consumo del Mundial y el menor gasto público.",
+    "actors": [
+     {
+      "name": "Industria manufacturera y construcción de Colombia",
+      "reason": "La fuente indica que el terremoto golpeó con más fuerza a estos sectores, con recuperación limitada en septiembre y la construcción aún en terreno contractivo en octubre."
+     },
+     {
+      "name": "Hogares colombianos",
+      "reason": "El fin del impulso de gasto del Mundial y un peso más fuerte que reduce el valor en moneda local de las remesas pueden afectar la capacidad de gasto."
+     },
+     {
+      "name": "Servicios financieros, agricultura y servicios públicos",
+      "reason": "La fuente los menciona entre las actividades con mejor desempeño en el trimestre móvil terminado en octubre."
+     },
+     {
+      "name": "Regiones afectadas en reconstrucción",
+      "reason": "La analista de Itaú dice que la reconstrucción podría apoyar la actividad en el cuarto trimestre y comienzos de 2027, pero depende de recursos públicos, privados y de aseguradoras."
+     }
+    ],
+    "watch": [
+     {
+      "text": "El Dane publica el PIB del tercer trimestre de 2026 y el resultado se compara con pronósticos que van de cerca de 1% a 2,2%.",
+      "note": "Contrastar la publicación del Dane con las estimaciones del Banco de Bogotá, Grupo Cibest, LatinFocus y Fedesarrollo."
+     },
+     {
+      "text": "Los datos sectoriales de industria y construcción muestran si la recuperación se amplía más allá de septiembre.",
+      "note": "Revisar las próximas publicaciones sectoriales del Dane y el seguimiento sectorial de Grupo Cibest."
+     },
+     {
+      "text": "Ajustes de los analistas a los pronósticos de crecimiento de 2026 y 2027 tras la publicación del PIB.",
+      "note": "Comparar las nuevas encuestas de LatinFocus y Fedesarrollo con el 2,3% actual para 2027."
+     }
+    ],
+    "unknowns": [
+     "¿Cuál es la cifra oficial del PIB del tercer trimestre del Dane?",
+     "¿Qué tan grande es el efecto del terremoto frente a otros factores, como el menor gasto público?",
+     "¿Qué tan rápido se traducirá la reconstrucción en actividad en el cuarto trimestre de 2026 y en 2027?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-global-stocks-fall-on-tighter-us-chip-export-cur",
+   "title": "Global stocks fall on tighter US chip export curbs ahead of Nvidia earnings",
+   "category": "Geopolitics",
+   "region": "US / Global",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-bolsas-mundiales-caen-por-nuevas-restricciones-de-ee-uu-a-chips-se-esperan-resultados-de-nvidia/"
+   },
+   "summary": "Asian and European stocks fell after Washington tightened controls on China's access to advanced AI chips. The MSCI Asia Pacific index lost about 1.2%, its tech subindex fell 3.6%, and the Stoxx 600 dropped 0.75%. The new rules would require data center operators in Singapore, Malaysia, Thailand, Indonesia and Brazil to obtain licenses to export advanced AI chips. Markets await Nvidia's results after Tuesday's Wall Street close, while CME FedWatch reportedly shows a 100% probability of a 25 bp Fed hike in December.",
+   "actors": [
+    {
+     "name": "Nvidia",
+     "ticker": "NVDA",
+     "impact": "mixed",
+     "reason": "Tighter export licensing for overseas data centers affects chip-based compute rental by Chinese developers, while its earnings and a corporate governance issue add uncertainty."
+    },
+    {
+     "name": "Asia-Pacific technology stocks",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The regional tech subindex fell 3.6% as export controls raised anxiety in the sector."
+    },
+    {
+     "name": "Data center operators in Southeast Asia and Brazil",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "They would need licenses to export advanced AI chips under the new US rules."
+    },
+    {
+     "name": "Nokia",
+     "ticker": "NOK",
+     "impact": "adverse",
+     "reason": "The shares fell more than 4% after Nvidia cut its stake in the company by 56% in the third quarter."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Nvidia's earnings report and forward guidance on AI capital spending through 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Nvidia's results release and market reaction after the Tuesday close."
+    },
+    {
+     "text": "Details and implementation of the US licensing requirements for overseas data centers",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review official US government announcements and press coverage."
+    },
+    {
+     "text": "Federal Reserve's December meeting decision on interest rates",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the Fed's decision with the CME FedWatch pricing cited in the source."
+    }
+   ],
+   "unknowns": [
+    "When the new US rules take effect and how licenses will be granted",
+    "What Nvidia's results and guidance will show",
+    "What the 'abrupt departure of Huang' mentioned in the source involves and its effect on Nvidia"
+   ],
+   "tags": [
+    "Nvidia",
+    "chips",
+    "export controls",
+    "AI",
+    "Fed",
+    "equities"
+   ],
+   "es": {
+    "title": "Bolsas mundiales caen por mayores restricciones de EE. UU. a chips antes de resultados de Nvidia",
+    "summary": "Las bolsas de Asia y Europa cayeron después de que Washington endureciera los controles al acceso de China a chips avanzados de IA. El MSCI Asia Pacific perdió cerca de 1,2 %, su subíndice tecnológico cayó 3,6 % y el Stoxx 600 bajó 0,75 %. Las nuevas normas obligarían a los operadores de centros de datos en Singapur, Malasia, Tailandia, Indonesia y Brasil a obtener licencias para exportar chips avanzados de IA. El mercado espera los resultados de Nvidia tras el cierre de Wall Street del martes, y según CME FedWatch se descuenta con 100 % de probabilidad una subida de 25 puntos básicos de la Fed en diciembre.",
+    "actors": [
+     {
+      "name": "Nvidia",
+      "reason": "El licenciamiento más estricto para centros de datos en el exterior afecta el alquiler de capacidad basada en chips por parte de desarrolladores chinos, y sus resultados y un tema de gobernanza corporativa añaden incertidumbre."
+     },
+     {
+      "name": "Acciones tecnológicas de Asia-Pacífico",
+      "reason": "El subíndice tecnológico regional cayó 3,6 % por la ansiedad ante los controles de exportación."
+     },
+     {
+      "name": "Operadores de centros de datos en el Sudeste Asiático y Brasil",
+      "reason": "Necesitarían licencias para exportar chips avanzados de IA según las nuevas normas de EE. UU."
+     },
+     {
+      "name": "Nokia",
+      "reason": "Sus acciones cayeron más de 4 % después de que Nvidia redujera su participación en la compañía en 56 % durante el tercer trimestre."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Informe de resultados de Nvidia y su orientación sobre el gasto de capital en IA hasta 2027",
+      "note": "Revisar la publicación de resultados de Nvidia y la reacción del mercado tras el cierre del martes."
+     },
+     {
+      "text": "Detalles y aplicación de los requisitos de licencia de EE. UU. para centros de datos en el exterior",
+      "note": "Consultar anuncios oficiales del Gobierno estadounidense y la cobertura de prensa."
+     },
+     {
+      "text": "Decisión de la Fed en su reunión de diciembre sobre las tasas de interés",
+      "note": "Comparar la decisión de la Fed con lo descontado por CME FedWatch según la fuente."
+     }
+    ],
+    "unknowns": [
+     "Cuándo entrarán en vigor las nuevas normas de EE. UU. y cómo se otorgarán las licencias",
+     "Qué mostrarán los resultados y la orientación de Nvidia",
+     "Qué implica la «abrupta salida de Huang» mencionada en la fuente y su efecto en Nvidia"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombia-s-2027-minimum-wage-talks-workers-propo",
+   "title": "Colombia's 2027 minimum wage talks: workers propose 38% rise, some business groups cap at 9%",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/la-variable-clave-que-pediran-tener-en-la-definicion-del-salario-minimo-en-colombia-del-2027/"
+   },
+   "summary": "Valora Analitik reports that the definition of Colombia's 2027 minimum wage is expected to begin in the coming days, with the Government expected to formally convene workers and employers. Part of the workers propose a 38% increase, citing food-driven inflation, while some employers propose a 9% ceiling, arguing the adjustment should not exceed inflation plus labor productivity change per DANE figures. Employers also stress protecting employment levels, and DANE reports reflect concern over falling formal employment and rising self-employment.",
+   "actors": [
+    {
+     "name": "Formal-sector workers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The size of the adjustment will determine real income for minimum-wage earners, and the gap between proposals is large."
+    },
+    {
+     "name": "Employers / businesses",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A higher adjustment would raise labor costs, while employers argue for a cap tied to inflation and productivity."
+    },
+    {
+     "name": "Ministry of Labor (Government)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It is expected to convene the parties and seek a decision based on agreement between them."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Formal convening of workers and employers by the Government to start the minimum wage negotiation",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check announcements from the Ministry of Labor and national press."
+    },
+    {
+     "text": "Whether the parties reach a consensus on the 2027 adjustment or the decision is made without agreement",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the official decision announcement and the resulting decree."
+    },
+    {
+     "text": "Latest DANE data on inflation, productivity and formal employment used as reference in the talks",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review DANE releases and how the parties cite them."
+    }
+   ],
+   "unknowns": [
+    "What final percentage increase will be set for 2027?",
+    "Will the negotiation reach a consensus between workers and employers?",
+    "How will the proposals weigh inflation, productivity and employment protection?"
+   ],
+   "tags": [
+    "Colombia",
+    "minimum wage",
+    "2027",
+    "DANE",
+    "inflation",
+    "employment"
+   ],
+   "es": {
+    "title": "Salario mínimo 2027 en Colombia: trabajadores proponen alza de 38 % y algunos empresarios un tope de 9 %",
+    "summary": "Valora Analitik informa que la definición del salario mínimo de Colombia para 2027 comenzaría en los próximos días, y que se espera que el Gobierno convoque formalmente a trabajadores y empresarios. Una parte de los trabajadores propone un aumento de 38 %, con base en la inflación impulsada por los alimentos, mientras que algunos empresarios plantean un tope de 9 %, al argumentar que el ajuste no debe superar la inflación más la variación de la productividad laboral según cifras del DANE. Los empresarios también destacan la necesidad de proteger el empleo, y los informes del DANE reflejan preocupación por la caída del empleo formal y el aumento del trabajo independiente.",
+    "actors": [
+     {
+      "name": "Trabajadores del sector formal",
+      "reason": "El tamaño del ajuste determinará el ingreso real de quienes devengan el mínimo, y la brecha entre las propuestas es grande."
+     },
+     {
+      "name": "Empresarios / empresas",
+      "reason": "Un ajuste mayor elevaría los costos laborales, mientras que los empresarios piden un tope ligado a la inflación y la productividad."
+     },
+     {
+      "name": "Ministerio del Trabajo (Gobierno)",
+      "reason": "Se espera que convoque a las partes y busque una decisión a partir de la concertación entre ellas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Convocatoria formal del Gobierno a trabajadores y empresarios para iniciar la negociación del salario mínimo",
+      "note": "Revisar anuncios del Ministerio del Trabajo y la prensa nacional."
+     },
+     {
+      "text": "Si las partes llegan a un consenso sobre el ajuste de 2027 o si la decisión se toma sin acuerdo",
+      "note": "Revisar el anuncio oficial de la decisión y el decreto resultante."
+     },
+     {
+      "text": "Últimos datos del DANE sobre inflación, productividad y empleo formal usados como referencia en la negociación",
+      "note": "Consultar las publicaciones del DANE y cómo las citan las partes."
+     }
+    ],
+    "unknowns": [
+     "¿Qué porcentaje final de aumento se fijará para 2027?",
+     "¿Habrá consenso entre trabajadores y empresarios en la negociación?",
+     "¿Cómo se ponderarán en las propuestas la inflación, la productividad y la protección del empleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-16-eurofarma-calls-colombia-one-of-its-best-perform",
+   "title": "Eurofarma calls Colombia one of its best-performing markets, citing record local sales",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-16",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/colombia-es-uno-de-los-mercados-con-mejor-desempeno-y-mayor-proyeccion-de-eurofarma/"
+   },
+   "summary": "Brazilian pharmaceutical group Eurofarma describes Colombia as one of the best-performing, highest-potential markets in its international network, citing record local sales and the country's role as a manufacturing center and export platform. The company reported revenue of US$2.540 million at the close of 2025 and operates in 24 countries in the region. It has industrial operations in Bogotá and Cali, and the Genfar brand has been expanded to about 10 countries in the region. The company says it directed about US$144,7 million to innovation and R&D, and US$31,8 million to ESG initiatives, in Latin America.",
+   "actors": [
+    {
+     "name": "Eurofarma",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The company presents record local sales and Colombia's manufacturing and export role as supporting its regional strategy to 2027."
+    },
+    {
+     "name": "Eurofarma Colombia plants (Bogotá and Cali)",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The facilities are described as integrated into the regional supply chain and used to expand brands such as Genfar to about 10 countries."
+    },
+    {
+     "name": "Coopidrogas",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It certified Eurofarma for operational excellence with 100 % delivery compliance, but the source gives no detail on commercial effects."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Eurofarma's disclosure of 2026 results, including the Colombian operation's contribution",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check company reports and press releases for 2026 revenue and country-level figures."
+    },
+    {
+     "text": "Progress on the 2027 strategic roadmap pillars: internationalization, innovation, ESG, talent and financial results",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review later company updates for stated progress on each pillar."
+    }
+   ],
+   "unknowns": [
+    "What is the actual size of Eurofarma's record local sales in Colombia?",
+    "How much of the US$2.540 million revenue comes from Colombia?",
+    "What export volumes does the Colombian platform currently handle?"
+   ],
+   "tags": [
+    "Eurofarma",
+    "Colombia",
+    "pharmaceuticals",
+    "Genfar",
+    "manufacturing",
+    "ESG"
+   ],
+   "es": {
+    "title": "Eurofarma destaca a Colombia como uno de sus mercados de mejor desempeño, con ventas locales récord",
+    "summary": "La farmacéutica brasileña Eurofarma describe a Colombia como uno de los mercados de mejor desempeño y mayor proyección de su red internacional, y cita ventas locales récord y el papel del país como centro de manufactura y plataforma de exportación. La compañía reportó ingresos por US$2.540 millones al cierre de 2025 y está presente en 24 países de la región. Tiene operaciones industriales en Bogotá y Cali, y la marca Genfar se ha expandido a cerca de 10 países de la región. La empresa indica que destinó cerca de US$144,7 millones a innovación e I+D, y US$31,8 millones a iniciativas ESG, en América Latina.",
+    "actors": [
+     {
+      "name": "Eurofarma",
+      "reason": "La compañía presenta las ventas locales récord y el rol manufacturero y exportador de Colombia como apoyo a su estrategia regional a 2027."
+     },
+     {
+      "name": "Plantas de Eurofarma en Colombia (Bogotá y Cali)",
+      "reason": "Las instalaciones se describen como integradas a la cadena de suministro regional y usadas para expandir marcas como Genfar a cerca de 10 países."
+     },
+     {
+      "name": "Coopidrogas",
+      "reason": "Certificó a Eurofarma por excelencia operativa con 100 % de cumplimiento en entregas, pero la fuente no detalla efectos comerciales."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de los resultados de 2026 de Eurofarma, incluido el aporte de la operación en Colombia",
+      "note": "Revisar informes y comunicados de la compañía para ver ingresos de 2026 y cifras por país."
+     },
+     {
+      "text": "Avance en los pilares de la hoja de ruta a 2027: internacionalización, innovación, ESG, talento y resultados financieros",
+      "note": "Consultar actualizaciones posteriores de la compañía sobre el avance en cada pilar."
+     }
+    ],
+    "unknowns": [
+     "¿Cuál es el tamaño real de las ventas locales récord de Eurofarma en Colombia?",
+     "¿Qué parte de los ingresos de US$2.540 millones proviene de Colombia?",
+     "¿Qué volúmenes de exportación maneja actualmente la plataforma colombiana?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-15-procafecol-juan-valdez-reports-cop-722-592-milli",
+   "title": "Procafecol (Juan Valdez) reports COP 722,592 million in nine-month revenue, up 13%",
+   "category": "Earnings",
+   "region": "Colombia",
+   "eventDate": "2026-11-15",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/juan-valdez-supero-los-722-000-millones-en-ingresos-crecimiento-fue-del-13-y-se-viene-apertura-de-tiendas/"
+   },
+   "summary": "Procafecol, which operates the Juan Valdez brand, reported operating revenue of COP 722,592 million for January-September 2026, up 13% from the same period of 2025. Operating profit was COP 40,741 million and net income was COP 6,023 million, with results affected by higher coffee costs, the stronger Colombian peso and the minimum wage increase. Sales outside Colombia totaled US$40.5 million, up 29%, or COP 141,065 million in local currency, up 9.1%. The company had 690 stores at the end of September (371 in Colombia and 319 abroad) and expects to reach 700 soon.",
+   "actors": [
+    {
+     "name": "Procafecol (Juan Valdez)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Revenue grew 13%, but higher coffee costs, the stronger peso and the minimum wage increase weighed on results, leaving net income at COP 6,023 million."
+    },
+    {
+     "name": "Fondo Nacional del Café",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Royalties transferred to the fund exceeded COP 43,775 million, growing more than 16%, according to the report."
+    },
+    {
+     "name": "Loblaw and Metro (Canada)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are named as commercial partners in Juan Valdez's start of operations in Canada, but the source gives no financial terms."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether Juan Valdez reaches 700 stores, as the company projected.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the next Procafecol results release or company statements for the store count."
+    },
+    {
+     "text": "Whether international sales keep growing in the coming reporting periods.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future Procafecol results with the US$40.5 million reported for the first nine months of 2026."
+    },
+    {
+     "text": "Whether coffee costs, the peso and wage costs keep pressuring margins.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review operating and net profit in the next results against COP 40,741 million and COP 6,023 million."
+    }
+   ],
+   "unknowns": [
+    "How net and operating profit compare with the same period of 2025, which the source does not state.",
+    "How large the Canadian operation is and what the terms of the Loblaw and Metro agreements are.",
+    "When exactly the 700-store target will be reached."
+   ],
+   "tags": [
+    "Juan Valdez",
+    "Procafecol",
+    "Colombia",
+    "coffee",
+    "earnings",
+    "retail"
+   ],
+   "es": {
+    "title": "Procafecol (Juan Valdez) reporta ingresos por $722.592 millones en nueve meses, un 13 % más",
+    "summary": "Procafecol, operadora de la marca Juan Valdez, registró ingresos operacionales por $722.592 millones entre enero y septiembre de 2026, un 13 % más que en el mismo periodo de 2025. La utilidad operacional fue de $40.741 millones y la ganancia neta de $6.023 millones, con resultados afectados por el alza en los costos del café, la apreciación del peso y el aumento del salario mínimo. Las ventas fuera de Colombia sumaron US$40,5 millones, un 29 % más, o $141.065 millones en moneda local, con alza del 9,1 %. A cierre de septiembre tenía 690 tiendas (371 en Colombia y 319 en el exterior) y espera llegar pronto a 700.",
+    "actors": [
+     {
+      "name": "Procafecol (Juan Valdez)",
+      "reason": "Los ingresos crecieron 13 %, pero el alza en los costos del café, la apreciación del peso y el aumento del salario mínimo pesaron sobre los resultados, y la ganancia neta quedó en $6.023 millones."
+     },
+     {
+      "name": "Fondo Nacional del Café",
+      "reason": "Las regalías transferidas al fondo superaron los $43.775 millones, con un crecimiento superior al 16 %, según el reporte."
+     },
+     {
+      "name": "Loblaw y Metro (Canadá)",
+      "reason": "Se mencionan como aliados comerciales en el inicio de operaciones de Juan Valdez en Canadá, pero la fuente no da condiciones financieras."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si Juan Valdez llega a las 700 tiendas, como proyectó la compañía.",
+      "note": "Revisar el próximo reporte de resultados de Procafecol o sus comunicados para ver el número de tiendas."
+     },
+     {
+      "text": "Si las ventas internacionales siguen creciendo en los próximos periodos reportados.",
+      "note": "Comparar los próximos resultados de Procafecol con los US$40,5 millones de los primeros nueve meses de 2026."
+     },
+     {
+      "text": "Si los costos del café, el peso y los costos salariales siguen presionando los márgenes.",
+      "note": "Revisar la utilidad operacional y la neta del próximo reporte frente a $40.741 millones y $6.023 millones."
+     }
+    ],
+    "unknowns": [
+     "Cómo se comparan la utilidad neta y la operacional con las del mismo periodo de 2025, que la fuente no indica.",
+     "Qué tamaño tiene la operación en Canadá y cuáles son las condiciones de los acuerdos con Loblaw y Metro.",
+     "Cuándo se alcanzará exactamente la meta de 700 tiendas."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-eia-explains-how-its-monthly-energy-review-accou",
+   "title": "EIA explains how its Monthly Energy Review accounts for small gaps between US energy supply and demand",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "A",
+   "source": {
+    "name": "U.S. Energy Information Administration",
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=68464"
+   },
+   "summary": "EIA says it uses over 60 surveys to collect US energy supply and demand data, and that the two totals often differ slightly. In 2025, its surveys accounted for about 128 quadrillion British thermal units (quads) each for supply and demand, and the 'stock change and other' series was 0.4 quads, about 0.3% of the total. EIA states that the adjustment series are standard statistical practice and do not indicate a flaw in the underlying statistics. It describes separate adjustment or balancing series for petroleum and biofuels, natural gas, and coal.",
+   "actors": [
+    {
+     "name": "Users of EIA Monthly Energy Review data",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Documented balancing series make the gap between supply and demand figures transparent and give a measure of survey uncertainty, according to EIA."
+    },
+    {
+     "name": "Natural gas data users",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "EIA's balancing item reflects venting losses, metering conversions and billing-cycle differences, which can complicate supply-demand comparisons."
+    },
+    {
+     "name": "Coal market analysts",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "EIA uses a losses and unaccounted for series for coal lost in transport and for accounting and timing issues, but the source gives no size for it."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Size of the 'stock change and other' series in future Monthly Energy Review releases compared with the 0.4 quads in 2025",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Monthly Energy Review total energy balance tables on eia.gov."
+    },
+    {
+     "text": "Changes to petroleum adjustment methods described in Appendix B of the Petroleum Supply Monthly",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review later editions of the Petroleum Supply Monthly appendix."
+    }
+   ],
+   "unknowns": [
+    "How large the adjustment series are for each fuel individually?",
+    "Will EIA change its survey coverage or methods to reduce the unexplained differences?",
+    "How much of the 0.4 quads is stock change versus other accounting differences?"
+   ],
+   "tags": [
+    "EIA",
+    "energy data",
+    "supply and demand",
+    "Monthly Energy Review",
+    "statistics"
+   ],
+   "es": {
+    "title": "EIA explica cómo su Monthly Energy Review contabiliza las pequeñas brechas entre oferta y demanda de energía en EE. UU.",
+    "summary": "EIA indica que usa más de 60 encuestas para recopilar datos de oferta y demanda de energía en EE. UU., y que ambos totales con frecuencia difieren levemente. En 2025, sus encuestas contabilizaron cerca de 128 cuatrillones de unidades térmicas británicas (quads) tanto para la oferta como para la demanda, y la serie «stock change and other» fue de 0,4 quads, cerca del 0,3 % del total. EIA afirma que las series de ajuste son una práctica estadística estándar y no señalan una falla en las estadísticas de base. Describe series de ajuste o de partidas de balance separadas para petróleo y biocombustibles, gas natural y carbón.",
+    "actors": [
+     {
+      "name": "Usuarios de los datos del Monthly Energy Review de EIA",
+      "reason": "Según EIA, las series de balance documentadas hacen transparente la brecha entre las cifras de oferta y demanda y dan una medida de la incertidumbre de las encuestas."
+     },
+     {
+      "name": "Usuarios de datos de gas natural",
+      "reason": "La partida de balance de EIA refleja pérdidas por venteo, conversiones de medición y diferencias de ciclos de facturación, lo que puede complicar las comparaciones entre oferta y demanda."
+     },
+     {
+      "name": "Analistas del mercado de carbón",
+      "reason": "EIA usa una serie de pérdidas y no contabilizado para el carbón perdido en el transporte y para problemas contables y de oportunidad, pero la fuente no indica su tamaño."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Tamaño de la serie «stock change and other» en próximas ediciones del Monthly Energy Review frente a los 0,4 quads de 2025",
+      "note": "Revisar las tablas del balance total de energía del Monthly Energy Review en eia.gov."
+     },
+     {
+      "text": "Cambios en los métodos de ajuste del petróleo descritos en el Apéndice B del Petroleum Supply Monthly",
+      "note": "Revisar el apéndice en ediciones posteriores del Petroleum Supply Monthly."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tamaño tienen las series de ajuste de cada combustible por separado?",
+     "¿Cambiará EIA la cobertura o los métodos de sus encuestas para reducir las diferencias sin explicar?",
+     "¿Qué parte de los 0,4 quads corresponde a cambio de inventarios y cuál a otras diferencias contables?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-bancolombia-executive-discusses-factors-that-cou",
+   "title": "Bancolombia executive discusses factors that could drive Colombia's housing recovery in 2027",
+   "category": "Other",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/podcast-que-impulsara-la-recuperacion-de-vivienda-en-2027-bancolombia-analiza-las-perspectivas-del-mercado/"
+   },
+   "summary": "Valora Analitik published a podcast episode with Federico Suárez, Bancolombia's vice president of the Real Estate and Construction Business. The text says high interest rates, subsidy changes and economic difficulties have tested the construction sector in recent years. It says signs of recovery are starting to appear, but the market still faces challenges in reactivating demand and turning sales into new projects. The episode covers the current market, factors for a 2027 recovery, the most dynamic regions and the role of financing; the page text does not include the discussion itself.",
+   "actors": [
+    {
+     "name": "Colombian construction sector",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The source cites high rates, subsidy changes and economic difficulties as pressures, alongside early signs of recovery."
+    },
+    {
+     "name": "Bancolombia",
+     "ticker": "CIB",
+     "impact": "undetermined",
+     "reason": "Its real estate and construction unit is involved in project financing, but the text gives no figures on its business."
+    },
+    {
+     "name": "Colombian households seeking housing",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The source says buying a home remains a key life goal, while interest rates and economic conditions limit affordability."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Signs of recovery in housing demand and sales in Colombia",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official construction and housing sales statistics and sector association reports."
+    },
+    {
+     "text": "Changes to housing subsidies and their effect on the sector",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review government announcements and sector reporting on subsidy programs."
+    },
+    {
+     "text": "Conversion of home sales into new projects and construction starts",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare launch and construction activity data in upcoming periodic releases."
+    }
+   ],
+   "unknowns": [
+    "What specific factors does Bancolombia's executive expect to drive the 2027 recovery?",
+    "Which regions show the most dynamism, and by how much?",
+    "How much financing is available for new housing projects?"
+   ],
+   "tags": [
+    "Colombia",
+    "housing",
+    "construction",
+    "Bancolombia",
+    "financing",
+    "2027"
+   ],
+   "es": {
+    "title": "Directivo de Bancolombia analiza los factores que podrían impulsar la recuperación de la vivienda en 2027",
+    "summary": "Valora Analitik publicó un episodio de podcast con Federico Suárez, vicepresidente del Negocio Inmobiliario y Constructor de Bancolombia. El texto indica que las altas tasas de interés, los cambios en los subsidios y las dificultades económicas han puesto a prueba al sector constructor en los últimos años. Señala que empiezan a aparecer señales de recuperación, pero el mercado aún enfrenta desafíos para reactivar la demanda y convertir las ventas en nuevos proyectos. El episodio aborda el panorama actual, los factores para la recuperación en 2027, las regiones más dinámicas y el papel de la financiación; el texto de la página no incluye la conversación.",
+    "actors": [
+     {
+      "name": "Sector constructor colombiano",
+      "reason": "La fuente menciona como presiones las altas tasas, los cambios en los subsidios y las dificultades económicas, junto con señales incipientes de recuperación."
+     },
+     {
+      "name": "Bancolombia",
+      "reason": "Su negocio inmobiliario y constructor participa en la financiación de proyectos, pero el texto no ofrece cifras sobre su actividad."
+     },
+     {
+      "name": "Hogares colombianos que buscan vivienda",
+      "reason": "La fuente dice que comprar vivienda sigue siendo un proyecto de vida clave, mientras las tasas y la situación económica limitan la capacidad de compra."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Señales de recuperación de la demanda y las ventas de vivienda en Colombia",
+      "note": "Revisar estadísticas oficiales de construcción y ventas de vivienda e informes de gremios del sector."
+     },
+     {
+      "text": "Cambios en los subsidios de vivienda y su efecto en el sector",
+      "note": "Consultar anuncios del Gobierno y reportes sectoriales sobre los programas de subsidios."
+     },
+     {
+      "text": "Conversión de las ventas de vivienda en nuevos proyectos e inicios de obra",
+      "note": "Comparar los datos de lanzamientos y actividad constructora en próximas publicaciones periódicas."
+     }
+    ],
+    "unknowns": [
+     "¿Qué factores específicos espera el directivo de Bancolombia que impulsen la recuperación en 2027?",
+     "¿Qué regiones muestran mayor dinamismo y en qué magnitud?",
+     "¿Cuánta financiación hay disponible para nuevos proyectos de vivienda?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombian-peso-closes-at-cop-3-303-40-per-dollar",
+   "title": "Colombian peso closes at COP 3,303.40 per dollar as DANE reports 0.5% Q3 GDP growth",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-cierra-a-la-baja-en-3-30340-tras-conocerse-debil-crecimiento-del-pib-en-colombia/"
+   },
+   "summary": "The dollar closed at COP 3,303.40 in Colombia's interbank market, down COP 12.16 from the prior close of COP 3,315.56, with an intraday range of COP 3,293 to COP 3,327.40. Trading volume was US$1,195.6 million, according to JP Tactical. DANE reported that GDP grew 0.5% year on year in July-September 2026, with mining and quarrying up 7.8% and growth of 2.1% over the first nine months. Globally, the DXY index fell 0.14% to 103.40, while Brent rose 0.75% to US$93.13 and WTI rose 0.60% to US$84.98.",
+   "actors": [
+    {
+     "name": "Colombian peso market",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The dollar eased slightly but stayed above COP 3,300 for a third session, so the local currency was only marginally stronger as weak growth data arrived."
+    },
+    {
+     "name": "Mining and quarrying sector",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "According to DANE, it led sector growth with a 7.8% annual expansion, supporting overall GDP in the third quarter."
+    },
+    {
+     "name": "TES government bond holders",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The 2028 yield fell to 12.300% while the 2033 and 2036 yields rose to 12.780% and 12.720%, and the Global X index lost 0.20%."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the dollar closes below COP 3,300 in upcoming sessions, relative to the support at COP 3,240 cited by JP Tactical.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check daily interbank closing rates published by Valora Analitik or the Colombian financial regulator."
+    },
+    {
+     "text": "Direction of Brent and WTI after the reported incidents in Oman and Bahrain.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare daily Brent and WTI closes with US$93.13 and US$84.98."
+    },
+    {
+     "text": "Whether the DXY holds near 103.40 after reaching 19-month highs.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check daily DXY closes in market data."
+    }
+   ],
+   "unknowns": [
+    "How much of the peso's move is attributable to the GDP data versus global dollar and oil moves?",
+    "Which non-mining sectors drove the slowdown to 0.5% annual growth?",
+    "How long will the Middle East incidents keep oil prices supported?"
+   ],
+   "tags": [
+    "USD/COP",
+    "Colombia GDP",
+    "DANE",
+    "DXY",
+    "Brent",
+    "TES"
+   ],
+   "es": {
+    "title": "Dólar en Colombia cierra en $3.303,40 tras PIB del tercer trimestre de 0,5 % anual según el DANE",
+    "summary": "El dólar cerró en $3.303,40 en el mercado interbancario colombiano, $12,16 menos que el cierre previo de $3.315,56, con un rango intradiario de $3.293 a $3.327,40. El monto negociado fue de US$1.195,6 millones, según JP Tactical. El DANE reportó que el PIB creció 0,5 % anual entre julio y septiembre de 2026, con minas y canteras en 7,8 % y un acumulado de 2,1 % en los primeros nueve meses. A nivel global, el índice DXY cedió 0,14 % hasta 103,40, mientras el Brent subió 0,75 % a US$93,13 y el WTI 0,60 % a US$84,98.",
+    "actors": [
+     {
+      "name": "Mercado cambiario colombiano",
+      "reason": "El dólar cedió levemente pero se mantuvo por encima de $3.300 por tercera jornada, por lo que el peso solo se fortaleció de forma marginal mientras llegaban datos débiles de crecimiento."
+     },
+     {
+      "name": "Sector de minas y canteras",
+      "reason": "Según el DANE, lideró el crecimiento sectorial con una expansión anual de 7,8 %, lo que respaldó el PIB del tercer trimestre."
+     },
+     {
+      "name": "Tenedores de TES",
+      "reason": "La tasa del TES 2028 bajó a 12,300 %, mientras las de 2033 y 2036 subieron a 12,780 % y 12,720 %, y el índice de Global X perdió 0,20 %."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el dólar cierra por debajo de $3.300 en las próximas sesiones, frente al soporte de $3.240 citado por JP Tactical.",
+      "note": "Revisar los cierres diarios del mercado interbancario publicados por Valora Analitik o el regulador financiero colombiano."
+     },
+     {
+      "text": "Dirección del Brent y el WTI tras los incidentes reportados en Omán y Bahréin.",
+      "note": "Comparar los cierres diarios del Brent y el WTI con US$93,13 y US$84,98."
+     },
+     {
+      "text": "Si el DXY se mantiene cerca de 103,40 tras tocar máximos de 19 meses.",
+      "note": "Revisar los cierres diarios del DXY en datos de mercado."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del movimiento del peso se debe a los datos del PIB y qué parte al dólar global y al petróleo?",
+     "¿Qué sectores distintos de la minería explicaron la desaceleración a un crecimiento anual de 0,5 %?",
+     "¿Cuánto tiempo seguirán los incidentes en Oriente Medio sosteniendo los precios del petróleo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-colombia-s-october-usury-cap-28-59-for-ordinary-",
+   "title": "Colombia's October usury cap: 28.59% for ordinary consumer loans, 66.66% for low-amount ones",
+   "category": "Regulation",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/tasa-de-usura-en-colombia-asi-puede-saber-si-le-cobran-intereses-por-encima-del-limite-legal/"
+   },
+   "summary": "Citing Superintendencia Financiera de Colombia figures relayed by the university IBERO, Valora Analitik reports that the usury limit for October 2026 was 28.59% effective annual for ordinary consumer loans and 66.66% for low-amount consumer loans. The cap equals 1.5 times the current bank interest rate certified by the regulator, so a rate above 60% is not necessarily illegal if the loan qualifies as low-amount. As an illustration on a constant $1 million balance, 28.59% annual is roughly 2.12% monthly (about $21,200 in interest), while 66.66% is roughly 4.35% monthly (about $43,500). IBERO's Mauricio Sabogal advises checking the loan category, the effective annual rate, whether the rate is fixed or variable, and extra charges.",
+   "actors": [
+    {
+     "name": "Consumer borrowers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The cap limits the interest they can be charged, but a higher ceiling applies to low-amount loans, so the category determines the cost."
+    },
+    {
+     "name": "Banks and credit institutions",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The cap is a ceiling, so each lender may price below it according to its policies and the applicant's profile."
+    },
+    {
+     "name": "Lenders and apps offering small loans",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A loan is not low-amount just because the sum is small, so the rate they may charge depends on meeting that category's requirements."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Next usury rate certified by the Superintendencia Financiera for each credit modality",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the regulator's published certification of the current bank interest rate and the resulting usury limit."
+    },
+    {
+     "text": "Whether the ordinary consumer and low-amount caps change from the October 2026 levels",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future Superfinanciera figures with 28.59% and 66.66% effective annual."
+    }
+   ],
+   "unknowns": [
+    "What the usury limits are for months after October 2026?",
+    "What requirements exactly define a low-amount consumer loan?",
+    "How widely are rates close to the cap actually charged in the market?"
+   ],
+   "tags": [
+    "usury rate",
+    "Colombia",
+    "consumer credit",
+    "Superfinanciera",
+    "interest rates",
+    "household debt"
+   ],
+   "es": {
+    "title": "Tasa de usura en Colombia en octubre: 28,59 % en consumo ordinario y 66,66 % en bajo monto",
+    "summary": "Con cifras de la Superintendencia Financiera de Colombia citadas por la IBERO, Valora Analitik informa que el límite de usura para octubre de 2026 fue de 28,59 % efectivo anual para créditos de consumo ordinario y de 66,66 % para créditos de consumo de bajo monto. El tope equivale a 1,5 veces el interés bancario corriente que certifica la Superfinanciera, por lo que una tasa superior al 60 % no es necesariamente ilegal si el crédito califica como de bajo monto. A modo de ejemplo sobre un saldo constante de $1 millón, 28,59 % anual equivale a cerca de 2,12 % mensual (unos $21.200 de intereses) y 66,66 % a cerca de 4,35 % mensual (unos $43.500). Mauricio Sabogal, de la IBERO, recomienda revisar la modalidad del crédito, la tasa efectiva anual, si la tasa es fija o variable y los cobros adicionales.",
+    "actors": [
+     {
+      "name": "Usuarios de crédito de consumo",
+      "reason": "El tope limita los intereses que se les pueden cobrar, pero para los créditos de bajo monto rige un límite más alto, así que la modalidad determina el costo."
+     },
+     {
+      "name": "Bancos y establecimientos de crédito",
+      "reason": "El límite es un techo, por lo que cada entidad puede fijar una tasa menor según sus políticas y el perfil del solicitante."
+     },
+     {
+      "name": "Prestamistas y aplicaciones de préstamos pequeños",
+      "reason": "Un préstamo no es de bajo monto solo por ser pequeño, así que la tasa que pueden cobrar depende de cumplir los requisitos de esa categoría."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próxima tasa de usura certificada por la Superintendencia Financiera para cada modalidad de crédito",
+      "note": "Revisar la certificación publicada por el regulador sobre el interés bancario corriente y el límite de usura resultante."
+     },
+     {
+      "text": "Si los topes de consumo ordinario y de bajo monto cambian frente a los niveles de octubre de 2026",
+      "note": "Comparar las futuras cifras de la Superfinanciera con 28,59 % y 66,66 % efectivo anual."
+     }
+    ],
+    "unknowns": [
+     "¿Cuáles serán los límites de usura en los meses posteriores a octubre de 2026?",
+     "¿Qué requisitos definen exactamente un crédito de consumo de bajo monto?",
+     "¿Qué tan frecuente es que el mercado cobre tasas cercanas al tope?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "title": "Grupo Argos CEO outlines partial Cementos Argos stake sale, to keep about 51.5%",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/venta-acciones-grupo-argos-cementos-argos/"
+   },
+   "summary": "Grupo Argos CEO Juan Esteban Calle said on the third-quarter investor call that the company is contemplating a sale of part of its Cementos Argos stake, cutting it from 55% to about 51.5% (roughly four points) while keeping control. He described it as a tactical rebalancing meant to meet the free-float requirement for Cementos Argos to enter the MSCI Standard index, with execution expected by the end of the first quarter of 2027. Proceeds would be used to accelerate the share buyback under the ACE 1.0 program. Acciones & Valores estimated that about 46 million shares equal roughly COP 498,000 million, or 70.5 sessions of average Cementos Argos trading volume.",
+   "actors": [
+    {
+     "name": "Grupo Argos",
+     "ticker": "GRUPOARGOS",
+     "impact": "mixed",
+     "reason": "It would reduce its Cementos Argos stake to about 51.5% while keeping control and use the proceeds to speed up its share buyback."
+    },
+    {
+     "name": "Cementos Argos",
+     "ticker": "CEMARGOS",
+     "impact": "mixed",
+     "reason": "A larger free float could help it enter the MSCI Standard index, but the sale of a block equal to 70.5 sessions of average volume is a supply factor."
+    },
+    {
+     "name": "Foreign investors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Greater international visibility is the stated aim, but the source does not say whether it will draw new demand."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Announcement of the terms and execution of the Cementos Argos share sale by Grupo Argos",
+     "due": "2027-03-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check company disclosures and press reports for the sale and Grupo Argos's resulting stake near 51.5%."
+    },
+    {
+     "text": "Any expansion or acceleration of Grupo Argos's ACE 1.0 buyback program",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Grupo Argos filings and investor communications on the buyback."
+    },
+    {
+     "text": "Cementos Argos moving from MSCI Small Cap to the MSCI Standard index",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check MSCI index review announcements."
+    }
+   ],
+   "unknowns": [
+    "At what price and by what mechanism the shares would be sold.",
+    "Whether meeting the free-float requirement will be enough for MSCI to include Cementos Argos in the Standard index.",
+    "What final size and timing the sale will have, given the CEO's reference to the end of the first quarter of 2027."
+   ],
+   "tags": [
+    "Grupo Argos",
+    "Cementos Argos",
+    "MSCI",
+    "buyback",
+    "ACE 1.0",
+    "Colombia"
+   ],
+   "es": {
+    "title": "Grupo Argos plantea vender parte de Cementos Argos y conservar cerca de 51,5 %",
+    "summary": "El CEO de Grupo Argos, Juan Esteban Calle, dijo en la llamada con inversionistas del tercer trimestre que la compañía contempla vender parte de su participación en Cementos Argos, reduciéndola de 55 % a cerca de 51,5 % (unos cuatro puntos) y conservando el control. Lo describió como un rebalanceo táctico para cumplir el requisito de flotante y que Cementos Argos entre al índice MSCI Standard, con ejecución prevista hacia el cierre del primer trimestre de 2027. Los recursos se usarían para acelerar la recompra de acciones del programa ACE 1.0. Acciones & Valores estimó que cerca de 46 millones de acciones equivalen a unos $498.000 millones, o 70,5 jornadas del volumen promedio de Cementos Argos.",
+    "actors": [
+     {
+      "name": "Grupo Argos",
+      "reason": "Reduciría su participación en Cementos Argos a cerca de 51,5 % conservando el control, y usaría los recursos para acelerar su recompra de acciones."
+     },
+     {
+      "name": "Cementos Argos",
+      "reason": "Un mayor flotante podría ayudarle a entrar al índice MSCI Standard, pero la venta de un bloque equivalente a 70,5 jornadas de volumen promedio supone oferta adicional."
+     },
+     {
+      "name": "Inversionistas extranjeros",
+      "reason": "La mayor visibilidad internacional es el objetivo declarado, pero la fuente no indica si atraerá nueva demanda."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Anuncio de las condiciones y ejecución de la venta de acciones de Cementos Argos por parte de Grupo Argos",
+      "note": "Revisar comunicados de la compañía y prensa sobre la venta y la participación resultante cercana a 51,5 %."
+     },
+     {
+      "text": "Cualquier ampliación o aceleración del programa de recompra ACE 1.0 de Grupo Argos",
+      "note": "Revisar los reportes y comunicaciones a inversionistas de Grupo Argos sobre la recompra."
+     },
+     {
+      "text": "Paso de Cementos Argos del MSCI Small Cap al índice MSCI Standard",
+      "note": "Consultar los anuncios de las revisiones de índices de MSCI."
+     }
+    ],
+    "unknowns": [
+     "A qué precio y mediante qué mecanismo se venderían las acciones.",
+     "Si cumplir el requisito de flotante bastará para que MSCI incluya a Cementos Argos en el índice Standard.",
+     "Qué tamaño y calendario definitivos tendrá la venta, dada la referencia del CEO al cierre del primer trimestre de 2027."
+    ]
+   }
+  }
+ ],
+ "rejected": [
+  {
+   "title": "Este sería el golpe a la economía con un aumento “no técnico” del salario mínimo en Colombia",
+   "url": "https://www.valoraanalitik.com/este-seria-el-golpe-a-la-economia-con-un-aumento-no-tecnico-del-salario-minimo-en-colombia/",
+   "errors": [
+    "title exceeds 110 characters"
+   ]
+  },
+  {
+   "title": "Trump se refiere al caso Huang, abre puerta a encuentro con Kim Jong Un y amenaza a México con nuevos aranceles",
+   "url": "https://www.valoraanalitik.com/trump-se-refiere-al-caso-huang-abre-puerta-a-encuentro-con-kim-jong-un-y-amenaza-a-mexico-con-nuevos-aranceles/",
+   "errors": [
+    "title exceeds 110 characters"
+   ]
+  },
+  {
+   "title": "Partidas clave y controles a fondos públicos que quedaron fuera del Presupuesto de 2027",
+   "url": "https://www.valoraanalitik.com/partidas-clave-y-controles-a-fondos-publicos-que-quedaron-fuera-del-presupuesto-de-2027/",
+   "errors": [
+    "title exceeds 110 characters",
+    "event is outside freshness window"
+   ]
+  },
+  {
+   "title": "Gremio del plástico destaca que reencauche puede reducir el costo por kilometro frente a llantas importadas de «baja calidad»",
+   "url": "https://www.valoraanalitik.com/gremio-del-plastico-destaca-que-reencauche-puede-reducir-el-costo-por-kilometro-frente-a-llantas-importadas-de-baja-calidad/",
+   "errors": [
+    "invalid translation"
+   ]
+  },
+  {
+   "title": "Crece interés por activos digitales en Colombia; estas son las criptomonedas más apetecidas por clientes de Wenia",
+   "url": "https://www.valoraanalitik.com/activos-digitales-colombia-cripto-wenia/",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ]
+  }
+ ],
+ "candidates": {
+  "from_feeds": 61,
+  "after_filter": 18,
+  "sample": [
+   "How does EIA account for small differences between energy supply and demand data?",
+   "Podcast | ¿Qué impulsará la recuperación de vivienda en 2027? Bancolombia analiza las pers",
+   "Crece interés por activos digitales en Colombia; estas son las criptomonedas más apetecida",
+   "Dólar en Colombia cierra a la baja en $3.303,40 tras conocerse débil crecimiento del PIB e",
+   "Tasa de usura en Colombia: así puede saber si le cobran intereses por encima del límite le",
+   "Con venta de acciones, Grupo Argos conservaría el 51,5 % de Cementos Argos; operación se h",
+   "Resultados del PIB: la economía colombiana crece por el lado del gasto, no tanto en la pro",
+   "Atención | Economía colombiana se estancó en el tercer trimestre: apenas creció 0,5 %"
+  ],
+  "dropped": {
+   "seen": 4,
+   "skip": 4,
+   "no_topic": 38
+  },
+  "raw_sample": [
+   [
+    "A",
+    0,
+    "How does EIA account for small differences between energy supply and d"
+   ],
+   [
+    "B",
+    3,
+    "Crece interés por activos digitales en Colombia; estas son las criptom"
+   ],
+   [
+    "B",
+    0,
+    "Una carta firmada no garantiza recibir una herencia en Colombia: esto "
+   ],
+   [
+    "B",
+    3,
+    "Dólar en Colombia cierra a la baja en $3.303,40 tras conocerse débil c"
+   ],
+   [
+    "B",
+    0,
+    "Collective Mining invertirá US$100 millones adicionales para exploraci"
+   ],
+   [
+    "B",
+    0,
+    "Bogotá entregará incentivos de hasta $10 millones a comerciantes afect"
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-16-moody-s-projects-colombian-gdp-growth-of-2-2-in-",
+   "title": "Moody's projects Colombian GDP growth of 2.2% in 2026, 2% in 2027 and 2.6% in 2028",
+   "url": "https://www.valoraanalitik.com/colombia-retornara-a-un-crecimiento-economico-cercano-al-3-en-2028-tras-dos-anos-de-moderacion-moodys/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "eventDate '2026-11-16' is not supported by the source. The source text contains no publication or event date, so the date cannot be verified as the publication date of the Valora Analitik article or the Moody's report. Confirm the actual date from the article page before publishing.",
+     "Minor: the source headline says growth will return to 'cercano al 3 %' in 2028, but the body gives 2.6%. The draft correctly uses 2.6%; no change is needed, but readers comparing with the original headline may notice the discrepancy."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-16-cesa-study-consumption-by-colombians-over-55-cou",
+   "title": "CESA study: consumption by Colombians over 55 could equal 18.7% of GDP value added by 2042",
+   "url": "https://www.valoraanalitik.com/consumo-mayores-55-anos-pib-colombia/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 3,
+    "issues": [
+     "eventDate '2026-11-16' cannot be verified. The source text has no publication or event date, so the date is unsupported.",
+     "Actor 'Regions with high leakage…' lists Neiva alongside Quibdó, Riohacha and Florencia. The source groups only Quibdó, Riohacha and Florencia as cases where more than half of the impact shifts to other departments. For Neiva it says only $40 of every $100 generates value added in Huila. The rest is not attributed specifically to other departments; for Bogotá the source mentions other regions, imports and taxes. The grouping and the 'shifts to other departments' wording overgeneralize.",
+     "The 'adverse' impact for the high-leakage regions is not asserted by the source. The source frames these differences as opportunities to strengthen regional production chains and attract investment.",
+     "The 'favorable' impact for 'Older adults without a pension' is unsupported. The source simulates a hypothetical transfer and reports only the aggregate GDP effect. It says nothing about effects on this group, and the stated reason (GDP impact) does not support the asserted impact on the actor.",
+     "Hedging is lost in the summary. The source says the transfer 'podría generar' (could generate) 0.8 points of the 'PIB de referencia' (reference GDP) in 2026 and 1.2 points by 2042, 'frente al escenario exclusivamente demográfico' (versus the demographic-only scenario). The draft summary (EN and ES) states it 'would add' GDP points and omits the reference-GDP and comparison-scenario qualifiers.",
+     "Minor: the English text uses Spanish number formatting ('$230.000', '0,8', '1,2'), which could be misread in the English version.",
+     "Minor: the source spells the lead researcher's name both 'Gilles' and 'Guilles'. The draft uses 'Gilles', which matches the first mention, but the attribution 'the authors say' refers to a statement the source attributes to Gilles individually."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
+   "title": "Ecopetrol's Windpeshi wind farm in La Guajira reaches 25% progress; LNG cargo purchases paused",
+   "url": "https://www.valoraanalitik.com/megaproyecto-eolico-ecopetrol-la-guajira-llega-25-avance/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "eventDate 2026-11-14 cannot be verified: the source text contains no publication or presentation date. Confirm it against the article's dateline or Ecopetrol's Q3 2026 results calendar.",
+     "SPEC actor reason (EN/ES) says the LNG purchase pause 'makes the timing of any shift unclear.' This is an editorial inference. The source says the regasification infrastructure is advancing as planned and that Puerto Bahía will start operating in the first two months of 2027. Consider softening the wording or tying it more closely to the source.",
+     "The source describes the LNG pause as temporary ('pausó temporalmente'). The summary could say this explicitly for precision."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T05:14:02.815694+00:00"
+  },
+  {
+   "id": "2026-11-14-banco-de-bogot-projects-colombian-stagnation-and",
+   "title": "Banco de Bogotá projects Colombian stagnation and high inflation into 2027 after BanRep revisions",
+   "url": "https://www.valoraanalitik.com/colombia-viviria-2027-estancamiento-economico-alta-inflacion/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "eventDate '2026-11-14' cannot be verified. The source text has no publication date. It only places the latest BanRep decision at 'finales de octubre', so the date is unsupported and must be confirmed against the article's actual publication date.",
+     "The 'Colombian households and consumers' actor reason (EN and ES) says higher food and utility prices moderated private consumption. The source attributes the moderation in consumption to high interest rates, restrictive monetary policy and the government's fiscal adjustment. It cites food and utility prices only as drivers of inflation (via El Niño), not of weaker consumption.",
+     "The 'Fixed investment and businesses' actor reason (EN and ES) groups the August 10 earthquake with factors that weighed on investment. The source only says the earthquake subtracted 0.3–0.8 pp from Q3 GDP growth. It does not link the earthquake to fixed investment specifically. The reason should separate the earthquake's growth impact from the investment drivers (high rates and fiscal adjustment)."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-16-colombia-august-quake-may-have-cut-up-to-0-8-pp-",
+   "title": "Colombia: August quake may have cut up to 0.8 pp from Q3 2026 GDP growth, Banco de Bogotá says",
+   "url": "https://www.portafolio.co/economia/terremoto-de-agosto-habria-restado-hasta-0-8-puntos-porcentuales-al-crecimiento-del-pib-del-tercer-trimestre-506287",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Attribution in the title: the English title says 'Banco de Bogotá says' and the Spanish title says 'según el Banco de Bogotá'. The source attributes the 0.3–0.8 pp estimate to Banco de la República, cited by Banco de Bogotá economist Alejandro Rojas. The summary attributes it correctly, but both titles misattribute the estimate's origin.",
+     "Forecast range in the first watch item: it says Q3 forecasts range 'from about 1% to 2.2%' (ES: 'de cerca de 1% a 2,2%'). The source reports Fedesarrollo's survey range reaching 2.3%. It also reports Itaú's Carolina Monzón saying the Q3 figure could even be negative. The stated range is therefore unsupported.",
+     "Third watch note (EN and ES): it implies both the LatinFocus and Fedesarrollo surveys have a current 2.3% median for 2027. The source gives the 2.3% 2027 median only for Fedesarrollo's Encuesta de Opinión Financiera. No LatinFocus 2027 figure is given."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "title": "Este sería el golpe a la economía con un aumento “no técnico” del salario mínimo en Colombia",
+   "url": "https://www.valoraanalitik.com/este-seria-el-golpe-a-la-economia-con-un-aumento-no-tecnico-del-salario-minimo-en-colombia/",
+   "gate": "fail",
+   "errors": [
+    "title exceeds 110 characters"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-17-global-stocks-fall-on-tighter-us-chip-export-cur",
+   "title": "Global stocks fall on tighter US chip export curbs ahead of Nvidia earnings",
+   "url": "https://www.valoraanalitik.com/premercado-bolsas-mundiales-caen-por-nuevas-restricciones-de-ee-uu-a-chips-se-esperan-resultados-de-nvidia/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Summary (EN and ES) misstates the Fed pricing and its attribution. The source says bond traders see a December Fed hike as a 100% certainty. Separately, it says CME FedWatch shows the market 'firmly' pricing a standard 25 bp increase, with a ~4% chance of a 50 bp hike (down from ~11% a day earlier). The draft merges these into 'CME FedWatch shows a 100% probability of a 25 bp hike.' The source does not support this, since a ~4% chance of 50 bp implies the 25 bp probability is below 100%.",
+     "Nvidia's 'mixed' impact is not supported by the source. The source describes only negatives for Nvidia: tighter export licensing, a 'growing corporate governance crisis' and the abrupt departure of Huang. It names no positive factor. The 'mixed' label implies an offsetting upside the source does not provide; 'adverse' or 'uncertain' would fit better.",
+     "Minor: the Nvidia reason calls the governance crisis 'a corporate governance issue,' which understates the source's wording ('creciente crisis de gobernanza corporativa'). It also leaves out that the source links this crisis to the European selloff."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-17-colombia-s-2027-minimum-wage-talks-workers-propo",
+   "title": "Colombia's 2027 minimum wage talks: workers propose 38% rise, some business groups cap at 9%",
+   "url": "https://www.valoraanalitik.com/la-variable-clave-que-pediran-tener-en-la-definicion-del-salario-minimo-en-colombia-del-2027/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Minor: the English title says 'workers propose 38% rise', but the source says only 'una parte de los trabajadores' (part of the workers). The summary words this correctly; the title should say 'some workers' or 'part of workers' for precision. The Spanish title has the same generalization.",
+     "Minor: the summary ties the 38% proposal directly to food-driven inflation ('citing food-driven inflation'). The source attributes the food-inflation argument to workers in general and does not explicitly link it to the 38% figure. Consider softening to 'workers argue the adjustment should reflect high food-driven inflation'.",
+     "Minor: the actor label 'Formal-sector workers' adds a 'formal-sector' qualifier that the source does not use (it says 'trabajadores'). This is acceptable as context but is not sourced.",
+     "Minor: the actors' reasons on real income and higher labor costs are general economic inferences, not statements in the source. Impact is correctly left as 'undetermined', so this is not a blocking issue.",
+     "Minor: the category 'Macro data' is a loose fit. This is a policy negotiation, not a data release; 'Policy' or 'Labor/Wages' may fit better."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T12:13:20.752262+00:00"
+  },
+  {
+   "title": "Trump se refiere al caso Huang, abre puerta a encuentro con Kim Jong Un y amenaza a México con nuevos aranceles",
+   "url": "https://www.valoraanalitik.com/trump-se-refiere-al-caso-huang-abre-puerta-a-encuentro-con-kim-jong-un-y-amenaza-a-mexico-con-nuevos-aranceles/",
+   "gate": "fail",
+   "errors": [
+    "title exceeds 110 characters"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-16-eurofarma-calls-colombia-one-of-its-best-perform",
+   "title": "Eurofarma calls Colombia one of its best-performing markets, citing record local sales",
+   "url": "https://www.valoraanalitik.com/colombia-es-uno-de-los-mercados-con-mejor-desempeno-y-mayor-proyeccion-de-eurofarma/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "The English version uses Spanish number formatting, so its figures read wrong. 'US$2.540 million' (summary and unknowns) reads in English as about US$2.54 million, but the source's 'US$2.540 millones' means about US$2,540 million (about US$2.54 billion). It should be 'US$2,540 million' or 'US$2.54 billion'.",
+     "'US$144,7 million' and 'US$31,8 million' in the English summary use comma decimals. They should be 'US$144.7 million' and 'US$31.8 million'.",
+     "Because of these formatting errors, the English and Spanish versions effectively disagree on the revenue figure: about US$2.5 million in English versus about US$2.5 billion in Spanish."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "title": "Partidas clave y controles a fondos públicos que quedaron fuera del Presupuesto de 2027",
+   "url": "https://www.valoraanalitik.com/partidas-clave-y-controles-a-fondos-publicos-que-quedaron-fuera-del-presupuesto-de-2027/",
+   "gate": "fail",
+   "errors": [
+    "title exceeds 110 characters",
+    "event is outside freshness window"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-15-procafecol-juan-valdez-reports-cop-722-592-milli",
+   "title": "Procafecol (Juan Valdez) reports COP 722,592 million in nine-month revenue, up 13%",
+   "url": "https://www.valoraanalitik.com/juan-valdez-supero-los-722-000-millones-en-ingresos-crecimiento-fue-del-13-y-se-viene-apertura-de-tiendas/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T12:15:48.616235+00:00"
+  },
+  {
+   "title": "Gremio del plástico destaca que reencauche puede reducir el costo por kilometro frente a llantas importadas de «baja calidad»",
+   "url": "https://www.valoraanalitik.com/gremio-del-plastico-destaca-que-reencauche-puede-reducir-el-costo-por-kilometro-frente-a-llantas-importadas-de-baja-calidad/",
+   "gate": "fail",
+   "errors": [
+    "invalid translation"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-17-eia-explains-how-its-monthly-energy-review-accou",
+   "title": "EIA explains how its Monthly Energy Review accounts for small gaps between US energy supply and demand",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68464",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "The 'Natural gas data users' actor is rated 'mixed' on the grounds that the balancing item 'can complicate supply-demand comparisons'. The source does not support this negative impact: it says the balancing series make published data 'consistent and transparent' and are not a flaw in the statistics. This is an actor impact asserted without support in the source.",
+     "The natural gas actor's reason says 'venting losses' (Spanish: 'pérdidas por venteo'), but the source says only 'natural gas lost to the atmosphere'. 'Venting' is a specific mechanism the source does not name; use the source's wording in both versions."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-17-bancolombia-executive-discusses-factors-that-cou",
+   "title": "Bancolombia executive discusses factors that could drive Colombia's housing recovery in 2027",
+   "url": "https://www.valoraanalitik.com/podcast-que-impulsara-la-recuperacion-de-vivienda-en-2027-bancolombia-analiza-las-perspectivas-del-mercado/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 3,
+    "issues": [
+     "Actor 'Colombian households seeking housing': the reason says the source states that interest rates and economic conditions limit household affordability. The source does not say this. It says high rates, subsidy changes and economic difficulties have tested the construction sector, and that households now seek homes 'acordes con sus posibilidades económicas'. The 'mixed' impact on households rests on an inference attributed to the source. Rephrase to match the source or set the impact to 'undetermined'. The same applies to the ES version ('las tasas y la situación económica limitan la capacidad de compra').",
+     "Actor 'Bancolombia': the claim that its real estate and construction unit 'is involved in project financing' is not stated in the source. The source only says the episode discusses 'el papel de la financiación' for new projects. This is minor because the impact is 'undetermined', but the wording should say the executive discusses the role of financing.",
+     "Ticker 'CIB' does not appear in the source. It is acceptable as metadata only if SignalPoint's style allows tickers that come from outside the source."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "title": "Crece interés por activos digitales en Colombia; estas son las criptomonedas más apetecidas por clientes de Wenia",
+   "url": "https://www.valoraanalitik.com/activos-digitales-colombia-cripto-wenia/",
+   "gate": "fail",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-17-colombian-peso-closes-at-cop-3-303-40-per-dollar",
+   "title": "Colombian peso closes at COP 3,303.40 per dollar as DANE reports 0.5% Q3 GDP growth",
+   "url": "https://www.valoraanalitik.com/dolar-en-colombia-cierra-a-la-baja-en-3-30340-tras-conocerse-debil-crecimiento-del-pib-en-colombia/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T19:57:48.839368+00:00"
+  },
+  {
+   "id": "2026-11-17-colombia-s-october-usury-cap-28-59-for-ordinary-",
+   "title": "Colombia's October usury cap: 28.59% for ordinary consumer loans, 66.66% for low-amount ones",
+   "url": "https://www.valoraanalitik.com/tasa-de-usura-en-colombia-asi-puede-saber-si-le-cobran-intereses-por-encima-del-limite-legal/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": [
+     "Minor: the 'mixed' impact for 'Banks and credit institutions' is only loosely supported. The source says the cap is a ceiling below which each lender can price, but it does not describe any positive or negative effect on banks. 'Undetermined' would match the source more closely."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T19:57:48.839380+00:00"
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "title": "Grupo Argos CEO outlines partial Cementos Argos stake sale, to keep about 51.5%",
+   "url": "https://www.valoraanalitik.com/venta-acciones-grupo-argos-cementos-argos/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-17T19:57:48.839383+00:00"
+  }
+ ]
+}
