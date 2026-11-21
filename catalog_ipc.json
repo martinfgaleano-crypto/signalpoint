@@ -1,0 +1,3209 @@
+{
+  "results" :
+    [
+      {
+        "resource" :
+          {
+            "name" : "Variación Mensual IPC 2012-2013",
+            "id" : "xjce-cri6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:22:56.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:22:56.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 3,
+                "page_views_last_month" : 22,
+                "page_views_total" : 22,
+                "page_views_last_week_log" : 2.0,
+                "page_views_last_month_log" : 4.523561956057013,
+                "page_views_total_log" : 4.523561956057013
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba&sublayer=1"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_1"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_1"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/1"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/csv?layers=1"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/shapefile?layers=1"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/geojson?layers=1"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/kml?layers=1"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_1"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/xjce-cri6",
+        "link" : "https://www.datos.gov.co/dataset/Variación-Mensual-IPC-2012-2013/xjce-cri6",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "IPC variación acumulada diciembre 2012 y 2013",
+            "id" : "52j5-pw7g",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:23:07.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:23:07.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 10,
+                "page_views_total" : 10,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 3.4594316186372978,
+                "page_views_total_log" : 3.4594316186372978
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=5"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_5"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_5"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/5"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=5"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=5"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=5"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=5"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_5"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/52j5-pw7g",
+        "link" : "https://www.datos.gov.co/dataset/IPC-variación-acumulada-diciembre-2012-y-2013/52j5-pw7g",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Departamentos",
+            "id" : "2na3-4yun",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:22:50.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:22:50.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 9,
+                "page_views_total" : 9,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 3.3219280948873626,
+                "page_views_total_log" : 3.3219280948873626
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=6"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_6"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_6"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/6"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=6"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=6"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=6"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=6"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_6"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/2na3-4yun",
+        "link" : "https://www.datos.gov.co/dataset/Departamentos/2na3-4yun",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Municipios",
+            "id" : "sqcm-rnh5",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:22:29.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:22:29.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 7,
+                "page_views_total" : 7,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 3.0,
+                "page_views_total_log" : 3.0
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba&sublayer=5"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_5"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_5"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/5"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/csv?layers=5"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/shapefile?layers=5"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/geojson?layers=5"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/kml?layers=5"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_5"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/sqcm-rnh5",
+        "link" : "https://www.datos.gov.co/dataset/Municipios/sqcm-rnh5",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación Mensual IPC, Según Ciudad  2012-2013",
+            "id" : "6sph-vevf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:21:12.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:21:12.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 1.0
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/maps/4292b20ec2504517be9cc91dff92f0ba"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/maps/4292b20ec2504517be9cc91dff92f0ba"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer"
+                    },
+                  "title" : "OGC WMS"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/maps/4292b20ec2504517be9cc91dff92f0ba"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/6sph-vevf",
+        "link" : "https://www.datos.gov.co/dataset/Variación-Mensual-IPC-Según-Ciudad-2012-2013/6sph-vevf",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Texto nacional",
+            "id" : "v98v-vqee",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:22:13.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:22:13.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 2,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 1.5849625007211563
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=1"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_1"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_1"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/1"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=1"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=1"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=1"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=1"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_1"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/v98v-vqee",
+        "link" : "https://www.datos.gov.co/dataset/Texto-nacional/v98v-vqee",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Ciudades",
+            "id" : "eevs-r9kd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:18:45.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:18:45.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 2,
+                "page_views_last_month" : 2,
+                "page_views_total" : 2,
+                "page_views_last_week_log" : 1.5849625007211563,
+                "page_views_last_month_log" : 1.5849625007211563,
+                "page_views_total_log" : 1.5849625007211563
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-77.2479,-4.1508,-67.5367,11.5160"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=0"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_0"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_0"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/0"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=0"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=0"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=0"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=0"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_0"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/eevs-r9kd",
+        "link" : "https://www.datos.gov.co/dataset/Ciudades/eevs-r9kd",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Texto variación acumulada",
+            "id" : "dzpn-qqn5",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:18:44.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:18:44.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 1.0
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=2"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_2"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_2"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/2"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=2"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=2"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=2"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=2"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_2"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/dzpn-qqn5",
+        "link" : "https://www.datos.gov.co/dataset/Texto-variación-acumulada/dzpn-qqn5",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación  (%)",
+            "id" : "wz9v-e7gq",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:20:45.000Z",
+            "createdAt" : "2026-09-10T10:22:56.000Z",
+            "metadata_updated_at" : "2026-09-24T19:20:45.000Z",
+            "data_updated_at" : "2026-09-10T10:22:56.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 1.0
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:22:56.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:20:30.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,-4.2023,-67.0793,13.3746"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=69831c01370c4482b63b35e1ac27096e&sublayer=3"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_3"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T17:20:29.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_3"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/3"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/csv?layers=3"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/shapefile?layers=3"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/geojson?layers=3"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/kml?layers=3"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_3"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/wz9v-e7gq",
+        "link" : "https://www.datos.gov.co/dataset/Variación-/wz9v-e7gq",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Departamentos",
+            "id" : "smh3-mgvk",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:20:35.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:20:35.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 1,
+                "page_views_last_month" : 1,
+                "page_views_total" : 1,
+                "page_views_last_week_log" : 1.0,
+                "page_views_last_month_log" : 1.0,
+                "page_views_total_log" : 1.0
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba&sublayer=4"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_4"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_4"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/4"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/csv?layers=4"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/shapefile?layers=4"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/geojson?layers=4"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/kml?layers=4"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_4"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/smh3-mgvk",
+        "link" : "https://www.datos.gov.co/dataset/Departamentos/smh3-mgvk",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación Mensual IPC 2012-2013",
+            "id" : "8qe9-nkzf",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:19:24.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:19:24.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba&sublayer=3"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_3"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_3"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/3"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/csv?layers=3"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/shapefile?layers=3"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/geojson?layers=3"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/kml?layers=3"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_3"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/8qe9-nkzf",
+        "link" : "https://www.datos.gov.co/dataset/Variación-Mensual-IPC-2012-2013/8qe9-nkzf",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación Mensual IPC 2012-2013",
+            "id" : "t89j-ujza",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:19:44.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:19:44.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T16:50:32.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=4292b20ec2504517be9cc91dff92f0ba&sublayer=2"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_2"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:50:31.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_2"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/2"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadesIPC_VariacionIPC_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/csv?layers=2"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/shapefile?layers=2"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/geojson?layers=2"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/4292b20ec2504517be9cc91dff92f0ba/kml?layers=2"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/4292b20ec2504517be9cc91dff92f0ba_2"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/t89j-ujza",
+        "link" : "https://www.datos.gov.co/dataset/Variación-Mensual-IPC-2012-2013/t89j-ujza",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "IPC variación acumulada diciembre 2012 y 2013",
+            "id" : "t9is-guc6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:19:31.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:19:31.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=4"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_4"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_4"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/4"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=4"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=4"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=4"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=4"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_4"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/t9is-guc6",
+        "link" : "https://www.datos.gov.co/dataset/IPC-variación-acumulada-diciembre-2012-y-2013/t9is-guc6",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "IPC variación acumulada diciembre 2012 y 2013",
+            "id" : "cusz-ej8n",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:20:24.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:20:24.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,1.2090,-70.0592,12.5698"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=3"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_3"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_3"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/3"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=3"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=3"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=3"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=3"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_3"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/cusz-ej8n",
+        "link" : "https://www.datos.gov.co/dataset/IPC-variación-acumulada-diciembre-2012-y-2013/cusz-ej8n",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación Acumulada IPC, Según Ciudad  Diciembre 2012 y 2013",
+            "id" : "4dqp-vkv6",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:19:20.000Z",
+            "createdAt" : "2026-09-10T10:23:34.000Z",
+            "metadata_updated_at" : "2026-09-24T19:19:20.000Z",
+            "data_updated_at" : "2026-09-10T10:23:34.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:34.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "costos", "precios" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/maps/673c5802913140db80eb810269afb161"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/maps/673c5802913140db80eb810269afb161"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer"
+                    },
+                  "title" : "OGC WMS"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/maps/673c5802913140db80eb810269afb161"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/4dqp-vkv6",
+        "link" : "https://www.datos.gov.co/dataset/Variación-Acumulada-IPC-Según-Ciudad-Diciembre-201/4dqp-vkv6",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación del Índice de Precios al Consumidor (IPC), Según 24 Ciudades 200-2010",
+            "id" : "hgmj-2c7y",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:21:47.000Z",
+            "createdAt" : "2026-09-10T10:22:46.000Z",
+            "metadata_updated_at" : "2026-09-24T19:21:47.000Z",
+            "data_updated_at" : "2026-09-10T10:22:46.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:22:46.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:20:30.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7390,-4.2279,-66.8473,13.3974"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=69831c01370c4482b63b35e1ac27096e"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/maps/69831c01370c4482b63b35e1ac27096e"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T17:20:29.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/maps/69831c01370c4482b63b35e1ac27096e"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer"
+                    },
+                  "title" : "OGC WMS"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/maps/69831c01370c4482b63b35e1ac27096e"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/hgmj-2c7y",
+        "link" : "https://www.datos.gov.co/dataset/Variación-del-Índice-de-Precios-al-Consumidor-IPC-/hgmj-2c7y",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Variación (%)",
+            "id" : "pw7p-7zg4",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:21:56.000Z",
+            "createdAt" : "2026-09-10T10:22:54.000Z",
+            "metadata_updated_at" : "2026-09-24T19:21:56.000Z",
+            "data_updated_at" : "2026-09-10T10:22:54.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:22:54.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:20:30.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7047,-4.2023,-67.0793,13.3746"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=69831c01370c4482b63b35e1ac27096e&sublayer=2"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_2"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T17:20:29.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_2"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/2"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/csv?layers=2"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/shapefile?layers=2"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/geojson?layers=2"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/kml?layers=2"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_2"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/pw7p-7zg4",
+        "link" : "https://www.datos.gov.co/dataset/Variación-/pw7p-7zg4",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Municipios",
+            "id" : "vcqf-bqqd",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:22:13.000Z",
+            "createdAt" : "2026-09-10T10:23:35.000Z",
+            "metadata_updated_at" : "2026-09-24T19:22:13.000Z",
+            "data_updated_at" : "2026-09-10T10:23:35.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:35.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:05:05.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7358,-4.2277,-66.8473,13.3948"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=673c5802913140db80eb810269afb161&sublayer=7"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_7"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T16:52:42.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_7"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/7"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wfs_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WFSServer?request=GetCapabilities&service=WFS"
+                    },
+                  "title" : "OGC WFS"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_CiudadIPCVariacionAcumDic_2012_2013/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/csv?layers=7"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/shapefile?layers=7"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/geojson?layers=7"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/673c5802913140db80eb810269afb161/kml?layers=7"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/673c5802913140db80eb810269afb161_7"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/vcqf-bqqd",
+        "link" : "https://www.datos.gov.co/dataset/Municipios/vcqf-bqqd",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Capital de departamento",
+            "id" : "4twt-ad9h",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:21:06.000Z",
+            "createdAt" : "2026-09-10T10:22:51.000Z",
+            "metadata_updated_at" : "2026-09-24T19:21:06.000Z",
+            "data_updated_at" : "2026-09-10T10:22:51.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:22:51.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:20:30.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7067,-4.1508,-67.5367,12.5802"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=69831c01370c4482b63b35e1ac27096e&sublayer=1"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_1"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T17:20:29.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_1"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/1"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/csv?layers=1"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/shapefile?layers=1"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/geojson?layers=1"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/kml?layers=1"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_1"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/4twt-ad9h",
+        "link" : "https://www.datos.gov.co/dataset/Capital-de-departamento/4twt-ad9h",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      },
+      {
+        "resource" :
+          {
+            "name" : "Municipios",
+            "id" : "h6vg-jvz9",
+            "resource_name" : null,
+            "parent_fxf" : [],
+            "description" : "El índice de precios al consumidor (IPC) del DANE Busca realizar seguimiento a la variación promedio mensual de los precios de la canasta de bienes y servicios representativa del consumo de hogares colombianos. La información  se recolecta a través de una muestra en las ciudades capitales.",
+            "attribution" : null,
+            "attribution_link" : null,
+            "contact_email" : "{{orgContactEmail}}",
+            "type" : "federated_href",
+            "updatedAt" : "2026-09-24T19:21:18.000Z",
+            "createdAt" : "2026-09-10T10:23:01.000Z",
+            "metadata_updated_at" : "2026-09-24T19:21:18.000Z",
+            "data_updated_at" : "2026-09-10T10:23:01.000Z",
+            "page_views" :
+              {
+                "page_views_last_week" : 0,
+                "page_views_last_month" : 0,
+                "page_views_total" : 0,
+                "page_views_last_week_log" : null,
+                "page_views_last_month_log" : null,
+                "page_views_total_log" : null
+              },
+            "columns_name" : [],
+            "columns_field_name" : [],
+            "columns_datatype" : [],
+            "columns_description" : [],
+            "columns_format" : [],
+            "download_count" : 0,
+            "provenance" : "official",
+            "lens_view_type" : "href",
+            "lens_display_type" : "federated",
+            "locked" : false,
+            "backend" : "not_a_dataset",
+            "blob_mime_type" : null,
+            "hide_from_data_json" : false,
+            "publication_date" : "2026-09-10T10:23:01.000Z"
+          },
+        "classification" :
+          {
+            "categories" : [],
+            "tags" : [],
+            "domain_tags" : [ "precios", "costos" ],
+            "domain_metadata" :
+              [
+                {
+                  "key" : "Common-Core_Contact-Email",
+                  "value" : "{{orgContactEmail}}"
+                },
+                {
+                  "key" : "Common-Core_Last-Update",
+                  "value" : "2025-08-04T17:20:30.000Z"
+                },
+                { "key" : "Common-Core_License", "value" : "" },
+                {
+                  "key" : "Common-Core_Public-Access-Level",
+                  "value" : "public"
+                },
+                {
+                  "key" : "Common-Core_Geographic-Coverage",
+                  "value" : "-81.7390,-4.2279,-66.8473,13.3974"
+                },
+                {
+                  "key" : "Common-Core_Unique-Identifier",
+                  "value" : "https://www.arcgis.com/home/item.html?id=69831c01370c4482b63b35e1ac27096e&sublayer=5"
+                },
+                { "key" : "Common-Core_Publisher", "value" : "{{source}}" },
+                {
+                  "key" : "Common-Core_Homepage",
+                  "value" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_5"
+                },
+                { "key" : "Common-Core_Theme", "value" : "geospatial" },
+                {
+                  "key" : "Common-Core_Issued",
+                  "value" : "2025-08-04T17:20:29.000Z"
+                },
+                {
+                  "key" : "Common-Core_Contact-Name",
+                  "value" : "adm_cdge_hub"
+                }
+              ]
+          },
+        "metadata" :
+          {
+            "domain" : "www.datos.gov.co",
+            "additional_access_points" :
+              [
+                {
+                  "urls" :
+                    {
+                      "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_5"
+                    },
+                  "title" : "ArcGIS Hub Dataset"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/json" : "https://portalgis.dane.gov.co/mparcgis/rest/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/5"
+                    },
+                  "title" : "ArcGIS GeoService"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.ogc.wms_xml" : "https://portalgis.dane.gov.co/mparcgis/services/INDICADORES_INDICES/Cache_MpioIPCVariacionIPC2000_2010/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+                    },
+                  "title" : "OGC WMS"
+                },
+                {
+                  "urls" :
+                    {
+                      "text/csv" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/csv?layers=5"
+                    },
+                  "title" : "CSV"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/zip" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/shapefile?layers=5"
+                    },
+                  "title" : "Shapefile"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.geo+json" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/geojson?layers=5"
+                    },
+                  "title" : "GeoJSON"
+                },
+                {
+                  "urls" :
+                    {
+                      "application/vnd.google-earth.kml+xml" : "https://cdge.dane.gov.co/api/download/v1/items/69831c01370c4482b63b35e1ac27096e/kml?layers=5"
+                    },
+                  "title" : "KML"
+                }
+              ],
+            "access_points" :
+              {
+                "text/html" : "https://cdge.dane.gov.co/datasets/69831c01370c4482b63b35e1ac27096e_5"
+              }
+          },
+        "permalink" : "https://www.datos.gov.co/d/h6vg-jvz9",
+        "link" : "https://www.datos.gov.co/dataset/Municipios/h6vg-jvz9",
+        "owner" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          },
+        "creator" :
+          {
+            "id" : "r4qn-dwdd",
+            "user_type" : "interactive",
+            "display_name" : "Ministerio de Tecnologías de la Información y las Comunicaciones - Datos Abiertos"
+          }
+      }
+    ],
+  "resultSetSize" : 22,
+  "timings" : { "serviceMillis" : 19, "searchMillis" : [ 1, 7 ] },
+  "warnings" : []
+}

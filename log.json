@@ -1,0 +1,312 @@
+{
+ "fred_DFEDTARU.csv": {
+  "ok": true,
+  "bytes": 104810,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU",
+  "head": "observation_date,DFEDTARU\n2008-12-16,0.25\n2008-12-17,0.25\n2008-12-18,0.25\n2008-12-19,0.25\n2008-12-20,0.25\n2008-12-21,0.25\n2008-12-22,0.25\n2008-12-23,0.25\n2008-1"
+ },
+ "fred_DFEDTAR.csv": {
+  "ok": true,
+  "bytes": 172645,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTAR",
+  "head": "observation_date,DFEDTAR\n1982-09-27,10.2500\n1982-09-28,10.2500\n1982-09-29,10.2500\n1982-09-30,10.2500\n1982-10-01,10.0000\n1982-10-02,10.0000\n1982-10-03,10.0000\n19"
+ },
+ "fred_SP500.csv": {
+  "ok": true,
+  "bytes": 48922,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500",
+  "head": "observation_date,SP500\n2016-11-21,2198.18\n2016-11-22,2202.94\n2016-11-23,2204.72\n2016-11-24,\n2016-11-25,2213.35\n2016-11-28,2201.72\n2016-11-29,2204.66\n2016-11-30,"
+ },
+ "fred_NASDAQCOM.csv": {
+  "ok": true,
+  "bytes": 281669,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM",
+  "head": "observation_date,NASDAQCOM\n1971-02-05,100.000\n1971-02-08,100.840\n1971-02-09,100.760\n1971-02-10,100.690\n1971-02-11,101.450\n1971-02-12,102.050\n1971-02-15,\n1971-02"
+ },
+ "fred_DJIA.csv": {
+  "ok": true,
+  "bytes": 51454,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA",
+  "head": "observation_date,DJIA\n2016-11-21,18956.69\n2016-11-22,19023.87\n2016-11-23,19083.18\n2016-11-24,\n2016-11-25,19152.14\n2016-11-28,19097.90\n2016-11-29,19121.60\n2016-1"
+ },
+ "fred_DCOILBRENTEU.csv": {
+  "ok": true,
+  "bytes": 170533,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+  "head": "observation_date,DCOILBRENTEU\n1987-05-20,18.63\n1987-05-21,18.45\n1987-05-22,18.55\n1987-05-25,18.60\n1987-05-26,18.63\n1987-05-27,18.60\n1987-05-28,18.60\n1987-05-29,"
+ },
+ "fred_DEXUSEU.csv": {
+  "ok": true,
+  "bytes": 129193,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU",
+  "head": "observation_date,DEXUSEU\n1999-01-04,1.1812\n1999-01-05,1.1760\n1999-01-06,1.1636\n1999-01-07,1.1672\n1999-01-08,1.1554\n1999-01-11,1.1534\n1999-01-12,1.1548\n1999-01-1"
+ },
+ "fred_DEXUSAL.csv": {
+  "ok": true,
+  "bytes": 258937,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSAL",
+  "head": "observation_date,DEXUSAL\n1971-01-04,1.1127\n1971-01-05,1.1132\n1971-01-06,1.1140\n1971-01-07,1.1138\n1971-01-08,1.1124\n1971-01-11,1.1152\n1971-01-12,1.1156\n1971-01-1"
+ },
+ "fred_DGS10.csv": {
+  "ok": true,
+  "bytes": 269471,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+  "head": "observation_date,DGS10\n1962-01-02,4.06\n1962-01-03,4.03\n1962-01-04,3.99\n1962-01-05,4.02\n1962-01-08,4.03\n1962-01-09,4.05\n1962-01-10,4.07\n1962-01-11,4.08\n1962-01-1"
+ },
+ "fred_DGS2.csv": {
+  "ok": true,
+  "bytes": 209644,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2",
+  "head": "observation_date,DGS2\n1976-06-01,7.26\n1976-06-02,7.23\n1976-06-03,7.22\n1976-06-04,7.12\n1976-06-07,7.09\n1976-06-08,7.11\n1976-06-09,7.08\n1976-06-10,7.00\n1976-06-11"
+ },
+ "fred_DGS30.csv": {
+  "ok": true,
+  "bytes": 207065,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30",
+  "head": "observation_date,DGS30\n1977-02-15,7.70\n1977-02-16,7.67\n1977-02-17,7.67\n1977-02-18,7.76\n1977-02-21,\n1977-02-22,7.77\n1977-02-23,7.81\n1977-02-24,7.82\n1977-02-25,7."
+ },
+ "fred_DTB3.csv": {
+  "ok": true,
+  "bytes": 301757,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3",
+  "head": "observation_date,DTB3\n1954-01-04,1.33\n1954-01-05,1.28\n1954-01-06,1.28\n1954-01-07,1.31\n1954-01-08,1.31\n1954-01-11,1.33\n1954-01-12,1.30\n1954-01-13,1.30\n1954-01-14"
+ },
+ "fred_CBBTCUSD.csv": {
+  "ok": true,
+  "bytes": 84796,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CBBTCUSD",
+  "head": "observation_date,CBBTCUSD\n2014-12-01,370.00\n2014-12-02,378.00\n2014-12-03,378.00\n2014-12-04,377.10\n2014-12-05,\n2014-12-06,378.00\n2014-12-07,\n2014-12-08,375.00\n20"
+ },
+ "fred_CPIAUCSL.csv": {
+  "ok": true,
+  "bytes": 17782,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+  "head": "observation_date,CPIAUCSL\n1947-01-01,21.480\n1947-02-01,21.620\n1947-03-01,22.000\n1947-04-01,22.000\n1947-05-01,21.950\n1947-06-01,22.080\n1947-07-01,22.230\n1947-08-"
+ },
+ "trm.csv": {
+  "ok": true,
+  "bytes": 568718,
+  "url": "https://www.datos.gov.co/resource/32sa-8pi3.csv?$limit=20000&$order=vigenciadesde",
+  "head": "\"valor\",\"unidad\",\"vigenciadesde\",\"vigenciahasta\"\n\"643.42\",\"COP\",\"1991-12-02T00:00:00.000\",\"1991-12-02T00:00:00.000\"\n\"639.22\",\"COP\",\"1991-12-03T00:00:00.000\",\"19"
+ },
+ "banrep_tpm_page.html": {
+  "ok": false,
+  "url": "https://www.banrep.gov.co/es/estadisticas/tasas-de-interes-de-politica-monetaria",
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ "banrep_node50426.html": {
+  "ok": true,
+  "bytes": 15270,
+  "url": "https://www.banrep.gov.co/es/node/50426",
+  "head": "<head><title>Radware Bot Manager Block</title><script type=\"text/javascript\">\n\twindow.SSJSInternal = 47785;\n\n\tvar __uzdbm_1 = \"27539b4c-6f30-4c41-8931-684062b72"
+ },
+ "uba_tasas.html": {
+  "ok": true,
+  "bytes": 2401,
+  "url": "https://uba.banrep.gov.co/htmlcommons/SeriesHistoricas/tasas-interes.html",
+  "head": "<!DOCTYPE html>\r\n<html lang=\"es\" dir=\"ltr\">\r\n\t<head>\r\n\t\t<meta charset=\"utf-8\"/>\r\n\t\t<title>Tasas de interés</title>\r\n\t\t<link rel=\"stylesheet\" media=\"all\" href=\""
+ },
+ "yahoo_GSPC.json": {
+  "ok": true,
+  "bytes": 728210,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"^GSPC\",\"exchangeName\":\"SNP\",\"fullExchangeName\":\"SNP\",\"instrumentType\":\"INDEX\",\"firstTradeDate\":-13255830"
+ },
+ "yahoo_COP_X.json": {
+  "ok": true,
+  "bytes": 474572,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/COP%3DX?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"COP\",\"symbol\":\"COP=X\",\"exchangeName\":\"CCY\",\"fullExchangeName\":\"CCY\",\"instrumentType\":\"CURRENCY\",\"firstTradeDate\":104146"
+ },
+ "yahoo_COLO.json": {
+  "ok": true,
+  "bytes": 472295,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/COLO?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"COLO\",\"exchangeName\":\"PCX\",\"fullExchangeName\":\"NYSEArca\",\"instrumentType\":\"ETF\",\"firstTradeDate\":1234189"
+ },
+ "yahoo_EC.json": {
+  "ok": true,
+  "bytes": 489776,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/EC?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"EC\",\"exchangeName\":\"NYQ\",\"fullExchangeName\":\"NYSE\",\"instrumentType\":\"EQUITY\",\"firstTradeDate\":1221744600"
+ },
+ "yahoo_CIB.json": {
+  "ok": true,
+  "bytes": 702223,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/CIB?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"CIB\",\"exchangeName\":\"NYQ\",\"fullExchangeName\":\"NYSE\",\"instrumentType\":\"EQUITY\",\"firstTradeDate\":806765400"
+ },
+ "yahoo_BZ_F.json": {
+  "ok": true,
+  "bytes": 506296,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"BZ=F\",\"exchangeName\":\"NYM\",\"fullExchangeName\":\"NY Mercantile\",\"instrumentType\":\"FUTURE\",\"firstTradeDate\""
+ },
+ "yahoo_TNX.json": {
+  "ok": true,
+  "bytes": 706726,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"USD\",\"symbol\":\"^TNX\",\"exchangeName\":\"CGI\",\"fullExchangeName\":\"Cboe Indices\",\"instrumentType\":\"INDEX\",\"firstTradeDate\":-"
+ },
+ "yahoo_ICOLCAP.CL.json": {
+  "ok": true,
+  "bytes": 223183,
+  "url": "https://query2.finance.yahoo.com/v8/finance/chart/ICOLCAP.CL?period1=946684800&period2=1795234454&interval=1d",
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"COP\",\"symbol\":\"ICOLCAP.CL\",\"exchangeName\":\"BVC\",\"fullExchangeName\":\"BVC\",\"instrumentType\":\"ETF\",\"firstTradeDate\":136750"
+ },
+ "bis_cbpol_CO.csv": {
+  "ok": true,
+  "bytes": 3775264,
+  "url": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.CO?format=csv",
+  "head": "FREQ,REF_AREA,UNIT_MEASURE,UNIT_MULT,TIME_FORMAT,COMPILATION,DECIMALS,SOURCE_REF,SUPP_INFO_BREAKS,TITLE,TIME_PERIOD,OBS_VALUE,OBS_STATUS,OBS_CONF,OBS_PRE_BREAK\n"
+ },
+ "fred_COLCPIALLMINMEI.csv": {
+  "ok": false,
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=COLCPIALLMINMEI",
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ "catalog_banrep.json": {
+  "ok": true,
+  "bytes": 246821,
+  "url": "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=tasa%20de%20intervenci%C3%B3n%20pol%C3%ADtica%20monetaria&limit=20",
+  "head": "{\n  \"results\" :\n    [\n      {\n        \"resource\" :\n          {\n            \"name\" : \"Gran Encuesta Integrada de Hogares - GEIH - 2026\",\n            \"id\" : \"nzxb"
+ },
+ "catalog_ipc.json": {
+  "ok": true,
+  "bytes": 133722,
+  "url": "https://api.us.socrata.com/api/catalog/v1?domains=www.datos.gov.co&q=IPC%20variaci%C3%B3n%20mensual&limit=20",
+  "head": "{\n  \"results\" :\n    [\n      {\n        \"resource\" :\n          {\n            \"name\" : \"Variación Mensual IPC 2012-2013\",\n            \"id\" : \"xjce-cri6\",\n        "
+ },
+ "fomc/current.html": {
+  "ok": true,
+  "bytes": 166359,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2000.html": {
+  "ok": true,
+  "bytes": 91585,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2000.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2001.html": {
+  "ok": true,
+  "bytes": 95852,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2001.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2002.html": {
+  "ok": true,
+  "bytes": 92910,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2002.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2003.html": {
+  "ok": true,
+  "bytes": 96789,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2003.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2004.html": {
+  "ok": true,
+  "bytes": 92310,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2004.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2005.html": {
+  "ok": true,
+  "bytes": 92479,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2005.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2006.html": {
+  "ok": true,
+  "bytes": 92157,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2007.html": {
+  "ok": true,
+  "bytes": 94955,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2008.html": {
+  "ok": true,
+  "bytes": 100178,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2009.html": {
+  "ok": true,
+  "bytes": 98428,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2010.html": {
+  "ok": true,
+  "bytes": 96396,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2011.html": {
+  "ok": true,
+  "bytes": 98403,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2012.html": {
+  "ok": true,
+  "bytes": 98324,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2013.html": {
+  "ok": true,
+  "bytes": 95985,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2014.html": {
+  "ok": true,
+  "bytes": 96265,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2015.html": {
+  "ok": true,
+  "bytes": 95417,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2016.html": {
+  "ok": true,
+  "bytes": 96005,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2017.html": {
+  "ok": true,
+  "bytes": 95376,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2018.html": {
+  "ok": true,
+  "bytes": 95881,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2019.html": {
+  "ok": true,
+  "bytes": 97520,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ },
+ "fomc/2020.html": {
+  "ok": true,
+  "bytes": 98731,
+  "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+  "head": "﻿<!doctype html>\r\n<html lang=\"en\" class=\"no-js\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n"
+ }
+}
