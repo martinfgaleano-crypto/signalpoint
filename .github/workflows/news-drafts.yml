@@ -16,10 +16,15 @@ jobs:
       - name: Bring previous drafts (keeps the list of items already processed)
         run: |
           git fetch -q origin drafts && git worktree add -q d origin/drafts || mkdir -p d
-      - name: Write drafts (nothing is published)
+      - name: Write, check and publish briefs (automatic; see the limits below)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Spend cap per run (hard limits on model calls). A normal run uses about 10 of each.
+          SP_MAX_DRAFT_CALLS: '16'    # calls to the writing model (briefs + Pro analysis)
+          SP_MAX_REVIEW_CALLS: '12'   # calls to the editor model (reviews + claim checks)
+          # New briefs published per run. Set to '0' to draft and hold everything for manual approval (nothing new goes live).
+          SP_MAX_PUBLISH: '5'
         run: python3 tools/news_drafts.py d
       - name: Social cards for new briefs (images + captions, nothing is posted)
         run: pip install -q pillow==12.0.0 && python3 tools/social_cards.py d
