@@ -8,6 +8,9 @@ on:
     paths: ['tools/news_drafts.py', 'tools/insight_ml.py', 'tools/social_cards.py', '.github/workflows/news-drafts.yml']
 permissions:
   contents: write
+concurrency:          # one run at a time: each run adds a commit on top of the drafts branch
+  group: news-drafts
+  cancel-in-progress: false
 jobs:
   drafts:
     runs-on: ubuntu-latest
@@ -15,16 +18,29 @@ jobs:
       - uses: actions/checkout@v4
       - name: Bring previous drafts (keeps the list of items already processed)
         run: |
-          git fetch -q origin drafts && git worktree add -q d origin/drafts || mkdir -p d
-      - name: Write drafts (nothing is published)
+          if git fetch -q --depth 1 origin drafts; then git worktree add -q -B drafts d FETCH_HEAD; else mkdir -p d; fi
+      - name: Write, check and publish briefs (automatic; see the limits below)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Spend cap per run (hard limits on model calls). Measured runs used 11 to 19 of each; 24 covers a full run.
+          SP_MAX_DRAFT_CALLS: '24'    # calls to the writing model (briefs + Pro analysis)
+          SP_MAX_REVIEW_CALLS: '24'   # calls to the editor model (reviews + claim checks)
+          # New briefs published per run. Set to '0' to draft and hold everything for manual approval (nothing new goes live).
+          SP_MAX_PUBLISH: '5'
         run: python3 tools/news_drafts.py d
       - name: Social cards for new briefs (images + captions, nothing is posted)
         run: pip install -q pillow==12.0.0 && python3 tools/social_cards.py d
       - name: Save drafts to the drafts branch
         run: |
-          cd d && rm -rf .git && git init -q && git checkout -q -b drafts && git add -A
-          git -c user.name="signalpoint-bot" -c user.email="signalpoint-bot@users.noreply.github.com" commit -qm "Drafts $(date -u +%F)"
-          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" drafts
+          # Each run ADDS a commit on top of the drafts branch (no force push), so the branch keeps the record of what was published when.
+          cd d
+          if [ -e .git ]; then remote=origin   # worktree of the existing drafts branch; uses the checkout's credentials
+          else                                 # first time only: the drafts branch does not exist yet
+            git init -q && git checkout -q -b drafts
+            remote="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          fi
+          git add -A
+          if git diff --cached --quiet; then echo "Nothing changed in this run; no commit."; exit 0; fi
+          git -c user.name="signalpoint-bot" -c user.email="signalpoint-bot@users.noreply.github.com" commit -qm "Drafts $(date -u +%FT%H:%MZ) (run ${{ github.run_id }})"
+          git push -q "$remote" HEAD:refs/heads/drafts

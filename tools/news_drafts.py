@@ -1,6 +1,9 @@
-"""SignalPoint news drafts (v1). Collects recent items from public feeds, asks Claude to write each as a SignalPoint brief
-grounded ONLY in the fetched source text, validates every draft with the publication gate (tools/quality.cjs) and writes
-the result to drafts/<date>.json. Nothing is published: a person reviews the drafts before they reach the site."""
+"""SignalPoint news drafts. Collects recent items from public feeds and asks a model to write each as a SignalPoint brief
+grounded ONLY in the fetched source text. Every draft goes through automated checks: the schema gate (tools/quality.cjs), a
+check that every number in the summaries appears in the source, and a fact-check review by a second model (the "editor").
+Drafts that pass all three are PUBLISHED AUTOMATICALLY to live/briefs-live.json (at most SP_MAX_PUBLISH per run), which the
+site reads from the `drafts` branch. No person reviews a brief before it is published; the rest are held or rejected, and
+every decision is written to <date>.json and audit-summary.json. A published brief is withdrawn by adding its id to retracted.json."""
 import json, os, re, sys, time, html, subprocess, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 OUT = sys.argv[1] if len(sys.argv) > 1 else "drafts"
@@ -8,7 +11,21 @@ KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("SP_MODEL", "claude-sonnet-5-5")
 MAX_ITEMS = int(os.environ.get("SP_MAX_ITEMS", "6"))
 REVIEW_MODEL = os.environ.get("SP_REVIEW_MODEL", "claude-opus-5-5")
-MAX_PUBLISH = int(os.environ.get("SP_MAX_PUBLISH", "5"))
+# SP_MAX_PUBLISH: how many new briefs one run may publish (default 5). Set it to 0 to "draft and hold everything for manual
+# approval": the run still drafts, checks and reviews, and still writes <date>.json, seen.json and audit-summary.json, but it adds
+# nothing to live/briefs-live.json and writes no new Pro analysis (no backfill either). Held drafts are marked in the audit.
+MAX_PUBLISH = max(0, int(os.environ.get("SP_MAX_PUBLISH", "5")))
+# Hard spend cap: model calls allowed in ONE run. "draft" = calls to SP_MODEL (writing briefs and Pro analysis),
+# "review" = calls to SP_REVIEW_MODEL (editor review of briefs and claim check of analysis). Measured runs used 11 to 19 of each (Nov 24-26, 2026); 24 covers a full run (6 briefs + 9 analyses).
+# When a limit is reached the run stops drafting, publishes only what was already fully checked, and records it in the audit.
+LIMITS = {"draft": max(0, int(os.environ.get("SP_MAX_DRAFT_CALLS", "24"))), "review": max(0, int(os.environ.get("SP_MAX_REVIEW_CALLS", "24")))}
+CALLS = {"draft": 0, "review": 0}
+BUDGET_HIT = []
+class BudgetExceeded(RuntimeError): pass
+def budget_left(kind): return LIMITS[kind] - CALLS[kind]
+def budget_note(where):
+    msg = "%s: call budget reached (draft %d/%d, review %d/%d)" % (where, CALLS["draft"], LIMITS["draft"], CALLS["review"], LIMITS["review"])
+    if not any(m.startswith(where + ":") for m in BUDGET_HIT): BUDGET_HIT.append(msg); print("BUDGET", msg)
 KEEP_LIVE = 40
 UA = {"User-Agent": "Mozilla/5.0 (SignalPoint news drafts; github.com/martinfgaleano-crypto/signalpoint)"}
 FEEDS = [
@@ -74,8 +91,12 @@ Return ONE JSON object, no prose, with exactly these keys:
  "es": {"title": Spanish title, "summary": Spanish summary, "actors": [{"name","reason"} same order], "watch": [{"text","note"} same order], "unknowns": [same order]}}
 Rules: use ONLY the source text provided; never invent numbers, quotes or dates; if the text does not support a field, be conservative ("undetermined").
 Never recommend buying, selling or holding anything, never give price targets or confidence scores. Spanish must be neutral Colombian Spanish (no voseo)."""
-def _call(messages, model=None):
+def _call(messages, model=None, kind="draft"):
+    if budget_left(kind) <= 0: raise BudgetExceeded(kind + " call budget reached")   # checked before any request is sent
+    CALLS[kind] += 1
     body = json.dumps({"model": model or MODEL, "max_tokens": 4000, "messages": messages}).encode()
+    return _http(body)
+def _http(body):
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={"x-api-key": KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=180) as r: j = json.load(r)
@@ -121,7 +142,7 @@ the text recommends buying, selling or holding, or gives a price target; the Spa
 an actor's impact is asserted without support in the source. relevance: how useful this is for a young Colombian following markets
 (5 = central bank, inflation, GDP, the peso, major listed companies; 1 = lifestyle or minor local news). List concrete issues; empty if none."""
 def review(b, src, feed_date=""):
-    t = _call([{"role": "user", "content": REVIEW + "\n\nDRAFT:\n" + json.dumps(b, ensure_ascii=False) + "\n\nPUBLICATION DATE (from the publisher's feed): " + (feed_date or "unknown") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
+    t = _call([{"role": "user", "content": REVIEW + "\n\nDRAFT:\n" + json.dumps(b, ensure_ascii=False) + "\n\nPUBLICATION DATE (from the publisher's feed): " + (feed_date or "unknown") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL, kind="review")
     return _parse(t)
 def validate(b, today):
     js = "const q=require('./tools/quality.cjs');const b=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(q.validateBrief(b,{today:process.argv[1],maxAgeDays:4})))"
@@ -156,11 +177,14 @@ def main():
         report["note"] = "ANTHROPIC_API_KEY is not set: candidates listed, no drafts written."
         report["candidates"] = cand[:20]
     for c in (cand[:MAX_ITEMS] if KEY else []):
+        # a new draft needs one writing call and one editor call; without both, stop here (the item stays unseen and comes back next run)
+        if budget_left("draft") < 1 or budget_left("review") < 1: budget_note("drafting stopped"); break
         try: src = text_of(get(c["link"]))[:9000]
         except Exception as e: src = c["desc"]
         prompt = f"{SCHEMA}\n\nSource: {c['feed']} (evidence grade suggested: {c['grade']})\nURL: {c['link']}\nPublished: {c['date']}\nHeadline: {c['title']}\n\nSOURCE TEXT:\n{src}"
         try:
             b = claude(prompt)
+        except BudgetExceeded: budget_note("drafting stopped"); break
         except Exception as e:
             report["rejected"].append({"title": c["title"], "url": c["link"], "errors": ["model call failed: " + repr(e)[:160]]}); continue
         if not isinstance(b, dict):
@@ -196,6 +220,7 @@ def main():
     audited = {a.get("id") for a in report.get("audit", [])}
     for b in report["briefs"]:
         if b["id"] in audited or not KEY: continue
+        if budget_left("review") < 1: budget_note("review of older drafts stopped"); break   # unreviewed drafts are never published
         try: src = text_of(get(b["source"]["url"]))[:9000]
         except Exception: continue
         miss = numbers_supported(b, src)
@@ -217,7 +242,7 @@ HIST = None
 INSIGHT_LOG = []
 def _verify(an, src, b, ev):
     t = _call([{"role": "user", "content": insight_ml.VERIFY + "\n\nANALYSIS:\n" + json.dumps(an, ensure_ascii=False) + "\n\nBRIEF:\n" + json.dumps(b, ensure_ascii=False)
-                + "\n\nHISTORICAL EVIDENCE:\n" + (ev or "(none)") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL)
+                + "\n\nHISTORICAL EVIDENCE:\n" + (ev or "(none)") + "\n\nSOURCE TEXT:\n" + src[:9000] + "\n\nOutput only the JSON object."}], model=REVIEW_MODEL, kind="review")
     j = _parse(t); return int(j.get("claims") or 0), [u for u in (j.get("unsupported") or []) if isinstance(u, dict) and u.get("text")]
 def _shape_ok(j):
     en, es = j.get("en"), j.get("es")
@@ -235,6 +260,8 @@ def make_insight(b):
     log = {"id": b["id"], "events": keys, "rounds": []}; INSIGHT_LOG.append(log)
     feedback = ""
     for rnd in range(2):
+        if budget_left("draft") < 1 or budget_left("review") < 1:   # an analysis is only published after its claim check
+            budget_note("Pro analysis skipped"); log["result"] = "skipped: call budget reached"; return None
         try: j = claude(prompt + feedback)
         except Exception as e: log["result"] = "model error: " + repr(e)[:200]; print("insight model error", repr(e)[:300]); return None
         if not _shape_ok(j): log["rounds"].append({"shape": False}); feedback = "\n\nYour last answer did not have exactly four [heading, paragraph] pairs per language. Follow the format."; continue
@@ -281,7 +308,10 @@ def publish(report, today):
     for i in ok_ids:
         b = byid.get(i)
         if not b or i in have or b["source"]["url"] in have or i in retracted: continue
-        if added >= MAX_PUBLISH: break
+        if added >= MAX_PUBLISH:   # passed every check but over the publish limit (always the case when SP_MAX_PUBLISH=0): held, not published
+            for a in report["audit"]:
+                if a.get("id") == i and not a.get("publishedAt"): a["held"] = "publish limit (SP_MAX_PUBLISH=%d)" % MAX_PUBLISH
+            continue
         live["briefs"].insert(0, b); added += 1
         ins = make_insight(b)
         if ins: _track_add(track, b, ins); live.setdefault("insights", {})[i] = ins
@@ -291,7 +321,7 @@ def publish(report, today):
     keep = {b["id"] for b in live["briefs"]}; live["insights"] = {k: v for k, v in live.get("insights", {}).items() if k in keep}
     done_back = 0
     for b in live["briefs"]:   # briefs published before analysis existed get theirs a few per run
-        if done_back >= int(os.environ.get("SP_INSIGHT_BACKFILL", "4")): break
+        if MAX_PUBLISH <= 0 or done_back >= int(os.environ.get("SP_INSIGHT_BACKFILL", "4")): break
         if b["id"] in live["insights"]: continue
         ins = make_insight(b); done_back += 1
         if ins: _track_add(track, b, ins); live["insights"][b["id"]] = ins
@@ -300,6 +330,7 @@ def publish(report, today):
     json.dump(track, open(tp, "w"), ensure_ascii=False, indent=1)
     live["track"] = dict(track.get("summary", {}), recent=[{k: p[k] for k in ("id", "event", "asset", "h", "dir", "share", "realized", "held", "closedOn")} for p in track.get("closed", [])[-8:]])
     report["insight_checks"] = INSIGHT_LOG
+    report["budget"] = {"calls": dict(CALLS), "limits": dict(LIMITS), "max_publish": MAX_PUBLISH, "hit": list(BUDGET_HIT)}
     live["updatedAt"] = datetime.now(timezone.utc).isoformat(); live["retracted"] = sorted(retracted)
     json.dump(live, open(lp, "w"), ensure_ascii=False, indent=1)
     json.dump(report, open(os.path.join(OUT, f"{today}.json"), "w"), ensure_ascii=False, indent=1)
@@ -307,7 +338,40 @@ def publish(report, today):
     sp = os.path.join(OUT, "audit-summary.json"); summ = json.load(open(sp)) if os.path.exists(sp) else {"days": {}}
     au = report.get("audit", [])
     summ["days"][today] = {"drafted": sum(1 for a in au if a.get("gate") == "pass"), "rejected_by_gate": sum(1 for a in au if a.get("gate") == "fail"),
-        "held_by_review": sum(1 for a in au if a.get("decision") == "hold"), "published": sum(1 for a in au if a.get("publishedAt"))}
+        "held_by_review": sum(1 for a in au if a.get("decision") == "hold"), "published": sum(1 for a in au if a.get("publishedAt")),
+        "held_by_publish_limit": sum(1 for a in au if a.get("held") and not a.get("publishedAt")), "last_run": report["budget"]}
     json.dump(summ, open(sp, "w"), indent=1)
-    print("published", added, json.dumps({"feeds": report.get("feeds"), "drafts": len(report["briefs"]), "rejected": len(report["rejected"])}))
-if __name__ == "__main__": main()
+    print("published", added, json.dumps({"feeds": report.get("feeds"), "drafts": len(report["briefs"]), "rejected": len(report["rejected"]), "budget": report["budget"]}))
+def selftest():
+    """Offline check of the call budget and of SP_MAX_PUBLISH=0. No network, no API key: python3 tools/news_drafts.py --selftest"""
+    import tempfile
+    g = globals(); day = datetime.now(timezone.utc).date().isoformat(); sent = []
+    def fake_http(body):
+        sent.append(json.loads(body)["model"]); m = json.loads(body)["messages"][0]["content"]
+        if m.startswith(REVIEW): return json.dumps({"pass": True, "relevance": 5, "issues": []})
+        n = re.search(r"Headline: T(\d+)", m).group(1)
+        return json.dumps({"title": "Test brief " + n, "eventDate": day, "summary": "Nothing with figures.", "source": {"name": "t", "url": ""}, "es": {"summary": "Nada con cifras."}})
+    def fake_items(): return [{"feed": "Federal Reserve", "grade": "A", "title": "T%d" % i, "link": "https://example.test/%d" % i, "desc": "", "date": day} for i in range(4)], {}
+    g.update(_http=fake_http, items=fake_items, get=lambda url, timeout=40: b"source text", validate=lambda b, today: {"ok": True, "errors": []}, KEY="selftest", SB_KEY="")
+    time.sleep = lambda s: None; insight_ml.score = lambda t: t
+    def run(draft, rev, pub):
+        g["OUT"] = tempfile.mkdtemp(); g["MAX_PUBLISH"] = pub; LIMITS.update(draft=draft, review=rev); CALLS.update(draft=0, review=0); del BUDGET_HIT[:]; del sent[:]
+        main()
+        rd = lambda f: json.load(open(os.path.join(OUT, f)))
+        return rd(day + ".json"), rd("live/briefs-live.json"), rd("audit-summary.json")["days"][day]
+    rep, live, summ = run(16, 12, 5)      # normal run: everything fits
+    assert len(rep["briefs"]) == 4 and len(live["briefs"]) == 4 and summ["published"] == 4 and not rep["budget"]["hit"], "normal run"
+    assert len(sent) == 8 and rep["budget"]["calls"] == {"draft": 4, "review": 4}, "call count"
+    rep, live, summ = run(2, 12, 5)       # writing budget of 2: two drafts, both fully checked and published, then a clean stop
+    assert len(rep["briefs"]) == 2 and len(live["briefs"]) == 2 and len(sent) == 4 and rep["budget"]["hit"] and summ["last_run"]["hit"], "draft budget"
+    rep, live, summ = run(16, 1, 5)       # editor budget of 1: only one draft is written, nothing unreviewed is published
+    assert len(rep["briefs"]) == 1 and len(live["briefs"]) == 1 and sent.count(REVIEW_MODEL) == 1 and rep["budget"]["hit"], "review budget"
+    rep, live, summ = run(0, 0, 5)        # zero budget: no request at all, files still written
+    assert sent == [] and rep["briefs"] == [] and live["briefs"] == [] and rep["budget"]["hit"], "zero budget"
+    rep, live, summ = run(16, 12, 0)      # SP_MAX_PUBLISH=0: drafts and audit written, nothing goes live
+    assert len(rep["briefs"]) == 4 and live["briefs"] == [] and summ["published"] == 0 and summ["held_by_publish_limit"] == 4, "max publish 0"
+    assert all(a.get("held") and not a.get("publishedAt") for a in rep["audit"]), "held marks"
+    print("selftest ok")
+if __name__ == "__main__":
+    if "--selftest" in sys.argv: selftest()
+    else: main()
