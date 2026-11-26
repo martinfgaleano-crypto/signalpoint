@@ -23,9 +23,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          # Spend cap per run (hard limits on model calls). A normal run uses about 10 of each.
-          SP_MAX_DRAFT_CALLS: '16'    # calls to the writing model (briefs + Pro analysis)
-          SP_MAX_REVIEW_CALLS: '12'   # calls to the editor model (reviews + claim checks)
+          # Spend cap per run (hard limits on model calls). Measured runs used 11 to 19 of each; 24 covers a full run.
+          SP_MAX_DRAFT_CALLS: '24'    # calls to the writing model (briefs + Pro analysis)
+          SP_MAX_REVIEW_CALLS: '24'   # calls to the editor model (reviews + claim checks)
           # New briefs published per run. Set to '0' to draft and hold everything for manual approval (nothing new goes live).
           SP_MAX_PUBLISH: '5'
         run: python3 tools/news_drafts.py d

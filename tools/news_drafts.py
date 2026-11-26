@@ -16,9 +16,9 @@ REVIEW_MODEL = os.environ.get("SP_REVIEW_MODEL", "claude-opus-5-5")
 # nothing to live/briefs-live.json and writes no new Pro analysis (no backfill either). Held drafts are marked in the audit.
 MAX_PUBLISH = max(0, int(os.environ.get("SP_MAX_PUBLISH", "5")))
 # Hard spend cap: model calls allowed in ONE run. "draft" = calls to SP_MODEL (writing briefs and Pro analysis),
-# "review" = calls to SP_REVIEW_MODEL (editor review of briefs and claim check of analysis). A normal run uses about 10 of each.
+# "review" = calls to SP_REVIEW_MODEL (editor review of briefs and claim check of analysis). Measured runs used 11 to 19 of each (Nov 24-26, 2026); 24 covers a full run (6 briefs + 9 analyses).
 # When a limit is reached the run stops drafting, publishes only what was already fully checked, and records it in the audit.
-LIMITS = {"draft": max(0, int(os.environ.get("SP_MAX_DRAFT_CALLS", "16"))), "review": max(0, int(os.environ.get("SP_MAX_REVIEW_CALLS", "12")))}
+LIMITS = {"draft": max(0, int(os.environ.get("SP_MAX_DRAFT_CALLS", "24"))), "review": max(0, int(os.environ.get("SP_MAX_REVIEW_CALLS", "24")))}
 CALLS = {"draft": 0, "review": 0}
 BUDGET_HIT = []
 class BudgetExceeded(RuntimeError): pass
