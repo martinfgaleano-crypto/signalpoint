@@ -1,6 +1,9 @@
-"""SignalPoint news drafts (v1). Collects recent items from public feeds, asks Claude to write each as a SignalPoint brief
-grounded ONLY in the fetched source text, validates every draft with the publication gate (tools/quality.cjs) and writes
-the result to drafts/<date>.json. Nothing is published: a person reviews the drafts before they reach the site."""
+"""SignalPoint news drafts. Collects recent items from public feeds and asks a model to write each as a SignalPoint brief
+grounded ONLY in the fetched source text. Every draft goes through automated checks: the schema gate (tools/quality.cjs), a
+check that every number in the summaries appears in the source, and a fact-check review by a second model (the "editor").
+Drafts that pass all three are PUBLISHED AUTOMATICALLY to live/briefs-live.json (at most SP_MAX_PUBLISH per run), which the
+site reads from the `drafts` branch. No person reviews a brief before it is published; the rest are held or rejected, and
+every decision is written to <date>.json and audit-summary.json. A published brief is withdrawn by adding its id to retracted.json."""
 import json, os, re, sys, time, html, subprocess, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 OUT = sys.argv[1] if len(sys.argv) > 1 else "drafts"
