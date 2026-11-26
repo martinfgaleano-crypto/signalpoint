@@ -1,17 +1,17 @@
 {
- "generatedAt": "2026-11-26T20:17:05.864841+00:00",
+ "generatedAt": "2026-11-26T22:59:31.837325+00:00",
  "model": "claude-sonnet-5-5",
  "feeds": {
   "Federal Reserve": "3 (first date: Wed, 25 Nov 2026 20:00:00 GMT)",
   "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
   "US Energy Information Administration": "2 (first date: Wed, 25 Nov 2026  09:00:00 EST)",
-  "Valora Analitik": "50 (first date: 2026-11-26 20:00:00)",
-  "Portafolio": "10 (first date: 2026-11-26T14:45:06-05:00)",
+  "Valora Analitik": "50 (first date: 2026-11-26 22:35:55)",
+  "Portafolio": "10 (first date: 2026-11-26T17:45:29-05:00)",
   "Federal Reserve (monetary policy)": "1 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
   "US Bureau of Economic Analysis": "2 (first date: Wed, 25 Nov 2026 08:30:00 EST)",
   "US Securities and Exchange Commission": "1 (first date: Wed, 25 Nov 2026 09:10:24 -0500)",
   "US Census Bureau (economic indicators)": "2 (first date: Wed, 25 Nov 2026 10:00:00 -0500)",
-  "CNBC Economy": "9 (first date: Thu, 26 Nov 2026 15:28:26 GMT)",
+  "CNBC Economy": "8 (first date: Thu, 26 Nov 2026 15:28:26 GMT)",
   "CNBC Finance": "11 (first date: Thu, 26 Nov 2026 16:00:01 GMT)"
  },
  "briefs": [
@@ -658,26 +658,386 @@
      "¿Cómo influirán las propuestas arancelarias de EE. UU., menos disruptivas de lo temido, en las monedas emergentes?"
     ]
    }
+  },
+  {
+   "id": "2026-11-25-us-pce-inflation-rose-to-3-8-in-october-core-at-",
+   "title": "US PCE inflation rose to 3.8% in October; core at 3.3%, Commerce Department says",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html"
+   },
+   "summary": "The personal consumption expenditures price index rose at a seasonally adjusted 3.8% annual rate in October, in line with the Dow Jones consensus and 0.1 percentage point higher than September. Core PCE, which excludes food and energy, was 3.3%, 0.1 percentage point above the forecast, the Commerce Department reported. A separate revised estimate put third-quarter GDP growth at a 4.3% annualized rate. CNBC reports that the market is fully pricing in a quarter-point Fed rate hike at the Dec. 8-9 meeting.",
+   "actors": [
+    {
+     "name": "Federal Reserve",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Inflation remains well above the 2% target and growth is strong, which supports the case for more tightening, but the source says it is unclear how much more is needed."
+    },
+    {
+     "name": "US households",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Income rose 0.7% in October and the saving rate rose to 4.1%, while consumer prices continue to climb at a 3.8% annual rate."
+    },
+    {
+     "name": "Treasury market investors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Treasury yields were sharply lower after the release and traders trimmed odds of a third 2027 hike, but the source does not explain the broader effect on holders."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Outcome of the Fed's Dec. 8-9 policy meeting, where the market is fully pricing in a quarter-point hike",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Federal Reserve's post-meeting statement and the CME FedWatch probabilities."
+    },
+    {
+     "text": "Implementation details of the new tariffs announced on 14 trading partners including China, the EU and Japan",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check White House and trade agency announcements and subsequent press coverage."
+    },
+    {
+     "text": "Weekly initial jobless claims after the 189,000 reading for the week ending Nov. 21",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare upcoming Labor Department weekly releases with the recent low levels."
+    }
+   ],
+   "unknowns": [
+    "How much more the Fed will need to raise rates in 2027 to bring inflation back to 2%.",
+    "Whether the effects of tariffs and supply shocks are becoming embedded in the wider economy.",
+    "How the new round of tariffs will affect prices and trade flows."
+   ],
+   "tags": [
+    "PCE",
+    "inflation",
+    "Federal Reserve",
+    "rate hike",
+    "GDP",
+    "tariffs"
+   ],
+   "es": {
+    "title": "La inflación PCE de EE. UU. subió a 3,8 % en octubre; la subyacente fue 3,3 %, según Comercio",
+    "summary": "El índice de precios del gasto de consumo personal (PCE) subió a una tasa anual de 3,8 % ajustada estacionalmente en octubre, en línea con el consenso de Dow Jones y 0,1 punto porcentual por encima de septiembre. El PCE subyacente, que excluye alimentos y energía, fue 3,3 %, 0,1 punto porcentual por encima del pronóstico, según el Departamento de Comercio. Una estimación revisada y separada ubicó el crecimiento del PIB del tercer trimestre en una tasa anualizada de 4,3 %. CNBC informa que el mercado descuenta por completo un alza de un cuarto de punto de la Fed en la reunión del 8 y 9 de diciembre.",
+    "actors": [
+     {
+      "name": "Reserva Federal",
+      "reason": "La inflación sigue muy por encima de la meta de 2 % y el crecimiento es fuerte, lo que respalda más ajustes, pero la fuente dice que no está claro cuánto más se necesitará."
+     },
+     {
+      "name": "Hogares de EE. UU.",
+      "reason": "El ingreso subió 0,7 % en octubre y la tasa de ahorro aumentó a 4,1 %, mientras los precios al consumidor siguen subiendo a una tasa anual de 3,8 %."
+     },
+     {
+      "name": "Inversionistas del mercado de Tesoros",
+      "reason": "Los rendimientos de los Tesoros cayeron con fuerza tras el informe y los operadores recortaron la probabilidad de una tercera alza en 2027, pero la fuente no explica el efecto general para los tenedores."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Resultado de la reunión de la Fed del 8 y 9 de diciembre, en la que el mercado descuenta por completo un alza de un cuarto de punto",
+      "note": "Revisar el comunicado de la Reserva Federal tras la reunión y las probabilidades de CME FedWatch."
+     },
+     {
+      "text": "Detalles de la aplicación de los nuevos aranceles anunciados a 14 socios comerciales, entre ellos China, la UE y Japón",
+      "note": "Revisar los anuncios de la Casa Blanca y de las agencias comerciales, y la cobertura de prensa posterior."
+     },
+     {
+      "text": "Solicitudes semanales de subsidio por desempleo tras la cifra de 189.000 de la semana que terminó el 21 de noviembre",
+      "note": "Comparar las próximas publicaciones semanales del Departamento de Trabajo con los niveles bajos recientes."
+     }
+    ],
+    "unknowns": [
+     "Cuánto más tendrá que subir tasas la Fed en 2027 para llevar la inflación de nuevo a 2 %.",
+     "Si los efectos de los aranceles y de los choques de oferta se están arraigando en el resto de la economía.",
+     "Cómo afectará la nueva ronda de aranceles a los precios y a los flujos comerciales."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-us-proposes-new-tariffs-on-14-trading-partners-s",
+   "title": "US proposes new tariffs on 14 trading partners, starting at 15%, citing excess capacity",
+   "category": "Geopolitics",
+   "region": "US / Global",
+   "eventDate": "2026-11-25",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Economy",
+    "url": "https://www.cnbc.com/2026/11/26/us-tariffs-hike-trade-agreement.html"
+   },
+   "summary": "The Trump administration proposed new tariffs on 14 trading partners, framed as curbing excess industrial capacity. Rates start at 15% for the EU, South Korea, Switzerland and Taiwan and rise to as much as 35% for Vietnam. The U.S. Trade Representative's Office said it intends to cap the duties at lower levels for countries that have completed or are negotiating trade deals. USTR Jamieson Greer said the policy likely will not take effect for months, and a senior U.S. official said the duties could start as early as January.",
+   "actors": [
+    {
+     "name": "China",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "It faces a capped rate of 20% on top of an existing 25% tariff, which the USTR said could rise to 40% if the trade truce is not extended beyond January."
+    },
+    {
+     "name": "Vietnam and India",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Proposed rates of 35% and 25% could fall to 20% and 17% if ongoing talks produce reciprocal trade agreements, which gives them an incentive to conclude deals."
+    },
+    {
+     "name": "South Korea and Taiwan",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Exemptions for semiconductors and other electronics should cushion the impact, according to analysts, although Taiwan's effective rate is estimated to rise to about 9% from 6%."
+    },
+    {
+     "name": "Singapore",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Its ministry said about 33% of direct exports would be affected and the effective tariff rate on them would rise to 10.3% from 7.8% if the highest 20% levy is imposed."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the U.S.-China trade truce is extended beyond January, which the USTR tied to a possible rise in the China rate to 40%.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check USTR and Chinese Commerce Ministry statements on the truce."
+    },
+    {
+     "text": "Whether Vietnam, India or other partners conclude reciprocal trade agreements to secure the lower capped rates.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official announcements from the USTR and the partner governments."
+    },
+    {
+     "text": "Whether the duties take effect as early as January, as a senior U.S. official said.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check USTR notices and Federal Register publications on the final action."
+    }
+   ],
+   "unknowns": [
+    "What final rates will apply after the public consultation period?",
+    "Will the Trump-Xi meeting expected at the G20 summit in Miami in December change the proposed China rates?",
+    "How will the EU respond after saying it is assessing the U.S. report?"
+   ],
+   "tags": [
+    "tariffs",
+    "USTR",
+    "Section 301",
+    "China",
+    "Vietnam",
+    "trade deals"
+   ],
+   "es": {
+    "title": "EE. UU. propone aranceles a 14 socios comerciales, desde 15%, por exceso de capacidad",
+    "summary": "La administración Trump propuso nuevos aranceles a 14 socios comerciales, planteados como una medida contra el exceso de capacidad industrial. Las tasas parten de 15% para la Unión Europea, Corea del Sur, Suiza y Taiwán y llegan hasta 35% para Vietnam. La Oficina del Representante Comercial de EE. UU. (USTR) dijo que pretende limitar los aranceles a niveles más bajos para los países que han cerrado acuerdos comerciales o los están negociando. El representante comercial Jamieson Greer dijo que la política probablemente no entrará en vigor en varios meses, y un alto funcionario estadounidense indicó que los aranceles podrían comenzar desde enero.",
+    "actors": [
+     {
+      "name": "China",
+      "reason": "Enfrenta una tasa tope de 20% sobre el arancel existente de 25%, que según la USTR podría subir a 40% si la tregua comercial no se extiende más allá de enero."
+     },
+     {
+      "name": "Vietnam e India",
+      "reason": "Las tasas propuestas de 35% y 25% podrían bajar a 20% y 17% si las negociaciones en curso producen acuerdos comerciales recíprocos, lo que les da un incentivo para cerrar acuerdos."
+     },
+     {
+      "name": "Corea del Sur y Taiwán",
+      "reason": "Las exenciones para semiconductores y otros productos electrónicos deberían amortiguar el impacto, según analistas, aunque se estima que la tasa efectiva de Taiwán suba a cerca de 9% desde 6%."
+     },
+     {
+      "name": "Singapur",
+      "reason": "Su ministerio dijo que cerca de 33% de las exportaciones directas se vería afectado y que la tasa arancelaria efectiva sobre ellas subiría a 10,3% desde 7,8% si se aplica el gravamen máximo de 20%."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si la tregua comercial entre EE. UU. y China se extiende más allá de enero, condición que la USTR vinculó a un posible aumento de la tasa para China a 40%.",
+      "note": "Revisar los comunicados de la USTR y del Ministerio de Comercio de China sobre la tregua."
+     },
+     {
+      "text": "Si Vietnam, India u otros socios cierran acuerdos comerciales recíprocos para asegurar las tasas tope más bajas.",
+      "note": "Revisar los anuncios oficiales de la USTR y de los gobiernos de los socios."
+     },
+     {
+      "text": "Si los aranceles entran en vigor desde enero, como indicó un alto funcionario estadounidense.",
+      "note": "Revisar los avisos de la USTR y las publicaciones en el Federal Register sobre la medida final."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tasas finales se aplicarán después del periodo de consulta pública?",
+     "¿Cambiará la reunión Trump-Xi prevista en la cumbre del G20 en Miami, en diciembre, las tasas propuestas para China?",
+     "¿Cómo responderá la Unión Europea, que dijo estar evaluando el informe estadounidense?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-26-fund-managers-flag-ai-linked-recession-risk-and-",
+   "title": "Fund managers flag AI-linked recession risk and rising asset correlations at Singapore panel",
+   "category": "Other",
+   "region": "US / Global",
+   "eventDate": "2026-11-26",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html"
+   },
+   "summary": "At the iConnections Global Alts Asia conference in Singapore, DSC Meridian Capital's Sheru Chowdhry said the AI boom could lead to a recession, through either an investment collapse or job losses. He still sees opportunities in data centers and cited yields of around 8.5% on U.S. high-yield bonds and 9.5% on leveraged loans. R.G. Niederhoffer Capital Management's Dan Gelernter cited research showing average monthly correlations across investable assets rose from around 5% to roughly 11% to 12% by 2020. He said his own analysis puts the figure at around 15% to 16% in 2026.",
+   "actors": [
+    {
+     "name": "Data center developers and operators",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Chowdhry said data centers that secure permits and power access within two years present a significant opportunity, as power and grid connections are bottlenecks."
+    },
+    {
+     "name": "U.S. high-yield bond and leveraged loan investors",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Chowdhry described yields of around 8.5% and 9.5% as a chance to 'get paid to wait'."
+    },
+    {
+     "name": "Multi-asset portfolio holders",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Gelernter said portfolios are more levered, less liquid and more correlated than they appear, which raises vulnerability to volatility."
+    },
+    {
+     "name": "Housing and discretionary spending sectors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Chowdhry said widespread AI-driven job losses could affect housing and consumer spending, but he gave no timing or estimate."
+    }
+   ],
+   "watch": [
+    {
+     "text": "U.S. high-yield bond and leveraged loan yields relative to the roughly 8.5% and 9.5% levels cited",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare published high-yield and leveraged loan index yields with the figures cited by Chowdhry."
+    },
+    {
+     "text": "Data center projects securing permits and power or grid connections",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Track company announcements and utility or regulatory approvals for data center projects."
+    },
+    {
+     "text": "Direction of average cross-asset correlations versus Gelernter's 15% to 16% estimate for 2026",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check later research or market commentary on cross-asset correlation measures."
+    }
+   ],
+   "unknowns": [
+    "Which methodology and asset universe underlie Gelernter's correlation figures?",
+    "What timing or evidence supports the AI-led or unemployment-led recession scenario?",
+    "Would the cited credit yields hold if a recession or higher volatility materialized?"
+   ],
+   "tags": [
+    "AI",
+    "data centers",
+    "high yield",
+    "leveraged loans",
+    "correlation",
+    "recession risk"
+   ],
+   "es": {
+    "title": "Gestores advierten en Singapur sobre recesión ligada a la IA y mayor correlación entre activos",
+    "summary": "En la conferencia iConnections Global Alts Asia en Singapur, Sheru Chowdhry, de DSC Meridian Capital, dijo que el auge de la IA podría llevar a una recesión, ya sea por un colapso de la inversión o por pérdida de empleos. Aun así, ve oportunidades en los centros de datos y citó rendimientos de alrededor de 8,5 % en bonos de alto rendimiento de EE. UU. y de 9,5 % en préstamos apalancados. Dan Gelernter, de R.G. Niederhoffer Capital Management, citó una investigación según la cual las correlaciones mensuales promedio entre activos invertibles subieron de alrededor de 5 % a cerca de 11 % a 12 % hacia 2020. Dijo que su propio análisis ubica la cifra en alrededor de 15 % a 16 % en 2026.",
+    "actors": [
+     {
+      "name": "Desarrolladores y operadores de centros de datos",
+      "reason": "Chowdhry dijo que los centros de datos que consigan permisos y acceso a energía en los próximos dos años representan una oportunidad significativa, pues la energía y las conexiones a la red son cuellos de botella."
+     },
+     {
+      "name": "Inversionistas en bonos de alto rendimiento y préstamos apalancados de EE. UU.",
+      "reason": "Chowdhry describió rendimientos de alrededor de 8,5 % y 9,5 % como una oportunidad de «cobrar por esperar»."
+     },
+     {
+      "name": "Tenedores de portafolios multiactivo",
+      "reason": "Gelernter dijo que los portafolios están más apalancados, son menos líquidos y están más correlacionados de lo que parece, lo que aumenta su vulnerabilidad a la volatilidad."
+     },
+     {
+      "name": "Sectores de vivienda y gasto discrecional",
+      "reason": "Chowdhry dijo que una pérdida masiva de empleos por la IA podría afectar la vivienda y el consumo, pero no dio plazos ni estimaciones."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Rendimientos de bonos de alto rendimiento y préstamos apalancados de EE. UU. frente a los niveles citados de cerca de 8,5 % y 9,5 %",
+      "note": "Comparar los rendimientos publicados de índices de alto rendimiento y préstamos apalancados con las cifras citadas por Chowdhry."
+     },
+     {
+      "text": "Proyectos de centros de datos que obtengan permisos y conexiones de energía o de red",
+      "note": "Seguir anuncios de empresas y aprobaciones de servicios públicos o reguladores para proyectos de centros de datos."
+     },
+     {
+      "text": "Dirección de las correlaciones promedio entre activos frente a la estimación de Gelernter de 15 % a 16 % para 2026",
+      "note": "Revisar investigaciones o comentarios de mercado posteriores sobre medidas de correlación entre activos."
+     }
+    ],
+    "unknowns": [
+     "¿Qué metodología y universo de activos sustentan las cifras de correlación de Gelernter?",
+     "¿Qué plazos o evidencia respaldan el escenario de recesión liderada por la IA o por el desempleo?",
+     "¿Se mantendrían los rendimientos de crédito citados si llegara una recesión o mayor volatilidad?"
+    ]
+   }
   }
  ],
- "rejected": [],
+ "rejected": [
+  {
+   "title": "Relevante | Después de 15 años, la acción de una empresa extranjera se lista en la Bolsa de Colombia",
+   "url": "https://www.valoraanalitik.com/accion-empresa-extranjera-bolsa-de-colombia/",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ]
+  },
+  {
+   "title": "Salario mínimo en Colombia estaría más cerca de subir $130.000 para 2027",
+   "url": "https://www.valoraanalitik.com/salario-minimo-en-colombia-estaria-mas-cerca-de-subir-130-000-para-2027/",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ]
+  },
+  {
+   "title": "Inversionistas en Colombia dicen cuánto debería subir el salario mínimo en 2027",
+   "url": "https://www.valoraanalitik.com/inversionistas-en-colombia-dicen-cuanto-deberia-subir-el-salario-minimo-en-2027/",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ]
+  }
+ ],
  "candidates": {
-  "from_feeds": 91,
-  "after_filter": 30,
+  "from_feeds": 90,
+  "after_filter": 24,
   "sample": [
-   "Personal Income and Outlays, October 2026",
-   "Top Picks de Cibest Capital noviembre 2026: estas son cuatro acciones con mayor potencial ",
-   "New Home Sales",
-   "AmCham pide negociar el aumento del salario mínimo de 2027 con base en la productividad, l",
-   "Advance Monthly Manufacturers' Shipments, Inventories, and Orders",
-   "Dólar en Colombia abre a la baja en $3.534 en jornada Next Day por el festivo de Acción de",
    "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes fo",
-   "Inversionistas en Colombia dicen cuánto debería subir el salario mínimo en 2027"
+   "Relevante | Después de 15 años, la acción de una empresa extranjera se lista en la Bolsa d",
+   "U.S. tariff-hike threats pile pressure on partners to sign trade deals",
+   "Salario mínimo en Colombia estaría más cerca de subir $130.000 para 2027",
+   "Beware higher correlation but nab high U.S. credit yields, fund managers say",
+   "Inversionistas en Colombia dicen cuánto debería subir el salario mínimo en 2027",
+   "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
+   "Camacol advierte que subsidios de vivienda no llegarían en 2027 y señala retos para reacti"
   ],
   "dropped": {
-   "seen": 11,
-   "skip": 1,
-   "no_topic": 48
+   "seen": 14,
+   "skip": 3,
+   "no_topic": 50
   },
   "raw_sample": [
    [
@@ -707,8 +1067,8 @@
    ],
    [
     "B",
-    0,
-    "Gobierno anuncia ajustes al licenciamiento ambiental y la consulta pre"
+    3,
+    "Relevante | Después de 15 años, la acción de una empresa extranjera se"
    ]
   ]
  },
@@ -817,49 +1177,116 @@
    "decision": "publish",
    "reviewModel": "claude-opus-5-5",
    "publishedAt": "2026-11-26T20:21:52.721502+00:00"
+  },
+  {
+   "id": "2026-11-25-us-pce-inflation-rose-to-3-8-in-october-core-at-",
+   "title": "US PCE inflation rose to 3.8% in October; core at 3.3%, Commerce Department says",
+   "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T23:02:26.818185+00:00"
+  },
+  {
+   "title": "Relevante | Después de 15 años, la acción de una empresa extranjera se lista en la Bolsa de Colombia",
+   "url": "https://www.valoraanalitik.com/accion-empresa-extranjera-bolsa-de-colombia/",
+   "gate": "fail",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-25-us-proposes-new-tariffs-on-14-trading-partners-s",
+   "title": "US proposes new tariffs on 14 trading partners, starting at 15%, citing excess capacity",
+   "url": "https://www.cnbc.com/2026/11/26/us-tariffs-hike-trade-agreement.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 3,
+    "issues": [
+     "Singapore actor reason (EN and ES) misattributes the figures to 'its ministry'. Per the source, Deputy Prime Minister Gan Kim Yong told reporters that about 33% of direct exports (S$9.4 billion) would be affected and the effective rate would rise to 10.3% from 7.8%. The Ministry of Energy, Trade and Industry was the source for the 20% maximum rate and the possible 10% rate with a deal, not for these numbers."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "title": "Salario mínimo en Colombia estaría más cerca de subir $130.000 para 2027",
+   "url": "https://www.valoraanalitik.com/salario-minimo-en-colombia-estaria-mas-cerca-de-subir-130-000-para-2027/",
+   "gate": "fail",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-26-fund-managers-flag-ai-linked-recession-risk-and-",
+   "title": "Fund managers flag AI-linked recession risk and rising asset correlations at Singapore panel",
+   "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": [
+     "Non-blocking: the source says the panel took place 'last week', so the event predates the 2026-11-26 publication. Using the publication date as eventDate is acceptable, but the summary could say the remarks were made the previous week.",
+     "Non-blocking: the correlation series' starting point ('around 5%') refers to the 1960s–1990s period in the source. Adding that period would give more context."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T23:03:11.697625+00:00"
+  },
+  {
+   "title": "Inversionistas en Colombia dicen cuánto debería subir el salario mínimo en 2027",
+   "url": "https://www.valoraanalitik.com/inversionistas-en-colombia-dicen-cuanto-deberia-subir-el-salario-minimo-en-2027/",
+   "gate": "fail",
+   "errors": [
+    "eventDate is in the future or reference date is invalid"
+   ],
+   "decision": "reject"
   }
  ],
  "insight_checks": [
   {
-   "id": "2026-11-25-us-personal-income-up-0-7-in-october-pce-prices-",
+   "id": "2026-11-25-us-pce-inflation-rose-to-3-8-in-october-core-at-",
+   "events": [
+    "fed_hike"
+   ],
+   "rounds": [
+    {
+     "claims": 18,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-26-fund-managers-flag-ai-linked-recession-risk-and-",
    "events": [],
    "rounds": [
     {
      "claims": 32,
-     "unsupported": [],
-     "numbers_missing": []
-    }
-   ],
-   "result": "published"
-  },
-  {
-   "id": "2026-11-26-cibest-capital-drops-davivienda-preferred-from-n",
-   "events": [],
-   "rounds": [
-    {
-     "claims": 17,
-     "unsupported": [],
-     "numbers_missing": []
-    }
-   ],
-   "result": "published"
-  },
-  {
-   "id": "2026-11-26-amcham-colombia-urges-basing-2027-minimum-wage-t",
-   "events": [],
-   "rounds": [
-    {
-     "claims": 17,
      "unsupported": [
       {
-       "text": "The Ministry of Labor carries the decision if no deal is reached by the first deadline, December 15. (ES: El Ministerio del Trabajo carga con la decisión si no hay acuerdo en el primer plazo, el 15 de diciembre.)",
-       "why": "The source says talks may continue after the December 15 deadline. The Government decrees the increase only if differences persist at the end of the process, not when the first deadline is missed."
+       "text": "Multi-asset portfolio holders may feel it first if volatility rises, since Gelernter says their holdings move together more than expected.",
+       "why": "Neither source nor brief says multi-asset holders would be hit first. Gelernter only said portfolios are more correlated and vulnerable than they appear."
+      },
+      {
+       "text": "Los tenedores de portafolios multiactivo podrían sentirlo primero si sube la volatilidad, pues según Gelernter sus posiciones se mueven juntas más de lo esperado.",
+       "why": "Same unsupported ordering claim as the English. Nothing backs these holders being hit 'primero'."
       }
      ],
-     "numbers_missing": [
-      "1,750,905",
-      "1.750.905"
-     ]
+     "numbers_missing": []
     },
     {
      "claims": 14,
@@ -868,20 +1295,18 @@
     }
    ],
    "result": "published"
-  },
-  {
-   "id": "2026-11-26-dollar-opens-at-cop-3-534-in-colombia-in-next-da",
-   "events": [
-    "brent_up"
-   ],
-   "rounds": [
-    {
-     "claims": 16,
-     "unsupported": [],
-     "numbers_missing": []
-    }
-   ],
-   "result": "published"
   }
- ]
+ ],
+ "budget": {
+  "calls": {
+   "draft": 9,
+   "review": 6
+  },
+  "limits": {
+   "draft": 24,
+   "review": 24
+  },
+  "max_publish": 5,
+  "hit": []
+ }
 }

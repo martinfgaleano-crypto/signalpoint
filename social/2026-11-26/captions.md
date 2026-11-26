@@ -46,3 +46,19 @@ Cibest Capital, the capital markets unit of Grupo Cibest, updated its November 2
 
 Not investment advice. #markets #investing #economy
 
+## 2026-11-26-fund-managers-flag-ai-linked-recession-risk-and--es.png
+
+Gestores advierten en Singapur sobre recesión ligada a la IA y mayor correlación entre activos
+
+En la conferencia iConnections Global Alts Asia en Singapur, Sheru Chowdhry, de DSC Meridian Capital, dijo que el auge de la IA podría llevar a una recesión, ya sea por un colapso de la inversión o por pérdida de empleos.
+
+No es asesoría de inversión. #mercados #inversión #economía #Colombia
+
+## 2026-11-26-fund-managers-flag-ai-linked-recession-risk-and--en.png
+
+Fund managers flag AI-linked recession risk and rising asset correlations at Singapore panel
+
+At the iConnections Global Alts Asia conference in Singapore, DSC Meridian Capital's Sheru Chowdhry said the AI boom could lead to a recession, through either an investment collapse or job losses.
+
+Not investment advice. #markets #investing #economy
+

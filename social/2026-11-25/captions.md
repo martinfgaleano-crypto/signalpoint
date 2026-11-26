@@ -30,3 +30,19 @@ BEA reported that personal income rose $201.8 billion (0.7 percent) in October, 
 
 Not investment advice. #markets #investing #economy
 
+## 2026-11-25-us-pce-inflation-rose-to-3-8-in-october-core-at--es.png
+
+La inflación PCE de EE. UU. subió a 3,8 % en octubre; la subyacente fue 3,3 %, según Comercio
+
+El índice de precios del gasto de consumo personal (PCE) subió a una tasa anual de 3,8 % ajustada estacionalmente en octubre, en línea con el consenso de Dow Jones y 0,1 punto porcentual por encima de septiembre.
+
+No es asesoría de inversión. #mercados #inversión #economía #Colombia
+
+## 2026-11-25-us-pce-inflation-rose-to-3-8-in-october-core-at--en.png
+
+US PCE inflation rose to 3.8% in October; core at 3.3%, Commerce Department says
+
+The personal consumption expenditures price index rose at a seasonally adjusted 3.8% annual rate in October, in line with the Dow Jones consensus and 0.1 percentage point higher than September.
+
+Not investment advice. #markets #investing #economy
+

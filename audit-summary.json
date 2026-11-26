@@ -43,10 +43,23 @@
    "published": 1
   },
   "2026-11-26": {
-   "drafted": 6,
-   "rejected_by_gate": 0,
-   "held_by_review": 2,
-   "published": 4
+   "drafted": 9,
+   "rejected_by_gate": 3,
+   "held_by_review": 3,
+   "published": 6,
+   "held_by_publish_limit": 0,
+   "last_run": {
+    "calls": {
+     "draft": 9,
+     "review": 6
+    },
+    "limits": {
+     "draft": 24,
+     "review": 24
+    },
+    "max_publish": 5,
+    "hit": []
+   }
   }
  }
 }
