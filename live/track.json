@@ -1,0 +1,60 @@
+{
+ "open": [
+  {
+   "event": "colo_jump",
+   "asset": "usdcop",
+   "h": 5,
+   "dir": "down",
+   "share": 34,
+   "base": 49,
+   "n": 61,
+   "level": "suggestive",
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "date": "2026-11-23"
+  },
+  {
+   "event": "colo_jump",
+   "asset": "colo",
+   "h": 5,
+   "dir": "up",
+   "share": 64,
+   "base": 52,
+   "n": 72,
+   "level": "suggestive",
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "date": "2026-11-23"
+  },
+  {
+   "event": "colo_jump",
+   "asset": "ec",
+   "h": 5,
+   "dir": "up",
+   "share": 68,
+   "base": 51,
+   "n": 72,
+   "level": "suggestive",
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "date": "2026-11-23"
+  },
+  {
+   "event": "colo_jump",
+   "asset": "brent",
+   "h": 5,
+   "dir": "up",
+   "share": 69,
+   "base": 54,
+   "n": 70,
+   "level": "suggestive",
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "date": "2026-11-23"
+  }
+ ],
+ "closed": [],
+ "summary": {
+  "open": 4,
+  "closed": 0,
+  "held": 0,
+  "expected": null,
+  "updatedAt": "2026-11-26"
+ }
+}

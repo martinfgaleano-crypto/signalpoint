@@ -1,0 +1,1042 @@
+{
+ "generatedAt": "2026-11-23T23:31:53.245931+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "0 (first date: Fri, 20 Nov 2026 21:15:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "0 (first date: Thu, 19 Nov 2026 09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-23 23:30:00)",
+  "Portafolio": "10 (first date: 2026-11-23T18:01:47-05:00)",
+  "Federal Reserve (monetary policy)": "0 (first date: Wed, 18 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "0 (first date: Fri, 20 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "0 (first date: Fri, 20 Nov 2026 13:03:24 -0500)",
+  "US Census Bureau (economic indicators)": "0 (first date: Thu, 19 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "2 (first date: Mon, 23 Nov 2026 21:00:59 GMT)",
+  "CNBC Finance": "5 (first date: Mon, 23 Nov 2026 21:02:17 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-23-ny-fed-s-williams-says-inflation-work-remains-to",
+   "title": "NY Fed's Williams says inflation work remains, to be tackled 'over time'",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html"
+   },
+   "summary": "New York Fed President John Williams said on Monday that policymakers have more work to do on inflation, and that action can unfold over time as the economy keeps growing. He expressed confidence that inflation will move closer to the Fed's 2% target in 2027 and reach it the following year. CNBC reports that markets fully price in a quarter percentage point rate increase at the Dec. 8-9 FOMC meeting, from the current target range of 3.75%-4%. Williams did not explicitly address those expectations.",
+   "actors": [
+    {
+     "name": "Federal Reserve / FOMC",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Williams' remarks signal a measured approach, while CNBC reports that officials differ on how quickly to raise rates."
+    },
+    {
+     "name": "US interest-rate markets",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "A quarter point increase is already fully priced in, per CNBC, so the impact depends on whether the December decision and guidance differ from that."
+    },
+    {
+     "name": "US borrowers",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "A rate increase from the 3.75%-4% range would raise short-term borrowing costs."
+    }
+   ],
+   "watch": [
+    {
+     "text": "FOMC decision at its Dec. 8-9 meeting on the policy rate",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Fed's post-meeting statement for the target range versus the current 3.75%-4%."
+    },
+    {
+     "text": "Wording of the December FOMC statement on future policy path and 'accumulation of more information'",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the language with the late-October statement cited by Williams."
+    },
+    {
+     "text": "Further inflation and labor data released before the next policy decision",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official releases against Williams' view that inflation is running too high and unemployment is edging lower."
+    }
+   ],
+   "unknowns": [
+    "How many rate increases beyond December, and how fast, would Fed officials support?",
+    "How large is the current inflation overshoot versus the 2% target?",
+    "Will dissent or disagreement among FOMC members show up in the December decision?"
+   ],
+   "tags": [
+    "Fed",
+    "John Williams",
+    "inflation",
+    "interest rates",
+    "FOMC",
+    "US"
+   ],
+   "es": {
+    "title": "Williams, de la Fed de Nueva York: aún hay trabajo en inflación, que se abordará «con el tiempo»",
+    "summary": "El presidente de la Fed de Nueva York, John Williams, dijo el lunes que los responsables de política tienen más trabajo por hacer en materia de inflación y que la acción puede desarrollarse con el tiempo mientras la economía sigue creciendo. Expresó confianza en que la inflación se acercará a la meta de 2% de la Fed en 2027 y la alcanzará al año siguiente. Según CNBC, los mercados descuentan por completo un alza de un cuarto de punto porcentual en la reunión del FOMC del 8 y 9 de diciembre, desde el rango objetivo actual de 3,75%-4%. Williams no abordó de forma explícita esas expectativas.",
+    "actors": [
+     {
+      "name": "Reserva Federal / FOMC",
+      "reason": "Los comentarios de Williams apuntan a un enfoque medido, mientras que, según CNBC, los funcionarios difieren sobre qué tan rápido subir las tasas."
+     },
+     {
+      "name": "Mercados de tasas de interés de EE. UU.",
+      "reason": "Un alza de un cuarto de punto ya está plenamente descontada, según CNBC, así que el efecto dependerá de si la decisión y la guía de diciembre difieren de eso."
+     },
+     {
+      "name": "Prestatarios en EE. UU.",
+      "reason": "Un aumento desde el rango de 3,75%-4% encarecería el costo del endeudamiento de corto plazo."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del FOMC sobre la tasa de política en su reunión del 8 y 9 de diciembre",
+      "note": "Revisar el comunicado posterior de la Fed para ver el rango objetivo frente al actual de 3,75%-4%."
+     },
+     {
+      "text": "Redacción del comunicado del FOMC de diciembre sobre la trayectoria futura de la política y la «acumulación de más información»",
+      "note": "Comparar el lenguaje con el comunicado de finales de octubre citado por Williams."
+     },
+     {
+      "text": "Nuevos datos de inflación y empleo publicados antes de la próxima decisión de política",
+      "note": "Contrastar las cifras oficiales con la visión de Williams de que la inflación sigue siendo demasiado alta y el desempleo baja ligeramente."
+     }
+    ],
+    "unknowns": [
+     "¿Cuántas alzas adicionales a la de diciembre, y a qué ritmo, apoyarían los funcionarios de la Fed?",
+     "¿Qué tan grande es el exceso actual de inflación frente a la meta de 2%?",
+     "¿Se reflejarán disensos o desacuerdos entre los miembros del FOMC en la decisión de diciembre?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-23-ecopetrol-s-president-says-no-date-is-set-for-fr",
+   "title": "Ecopetrol's president says no date is set for fracking in Colombia, citing pending environmental rules",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/ecopetrol-ya-tiene-fecha-para-hacer-fracking-en-colombia-esto-respondio-su-presidente/"
+   },
+   "summary": "Ecopetrol president Joaquín Gutiérrez told El Tiempo that the company's technical teams are updating prospectivity and structuring business cases for unconventional reservoirs, using seismic and well data acquired in recent years. He said there is currently no specific date to implement fracking in Colombia and that it is not appropriate to discuss production timelines or definitive investments until the business cases and the environmental, social and risk diagnostics are completed. He added that Colombian law currently has no rule allowing an environmental license for the commercial stage of unconventional reservoirs, because the terms of reference for the environmental impact studies are still pending. The report notes that reactivating fracking through Ecopetrol was a promise of the De la Espriella government.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "undetermined",
+     "reason": "Any unconventional production depends on completing business cases, diagnostics and obtaining environmental licenses that cannot yet be requested."
+    },
+    {
+     "name": "De la Espriella government",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Its promise to reactivate fracking through Ecopetrol faces a missing regulatory framework and no set timeline, according to the company's president."
+    },
+    {
+     "name": "Colombian oil and gas sector",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Prospects for unconventional reservoirs hinge on the issuance of terms of reference for environmental impact studies."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Issuance of the terms of reference for environmental impact studies for fracking with horizontal drilling",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official announcements from the environmental authorities and press coverage."
+    },
+    {
+     "text": "Ecopetrol completing the business cases and environmental, social and risk diagnostics for unconventional reservoirs",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Ecopetrol statements, filings and results presentations."
+    }
+   ],
+   "unknowns": [
+    "When will the terms of reference for the environmental impact studies be issued?",
+    "Will the government act without going through Congress, as the report's image caption suggests?",
+    "What investment levels would the unconventional business cases involve?"
+   ],
+   "tags": [
+    "Ecopetrol",
+    "fracking",
+    "Colombia",
+    "environmental licenses",
+    "unconventional reservoirs"
+   ],
+   "es": {
+    "title": "Presidente de Ecopetrol: no hay fecha para el fracking en Colombia; faltan términos de referencia ambientales",
+    "summary": "El presidente de Ecopetrol, Joaquín Gutiérrez, dijo a El Tiempo que los equipos técnicos de la compañía actualizan la prospectividad y estructuran los casos de negocio para yacimientos no convencionales, con base en información sísmica y de pozos adquirida en los últimos años. Señaló que por ahora no hay una fecha concreta para implementar el fracking en Colombia y que no es adecuado hablar de cronogramas de producción o inversiones definitivas hasta que concluyan los casos de negocio y los diagnósticos ambientales, sociales y de riesgos. Añadió que el ordenamiento jurídico actual no tiene una norma que permita una licencia ambiental para la etapa comercial de yacimientos no convencionales, pues aún está pendiente la expedición de los términos de referencia de los estudios de impacto ambiental. El medio recuerda que reactivar el fracking a través de Ecopetrol fue una promesa del Gobierno De la Espriella.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "Cualquier producción no convencional depende de completar los casos de negocio, los diagnósticos y obtener licencias ambientales que hoy no pueden solicitarse."
+     },
+     {
+      "name": "Gobierno De la Espriella",
+      "reason": "Su promesa de reactivar el fracking mediante Ecopetrol enfrenta la ausencia de un marco regulatorio y de un cronograma, según el presidente de la compañía."
+     },
+     {
+      "name": "Sector de petróleo y gas de Colombia",
+      "reason": "Las perspectivas de los yacimientos no convencionales dependen de la expedición de los términos de referencia de los estudios de impacto ambiental."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Expedición de los términos de referencia de los estudios de impacto ambiental para fracking con perforación horizontal",
+      "note": "Revisar anuncios oficiales de las autoridades ambientales y la cobertura de prensa."
+     },
+     {
+      "text": "Conclusión por parte de Ecopetrol de los casos de negocio y los diagnósticos ambientales, sociales y de riesgos para yacimientos no convencionales",
+      "note": "Revisar comunicados, reportes y presentaciones de resultados de Ecopetrol."
+     }
+    ],
+    "unknowns": [
+     "¿Cuándo se expedirán los términos de referencia de los estudios de impacto ambiental?",
+     "¿Actuará el Gobierno sin pasar por el Congreso, como sugiere el pie de imagen de la nota?",
+     "¿Qué niveles de inversión implicarían los casos de negocio no convencionales?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-23-bessent-softens-opposition-to-huang-s-return-at-",
+   "title": "Bessent softens opposition to Huang's return at Nvidia, CNBC analysis says",
+   "category": "Geopolitics",
+   "region": "US / China",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Economy",
+    "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html"
+   },
+   "summary": "Nvidia's board reappointed Jensen Huang as CEO at President Trump's urging, saying it had received assurances from top U.S. officials and concluded his return was not a national security risk. A CNBC analysis says Treasury Secretary Scott Bessent, who on Nov. 15 had said the board should look outside the company, softened his stance over the weekend and appears to have lost the policy argument to Commerce Secretary Howard Lutnick. Trump said he intervened because the stock market was falling, saying 'I watched our country lose $5 trillion because of a bad election.' The article says Congress will continue investigating potential violations involving Nvidia chips and Megaspeed.",
+   "actors": [
+    {
+     "name": "Nvidia",
+     "ticker": "NVDA",
+     "impact": "undetermined",
+     "reason": "Huang's reinstatement restores its CEO, but the article notes continuing congressional scrutiny of chips and Megaspeed."
+    },
+    {
+     "name": "Treasury Secretary Scott Bessent",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The analysis says he appears to have been unable to sway Trump after voicing a harder line on Huang."
+    },
+    {
+     "name": "Commerce Secretary Howard Lutnick",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The analysis describes him as 'riding high' after the outcome aligned with Trump's wishes."
+    },
+    {
+     "name": "Congress and China hawks",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Bipartisan concern persists and an investigation is expected, but its outcome is not described."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Congressional investigation into Nvidia chips and Megaspeed",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check for hearings, letters or reports from Congress on the Nvidia case."
+    },
+    {
+     "text": "Further Commerce Department steps on export restrictions for U.S. chips",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Commerce announcements and press coverage of new or tightened rules."
+    },
+    {
+     "text": "Any decision on blacklisting Megaspeed",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check for Commerce entity-list actions or official statements about the company."
+    }
+   ],
+   "unknowns": [
+    "Whether China used the relationship to divert Nvidia's advanced AI chips to its military.",
+    "What assurances from top U.S. officials the Nvidia board received.",
+    "Whether Commerce will blacklist Megaspeed."
+   ],
+   "tags": [
+    "Nvidia",
+    "Jensen Huang",
+    "Bessent",
+    "Lutnick",
+    "China",
+    "AI chips"
+   ],
+   "es": {
+    "title": "Bessent suaviza su oposición al regreso de Huang a Nvidia, según análisis de CNBC",
+    "summary": "La junta directiva de Nvidia volvió a nombrar a Jensen Huang como CEO por insistencia del presidente Trump, y dijo haber recibido garantías de altos funcionarios de EE. UU. y haber concluido que su regreso no era un riesgo para la seguridad nacional. Un análisis de CNBC señala que el secretario del Tesoro, Scott Bessent, quien el 15 de noviembre había dicho que la junta debía buscar un líder fuera de la empresa, suavizó su postura durante el fin de semana y parece haber perdido el debate de política frente al secretario de Comercio, Howard Lutnick. Trump dijo que intervino porque el mercado bursátil estaba cayendo, y afirmó: «Vi cómo nuestro país perdía US$5 billones por unas malas elecciones». El artículo indica que el Congreso seguirá investigando posibles violaciones relacionadas con chips de Nvidia y Megaspeed.",
+    "actors": [
+     {
+      "name": "Nvidia",
+      "reason": "La reincorporación de Huang le devuelve a su CEO, pero el artículo señala que el Congreso seguirá examinando los chips y a Megaspeed."
+     },
+     {
+      "name": "Secretario del Tesoro Scott Bessent",
+      "reason": "El análisis indica que parece no haber logrado persuadir a Trump tras plantear una línea más dura frente a Huang."
+     },
+     {
+      "name": "Secretario de Comercio Howard Lutnick",
+      "reason": "El análisis lo describe como alguien en buen momento, pues el desenlace coincidió con los deseos de Trump."
+     },
+     {
+      "name": "Congreso y halcones frente a China",
+      "reason": "Persiste la preocupación bipartidista y se espera una investigación, pero no se describe su resultado."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Investigación del Congreso sobre los chips de Nvidia y Megaspeed",
+      "note": "Revisar audiencias, cartas o informes del Congreso sobre el caso Nvidia."
+     },
+     {
+      "text": "Nuevas medidas del Departamento de Comercio sobre restricciones a la exportación de chips de EE. UU.",
+      "note": "Revisar anuncios de Comercio y cobertura de prensa sobre reglas nuevas o más estrictas."
+     },
+     {
+      "text": "Cualquier decisión de incluir a Megaspeed en una lista negra",
+      "note": "Revisar acciones de Comercio sobre su lista de entidades o declaraciones oficiales sobre la empresa."
+     }
+    ],
+    "unknowns": [
+     "Si China aprovechó la relación para desviar chips avanzados de IA de Nvidia hacia su ejército.",
+     "Qué garantías de altos funcionarios de EE. UU. recibió la junta de Nvidia.",
+     "Si Comercio incluirá a Megaspeed en una lista negra."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-20-msci-colcap-falls-6-24-in-the-week-to-nov-20-and",
+   "title": "MSCI Colcap falls 6.24% in the week to Nov 20 and closes at 2,299.41 points",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-20",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/video-el-indice-msci-colcap-retrocede-624-en-su-acumulado-semanal/"
+   },
+   "summary": "The MSCI Colcap closed at 2,299.41 points on Nov 20, 2026, a weekly change of -6.24%, while the year-to-date change is +11.19%. Mineros fell 19.21%, ISA 15.33% and preferred Grupo Aval 12.61%, while Grupo Sura rose 7.15%, the best performer of the week. Weekly traded volume was COP 1.2 trillion, up 19.80% from COP 1 trillion the previous week. In its technical view, Valora Analitik places weekly resistance at 2,630 points and support at 2,240 points.",
+   "actors": [
+    {
+     "name": "Mineros",
+     "ticker": "MINEROS",
+     "impact": "adverse",
+     "reason": "The stock fell 19.21% over the week, the largest decline among Colcap constituents cited by the source."
+    },
+    {
+     "name": "ISA",
+     "ticker": "ISA",
+     "impact": "adverse",
+     "reason": "The shares dropped 15.33% in the weekly tally, the second-largest decline listed."
+    },
+    {
+     "name": "Grupo Aval (preferred)",
+     "ticker": "PFAVAL",
+     "impact": "adverse",
+     "reason": "The preferred shares lost 12.61% over the week, the third-largest decline listed."
+    },
+    {
+     "name": "Grupo Sura (ordinary)",
+     "ticker": "GRUPOSURA",
+     "impact": "favorable",
+     "reason": "The shares rose 7.15%, the best weekly performance, against a falling index."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the MSCI Colcap holds above the 2,240-point weekly support level cited by Valora Analitik at the next weekly close",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the Nov 27 weekly close published by the Bolsa de Valores de Colombia or Valora Analitik with 2,240."
+    },
+    {
+     "text": "Weekly traded volume in the Colcap relative to the COP 1.2 trillion recorded this week",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Valora Analitik's next weekly summary for accumulated volume and its change."
+    },
+    {
+     "text": "Whether the five biggest decliners (Mineros, ISA, PF Aval, El Cóndor, Cemargos) keep falling or recover",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the next weekly ranking of Colcap gainers and decliners."
+    }
+   ],
+   "unknowns": [
+    "What caused the 6.24% weekly decline is not explained in the text.",
+    "Whether the higher traded volume reflects selling pressure or broader participation is not stated.",
+    "The reasons for the divergent moves of individual stocks, such as Grupo Sura rising, are not given."
+   ],
+   "tags": [
+    "MSCI Colcap",
+    "Bolsa de Colombia",
+    "weekly change",
+    "Mineros",
+    "ISA",
+    "Grupo Sura"
+   ],
+   "es": {
+    "title": "El MSCI Colcap cae 6,24 % en la semana al 20 de noviembre y cierra en 2.299,41 puntos",
+    "summary": "El MSCI Colcap cerró en 2.299,41 puntos el 20 de noviembre de 2026, con una variación semanal de -6,24 %, mientras que en lo corrido del año suma +11,19 %. Mineros cayó 19,21 %, ISA 15,33 % y Grupo Aval preferencial 12,61 %, mientras que Grupo Sura subió 7,15 %, el mejor desempeño de la semana. El volumen semanal negociado fue de $1,2 billones, un 19,80 % más que el billón de la semana anterior. En su análisis técnico, Valora Analitik ubica la resistencia semanal en 2.630 puntos y el soporte en 2.240 puntos.",
+    "actors": [
+     {
+      "name": "Mineros",
+      "reason": "La acción cayó 19,21 % en la semana, la mayor baja entre los componentes del Colcap citados por la fuente."
+     },
+     {
+      "name": "ISA",
+      "reason": "Los títulos descendieron 15,33 % en el balance semanal, la segunda mayor caída del listado."
+     },
+     {
+      "name": "Grupo Aval (preferencial)",
+      "reason": "Las acciones preferenciales perdieron 12,61 % en la semana, la tercera mayor caída del listado."
+     },
+     {
+      "name": "Grupo Sura (ordinaria)",
+      "reason": "Los títulos subieron 7,15 %, el mejor desempeño semanal, frente a un índice a la baja."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el MSCI Colcap se mantiene por encima del soporte semanal de 2.240 puntos citado por Valora Analitik en el próximo cierre semanal",
+      "note": "Comparar el cierre semanal del 27 de noviembre publicado por la Bolsa de Valores de Colombia o Valora Analitik con 2.240."
+     },
+     {
+      "text": "El volumen semanal negociado del Colcap frente a los $1,2 billones registrados esta semana",
+      "note": "Revisar el próximo resumen semanal de Valora Analitik para ver el volumen acumulado y su variación."
+     },
+     {
+      "text": "Si las cinco mayores caídas (Mineros, ISA, PF Aval, El Cóndor, Cemargos) continúan bajando o se recuperan",
+      "note": "Revisar el próximo ranking semanal de alzas y bajas del Colcap."
+     }
+    ],
+    "unknowns": [
+     "El texto no explica qué causó la caída semanal de 6,24 %.",
+     "No se indica si el mayor volumen negociado refleja presión vendedora o mayor participación.",
+     "No se dan las razones de los movimientos dispares entre acciones, como el alza de Grupo Sura."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-23-ecopetrol-reportedly-plans-to-sell-non-core-asse",
+   "title": "Ecopetrol reportedly plans to sell non-core assets to focus on oil and gas, sources say",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/exclusivo-ecopetrol-vendera-activos-no-estrategicos-y-concentrara-su-negocio-en-petroleo-y-gas-estaria-isa-incluida/"
+   },
+   "summary": "Valora Analitik reports, citing sources close to the company, that Ecopetrol's new management plans to sell non-strategic assets and buy hydrocarbon assets over the next four years. The sources did not say which assets would be sold. Whether the sale would include Ecopetrol's 51.4% stake in ISA has not been confirmed. Ecopetrol groups 128 companies, and the sources say news is expected in the short term.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "mixed",
+     "reason": "Asset sales could free capital for oil and gas, but the company would lose diversification and, if ISA is sold, the cash flow from a regulated business."
+    },
+    {
+     "name": "ISA",
+     "ticker": "ISA",
+     "impact": "undetermined",
+     "reason": "The source says a sale of Ecopetrol's stake is possible but unconfirmed, and an analyst expects changes in governance and strategy if it happened."
+    },
+    {
+     "name": "Colombian government (majority shareholder of Ecopetrol)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "An analyst quoted by the source says a sale would bring a one-off inflow of funds, but the government would lose control of a strategic asset and indirect access to ISA dividends."
+    },
+    {
+     "name": "Prospective oil and gas partners",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The sources say Ecopetrol will seek partners for unconventional fields and mature fields, but no terms have been disclosed."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Official Ecopetrol announcements on divestments or hydrocarbon acquisitions, which the sources expect in the short term",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ecopetrol press releases and filings with the Superintendencia Financiera."
+    },
+    {
+     "text": "Any confirmation or denial that the ISA stake is part of the divestment plan",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review company statements and press coverage on ISA and Ecopetrol."
+    },
+    {
+     "text": "Announcement of partners for unconventional projects in the Magdalena Medio and Catatumbo",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Follow ANH and Ecopetrol communications and sector press."
+    }
+   ],
+   "unknowns": [
+    "Which assets would be sold and on what timetable?",
+    "Would the ISA stake be sold in whole, in part, or not at all?",
+    "How would any proceeds be used: debt reduction, investment in oil and gas, or extraordinary dividends?"
+   ],
+   "tags": [
+    "Ecopetrol",
+    "divestment",
+    "ISA",
+    "oil and gas",
+    "Colombia",
+    "unconventionals"
+   ],
+   "es": {
+    "title": "Ecopetrol planea vender activos no estratégicos para enfocarse en petróleo y gas, según fuentes",
+    "summary": "Valora Analitik informa, con base en fuentes cercanas a la compañía, que la nueva administración de Ecopetrol planea vender activos no estratégicos y comprar activos de hidrocarburos durante los próximos cuatro años. Las fuentes no precisaron cuáles activos se venderían. No se ha confirmado si la venta incluiría la participación de 51,4 % de Ecopetrol en ISA. Ecopetrol agrupa 128 compañías y las fuentes indican que habrá noticias en el corto plazo.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "Vender activos podría liberar capital para petróleo y gas, pero la compañía perdería diversificación y, si se vende ISA, el flujo de caja de un negocio regulado."
+     },
+     {
+      "name": "ISA",
+      "reason": "La fuente indica que una venta de la participación de Ecopetrol es posible pero no está confirmada, y un analista prevé cambios de gobierno corporativo y estrategia si ocurriera."
+     },
+     {
+      "name": "Gobierno colombiano (accionista mayoritario de Ecopetrol)",
+      "reason": "Un analista citado por la fuente dice que una venta traería una entrada de recursos única, pero el Gobierno perdería el control de un activo estratégico y el acceso indirecto a los dividendos de ISA."
+     },
+     {
+      "name": "Posibles socios de petróleo y gas",
+      "reason": "Las fuentes dicen que Ecopetrol buscará socios para yacimientos no convencionales y campos maduros, pero no se han revelado condiciones."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Anuncios oficiales de Ecopetrol sobre desinversiones o adquisiciones de hidrocarburos, que las fuentes esperan en el corto plazo",
+      "note": "Revisar comunicados de Ecopetrol y reportes a la Superintendencia Financiera."
+     },
+     {
+      "text": "Cualquier confirmación o desmentido de que la participación en ISA haga parte del plan de desinversión",
+      "note": "Revisar declaraciones de las compañías y cobertura de prensa sobre ISA y Ecopetrol."
+     },
+     {
+      "text": "Anuncio de socios para proyectos no convencionales en el Magdalena Medio y el Catatumbo",
+      "note": "Seguir comunicaciones de la ANH y Ecopetrol, y la prensa del sector."
+     }
+    ],
+    "unknowns": [
+     "¿Qué activos se venderían y en qué plazo?",
+     "¿Se vendería la participación en ISA total, parcialmente o nada?",
+     "¿Cómo se usarían los recursos: reducción de deuda, inversión en petróleo y gas o dividendos extraordinarios?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-23-wall-street-futures-rebound-after-ai-led-selloff",
+   "title": "Wall Street futures rebound after AI-led selloff as markets await Wednesday's PCE data",
+   "category": "Other",
+   "region": "US / Global",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-wall-street-se-recupera-y-centra-atencion-en-publicacion-de-pce-esta-semana-petroleo-cae/"
+   },
+   "summary": "US stock futures rose on Monday after a week that pushed the three main US indexes into correction territory: Nasdaq 100 futures gained 3.5%, S&P 500 futures 2.1% and Dow Jones futures 1.9%. In Asia, Taiwan's weighted index rose 2.4% after a 17.5% weekly drop, while South Korea's Kospi fell 3.3%. Brent futures were little changed at US$88.73 and WTI fell 1.2% to US$82.49 per barrel, with attacks in the Persian Gulf keeping supply concerns high. Spot gold rose 2.8% to US$3,635.33 per ounce, and investors are looking to Wednesday's October PCE inflation release.",
+   "actors": [
+    {
+     "name": "Nvidia",
+     "ticker": "NVDA",
+     "impact": "adverse",
+     "reason": "The source says the stock was also under pressure amid doubts over AI valuations and debt-financed data center investment."
+    },
+    {
+     "name": "Taiwanese and South Korean tech-heavy equities",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Taiwan rebounded 2.4% after its largest weekly fall since 1991, while Korea's Kospi fell 3.3%, so recovery is uneven."
+    },
+    {
+     "name": "Crude oil market",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Attacks on ships and energy infrastructure in the Gulf support prices, while resilient exports and expectations of a growing global surplus offset them."
+    },
+    {
+     "name": "Gold",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Falling tech stocks revived demand for safe-haven assets, lifting spot gold from a 14-month low."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Release of the October PCE price index, the Federal Reserve's preferred inflation measure",
+     "due": "2026-11-25",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the official release and how equity futures and rate expectations react."
+    },
+    {
+     "text": "China's Shanghai, Shenzhen and Beijing exchanges lower minimum margin requirements for leveraged stock purchases to 80% from 100%",
+     "due": "2026-11-30",
+     "status": "open",
+     "kind": "observation",
+     "note": "Confirm in exchange announcements that the change takes effect and watch Chinese market turnover."
+    },
+    {
+     "text": "Whether South Korea activates its market stabilization fund or eases share buyback limits",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Monitor announcements from Korean authorities and Kospi moves."
+    }
+   ],
+   "unknowns": [
+    "Will the Monday rebound in futures hold, or is more selling ahead?",
+    "What will the October PCE reading show, and how will it shape Federal Reserve policy expectations?",
+    "Will attacks in the Persian Gulf disrupt oil supply, or will the expected global surplus prevail?"
+   ],
+   "tags": [
+    "Wall Street",
+    "PCE",
+    "AI valuations",
+    "Oil",
+    "Gold",
+    "Asia markets"
+   ],
+   "es": {
+    "title": "Futuros de Wall Street rebotan tras la caída ligada a la IA; el miércoles se publica el PCE",
+    "summary": "Los futuros de las acciones estadounidenses subieron el lunes tras una semana que llevó a los tres principales índices a territorio de corrección: los del Nasdaq 100 ganaron 3,5 %, los del S&P 500 2,1 % y los del Dow Jones 1,9 %. En Asia, el índice ponderado de Taiwán avanzó 2,4 % tras un desplome semanal de 17,5 %, mientras que el Kospi de Corea del Sur cayó 3,3 %. Los futuros del Brent apenas variaron, en US$88,73, y el WTI bajó 1,2 % hasta US$82,49 por barril, con ataques en el Golfo Pérsico que mantienen las preocupaciones de suministro. El oro al contado subió 2,8 % hasta US$3.635,33 por onza, y los inversores esperan el miércoles el dato de inflación PCE de octubre.",
+    "actors": [
+     {
+      "name": "Nvidia",
+      "reason": "La fuente indica que la acción también estuvo bajo presión por las dudas sobre las valoraciones de la IA y las inversiones en centros de datos financiadas con deuda."
+     },
+     {
+      "name": "Acciones tecnológicas de Taiwán y Corea del Sur",
+      "reason": "Taiwán rebotó 2,4 % tras su mayor caída semanal desde 1991, mientras el Kospi cayó 3,3 %, por lo que la recuperación es desigual."
+     },
+     {
+      "name": "Mercado de crudo",
+      "reason": "Los ataques a buques e infraestructura energética en el Golfo sostienen los precios, mientras las exportaciones resistentes y el superávit mundial esperado los compensan."
+     },
+     {
+      "name": "Oro",
+      "reason": "La caída de las acciones tecnológicas reavivó la demanda de activos refugio y elevó el oro desde un mínimo de 14 meses."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación del índice de precios PCE de octubre, la medida de inflación preferida de la Reserva Federal",
+      "note": "Revisar la publicación oficial y la reacción de los futuros de acciones y de las expectativas de tasas."
+     },
+     {
+      "text": "Las bolsas de Shanghái, Shenzhen y Pekín reducen el margen mínimo para compras de acciones con fondos prestados a 80 % desde 100 %",
+      "note": "Confirmar en los comunicados de las bolsas que el cambio entra en vigor y observar el volumen del mercado chino."
+     },
+     {
+      "text": "Si Corea del Sur activa su fondo de estabilización del mercado o flexibiliza los límites a la recompra de acciones",
+      "note": "Seguir los anuncios de las autoridades coreanas y el comportamiento del Kospi."
+     }
+    ],
+    "unknowns": [
+     "¿Se sostendrá el rebote de los futuros del lunes o vendrán más pérdidas?",
+     "¿Qué mostrará el PCE de octubre y cómo influirá en las expectativas de política de la Reserva Federal?",
+     "¿Los ataques en el Golfo Pérsico alterarán el suministro de petróleo o prevalecerá el superávit mundial esperado?"
+    ]
+   }
+  }
+ ],
+ "rejected": [
+  {
+   "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+   "url": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "¿Ecopetrol ya tiene fecha para hacer fracking en Colombia? Esto respondió su presidente",
+   "url": "https://www.valoraanalitik.com/ecopetrol-ya-tiene-fecha-para-hacer-fracking-en-colombia-esto-respondio-su-presidente/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
+   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Video | El índice MSCI Colcap retrocede 6,24 % en su acumulado semanal",
+   "url": "https://www.valoraanalitik.com/video-el-indice-msci-colcap-retrocede-624-en-su-acumulado-semanal/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Exclusivo | Ecopetrol venderá activos no estratégicos y concentrará su negocio en petróleo y gas: ¿Estaría ISA incluida?",
+   "url": "https://www.valoraanalitik.com/exclusivo-ecopetrol-vendera-activos-no-estrategicos-y-concentrara-su-negocio-en-petroleo-y-gas-estaria-isa-incluida/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Premercado | Wall Street se recupera y centra atención en publicación de PCE esta semana: petróleo cae",
+   "url": "https://www.valoraanalitik.com/premercado-wall-street-se-recupera-y-centra-atencion-en-publicacion-de-pce-esta-semana-petroleo-cae/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+   "url": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "¿Ecopetrol ya tiene fecha para hacer fracking en Colombia? Esto respondió su presidente",
+   "url": "https://www.valoraanalitik.com/ecopetrol-ya-tiene-fecha-para-hacer-fracking-en-colombia-esto-respondio-su-presidente/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
+   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Video | El índice MSCI Colcap retrocede 6,24 % en su acumulado semanal",
+   "url": "https://www.valoraanalitik.com/video-el-indice-msci-colcap-retrocede-624-en-su-acumulado-semanal/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Exclusivo | Ecopetrol venderá activos no estratégicos y concentrará su negocio en petróleo y gas: ¿Estaría ISA incluida?",
+   "url": "https://www.valoraanalitik.com/exclusivo-ecopetrol-vendera-activos-no-estrategicos-y-concentrara-su-negocio-en-petroleo-y-gas-estaria-isa-incluida/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Premercado | Wall Street se recupera y centra atención en publicación de PCE esta semana: petróleo cae",
+   "url": "https://www.valoraanalitik.com/premercado-wall-street-se-recupera-y-centra-atencion-en-publicacion-de-pce-esta-semana-petroleo-cae/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  }
+ ],
+ "candidates": {
+  "from_feeds": 67,
+  "after_filter": 18,
+  "sample": [
+   "Fed's John Williams indicates higher interest rates likely 'over time' to address inflatio",
+   "¿Ecopetrol ya tiene fecha para hacer fracking en Colombia? Esto respondió su presidente",
+   "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
+   "Video | El índice MSCI Colcap retrocede 6,24 % en su acumulado semanal",
+   "Exclusivo | Ecopetrol venderá activos no estratégicos y concentrará su negocio en petróleo",
+   "Premercado | Wall Street se recupera y centra atención en publicación de PCE esta semana: ",
+   "Banqueros ven ajuste fiscal como condición para que baje la tasa de interés en 2027 y se r",
+   "Nueva opción para ahorrar en dólares y tener rentabilidad de hasta 6 %; así son las recomp"
+  ],
+  "dropped": {
+   "seen": 0,
+   "skip": 1,
+   "no_topic": 49
+  },
+  "raw_sample": [
+   [
+    "B",
+    0,
+    "Final de la Copa Sudamericana movió US$60 millones en Barranquilla: 91"
+   ],
+   [
+    "B",
+    1,
+    "Empresa colombiana que automatiza la compra y venta de viviendas se ex"
+   ],
+   [
+    "B",
+    0,
+    "Aerocivil anuncia estudio en Valle del Cauca para producir combustible"
+   ],
+   [
+    "B",
+    0,
+    "Colombia puso límites a las consultas médicas por WhatsApp: qué se pue"
+   ],
+   [
+    "B",
+    0,
+    "Gobierno De la Espriella relanzó función que ayudará a trabajadores en"
+   ],
+   [
+    "B",
+    0,
+    "Tren del Caribe revive y busca conectar más departamentos: La Guajira "
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-23-ny-fed-s-williams-says-inflation-work-remains-to",
+   "title": "NY Fed's Williams says inflation work remains, to be tackled 'over time'",
+   "url": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'US borrowers' (impact: adverse) is not supported by the source. The source never mentions borrowers or borrowing costs. The claim that a hike 'would raise short-term borrowing costs' is the drafter's own inference about a rate increase that has not happened. Remove this actor or set its impact to 'undetermined' with a source-based reason. The same applies to the ES 'Prestatarios en EE. UU.' entry.",
+     "Third watch item: the note attributes to Williams a view that 'unemployment is edging lower'. In the source, 'unemployment edges lower' sits inside his outlook that inflation will subside in 2027 even as growth stays robust, so it reads as a forecast condition rather than a description of current data. Rephrase to match the source, for example 'inflation has continued to run too high' and 'the economy has remained strong', in both EN and ES."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-23-ecopetrol-s-president-says-no-date-is-set-for-fr",
+   "title": "Ecopetrol's president says no date is set for fracking in Colombia, citing pending environmental rules",
+   "url": "https://www.valoraanalitik.com/ecopetrol-ya-tiene-fecha-para-hacer-fracking-en-colombia-esto-respondio-su-presidente/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "The actor 'De la Espriella government' is given an 'adverse' impact without support in the source. The source reports only the CEO's statements that there is no date and that the terms of reference are pending. It does not say the government is harmed. Issuing those terms of reference is itself a government or regulatory task, and the source's image caption even suggests the government could reactivate fracking without Congress. The impact should be 'undetermined'.",
+     "The summary says production timelines and investments should not be discussed until the environmental, social and risk diagnostics are 'completed' (ES: 'concluyan'). The source says only until those diagnostics are 'adelantados' (carried out or advanced). 'Completed' applies only to the business-case structuring.",
+     "The Ecopetrol actor reason says environmental licenses 'cannot yet be requested' (ES: 'no pueden solicitarse'). The source says no current rule allows a license to be 'obtained' for the commercial stage. This is a slight overstatement.",
+     "The government actor reason refers to a 'missing regulatory framework' (ES: 'ausencia de un marco regulatorio'). The source specifies only that the terms of reference for the environmental impact studies are pending, so the reason generalizes beyond the source."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-23-bessent-softens-opposition-to-huang-s-return-at-",
+   "title": "Bessent softens opposition to Huang's return at Nvidia, CNBC analysis says",
+   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-23T23:35:03.259480+00:00"
+  },
+  {
+   "id": "2026-11-20-msci-colcap-falls-6-24-in-the-week-to-nov-20-and",
+   "title": "MSCI Colcap falls 6.24% in the week to Nov 20 and closes at 2,299.41 points",
+   "url": "https://www.valoraanalitik.com/video-el-indice-msci-colcap-retrocede-624-en-su-acumulado-semanal/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Minor, non-blocking: the category 'Macro data' fits poorly, since this is a weekly equity-index and stock-performance report. 'Markets' or 'Equities' would be more accurate.",
+     "Minor, non-blocking: the summary omits the source's technical view that the index keeps an upward (bullish) trend on the weekly timeframe. Including it would give readers the context for the 2,630 resistance and 2,240 support levels."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-23T23:35:22.008476+00:00"
+  },
+  {
+   "id": "2026-11-23-ecopetrol-reportedly-plans-to-sell-non-core-asse",
+   "title": "Ecopetrol reportedly plans to sell non-core assets to focus on oil and gas, sources say",
+   "url": "https://www.valoraanalitik.com/exclusivo-ecopetrol-vendera-activos-no-estrategicos-y-concentrara-su-negocio-en-petroleo-y-gas-estaria-isa-incluida/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": [
+     "Minor: the Ecopetrol actor reason ('free capital for oil and gas', 'lose diversification') presents analyst Omar Suárez's views as general fact. In the source, the loss of diversification is his assessment of an ISA sale specifically. Consider attributing it to the analyst in both the EN and ES versions."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-23T23:35:42.075824+00:00"
+  },
+  {
+   "id": "2026-11-23-wall-street-futures-rebound-after-ai-led-selloff",
+   "title": "Wall Street futures rebound after AI-led selloff as markets await Wednesday's PCE data",
+   "url": "https://www.valoraanalitik.com/premercado-wall-street-se-recupera-y-centra-atencion-en-publicacion-de-pce-esta-semana-petroleo-cae/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Nvidia actor (EN and ES): the reason says 'the source says' Nvidia was under pressure because of doubts over AI valuations and debt-financed data center investment. The source only says 'Nvidia también estuvo bajo presión' and gives no cause for it. The AI-valuation and debt-financed data center doubts appear in the Asia-Pacific section about regional confidence, not about Nvidia. The causal attribution is unsupported. Limit the reason to the source's statement that Nvidia was under pressure during the selloff.",
+     "Minor: category 'Other' undersells the content. The brief covers US equity futures, Fed-preferred inflation data (PCE), oil and gold, so a markets category would fit better."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-23-bessent-softens-opposition-to-huang-s-return-at-",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 13,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-20-msci-colcap-falls-6-24-in-the-week-to-nov-20-and",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 17,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-23-ecopetrol-reportedly-plans-to-sell-non-core-asse",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 15,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 16,
+     "unsupported": [
+      {
+       "text": "The source gives no data on rates, fees or credit quality. / La fuente no da datos sobre tasas, comisiones ni calidad crediticia.",
+       "why": "Contradicted on rates. The source gives interest rate discounts: 30% on Más Puntos supermarket and pharmacy purchases and 20% on Más Destinos phone purchases. The brief also notes 'some interest rate discounts'."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 16,
+     "unsupported": [
+      {
+       "text": "Current cardholders, about 160,000, and the bank's sales staff feel it first, since both must adjust to the new range. / Los tarjetahabientes actuales, cerca de 160.000, y la fuerza de ventas del banco lo sienten primero, pues ambos deben adaptarse al nuevo portafolio.",
+       "why": "The source does not say what happens to existing cardholders, and the brief lists this as an unknown. The claim that they must adjust and feel it first is not backed."
+      }
+     ],
+     "numbers_missing": []
+    }
+   ],
+   "result": "rejected"
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 22,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "events": [
+    "fed_meeting"
+   ],
+   "rounds": [
+    {
+     "claims": 26,
+     "unsupported": [
+      {
+       "text": "Rate-sensitive assets in the US usually react before others.",
+       "why": "This is a general claim about market behavior that the source, brief and historical evidence do not back. It is stated as fact, not as a conditional mechanism."
+      },
+      {
+       "text": "Los activos sensibles a las tasas en EE. UU. suelen reaccionar antes que otros.",
+       "why": "Spanish version of the same claim. Nothing in the source, brief or historical evidence backs it."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 24,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 15,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  }
+ ]
+}

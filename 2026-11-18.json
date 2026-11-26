@@ -1,0 +1,2229 @@
+{
+ "generatedAt": "2026-11-18T22:33:30.750221+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "1 (first date: Wed, 18 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "2 (first date: Wed, 18 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-18 22:20:00)",
+  "Portafolio": "10 (first date: 2026-11-18T16:16:30-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Wed, 18 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "1 (first date: Wed, 18 Nov 2026 10:00:00 EST)",
+  "US Securities and Exchange Commission": "0 (first date: Fri, 13 Nov 2026 11:57:00 -0500)",
+  "US Census Bureau (economic indicators)": "3 (first date: Wed, 18 Nov 2026 08:30:00 -0500)",
+  "CNBC Economy": "6 (first date: Wed, 18 Nov 2026 14:09:26 GMT)",
+  "CNBC Finance": "16 (first date: Wed, 18 Nov 2026 19:41:59 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "title": "Fed releases minutes of the October 27-28, 2026 FOMC meeting",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm"
+   },
+   "summary": "The Federal Reserve released the minutes of the Federal Open Market Committee meeting held on October 27-28, 2026, at 2:00 p.m. EST on November 18, 2026. The Fed says minutes for regularly scheduled meetings are generally published three weeks after the policy decision. It also says the descriptions of economic and financial conditions are based solely on information available to the Committee at the time of the meeting. The press release text provided does not include the content of the minutes.",
+   "actors": [
+    {
+     "name": "Federal Open Market Committee",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes document the Committee's October meeting, but the release text gives no details on discussions or decisions."
+    },
+    {
+     "name": "US financial market participants",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes may inform views on the policy outlook, but their content is not in the text provided."
+    },
+    {
+     "name": "Analysts of Fed policy",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They can review the full HTML or PDF minutes, which the release links, to assess the Committee's discussion."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Review of the full minutes (HTML or PDF) for the Committee's assessment of economic conditions and policy",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Read the minutes linked from the Federal Reserve press release and compare them with the October policy statement."
+    },
+    {
+     "text": "Public comments by Fed officials after the minutes release",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official Federal Reserve speeches and statements published after November 18, 2026."
+    }
+   ],
+   "unknowns": [
+    "What did the minutes say about the policy outlook and the Committee's views on the economy?",
+    "Did participants express differing views at the October 27-28 meeting?",
+    "How did financial markets react to the release?"
+   ],
+   "tags": [
+    "Fed",
+    "FOMC",
+    "minutes",
+    "monetary policy",
+    "United States"
+   ],
+   "es": {
+    "title": "La Fed publica las actas de la reunión del FOMC del 27 y 28 de octubre de 2026",
+    "summary": "La Reserva Federal publicó, a las 2:00 p. m. (hora del este) del 18 de noviembre de 2026, las actas de la reunión del Comité Federal de Mercado Abierto realizada el 27 y 28 de octubre de 2026. La Fed indica que las actas de las reuniones ordinarias se publican, por lo general, tres semanas después de la decisión de política. También señala que las descripciones de las condiciones económicas y financieras se basan únicamente en la información disponible para el Comité en el momento de la reunión. El texto del comunicado no incluye el contenido de las actas.",
+    "actors": [
+     {
+      "name": "Comité Federal de Mercado Abierto",
+      "reason": "Las actas documentan la reunión de octubre del Comité, pero el comunicado no da detalles sobre las discusiones ni las decisiones."
+     },
+     {
+      "name": "Participantes de los mercados financieros de EE. UU.",
+      "reason": "Las actas pueden orientar la visión sobre la política monetaria, pero su contenido no está en el texto disponible."
+     },
+     {
+      "name": "Analistas de la política de la Fed",
+      "reason": "Pueden revisar las actas completas en HTML o PDF, enlazadas en el comunicado, para evaluar la discusión del Comité."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Revisión de las actas completas (HTML o PDF) para conocer la evaluación del Comité sobre la economía y la política",
+      "note": "Leer las actas enlazadas en el comunicado de la Reserva Federal y compararlas con el comunicado de política de octubre."
+     },
+     {
+      "text": "Comentarios públicos de funcionarios de la Fed después de la publicación de las actas",
+      "note": "Consultar los discursos y declaraciones oficiales de la Reserva Federal publicados después del 18 de noviembre de 2026."
+     }
+    ],
+    "unknowns": [
+     "¿Qué dijeron las actas sobre la perspectiva de política y la visión del Comité sobre la economía?",
+     "¿Los participantes expresaron opiniones divergentes en la reunión del 27 y 28 de octubre?",
+     "¿Cómo reaccionaron los mercados financieros a la publicación?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-october-27-28-2026-fomc-",
+   "title": "Fed releases minutes of October 27-28, 2026 FOMC meeting; notice gives no policy details",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve (monetary policy)",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm"
+   },
+   "summary": "The Federal Reserve released the minutes of the Federal Open Market Committee meeting held on October 27-28, 2026, on Wednesday, November 18, 2026. The Fed says minutes of regularly scheduled meetings are generally published three weeks after the policy decision. It also says the descriptions of economic and financial conditions are based solely on information available to the Committee at the time of the meeting. The release notice itself does not include the content of the minutes, so no policy details are available from this text.",
+   "actors": [
+    {
+     "name": "Federal Open Market Committee",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes document the Committee's October meeting, but the notice does not describe any discussion or decision."
+    },
+    {
+     "name": "US financial market participants",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The minutes may inform views on the Fed's outlook, but the notice gives no content to assess the direction of any effect."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Read the full minutes (HTML/PDF) for the Committee's assessment of economic and financial conditions",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the minutes linked from the Federal Reserve Board press release page."
+    },
+    {
+     "text": "Look for subsequent Fed communications that refer to the October 27-28 discussion",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review later Federal Reserve releases and speeches for references to the minutes."
+    }
+   ],
+   "unknowns": [
+    "What policy decision and vote did the Committee record at the October 27-28 meeting?",
+    "How did participants describe the economic outlook and risks in the minutes?",
+    "Did the minutes show differences of view among participants?"
+   ],
+   "tags": [
+    "Fed",
+    "FOMC",
+    "minutes",
+    "monetary policy",
+    "United States"
+   ],
+   "es": {
+    "title": "La Fed publica las actas del FOMC del 27 y 28 de octubre de 2026; el aviso no da detalles",
+    "summary": "La Reserva Federal publicó el miércoles 18 de noviembre de 2026 las actas de la reunión del Comité Federal de Mercado Abierto celebrada el 27 y 28 de octubre de 2026. La Fed indica que las actas de las reuniones ordinarias se publican, por lo general, tres semanas después de la decisión de política. Añade que las descripciones de las condiciones económicas y financieras se basan únicamente en la información disponible para el Comité en el momento de la reunión. El aviso no incluye el contenido de las actas, por lo que este texto no permite conocer detalles de política.",
+    "actors": [
+     {
+      "name": "Comité Federal de Mercado Abierto",
+      "reason": "Las actas documentan la reunión de octubre del Comité, pero el aviso no describe ninguna discusión ni decisión."
+     },
+     {
+      "name": "Participantes de los mercados financieros de EE. UU.",
+      "reason": "Las actas pueden informar las expectativas sobre la perspectiva de la Fed, pero el aviso no da contenido para evaluar la dirección de algún efecto."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Leer las actas completas (HTML/PDF) para conocer la evaluación del Comité sobre las condiciones económicas y financieras",
+      "note": "Consultar las actas enlazadas en la página del comunicado de la Junta de la Reserva Federal."
+     },
+     {
+      "text": "Buscar comunicaciones posteriores de la Fed que se refieran a la discusión del 27 y 28 de octubre",
+      "note": "Revisar comunicados y discursos posteriores de la Reserva Federal en busca de referencias a las actas."
+     }
+    ],
+    "unknowns": [
+     "¿Qué decisión de política y qué votación registró el Comité en la reunión del 27 y 28 de octubre?",
+     "¿Cómo describieron los participantes la perspectiva económica y los riesgos en las actas?",
+     "¿Las actas muestran diferencias de opinión entre los participantes?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-global-markets-mixed-ahead-of-us-open-as-nvidia-",
+   "title": "Global markets mixed ahead of US open as Nvidia results and lower oil weigh on sentiment",
+   "category": "Other",
+   "region": "US / Global",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-bolsas-globales-operan-mixtos-mientras-inversionistas-evaluan-resultados-de-nvidia-y-caida-del-petroleo/"
+   },
+   "summary": "Valora Analitik reports mixed global markets on Nov. 18, with investors weighing Nvidia's results, AI valuations and the outlook for Federal Reserve policy. On Tuesday the S&P 500 fell 1.03% to 7,340.53, the Dow Jones fell 1.64% to 50,759.42 and the Nasdaq Composite fell 0.74% to 24,328.38; S&P 500 futures were up about 0.5% before the open. Brent was down about 1.4% at US$91.82 per barrel and WTI down about 2.2% at US$84.16, pressured by higher US crude and fuel inventories, while US-Iran tensions and Strait of Hormuz shipping disruptions keep a risk premium.",
+   "actors": [
+    {
+     "name": "Nvidia",
+     "ticker": "NVDA",
+     "impact": "mixed",
+     "reason": "Results and a sales projection beat market estimates, but the shares were volatile amid questions about its future leadership and AI valuations."
+    },
+    {
+     "name": "European semiconductor stocks (ASML)",
+     "ticker": "ASML",
+     "impact": "favorable",
+     "reason": "The European tech sector rose 1.2% in early trading, and ASML gained about 1.8%, driven by chip-related companies."
+    },
+    {
+     "name": "Oil market participants",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Higher US inventories pushed Brent and WTI lower, while US-Iran tensions and Hormuz disruptions limit the declines."
+    },
+    {
+     "name": "Anthropic",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The expected public listing, which could value it at up to US$1.4 trillion, is seen as a gauge of investor appetite for new AI companies."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Release of the Federal Reserve's October meeting minutes and any signals on the interest rate path",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the minutes published by the Federal Reserve and the market reaction in rate expectations and equity indexes."
+    },
+    {
+     "text": "Whether S&P 500 futures' roughly 0.5% gain carries into the US cash session after Tuesday's losses",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the S&P 500 close on Nov. 18 with Tuesday's close of 7,340.53."
+    },
+    {
+     "text": "Direction of Brent and WTI as inventory data and US-Iran and Hormuz developments evolve",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Track Brent and WTI quotes against the US$91.82 and US$84.16 levels cited, and new US inventory reports."
+    }
+   ],
+   "unknowns": [
+    "Will Nvidia's share volatility fade, or do AI valuation concerns persist?",
+    "Will the Fed minutes show how much weight officials give to persistent inflation pressures?",
+    "Will US-Iran tensions and Hormuz disruptions keep supporting oil prices despite higher inventories?"
+   ],
+   "tags": [
+    "Nvidia",
+    "AI valuations",
+    "Wall Street",
+    "Oil",
+    "Federal Reserve",
+    "Hormuz"
+   ],
+   "es": {
+    "title": "Bolsas globales operan mixtas mientras se evalúan resultados de Nvidia y la caída del petróleo",
+    "summary": "Valora Analitik reporta mercados globales mixtos este 18 de noviembre, con inversionistas atentos a los resultados de Nvidia, las valoraciones de inteligencia artificial y la política de la Reserva Federal. El martes el S&P 500 cayó 1,03 %, hasta 7.340,53 puntos; el Dow Jones perdió 1,64 %, hasta 50.759,42 unidades, y el Nasdaq Composite retrocedió 0,74 %, hasta 24.328,38 puntos; los futuros del S&P 500 avanzaban cerca de 0,5 % antes de la apertura. El Brent caía alrededor de 1,4 %, hasta US$91,82 por barril, y el WTI cerca de 2,2 %, hasta US$84,16, presionados por mayores inventarios de crudo y combustibles en EE. UU., mientras las tensiones entre EE. UU. e Irán y las interrupciones en el estrecho de Ormuz mantienen una prima de riesgo.",
+    "actors": [
+     {
+      "name": "Nvidia",
+      "reason": "Los resultados y la proyección de ventas superaron las estimaciones del mercado, pero sus acciones fueron volátiles por dudas sobre su liderazgo futuro y las valoraciones de la IA."
+     },
+     {
+      "name": "Acciones europeas de semiconductores (ASML)",
+      "reason": "El sector tecnológico europeo avanzó 1,2 % en las primeras operaciones y ASML subió cerca de 1,8 %, impulsado por compañías de chips."
+     },
+     {
+      "name": "Participantes del mercado petrolero",
+      "reason": "Los mayores inventarios en EE. UU. presionaron a la baja al Brent y al WTI, mientras las tensiones entre EE. UU. e Irán y las interrupciones en Ormuz limitan las caídas."
+     },
+     {
+      "name": "Anthropic",
+      "reason": "Su posible salida a bolsa, que podría valorarla hasta en US$1,4 billones, se ve como referencia del apetito por nuevas empresas de IA."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de las minutas de la reunión de octubre de la Reserva Federal y señales sobre la trayectoria de las tasas",
+      "note": "Revisar las minutas publicadas por la Reserva Federal y la reacción del mercado en expectativas de tasas e índices bursátiles."
+     },
+     {
+      "text": "Si el avance de cerca de 0,5 % de los futuros del S&P 500 se mantiene en la sesión regular tras las pérdidas del martes",
+      "note": "Comparar el cierre del S&P 500 del 18 de noviembre con el del martes, de 7.340,53 puntos."
+     },
+     {
+      "text": "Rumbo del Brent y el WTI según los datos de inventarios y la evolución de las tensiones entre EE. UU. e Irán y Ormuz",
+      "note": "Seguir las cotizaciones del Brent y el WTI frente a los niveles de US$91,82 y US$84,16 citados, y los nuevos reportes de inventarios en EE. UU."
+     }
+    ],
+    "unknowns": [
+     "¿Se disipará la volatilidad de las acciones de Nvidia o persistirán las preocupaciones por las valoraciones de IA?",
+     "¿Las minutas de la Fed mostrarán cuánto peso dan los funcionarios a las presiones inflacionarias persistentes?",
+     "¿Las tensiones entre EE. UU. e Irán y las interrupciones en Ormuz seguirán sosteniendo el petróleo pese a los mayores inventarios?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-colombia-s-imports-rose-33-7-y-y-in-september-to",
+   "title": "Colombia's imports rose 33.7% y/y in September to US$8,192.8 million CIF, DANE data show",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/importaciones-a-colombia-aumentaron-mas-de-30-en-septiembre-llegaron-a-us8-1928-millones-cif/"
+   },
+   "summary": "Colombia's imports reached US$8,192.8 million CIF in September 2026, up 33.7% from US$6,128.8 million in September 2025, based on DIAN declarations processed by DANE. Manufactures, at 72.8% of the total, rose 28.6% to US$5,963.2 million CIF, while fuels and extractive products rose 91.2% to US$1,037.1 million CIF. The September trade deficit was US$2,268.2 million FOB, against US$1,135.1 million FOB a year earlier. From January to September, imports totaled US$61,939.1 million CIF, up 19.2%, and the trade deficit was US$16,134.9 million FOB.",
+   "actors": [
+    {
+     "name": "Colombian importers of machinery and transport equipment",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Purchases of machinery and transport equipment rose 41% in September, which points to strong import demand in the group with the largest weight."
+    },
+    {
+     "name": "Importers of natural gas and fuels",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Natural gas purchases rose 350.9% and oil and derivatives rose 46.3%, but the source does not explain the cost or supply effects for buyers."
+    },
+    {
+     "name": "Colombia's external accounts",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The monthly trade deficit widened to US$2,268.2 million FOB from US$1,135.1 million FOB a year earlier, as imports grew faster than exports."
+    },
+    {
+     "name": "Food and beverage importers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Agricultural, food and beverage imports rose 30.5% to US$1,187.2 million CIF, driven by food products and live animals, but the source gives no margin or price data."
+    }
+   ],
+   "watch": [
+    {
+     "text": "DANE's next monthly imports and trade balance release, to see whether import growth stays above 30% year on year",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the next DANE imports bulletin with the September figure of US$8,192.8 million CIF."
+    },
+    {
+     "text": "Evolution of natural gas and fuel imports in the next releases",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the fuels and extractive industries group in the next DANE bulletin, where September showed a 91.2% rise."
+    },
+    {
+     "text": "Cumulative January–September trade deficit as new months are added",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the cumulative FOB deficit of US$16,134.9 million with later DANE releases."
+    }
+   ],
+   "unknowns": [
+    "Whether the jump in natural gas imports reflects a supply shortfall, higher prices or higher volumes.",
+    "Whether the rise in imports of machinery and transport equipment is a lasting trend or a one-off.",
+    "What role the exchange rate or international prices played in the increase, which the source does not address."
+   ],
+   "tags": [
+    "Colombia",
+    "imports",
+    "DANE",
+    "trade balance",
+    "deficit",
+    "natural gas"
+   ],
+   "es": {
+    "title": "Importaciones de Colombia subieron 33,7 % anual en septiembre y llegaron a US$8.192,8 millones CIF",
+    "summary": "Las importaciones de Colombia sumaron US$8.192,8 millones CIF en septiembre de 2026, un 33,7 % más que los US$6.128,8 millones de septiembre de 2025, según declaraciones ante la DIAN procesadas por el DANE. Las manufacturas, con el 72,8 % del total, crecieron 28,6 % hasta US$5.963,2 millones CIF, mientras que los combustibles y productos de industrias extractivas aumentaron 91,2 % hasta US$1.037,1 millones CIF. El déficit comercial de septiembre fue de US$2.268,2 millones FOB, frente a US$1.135,1 millones FOB un año antes. Entre enero y septiembre, las importaciones sumaron US$61.939,1 millones CIF, un 19,2 % más, y el déficit comercial fue de US$16.134,9 millones FOB.",
+    "actors": [
+     {
+      "name": "Importadores colombianos de maquinaria y equipo de transporte",
+      "reason": "Las compras de maquinaria y equipo de transporte subieron 41 % en septiembre, lo que indica una demanda importadora fuerte en el grupo de mayor peso."
+     },
+     {
+      "name": "Importadores de gas natural y combustibles",
+      "reason": "Las compras de gas natural aumentaron 350,9 % y las de petróleo y derivados 46,3 %, pero la fuente no explica los efectos en costos ni en abastecimiento para los compradores."
+     },
+     {
+      "name": "Cuentas externas de Colombia",
+      "reason": "El déficit comercial mensual se amplió a US$2.268,2 millones FOB desde US$1.135,1 millones FOB un año antes, pues las importaciones crecieron más rápido que las exportaciones."
+     },
+     {
+      "name": "Importadores de alimentos y bebidas",
+      "reason": "Las importaciones agropecuarias, de alimentos y bebidas subieron 30,5 % hasta US$1.187,2 millones CIF, impulsadas por productos alimenticios y animales vivos, pero la fuente no da datos de precios ni márgenes."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próxima publicación mensual del DANE sobre importaciones y balanza comercial, para ver si el crecimiento anual de las importaciones se mantiene por encima de 30 %",
+      "note": "Comparar el próximo boletín de importaciones del DANE con la cifra de septiembre de US$8.192,8 millones CIF."
+     },
+     {
+      "text": "Evolución de las importaciones de gas natural y combustibles en las próximas publicaciones",
+      "note": "Revisar el grupo de combustibles e industrias extractivas en el próximo boletín del DANE, donde septiembre mostró un alza de 91,2 %."
+     },
+     {
+      "text": "Déficit comercial acumulado de enero a septiembre a medida que se sumen nuevos meses",
+      "note": "Comparar el déficit FOB acumulado de US$16.134,9 millones con las siguientes publicaciones del DANE."
+     }
+    ],
+    "unknowns": [
+     "Si el salto en las importaciones de gas natural refleja falta de oferta, mayores precios o mayores volúmenes.",
+     "Si el aumento de las importaciones de maquinaria y equipo de transporte es una tendencia duradera o un hecho puntual.",
+     "Qué papel tuvieron la tasa de cambio o los precios internacionales en el aumento, algo que la fuente no aborda."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-msci-colcap-falls-2-17-to-2-399-23-on-nov-17-eco",
+   "title": "MSCI Colcap falls 2.17% to 2,399.23 on Nov 17; Ecopetrol down 3.71%",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-17",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/msci-colcap-profundiza-su-caida/"
+   },
+   "summary": "The MSCI Colcap of the Bolsa de Colombia closed the November 17, 2026 session at 2,399.23 points, down 2.17%, with a year-to-date gain of 16.02%. Equity trading volume was $161,146 million, up 8.60% from the prior session's $148,358 million. The largest decliners were Cementos Argos preferred (-8.54%), ETB (-6.36%) and Grupo Aval preferred (-5.80%), while Davivienda preferred rose 1.40%. Valora Analitik's technical view describes a bearish bias, with first support at 2,420 points and resistance at 2,550.",
+   "actors": [
+    {
+     "name": "Ecopetrol",
+     "ticker": "EC",
+     "impact": "adverse",
+     "reason": "The most traded stock of the session fell 3.71%, adding to the index's decline."
+    },
+    {
+     "name": "Grupo Cibest (preferred and ordinary shares)",
+     "ticker": "CIB",
+     "impact": "adverse",
+     "reason": "The preferred shares fell 2.43% and the ordinary shares 3.53% on high trading volume."
+    },
+    {
+     "name": "Cementos Argos preferred",
+     "ticker": "PFCEMARGOS",
+     "impact": "adverse",
+     "reason": "It was the biggest decliner in the index, down 8.54%."
+    },
+    {
+     "name": "Davivienda preferred",
+     "ticker": "PFDAVVNDA",
+     "impact": "favorable",
+     "reason": "It gained 1.40% and was the best performer of the session."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the MSCI Colcap recovers or extends losses relative to the 2,420-point support level cited by Valora Analitik",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare subsequent daily closes of the index published by the Bolsa de Colombia or Valora Analitik."
+    },
+    {
+     "text": "Whether trading volume stays above the $161,146 million recorded on Nov 17",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review daily equity volume figures in Valora Analitik's market closing reports."
+    },
+    {
+     "text": "Price behavior of Ecopetrol and Grupo Cibest shares after the decline",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check next sessions' closing variations for Ecopetrol, Cibest and PFCibest."
+    }
+   ],
+   "unknowns": [
+    "What drove the 2.17% fall; the source gives no explanation.",
+    "The index closed at 2,399.23, below the 2,420 'first support' cited, so how the technical levels apply is unclear.",
+    "Whether the declines in Cementos Argos, ETB and Grupo Aval were due to company-specific news."
+   ],
+   "tags": [
+    "MSCI Colcap",
+    "Bolsa de Colombia",
+    "Ecopetrol",
+    "Cibest",
+    "Colombian equities",
+    "Market close"
+   ],
+   "es": {
+    "title": "MSCI Colcap cae 2,17 % a 2.399,23 puntos el 17 de noviembre; Ecopetrol baja 3,71 %",
+    "summary": "El índice MSCI Colcap de la Bolsa de Colombia cerró la jornada del 17 de noviembre de 2026 en 2.399,23 puntos, con una caída de 2,17 % y un acumulado anual de 16,02 %. El volumen del mercado de acciones fue de $161.146 millones, 8,60 % más que los $148.358 millones de la sesión anterior. Las mayores caídas fueron las de Cementos Argos preferencial (-8,54 %), ETB (-6,36 %) y Grupo Aval preferencial (-5,80 %), mientras que Davivienda preferencial subió 1,40 %. La perspectiva técnica de Valora Analitik describe un desplazamiento bajista, con un primer soporte en 2.420 puntos y una resistencia en 2.550.",
+    "actors": [
+     {
+      "name": "Ecopetrol",
+      "reason": "La acción más negociada de la jornada cayó 3,71 % y contribuyó a la baja del índice."
+     },
+     {
+      "name": "Grupo Cibest (acciones preferenciales y ordinarias)",
+      "reason": "La preferencial cayó 2,43 % y la ordinaria 3,53 %, con un alto volumen de negociación."
+     },
+     {
+      "name": "Cementos Argos preferencial",
+      "reason": "Fue la mayor caída del índice, con un retroceso de 8,54 %."
+     },
+     {
+      "name": "Davivienda preferencial",
+      "reason": "Subió 1,40 % y fue el activo con mejor desempeño de la jornada."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el MSCI Colcap se recupera o amplía las pérdidas frente al soporte de 2.420 puntos citado por Valora Analitik",
+      "note": "Comparar los cierres diarios posteriores del índice publicados por la Bolsa de Colombia o Valora Analitik."
+     },
+     {
+      "text": "Si el volumen de negociación se mantiene por encima de los $161.146 millones del 17 de nov.",
+      "note": "Revisar las cifras diarias de volumen accionario en los reportes de cierre de mercado de Valora Analitik."
+     },
+     {
+      "text": "Comportamiento de las acciones de Ecopetrol y Grupo Cibest tras la caída",
+      "note": "Verificar las variaciones de cierre de las próximas sesiones de Ecopetrol, Cibest y PFCibest."
+     }
+    ],
+    "unknowns": [
+     "Qué motivó la caída de 2,17 %; la fuente no da una explicación.",
+     "El índice cerró en 2.399,23, por debajo del «primer soporte» de 2.420 citado, por lo que no es claro cómo se aplican los niveles técnicos.",
+     "Si las caídas de Cementos Argos, ETB y Grupo Aval obedecieron a noticias propias de cada empresa."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-bea-outdoor-recreation-was-2-3-of-us-gdp-704-2-b",
+   "title": "BEA: Outdoor recreation was 2.3% of US GDP ($704.2 billion) in 2025; real GDP up 1.9%",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "A",
+   "source": {
+    "name": "US Bureau of Economic Analysis",
+    "url": "https://www.bea.gov/news/2026/outdoor-recreation-economic-statistics-us-and-states-2025"
+   },
+   "summary": "BEA reported that the outdoor recreation economy accounted for 2.3 percent ($704.2 billion) of current-dollar GDP in 2025. Real GDP for the sector rose 1.9 percent, versus 2.3 percent for the overall US economy and 2.5 percent for the sector in 2024. Real gross output rose 2.1 percent, compensation 4.6 percent and employment 1.7 percent. By state, the sector's share of GDP ranged from 6.1 percent in Hawaii to 1.0 percent in the District of Columbia.",
+   "actors": [
+    {
+     "name": "Outdoor recreation sector",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Real GDP growth of 1.9 percent was below the 2.3 percent for the whole economy and below the sector's 2.5 percent in 2024, while employment and compensation kept rising."
+    },
+    {
+     "name": "Arts, entertainment, recreation, accommodation and food services",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It was the largest industry contributor at $179.5 billion, or 25.5 percent of outdoor recreation value added, but the source gives no growth figure for it."
+    },
+    {
+     "name": "Retail trade",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It was the second-largest industry group at $166.5 billion, or 23.6 percent of value added; the release does not show its trend."
+    },
+    {
+     "name": "Outdoor recreation workers",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Employment rose 1.7 percent and compensation 4.6 percent in 2025, though employment fell in some states, such as New Jersey and Alabama."
+    }
+   ],
+   "watch": [
+    {
+     "text": "BEA release of Outdoor Recreation Economic Statistics, U.S. and States, 2026, announced for Fall 2027",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the BEA news release page for the 2026 figures and any revisions to 2025."
+    },
+    {
+     "text": "Revisions to 2021–2024 estimates after the 2026 annual update, compared with previously published figures",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the updated tables with the earlier estimates in BEA's Data Archive."
+    }
+   ],
+   "unknowns": [
+    "What drove the slowdown in real GDP growth from 2.5 percent in 2024 to 1.9 percent in 2025?",
+    "How large were the revisions to the 2021–2024 estimates?",
+    "Why did employment fall in some states while rising in 43 states and the District of Columbia?"
+   ],
+   "tags": [
+    "BEA",
+    "outdoor recreation",
+    "GDP",
+    "value added",
+    "employment",
+    "states"
+   ],
+   "es": {
+    "title": "BEA: la recreación al aire libre fue 2,3 % del PIB de EE. UU. en 2025 (US$704,2 mil millones)",
+    "summary": "La BEA informó que la economía de la recreación al aire libre representó 2,3 % (US$704,2 mil millones) del PIB a precios corrientes en 2025. El PIB real del sector creció 1,9 %, frente a 2,3 % de la economía total de EE. UU. y 2,5 % del propio sector en 2024. La producción bruta real subió 2,1 %, la remuneración 4,6 % y el empleo 1,7 %. Por estados, la participación del sector en el PIB fue de 6,1 % en Hawái hasta 1,0 % en el Distrito de Columbia.",
+    "actors": [
+     {
+      "name": "Sector de recreación al aire libre",
+      "reason": "El crecimiento real del PIB de 1,9 % fue inferior al 2,3 % de toda la economía y al 2,5 % del propio sector en 2024, mientras el empleo y la remuneración siguieron aumentando."
+     },
+     {
+      "name": "Artes, entretenimiento, recreación, alojamiento y servicios de comida",
+      "reason": "Fue el mayor aportante por industria, con US$179,5 mil millones, o 25,5 % del valor agregado de la recreación al aire libre, pero la fuente no da una cifra de crecimiento."
+     },
+     {
+      "name": "Comercio minorista",
+      "reason": "Fue el segundo grupo de industrias, con US$166,5 mil millones, o 23,6 % del valor agregado; el comunicado no muestra su tendencia."
+     },
+     {
+      "name": "Trabajadores de la recreación al aire libre",
+      "reason": "El empleo subió 1,7 % y la remuneración 4,6 % en 2025, aunque el empleo cayó en algunos estados, como Nueva Jersey y Alabama."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de la BEA de las estadísticas económicas de recreación al aire libre de EE. UU. y los estados para 2026, anunciada para el otoño de 2027",
+      "note": "Revisar la página de comunicados de la BEA para ver las cifras de 2026 y cualquier revisión de 2025."
+     },
+     {
+      "text": "Revisiones a las estimaciones de 2021–2024 tras la actualización anual de 2026, frente a las cifras publicadas antes",
+      "note": "Comparar las tablas actualizadas con las estimaciones anteriores en el archivo de datos de la BEA."
+     }
+    ],
+    "unknowns": [
+     "¿Qué explicó la desaceleración del crecimiento del PIB real de 2,5 % en 2024 a 1,9 % en 2025?",
+     "¿Qué tan grandes fueron las revisiones a las estimaciones de 2021–2024?",
+     "¿Por qué el empleo cayó en algunos estados mientras subió en 43 estados y el Distrito de Columbia?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "title": "Colombia's Q3 2026 GDP grew 0.5%, the weakest in over two years, DANE data show",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/economia-colombiana-tuvo-su-crecimiento-mas-bajo-en-mas-de-dos-anos-menos-gasto-estatal-y-terremoto-son-algunas-causas/"
+   },
+   "summary": "DANE reported Q3 2026 GDP growth of 0.5%, below the market forecasts cited by Valora Analitik, which ranged from 0.8% (Grupo Davivienda) to 2.2% (Bancolombia). Oil, gas and mining grew 7.8%, while public spending grew 1.6% versus 10.1% in the second quarter of 2026. Agriculture fell 6.7%, manufacturing 1.2% and financial and insurance activities 0.8%. Imports rose 9.8%, subtracting two percentage points from growth, and household consumption slowed from 2.8% to 1.7%. Analysts cited the August 10, 2026 earthquake among the factors.",
+   "actors": [
+    {
+     "name": "Agriculture, livestock and fishing",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The sector fell 6.7%, subtracting 0.8 points from total GDP, and coffee was cited as facing difficulties."
+    },
+    {
+     "name": "Mining (gold, silver, coal)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Mining output rebounded on gold, silver and coal, but Corficolombiana's economist described it as a rebound from a low base, and oil and gas output fell 2.9%."
+    },
+    {
+     "name": "Financial and insurance sector",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The sector fell 0.8%, and Corficolombiana's chief economist linked part of the weakness to earthquake-related insurance payments."
+    },
+    {
+     "name": "Construction and housing credit",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Construction grew 0.6% after several negative quarters, while a Bancolombia economist said high interest rates limit mortgage borrowing."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether reconstruction plans after the August 2026 earthquake and the housing program 'Mi Casa Milagro' lift construction activity.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the construction line in the next DANE quarterly GDP release and official announcements on the programs."
+    },
+    {
+     "text": "Behavior of utilities output when the El Niño peak arrives in the fourth quarter of 2026.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the utilities segment in DANE's fourth-quarter 2026 GDP report."
+    },
+    {
+     "text": "Whether imports keep growing near 10% and widen the external deficit, as a Bancolombia economist described.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future DANE GDP expenditure data and trade figures against the 9.8% import growth reported."
+    }
+   ],
+   "unknowns": [
+    "How much of the slowdown is attributable to the earthquake versus the moderation in public spending?",
+    "Is the 7.8% rebound in mining durable, given that oil and gas output kept falling?",
+    "How will high interest rates and the peso's appreciation affect household consumption and exports in coming quarters?"
+   ],
+   "tags": [
+    "Colombia",
+    "GDP",
+    "DANE",
+    "Q3 2026",
+    "public spending",
+    "earthquake"
+   ],
+   "es": {
+    "title": "PIB de Colombia creció 0,5 % en el tercer trimestre de 2026, el menor en más de dos años",
+    "summary": "El DANE reportó un crecimiento del PIB de 0,5 % en el tercer trimestre de 2026, por debajo de las previsiones del mercado citadas por Valora Analitik, que iban de 0,8 % (Grupo Davivienda) a 2,2 % (Bancolombia). Petróleo, gas y minería crecieron 7,8 %, mientras que el gasto público creció 1,6 %, frente a 10,1 % en el segundo trimestre de 2026. El agro cayó 6,7 %, la manufactura 1,2 % y las actividades financieras y de seguros 0,8 %. Las importaciones subieron 9,8 % y restaron dos puntos porcentuales al crecimiento, y el consumo de los hogares pasó de 2,8 % a 1,7 %. Los analistas mencionaron el terremoto del 10 de agosto de 2026 entre los factores.",
+    "actors": [
+     {
+      "name": "Agro, ganadería, caza y pesca",
+      "reason": "El sector cayó 6,7 % y restó 0,8 puntos al PIB total; se mencionó que el café enfrenta dificultades."
+     },
+     {
+      "name": "Minería (oro, plata, carbón)",
+      "reason": "La producción minera rebotó por oro, plata y carbón, pero el economista de Corficolombiana lo describió como un rebote desde una base baja, y el petróleo y el gas cayeron 2,9 %."
+     },
+     {
+      "name": "Sector financiero y de seguros",
+      "reason": "El sector cayó 0,8 %, y el economista jefe de Corficolombiana vinculó parte de la debilidad con los pagos de seguros por el terremoto."
+     },
+     {
+      "name": "Construcción y crédito de vivienda",
+      "reason": "La construcción creció 0,6 % tras varios trimestres negativos, mientras un economista de Bancolombia dijo que las tasas altas limitan el crédito hipotecario."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si los planes de reconstrucción tras el terremoto de agosto de 2026 y el programa de vivienda 'Mi Casa Milagro' impulsan la construcción.",
+      "note": "Revisar la línea de construcción en el próximo informe trimestral del PIB del DANE y los anuncios oficiales sobre los programas."
+     },
+     {
+      "text": "Comportamiento de los servicios públicos cuando llegue el pico de El Niño en el cuarto trimestre de 2026.",
+      "note": "Consultar el segmento de servicios públicos en el informe del PIB del cuarto trimestre de 2026 del DANE."
+     },
+     {
+      "text": "Si las importaciones siguen creciendo cerca de 10 % y amplían el déficit externo, como describió un economista de Bancolombia.",
+      "note": "Comparar los datos de gasto del PIB del DANE y las cifras de comercio con el crecimiento de 9,8 % de las importaciones reportado."
+     }
+    ],
+    "unknowns": [
+     "¿Cuánto de la desaceleración se debe al terremoto y cuánto a la moderación del gasto público?",
+     "¿Es duradero el rebote de 7,8 % en minería, dado que el petróleo y el gas siguieron cayendo?",
+     "¿Cómo afectarán las tasas de interés altas y la revaluación del peso al consumo de los hogares y a las exportaciones en los próximos trimestres?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-us-census-bureau-announces-survey-of-constructio",
+   "title": "US Census Bureau announces Survey of Construction sample redesign from January 2027 data",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/construction/nrc/index.html"
+   },
+   "summary": "On its New Residential Construction page, the Census Bureau posted a notice dated 11/17/26 about a methodology change. With the January 2027 release on February 18, 2027, the Survey of Construction will complete a scheduled sample redesign, and estimates from January 2027 will include housing units selected from the redesigned sample. Estimates of housing units started, under construction and completed in non-permit-issuing areas will be discontinued. The Bureau says these areas currently account for less than 1 percent of those estimates.",
+   "actors": [
+    {
+     "name": "Users of US housing starts and completions data",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "A new sample and the end of non-permit-area estimates could affect comparability of series across the January 2027 transition."
+    },
+    {
+     "name": "Census Bureau Survey of Construction",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The survey completes a scheduled sample redesign that changes which housing units feed the estimates."
+    },
+    {
+     "name": "Non-permit-issuing areas",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Estimates of starts, units under construction and completions for these areas will no longer be published."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Release of the January 2027 New Residential Construction data, the first with the redesigned sample",
+     "due": "2027-02-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Census Bureau release schedule and the release notes on the page and in the FAQ."
+    },
+    {
+     "text": "Publication of additional details on the changes in the Census Bureau FAQ",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the FAQ and the technical documentation on census.gov for any updates."
+    }
+   ],
+   "unknowns": [
+    "How large will the effect of the new sample be on the level of national and regional estimates?",
+    "Will historical series be revised or linked to the redesigned sample?",
+    "How will totals be presented once non-permit areas are excluded?"
+   ],
+   "tags": [
+    "Census Bureau",
+    "housing starts",
+    "methodology",
+    "Survey of Construction",
+    "US housing"
+   ],
+   "es": {
+    "title": "Censo de EE. UU. rediseñará la muestra de su encuesta de construcción con los datos de enero de 2027",
+    "summary": "En su página de Nueva Construcción Residencial, la Oficina del Censo publicó un aviso fechado el 17/11/26 sobre un cambio metodológico. Con la publicación de enero de 2027, el 18 de febrero de 2027, la Encuesta de Construcción completará un rediseño programado de la muestra, y las estimaciones desde enero de 2027 incluirán unidades de vivienda seleccionadas de la muestra rediseñada. Se descontinuarán las estimaciones de unidades iniciadas, en construcción y terminadas en áreas que no emiten permisos. La Oficina indica que estas áreas representan actualmente menos del 1 % de dichas estimaciones.",
+    "actors": [
+     {
+      "name": "Usuarios de los datos de inicios y terminaciones de vivienda en EE. UU.",
+      "reason": "Una nueva muestra y el fin de las estimaciones de áreas sin permisos podrían afectar la comparabilidad de las series en la transición de enero de 2027."
+     },
+     {
+      "name": "Encuesta de Construcción de la Oficina del Censo",
+      "reason": "La encuesta completa un rediseño programado de la muestra que cambia las unidades de vivienda que alimentan las estimaciones."
+     },
+     {
+      "name": "Áreas que no emiten permisos",
+      "reason": "Dejarán de publicarse las estimaciones de inicios, unidades en construcción y terminaciones de estas áreas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de los datos de enero de 2027 de Nueva Construcción Residencial, los primeros con la muestra rediseñada",
+      "note": "Revisar el calendario de publicaciones de la Oficina del Censo y las notas de la publicación en la página y en las preguntas frecuentes."
+     },
+     {
+      "text": "Publicación de más detalles sobre los cambios en las preguntas frecuentes de la Oficina del Censo",
+      "note": "Consultar las preguntas frecuentes y la documentación técnica en census.gov para ver actualizaciones."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tan grande será el efecto de la nueva muestra en el nivel de las estimaciones nacionales y regionales?",
+     "¿Se revisarán las series históricas o se empalmarán con la muestra rediseñada?",
+     "¿Cómo se presentarán los totales una vez excluidas las áreas sin permisos?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "title": "Banco Popular cuts credit card range from 17 types to four, open from one minimum wage",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/banco-popular-relanza-tarjetas-credito/"
+   },
+   "summary": "Banco Popular, a Grupo Aval entity, relaunched its credit card portfolio, reducing 17 card types to four categories open to people earning from one minimum wage. The bank has about 160,000 cardholders and a card portfolio of about COP 500,000 million. Acting president Luis Fernando Gómez said the bank aims to double both users and portfolio size within three years. He also said the bank expects 2026 profit of COP 70,000 million to COP 75,000 million, after about COP 51,000 million through September.",
+   "actors": [
+    {
+     "name": "Banco Popular",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "A simpler card range is meant to grow users and portfolio, but the outcome depends on uptake and on credit quality, which the source does not address."
+    },
+    {
+     "name": "Grupo Aval",
+     "ticker": "AVAL",
+     "impact": "undetermined",
+     "reason": "As parent of Banco Popular, it could be affected through the bank's earnings recovery, though the source gives no group-level figures."
+    },
+    {
+     "name": "Customers over 50",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are the bank's stated focus, with card benefits and no age limit on one product, but cost and credit terms are not detailed beyond some interest rate discounts."
+    },
+    {
+     "name": "Competing card issuers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Gómez cited new competitors as a reason for the change, but the source does not show any effect on them."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Banco Popular's reported profit for 2026 versus the COP 70,000 million to COP 75,000 million expected by management",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the bank's year-end 2026 financial results and press coverage of them."
+    },
+    {
+     "text": "Updates on the number of cardholders and card portfolio relative to the roughly 160,000 users and COP 500,000 million cited",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review later bank statements or interviews, and press reports on the three-year doubling goal."
+    },
+    {
+     "text": "Launch of the pension, payroll, insurance and term-deposit (CDT) products mentioned for the over-50 segment",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Look for bank announcements or press coverage of these products."
+    }
+   ],
+   "unknowns": [
+    "What interest rates, fees and approval criteria will apply to the four new cards?",
+    "How will the bank manage credit risk while seeking to double the card portfolio?",
+    "What happens to holders of the 13 discontinued card types?"
+   ],
+   "tags": [
+    "Banco Popular",
+    "Grupo Aval",
+    "credit cards",
+    "Colombia",
+    "banking",
+    "over 50s"
+   ],
+   "es": {
+    "title": "Banco Popular reduce de 17 a cuatro sus tarjetas de crédito; se accede desde un salario mínimo",
+    "summary": "Banco Popular, entidad del Grupo Aval, relanzó su portafolio de tarjetas de crédito y pasó de 17 tipos a cuatro categorías, a las que se accede desde un salario mínimo. El banco tiene cerca de 160.000 tarjetahabientes y una cartera de tarjetas cercana a $500.000 millones. El presidente encargado, Luis Fernando Gómez, dijo que se propone duplicar tanto los usuarios como el tamaño de la cartera en tres años. También afirmó que espera utilidades en 2026 de entre $70.000 millones y $75.000 millones, tras ganancias cercanas a $51.000 millones a septiembre.",
+    "actors": [
+     {
+      "name": "Banco Popular",
+      "reason": "Un portafolio más simple busca aumentar usuarios y cartera, pero el resultado depende de la acogida y de la calidad crediticia, que la fuente no aborda."
+     },
+     {
+      "name": "Grupo Aval",
+      "reason": "Como matriz de Banco Popular, podría verse afectada por la recuperación de utilidades del banco, aunque la fuente no da cifras del grupo."
+     },
+     {
+      "name": "Clientes mayores de 50 años",
+      "reason": "Son el foco declarado del banco, con beneficios en las tarjetas y un producto sin límite de edad, pero los costos y condiciones de crédito no se detallan más allá de algunos descuentos en la tasa de interés."
+     },
+     {
+      "name": "Otros emisores de tarjetas",
+      "reason": "Gómez mencionó a los nuevos competidores como motivo del cambio, pero la fuente no muestra efectos sobre ellos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Utilidades de Banco Popular en 2026 frente a los $70.000 millones a $75.000 millones que espera la administración",
+      "note": "Revisar los resultados financieros de cierre de 2026 del banco y su cobertura en prensa."
+     },
+     {
+      "text": "Actualizaciones sobre el número de tarjetahabientes y la cartera de tarjetas frente a los cerca de 160.000 usuarios y $500.000 millones citados",
+      "note": "Revisar futuros reportes o entrevistas del banco y notas de prensa sobre la meta de duplicar en tres años."
+     },
+     {
+      "text": "Lanzamiento de los productos de pensiones, nómina, seguros y CDT mencionados para el segmento mayor de 50 años",
+      "note": "Buscar anuncios del banco o cobertura de prensa sobre estos productos."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tasas de interés, comisiones y criterios de aprobación tendrán las cuatro nuevas tarjetas?",
+     "¿Cómo gestionará el banco el riesgo de crédito mientras busca duplicar la cartera de tarjetas?",
+     "¿Qué pasará con los titulares de los 13 tipos de tarjeta que se descontinúan?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-census-bureau-wholesale-revisions-reflected-in-m",
+   "title": "Census Bureau: wholesale revisions reflected in manufacturing and trade inventories report",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/mtis/index.html"
+   },
+   "summary": "The Census Bureau's Manufacturing and Trade Inventories and Sales page says revisions to wholesale estimates for sales and inventories were released on October 26, 2026 and are reflected in the current release. The revisions draw on historical corrections and results of the 2023 and 2024 Annual Integrated Economic Survey. A special notice says revised historical data and seasonal adjustment models for the Manufacturers' Shipments, Inventories, and Orders (M3) Survey will remain unchanged for the remainder of 2026. The text provided contains no inventory or sales figures.",
+   "actors": [
+    {
+     "name": "Wholesale trade sector data",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Revised wholesale sales and inventories estimates may change the historical picture, but the page gives no size or direction."
+    },
+    {
+     "name": "Manufacturers (M3 Survey data)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Unchanged historical data and seasonal models for the rest of 2026 mean M3 series are not being re-estimated, with no stated effect on levels."
+    },
+    {
+     "name": "Users of Census data (analysts, FRED App users)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Revisions and the fixed M3 seasonal models affect comparability of series, though the page does not quantify this."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Check the latest Manufacturing and Trade Inventories and Sales report for how the revised wholesale estimates changed reported sales and inventories.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the current release tables with prior releases on the Census Bureau's Historical Releases page."
+    },
+    {
+     "text": "Confirm whether the M3 historical data and seasonal adjustment models stay unchanged through the end of 2026.",
+     "due": "2026-12-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Census Bureau announcements and the Technical Documentation page for any change to the special notice."
+    },
+    {
+     "text": "Look for the next scheduled release date for this report.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Consult the Release Schedule page on census.gov."
+    }
+   ],
+   "unknowns": [
+    "How large were the wholesale revisions to sales and inventories, and in which direction?",
+    "Will the M3 seasonal adjustment models be updated after 2026?",
+    "What are the current headline sales and inventory levels in this release?"
+   ],
+   "tags": [
+    "Census Bureau",
+    "inventories",
+    "wholesale trade",
+    "revisions",
+    "M3 survey",
+    "US data"
+   ],
+   "es": {
+    "title": "Oficina del Censo: revisiones al comercio mayorista se reflejan en el informe de inventarios y ventas",
+    "summary": "La página de Inventarios y Ventas de Manufactura y Comercio de la Oficina del Censo indica que las revisiones a los estimados mayoristas de ventas e inventarios se publicaron el 26 de octubre de 2026 y están reflejadas en la publicación actual. Las revisiones se basan en correcciones históricas y en los resultados de la Encuesta Económica Integrada Anual de 2023 y 2024. Un aviso especial señala que los datos históricos revisados y los modelos de ajuste estacional de la Encuesta de Envíos, Inventarios y Pedidos de Manufacturas (M3) permanecerán sin cambios durante el resto de 2026. El texto suministrado no contiene cifras de inventarios ni de ventas.",
+    "actors": [
+     {
+      "name": "Datos del sector comercio mayorista",
+      "reason": "Los estimados revisados de ventas e inventarios mayoristas pueden cambiar el panorama histórico, pero la página no indica su tamaño ni su dirección."
+     },
+     {
+      "name": "Manufactureros (datos de la encuesta M3)",
+      "reason": "Mantener sin cambios los datos históricos y los modelos estacionales durante el resto de 2026 implica que las series M3 no se reestiman, sin efecto indicado sobre los niveles."
+     },
+     {
+      "name": "Usuarios de datos del Censo (analistas, usuarios de la aplicación FRED)",
+      "reason": "Las revisiones y los modelos estacionales fijos de M3 afectan la comparabilidad de las series, aunque la página no lo cuantifica."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Revisar el último informe de Inventarios y Ventas de Manufactura y Comercio para ver cómo los estimados mayoristas revisados cambiaron las ventas e inventarios reportados.",
+      "note": "Comparar las tablas de la publicación actual con las anteriores en la página de publicaciones históricas de la Oficina del Censo."
+     },
+     {
+      "text": "Confirmar si los datos históricos y los modelos de ajuste estacional de M3 permanecen sin cambios hasta fin de 2026.",
+      "note": "Revisar los anuncios de la Oficina del Censo y la página de documentación técnica por si cambia el aviso especial."
+     },
+     {
+      "text": "Buscar la fecha de la próxima publicación programada de este informe.",
+      "note": "Consultar la página del calendario de publicaciones en census.gov."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tan grandes fueron las revisiones a las ventas e inventarios mayoristas y en qué dirección?",
+     "¿Se actualizarán los modelos de ajuste estacional de M3 después de 2026?",
+     "¿Cuáles son los niveles actuales de ventas e inventarios en esta publicación?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-dollar-opens-at-cop-3-320-10-in-colombia-above-t",
+   "title": "Dollar opens at COP 3,320.10 in Colombia, above the 3,309.55 official TRM rate",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-abre-al-alza-en-3-32010-y-se-consolida-sobre-los-3-300/"
+   },
+   "summary": "The dollar opened at COP 3,320.10 in Colombia on Wednesday, up COP 16.70 from Tuesday's close of COP 3,303.40 and above the day's TRM of COP 3,309.55. Valora Analitik attributes the session to global caution ahead of the Federal Reserve minutes and lower oil prices, with Brent down about 1.40% at US$91.82 and WTI down about 2.20% at US$84.16. JP Tactical cited a 0.50% gain and an estimated intraday range of COP 3,271 to COP 3,346. Vice President José Manuel Restrepo announced investment commitments of US$41,600 million at Milagro Week in New York.",
+   "actors": [
+    {
+     "name": "Colombian peso (COP)",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The dollar opened higher against the peso, and Credicorp Capital analysts say regional currencies are weakening as the global dollar index (DXY) strengthens."
+    },
+    {
+     "name": "Ecopetrol and other oil-linked Colombian issuers",
+     "ticker": "EC",
+     "impact": "mixed",
+     "reason": "Lower Brent and WTI prices can reduce oil-related revenue, while a weaker peso works in the opposite direction; the source does not quantify either effect."
+    },
+    {
+     "name": "Investors following the Fed minutes",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They are looking for signals on the pace of rate adjustments after several Fed officials warned about persistent inflation pressures."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Release of the minutes of the Fed's October meeting and the market reaction in the dollar-peso rate",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the published minutes and the USD/COP quote at the close of the session."
+    },
+    {
+     "text": "Whether the dollar holds above COP 3,300 and within the COP 3,288 to COP 3,357 range cited by Credicorp Capital",
+     "due": "2026-11-19",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the next official TRM and the closing rate with the levels cited in the source."
+    },
+    {
+     "text": "Brent and WTI direction given US inventory data and the risk around the Strait of Hormuz",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Follow daily Brent and WTI quotes and reports on shipping through the Strait."
+    }
+   ],
+   "unknowns": [
+    "How much of the dollar's rise is due to local factors and how much to the global dollar index?",
+    "How will the Fed minutes change expectations for interest rates?",
+    "What share of the US$41,600 million in investment commitments will materialize, and over what timeframe?"
+   ],
+   "tags": [
+    "USD/COP",
+    "TRM",
+    "Fed minutes",
+    "Brent",
+    "WTI",
+    "Strait of Hormuz"
+   ],
+   "es": {
+    "title": "Dólar abre en $3.320,10 en Colombia, por encima de la TRM de $3.309,55",
+    "summary": "El dólar abrió en $3.320,10 en Colombia este miércoles, $16,70 por encima del cierre de ayer ($3.303,40) y sobre la TRM de hoy ($3.309,55). Valora Analitik atribuye la jornada a la cautela global ante las minutas de la Reserva Federal y a la caída del petróleo, con el Brent cerca de 1,40 % a la baja en US$91,82 y el WTI cerca de 2,20 % a la baja en US$84,16. JP Tactical señaló un avance de 0,50 % y un rango intradiario estimado de $3.271 a $3.346. El vicepresidente José Manuel Restrepo anunció compromisos de inversión por US$41.600 millones en la Milagro Week en Nueva York.",
+    "actors": [
+     {
+      "name": "Peso colombiano (COP)",
+      "reason": "El dólar abrió al alza frente al peso, y los analistas de Credicorp Capital señalan que las monedas de la región se devalúan por el fortalecimiento del índice global del dólar (DXY)."
+     },
+     {
+      "name": "Ecopetrol y otros emisores colombianos ligados al petróleo",
+      "reason": "Los menores precios del Brent y el WTI pueden reducir los ingresos petroleros, mientras que un peso más débil actúa en sentido contrario; la fuente no cuantifica ninguno de los dos efectos."
+     },
+     {
+      "name": "Inversionistas atentos a las minutas de la Fed",
+      "reason": "Buscan señales sobre el ritmo de ajuste de tasas, luego de que varios funcionarios de la Fed advirtieran sobre la persistencia de las presiones inflacionarias."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de las actas de la reunión de octubre de la Fed y reacción del mercado en la tasa dólar-peso",
+      "note": "Revisar las actas publicadas y la cotización USD/COP al cierre de la sesión."
+     },
+     {
+      "text": "Si el dólar se mantiene sobre $3.300 y dentro del rango de $3.288 a $3.357 citado por Credicorp Capital",
+      "note": "Comparar la próxima TRM oficial y la tasa de cierre con los niveles citados en la fuente."
+     },
+     {
+      "text": "Dirección del Brent y el WTI ante los datos de inventarios en EE. UU. y el riesgo en el Estrecho de Ormuz",
+      "note": "Seguir las cotizaciones diarias del Brent y el WTI y los reportes sobre el tránsito marítimo en el Estrecho."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del alza del dólar se debe a factores locales y cuál al índice global del dólar?",
+     "¿Cómo cambiarán las minutas de la Fed las expectativas sobre las tasas de interés?",
+     "¿Qué proporción de los US$41.600 millones en compromisos de inversión se concretará y en qué plazo?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-17-census-bureau-retail-page-notes-annual-update-to",
+   "title": "Census Bureau retail page notes annual update to July 2026 state retail sales estimates",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-17",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/retail/index.html"
+   },
+   "summary": "The Census Bureau's Monthly Retail Trade main page says the Advance Monthly and Monthly Retail Trade Surveys, the Annual Retail Trade Survey and the Quarterly E-Commerce Report together produce what it calls the most comprehensive data on US retail activity. A notice states that the July 2026 Monthly State Retail Sales (MSRS) report reflects an annual update that incorporates revisions to Monthly Retail Trade Sales estimates and methodology improvements. The page text provided contains no retail sales figures for any month. It also says the FRED database now incorporates the Census Bureau's 13 economic indicators.",
+   "actors": [
+    {
+     "name": "Users of state-level retail sales data",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The annual update changes the modeled, experimental MSRS estimates, but the page does not say in which direction or by how much."
+    },
+    {
+     "name": "Analysts of US retail activity",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Revised Monthly Retail Trade Sales estimates and methodology changes may alter historical comparisons, though the page gives no magnitudes."
+    },
+    {
+     "name": "FRED users (Federal Reserve Bank of St. Louis)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "FRED carries the Census Bureau's 13 economic indicators, so revisions and API URL changes may reach users through that channel."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Next advance monthly retail and food services release on the Census Bureau's 2026/2027 release schedule",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Economic Indicator Release Schedule on census.gov for the date and the published figures."
+    },
+    {
+     "text": "Details of the annual update in Appendix Three of the MSRS Technical Documentation",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Read the appendix to see which estimates and methods were revised."
+    },
+    {
+     "text": "Updated API URL for the economic indicators data, which now includes /timeseries/",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check whether data users' queries still return series after the URL change, using the Developers' webpage examples."
+    }
+   ],
+   "unknowns": [
+    "How large are the revisions to the Monthly Retail Trade Sales estimates?",
+    "What are the latest advance retail and food services sales figures, which this page does not show?",
+    "Do the methodology changes alter the national sales trend or only the state-level modeled estimates?"
+   ],
+   "tags": [
+    "US retail sales",
+    "Census Bureau",
+    "MARTS",
+    "MSRS",
+    "revision",
+    "FRED"
+   ],
+   "es": {
+    "title": "Página de comercio minorista del Censo de EE. UU. anota actualización anual de ventas estatales de julio de 2026",
+    "summary": "La página principal del Monthly Retail Trade de la Oficina del Censo indica que las encuestas Advance Monthly y Monthly Retail Trade, la Annual Retail Trade Survey y el Quarterly E-Commerce Report producen conjuntamente lo que describe como los datos más completos sobre la actividad minorista de EE. UU. Un aviso señala que el informe de julio de 2026 de Monthly State Retail Sales (MSRS) refleja una actualización anual que incorpora revisiones a las estimaciones de ventas del Monthly Retail Trade y mejoras metodológicas. El texto de la página no contiene cifras de ventas minoristas de ningún mes. También indica que FRED ya incorpora los 13 indicadores económicos de la Oficina del Censo.",
+    "actors": [
+     {
+      "name": "Usuarios de datos de ventas minoristas estatales",
+      "reason": "La actualización anual modifica las estimaciones experimentales modeladas del MSRS, pero la página no indica en qué dirección ni en qué magnitud."
+     },
+     {
+      "name": "Analistas de la actividad minorista de EE. UU.",
+      "reason": "Las estimaciones revisadas de ventas del Monthly Retail Trade y los cambios metodológicos podrían alterar las comparaciones históricas, aunque la página no da magnitudes."
+     },
+     {
+      "name": "Usuarios de FRED (Banco de la Reserva Federal de St. Louis)",
+      "reason": "FRED incluye los 13 indicadores económicos de la Oficina del Censo, así que las revisiones y los cambios de URL de la API pueden llegar a los usuarios por ese canal."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próxima publicación de ventas minoristas y de servicios de alimentos del calendario 2026/2027 de la Oficina del Censo",
+      "note": "Consultar el Economic Indicator Release Schedule en census.gov para ver la fecha y las cifras publicadas."
+     },
+     {
+      "text": "Detalles de la actualización anual en el Apéndice Tres de la documentación técnica del MSRS",
+      "note": "Leer el apéndice para ver qué estimaciones y métodos se revisaron."
+     },
+     {
+      "text": "Nueva URL de la API de los datos de indicadores económicos, que ahora incluye /timeseries/",
+      "note": "Verificar si las consultas de los usuarios siguen devolviendo series tras el cambio, con los ejemplos de la página para desarrolladores."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tan grandes son las revisiones a las estimaciones de ventas del Monthly Retail Trade?",
+     "¿Cuáles son las cifras más recientes de ventas minoristas y de servicios de alimentos, que esta página no muestra?",
+     "¿Los cambios metodológicos alteran la tendencia nacional de ventas o solo las estimaciones modeladas a nivel estatal?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-aval-asset-management-plans-new-app-and-portal-b",
+   "title": "Aval Asset Management plans new app and portal by end-2026, expects to take over iColcap ETF",
+   "category": "Corporate",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/aval-asset-management-canales-digitales/"
+   },
+   "summary": "Alejandro Gómez, president of Aval Asset Management, told Valora Analitik that the firm will launch a new app and a transactional portal before the end of 2026. He said the firm won the administration of the iColcap ETF through an open process, expects the change in the first half of 2027, and put the ETF's value at COP 10 trillion. Gómez also said the Colombian fiduciary industry has assets under management above COP 1,200 trillion, and collective investment funds exceed COP 130 trillion, with growth above 14%.",
+   "actors": [
+    {
+     "name": "Aval Asset Management (Grupo Aval)",
+     "ticker": "AVAL",
+     "impact": "favorable",
+     "reason": "According to its president, the digital upgrade and the iColcap mandate are meant to widen its service offering and its role in the capital market."
+    },
+    {
+     "name": "iColcap ETF investors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The change of administrator is being prepared, but the source does not say how fees or operations would change for holders."
+    },
+    {
+     "name": "Retail investors and clients of Aval Asset Management",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The new platforms aim to lower access barriers by bringing product consultation and transactions into one place, but the source gives no usage or cost details."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Launch of Aval Asset Management's new app and transactional portal, announced for before the end of 2026",
+     "due": "2026-12-31",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check company announcements and press coverage for the launch of both platforms."
+    },
+    {
+     "text": "Completion of the transition of iColcap ETF administration to Aval Asset Management, expected in the first half of 2027",
+     "due": "2027-06-30",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check notices from the Bolsa de Colombia and the company on the change of administrator."
+    }
+   ],
+   "unknowns": [
+    "Who currently administers the iColcap ETF, and which approvals or steps remain before the transfer?",
+    "What fees or operating changes, if any, will apply to the ETF under Aval's administration?",
+    "Will the app and portal launch on schedule, and what products will they offer at launch?"
+   ],
+   "tags": [
+    "Aval Asset Management",
+    "iColcap",
+    "ETF",
+    "Bolsa de Colombia",
+    "digital channels",
+    "fiduciary industry"
+   ],
+   "es": {
+    "title": "Aval Asset Management lanzará app y portal transaccional en 2026 y prevé administrar el ETF iColcap",
+    "summary": "Alejandro Gómez, presidente de Aval Asset Management, dijo a Valora Analitik que la firma lanzará una nueva aplicación y un portal transaccional antes de finalizar 2026. Señaló que la compañía obtuvo la administración del ETF iColcap mediante un proceso abierto, que espera el cambio en el primer semestre de 2027 y que el ETF vale $10 billones. Gómez también indicó que la industria fiduciaria tiene activos bajo administración superiores a $1.200 billones y que los fondos de inversión colectiva superan los $130 billones, con crecimientos por encima del 14 %.",
+    "actors": [
+     {
+      "name": "Aval Asset Management (Grupo Aval)",
+      "reason": "Según su presidente, la actualización digital y el mandato del iColcap buscan ampliar su oferta de servicios y su papel en el mercado de capitales."
+     },
+     {
+      "name": "Inversionistas del ETF iColcap",
+      "reason": "El cambio de administrador está en preparación, pero la fuente no explica cómo cambiarían las comisiones o la operación para los tenedores."
+     },
+     {
+      "name": "Inversionistas personas naturales y clientes de Aval Asset Management",
+      "reason": "Las nuevas plataformas buscan reducir barreras de acceso al reunir la consulta de productos y las transacciones en un solo lugar, pero la fuente no da detalles de uso ni de costos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Lanzamiento de la nueva aplicación y el portal transaccional de Aval Asset Management, anunciado para antes de finalizar 2026",
+      "note": "Revisar comunicados de la compañía y cobertura de prensa sobre el lanzamiento de ambas plataformas."
+     },
+     {
+      "text": "Finalización del traspaso de la administración del ETF iColcap a Aval Asset Management, prevista para el primer semestre de 2027",
+      "note": "Revisar avisos de la Bolsa de Colombia y de la compañía sobre el cambio de administrador."
+     }
+    ],
+    "unknowns": [
+     "¿Quién administra hoy el ETF iColcap y qué aprobaciones o pasos faltan antes del traspaso?",
+     "¿Qué comisiones o cambios operativos, si los hay, tendrá el ETF bajo la administración de Aval?",
+     "¿Se lanzarán la app y el portal en el plazo previsto y con qué productos?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-fed-october-minutes-almost-all-officials-see-fur",
+   "title": "Fed October minutes: almost all officials see further rate hikes as likely appropriate",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Finance",
+    "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html"
+   },
+   "summary": "Minutes of the Fed's October meeting, released Wednesday, say almost all participants judged that further increases in the federal funds rate range would likely be appropriate. The FOMC voted 10-2 to hold the range at 3.75%-4%, with Lisa Cook and Beth Hammack dissenting in favor of a quarter-point increase. Officials described AI-related demand as a material source of inflation risk and also voiced concern about financial instability tied to AI-related debt. According to CNBC, markets fully price a quarter-point hike at the Dec. 8-9 meeting.",
+   "actors": [
+    {
+     "name": "FOMC participants",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They see inflation pressures as broad based and most favor further tightening, but they differ on the size and timing of the next move."
+    },
+    {
+     "name": "AI-related firms",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Staff and officials flagged off-balance-sheet leasing, circular financing and concentrated exposures that could amplify losses if returns on AI investment disappoint."
+    },
+    {
+     "name": "Borrowers exposed to higher policy rates",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Further increases in the federal funds rate range would raise benchmark borrowing costs from the current 3.75%-4%."
+    },
+    {
+     "name": "Fed funds futures traders",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "A quarter-point December hike is fully priced in, so the outcome depends on whether the Fed's decision and guidance match that pricing."
+    }
+   ],
+   "watch": [
+    {
+     "text": "FOMC decision at the Dec. 8-9 meeting on whether to raise the target range and by how much (quarter-point or half-point).",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Fed's post-meeting statement and compare it with the CME FedWatch pricing cited by CNBC."
+    },
+    {
+     "text": "Public comments from FOMC members on a half-point hike, following Waller's remarks.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review speeches and interviews by Fed officials before the December meeting."
+    },
+    {
+     "text": "Wording on AI-related financing risks in later Fed communications.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the next minutes and Fed financial stability publications for references to AI-related debt."
+    }
+   ],
+   "unknowns": [
+    "Will the December move be a quarter-point or a half-point increase?",
+    "Are the price pressures tied to the Iran war and tariffs temporary or becoming entrenched?",
+    "How large are the AI-related exposures in the financial system?"
+   ],
+   "tags": [
+    "Fed",
+    "FOMC minutes",
+    "rate hikes",
+    "inflation",
+    "AI",
+    "federal funds rate"
+   ],
+   "es": {
+    "title": "Actas de la Fed: casi todos ven probablemente apropiadas nuevas alzas de tasas",
+    "summary": "Las actas de la reunión de octubre de la Fed, publicadas el miércoles, indican que casi todos los participantes consideraron que probablemente serían apropiados nuevos aumentos del rango de la tasa de los fondos federales. El FOMC votó 10-2 por mantener el rango en 3,75%-4%, con los votos disidentes de Lisa Cook y Beth Hammack a favor de un alza de un cuarto de punto. Los funcionarios describieron la demanda asociada a la IA como una fuente material de riesgo de inflación y también expresaron preocupación por la inestabilidad financiera ligada a la deuda relacionada con la IA. Según CNBC, el mercado descuenta por completo un alza de un cuarto de punto en la reunión del 8 y 9 de diciembre.",
+    "actors": [
+     {
+      "name": "Participantes del FOMC",
+      "reason": "Ven presiones inflacionarias amplias y la mayoría favorece más ajustes, pero difieren en el tamaño y el momento del próximo movimiento."
+     },
+     {
+      "name": "Empresas relacionadas con la IA",
+      "reason": "El personal técnico y los funcionarios señalaron compromisos de arrendamiento fuera de balance, financiación circular y exposiciones concentradas que podrían amplificar pérdidas si los retornos de la inversión en IA decepcionan."
+     },
+     {
+      "name": "Prestatarios expuestos a mayores tasas de política",
+      "reason": "Nuevos aumentos del rango de los fondos federales encarecerían el costo de financiación de referencia frente al 3,75%-4% actual."
+     },
+     {
+      "name": "Operadores de futuros de fondos federales",
+      "reason": "Un alza de un cuarto de punto en diciembre ya está descontada, por lo que el resultado depende de si la decisión y la guía de la Fed coinciden con ese precio."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión del FOMC en la reunión del 8 y 9 de diciembre sobre si subir el rango objetivo y en cuánto (un cuarto de punto o medio punto).",
+      "note": "Revisar el comunicado de la Fed tras la reunión y compararlo con los precios de CME FedWatch citados por CNBC."
+     },
+     {
+      "text": "Comentarios públicos de miembros del FOMC sobre un alza de medio punto, después de las declaraciones de Waller.",
+      "note": "Revisar discursos y entrevistas de funcionarios de la Fed antes de la reunión de diciembre."
+     },
+     {
+      "text": "Lenguaje sobre los riesgos de financiación ligados a la IA en próximas comunicaciones de la Fed.",
+      "note": "Consultar las próximas actas y las publicaciones de estabilidad financiera de la Fed en busca de referencias a la deuda relacionada con la IA."
+     }
+    ],
+    "unknowns": [
+     "¿El movimiento de diciembre será un alza de un cuarto de punto o de medio punto?",
+     "¿Las presiones de precios ligadas a la guerra con Irán y a los aranceles son temporales o se están arraigando?",
+     "¿Qué tan grandes son las exposiciones relacionadas con la IA en el sistema financiero?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-colombia-sets-calendar-for-consensus-minimum-wag",
+   "title": "Colombia sets calendar for consensus minimum wage talks, with first legal deadline Dec. 15",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/hasta-esta-fecha-habra-plazo-para-definir-aumento-del-salario-minimo-en-colombia-por-consenso/"
+   },
+   "summary": "The government of President De la Espriella says it hopes the 2027 minimum wage increase will be agreed by consensus, and Vice President José Manuel Restrepo said guarantees exist for businesses, workers and retirees to state their positions. Some unions say the increase should be close to COP 660,000, while some business owners argue it should not exceed COP 150,000. The permanent wage commission was formally installed on Nov. 18. The first legal deadline for an agreement is Dec. 15, and the government may call additional extraordinary sessions.",
+   "actors": [
+    {
+     "name": "Unions (some)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Some unions are seeking an increase near COP 660,000, and the final figure depends on the consensus process or on the government's decision."
+    },
+    {
+     "name": "Business owners (some)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Some employers argue the adjustment should not exceed COP 150,000, so the outcome would affect their labor costs."
+    },
+    {
+     "name": "De la Espriella government",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It is steering the negotiation toward consensus and can call extra sessions if the Dec. 15 deadline passes without an agreement."
+    },
+    {
+     "name": "Minimum wage earners and retirees",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The size of the increase determines their purchasing power, which Restrepo said is what matters to citizens."
+    }
+   ],
+   "watch": [
+    {
+     "text": "DANE publishes total factor productivity data, an input to the wage talks",
+     "due": "2026-11-30",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the DANE release calendar and publication on Nov. 30."
+    },
+    {
+     "text": "DANE releases November consumer price index (CPI)",
+     "due": "2026-12-08",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the DANE CPI bulletin for Dec. 8."
+    },
+    {
+     "text": "First legal deadline for the parties to reach a concerted agreement on the minimum wage",
+     "due": "2026-12-15",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official statements from the Commission and the government on whether an agreement is announced on or around Dec. 15."
+    }
+   ],
+   "unknowns": [
+    "Will employers and unions narrow the gap between COP 150,000 and about COP 660,000?",
+    "What will the government do if no consensus is reached after the Dec. 18-19 review period?",
+    "How will the productivity and November CPI data shape each side's position?"
+   ],
+   "tags": [
+    "minimum wage",
+    "Colombia",
+    "wage talks",
+    "DANE",
+    "CPI",
+    "labor"
+   ],
+   "es": {
+    "title": "Colombia fija calendario para concertar el salario mínimo; primer plazo legal es el 15 de diciembre",
+    "summary": "El gobierno del presidente De la Espriella dice confiar en que el aumento del salario mínimo de 2027 se acuerde por consenso, y el vicepresidente José Manuel Restrepo afirmó que existen garantías para que empresarios, trabajadores y jubilados expongan sus posturas. Una parte de los sindicatos sostiene que el aumento debería rondar los $660.000, mientras que algunos empresarios argumentan que no debería superar los $150.000. La Comisión Permanente de Concertación se instaló formalmente el 18 de noviembre. El primer vencimiento legal para un acuerdo es el 15 de diciembre, y el Gobierno puede convocar sesiones extraordinarias adicionales.",
+    "actors": [
+     {
+      "name": "Sindicatos (una parte)",
+      "reason": "Una parte de los sindicatos busca un aumento cercano a los $660.000, y la cifra final depende del proceso de consenso o de la decisión del Gobierno."
+     },
+     {
+      "name": "Empresarios (algunos)",
+      "reason": "Algunos empresarios sostienen que el ajuste no debería superar los $150.000, por lo que el resultado afectaría sus costos laborales."
+     },
+     {
+      "name": "Gobierno De la Espriella",
+      "reason": "Conduce la negociación hacia el consenso y puede convocar sesiones extra si el 15 de diciembre pasa sin acuerdo."
+     },
+     {
+      "name": "Personas que ganan el mínimo y jubilados",
+      "reason": "El tamaño del aumento determina su poder adquisitivo, que según Restrepo es lo que realmente importa a los ciudadanos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "El DANE publica el dato de productividad total de los factores, insumo de la negociación salarial",
+      "note": "Revisar el calendario de publicaciones del DANE y el dato del 30 de noviembre."
+     },
+     {
+      "text": "El DANE divulga el índice de precios al consumidor (IPC) de noviembre",
+      "note": "Revisar el boletín de IPC del DANE del 8 de diciembre."
+     },
+     {
+      "text": "Primer vencimiento legal para que las partes alcancen un acuerdo concertado sobre el salario mínimo",
+      "note": "Revisar los comunicados oficiales de la Comisión y del Gobierno sobre si se anuncia un acuerdo hacia el 15 de diciembre."
+     }
+    ],
+    "unknowns": [
+     "¿Lograrán empresarios y sindicatos acercar posiciones entre los $150.000 y cerca de $660.000?",
+     "¿Qué hará el Gobierno si no hay consenso tras el periodo de revisión del 18 y 19 de diciembre?",
+     "¿Cómo influirán los datos de productividad y del IPC de noviembre en las posturas de cada parte?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-fed-s-waller-says-a-half-point-rate-hike-is-prob",
+   "title": "Fed's Waller says a half-point rate hike is probably needed in December",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html"
+   },
+   "summary": "Fed Governor Christopher Waller told CNBC that a half percentage point rate increase is probably necessary at the Dec. 8-9 FOMC meeting. He said the alternative would be a quarter-point hike with a clear signal of another move in January, an approach Chairman Kevin Warsh has opposed. Waller said the Fed needs to reverse last year's three quarter-point cuts and may need to do more. Other officials have shown a range of views: St. Louis Fed's Alberto Musalem suggested as many as four hikes by spring 2027, while New York Fed's John Williams said he does not think the situation calls for dramatic action.",
+   "actors": [
+    {
+     "name": "FOMC",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Members are divided on the size and pace of tightening ahead of the Dec. 8-9 meeting, with inflation still above the 2% target."
+    },
+    {
+     "name": "Fed Chairman Kevin Warsh",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Waller's proposal runs against Warsh's stated dislike of forward guidance, which he says ties policymakers' hands."
+    },
+    {
+     "name": "Fed funds futures market participants",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Futures fully price a quarter-point December hike per CME FedWatch, so a half-point move would exceed that pricing."
+    },
+    {
+     "name": "Fed officials favoring gradual tightening (Hammack, Logan, Williams)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Their preference for a measured approach conflicts with Waller's call for a larger move."
+    }
+   ],
+   "watch": [
+    {
+     "text": "FOMC minutes of the October meeting, due for release on Nov. 18, show how many officials favored further tightening.",
+     "due": "2026-11-18",
+     "status": "open",
+     "kind": "observation",
+     "note": "Read the minutes on the Federal Reserve website and compare with Waller's remarks."
+    },
+    {
+     "text": "The FOMC decision at the Dec. 8-9 meeting: size of the hike and whether it signals a January move.",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the FOMC statement and the chairman's press conference."
+    },
+    {
+     "text": "CME FedWatch probabilities for a half-point versus quarter-point hike in December.",
+     "due": "2026-12-08",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the FedWatch gauge before and after Waller's comments."
+    }
+   ],
+   "unknowns": [
+    "How many other FOMC members would support a half-point hike in December?",
+    "Will Warsh change his stance on forward guidance if a quarter-point hike is chosen?",
+    "Will inflation readings before the meeting move officials toward a more aggressive or a more gradual path?"
+   ],
+   "tags": [
+    "Fed",
+    "Waller",
+    "rate hike",
+    "inflation",
+    "FOMC",
+    "Warsh"
+   ],
+   "es": {
+    "title": "Waller, de la Fed, dice que probablemente se necesita un alza de medio punto en diciembre",
+    "summary": "El gobernador de la Fed, Christopher Waller, dijo a CNBC que probablemente es necesario un aumento de medio punto porcentual en la reunión del FOMC del 8 y 9 de diciembre. Señaló que la alternativa sería una alza de un cuarto de punto con una señal clara de otro movimiento en enero, enfoque al que se ha opuesto el presidente Kevin Warsh. Waller afirmó que la Fed debe revertir los tres recortes de un cuarto de punto del año pasado y que quizás deba hacer más. Otros funcionarios han mostrado opiniones variadas: Alberto Musalem, de la Fed de St. Louis, sugirió hasta cuatro alzas para la primavera de 2027, mientras que John Williams, de la Fed de Nueva York, dijo que no cree que la situación requiera una acción drástica.",
+    "actors": [
+     {
+      "name": "FOMC",
+      "reason": "Sus miembros están divididos sobre el tamaño y el ritmo del endurecimiento antes de la reunión del 8 y 9 de diciembre, con la inflación aún por encima de la meta de 2 %."
+     },
+     {
+      "name": "Presidente de la Fed, Kevin Warsh",
+      "reason": "La propuesta de Waller choca con el rechazo declarado de Warsh a la orientación futura, que según él ata las manos de los responsables de política."
+     },
+     {
+      "name": "Participantes del mercado de futuros de fondos federales",
+      "reason": "Los futuros descuentan por completo un alza de un cuarto de punto en diciembre según CME FedWatch, así que un movimiento de medio punto superaría ese precio."
+     },
+     {
+      "name": "Funcionarios de la Fed partidarios de un endurecimiento gradual (Hammack, Logan, Williams)",
+      "reason": "Su preferencia por un enfoque medido entra en conflicto con el llamado de Waller a un movimiento mayor."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Las actas de la reunión de octubre del FOMC, que se publican el 18 de noviembre, muestran cuántos funcionarios apoyaban más endurecimiento.",
+      "note": "Leer las actas en el sitio web de la Reserva Federal y compararlas con los comentarios de Waller."
+     },
+     {
+      "text": "La decisión del FOMC en la reunión del 8 y 9 de diciembre: tamaño del alza y si anticipa un movimiento en enero.",
+      "note": "Revisar el comunicado del FOMC y la rueda de prensa del presidente."
+     },
+     {
+      "text": "Las probabilidades de CME FedWatch de un alza de medio punto frente a una de un cuarto de punto en diciembre.",
+      "note": "Comparar el indicador FedWatch antes y después de los comentarios de Waller."
+     }
+    ],
+    "unknowns": [
+     "¿Cuántos otros miembros del FOMC apoyarían un alza de medio punto en diciembre?",
+     "¿Cambiará Warsh su postura sobre la orientación futura si se opta por un alza de un cuarto de punto?",
+     "¿Los datos de inflación previos a la reunión llevarán a los funcionarios hacia una vía más agresiva o más gradual?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-18-colombian-dollar-closes-at-cop-3-356-up-cop-52-6",
+   "title": "Colombian dollar closes at COP 3,356, up COP 52.60, on heavy buying volume",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-18",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-se-dispara-mas-de-50-y-cierra-en-3-356-impulsado-por-fuerte-volumen-comprador/"
+   },
+   "summary": "The dollar in Colombia closed at COP 3,356 on Wednesday, COP 52.60 above Tuesday's close of COP 3,303.40, after an intraday range of COP 3,305.30 to COP 3,364. JP Tactical said traded volume reached US$1,540.9 million, the largest in recent sessions. Acciones & Valores pointed to weak oil, Colombian GDP growth of 0.5% in the third quarter and fiscal caution as factors weighing on the peso. The DXY index rose 0.30% to 103.80, while Brent fell 2.09% to US$91.19 and WTI fell 3.65% to US$81.56.",
+   "actors": [
+    {
+     "name": "Colombian peso",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Acciones & Valores said weak oil, slow growth and fiscal caution are removing support for the peso against a stronger global dollar."
+    },
+    {
+     "name": "Colombian TES holders",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Yields moved in different directions by maturity (2028 lower, 2033 and 2036 higher), and the Global X TES ETF fell 0.01%."
+    },
+    {
+     "name": "Oil-linked Colombian external accounts",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Brent and WTI fell more than 2% and 3% respectively, which Acciones & Valores cited as a drag on the peso."
+    },
+    {
+     "name": "Colombian government (tax reform)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The Finance Minister dropped the proposed 19% VAT on prepaid health plans but kept VAT on imports under US$200, and the fiscal impact is not quantified in the source."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the dollar in Colombia tests the 200-day moving average near COP 3,390 and the September highs",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare upcoming daily closes with the COP 3,390 level cited by JP Tactical."
+    },
+    {
+     "text": "Whether trading volume stays high after the US$1,540.9 million session",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check reported daily traded amounts in the Colombian FX market in coming sessions."
+    },
+    {
+     "text": "Progress of the tax reform debates in the joint economic committees",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review official congressional and Finance Ministry announcements on the final text."
+    }
+   ],
+   "unknowns": [
+    "Whether the rise in volume reflects lasting demand for dollars or a one-day move.",
+    "How much of the peso's move comes from global dollar strength versus local factors.",
+    "What the final tax reform text will contain once formal debates begin."
+   ],
+   "tags": [
+    "Colombian peso",
+    "USD/COP",
+    "DXY",
+    "Brent",
+    "TES",
+    "tax reform"
+   ],
+   "es": {
+    "title": "Dólar en Colombia cierra en $3.356, con alza de $52,60, impulsado por fuerte volumen comprador",
+    "summary": "El dólar en Colombia cerró el miércoles en $3.356, $52,60 por encima del cierre del martes de $3.303,40, tras un rango intradiario de $3.305,30 a $3.364. Según JP Tactical, el monto negociado alcanzó US$1.540,9 millones, el mayor de las últimas sesiones. Acciones & Valores señaló que el petróleo débil, el crecimiento del PIB colombiano de 0,5 % en el tercer trimestre y la cautela fiscal restan soporte al peso. El índice DXY subió 0,30 % hasta 103,80 puntos, mientras el Brent cayó 2,09 % a US$91,19 y el WTI cayó 3,65 % a US$81,56.",
+    "actors": [
+     {
+      "name": "Peso colombiano",
+      "reason": "Acciones & Valores indicó que el petróleo débil, el bajo crecimiento y la cautela fiscal restan soporte al peso frente a un dólar global fortalecido."
+     },
+     {
+      "name": "Tenedores de TES colombianos",
+      "reason": "Las tasas se movieron en direcciones distintas según el vencimiento (2028 a la baja, 2033 y 2036 al alza), y el ETF de TES de Global X cayó 0,01 %."
+     },
+     {
+      "name": "Cuentas externas colombianas ligadas al petróleo",
+      "reason": "El Brent y el WTI cayeron más de 2 % y 3 % respectivamente, lo que Acciones & Valores citó como un lastre para el peso."
+     },
+     {
+      "name": "Gobierno colombiano (reforma tributaria)",
+      "reason": "El ministro de Hacienda retiró el IVA de 19 % propuesto para la medicina prepagada, pero mantuvo el IVA a importaciones menores de US$200; la fuente no cuantifica el efecto fiscal."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el dólar en Colombia prueba la media móvil de 200 días cerca de $3.390 y los máximos de septiembre",
+      "note": "Comparar los próximos cierres diarios con el nivel de $3.390 citado por JP Tactical."
+     },
+     {
+      "text": "Si el volumen de negociación se mantiene alto tras la sesión de US$1.540,9 millones",
+      "note": "Revisar los montos negociados diarios reportados en el mercado cambiario colombiano en las próximas sesiones."
+     },
+     {
+      "text": "Avance de los debates de la reforma tributaria en las comisiones económicas conjuntas",
+      "note": "Revisar los anuncios oficiales del Congreso y del Ministerio de Hacienda sobre el texto final."
+     }
+    ],
+    "unknowns": [
+     "Si el mayor volumen refleja una demanda duradera de dólares o un movimiento de un solo día.",
+     "Cuánto del movimiento del peso se explica por la fortaleza global del dólar frente a factores locales.",
+     "Qué contendrá el texto final de la reforma tributaria cuando empiecen los debates formales."
+    ]
+   }
+  }
+ ],
+ "rejected": [
+  {
+   "title": "U.S. natural gas inventories end injection season above normal levels",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68484",
+   "errors": [
+    "event is outside freshness window"
+   ]
+  }
+ ],
+ "candidates": {
+  "from_feeds": 90,
+  "after_filter": 25,
+  "sample": [
+   "Advance Monthly Sales for Retail and Food Services",
+   "Aval Asset Management modernizará canales digitales y asumirá nuevo rol estratégico en la ",
+   "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+   "Hasta esta fecha habrá plazo para definir aumento del salario mínimo en Colombia por conse",
+   "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
+   "Dólar en Colombia se dispara más de $50 y cierra en $3.356 impulsado por fuerte volumen co",
+   "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what i",
+   "Salario mínimo de 2027: Gobierno definió cronograma para negociar el aumento, estas son la"
+  ],
+  "dropped": {
+   "seen": 13,
+   "skip": 2,
+   "no_topic": 52
+  },
+  "raw_sample": [
+   [
+    "A",
+    0,
+    "Minutes of the Federal Open Market Committee, October 27-28, 2026"
+   ],
+   [
+    "A",
+    0,
+    "U.S. natural gas inventories end injection season above normal levels"
+   ],
+   [
+    "A",
+    0,
+    "How does EIA account for small differences between energy supply and d"
+   ],
+   [
+    "B",
+    0,
+    "Grupo Éxito proyecta invertir entre US$1.000 millones y US$1.200 millo"
+   ],
+   [
+    "B",
+    0,
+    "Importante impuesto en Bogotá está por vencer: Alcaldía pide tener cui"
+   ],
+   [
+    "B",
+    0,
+    "Caja de compensación da salvavidas a trabajadores con préstamos de fác"
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "title": "Fed releases minutes of the October 27-28, 2026 FOMC meeting",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-18T19:29:14.629164+00:00"
+  },
+  {
+   "title": "U.S. natural gas inventories end injection season above normal levels",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68484",
+   "gate": "fail",
+   "errors": [
+    "event is outside freshness window"
+   ],
+   "decision": "reject"
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-october-27-28-2026-fomc-",
+   "title": "Fed releases minutes of October 27-28, 2026 FOMC meeting; notice gives no policy details",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-18T19:29:14.629182+00:00"
+  },
+  {
+   "id": "2026-11-18-global-markets-mixed-ahead-of-us-open-as-nvidia-",
+   "title": "Global markets mixed ahead of US open as Nvidia results and lower oil weigh on sentiment",
+   "url": "https://www.valoraanalitik.com/premercado-bolsas-globales-operan-mixtos-mientras-inversionistas-evaluan-resultados-de-nvidia-y-caida-del-petroleo/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "English title says Nvidia results and lower oil 'weigh on sentiment'. The source does not support this. Nvidia beat estimates, S&P 500 futures were up about 0.5% pointing to a positive open, and the source never says lower oil hurt sentiment. It attributes the oil decline only to higher US inventories.",
+     "Spanish and English titles disagree. The Spanish title ('operan mixtas mientras se evalúan resultados de Nvidia y la caída del petróleo') is neutral and matches the source. The English title adds the unsupported 'weigh on sentiment' claim.",
+     "ASML actor reason says ASML's gain was 'driven by chip-related companies' (Spanish: 'ASML subió... impulsado por compañías de chips'). In the source, it is the European tech sector's 1.2% rise that was driven by semiconductor companies, not ASML's gain. The sentence should be rephrased in both languages.",
+     "Minor: category 'Other' is a poor fit for a global markets / Fed / oil brief."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-colombia-s-imports-rose-33-7-y-y-in-september-to",
+   "title": "Colombia's imports rose 33.7% y/y in September to US$8,192.8 million CIF, DANE data show",
+   "url": "https://www.valoraanalitik.com/importaciones-a-colombia-aumentaron-mas-de-30-en-septiembre-llegaron-a-us8-1928-millones-cif/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Actor 'Colombian importers of machinery and transport equipment' is rated 'mixed', but the source only reports a 41% rise in purchases. It gives no evidence of mixed or negative effects for these importers, and the reason does not explain the rating. The impact should be 'undetermined', like the other importer groups.",
+     "The same actor's reason calls machinery and transport equipment 'the group with the largest weight' ('el grupo de mayor peso' in Spanish). In the source, the largest-weight group is manufactures (72.8%), and machinery is a subgroup within it. The wording should make clear that machinery drove growth within the manufactures group.",
+     "The 'Colombia's external accounts' reason says imports 'grew faster than exports'. The source gives September 2026 export and import values but no export growth rate or September 2025 export figure, so this comparison is inferred, not stated. Rephrase to stick to the reported deficit widening."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-17-msci-colcap-falls-2-17-to-2-399-23-on-nov-17-eco",
+   "title": "MSCI Colcap falls 2.17% to 2,399.23 on Nov 17; Ecopetrol down 3.71%",
+   "url": "https://www.valoraanalitik.com/msci-colcap-profundiza-su-caida/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Actor tickers 'EC' (Ecopetrol) and 'CIB' (Grupo Cibest) are not in the source. They are the NYSE ADR tickers, while the source reports Bolsa de Colombia (BVC) local-share moves (Ecopetrol -3.71%, PFCibest -2.43%, Cibest -3.53%). The draft therefore ties the BVC price changes to US-listed instruments the source does not mention. Use the local tickers the source uses: ECOPETROL, PFCIBEST, CIBEST.",
+     "The Grupo Cibest actor combines two listings (preferred and ordinary) under the single ticker 'CIB', which matches neither local ticker in the source (PFCibest and Cibest).",
+     "Ecopetrol's reason ('adding to the index's decline' / 'contribuyó a la baja del índice') is an inference. The source reports only Ecopetrol's -3.71% move and its traded volume. It says nothing about the stock's contribution or weight in the index's fall.",
+     "The category 'Macro data' does not fit. The source is a daily equity market close report, not macroeconomic data; a markets or equities category would be more accurate.",
+     "The English summary writes volumes as '$161,146 million' and '$148,358 million' without naming the currency. In the source these are Colombian pesos (COP), and the bare '$' could be read as US dollars. State COP explicitly."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-bea-outdoor-recreation-was-2-3-of-us-gdp-704-2-b",
+   "title": "BEA: Outdoor recreation was 2.3% of US GDP ($704.2 billion) in 2025; real GDP up 1.9%",
+   "url": "https://www.bea.gov/news/2026/outdoor-recreation-economic-statistics-us-and-states-2025",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": [
+     "Minor, not a failure: the Spanish title leaves out the English title's 'real GDP up 1.9%' clause. The facts do not conflict, but the titles are not fully parallel.",
+     "Minor, not a failure: the English title's 'real GDP up 1.9%' could be misread as overall US GDP growth, which the source puts at 2.3%. Consider 'sector real GDP up 1.9%'.",
+     "Minor, not a failure: the Spanish phrasing 'fue de 6,1 % en Hawái hasta 1,0 %' is awkward. 'osciló entre 6,1 % en Hawái y 1,0 % en el Distrito de Columbia' would read better."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "title": "Colombia's Q3 2026 GDP grew 0.5%, the weakest in over two years, DANE data show",
+   "url": "https://www.valoraanalitik.com/economia-colombiana-tuvo-su-crecimiento-mas-bajo-en-mas-de-dos-anos-menos-gasto-estatal-y-terremoto-son-algunas-causas/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": [
+     "Note, not blocking: the source contradicts itself on public spending. It first says growth was 10.1% in Q2 2026 and 7.7% in Q3 2025, but later says 7.7% in Q2 2025 and 10.1% in 'Q3 2026'. The draft's 'versus 10.1% in the second quarter of 2026' matches the first statement, which is the more coherent one, but this should be verified against DANE data."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-18T22:30:18.923885+00:00"
+  },
+  {
+   "id": "2026-11-17-us-census-bureau-announces-survey-of-constructio",
+   "title": "US Census Bureau announces Survey of Construction sample redesign from January 2027 data",
+   "url": "https://www.census.gov/construction/nrc/index.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "Actor 'Users of US housing starts and completions data' is tagged impact 'mixed', but the source names no benefit or harm to data users. The comparability concern in 'reason' is the drafter's inference; the source does not say comparability across the January 2027 transition will be affected. Use 'undetermined' or remove the actor.",
+     "Actor 'Non-permit-issuing areas' is tagged impact 'adverse' without support. The source only says estimates for these areas will be discontinued and that they account for less than 1 percent of estimates. It does not say this harms the areas. Use 'undetermined' or reframe the actor.",
+     "Minor: the source is a notice of a methodology change, not a statement about effects on series levels. Keep the effects speculation in 'unknowns', where it already is, and out of actor reasons."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "title": "Banco Popular cuts credit card range from 17 types to four, open from one minimum wage",
+   "url": "https://www.valoraanalitik.com/banco-popular-relanza-tarjetas-credito/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-18T22:30:18.923902+00:00"
+  },
+  {
+   "id": "2026-11-17-census-bureau-wholesale-revisions-reflected-in-m",
+   "title": "Census Bureau: wholesale revisions reflected in manufacturing and trade inventories report",
+   "url": "https://www.census.gov/mtis/index.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "The third actor's reason says the revisions and fixed M3 seasonal models 'affect comparability of series'. The source never says this, so the claimed impact is unsupported, and the Spanish text repeats it ('afectan la comparabilidad de las series').",
+     "The third actor ties 'FRED App users' to the revisions. In the source, FRED appears only in a separate promotional sidebar saying FRED includes the Census Bureau's 13 economic indicators. Nothing links FRED users to the wholesale revisions or the M3 notice.",
+     "Minor: the summary leaves out the source's stated reason for the M3 notice ('Due to schedule and resource constraints'). Adding it would make the summary more complete; it is not a factual error."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-dollar-opens-at-cop-3-320-10-in-colombia-above-t",
+   "title": "Dollar opens at COP 3,320.10 in Colombia, above the 3,309.55 official TRM rate",
+   "url": "https://www.valoraanalitik.com/dolar-en-colombia-abre-al-alza-en-3-32010-y-se-consolida-sobre-los-3-300/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'Ecopetrol and other oil-linked Colombian issuers' (ticker EC) is unsupported. The source never mentions Ecopetrol or any listed oil company. The 'mixed' impact and its reasoning (lower oil prices reduce revenue, a weaker peso offsets it) are the drafter's own inference, not something the source states. Remove this actor or limit it to what the source supports.",
+     "The summary says Valora Analitik 'attributes the session to' global caution and lower oil prices (ES: 'atribuye la jornada a'). The source only says the session was 'marcada por' (marked by) these factors and makes no causal claim. Rephrase as 'a session marked by…'."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-17-census-bureau-retail-page-notes-annual-update-to",
+   "title": "Census Bureau retail page notes annual update to July 2026 state retail sales estimates",
+   "url": "https://www.census.gov/retail/index.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "Actor 'FRED users' is given impact 'mixed' without support. The source only says FRED now incorporates the Census Bureau's 13 economic indicators. It says nothing about any positive or negative effect on FRED users.",
+     "The FRED actor's reason says API URL changes 'may reach users through that channel'. The source ties the /timeseries/ URL change to the Census Bureau API, not to FRED. Linking it to FRED users is unsupported, as is the claim that the MSRS/MRTS revisions flow to FRED.",
+     "Watch item 1 and the second unknown use the term 'advance retail and food services' sales. The source never uses 'food services'. It only refers generally to 2026/2027 release dates on the Economic Indicator Release Schedule.",
+     "The Spanish version of watch item 1 drops 'advance' (anticipada), so it does not exactly match the English 'Next advance monthly retail and food services release'.",
+     "Minor: the source places the methodology improvements in the MSRS annual update. The 'Analysts of US retail activity' reason could be read as saying the Monthly Retail Trade methodology itself changed, which the source does not state."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-aval-asset-management-plans-new-app-and-portal-b",
+   "title": "Aval Asset Management plans new app and portal by end-2026, expects to take over iColcap ETF",
+   "url": "https://www.valoraanalitik.com/aval-asset-management-canales-digitales/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 3,
+    "issues": [
+     "The impact for 'Retail investors and clients of Aval Asset Management' is set to 'mixed', but the source gives no downside. It only describes the goal of lowering access barriers. The draft's own reason says the source gives no usage or cost details, which supports 'undetermined', not 'mixed'.",
+     "The actor reason for Aval Asset Management (EN 'According to its president', ES 'Según su presidente') misattributes the stated aim. In the source, the aim to widen the service offering and strengthen its capital-market role is the outlet's own framing, not a statement from Alejandro Gómez. His quote only covers bringing clients closer and letting them see everything and transact in one place.",
+     "The ticker 'AVAL' is not in the source. Aval Asset Management is a non-listed subsidiary, so attaching the parent's ticker (NYSE ADR; BVC tickers are GRUPOAVAL/PFAVAL) is unsupported and may suggest a direct effect on the listed parent that the source does not claim."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-fed-october-minutes-almost-all-officials-see-fur",
+   "title": "Fed October minutes: almost all officials see further rate hikes as likely appropriate",
+   "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'AI-related firms' is labeled 'adverse', but the source only describes a conditional risk. Staff noted that off-balance-sheet leasing and circular financing 'could amplify losses if returns on AI investment were to disappoint.' The source does not say AI firms are being or will be harmed, so the impact should be 'undetermined' or the reason should be reframed as a conditional risk.",
+     "Actor 'AI-related firms' reason says 'Staff and officials flagged' concentrated exposures. In the source, staff flagged leasing and circular financing, and only 'a few participants' remarked on concentration. The attribution should be more precise.",
+     "Actor 'Borrowers exposed to higher policy rates': the source does not mention borrowers or borrowing costs. The 'adverse' impact is an inference from expected hikes, not stated in the source, and should be framed as conditional on the hikes happening.",
+     "Minor ES/EN mismatch: the English title says 'Fed October minutes' but the Spanish title omits 'octubre' ('Actas de la Fed')."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-colombia-sets-calendar-for-consensus-minimum-wag",
+   "title": "Colombia sets calendar for consensus minimum wage talks, with first legal deadline Dec. 15",
+   "url": "https://www.valoraanalitik.com/hasta-esta-fecha-habra-plazo-para-definir-aumento-del-salario-minimo-en-colombia-por-consenso/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Government actor reason (EN and ES) says the government can call extra sessions 'if the Dec. 15 deadline passes without an agreement'. The source only says the government may call additional extraordinary sessions to seek consensus and does not tie this to the Dec. 15 deadline. Remove the condition.",
+     "Summary says the commission 'was formally installed on Nov. 18' (ES: 'se instaló formalmente'). The source lists Nov. 18 only as a scheduled date in the calendar and does not report that the installation took place. Rephrase as 'is scheduled to be formally installed on Nov. 18' or 'the calendar sets Nov. 18 for the formal installation'.",
+     "Business owners actor reason adds that the outcome 'would affect their labor costs'. The source does not support this; it only reports their stated position. Limit the reason to the reported position.",
+     "Title 'Colombia sets calendar' implies a new decision. The source says the definition is subject to an existing calendar of legal deadlines. Consider rewording, e.g. 'Key dates for Colombia's consensus minimum wage talks'.",
+     "Summary says the '2027' increase. The source says 'para el año entrante', which is a reasonable inference from the 2026-11-18 publication date. Acceptable, but consider 'next year's increase' for strict fidelity.",
+     "The summary omits the Dec. 16-17 objections window that precedes the Dec. 18-19 review period cited in unknowns. This is optional context, not an error."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-fed-s-waller-says-a-half-point-rate-hike-is-prob",
+   "title": "Fed's Waller says a half-point rate hike is probably needed in December",
+   "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Actor 'Fed Chairman Kevin Warsh' misattributes the conflict. The draft says 'Waller's proposal runs against Warsh's stated dislike of forward guidance' (ES: 'La propuesta de Waller choca con el rechazo declarado de Warsh...'). The source says only the alternative (a quarter-point hike plus a signal of a January move) runs contrary to Warsh's preference. Waller's main proposal, a 50 bp hike in December, is what he says is needed if the Fed will not signal clearly, so it does not conflict with Warsh's stance.",
+     "Actor 'Fed Chairman Kevin Warsh' has impact 'mixed', which the source does not support. Nothing in the source says how Waller's remarks affect Warsh.",
+     "Actor 'Fed funds futures market participants' has impact 'mixed', which is not supported by the source. The reason also leaves out that futures already price another move in January and at least one more increase before end-2027.",
+     "Actor 'Fed officials favoring gradual tightening (Hammack, Logan, Williams)' groups Williams with Hammack and Logan. The source says only Hammack and Logan endorsed more gradual tightening. Williams said the situation does not call for 'dramatic action' and that the current approach is working well; he did not explicitly endorse gradual tightening.",
+     "Watch item 1 states the October minutes 'show how many officials favored further tightening' (ES: 'muestran cuántos funcionarios apoyaban más endurecimiento'). This asserts the minutes' content, which the source does not report. The source says only that the minutes will be released later Wednesday. Rephrase as something to check.",
+     "Minor Spanish grammar: 'una alza de un cuarto de punto' should be 'un alza de un cuarto de punto'."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-18-colombian-dollar-closes-at-cop-3-356-up-cop-52-6",
+   "title": "Colombian dollar closes at COP 3,356, up COP 52.60, on heavy buying volume",
+   "url": "https://www.valoraanalitik.com/dolar-en-colombia-se-dispara-mas-de-50-y-cierra-en-3-356-impulsado-por-fuerte-volumen-comprador/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'Oil-linked Colombian external accounts' / 'Cuentas externas colombianas ligadas al petróleo' is marked 'adverse', but the source never mentions external accounts, the trade balance or oil revenues. It only says Acciones & Valores cited weak oil as removing support for the peso. The impact on this actor is an unsupported inference. Remove this actor, or fold the oil point into the 'Colombian peso' actor."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  }
+ ]
+}

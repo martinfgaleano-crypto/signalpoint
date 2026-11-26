@@ -1,0 +1,988 @@
+{
+ "generatedAt": "2026-11-24T21:22:53.807943+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "1 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "1 (first date: Tue, 24 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-24 21:20:00)",
+  "Portafolio": "10 (first date: 2026-11-24T16:01:26-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "0 (first date: Fri, 20 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "0 (first date: Fri, 20 Nov 2026 13:03:24 -0500)",
+  "US Census Bureau (economic indicators)": "0 (first date: Thu, 19 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "3 (first date: Tue, 24 Nov 2026 18:34:43 GMT)",
+  "CNBC Finance": "6 (first date: Tue, 24 Nov 2026 18:34:55 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-24-fed-board-releases-minutes-of-its-october-19-and",
+   "title": "Fed Board releases minutes of its October 19 and October 28, 2026 discount rate meetings",
+   "category": "Central banks",
+   "region": "US",
+   "eventDate": "2026-11-24",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm"
+   },
+   "summary": "On November 24, 2026, the Federal Reserve Board released the minutes of its meetings to review and determine the discount rates offered to depository institutions through the discount window. The minutes cover the Board meetings held on October 19 and October 28, 2026. The Board states that its process for setting the discount rate is distinct from the process the Federal Open Market Committee follows in setting the target range for the federal funds rate. The press release text does not give any rate levels or decisions; those are in the attached PDF.",
+   "actors": [
+    {
+     "name": "Depository institutions",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They borrow through the discount window, so the discount rate affects their cost of that funding, but the release text gives no rate decision."
+    },
+    {
+     "name": "Federal Reserve Board of Governors",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It sets the discount rate in its own meetings, and the minutes document those meetings."
+    },
+    {
+     "name": "Federal Open Market Committee",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It sets the federal funds rate target range through a separate process, which the Board says is distinct from the discount rate process."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Review the attached PDF minutes for any discount rate decisions or changes discussed on October 19 and October 28, 2026",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the PDF attachment to the Federal Reserve press release."
+    },
+    {
+     "text": "Look for the Federal Reserve's published discount rate schedule to see whether rates changed after these meetings",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the Fed's posted discount window rates with prior published levels."
+    }
+   ],
+   "unknowns": [
+    "Did the Board change the discount rate at either meeting?",
+    "What reasons did the Board record for its discount rate decisions?",
+    "How do the discount rates relate to the federal funds target range at present?"
+   ],
+   "tags": [
+    "Federal Reserve",
+    "discount rate",
+    "discount window",
+    "minutes",
+    "US"
+   ],
+   "es": {
+    "title": "La Fed publica actas de sus reuniones de tasa de descuento del 19 y 28 de octubre de 2026",
+    "summary": "El 24 de noviembre de 2026, la Junta de la Reserva Federal publicó las actas de sus reuniones para revisar y determinar las tasas de descuento ofrecidas a las instituciones depositarias a través de la ventanilla de descuento. Las actas cubren las reuniones de la Junta del 19 y el 28 de octubre de 2026. La Junta señala que su proceso para fijar la tasa de descuento es distinto del que sigue el Comité Federal de Mercado Abierto para establecer el rango objetivo de la tasa de los fondos federales. El texto del comunicado no incluye niveles de tasas ni decisiones; esos datos están en el PDF adjunto.",
+    "actors": [
+     {
+      "name": "Instituciones depositarias",
+      "reason": "Se financian a través de la ventanilla de descuento, por lo que la tasa de descuento afecta el costo de ese financiamiento, pero el texto no informa ninguna decisión sobre tasas."
+     },
+     {
+      "name": "Junta de Gobernadores de la Reserva Federal",
+      "reason": "Fija la tasa de descuento en sus propias reuniones, que las actas documentan."
+     },
+     {
+      "name": "Comité Federal de Mercado Abierto",
+      "reason": "Establece el rango objetivo de la tasa de los fondos federales mediante un proceso aparte, que la Junta describe como distinto del de la tasa de descuento."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Revisar el PDF adjunto de las actas para ver las decisiones o cambios de la tasa de descuento discutidos el 19 y el 28 de octubre de 2026",
+      "note": "Consultar el archivo PDF adjunto al comunicado de la Reserva Federal."
+     },
+     {
+      "text": "Consultar el cuadro publicado de tasas de descuento de la Fed para ver si las tasas cambiaron tras estas reuniones",
+      "note": "Comparar las tasas de la ventanilla de descuento publicadas por la Fed con los niveles previos."
+     }
+    ],
+    "unknowns": [
+     "¿Cambió la Junta la tasa de descuento en alguna de las dos reuniones?",
+     "¿Qué razones registró la Junta para sus decisiones sobre la tasa de descuento?",
+     "¿Cómo se relacionan actualmente las tasas de descuento con el rango objetivo de los fondos federales?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-24-banrep-s-villar-says-2027-minimum-wage-rise-shou",
+   "title": "BanRep's Villar says 2027 minimum wage rise should reflect inflation plus productivity",
+   "category": "Central banks",
+   "region": "Colombia",
+   "eventDate": "2026-11-24",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/gerente-del-banco-de-la-republica-dice-cual-seria-la-receta-adecuada-para-el-aumento-del-salario-minimo-en-colombia-del-2027/"
+   },
+   "summary": "Banco de la República manager Leonardo Villar said at the launch of the OECD Economic Survey: Colombia 2026 that the minimum wage increase should return to adjustments in line with the economic situation. He said inflation could end this year at around 6% or 7% and that an effort is needed to bring inflation lower next year. Villar cited a Constitutional Court ruling that the increase must be at least equal to observed inflation, with a component for productivity added. He also said a technical decision would help the central bank avoid keeping such a restrictive policy.",
+   "actors": [
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Villar said a technical wage decision would mean the bank does not have to keep such a restrictive policy, so the outcome could affect its policy stance."
+    },
+    {
+     "name": "Minimum wage workers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Villar said real wages rise more if inflation falls than if the decision adds upward inflation pressure."
+    },
+    {
+     "name": "Employers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They take part in the wage negotiation table, and the size of the increase will determine their labor costs."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Outcome of the wage negotiation table among workers, the Government and employers on the 2027 minimum wage",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official announcements from the Government and the negotiation table."
+    },
+    {
+     "text": "Whether the agreed increase is at least equal to observed inflation plus a productivity component",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the announced percentage with year-end inflation reported by the statistics office."
+    },
+    {
+     "text": "Banco de la República comments on the wage decision and its policy stance",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the bank's statements and board communications after the decision."
+    }
+   ],
+   "unknowns": [
+    "What exact increase will be agreed for 2027?",
+    "How large a productivity component would be recognized?",
+    "Will the parties reach a consensus or will the Government decide the increase?"
+   ],
+   "tags": [
+    "minimum wage",
+    "Colombia",
+    "Banco de la República",
+    "inflation",
+    "Leonardo Villar",
+    "OECD"
+   ],
+   "es": {
+    "title": "Villar (BanRep): alza del salario mínimo 2027 debería reflejar inflación y productividad",
+    "summary": "El gerente del Banco de la República, Leonardo Villar, dijo en el lanzamiento del Economic Survey: Colombia 2026 de la OCDE que se debe volver a ajustes acordes con la situación económica. Señaló que la inflación podría terminar este año alrededor del 6 % o 7 % y que se requiere un esfuerzo para que el próximo año sea más baja. Villar citó una sentencia de la Corte Constitucional según la cual el aumento debe ser, cuando menos, igual a la inflación observada, a lo que debe sumarse un componente de productividad. También afirmó que una decisión técnica ayudaría a que el Banco no tenga que mantener una política tan restrictiva.",
+    "actors": [
+     {
+      "name": "Banco de la República",
+      "reason": "Villar dijo que una decisión técnica sobre el salario haría que el Banco no tenga que mantener una política tan restrictiva, por lo que el resultado podría afectar su postura."
+     },
+     {
+      "name": "Trabajadores con salario mínimo",
+      "reason": "Villar dijo que el salario real sube con más fuerza si la inflación baja que si la decisión genera presiones inflacionarias al alza."
+     },
+     {
+      "name": "Empresarios",
+      "reason": "Participan en la mesa de concertación y el tamaño del aumento determinará sus costos laborales."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Resultado de la mesa de concertación entre trabajadores, Gobierno y empresarios sobre el salario mínimo de 2027",
+      "note": "Revisar los anuncios oficiales del Gobierno y de la mesa de concertación."
+     },
+     {
+      "text": "Si el aumento acordado es al menos igual a la inflación observada más un componente de productividad",
+      "note": "Comparar el porcentaje anunciado con la inflación de cierre de año publicada por la entidad estadística."
+     },
+     {
+      "text": "Comentarios del Banco de la República sobre la decisión salarial y su postura de política",
+      "note": "Revisar los pronunciamientos y comunicados del Banco tras la decisión."
+     }
+    ],
+    "unknowns": [
+     "¿Cuál será el aumento exacto acordado para 2027?",
+     "¿Qué tan grande sería el componente de productividad que se reconozca?",
+     "¿Las partes llegarán a un consenso o el Gobierno decidirá el aumento?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-24-eia-explains-how-it-converts-different-energy-so",
+   "title": "EIA explains how it converts different energy sources to Btu to compare them",
+   "category": "Other",
+   "region": "US",
+   "eventDate": "2026-11-24",
+   "evidence": "A",
+   "source": {
+    "name": "U.S. Energy Information Administration",
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=68504"
+   },
+   "summary": "EIA says it converts production and consumption of different resources to British thermal units (Btu) so they can be compared. For combustible fuels it uses thermal conversion factors that it updates each year, and it publishes heat content data for more than 30 petroleum products, 4 types of coal, and natural gas. For hydro, wind, solar and geothermal it applies a constant heat content of electricity of 3,412 Btu/kWh. Since 2001, heat rates for coal and petroleum generation have risen slightly, while the rate for natural gas has gone down.",
+   "actors": [
+    {
+     "name": "Energy analysts and data users",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Knowing the conversion methods helps them interpret EIA comparisons across fuels, but the source does not describe any specific effect."
+    },
+    {
+     "name": "Natural gas-fired power generators",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The source says the heat rate for gas generation has fallen since 2001, partly due to more efficient combined-cycle plants, meaning less energy used per kWh."
+    },
+    {
+     "name": "Coal and petroleum-fired power generators",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The source says heat rates for coal and petroleum generation have risen slightly since 2001, indicating slightly lower conversion efficiency."
+    }
+   ],
+   "watch": [
+    {
+     "text": "EIA's annual update of thermal conversion factors for fuels",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the heat content tables in EIA's Monthly Energy Review for revised factors."
+    },
+    {
+     "text": "Changes in the aggregate heat content of coal as the production and consumption mix shifts",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare coal heat content data in later Monthly Energy Review releases."
+    },
+    {
+     "text": "Further movement in heat rates for gas, coal and petroleum generation",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review heat rate data published in EIA's Monthly Energy Review."
+    }
+   ],
+   "unknowns": [
+    "How large are the changes in heat rates since 2001, since the text gives no figures?",
+    "Will the next annual factor update materially change comparisons across fuels?",
+    "How much does the choice of conversion method change the relative share of renewables?"
+   ],
+   "tags": [
+    "EIA",
+    "Btu",
+    "heat rate",
+    "methodology",
+    "electricity",
+    "energy statistics"
+   ],
+   "es": {
+    "title": "La EIA explica cómo convierte distintas fuentes de energía a Btu para poder compararlas",
+    "summary": "La EIA indica que convierte la producción y el consumo de distintos recursos a unidades térmicas británicas (Btu) para poder compararlos. Para los combustibles que se queman usa factores de conversión térmica que actualiza cada año, y publica datos de poder calórico de más de 30 productos derivados del petróleo, 4 tipos de carbón y el gas natural. Para la hidroenergía, la eólica, la solar y la geotérmica aplica un contenido calórico constante de la electricidad de 3.412 Btu/kWh. Desde 2001, las tasas de consumo térmico de la generación con carbón y petróleo han subido levemente, mientras que la del gas natural ha bajado.",
+    "actors": [
+     {
+      "name": "Analistas y usuarios de datos de energía",
+      "reason": "Conocer los métodos de conversión les ayuda a interpretar las comparaciones de la EIA entre combustibles, pero la fuente no describe ningún efecto específico."
+     },
+     {
+      "name": "Generadores eléctricos a gas natural",
+      "reason": "La fuente indica que la tasa de consumo térmico de la generación con gas ha bajado desde 2001, en parte por plantas de ciclo combinado más eficientes, es decir, menos energía por kWh."
+     },
+     {
+      "name": "Generadores eléctricos a carbón y petróleo",
+      "reason": "La fuente indica que las tasas de consumo térmico de la generación con carbón y petróleo han subido levemente desde 2001, lo que implica una eficiencia de conversión algo menor."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Actualización anual de los factores de conversión térmica de los combustibles por parte de la EIA",
+      "note": "Revisar las tablas de poder calórico del Monthly Energy Review de la EIA para ver factores revisados."
+     },
+     {
+      "text": "Cambios en el poder calórico agregado del carbón a medida que cambia la mezcla de producción y consumo",
+      "note": "Comparar los datos de poder calórico del carbón en próximas ediciones del Monthly Energy Review."
+     },
+     {
+      "text": "Nuevos movimientos en las tasas de consumo térmico de la generación con gas, carbón y petróleo",
+      "note": "Revisar los datos de tasas de consumo térmico publicados en el Monthly Energy Review de la EIA."
+     }
+    ],
+    "unknowns": [
+     "¿Qué tan grandes son los cambios en las tasas de consumo térmico desde 2001, si el texto no da cifras?",
+     "¿La próxima actualización anual de factores cambiará de forma importante las comparaciones entre combustibles?",
+     "¿Cuánto altera la elección del método de conversión la participación relativa de las energías renovables?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-24-carf-says-rescue-law-alone-would-not-stabilize-d",
+   "title": "CARF says rescue law alone would not stabilize debt, sees net debt at 78.1% of GDP in 2030",
+   "category": "Regulation",
+   "region": "Colombia",
+   "eventDate": "2026-11-24",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/ley-de-rescate-economico-no-bastaria-para-frenar-el-crecimiento-de-la-deuda/"
+   },
+   "summary": "Colombia's Autonomous Committee on the Fiscal Rule (CARF) presented its analysis of the government's economic rescue law. It says the measures would help correct the fiscal imbalance and moderate the pace of borrowing, but net debt would keep rising to 78.1% of GDP in 2030. The Finance Ministry expects debt to stabilize at 64% of GDP, counting positive macroeconomic effects and measures outside the law. CARF estimates the law contributes 1.9% of GDP in 2027 and an average of 3.15% between 2028 and 2030, assuming no indirect macroeconomic effect and excluding unregulated measures.",
+   "actors": [
+    {
+     "name": "Colombian national government (Finance Ministry)",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "CARF backs the size of the proposed adjustment as a minimum but questions whether the law alone, as the government's projection assumes, can stabilize debt."
+    },
+    {
+     "name": "Congress of Colombia",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "CARF asks that any change reducing the law's fiscal effect during the legislative process be offset by equivalent measures."
+    },
+    {
+     "name": "Health, pension and regional transfer (SGP) systems",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The law strengthens health revenues, but CARF says it does not address health spending pressures or the structural imbalances in pensions and the SGP."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Changes made to the rescue law during the legislative process and whether any reduction in fiscal effect is offset",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the approved text and its fiscal estimates with the government's original proposal and CARF's statements."
+    },
+    {
+     "text": "Implementation of the additional spending cuts and administrative measures that CARF asked the Executive to carry out",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review government decrees and Finance Ministry announcements."
+    },
+    {
+     "text": "Government disclosure of the measures outside the law (decrees, National Development Plan) behind its 64% of GDP debt projection",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Finance Ministry fiscal documents and later CARF pronouncements."
+    }
+   ],
+   "unknowns": [
+    "What the measures outside the law that underpin the government's 64% of GDP projection actually contain.",
+    "Which structural spending-containment measures, if any, will be adopted in addition to the law.",
+    "Whether Congress will modify the law in a way that reduces its fiscal effect."
+   ],
+   "tags": [
+    "CARF",
+    "Colombia",
+    "public debt",
+    "fiscal rule",
+    "rescue law",
+    "fiscal adjustment"
+   ],
+   "es": {
+    "title": "CARF: la ley de rescate no basta para estabilizar la deuda, que llegaría a 78,1 % del PIB en 2030",
+    "summary": "El Comité Autónomo de la Regla Fiscal (CARF) presentó su análisis de la ley de rescate económico del Gobierno. Señala que las medidas ayudarían a corregir el desbalance fiscal y a moderar el ritmo de endeudamiento, pero que la deuda neta seguiría aumentando hasta 78,1 % del PIB en 2030. El Ministerio de Hacienda prevé estabilizar la deuda en 64 % del PIB, al incluir impactos macroeconómicos positivos y medidas externas a la ley. El CARF calcula que la ley aporta 1,9 % del PIB en 2027 y un promedio de 3,15 % entre 2028 y 2030, con efecto macroeconómico indirecto nulo y sin contar medidas no reglamentadas.",
+    "actors": [
+     {
+      "name": "Gobierno nacional (Ministerio de Hacienda)",
+      "reason": "El CARF respalda como mínimo la magnitud del ajuste propuesto, pero cuestiona que la ley por sí sola, como supone la proyección del Gobierno, logre estabilizar la deuda."
+     },
+     {
+      "name": "Congreso de la República",
+      "reason": "El CARF pide que cualquier modificación que reduzca el efecto fiscal de la ley durante el trámite legislativo se compense con medidas de impacto equivalente."
+     },
+     {
+      "name": "Sistemas de salud, pensiones y Sistema General de Participaciones (SGP)",
+      "reason": "La ley fortalece los ingresos de la salud, pero el CARF indica que no aborda las presiones de gasto en salud ni los desequilibrios estructurales de pensiones y del SGP."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Cambios a la ley de rescate durante el trámite legislativo y si se compensa cualquier reducción de su efecto fiscal",
+      "note": "Comparar el texto aprobado y sus estimaciones fiscales con la propuesta original del Gobierno y los pronunciamientos del CARF."
+     },
+     {
+      "text": "Implementación de los recortes adicionales de gasto y las medidas administrativas que el CARF pidió al Ejecutivo",
+      "note": "Revisar decretos del Gobierno y comunicados del Ministerio de Hacienda."
+     },
+     {
+      "text": "Divulgación por parte del Gobierno de las medidas externas a la ley (decretos, Plan Nacional de Desarrollo) que sustentan su proyección de deuda de 64 % del PIB",
+      "note": "Consultar documentos fiscales del Ministerio de Hacienda y nuevos pronunciamientos del CARF."
+     }
+    ],
+    "unknowns": [
+     "Qué contienen realmente las medidas externas a la ley que sustentan la proyección del Gobierno de 64 % del PIB.",
+     "Qué medidas estructurales de contención del gasto, si las hay, se adoptarán además de la ley.",
+     "Si el Congreso modificará la ley de forma que reduzca su efecto fiscal."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-24-us-consumer-confidence-rises-to-103-3-in-novembe",
+   "title": "US consumer confidence rises to 103.3 in November; inflation worries persist",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-24",
+   "evidence": "B",
+   "source": {
+    "name": "CNBC Economy",
+    "url": "https://www.cnbc.com/2026/11/24/consumer-confidence-november-election-midterm.html"
+   },
+   "summary": "The Conference Board's consumer confidence index rose to 103.3 in November, up 11.4 points from October and well above the Dow Jones consensus of 92.2. The board said confidence among Democrats and independents improved sharply, while confidence among Republicans fell slightly. Twelve-month inflation expectations fell for a second straight month but remained high at 5.7%. The share of respondents seeing jobs as 'plentiful' rose to 30.8% from 26.2%, while 'hard to get' fell to 18.4%.",
+   "actors": [
+    {
+     "name": "US households",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Respondents are more optimistic about jobs and the economy, but they still voiced frustration with high prices and rising costs."
+    },
+    {
+     "name": "Federal Reserve",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Inflation expectations of 5.7% remain high while the Fed is expected to raise rates by a quarter point, and the survey does not show how this would change policy."
+    },
+    {
+     "name": "Consumer-facing businesses",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Higher confidence could affect spending, but the source gives no data on actual purchases."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Federal Reserve decision at its next meeting, expected to be a quarter-point rate increase",
+     "due": "2026-12-08",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Fed's policy statement; the date is approximate, based on the source's 'in two weeks'."
+    },
+    {
+     "text": "Whether 12-month inflation expectations in the Conference Board survey keep falling from 5.7%",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare with the next monthly Conference Board release."
+    },
+    {
+     "text": "Whether the gap between 'plentiful' and 'hard to get' jobs stays near 12.4 percentage points",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the labor differential in the next monthly survey."
+    }
+   ],
+   "unknowns": [
+    "Will the improvement in confidence last beyond the post-election period?",
+    "Will higher confidence translate into actual consumer spending?",
+    "How much of the change reflects the partisan split rather than a broader shift in views?"
+   ],
+   "tags": [
+    "consumer confidence",
+    "Conference Board",
+    "inflation expectations",
+    "Federal Reserve",
+    "midterms",
+    "labor market"
+   ],
+   "es": {
+    "title": "Confianza del consumidor en EE. UU. sube a 103,3 en noviembre; persiste la preocupación por inflación",
+    "summary": "El índice de confianza del consumidor del Conference Board subió a 103,3 en noviembre, 11,4 puntos más que en octubre y muy por encima del consenso de Dow Jones de 92,2. La entidad indicó que la confianza de demócratas e independientes mejoró con fuerza, mientras que la de los republicanos cayó levemente. Las expectativas de inflación a 12 meses bajaron por segundo mes consecutivo, pero siguen altas, en 5,7%. La proporción de encuestados que consideran los empleos «abundantes» subió a 30,8% desde 26,2%, y la de «difíciles de conseguir» bajó a 18,4%.",
+    "actors": [
+     {
+      "name": "Hogares de EE. UU.",
+      "reason": "Los encuestados están más optimistas sobre el empleo y la economía, pero siguen expresando frustración por los precios altos y el aumento de los costos."
+     },
+     {
+      "name": "Reserva Federal",
+      "reason": "Las expectativas de inflación de 5,7% siguen altas mientras se espera que la Fed suba la tasa un cuarto de punto, y la encuesta no muestra cómo cambiaría esto la política monetaria."
+     },
+     {
+      "name": "Empresas orientadas al consumidor",
+      "reason": "Una mayor confianza podría influir en el gasto, pero la fuente no ofrece datos sobre compras efectivas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión de la Reserva Federal en su próxima reunión, en la que se espera un alza de un cuarto de punto",
+      "note": "Revisar el comunicado de política de la Fed; la fecha es aproximada, según el «en dos semanas» de la fuente."
+     },
+     {
+      "text": "Si las expectativas de inflación a 12 meses de la encuesta del Conference Board siguen bajando desde 5,7%",
+      "note": "Comparar con la próxima publicación mensual del Conference Board."
+     },
+     {
+      "text": "Si la brecha entre empleos «abundantes» y «difíciles de conseguir» se mantiene cerca de 12,4 puntos porcentuales",
+      "note": "Revisar el diferencial laboral en la próxima encuesta mensual."
+     }
+    ],
+    "unknowns": [
+     "¿La mejora de la confianza se mantendrá más allá del periodo posterior a las elecciones?",
+     "¿Una mayor confianza se traducirá en gasto real de los consumidores?",
+     "¿Cuánto del cambio refleja la división partidista y no un giro más amplio de opinión?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "title": "Nvidia shares up 31.97% on Colombia's Global Market as Colcap rises 2.02% on Nov 23",
+   "category": "Other",
+   "region": "Colombia",
+   "eventDate": "2026-11-23",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/acciones-de-nvidia-se-disparan-en-el-mercado-global-colombiano-tras-regreso-de-jensen-huang-co/"
+   },
+   "summary": "Valora Analitik reports that the MSCI Colcap closed on November 23, 2026 at 2,345.96 points, up 2.02%, with a year-to-date gain of 13.44%. Equity trading volume was COP 224,284 million, down 15.40% from COP 265,106 million the previous session. In the Mercado Global Colombiano, NVIDIA Corporation (NVDACO) rose 31.97% on volume of COP 18,281 million, the most traded asset in that market. The outlet links the move to the return of Jensen Huang as CEO, citing a related article headline that says Nvidia reinstated him and its shares jumped 30%.",
+   "actors": [
+    {
+     "name": "NVIDIA Corporation (NVDACO in the Mercado Global Colombiano)",
+     "ticker": "NVDA",
+     "impact": "favorable",
+     "reason": "Its shares rose 31.97% in the Colombian market, which Valora Analitik ties to Jensen Huang's return as CEO."
+    },
+    {
+     "name": "Mineros",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "It was the top gainer in the MSCI Colcap, rising 8.58% on the day."
+    },
+    {
+     "name": "Grupo Éxito",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Its shares fell 2.89%, the largest decline among the assets listed in the report."
+    },
+    {
+     "name": "Grupo Cibest (preferred)",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Its preferred shares rose 3.69% and were the second most traded, with COP 49,832 million."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the MSCI Colcap holds above the 2,300-point support cited by Valora Analitik or approaches the 2,500-point resistance",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare subsequent daily Colcap closes published by the Bolsa de Colombia and Valora Analitik with the 2,300 and 2,500 levels."
+    },
+    {
+     "text": "Trading volume and price of NVDACO in the Mercado Global Colombiano in the following sessions",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the daily market reports for NVDACO's variation and traded amount relative to the COP 18,281 million recorded on November 23."
+    },
+    {
+     "text": "Official confirmation of the CEO change from Nvidia",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Nvidia's own press releases or regulatory filings for the announcement referenced in the related Valora Analitik article."
+    }
+   ],
+   "unknowns": [
+    "What exactly Nvidia announced about Jensen Huang's role, since the text only cites a related headline?",
+    "How closely does the NVDACO move track the price of Nvidia shares in their primary market?",
+    "Is the MSCI Colcap's 2.02% gain linked to the Nvidia news or to other factors?"
+   ],
+   "tags": [
+    "Nvidia",
+    "Jensen Huang",
+    "MSCI Colcap",
+    "Mercado Global Colombiano",
+    "Bolsa de Colombia",
+    "Mineros"
+   ],
+   "es": {
+    "title": "Acciones de Nvidia suben 31,97 % en el Mercado Global Colombiano y el Colcap avanza 2,02 %",
+    "summary": "Valora Analitik reporta que el MSCI Colcap cerró el 23 de noviembre de 2026 en 2.345,96 puntos, con alza de 2,02 % y un acumulado anual de 13,44 %. El volumen del mercado accionario fue de $224.284 millones, 15,40 % menos que los $265.106 millones de la jornada anterior. En el Mercado Global Colombiano, las acciones de NVIDIA Corporation (NVDACO) subieron 31,97 % con un volumen de $18.281 millones, el activo más negociado de ese mercado. El medio vincula el movimiento con el regreso de Jensen Huang como CEO, citando el titular de una nota relacionada según el cual Nvidia lo restituyó y sus acciones se dispararon 30 %.",
+    "actors": [
+     {
+      "name": "NVIDIA Corporation (NVDACO en el Mercado Global Colombiano)",
+      "reason": "Sus acciones subieron 31,97 % en el mercado colombiano, algo que Valora Analitik asocia con el regreso de Jensen Huang como CEO."
+     },
+     {
+      "name": "Mineros",
+      "reason": "Fue el mayor ganador del MSCI Colcap, con un alza de 8,58 % en la jornada."
+     },
+     {
+      "name": "Grupo Éxito",
+      "reason": "Sus acciones bajaron 2,89 %, la mayor caída entre los activos listados en el reporte."
+     },
+     {
+      "name": "Grupo Cibest (preferencial)",
+      "reason": "Sus acciones preferenciales subieron 3,69 % y fueron las segundas más negociadas, con $49.832 millones."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el MSCI Colcap se mantiene por encima del soporte de 2.300 puntos citado por Valora Analitik o se acerca a la resistencia de 2.500 puntos",
+      "note": "Comparar los cierres diarios posteriores del Colcap publicados por la Bolsa de Colombia y Valora Analitik con los niveles de 2.300 y 2.500."
+     },
+     {
+      "text": "Volumen y precio de NVDACO en el Mercado Global Colombiano en las siguientes sesiones",
+      "note": "Revisar los reportes diarios del mercado para ver la variación de NVDACO y el monto negociado frente a los $18.281 millones del 23 de noviembre."
+     },
+     {
+      "text": "Confirmación oficial del cambio de CEO por parte de Nvidia",
+      "note": "Consultar los comunicados o reportes regulatorios de Nvidia sobre el anuncio mencionado en la nota relacionada de Valora Analitik."
+     }
+    ],
+    "unknowns": [
+     "¿Qué anunció exactamente Nvidia sobre el cargo de Jensen Huang, si el texto solo cita un titular relacionado?",
+     "¿Qué tan de cerca sigue el movimiento de NVDACO al precio de las acciones de Nvidia en su mercado principal?",
+     "¿El avance de 2,02 % del MSCI Colcap está vinculado con la noticia de Nvidia o con otros factores?"
+    ]
+   }
+  }
+ ],
+ "rejected": [],
+ "candidates": {
+  "from_feeds": 72,
+  "after_filter": 24,
+  "sample": [
+   "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+   "Gerente del Banco de la República dice cuál sería la receta adecuada para el aumento del s",
+   "How does EIA compare different types of energy?",
+   "Ley de rescate económico no bastaría para frenar el crecimiento de la deuda, según el CARF",
+   "Consumer confidence shoots up after Democrats' midterm victories — though inflation worrie",
+   "Acciones de Nvidia se disparan en el Mercado Global Colombiano tras regreso de Jensen Huan",
+   "Why France is at risk of recession — and what could keep it out of one",
+   "Premercado | Bolsas de Asia repuntan tras rally de Nvidia; Europa retrocede y Wall Street "
+  ],
+  "dropped": {
+   "seen": 2,
+   "skip": 1,
+   "no_topic": 45
+  },
+  "raw_sample": [
+   [
+    "A",
+    0,
+    "Minutes of the Board's discount rate meetings on October 19 and Octobe"
+   ],
+   [
+    "A",
+    0,
+    "How does EIA compare different types of energy?"
+   ],
+   [
+    "B",
+    0,
+    "Montería integrará Businú al transporte público y sumará más de 30 bus"
+   ],
+   [
+    "B",
+    0,
+    "La IA necesita energía: el reto de preparar a Colombia para la próxima"
+   ],
+   [
+    "B",
+    0,
+    "Cambio que tendrían empresas en Colombia con proyecto de ley que busca"
+   ],
+   [
+    "B",
+    0,
+    "Fiducoldex removió a Andrés Guzmán como presidente de la entidad tras "
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-24-fed-board-releases-minutes-of-its-october-19-and",
+   "title": "Fed Board releases minutes of its October 19 and October 28, 2026 discount rate meetings",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": [
+     "Minor: the summary states that rate levels and decisions 'are in the attached PDF' (ES: 'esos datos están en el PDF adjunto'). The source only lists an 'Attachment (PDF)' and does not describe its contents. Suggest rewording to 'the minutes themselves are provided as an attached PDF' in both language versions."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-24T21:26:10.621427+00:00"
+  },
+  {
+   "id": "2026-11-24-banrep-s-villar-says-2027-minimum-wage-rise-shou",
+   "title": "BanRep's Villar says 2027 minimum wage rise should reflect inflation plus productivity",
+   "url": "https://www.valoraanalitik.com/gerente-del-banco-de-la-republica-dice-cual-seria-la-receta-adecuada-para-el-aumento-del-salario-minimo-en-colombia-del-2027/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'Employers' / 'Empresarios': the reason says the size of the increase 'will determine their labor costs' ('determinará sus costos laborales'). The source does not say this. It only says employers take part in the negotiation table, so this impact claim is unsupported.",
+     "Minor: the Spanish summary's first sentence says 'se debe volver a ajustes acordes con la situación económica' without naming the minimum wage increase, while the English names it explicitly. It is not a contradiction, but adding 'del salario mínimo' would align the two versions."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-24-eia-explains-how-it-converts-different-energy-so",
+   "title": "EIA explains how it converts different energy sources to Btu to compare them",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68504",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "The 'favorable' impact for natural gas-fired generators is not supported by the source. EIA only reports that the aggregate heat rate for gas generation has declined since 2001, partly due to more efficient combined-cycle plants. It says nothing about any benefit to generators, such as costs, margins or competitiveness. The impact should be 'undetermined', or the actor should be removed.",
+     "The 'adverse' impact for coal and petroleum-fired generators is not supported by the source. EIA only says their heat rates have 'risen slightly' since 2001. It gives no cause and states no effect on these generators. The impact should be 'undetermined', or the actor should be removed.",
+     "Minor: the summary's '3,412 Btu/kWh' for hydro, wind, solar and geothermal is supported, but the source frames this as the 'captured energy approach'. Naming the method would be more precise. This is not a factual error."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-24-carf-says-rescue-law-alone-would-not-stabilize-d",
+   "title": "CARF says rescue law alone would not stabilize debt, sees net debt at 78.1% of GDP in 2030",
+   "url": "https://www.valoraanalitik.com/ley-de-rescate-economico-no-bastaria-para-frenar-el-crecimiento-de-la-deuda/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "The Government (Finance Ministry) actor reason says CARF questions whether 'the law alone, as the government's projection assumes, can stabilize debt' (ES: 'como supone la proyección del Gobierno'). The source contradicts this. The government's 64% of GDP projection explicitly includes positive macroeconomic effects and measures outside the law (decrees, National Development Plan), so it does not assume the law alone stabilizes debt. Rephrase in both versions, for example: 'CARF backs the size of the proposed adjustment as a minimum but says the law alone would not stabilize debt, unlike the government's projection, which relies on macroeconomic effects and measures outside the law.'"
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-24-us-consumer-confidence-rises-to-103-3-in-novembe",
+   "title": "US consumer confidence rises to 103.3 in November; inflation worries persist",
+   "url": "https://www.cnbc.com/2026/11/24/consumer-confidence-november-election-midterm.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-24T21:26:30.306596+00:00"
+  },
+  {
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "title": "Nvidia shares up 31.97% on Colombia's Global Market as Colcap rises 2.02% on Nov 23",
+   "url": "https://www.valoraanalitik.com/acciones-de-nvidia-se-disparan-en-el-mercado-global-colombiano-tras-regreso-de-jensen-huang-co/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Minor, non-blocking: the actor ticker 'NVDA' does not appear in the source, which only gives 'NVDACO' (Mercado Global Colombiano). Consider using NVDACO or leaving the ticker as is.",
+     "Minor, non-blocking: the summary omits Valora Analitik's view that the MSCI Colcap 'mantiene un desplazamiento bajista' (keeps a bearish technical trend). Adding it would give context for the 2,300/2,500 levels in the watch item."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-24T21:27:19.807234+00:00"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-24-fed-board-releases-minutes-of-its-october-19-and",
+   "events": [
+    "fed_meeting"
+   ],
+   "rounds": [
+    {
+     "claims": 28,
+     "unsupported": [
+      {
+       "text": "For Colombian assets, any effect would come indirectly, through US rate expectations.",
+       "why": "Neither the source text nor the brief mentions Colombian assets or this transmission channel. It is an asserted cause and outcome, not a conditional mechanism."
+      },
+      {
+       "text": "Para los activos colombianos, el efecto sería indirecto, vía las expectativas de tasas en EE. UU.",
+       "why": "Same unsupported causal claim about Colombian assets. Neither the source text nor the brief backs it."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 28,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-24-us-consumer-confidence-rises-to-103-3-in-novembe",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 18,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-23-nvidia-shares-up-31-97-on-colombia-s-global-mark",
+   "events": [
+    "colo_jump"
+   ],
+   "rounds": [
+    {
+     "claims": 38,
+     "unsupported": [
+      {
+       "text": "If buying fades on light volume, the index tends to drift back toward the 2,300 support.",
+       "why": "Not a widely accepted mechanism. It is a specific forecast for this index and level, and neither the source nor the brief supports it."
+      },
+      {
+       "text": "Si las compras se apagan con poco volumen, el índice tiende a devolverse hacia el soporte de 2.300.",
+       "why": "Not a widely accepted mechanism. It is a specific forecast for this index and level, and neither the source nor the brief supports it."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 17,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 17,
+     "unsupported": [
+      {
+       "text": "The source says nothing about rates, fees or credit quality. / La fuente no dice nada sobre tasas, comisiones ni calidad crediticia.",
+       "why": "The source does mention rates: a 30% interest rate discount on Más Puntos and a 20% rate reduction on Más Destinos. The brief notes these rate discounts too."
+      },
+      {
+       "text": "Holders of the 17 current card types feel it first, since their cards must be mapped to the new four. / Lo sienten primero los titulares de los 17 tipos actuales, pues sus tarjetas deben pasar a las cuatro nuevas.",
+       "why": "The source never says existing cards will be migrated. The brief lists what happens to holders of discontinued cards as an unknown."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 18,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-17-colombia-s-october-usury-cap-28-59-for-ordinary-",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 38,
+     "unsupported": [
+      {
+       "text": "Banks feel it less: the cap is a ceiling, so each one can price lower according to its policies and the applicant's profile.",
+       "why": "The source and brief say the cap is a ceiling below which lenders may price. Neither says banks are less affected than borrowers; the brief rates banks' impact as mixed."
+      },
+      {
+       "text": "Los bancos lo sienten menos: el límite es un techo, y cada uno puede fijar una tasa menor según sus políticas y el perfil del solicitante.",
+       "why": "Neither the source nor the brief says banks are less affected; the brief rates their impact as mixed."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 12,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-17-colombian-peso-closes-at-cop-3-303-40-per-dollar",
+   "events": [
+    "brent_up"
+   ],
+   "rounds": [
+    {
+     "claims": 18,
+     "unsupported": [
+      {
+       "text": "The global dollar and oil appear to matter as much as the local GDP data for the exchange rate. / El dólar global y el petróleo parecen pesar tanto como el PIB local en el tipo de cambio.",
+       "why": "The brief lists the split between GDP data and global dollar/oil moves as an open unknown. Neither the source nor the brief says they weigh equally."
+      },
+      {
+       "text": "If the global dollar eases from its highs, the peso could firm toward the COP 3,240 support. / Si el dólar global cede desde sus máximos, el peso podría fortalecerse hacia el soporte de $3.240.",
+       "why": "This predicts a move to a specific price level. The source cites COP 3,240 only as a support level, not as a target tied to a weaker global dollar."
+      },
+      {
+       "text": "Importers and companies with dollar debts watch the COP 3,300 level every day. / Los importadores y las empresas con deudas en dólares vigilan a diario el nivel de $3.300.",
+       "why": "Neither the source nor the brief mentions importers, companies with dollar debts, or their daily monitoring."
+      },
+      {
+       "text": "Mining and quarrying firms gain from 7.8% growth and firmer oil. / Las empresas de minas y canteras se benefician del crecimiento de 7,8 % y de un petróleo más firme.",
+       "why": "The source and brief support only the 7.8% sector growth. Neither says mining and quarrying firms benefit from higher oil prices."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 17,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-15-procafecol-juan-valdez-reports-cop-722-592-milli",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 16,
+     "unsupported": [
+      {
+       "text": "Sales are growing faster than the profit that reaches the bottom line, so a bigger business is not yet turning into proportionally larger earnings. (ES: Las ventas crecen más que la utilidad final, así que un negocio más grande aún no genera ganancias proporcionalmente mayores.)",
+       "why": "The source gives no prior-year profit figures, so profit growth cannot be compared with the 13% revenue growth. The analysis itself later says it is unclear whether earnings are improving or shrinking."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 34,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  }
+ ]
+}

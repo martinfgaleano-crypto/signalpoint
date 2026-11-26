@@ -1,0 +1,52 @@
+{
+ "days": {
+  "2026-11-17": {
+   "drafted": 14,
+   "rejected_by_gate": 5,
+   "held_by_review": 8,
+   "published": 6
+  },
+  "2026-11-18": {
+   "drafted": 17,
+   "rejected_by_gate": 1,
+   "held_by_review": 13,
+   "published": 4
+  },
+  "2026-11-19": {
+   "drafted": 6,
+   "rejected_by_gate": 0,
+   "held_by_review": 2,
+   "published": 4
+  },
+  "2026-11-20": {
+   "drafted": 0,
+   "rejected_by_gate": 0,
+   "held_by_review": 0,
+   "published": 0
+  },
+  "2026-11-23": {
+   "drafted": 6,
+   "rejected_by_gate": 0,
+   "held_by_review": 3,
+   "published": 3
+  },
+  "2026-11-24": {
+   "drafted": 6,
+   "rejected_by_gate": 0,
+   "held_by_review": 3,
+   "published": 3
+  },
+  "2026-11-25": {
+   "drafted": 6,
+   "rejected_by_gate": 0,
+   "held_by_review": 5,
+   "published": 1
+  },
+  "2026-11-26": {
+   "drafted": 6,
+   "rejected_by_gate": 0,
+   "held_by_review": 2,
+   "published": 4
+  }
+ }
+}

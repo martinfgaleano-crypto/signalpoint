@@ -1,0 +1,887 @@
+{
+ "generatedAt": "2026-11-26T20:17:05.864841+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "3 (first date: Wed, 25 Nov 2026 20:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "2 (first date: Wed, 25 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-26 20:00:00)",
+  "Portafolio": "10 (first date: 2026-11-26T14:45:06-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "2 (first date: Wed, 25 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "1 (first date: Wed, 25 Nov 2026 09:10:24 -0500)",
+  "US Census Bureau (economic indicators)": "2 (first date: Wed, 25 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "9 (first date: Thu, 26 Nov 2026 15:28:26 GMT)",
+  "CNBC Finance": "11 (first date: Thu, 26 Nov 2026 16:00:01 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-25-us-personal-income-up-0-7-in-october-pce-prices-",
+   "title": "US personal income up 0.7% in October; PCE prices 3.8% higher than a year earlier",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "US Bureau of Economic Analysis",
+    "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+   },
+   "summary": "BEA reported that personal income rose $201.8 billion (0.7 percent) in October, and disposable personal income rose $200.5 billion (0.8 percent). Current-dollar PCE increased $63.8 billion (0.3 percent), while real PCE decreased $5.8 billion (less than 0.1 percent). The PCE price index rose 0.3 percent from September and 3.8 percent from a year earlier, and 3.3 percent excluding food and energy. Personal saving was $1.00 trillion, a saving rate of 4.1 percent.",
+   "actors": [
+    {
+     "name": "US households",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Disposable income rose 0.8 percent in October, but real spending edged down and prices were 3.8 percent higher than a year earlier."
+    },
+    {
+     "name": "Medicare Improvement Fund premium rebate recipients",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "BEA attributes part of the rise in government social benefits to one-time payments tied to the premium rebate."
+    },
+    {
+     "name": "Federal Reserve",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The release does not mention policy; the PCE price index is an inflation measure that the Fed may consider."
+    }
+   ],
+   "watch": [
+    {
+     "text": "BEA's November Personal Income and Outlays release, due December 23, 2026",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check whether income growth slows after the one-time Medicare rebate payments and whether real PCE turns positive."
+    },
+    {
+     "text": "Direction of the PCE price index, both headline (3.8 percent year over year) and excluding food and energy (3.3 percent)",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the November annual rates with October's figures in BEA's tables."
+    },
+    {
+     "text": "Revisions to the October estimates",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "With the next release, today's data will be superseded; compare the new figures with the original data in BEA's Data Archive."
+    }
+   ],
+   "unknowns": [
+    "How much of the October rise in personal income came from the one-time Medicare rebate payments?",
+    "Will real PCE, which edged down in October, resume growth in coming months?",
+    "How large will revisions to earlier months be in later releases?"
+   ],
+   "tags": [
+    "PCE",
+    "personal income",
+    "inflation",
+    "saving rate",
+    "BEA",
+    "United States"
+   ],
+   "es": {
+    "title": "Ingreso personal en EE. UU. subió 0,7 % en octubre; precios PCE 3,8 % más que hace un año",
+    "summary": "La BEA informó que el ingreso personal aumentó 201,8 mil millones de dólares (0,7 %) en octubre y el ingreso personal disponible subió 200,5 mil millones (0,8 %). El gasto de consumo personal (PCE) en dólares corrientes creció 63,8 mil millones (0,3 %), mientras que el PCE real disminuyó 5,8 mil millones (menos de 0,1 %). El índice de precios PCE subió 0,3 % frente a septiembre y 3,8 % frente a un año antes, y 3,3 % sin alimentos ni energía. El ahorro personal fue de 1,00 billón de dólares y la tasa de ahorro fue de 4,1 %.",
+    "actors": [
+     {
+      "name": "Hogares de EE. UU.",
+      "reason": "El ingreso disponible subió 0,8 % en octubre, pero el gasto real cayó levemente y los precios estaban 3,8 % por encima de los de un año antes."
+     },
+     {
+      "name": "Beneficiarios del reembolso de primas del Medicare Improvement Fund",
+      "reason": "La BEA atribuye parte del aumento de los beneficios sociales del gobierno a pagos únicos asociados con ese reembolso."
+     },
+     {
+      "name": "Reserva Federal",
+      "reason": "El comunicado no menciona política monetaria; el índice de precios PCE es una medida de inflación que la Fed puede considerar."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de la BEA de ingresos y gastos personales de noviembre, prevista para el 23 de diciembre de 2026",
+      "note": "Verificar si el crecimiento del ingreso se modera tras los pagos únicos del reembolso de Medicare y si el PCE real vuelve a ser positivo."
+     },
+     {
+      "text": "Dirección del índice de precios PCE, total (3,8 % anual) y sin alimentos ni energía (3,3 %)",
+      "note": "Comparar las tasas anuales de noviembre con las cifras de octubre en las tablas de la BEA."
+     },
+     {
+      "text": "Revisiones a las estimaciones de octubre",
+      "note": "Con la próxima publicación los datos actuales serán reemplazados; comparar las nuevas cifras con los datos originales en el archivo de la BEA."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del aumento del ingreso personal en octubre provino de los pagos únicos del reembolso de Medicare?",
+     "¿Retomará el crecimiento el PCE real, que bajó levemente en octubre, en los próximos meses?",
+     "¿Qué tan grandes serán las revisiones a meses anteriores en publicaciones posteriores?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-26-cibest-capital-drops-davivienda-preferred-from-n",
+   "title": "Cibest Capital drops Davivienda preferred from November Top Picks, raises Sura, Argos, Éxito",
+   "category": "Other",
+   "region": "Colombia",
+   "eventDate": "2026-11-26",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/actualizacion-top-picks-de-cibest-capital-estas-son-cuatro-acciones-con-mayor-potencial-de-crecimiento-en-el-mercado-colombiano/"
+   },
+   "summary": "Cibest Capital, the capital markets unit of Grupo Cibest, updated its November 2026 Top Picks portfolio. It removed Davivienda Group's preferred share (previously 20%) and reallocated the weight: Grupo Sura preferred rose to 35%, Grupo Argos preferred to 25% and Grupo Éxito to 20%, while Banco de Bogotá stays at 20%. As of November 23, 2026, the portfolio was up 23.54% year to date including dividends versus 18.76% for the MSCI Colcap, a gap of 478 basis points. Over the last month it fell 4.86% against a 7.6% drop in the Colcap, and Cibest Capital keeps a neutral view on Colombian equities.",
+   "actors": [
+    {
+     "name": "Davivienda Group (preferred share)",
+     "ticker": "PFDAVVNDA",
+     "impact": "undetermined",
+     "reason": "Cibest Capital removed it from the portfolio, saying its fundamental potential is more limited after a gain of about 25% this year."
+    },
+    {
+     "name": "Grupo Sura (preferred share)",
+     "ticker": "PFGRUPSURA",
+     "impact": "favorable",
+     "reason": "Its weight in the portfolio rose to 35%, tied to a debt reduction strategy backed by ordinary and extraordinary dividends of about COP 3.1 trillion."
+    },
+    {
+     "name": "Grupo Éxito",
+     "ticker": "EXITO",
+     "impact": "favorable",
+     "reason": "Its weight doubled to 20%, with the thesis based on its strategic transformation toward 2030 and the real estate business, including Viva Malls."
+    },
+    {
+     "name": "Grupo Argos (preferred share)",
+     "ticker": "PFGRUPOARG",
+     "impact": "favorable",
+     "reason": "Its weight rose to 25%, citing progress on its ACE 1.0 strategy, sales of mature assets and about 60% execution of its share buyback program."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Next Top Picks update from Cibest Capital and any change in the weights of Sura, Argos, Éxito and Banco de Bogotá",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the next Cibest Capital Top Picks report and its press coverage."
+    },
+    {
+     "text": "Performance of the Top Picks portfolio versus the MSCI Colcap after the November 23 cutoff",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the year-to-date and monthly returns in later Cibest Capital reports with the Colcap."
+    },
+    {
+     "text": "Progress of Grupo Sura's debt reduction and Grupo Argos's buyback program",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check company disclosures and later press reports on net debt and buyback execution."
+    }
+   ],
+   "unknowns": [
+    "How much of Davivienda's preferred share performance reflects fundamentals versus market moves is not detailed.",
+    "The report gives no timeline for the potential inclusion in international indexes.",
+    "It is unclear how the portfolio would respond to the macroeconomic and fiscal risks Cibest Capital cites."
+   ],
+   "tags": [
+    "Cibest Capital",
+    "Top Picks",
+    "Colcap",
+    "Grupo Sura",
+    "Grupo Argos",
+    "Davivienda"
+   ],
+   "es": {
+    "title": "Cibest Capital saca a Davivienda de sus Top Picks de noviembre y sube peso de Sura, Argos y Éxito",
+    "summary": "Cibest Capital, la unidad de mercado de capitales del Grupo Cibest, actualizó su portafolio Top Picks de noviembre de 2026. Retiró la acción preferencial de Davivienda Group (que tenía 20 %) y redistribuyó el peso: la preferencial de Grupo Sura subió a 35 %, la de Grupo Argos a 25 % y Grupo Éxito a 20 %, mientras Banco de Bogotá se mantiene en 20 %. Con corte al 23 de noviembre de 2026, el portafolio acumulaba una valorización de 23,54 % en el año, incluidos dividendos, frente a 18,76 % del MSCI Colcap, una diferencia de 478 puntos básicos. En el último mes cayó 4,86 % frente a un retroceso de 7,6 % del Colcap, y Cibest Capital mantiene una visión neutral sobre la renta variable colombiana.",
+    "actors": [
+     {
+      "name": "Davivienda Group (acción preferencial)",
+      "reason": "Cibest Capital la retiró del portafolio por considerar que su potencial fundamental es más limitado tras una valorización cercana al 25 % en el año."
+     },
+     {
+      "name": "Grupo Sura (acción preferencial)",
+      "reason": "Su peso en el portafolio subió a 35 %, ligado a una estrategia de reducción de deuda respaldada por dividendos ordinarios y extraordinarios cercanos a $3,1 billones."
+     },
+     {
+      "name": "Grupo Éxito",
+      "reason": "Su peso se duplicó a 20 %, con una tesis basada en su transformación estratégica hacia 2030 y el negocio inmobiliario, incluido Viva Malls."
+     },
+     {
+      "name": "Grupo Argos (acción preferencial)",
+      "reason": "Su peso subió a 25 %, por los avances de su estrategia ACE 1.0, la venta de activos maduros y la ejecución de cerca del 60 % de su programa de recompras."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Próxima actualización de Top Picks de Cibest Capital y cualquier cambio en los pesos de Sura, Argos, Éxito y Banco de Bogotá",
+      "note": "Revisar el próximo informe de Top Picks de Cibest Capital y su cobertura en prensa."
+     },
+     {
+      "text": "Desempeño del portafolio Top Picks frente al MSCI Colcap después del corte del 23 de noviembre",
+      "note": "Comparar la rentabilidad anual y mensual en informes posteriores de Cibest Capital con la del Colcap."
+     },
+     {
+      "text": "Avance de la reducción de deuda de Grupo Sura y del programa de recompras de Grupo Argos",
+      "note": "Consultar los comunicados de las compañías y reportes de prensa posteriores sobre deuda neta y ejecución de recompras."
+     }
+    ],
+    "unknowns": [
+     "No se detalla cuánto del desempeño de la preferencial de Davivienda obedece a fundamentales y cuánto a movimientos de mercado.",
+     "El informe no da un cronograma para los posibles ingresos a índices internacionales.",
+     "No es claro cómo respondería el portafolio a los riesgos macroeconómicos y fiscales que cita Cibest Capital."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-census-bureau-announces-sample-redesign-for-new-",
+   "title": "Census Bureau announces sample redesign for New Residential Sales from January 2027 data",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/construction/nrs/"
+   },
+   "summary": "On 11/25/26 the Census Bureau posted a notice of methodology change on its New Residential Sales page. With the January 2027 release on February 24, 2027, the Survey of Construction will complete a scheduled sample redesign. From January 2027, estimates will include housing units selected from the redesigned sample. The page gives no new sales figures; it refers readers to an FAQ for details.",
+   "actors": [
+    {
+     "name": "Users of new home sales data (analysts, researchers)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Estimates built on a redesigned sample may differ in construction from earlier series, and the source does not say how comparable they will be."
+    },
+    {
+     "name": "US Census Bureau (Survey of Construction)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It is completing a scheduled sample redesign that changes which housing units feed the estimates."
+    },
+    {
+     "name": "Department of Housing and Urban Development (HUD)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "HUD partially funds the Survey of Construction, which supplies the data on this page."
+    }
+   ],
+   "watch": [
+    {
+     "text": "The January 2027 New Residential Sales release, the first to include units from the redesigned sample",
+     "due": "2027-02-24",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Census Bureau release and its technical notes on February 24, 2027."
+    },
+    {
+     "text": "Details in the Census FAQ on how the redesign affects estimates and comparability",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the FAQ and technical documentation linked from the New Residential Sales page."
+    }
+   ],
+   "unknowns": [
+    "How large the effect of the redesigned sample on estimates will be",
+    "Whether earlier data will be revised or adjusted for comparability",
+    "Which housing units or regions are most affected by the change"
+   ],
+   "tags": [
+    "new home sales",
+    "Census Bureau",
+    "Survey of Construction",
+    "methodology",
+    "housing",
+    "US"
+   ],
+   "es": {
+    "title": "Censo de EE. UU. anuncia rediseño de la muestra de Ventas Residenciales Nuevas desde enero de 2027",
+    "summary": "El 25/11/26 la Oficina del Censo publicó en su página de Ventas Residenciales Nuevas un aviso de cambio metodológico. Con la publicación de enero de 2027, el 24 de febrero de 2027, la Encuesta de Construcción completará un rediseño programado de la muestra. Desde enero de 2027, las estimaciones incluirán unidades de vivienda seleccionadas de la muestra rediseñada. La página no presenta nuevas cifras de ventas y remite a unas preguntas frecuentes para más detalles.",
+    "actors": [
+     {
+      "name": "Usuarios de datos de ventas de vivienda nueva (analistas, investigadores)",
+      "reason": "Las estimaciones basadas en una muestra rediseñada pueden diferir en su construcción de las series anteriores, y la fuente no indica qué tan comparables serán."
+     },
+     {
+      "name": "Oficina del Censo de EE. UU. (Encuesta de Construcción)",
+      "reason": "Completa un rediseño programado de la muestra que cambia las unidades de vivienda que alimentan las estimaciones."
+     },
+     {
+      "name": "Departamento de Vivienda y Desarrollo Urbano (HUD)",
+      "reason": "HUD financia parcialmente la Encuesta de Construcción, que genera los datos de esta página."
+     }
+    ],
+    "watch": [
+     {
+      "text": "La publicación de Ventas Residenciales Nuevas de enero de 2027, la primera con unidades de la muestra rediseñada",
+      "note": "Revisar la publicación del Censo y sus notas técnicas el 24 de febrero de 2027."
+     },
+     {
+      "text": "Los detalles en las preguntas frecuentes del Censo sobre cómo el rediseño afecta las estimaciones y su comparabilidad",
+      "note": "Consultar las preguntas frecuentes y la documentación técnica enlazadas desde la página de Ventas Residenciales Nuevas."
+     }
+    ],
+    "unknowns": [
+     "Qué tan grande será el efecto de la muestra rediseñada sobre las estimaciones",
+     "Si los datos anteriores serán revisados o ajustados para garantizar la comparabilidad",
+     "Qué unidades de vivienda o regiones resultan más afectadas por el cambio"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-26-amcham-colombia-urges-basing-2027-minimum-wage-t",
+   "title": "AmCham Colombia urges basing 2027 minimum wage talks on productivity, inflation and jobs",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-26",
+   "evidence": "B",
+   "source": {
+    "name": "Portafolio",
+    "url": "https://www.portafolio.co/economia/finanzas/amcham-pide-negociar-el-aumento-del-salario-minimo-de-2027-con-base-en-la-productividad-la-inflacion-y-el-empleo-507174"
+   },
+   "summary": "After DANE released preliminary productivity figures, AmCham Colombia president María Claudia Lacouture said the 2027 minimum wage should be agreed on economic data, citing inflation, productivity, growth, employment and the fiscal situation. DANE reported that labor productivity per hour worked rose 2.24% in January-September 2026 versus the same period of 2025, while productivity per employed person fell 0.98%. Annual inflation was 6.30% in October 2026, against 5.51% a year earlier. AmCham has not proposed a specific percentage increase.",
+   "actors": [
+    {
+     "name": "Minimum wage workers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The size of the 2027 increase will determine how much purchasing power they keep, and the source gives no figure yet."
+    },
+    {
+     "name": "Employers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The increase affects labor costs, and AmCham links it to keeping employment growth."
+    },
+    {
+     "name": "Colombian Government (Ministry of Labor)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "It must set the increase by decree if employers and unions do not reach an agreement."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Continuation of the Permanent Commission for Wage and Labor Policy meetings with Government, employers and unions",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Ministry of Labor and press reports on the session."
+    },
+    {
+     "text": "Review of inflation figures and economic outlook within the wage talks",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check whether the year-end inflation estimate is discussed and which figure is used."
+    },
+    {
+     "text": "Presentation of increase proposals by employers and workers, and first deadline for an agreement",
+     "due": "2026-12-15",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check whether a deal is announced or whether talks continue or the Government decrees the increase."
+    }
+   ],
+   "unknowns": [
+    "What percentage increase will employers, unions and the Government propose?",
+    "Which productivity figure will the parties agree to use in the negotiation?",
+    "What will annual inflation be at the close of 2026?"
+   ],
+   "tags": [
+    "minimum wage",
+    "Colombia",
+    "AmCham",
+    "productivity",
+    "DANE",
+    "inflation"
+   ],
+   "es": {
+    "title": "AmCham pide basar la negociación del salario mínimo de 2027 en productividad, inflación y empleo",
+    "summary": "Tras conocerse las cifras preliminares de productividad del Dane, la presidenta de AmCham Colombia, María Claudia Lacouture, afirmó que el salario mínimo de 2027 debe concertarse con base en datos, citando la inflación, la productividad, el crecimiento, el empleo y la situación fiscal. El Dane reportó que la productividad laboral por hora trabajada creció 2,24% entre enero y septiembre de 2026 frente al mismo periodo de 2025, mientras que la productividad por persona empleada cayó 0,98%. La inflación anual fue de 6,30% en octubre de 2026, frente a 5,51% un año antes. AmCham no ha planteado un porcentaje concreto de aumento.",
+    "actors": [
+     {
+      "name": "Trabajadores que devengan el salario mínimo",
+      "reason": "El tamaño del aumento de 2027 determinará cuánto poder adquisitivo conservan, y la fuente aún no da una cifra."
+     },
+     {
+      "name": "Empleadores",
+      "reason": "El aumento afecta los costos laborales, y AmCham lo vincula con mantener el crecimiento del empleo."
+     },
+     {
+      "name": "Gobierno colombiano (Ministerio del Trabajo)",
+      "reason": "Debe fijar el aumento por decreto si empleadores y sindicatos no llegan a un acuerdo."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Continuación de las reuniones de la Comisión Permanente de Concertación de Políticas Salariales y Laborales con Gobierno, empleadores y sindicatos",
+      "note": "Revisar comunicados del Ministerio del Trabajo y la prensa sobre la sesión."
+     },
+     {
+      "text": "Revisión de las cifras de inflación y de las perspectivas económicas dentro de la negociación salarial",
+      "note": "Verificar si se discute el estimado de inflación de cierre de año y qué cifra se usa."
+     },
+     {
+      "text": "Presentación de propuestas de aumento de empleadores y trabajadores, y primer plazo para llegar a un acuerdo",
+      "note": "Verificar si se anuncia un acuerdo, si continúan las negociaciones o si el Gobierno decreta el aumento."
+     }
+    ],
+    "unknowns": [
+     "¿Qué porcentaje de aumento propondrán empleadores, sindicatos y Gobierno?",
+     "¿Qué cifra de productividad acordarán usar las partes en la negociación?",
+     "¿Cuál será la inflación anual al cierre de 2026?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-census-m3-revised-historical-data-and-seasonal-m",
+   "title": "Census: M3 revised historical data and seasonal models to stay unchanged for rest of 2026",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/manufacturing/m3/"
+   },
+   "summary": "The Census Bureau's M3 program page says that, because of schedule and resource constraints, revised historical data and the seasonal adjustment models for the Manufacturers' Shipments, Inventories, and Orders survey will remain unchanged for the remainder of 2026. It also notes that since the June 2025 data, released on July 25, 2025, the Advance Total Manufacturing publication has included detailed data for all nondurable industries, on seasonally and not seasonally adjusted bases. The page text contains no new shipments, inventories or orders figures.",
+   "actors": [
+    {
+     "name": "Analysts and users of M3 data",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Unchanged seasonal models and historical revisions mean series stay on current methods, but the effect on comparability is not stated."
+    },
+    {
+     "name": "US manufacturers (survey respondents)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The survey measures current industrial activity, but the page gives no readings for any industry."
+    },
+    {
+     "name": "Federal Reserve Bank of St. Louis (FRED)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "FRED incorporates the Census Bureau's 13 economic indicators, so M3 methodological choices may pass through to its series."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Publication of the next Advance Report on Manufacturers' Shipments, Inventories, and Orders",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Release Schedule page on the M3 website for the date and the figures released."
+    },
+    {
+     "text": "Any Census notice on seasonal adjustment or revision plans beyond 2026",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the Special Notices under Announcements on the M3 page."
+    },
+    {
+     "text": "Continued inclusion of detailed nondurable industry data in the Advance Total Manufacturing file",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Advance Total Manufacturing Estimates file in the next release."
+    }
+   ],
+   "unknowns": [
+    "What were the latest shipments, inventories and orders readings? The page text does not give them.",
+    "How large are the schedule and resource constraints, and do they affect release dates?",
+    "Will the seasonal models and revisions be updated in 2027?"
+   ],
+   "tags": [
+    "Census Bureau",
+    "M3",
+    "manufacturing",
+    "seasonal adjustment",
+    "US data"
+   ],
+   "es": {
+    "title": "Census: la encuesta M3 mantendrá sin cambios datos históricos revisados y ajuste estacional en 2026",
+    "summary": "La página del programa M3 de la Oficina del Censo indica que, por limitaciones de calendario y recursos, los datos históricos revisados y los modelos de ajuste estacional de la encuesta de envíos, inventarios y pedidos de manufacturas permanecerán sin cambios durante el resto de 2026. Además, desde los datos de junio de 2025, publicados el 25 de julio de 2025, la publicación adelantada de manufactura total incluye datos detallados de todas las industrias de bienes no durables, con y sin ajuste estacional. El texto de la página no contiene nuevas cifras de envíos, inventarios ni pedidos.",
+    "actors": [
+     {
+      "name": "Analistas y usuarios de los datos M3",
+      "reason": "Los modelos estacionales y las revisiones históricas sin cambios mantienen las series con los métodos actuales, pero no se indica el efecto sobre la comparabilidad."
+     },
+     {
+      "name": "Fabricantes de EE. UU. (encuestados)",
+      "reason": "La encuesta mide la actividad industrial actual, pero la página no da cifras de ninguna industria."
+     },
+     {
+      "name": "Banco de la Reserva Federal de St. Louis (FRED)",
+      "reason": "FRED incorpora los 13 indicadores económicos de la Oficina del Censo, por lo que las decisiones metodológicas de M3 pueden reflejarse en sus series."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación del próximo informe adelantado de envíos, inventarios y pedidos de manufacturas",
+      "note": "Consultar el calendario de publicaciones en el sitio de M3 para ver la fecha y las cifras divulgadas."
+     },
+     {
+      "text": "Cualquier aviso del Censo sobre ajuste estacional o revisiones más allá de 2026",
+      "note": "Revisar los avisos especiales en la sección de anuncios de la página de M3."
+     },
+     {
+      "text": "Continuidad de los datos detallados de industrias no durables en el archivo de manufactura total adelantada",
+      "note": "Verificar el archivo de estimaciones adelantadas de manufactura total en la próxima publicación."
+     }
+    ],
+    "unknowns": [
+     "¿Cuáles fueron las últimas cifras de envíos, inventarios y pedidos? El texto de la página no las da.",
+     "¿Qué tan grandes son las limitaciones de calendario y recursos, y afectan las fechas de publicación?",
+     "¿Se actualizarán los modelos estacionales y las revisiones en 2027?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-26-dollar-opens-at-cop-3-534-in-colombia-in-next-da",
+   "title": "Dollar opens at COP 3,534 in Colombia in Next Day session on US Thanksgiving holiday",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-26",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-abre-a-la-baja-en-3-534-en-jornada-next-day-por-el-festivo-de-accion-de-gracias-en-ee-uu/"
+   },
+   "summary": "Colombia's FX market traded Next Day on Thursday, with no local spot trading, because of the US Thanksgiving holiday. The dollar opened at COP 3,534, down COP 21 from yesterday's close of COP 3,555, after a sharp pullback from resistance near COP 3,700. The DXY index reached the 104.4 technical target and began a moderate correction, per the report. Brent rose 0.36% to around US$91 a barrel, extending a rebound of almost 6% over the previous two sessions.",
+   "actors": [
+    {
+     "name": "Colombian peso market",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The peso gained on the dollar's pullback, but liquidity is limited to Next Day operations while the spot market is closed."
+    },
+    {
+     "name": "Brazilian real and Mexican peso",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The dollar remains close to its 52-week highs against both currencies despite the global pause, according to the source."
+    },
+    {
+     "name": "Oil-market participants",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Renewed attacks on ships and energy infrastructure threaten to slow the normalization of Gulf shipments and sustain a risk premium on supply."
+    },
+    {
+     "name": "Colombian minimum wage negotiations",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "DANE's Q3 2026 total factor productivity data is a central input in the talks on the 2027 minimum wage."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Whether the dollar holds below COP 3,700 resistance when local spot trading resumes",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the first spot session's opening and closing rates with the COP 3,534 Next Day open."
+    },
+    {
+     "text": "Brent direction around US$91 amid reported attacks near the Strait of Hormuz and Saudi Arabia",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check Brent quotes and UK Maritime Trade Operations updates on vessel incidents."
+    },
+    {
+     "text": "Use of DANE's productivity data in the 2027 minimum wage talks",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Follow official statements from the minimum wage negotiating table."
+    }
+   ],
+   "unknowns": [
+    "How much of the dollar's pullback reflects thin holiday liquidity rather than a lasting shift?",
+    "Will attacks on shipping and energy infrastructure disrupt Gulf oil supplies further?",
+    "How will the less disruptive US tariff proposals affect emerging-market currencies?"
+   ],
+   "tags": [
+    "Colombian peso",
+    "Next Day",
+    "DXY",
+    "Brent",
+    "DANE",
+    "tariffs"
+   ],
+   "es": {
+    "title": "Dólar en Colombia abre en $3.534 en jornada Next Day por el festivo de Acción de Gracias en EE. UU.",
+    "summary": "El mercado cambiario colombiano operó este jueves bajo la modalidad Next Day, sin negociación en el spot local, por el Día de Acción de Gracias en Estados Unidos. El dólar abrió en $3.534, con un retroceso de $21 frente al cierre de ayer de $3.555, tras una fuerte corrección desde la resistencia cercana a $3.700. El índice DXY alcanzó el objetivo técnico de 104,4 puntos e inició una corrección moderada, según el reporte. El Brent subió 0,36 % hasta cerca de US$91 por barril, extendiendo un rebote de casi 6 % en las dos sesiones anteriores.",
+    "actors": [
+     {
+      "name": "Mercado cambiario colombiano",
+      "reason": "El peso ganó terreno frente al dólar por el retroceso de la divisa, pero la liquidez se limita a operaciones Next Day mientras el spot está cerrado."
+     },
+     {
+      "name": "Real brasileño y peso mexicano",
+      "reason": "El dólar sigue cerca de sus máximos de 52 semanas frente a ambas monedas pese al respiro global, según la fuente."
+     },
+     {
+      "name": "Participantes del mercado petrolero",
+      "reason": "Los renovados ataques a embarcaciones e infraestructura energética amenazan con frenar la normalización de los envíos del Golfo y sostienen una prima de riesgo sobre el suministro."
+     },
+     {
+      "name": "Concertación del salario mínimo en Colombia",
+      "reason": "El dato de productividad total de los factores del tercer trimestre de 2026 del DANE es un insumo central en la discusión del salario mínimo de 2027."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Si el dólar se mantiene por debajo de la resistencia de $3.700 cuando se reanude el spot local",
+      "note": "Comparar la apertura y el cierre de la primera sesión spot con la apertura Next Day de $3.534."
+     },
+     {
+      "text": "Dirección del Brent en torno a US$91 ante los ataques reportados cerca del Estrecho de Ormuz y en Arabia Saudí",
+      "note": "Revisar las cotizaciones del Brent y los reportes de UK Maritime Trade Operations sobre incidentes con buques."
+     },
+     {
+      "text": "Uso del dato de productividad del DANE en la concertación del salario mínimo de 2027",
+      "note": "Seguir los pronunciamientos oficiales de la mesa de concertación."
+     }
+    ],
+    "unknowns": [
+     "¿Qué parte del retroceso del dólar refleja la baja liquidez del festivo y no un cambio duradero?",
+     "¿Los ataques a embarcaciones e infraestructura energética afectarán más el suministro de crudo del Golfo?",
+     "¿Cómo influirán las propuestas arancelarias de EE. UU., menos disruptivas de lo temido, en las monedas emergentes?"
+    ]
+   }
+  }
+ ],
+ "rejected": [],
+ "candidates": {
+  "from_feeds": 91,
+  "after_filter": 30,
+  "sample": [
+   "Personal Income and Outlays, October 2026",
+   "Top Picks de Cibest Capital noviembre 2026: estas son cuatro acciones con mayor potencial ",
+   "New Home Sales",
+   "AmCham pide negociar el aumento del salario mínimo de 2027 con base en la productividad, l",
+   "Advance Monthly Manufacturers' Shipments, Inventories, and Orders",
+   "Dólar en Colombia abre a la baja en $3.534 en jornada Next Day por el festivo de Acción de",
+   "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes fo",
+   "Inversionistas en Colombia dicen cuánto debería subir el salario mínimo en 2027"
+  ],
+  "dropped": {
+   "seen": 11,
+   "skip": 1,
+   "no_topic": 48
+  },
+  "raw_sample": [
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for applicability of truth in lend"
+   ],
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for smaller loan exemption from ap"
+   ],
+   [
+    "A",
+    0,
+    "Minutes of the Board's discount rate meetings on October 19 and Octobe"
+   ],
+   [
+    "A",
+    0,
+    "Almost 60% of primary energy used for electricity is lost to conversio"
+   ],
+   [
+    "A",
+    0,
+    "How does EIA compare different types of energy?"
+   ],
+   [
+    "B",
+    0,
+    "Gobierno anuncia ajustes al licenciamiento ambiental y la consulta pre"
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-25-us-personal-income-up-0-7-in-october-pce-prices-",
+   "title": "US personal income up 0.7% in October; PCE prices 3.8% higher than a year earlier",
+   "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T20:20:13.767469+00:00"
+  },
+  {
+   "id": "2026-11-26-cibest-capital-drops-davivienda-preferred-from-n",
+   "title": "Cibest Capital drops Davivienda preferred from November Top Picks, raises Sura, Argos, Éxito",
+   "url": "https://www.valoraanalitik.com/actualizacion-top-picks-de-cibest-capital-estas-son-cuatro-acciones-con-mayor-potencial-de-crecimiento-en-el-mercado-colombiano/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Minor: the tickers (PFDAVVNDA, PFGRUPSURA, EXITO, PFGRUPOARG) do not appear in the source text. They match standard BVC identifiers, but they are not source-verified.",
+     "Minor: the category 'Other' undersells the content. A markets/equities category would fit better.",
+     "Minor: Banco de Bogotá, which keeps its 20% weight, is not listed among the actors even though the source gives its thesis (discount to book, Q3 2026 loan growth of 14.7% and net interest income growth of 25.1%, Itaú integration)."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T20:20:35.882814+00:00"
+  },
+  {
+   "id": "2026-11-25-census-bureau-announces-sample-redesign-for-new-",
+   "title": "Census Bureau announces sample redesign for New Residential Sales from January 2027 data",
+   "url": "https://www.census.gov/construction/nrs/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": [
+     "Minor wording: the title says the Census Bureau 'announces sample redesign', but the source describes the completion of an already scheduled redesign. 'Announces completion of scheduled sample redesign' would be more precise. This is not a factual error.",
+     "Minor: the users' actor reason says estimates 'may differ in construction from earlier series'. The source does not discuss this. It is hedged and the impact is 'undetermined', so it is acceptable, but it is the brief's own inference."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-26-amcham-colombia-urges-basing-2027-minimum-wage-t",
+   "title": "AmCham Colombia urges basing 2027 minimum wage talks on productivity, inflation and jobs",
+   "url": "https://www.portafolio.co/economia/finanzas/amcham-pide-negociar-el-aumento-del-salario-minimo-de-2027-con-base-en-la-productividad-la-inflacion-y-el-empleo-507174",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 4,
+    "issues": [
+     "Watch item 3 merges two dates under due 2026-12-15. The source puts the presentation of increase proposals on 10 December and the first deadline for an agreement on 15 December. Split it into two items (2026-12-10 and 2026-12-15) so the proposal date is not implied to be 15 December.",
+     "Minor: the source says the Government (Gobierno Nacional) sets the increase by decree if employers and workers disagree. It does not attribute this to the Ministry of Labor specifically. Consider naming the actor 'Colombian Government' or making clear the decree is a national government action."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T20:21:28.737221+00:00"
+  },
+  {
+   "id": "2026-11-25-census-m3-revised-historical-data-and-seasonal-m",
+   "title": "Census: M3 revised historical data and seasonal models to stay unchanged for rest of 2026",
+   "url": "https://www.census.gov/manufacturing/m3/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": [
+     "FRED actor: the source only says FRED incorporates the Census Bureau's 13 economic indicators. It does not say M3 is one of them or that M3 methodology affects FRED series. The 'may pass through' reasoning is an inference; consider rewording to state only what the page says, or drop the actor, since the FRED mention is a promotional sidebar rather than part of the notice.",
+     "eventDate 2026-11-25 comes from the publisher feed. The Special Notice itself is undated on the page, so the actual announcement date cannot be confirmed from the source text.",
+     "Spanish title says 'en 2026' while the English title says 'for rest of 2026'. The Spanish summary correctly says 'durante el resto de 2026'; aligning the title would avoid a slight nuance difference.",
+     "Low relevance for a Colombian markets reader: this is a US methodology notice with no data readings."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-26-dollar-opens-at-cop-3-534-in-colombia-in-next-da",
+   "title": "Dollar opens at COP 3,534 in Colombia in Next Day session on US Thanksgiving holiday",
+   "url": "https://www.valoraanalitik.com/dolar-en-colombia-abre-a-la-baja-en-3-534-en-jornada-next-day-por-el-festivo-de-accion-de-gracias-en-ee-uu/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": [
+     "Minor, non-blocking: the claim that liquidity is limited to Next Day operations comes from JP Tactical Trading in the source, but the draft does not attribute it."
+    ]
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-26T20:21:52.721502+00:00"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-25-us-personal-income-up-0-7-in-october-pce-prices-",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 32,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-26-cibest-capital-drops-davivienda-preferred-from-n",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 17,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-26-amcham-colombia-urges-basing-2027-minimum-wage-t",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 17,
+     "unsupported": [
+      {
+       "text": "The Ministry of Labor carries the decision if no deal is reached by the first deadline, December 15. (ES: El Ministerio del Trabajo carga con la decisión si no hay acuerdo en el primer plazo, el 15 de diciembre.)",
+       "why": "The source says talks may continue after the December 15 deadline. The Government decrees the increase only if differences persist at the end of the process, not when the first deadline is missed."
+      }
+     ],
+     "numbers_missing": [
+      "1,750,905",
+      "1.750.905"
+     ]
+    },
+    {
+     "claims": 14,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-26-dollar-opens-at-cop-3-534-in-colombia-in-next-da",
+   "events": [
+    "brent_up"
+   ],
+   "rounds": [
+    {
+     "claims": 16,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  }
+ ]
+}

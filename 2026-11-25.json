@@ -1,0 +1,898 @@
+{
+ "generatedAt": "2026-11-25T20:31:32.197593+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "3 (first date: Wed, 25 Nov 2026 20:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "2 (first date: Wed, 25 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-25 20:20:00)",
+  "Portafolio": "10 (first date: 2026-11-25T14:43:16-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "2 (first date: Wed, 25 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "1 (first date: Wed, 25 Nov 2026 09:10:24 -0500)",
+  "US Census Bureau (economic indicators)": "2 (first date: Wed, 25 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "6 (first date: Wed, 25 Nov 2026 14:18:45 GMT)",
+  "CNBC Finance": "9 (first date: Wed, 25 Nov 2026 17:08:03 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-25-us-real-gdp-revised-up-to-4-3-annual-rate-in-q3-",
+   "title": "US real GDP revised up to 4.3% annual rate in Q3 2026 from 3.4%, BEA second estimate",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "U.S. Bureau of Economic Analysis (BEA)",
+    "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
+   },
+   "summary": "BEA's second estimate shows real GDP increased at an annual rate of 4.3% in the third quarter of 2026, compared with 2.2% in the second quarter. The figure was revised up 0.9 percentage point from the 3.4% advance estimate, mainly reflecting upward revisions to investment and consumer spending. Real final sales to private domestic purchasers rose 5.8%, while the PCE price index rose 2.1% and the PCE price index excluding food and energy rose 2.5%, both unchanged from the prior estimate. Profits from current production increased $206.0 billion in the third quarter, compared with an increase of $384.0 billion in the second quarter.",
+   "actors": [
+    {
+     "name": "US investment in intellectual property products (software)",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "BEA says the investment revision was led by intellectual property products, notably software, based on revised Producer Price Index data."
+    },
+    {
+     "name": "US exporters",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "BEA lists a decrease in exports as a partial offset to third-quarter GDP growth."
+    },
+    {
+     "name": "US corporate sector",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Profits from current production rose $206.0 billion in the third quarter, a smaller increase than the $384.0 billion in the second quarter."
+    },
+    {
+     "name": "US health care services",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Health care was the largest contributor to the downward revision in consumer spending on services, based on newly available Census Bureau survey data."
+    }
+   ],
+   "watch": [
+    {
+     "text": "BEA third estimate of Q3 2026 GDP, with industries and corporate profits data",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the third-estimate real GDP growth rate with the 4.3% second estimate on BEA's release scheduled for December 23, 2026."
+    },
+    {
+     "text": "Whether the software investment and consumer goods revisions are changed again in the next estimate",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check BEA's technical notes and revision information in the third-estimate release."
+    },
+    {
+     "text": "Direction of the PCE price index and the index excluding food and energy in the next estimate",
+     "due": "2026-12-23",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare with the 2.1% and 2.5% figures in the second estimate."
+    }
+   ],
+   "unknowns": [
+    "Why exports decreased in the third quarter is not explained in the release.",
+    "Whether the large upward revision will persist or be revised again in the third estimate.",
+    "How corporate profits were distributed across industries, which the release does not detail."
+   ],
+   "tags": [
+    "US GDP",
+    "BEA",
+    "Q3 2026",
+    "corporate profits",
+    "PCE prices",
+    "revisions"
+   ],
+   "es": {
+    "title": "El PIB real de EE. UU. se revisa a 4,3 % anualizado en el 3T de 2026 desde 3,4 %, según la BEA",
+    "summary": "La segunda estimación de la BEA muestra que el PIB real de EE. UU. creció a una tasa anual de 4,3 % en el tercer trimestre de 2026, frente a 2,2 % en el segundo trimestre. La cifra se revisó al alza en 0,9 puntos porcentuales frente a la estimación preliminar de 3,4 %, reflejando principalmente revisiones al alza de la inversión y del gasto de los consumidores. Las ventas finales reales a compradores privados domésticos aumentaron 5,8 %, mientras que el índice de precios del gasto de consumo personal (PCE) subió 2,1 % y el PCE sin alimentos ni energía subió 2,5 %, ambos sin cambios frente a la estimación previa. Las utilidades de la producción corriente aumentaron US$206,0 mil millones en el tercer trimestre, frente a un aumento de US$384,0 mil millones en el segundo.",
+    "actors": [
+     {
+      "name": "Inversión estadounidense en productos de propiedad intelectual (software)",
+      "reason": "La BEA indica que la revisión de la inversión estuvo liderada por los productos de propiedad intelectual, en especial el software, con base en datos revisados del índice de precios al productor."
+     },
+     {
+      "name": "Exportadores estadounidenses",
+      "reason": "La BEA señala una disminución de las exportaciones como un factor que compensó parcialmente el crecimiento del PIB del tercer trimestre."
+     },
+     {
+      "name": "Sector corporativo de EE. UU.",
+      "reason": "Las utilidades de la producción corriente aumentaron US$206,0 mil millones en el tercer trimestre, un alza menor que los US$384,0 mil millones del segundo."
+     },
+     {
+      "name": "Servicios de salud de EE. UU.",
+      "reason": "La salud fue el mayor aporte a la revisión a la baja del consumo de servicios, con base en nuevos datos de una encuesta de la Oficina del Censo."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Tercera estimación de la BEA del PIB del 3T de 2026, con datos por industrias y utilidades corporativas",
+      "note": "Comparar el crecimiento real del PIB de la tercera estimación con el 4,3 % de la segunda, en la publicación de la BEA prevista para el 23 de diciembre de 2026."
+     },
+     {
+      "text": "Si las revisiones de la inversión en software y de los bienes de consumo vuelven a cambiar en la próxima estimación",
+      "note": "Revisar las notas técnicas y la información de revisiones en la publicación de la tercera estimación."
+     },
+     {
+      "text": "Dirección del índice de precios PCE y del PCE sin alimentos ni energía en la próxima estimación",
+      "note": "Comparar con las cifras de 2,1 % y 2,5 % de la segunda estimación."
+     }
+    ],
+    "unknowns": [
+     "La publicación no explica por qué las exportaciones disminuyeron en el tercer trimestre.",
+     "No se sabe si la fuerte revisión al alza se mantendrá o se volverá a revisar en la tercera estimación.",
+     "La publicación no detalla cómo se distribuyeron las utilidades corporativas entre industrias."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-alianza-analyst-usd-cop-may-reach-3-700-3-800-so",
+   "title": "Alianza analyst: USD/COP may reach 3,700-3,800 soon, then ease toward 3,000-3,200",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-25",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/dolar-en-colombia-podria-subir-rapidamente-a-3-800-pero-volveria-a-niveles-de-3-000-en-unos-meses/"
+   },
+   "summary": "Felipe Campos of Alianza Valores y Fiduciaria said at a Valora Analitik forum that the dollar in Colombia, which closed above COP 3,600 the previous day, could rise to COP 3,700-3,800 in the coming days and weeks. He attributes the move to a global shock, a doubling of oil prices that he says lifted US inflation to 4% and led the Federal Reserve to resume rate hikes. In his view the medium-term trend favors the peso, with the dollar returning to COP 3,000-3,200. He says the tax reform's passage in Congress is the key catalyst: if at least 70% is approved, the dollar would peak at COP 3,700-3,800 and then fall, while a failed bill could send it to COP 4,300, 4,500 or even 5,500.",
+   "actors": [
+    {
+     "name": "Colombian peso",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Campos expects short-term depreciation pressure but a medium-term appreciation if the global oil shock fades and the tax reform advances."
+    },
+    {
+     "name": "US Federal Reserve",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "In Campos's scenarios, oil-driven US inflation shapes whether the Fed keeps raising rates or freezes them, which affects the dollar globally."
+    },
+    {
+     "name": "Colombian tax reform bill (economic rescue law)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Campos says its progress in Congress will signal fiscal responsibility or the lack of it, and so steer the exchange rate."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Progress of the tax reform bill in Congress, in particular whether at least 70% of the text is approved",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check congressional records and press coverage of the bill's votes."
+    },
+    {
+     "text": "Whether USD/COP reaches the COP 3,700-3,800 range cited by Campos",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare daily official closing exchange rates with the cited range."
+    },
+    {
+     "text": "Whether oil stabilizes in the US$80-90 per barrel range that Campos names in his scenario",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check benchmark crude price quotes and US inflation releases."
+    }
+   ],
+   "unknowns": [
+    "When exactly the forum presentation took place and what data Campos used for the scenarios.",
+    "What the final content of the tax reform bill will be, and whether it will pass Congress.",
+    "Whether oil prices will stabilize or keep rising, and how the Federal Reserve will respond."
+   ],
+   "tags": [
+    "USD/COP",
+    "Colombian peso",
+    "oil",
+    "Federal Reserve",
+    "tax reform",
+    "Alianza Valores"
+   ],
+   "es": {
+    "title": "Analista de Alianza: dólar podría llegar a $3.700-$3.800 y luego bajar hacia $3.000-$3.200",
+    "summary": "Felipe Campos, de Alianza Valores y Fiduciaria, afirmó en un foro de Valora Analitik que el dólar en Colombia, que cerró ayer por encima de $3.600, podría subir a $3.700-$3.800 en los próximos días y semanas. Atribuye el movimiento a un choque global: la duplicación de los precios del petróleo, que según él llevó la inflación de Estados Unidos al 4 % y llevó a la Reserva Federal a retomar el alza de tasas. En su visión, la tendencia de mediano plazo favorece al peso, con el dólar regresando a $3.000-$3.200. Señala que el trámite de la reforma tributaria en el Congreso es el catalizador clave: si se aprueba al menos el 70 %, el dólar tocaría un techo de $3.700-$3.800 y luego caería, mientras que un fracaso del proyecto podría llevarlo a $4.300, $4.500 o incluso $5.500.",
+    "actors": [
+     {
+      "name": "Peso colombiano",
+      "reason": "Campos prevé presión de depreciación en el corto plazo, pero una apreciación de mediano plazo si el choque petrolero global se disipa y avanza la reforma tributaria."
+     },
+     {
+      "name": "Reserva Federal de Estados Unidos",
+      "reason": "En los escenarios de Campos, la inflación estadounidense impulsada por el petróleo define si la Fed sigue subiendo tasas o las congela, lo que afecta al dólar en el mundo."
+     },
+     {
+      "name": "Proyecto de reforma tributaria (ley de rescate económico)",
+      "reason": "Campos dice que su avance en el Congreso enviará una señal de responsabilidad fiscal o de su ausencia, y así orientará la tasa de cambio."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Avance de la reforma tributaria en el Congreso, en particular si se aprueba al menos el 70 % del texto",
+      "note": "Revisar los registros del Congreso y la cobertura de prensa sobre las votaciones del proyecto."
+     },
+     {
+      "text": "Si el dólar llega al rango de $3.700-$3.800 citado por Campos",
+      "note": "Comparar los cierres oficiales diarios de la tasa de cambio con el rango citado."
+     },
+     {
+      "text": "Si el petróleo se estabiliza en el rango de US$80-90 por barril que Campos menciona en su escenario",
+      "note": "Revisar las cotizaciones del crudo de referencia y los datos de inflación de Estados Unidos."
+     }
+    ],
+    "unknowns": [
+     "Cuándo se realizó exactamente la presentación en el foro y qué datos usó Campos para los escenarios.",
+     "Cuál será el contenido final de la reforma tributaria y si pasará en el Congreso.",
+     "Si los precios del petróleo se estabilizarán o seguirán subiendo, y cómo responderá la Reserva Federal."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-fed-cfpb-set-2027-regulation-z-and-m-threshold-a",
+   "title": "Fed, CFPB set 2027 Regulation Z and M threshold at $76,300 for consumer credit, leases",
+   "category": "Regulation",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve Board",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm"
+   },
+   "summary": "The Federal Reserve Board and the Consumer Financial Protection Bureau announced the dollar thresholds that determine whether certain consumer credit and lease transactions in 2027 are covered by Regulation Z (Truth in Lending) and Regulation M (Consumer Leasing). Based on a 3.9 percent annual increase in the CPI-W as of June 1, 2026, the regulations generally will apply to consumer credit transactions and consumer leases of $76,300 or less in 2027. Private education loans and loans secured by real property, such as mortgages, are subject to Regulation Z regardless of the loan amount.",
+   "actors": [
+    {
+     "name": "Consumer lenders and lessors",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "The $76,300 threshold sets which transactions in 2027 fall under Regulation Z and M disclosure and related requirements, so compliance scope depends on transaction size."
+    },
+    {
+     "name": "Consumers taking credit or leases",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Transactions at or below the threshold receive the regulations' protections, but the source does not give the prior threshold to show how much coverage changes."
+    },
+    {
+     "name": "Private education and mortgage lenders",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "These loans are subject to Regulation Z regardless of amount, so the threshold does not determine whether they are covered."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Publication of the Regulation Z and Regulation M notices in the Federal Register",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Federal Register and the agencies' websites for the published notices and any effective date."
+    },
+    {
+     "text": "Lenders' and lessors' updates to disclosure and compliance procedures for the 2027 threshold",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review industry compliance notices and agency guidance issued after the announcement."
+    }
+   ],
+   "unknowns": [
+    "What was the previous threshold, and how large is the dollar change?",
+    "What is the exact effective date of the 2027 thresholds?",
+    "Will the agencies issue further guidance on applying the thresholds?"
+   ],
+   "tags": [
+    "Regulation Z",
+    "Regulation M",
+    "CFPB",
+    "Federal Reserve",
+    "CPI-W",
+    "consumer credit"
+   ],
+   "es": {
+    "title": "Fed y CFPB fijan en US$76.300 el umbral 2027 de las Regulaciones Z y M para crédito al consumo",
+    "summary": "La Junta de la Reserva Federal y la Oficina para la Protección Financiera del Consumidor (CFPB) anunciaron los umbrales en dólares que determinan si ciertas operaciones de crédito y arrendamiento al consumidor en 2027 están cubiertas por la Regulación Z (Veracidad en los Préstamos) y la Regulación M (Arrendamiento al Consumidor). Con base en un aumento anual de 3,9 % del CPI-W al 1 de junio de 2026, las regulaciones se aplicarán en general a operaciones de crédito al consumo y arrendamientos al consumidor de US$76.300 o menos en 2027. Los préstamos educativos privados y los préstamos garantizados con bienes raíces, como las hipotecas, están sujetos a la Regulación Z sin importar el monto.",
+    "actors": [
+     {
+      "name": "Prestamistas y arrendadores al consumidor",
+      "reason": "El umbral de US$76.300 define qué operaciones en 2027 quedan bajo los requisitos de la Regulación Z y M, por lo que el alcance del cumplimiento depende del tamaño de la operación."
+     },
+     {
+      "name": "Consumidores que toman crédito o arrendamientos",
+      "reason": "Las operaciones iguales o inferiores al umbral reciben las protecciones de las regulaciones, pero la fuente no da el umbral anterior para medir cuánto cambia la cobertura."
+     },
+     {
+      "name": "Prestamistas educativos privados e hipotecarios",
+      "reason": "Estos préstamos están sujetos a la Regulación Z sin importar el monto, así que el umbral no determina si están cubiertos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación de los avisos de las Regulaciones Z y M en el Federal Register",
+      "note": "Revisar el Federal Register y los sitios web de las agencias para ver los avisos publicados y cualquier fecha de entrada en vigencia."
+     },
+     {
+      "text": "Actualización de los procedimientos de divulgación y cumplimiento de prestamistas y arrendadores para el umbral de 2027",
+      "note": "Revisar los avisos de cumplimiento del sector y las guías de las agencias emitidas después del anuncio."
+     }
+    ],
+    "unknowns": [
+     "¿Cuál era el umbral anterior y qué tan grande es el cambio en dólares?",
+     "¿Cuál es la fecha exacta de entrada en vigencia de los umbrales de 2027?",
+     "¿Emitirán las agencias guías adicionales sobre la aplicación de los umbrales?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-24-colombia-s-public-debt-reaches-cop-1-200-trillio",
+   "title": "Colombia's public debt reaches COP 1,200 trillion, 62.2% of GDP in October: MinHacienda data",
+   "category": "Macro data",
+   "region": "Colombia",
+   "eventDate": "2026-11-24",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/deuda-publica-de-colombia-supero-los-1-200-billones-y-subio-al-622-del-pib-con-corte-a-octubre/"
+   },
+   "summary": "At end-October 2026, Colombia's public debt stood at COP 1,200 trillion, equal to 62.2% of projected 2026 GDP, according to Finance Ministry (MinHacienda) data reported by Valora Analitik. The ratio rose from 61.4% in September, an increase of 80 basis points. The stock grew about COP 14.7 trillion from September (COP 1,185 trillion) and about COP 19.6 trillion from October 2025 (COP 1,180 trillion). Domestic debt was COP 938.8 trillion (78.2% of the total) and external debt COP 261.5 trillion (21.8%). EAFIT analyst Diego Montañez noted three consecutive monthly increases and almost COP 40 trillion more debt since July.",
+   "actors": [
+    {
+     "name": "Colombian national government (MinHacienda)",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "A higher debt-to-GDP ratio, 62.2% in October versus 61.4% in September, increases the size of the debt relative to the economy."
+    },
+    {
+     "name": "Domestic debt market",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Domestic debt rose to 78.2% of the total, but the source does not say how this affects demand or financing conditions."
+    },
+    {
+     "name": "External debt component",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "External debt was COP 261.5 trillion, COP 106.6 trillion below October 2025, but the source gives no reason or market effect."
+    }
+   ],
+   "watch": [
+    {
+     "text": "MinHacienda's public debt figures for November 2026, to see whether the monthly rise continues",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Finance Ministry's debt balance publication and press coverage of it."
+    },
+    {
+     "text": "Debt-to-GDP ratio relative to the 62.2% reported for October",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the next MinHacienda release against the 62.2% figure."
+    },
+    {
+     "text": "Progress of the economic rescue law mentioned by Montañez",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Follow official and press reports on the bill's status and its stated size."
+    }
+   ],
+   "unknowns": [
+    "What explains the decline in external debt versus October 2025 and the rise in the domestic share?",
+    "Which GDP projection was used as the denominator, and could revisions change the 62.2% ratio?",
+    "How would the economic rescue law affect the debt trajectory?"
+   ],
+   "tags": [
+    "Colombia",
+    "public debt",
+    "MinHacienda",
+    "debt-to-GDP",
+    "fiscal",
+    "domestic debt"
+   ],
+   "es": {
+    "title": "Deuda pública de Colombia llegó a $1.200 billones, 62,2 % del PIB en octubre, según MinHacienda",
+    "summary": "A octubre de 2026, el saldo de la deuda pública de Colombia se ubicó en $1.200 billones, equivalente al 62,2 % del PIB proyectado para 2026, según datos del Ministerio de Hacienda reportados por Valora Analitik. El indicador subió desde 61,4 % en septiembre, un aumento de 80 puntos básicos. El saldo creció unos $14,7 billones frente a septiembre ($1.185 billones) y unos $19,6 billones frente a octubre de 2025 ($1.180 billones). La deuda interna fue de $938,8 billones (78,2 % del total) y la externa de $261,5 billones (21,8 %). El analista de EAFIT Diego Montañez destacó tres meses consecutivos de aumentos y casi $40 billones más de deuda desde julio.",
+    "actors": [
+     {
+      "name": "Gobierno nacional de Colombia (MinHacienda)",
+      "reason": "Una mayor razón deuda/PIB, 62,2 % en octubre frente a 61,4 % en septiembre, aumenta el tamaño de la deuda en relación con la economía."
+     },
+     {
+      "name": "Mercado de deuda interna",
+      "reason": "La deuda interna subió a 78,2 % del total, pero la fuente no indica cómo afecta la demanda o las condiciones de financiamiento."
+     },
+     {
+      "name": "Componente de deuda externa",
+      "reason": "La deuda externa fue de $261,5 billones, $106,6 billones menos que en octubre de 2025, pero la fuente no da la razón ni el efecto en el mercado."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Cifras de deuda pública de MinHacienda para noviembre de 2026, para ver si continúa el aumento mensual",
+      "note": "Revisar la publicación del saldo de deuda del Ministerio de Hacienda y su cobertura en prensa."
+     },
+     {
+      "text": "Razón deuda/PIB frente al 62,2 % reportado para octubre",
+      "note": "Comparar la próxima publicación de MinHacienda con la cifra de 62,2 %."
+     },
+     {
+      "text": "Avance de la ley de rescate económico mencionada por Montañez",
+      "note": "Seguir reportes oficiales y de prensa sobre el estado del proyecto y su tamaño."
+     }
+    ],
+    "unknowns": [
+     "¿Qué explica la caída de la deuda externa frente a octubre de 2025 y el aumento de la participación interna?",
+     "¿Qué proyección de PIB se usó como denominador y podrían las revisiones cambiar el 62,2 %?",
+     "¿Cómo afectaría la ley de rescate económico la trayectoria de la deuda?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-us-agencies-raise-2027-appraisal-exemption-thres",
+   "title": "US agencies raise 2027 appraisal exemption threshold for higher-priced mortgages to $35,500",
+   "category": "Regulation",
+   "region": "US",
+   "eventDate": "2026-11-25",
+   "evidence": "A",
+   "source": {
+    "name": "Federal Reserve Board (joint release with CFPB and OCC)",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm"
+   },
+   "summary": "The CFPB, the Federal Reserve Board and the OCC announced that the 2027 threshold for higher-priced mortgage loans subject to special appraisal requirements will rise from $34,200 to $35,500. It takes effect January 1, 2027. The adjustment is based on a 3.9 percent annual increase in the CPI-W as of June 1, 2026. Loans at or below the threshold are exempt from the requirements, which include a written appraisal based on a physical visit to the interior of the home.",
+   "actors": [
+    {
+     "name": "Creditors making small higher-priced mortgage loans",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "A higher threshold exempts more small loans from the written-appraisal and interior-visit requirements."
+    },
+    {
+     "name": "Borrowers taking out small higher-priced mortgages",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Loans at or below the threshold would not require the special appraisal, but the source does not say how this affects borrowers."
+    },
+    {
+     "name": "Appraisers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Fewer loans may fall under the special appraisal rule, but the source gives no information on appraisal volumes."
+    }
+   ],
+   "watch": [
+    {
+     "text": "The new $35,500 threshold takes effect",
+     "due": "2027-01-01",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Federal Register notice and the agencies' rule text for the effective date and amount."
+    },
+    {
+     "text": "Publication of the Federal Register notice on the exemption threshold",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Look for the notice on federalregister.gov and compare the figures with the press release."
+    }
+   ],
+   "unknowns": [
+    "How many loans will newly fall under the exemption at the higher threshold?",
+    "Will creditors change small-loan pricing or availability as a result?",
+    "What is the exact publication date of the Federal Register notice?"
+   ],
+   "tags": [
+    "appraisal",
+    "mortgages",
+    "CPI-W",
+    "CFPB",
+    "OCC",
+    "Federal Reserve"
+   ],
+   "es": {
+    "title": "Agencias de EE. UU. suben a US$35.500 el umbral 2027 de exención de avalúo para hipotecas de mayor costo",
+    "summary": "La CFPB, la Junta de la Reserva Federal y la OCC anunciaron que el umbral de 2027 para los préstamos hipotecarios de mayor costo sujetos a requisitos especiales de avalúo subirá de US$34.200 a US$35.500. Entrará en vigor el 1 de enero de 2027. El ajuste se basa en un aumento anual de 3,9 % del CPI-W al 1 de junio de 2026. Los préstamos iguales o inferiores al umbral están exentos de estos requisitos, que incluyen un avalúo escrito basado en una visita física al interior de la vivienda.",
+    "actors": [
+     {
+      "name": "Acreedores que otorgan hipotecas pequeñas de mayor costo",
+      "reason": "Un umbral más alto exime a más préstamos pequeños del avalúo escrito y de la visita al interior."
+     },
+     {
+      "name": "Prestatarios de hipotecas pequeñas de mayor costo",
+      "reason": "Los préstamos iguales o inferiores al umbral no requerirían el avalúo especial, pero la fuente no explica el efecto sobre los prestatarios."
+     },
+     {
+      "name": "Avaluadores",
+      "reason": "Menos préstamos podrían quedar sujetos a la regla de avalúo especial, pero la fuente no ofrece datos sobre el volumen de avalúos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Entra en vigor el nuevo umbral de US$35.500",
+      "note": "Revisar el aviso del Federal Register y el texto de la norma para confirmar la fecha y el monto."
+     },
+     {
+      "text": "Publicación del aviso en el Federal Register sobre el umbral de exención",
+      "note": "Buscar el aviso en federalregister.gov y comparar las cifras con el comunicado."
+     }
+    ],
+    "unknowns": [
+     "¿Cuántos préstamos quedarán exentos por primera vez con el umbral más alto?",
+     "¿Cambiarán los acreedores el precio o la oferta de préstamos pequeños como resultado?",
+     "¿Cuál es la fecha exacta de publicación del aviso en el Federal Register?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-25-asian-stocks-fall-on-ai-worries-us-pce-data-awai",
+   "title": "Asian stocks fall on AI worries; US PCE data awaited, Brent near US$91 on Hormuz attacks",
+   "category": "Macro data",
+   "region": "US / Global",
+   "eventDate": "2026-11-25",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-inversores-esperan-datos-clave-de-inflacion-en-ee-uu-y-petroleo-baja-en-medio-de-nuevos-ataques-en-ormuz/"
+   },
+   "summary": "Most Asian equity markets fell on Wednesday amid concerns over the sustainability of the AI trade, with Taiwan's index down 4.94%, the Kospi down 6.16% and the Nikkei 225 down 3.3%. European indices traded higher while investors awaited US October PCE data, which economists expect at 3.8% year on year versus 3.6% previously. Markets priced a 96.4% probability of a 25 basis point Fed hike at the December 8-9 meeting. Brent fell 0.5% to US$90.92 and WTI fell 0.9% to US$81.38 as signs of greater crude supply outweighed renewed attacks on shipping near the Strait of Hormuz.",
+   "actors": [
+    {
+     "name": "Asian technology-linked equities",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Renewed tech selling and doubts over returns on heavy AI investment weighed on risk appetite across Asia-Pacific indices."
+    },
+    {
+     "name": "US Federal Reserve policy path",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The PCE reading could reinforce or temper expectations of a rate hike that markets already priced as highly likely for December."
+    },
+    {
+     "name": "Commercial shipping near the Strait of Hormuz",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "The UK maritime agency reported three more vessels hit by projectiles, and Iran's Fars agency reported a fourth tanker hit a mine."
+    },
+    {
+     "name": "Gold",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "A stronger dollar and expectations of Fed rate hikes kept spot gold near 15-month lows at US$3,531.21 an ounce."
+    }
+   ],
+   "watch": [
+    {
+     "text": "US October PCE, Q3 GDP and jobless claims releases versus the 3.8% year-on-year PCE consensus",
+     "due": "2026-11-25",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the published PCE figure with the 3.8% economists' forecast and the prior 3.6%."
+    },
+    {
+     "text": "Federal Reserve decision at the December 8-9 meeting",
+     "due": "2026-12-09",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the FOMC statement against the 25 basis point hike priced by markets."
+    },
+    {
+     "text": "Further incidents affecting shipping in the Strait of Hormuz and the Brent price reaction",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Follow UK maritime agency reports and Brent futures relative to the roughly US$91 level."
+    }
+   ],
+   "unknowns": [
+    "Will the US tariff increases on China, the EU and 14 other partners, reported via Deutsche Bank citing the Wall Street Journal, be confirmed?",
+    "How much of the oil price move reflects supply signals versus Hormuz risk?",
+    "Will the Asian tech selloff persist or spread to other markets?"
+   ],
+   "tags": [
+    "markets",
+    "PCE",
+    "Fed",
+    "Hormuz",
+    "oil",
+    "AI trade"
+   ],
+   "es": {
+    "title": "Bolsas de Asia caen por temor a la IA; se espera el PCE de EE. UU. y el Brent ronda US$91 por Ormuz",
+    "summary": "La mayoría de las bolsas asiáticas cayeron el miércoles ante las preocupaciones por la sostenibilidad del comercio ligado a la IA: el índice de Taiwán bajó 4,94 %, el Kospi 6,16 % y el Nikkei 225 3,3 %. Las bolsas europeas cotizaban al alza mientras los inversores esperaban el PCE de octubre de EE. UU., que los economistas prevén en 3,8 % interanual frente a 3,6 % anterior. Los mercados descontaban una probabilidad de 96,4 % de una subida de 25 puntos básicos de la Fed en la reunión del 8 y 9 de diciembre. El Brent cayó 0,5 % hasta US$90,92 y el WTI 0,9 % hasta US$81,38, pues las señales de mayor oferta de crudo eclipsaron los nuevos ataques a la navegación cerca del estrecho de Ormuz.",
+    "actors": [
+     {
+      "name": "Acciones asiáticas ligadas a tecnología",
+      "reason": "Las nuevas ventas de tecnológicas y las dudas sobre la rentabilidad de las grandes inversiones en IA afectaron el apetito por riesgo en Asia-Pacífico."
+     },
+     {
+      "name": "Trayectoria de política de la Reserva Federal",
+      "reason": "El dato del PCE podría reforzar o moderar las expectativas de una subida de tipos que los mercados ya veían muy probable para diciembre."
+     },
+     {
+      "name": "Navegación comercial cerca del estrecho de Ormuz",
+      "reason": "La agencia marítima británica informó de tres embarcaciones más alcanzadas por proyectiles y la agencia iraní Fars reportó un cuarto petrolero que chocó con una mina."
+     },
+     {
+      "name": "Oro",
+      "reason": "Un dólar más fuerte y las expectativas de subidas de tipos de la Fed mantuvieron el oro al contado cerca de mínimos de 15 meses, en US$3.531,21 la onza."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación del PCE de octubre, el PIB del tercer trimestre y las solicitudes de subsidio de desempleo en EE. UU. frente al consenso de 3,8 % interanual del PCE",
+      "note": "Comparar la cifra publicada del PCE con la previsión de 3,8 % de los economistas y el 3,6 % anterior."
+     },
+     {
+      "text": "Decisión de la Reserva Federal en la reunión del 8 y 9 de diciembre",
+      "note": "Revisar el comunicado del FOMC frente a la subida de 25 puntos básicos que descuentan los mercados."
+     },
+     {
+      "text": "Nuevos incidentes contra la navegación en el estrecho de Ormuz y la reacción del precio del Brent",
+      "note": "Seguir los reportes de la agencia marítima británica y los futuros del Brent frente al nivel cercano a US$91."
+     }
+    ],
+    "unknowns": [
+     "¿Se confirmará el alza de aranceles de EE. UU. a China, la UE y otros 14 socios, citada por Deutsche Bank con base en el Wall Street Journal?",
+     "¿Cuánto del movimiento del petróleo refleja señales de oferta frente al riesgo en Ormuz?",
+     "¿Persistirá la venta de tecnológicas en Asia o se extenderá a otros mercados?"
+    ]
+   }
+  }
+ ],
+ "rejected": [],
+ "candidates": {
+  "from_feeds": 86,
+  "after_filter": 24,
+  "sample": [
+   "GDP, (Second Estimate) and Corporate Profits, 3rd Quarter 2026",
+   "Dólar en Colombia podría subir rápidamente a $3.800, pero volvería a niveles de $3.000 en ",
+   "Agencies announce dollar thresholds for applicability of truth in lending and consumer lea",
+   "Deuda pública de Colombia superó los $1.200 billones y subió al 62,2 % del PIB con corte a",
+   "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements",
+   "Premercado | Inversores esperan datos clave de inflación en EE. UU. y petróleo baja en med",
+   "Personal Income and Outlays, October 2026",
+   "Banco de la República proyecta que la reducción de las tasas de interés tomará menos tiemp"
+  ],
+  "dropped": {
+   "seen": 7,
+   "skip": 1,
+   "no_topic": 54
+  },
+  "raw_sample": [
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for applicability of truth in lend"
+   ],
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for smaller loan exemption from ap"
+   ],
+   [
+    "A",
+    0,
+    "Minutes of the Board's discount rate meetings on October 19 and Octobe"
+   ],
+   [
+    "A",
+    0,
+    "Almost 60% of primary energy used for electricity is lost to conversio"
+   ],
+   [
+    "A",
+    0,
+    "How does EIA compare different types of energy?"
+   ],
+   [
+    "B",
+    0,
+    "Aerolíneas lanzan descuentos para Black Friday: hay vuelos nacionales "
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-25-us-real-gdp-revised-up-to-4-3-annual-rate-in-q3-",
+   "title": "US real GDP revised up to 4.3% annual rate in Q3 2026 from 3.4%, BEA second estimate",
+   "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "Actor 'US health care services' is rated 'adverse', but the source only says health care was the largest contributor to a downward revision of the services spending estimate, based on new Census survey data. The source does not say health care spending fell or that the sector was harmed, so the adverse impact is not supported. The same problem appears in the ES actor 'Servicios de salud de EE. UU.'.",
+     "Actor 'US investment in intellectual property products (software)' is rated 'favorable' on the basis of a statistical revision. The source attributes that revision to revised BLS Producer Price Index data for software publishing, which is a deflator/measurement change. It does not show improved conditions for the actor, so the 'favorable' impact claim overreaches the source.",
+     "Unknown 'How corporate profits were distributed across industries, which the release does not detail' is partly misleading. The release links Table 6.16D 'Corporate Profits by Industry', and the next release (Dec 23) explicitly includes industry and corporate profits data. The ES unknown has the same issue."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-25-alianza-analyst-usd-cop-may-reach-3-700-3-800-so",
+   "title": "Alianza analyst: USD/COP may reach 3,700-3,800 soon, then ease toward 3,000-3,200",
+   "url": "https://www.valoraanalitik.com/dolar-en-colombia-podria-subir-rapidamente-a-3-800-pero-volveria-a-niveles-de-3-000-en-unos-meses/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-25T20:34:46.997914+00:00"
+  },
+  {
+   "id": "2026-11-25-fed-cfpb-set-2027-regulation-z-and-m-threshold-a",
+   "title": "Fed, CFPB set 2027 Regulation Z and M threshold at $76,300 for consumer credit, leases",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "Actor 'Consumer lenders and lessors' is labeled impact 'mixed', but the source gives no basis for any positive or negative effect on lenders. The reason only restates that compliance scope depends on transaction size. The impact should be 'undetermined'.",
+     "Minor ES/EN mismatch: the Spanish title says only 'para crédito al consumo' and omits leases ('arrendamientos'), while the English title covers 'consumer credit, leases'.",
+     "Minor ES/EN mismatch: the Spanish lender actor reason drops 'disclosure and related' from 'disclosure and related requirements'."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-24-colombia-s-public-debt-reaches-cop-1-200-trillio",
+   "title": "Colombia's public debt reaches COP 1,200 trillion, 62.2% of GDP in October: MinHacienda data",
+   "url": "https://www.valoraanalitik.com/deuda-publica-de-colombia-supero-los-1-200-billones-y-subio-al-622-del-pib-con-corte-a-octubre/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "eventDate is 2026-11-24, but the source article's publication date is 2026-11-25. The source never states when MinHacienda released the October figures. The only 24 November date is the timestamp on Montañez's embedded tweet, so 2026-11-24 is an inference rather than a stated event or publication date. Use 2026-11-25 unless a MinHacienda release date can be documented.",
+     "Actor 'Colombian national government (MinHacienda)' is labelled impact 'adverse', but the source never calls the rise adverse or names any consequence for the government. The source only says the ratio measures debt relative to the economy and that it rose from 61.4% to 62.2%. The reason given restates that fact and does not support an adverse impact. Change the impact to 'undetermined' or cite source support."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-25-us-agencies-raise-2027-appraisal-exemption-thres",
+   "title": "US agencies raise 2027 appraisal exemption threshold for higher-priced mortgages to $35,500",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": []
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-25-asian-stocks-fall-on-ai-worries-us-pce-data-awai",
+   "title": "Asian stocks fall on AI worries; US PCE data awaited, Brent near US$91 on Hormuz attacks",
+   "url": "https://www.valoraanalitik.com/premercado-inversores-esperan-datos-clave-de-inflacion-en-ee-uu-y-petroleo-baja-en-medio-de-nuevos-ataques-en-ormuz/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 4,
+    "issues": [
+     "The title says 'Brent near US$91 on Hormuz attacks' (ES: 'el Brent ronda US$91 por Ormuz'), which presents the attacks as the cause of the oil price level. The source says oil prices fell because signs of more crude supply outweighed the renewed Hormuz attacks. This causal attribution is unsupported and contradicts the draft's own summary. Suggested fix: 'Brent dips to near US$91 despite Hormuz attacks' / 'el Brent baja a cerca de US$91 pese a ataques en Ormuz'."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-25-alianza-analyst-usd-cop-may-reach-3-700-3-800-so",
+   "events": [
+    "fed_hike",
+    "brent_up"
+   ],
+   "rounds": [
+    {
+     "claims": 26,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-17-colombia-s-2027-minimum-wage-talks-workers-propo",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 30,
+     "unsupported": [
+      {
+       "text": "That gap is normal at the start of talks",
+       "why": "Generalization about negotiations not stated in the source or brief, and not a conditional economic mechanism"
+      },
+      {
+       "text": "Esa brecha es normal al comenzar una negociación",
+       "why": "Generalization about negotiations not stated in the source or brief, and not a conditional economic mechanism"
+      },
+      {
+       "text": "If the parties reach a consensus, the final figure tends to land well between the two opening proposals, since neither side is likely to get its full ask.",
+       "why": "Predicts where the final figure will land; the source and brief only say the final percentage is unknown"
+      },
+      {
+       "text": "Si las partes llegan a un consenso, la cifra final tiende a ubicarse en un punto intermedio entre las dos propuestas iniciales, pues ninguna parte suele lograr todo lo que pide.",
+       "why": "Predicts the outcome; 'punto intermedio' (a midpoint) is also more specific than the English 'well between'"
+      },
+      {
+       "text": "If talks stall, the decision tends to fall to the Government without agreement.",
+       "why": "Neither the source nor the brief says the Government decides if there is no agreement"
+      },
+      {
+       "text": "Si la negociación se estanca, la decisión tiende a recaer en el Gobierno sin acuerdo.",
+       "why": "Neither the source nor the brief says the Government decides if there is no agreement"
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 14,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-14-ecopetrol-s-windpeshi-wind-farm-in-la-guajira-re",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 14,
+     "unsupported": [
+      {
+       "text": "If international LNG prices ease enough to meet Ecopetrol's competitiveness, profitability and risk criteria, purchases tend to resume and the terminals could receive cargoes near schedule. (ES: Si los precios internacionales del GNL bajan lo suficiente... las compras tienden a reanudarse y las terminales podrían recibir cargamentos cerca del cronograma.)",
+       "why": "Predicts Ecopetrol's own decisions and the cargo timing. This is a company-specific forecast, not a general economic mechanism. The source gives no resumption conditions or timeline, and the brief lists the timing as unknown."
+      },
+      {
+       "text": "If Middle East tensions... keep prices high, the terminals tend to be ready but idle, and reliance on the SPEC plant tends to continue. (ES: ...las terminales tienden a quedar listas pero sin uso, y la dependencia de la planta de SPEC tiende a continuar.)",
+       "why": "Predicts specific outcomes for these terminals ('ready but idle'). It is not a widely accepted general mechanism, and neither the source nor the brief backs it."
+      },
+      {
+       "text": "Anyone counting on new LNG import capacity feels it first, including users of the SPEC plant in Cartagena. (ES: Quien cuente con nueva capacidad de importación de GNL lo siente primero, incluidos los usuarios de la planta de SPEC en Cartagena.)",
+       "why": "Neither the source nor the brief says who is affected first or that SPEC users bear the impact. The brief marks SPEC's impact as undetermined."
+      },
+      {
+       "text": "AES and the wind projects feel it later, around the first quarter of 2027. (ES: AES y los proyectos eólicos lo sienten después, hacia el primer trimestre de 2027.)",
+       "why": "Nothing links the LNG pause to AES or the wind projects. Q1 2027 is only the target for the JK1/JK2 FID, not a date when any impact is felt, and AES's impact is listed as undetermined."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 36,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  }
+ ]
+}

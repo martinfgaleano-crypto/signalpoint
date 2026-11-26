@@ -1,0 +1,141 @@
+{
+ "generatedAt": "2026-11-20T19:09:58.743204+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "3 (first date: Fri, 20 Nov 2026 15:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "2 (first date: Thu, 19 Nov 2026 09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-20 18:40:00)",
+  "Portafolio": "10 (first date: 2026-11-20T13:43:07-05:00)",
+  "Federal Reserve (monetary policy)": "1 (first date: Wed, 18 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "2 (first date: Fri, 20 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "2 (first date: Fri, 20 Nov 2026 09:28:28 -0500)",
+  "US Census Bureau (economic indicators)": "2 (first date: Thu, 19 Nov 2026 10:00:00 -0500)",
+  "CNBC Economy": "6 (first date: Fri, 20 Nov 2026 01:49:03 GMT)",
+  "CNBC Finance": "12 (first date: Fri, 20 Nov 2026 18:41:12 GMT)"
+ },
+ "briefs": [],
+ "rejected": [
+  {
+   "title": "SEC Charges Indianapolis-Based Backward Hat Capital and Its Co-Founders With $560 Million Dollar Offering Fraud and Obtains Emergency Relief",
+   "url": "https://www.sec.gov/newsroom/press-releases/2026-116-sec-charges-indianapolis-based-backward-hat-capital-its-co-founders-560-million-dollar-offering",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "OCDE proyecta un 2027 para Colombia con desaceleración económica, alta inflación y más deuda",
+   "url": "https://www.valoraanalitik.com/ocde-proyecta-un-2027-para-colombia-con-desaceleracion-economica-alta-inflacion-y-mas-deuda/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Premercado | Bolsas mundiales se desploman por temores sobre la inteligencia artificial: Wall Street apunta a una apertura de cautela y petróleo sube",
+   "url": "https://www.valoraanalitik.com/premercado-bolsas-mundiales-se-desploman-por-temores-sobre-la-inteligencia-artificial-wall-street-apunta-a-una-apertura-de-cautela-y-petroleo-sube/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  },
+  {
+   "title": "Menor expectativa de inflación en Colombia permitiría que las tasas de interés se mantengan en 12,25 %",
+   "url": "https://www.valoraanalitik.com/menor-expectativa-de-inflacion-en-colombia-permitiria-que-las-tasas-de-interes-se-mantengan-en-1225/",
+   "errors": [
+    "model call failed: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go "
+   ]
+  }
+ ],
+ "candidates": {
+  "from_feeds": 90,
+  "after_filter": 31,
+  "sample": [
+   "SEC Charges Indianapolis-Based Backward Hat Capital and Its Co-Founders With $560 Million ",
+   "OCDE proyecta un 2027 para Colombia con desaceleración económica, alta inflación y más deu",
+   "Federal Reserve Board releases results from survey of senior financial officers at banks a",
+   "Premercado | Bolsas mundiales se desploman por temores sobre la inteligencia artificial: W",
+   "Federal Reserve Board issues enforcement action with former employee of First Security Ban",
+   "Menor expectativa de inflación en Colombia permitiría que las tasas de interés se mantenga",
+   "Oil flows through Middle East chokepoints increased in the third quarter",
+   "Colombia está cada vez más cerca a tener una deuda insostenible, advierte informe del Banc"
+  ],
+  "dropped": {
+   "seen": 9,
+   "skip": 3,
+   "no_topic": 47
+  },
+  "raw_sample": [
+   [
+    "A",
+    0,
+    "Federal Reserve Board releases results from survey of senior financial"
+   ],
+   [
+    "A",
+    0,
+    "Federal Reserve Board issues enforcement action with former employee o"
+   ],
+   [
+    "A",
+    0,
+    "Minutes of the Federal Open Market Committee, October 27-28, 2026"
+   ],
+   [
+    "A",
+    0,
+    "Oil flows through Middle East chokepoints increased in the third quart"
+   ],
+   [
+    "A",
+    0,
+    "U.S. natural gas inventories end injection season above normal levels"
+   ],
+   [
+    "B",
+    1,
+    "Dólar en Colombia aumentó casi $150 en dos días y ya superó la barrera"
+   ]
+  ]
+ },
+ "insight_checks": [
+  {
+   "id": "2026-11-18-banco-popular-cuts-credit-card-range-from-17-typ",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-18-colombia-s-q3-2026-gdp-grew-0-5-the-weakest-in-o",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-18-fed-releases-minutes-of-the-october-27-28-2026-f",
+   "events": [
+    "fed_meeting"
+   ],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  },
+  {
+   "id": "2026-11-17-grupo-argos-ceo-outlines-partial-cementos-argos-",
+   "events": [],
+   "rounds": [],
+   "result": "model error: RuntimeError('API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchas"
+  }
+ ]
+}
