@@ -1134,6 +1134,8 @@ body.ck-open{overflow:hidden}
 <meta name="description" content="SignalPoint explica en palabras simples los eventos del mercado y la economía, con la fuente a un clic; es contenido educativo, no asesoría de inversión.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SignalPoint">
+<link rel="canonical" href="https://martinfgaleano-crypto.github.io/signalpoint/">
+<meta property="og:url" content="https://martinfgaleano-crypto.github.io/signalpoint/">
 <meta property="og:title" content="SignalPoint · El mercado en palabras simples">
 <meta property="og:description" content="SignalPoint explica en palabras simples los eventos del mercado y la economía, con la fuente a un clic; es contenido educativo, no asesoría de inversión.">
 <meta property="og:locale" content="es_CO">
@@ -1722,7 +1724,7 @@ function mBoard(){
 function heroIntro(){
   var sub;
   if(waitlisted())sub='<p class="wait-ok" role="status">\u2713 '+T("You are on the Pro waitlist. We will write when it opens.","Est\u00e1s en la lista de espera de Pro. Te escribiremos cuando abra.")+"</p>";
-  else sub='<form id="hero-wait" class="mh-row">'+(S.user?"":'<label class="sr" for="hero-wait-email">'+T("Your email","Tu correo")+'</label><input class="search" id="hero-wait-email" type="email" required maxlength="200" autocomplete="email" placeholder="'+T("Your email","Tu correo")+'" value="'+esc(S.heroEmail||"")+'">')+'<button class="btn" type="submit">'+T("Notify me when Pro opens","Av\u00edsame cuando abra Pro")+"</button></form>"+(S.waitErr?'<p class="note problem" role="alert">'+esc(S.waitErr)+"</p>":"")+'<p class="note">'+T("We only use your email to tell you when Pro opens. ","Solo usamos tu correo para avisarte cuando abra Pro. ")+'<a href="#privacidad">'+T("Privacy","Privacidad")+"</a></p>";
+  else sub='<form id="hero-wait" class="mh-row">'+(S.user?"":'<label class="sr" for="hero-wait-email">'+T("Your email","Tu correo")+'</label><input class="search" id="hero-wait-email" type="email" required maxlength="200" autocomplete="email" placeholder="'+T("Your email","Tu correo")+'" value="'+esc(S.heroEmail||"")+'">')+'<button class="btn" type="submit">'+T("Notify me when Pro opens","Av\u00edsame cuando abra Pro")+"</button></form>"+(S.waitErr?'<p class="note problem" role="alert">'+esc(S.waitErr)+"</p>":"")+'<p class="note">'+T("We only use your email to tell you when Pro opens. ","Solo usamos tu correo para avisarte cuando abra Pro. ")+'<button class="linkish" data-view="method">'+T("Privacy","Privacidad")+"</button></p>";
   return '<p class="mh-what">SignalPoint explains market and economy events in plain words, with the source one click away, for people in the US and Colombia who want to understand the news without being experts.</p><div class="mh-sub">'+sub+"</div>";
 }
 function mHero(){
