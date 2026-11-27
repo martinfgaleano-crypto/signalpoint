@@ -126,7 +126,7 @@ def collect(live, archive_dir, retracted):
             if isinstance(a, dict) and isinstance(a.get("id"), str) and txt(a.get("publishedAt"), 40):
                 pub_at.setdefault(a["id"], txt(a.get("publishedAt"), 40))
         for b in d.get("briefs") or []:
-            if valid_brief(b): arch.setdefault(b["id"], b)
+            if valid_brief(b): arch[b["id"]] = b   # files are read oldest first, so the newest copy of a brief wins
     briefs, seen = [], set()
     for b in (live.get("briefs") or []) if isinstance(live, dict) else []:
         if valid_brief(b) and b["id"] not in seen and b["id"] not in retracted:

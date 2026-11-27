@@ -1,7 +1,7 @@
 name: pages
 # Publishes the site with GitHub Pages (source: GitHub Actions) = the files of main + one static page per published brief,
 # built by tools/build_brief_pages.py from the robot's data on the drafts branch. No model calls and no secrets.
-# If the robot's data is missing or the generator fails, the plain site of main is still published (never a blank site).
+# If the robot's data is missing or the generator fails, nothing is published: the last good deployment stays live and the run fails visibly.
 on:
   push:
     branches: [main]
@@ -49,8 +49,12 @@ jobs:
       - name: Stop here if the robot ran but there is no drafts branch (nothing new to publish)
         id: gate
         run: |
-          if [ "${{ github.event_name }}" = "workflow_run" ] && [ "${{ steps.robot.outputs.drafts }}" = "no" ]; then
+          if [ "${{ steps.robot.outputs.data }}" = "no" ]; then
+            # Without the robot's data the brief pages cannot be rebuilt. Publishing the plain site would erase every
+            # /brief/ page while the home still links to them, so keep the last good deployment live and fail visibly.
             echo "deploy=no" >> "$GITHUB_OUTPUT"
+            echo "::error::The robot's data (drafts branch, live/briefs-live.json) could not be read; nothing was published. The last deployment stays live."
+            exit 1
           else
             echo "deploy=yes" >> "$GITHUB_OUTPUT"
           fi
@@ -65,9 +69,9 @@ jobs:
         if: steps.gate.outputs.deploy == 'yes' && steps.robot.outputs.data == 'yes'
         run: |
           if ! python3 tools/build_brief_pages.py --live _robot/briefs-live.json --retracted _robot/retracted.json --archive _robot/days --site _site; then
-            echo "::warning::Brief pages could not be built; publishing the plain site of main."
-            rm -rf _site && mkdir _site && git archive --format=tar HEAD | tar -x -C _site
-            rm -rf _site/.github _site/tools/__pycache__
+            # Same reason as above: never publish a site without the brief pages; keep the last good deployment.
+            echo "::error::Brief pages could not be built; nothing was published. The last deployment stays live."
+            exit 1
           fi
 
       - uses: actions/configure-pages@v5
