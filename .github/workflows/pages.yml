@@ -1,0 +1,81 @@
+name: pages
+# Publishes the site with GitHub Pages (source: GitHub Actions) = the files of main + one static page per published brief,
+# built by tools/build_brief_pages.py from the robot's data on the drafts branch. No model calls and no secrets.
+# If the robot's data is missing or the generator fails, the plain site of main is still published (never a blank site).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: [news-drafts]
+    types: [completed]
+  schedule:
+    - cron: '41 13 * * *'   # daily fallback, 08:41 Bogotá
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Read the robot's data from the drafts branch (read only)
+        id: robot
+        run: |
+          mkdir -p _robot/days
+          if git fetch -q --depth 1 origin drafts; then
+            git show FETCH_HEAD:live/briefs-live.json > _robot/briefs-live.json 2>/dev/null || rm -f _robot/briefs-live.json
+            git show FETCH_HEAD:retracted.json > _robot/retracted.json 2>/dev/null || echo '[]' > _robot/retracted.json
+            for f in $(git ls-tree --name-only FETCH_HEAD | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$'); do
+              git show "FETCH_HEAD:$f" > "_robot/days/$f" || rm -f "_robot/days/$f"
+            done
+            echo "drafts=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::No drafts branch; the plain site will be published."
+            echo "drafts=no" >> "$GITHUB_OUTPUT"
+          fi
+          if [ -s _robot/briefs-live.json ]; then echo "data=yes" >> "$GITHUB_OUTPUT"; else echo "data=no" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Stop here if the robot ran but there is no drafts branch (nothing new to publish)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_run" ] && [ "${{ steps.robot.outputs.drafts }}" = "no" ]; then
+            echo "deploy=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Copy the site (the files of main, without .github and Python caches)
+        if: steps.gate.outputs.deploy == 'yes'
+        run: |
+          mkdir _site && git archive --format=tar HEAD | tar -x -C _site
+          rm -rf _site/.github _site/tools/__pycache__
+
+      - name: Add one page per brief, the brief indexes and the sitemap
+        if: steps.gate.outputs.deploy == 'yes' && steps.robot.outputs.data == 'yes'
+        run: |
+          if ! python3 tools/build_brief_pages.py --live _robot/briefs-live.json --retracted _robot/retracted.json --archive _robot/days --site _site; then
+            echo "::warning::Brief pages could not be built; publishing the plain site of main."
+            rm -rf _site && mkdir _site && git archive --format=tar HEAD | tar -x -C _site
+            rm -rf _site/.github _site/tools/__pycache__
+          fi
+
+      - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.deploy == 'yes'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.deploy == 'yes'
+        with:
+          path: _site
+      - id: deployment
+        if: steps.gate.outputs.deploy == 'yes'
+        uses: actions/deploy-pages@v4
