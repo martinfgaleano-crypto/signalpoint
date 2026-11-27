@@ -1,0 +1,870 @@
+{
+ "generatedAt": "2026-11-27T20:03:35.135668+00:00",
+ "model": "claude-sonnet-5-5",
+ "feeds": {
+  "Federal Reserve": "2 (first date: Wed, 25 Nov 2026 20:00:00 GMT)",
+  "US Bureau of Labor Statistics": "error: <HTTPError 403: 'Forbidden'>",
+  "US Energy Information Administration": "2 (first date: Fri, 27 Nov 2026  09:00:00 EST)",
+  "Valora Analitik": "50 (first date: 2026-11-27 20:00:00)",
+  "Portafolio": "10 (first date: 2026-11-27T14:52:12-05:00)",
+  "Federal Reserve (monetary policy)": "0 (first date: Tue, 24 Nov 2026 19:00:00 GMT)",
+  "US Bureau of Economic Analysis": "2 (first date: Wed, 25 Nov 2026 08:30:00 EST)",
+  "US Securities and Exchange Commission": "1 (first date: Wed, 25 Nov 2026 09:10:24 -0500)",
+  "US Census Bureau (economic indicators)": "5 (first date: Fri, 27 Nov 2026 08:30:00 -0500)",
+  "CNBC Economy": "7 (first date: Fri, 27 Nov 2026 06:09:51 GMT)",
+  "CNBC Finance": "10 (first date: Fri, 27 Nov 2026 13:21:56 GMT)"
+ },
+ "briefs": [
+  {
+   "id": "2026-11-27-census-bureau-page-describes-advance-economic-in",
+   "title": "Census Bureau page describes Advance Economic Indicators report on goods trade and inventories",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-27",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/econ/indicators/index.html"
+   },
+   "summary": "The US Census Bureau's Advance Economic Indicators page says the report provides advance statistics for U.S. international trade in goods, domestic retail inventories and domestic wholesale inventories. It says goods trade data are compiled by commodity classification, quantities, values, shipping weights, transport method, state of origin, customs district and port, destination country, and whether goods are domestic or re-exports. The retrieved text is a program description and contains no figures from the latest release. It also notes that FRED now incorporates the Census Bureau's 13 economic indicators.",
+   "actors": [
+    {
+     "name": "Analysts and users of US trade data",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They can use the advance goods trade and inventory statistics, but the page gives no readings for the latest release."
+    },
+    {
+     "name": "US importers and exporters of goods",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Their activity feeds the advance goods trade statistics, but the page does not say how it moved."
+    },
+    {
+     "name": "US retailers and wholesalers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "They report end-of-month inventory values used in the report, but no inventory levels are given."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Publication of the latest Advance Economic Indicators report with actual goods trade and inventory figures",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Census Bureau's release schedule and the latest report linked from the program page."
+    },
+    {
+     "text": "Changes to the release schedule or announcements for the program",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the Release Schedule and Announcements sections on the Census Bureau page."
+    }
+   ],
+   "unknowns": [
+    "What do the latest advance figures show for goods exports, imports and the trade balance?",
+    "How did retail and wholesale inventories change in the latest month?",
+    "When is the next scheduled release of the report?"
+   ],
+   "tags": [
+    "US trade",
+    "Census Bureau",
+    "goods trade",
+    "inventories",
+    "macro data"
+   ],
+   "es": {
+    "title": "Página del Censo de EE. UU. describe el informe de indicadores económicos anticipados de comercio e inventarios",
+    "summary": "La página de Indicadores Económicos Anticipados de la Oficina del Censo de EE. UU. indica que el informe ofrece estadísticas anticipadas del comercio internacional de bienes, los inventarios minoristas internos y los inventarios mayoristas internos. Señala que los datos de comercio de bienes se compilan por clasificación de producto, cantidades, valores, peso de embarque, medio de transporte, estado de origen, distrito y puerto aduanero, país de destino y si son bienes nacionales o reexportaciones. El texto consultado es una descripción del programa y no contiene cifras de la última publicación. También indica que FRED ya incorpora los 13 indicadores económicos de la Oficina del Censo.",
+    "actors": [
+     {
+      "name": "Analistas y usuarios de datos comerciales de EE. UU.",
+      "reason": "Pueden usar las estadísticas anticipadas de comercio de bienes e inventarios, pero la página no da cifras de la última publicación."
+     },
+     {
+      "name": "Importadores y exportadores de bienes de EE. UU.",
+      "reason": "Su actividad alimenta las estadísticas anticipadas de comercio de bienes, pero la página no dice cómo se movió."
+     },
+     {
+      "name": "Minoristas y mayoristas de EE. UU.",
+      "reason": "Reportan los valores de inventarios de fin de mes que usa el informe, pero no se indican niveles de inventarios."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación del último informe de Indicadores Económicos Anticipados con cifras reales de comercio de bienes e inventarios",
+      "note": "Revisar el calendario de publicaciones de la Oficina del Censo y el último informe enlazado en la página del programa."
+     },
+     {
+      "text": "Cambios en el calendario de publicaciones o anuncios del programa",
+      "note": "Revisar las secciones de calendario y anuncios en la página de la Oficina del Censo."
+     }
+    ],
+    "unknowns": [
+     "¿Qué muestran las últimas cifras anticipadas de exportaciones, importaciones y balanza comercial de bienes?",
+     "¿Cómo cambiaron los inventarios minoristas y mayoristas en el último mes?",
+     "¿Cuándo es la próxima publicación programada del informe?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-renta-4-research-head-sees-colombia-s-fiscal-cre",
+   "title": "Renta 4 research head sees Colombia's fiscal credibility at risk without concrete cuts",
+   "category": "Other",
+   "region": "Colombia",
+   "eventDate": "2026-11-27",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/credibilidad-fiscal-del-gobierno-colombiano-esta-en-riesgo-ante-la-falta-de-medidas-concretas-de-ajuste/"
+   },
+   "summary": "Rafael Molina, director of Research at Renta 4 Global Fiduciaria, told Valora Analitik that delays in issuing decrees and effective budget cuts have created skepticism among investors. He projects inflation closing this year at 6.8% and ending 2027 between 5.5% and 5.6%, and says Banco de la República could raise rates by 25 basis points at its December meeting. He cites a 2027 deficit that could approach 9.4% without reform and gives his own estimate of about 8.5%. He does not see an imminent default risk in the next year and says an IMF agreement could act as a relief valve.",
+   "actors": [
+    {
+     "name": "Colombian government",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Per Molina, delays in concrete decrees and cuts have somewhat eroded its fiscal credibility with investors."
+    },
+    {
+     "name": "Banco de la República",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Molina expects a cautious stance and a possible 25 bp hike in December, given inflation pressures he sees."
+    },
+    {
+     "name": "Colombian fixed income and peso investors",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Molina describes strong pressure on fixed income and risk premiums, and a peso that reacts strongly to news."
+    },
+    {
+     "name": "Colombian oil industry",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Molina says incentives such as the RUGE regime in the tax reform are needed to attract foreign investment, given tax burdens near 50%."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Issuance of decrees and effective budget cuts by the government",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check official decrees and Finance Ministry announcements."
+    },
+    {
+     "text": "Banco de la República's December rate decision, which Molina says could include a 25 bp hike",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the central bank's policy statement after the December meeting."
+    },
+    {
+     "text": "Congressional treatment of the tax reform, including incentives such as the RUGE regime, and progress of IMF talks",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review congressional records and official statements on the IMF negotiation."
+    }
+   ],
+   "unknowns": [
+    "Which specific decrees and cuts the government will issue, and when.",
+    "Whether the tax reform will include the incentives Molina says are needed for the oil sector.",
+    "What terms an IMF agreement would carry."
+   ],
+   "tags": [
+    "Colombia",
+    "fiscal deficit",
+    "Banco de la República",
+    "inflation",
+    "peso",
+    "IMF"
+   ],
+   "es": {
+    "title": "Renta 4: la credibilidad fiscal de Colombia está en riesgo sin recortes concretos",
+    "summary": "Rafael Molina, director de Research de Renta 4 Global Fiduciaria, dijo a Valora Analitik que la demora en decretos y recortes presupuestales efectivos ha generado escepticismo entre los inversionistas. Proyecta que la inflación cierre este año en 6,8 % y que en 2027 se ubique entre 5,5 % y 5,6 %, y señala que el Banco de la República podría subir las tasas 25 puntos básicos en su reunión de diciembre. Cita un déficit para 2027 que podría rozar el 9,4 % sin reforma y da una estimación propia cercana al 8,5 %. No ve un riesgo de default inminente en el próximo año y dice que un acuerdo con el FMI podría ser una válvula de escape.",
+    "actors": [
+     {
+      "name": "Gobierno colombiano",
+      "reason": "Según Molina, la demora en decretos y recortes concretos ha resentido algo su credibilidad fiscal ante los inversionistas."
+     },
+     {
+      "name": "Banco de la República",
+      "reason": "Molina espera una postura cautelosa y un posible alza de 25 pb en diciembre, por las presiones inflacionarias que ve."
+     },
+     {
+      "name": "Inversionistas en renta fija y peso colombiano",
+      "reason": "Molina describe una fuerte presión sobre la renta fija y las primas de riesgo, y un peso que reacciona con fuerza a las noticias."
+     },
+     {
+      "name": "Industria petrolera colombiana",
+      "reason": "Molina dice que se requieren incentivos como el régimen RUGE en la reforma tributaria para atraer inversión extranjera, dadas cargas tributarias cercanas al 50 %."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Expedición de decretos y recortes presupuestales efectivos por parte del Gobierno",
+      "note": "Revisar decretos oficiales y anuncios del Ministerio de Hacienda."
+     },
+     {
+      "text": "Decisión de tasas del Banco de la República en diciembre, que según Molina podría incluir un alza de 25 pb",
+      "note": "Revisar el comunicado de política monetaria tras la reunión de diciembre."
+     },
+     {
+      "text": "Trámite en el Congreso de la reforma tributaria, incluidos incentivos como el régimen RUGE, y avance de la negociación con el FMI",
+      "note": "Revisar registros del Congreso y declaraciones oficiales sobre la negociación con el FMI."
+     }
+    ],
+    "unknowns": [
+     "Qué decretos y recortes específicos emitirá el Gobierno y cuándo.",
+     "Si la reforma tributaria incluirá los incentivos que Molina considera necesarios para el sector petrolero.",
+     "Qué condiciones tendría un acuerdo con el FMI."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-eia-global-electricity-generation-reached-31-8-t",
+   "title": "EIA: global electricity generation reached 31.8 trillion kWh in 2025, over double 2000",
+   "category": "Macro data",
+   "region": "US / Global",
+   "eventDate": "2026-11-27",
+   "evidence": "A",
+   "source": {
+    "name": "U.S. Energy Information Administration (Today in Energy)",
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=68525"
+   },
+   "summary": "The EIA reports that the world generated 31.8 trillion kWh of electricity in 2025, versus 15.1 trillion kWh in 2000. Renewables rose from 2.9 trillion kWh to 10.6 trillion kWh, a 34% share of the 2025 mix, and surpassed coal, whose share fell from a 41% peak in 2007 to 33%. China, the United States and India together generated 17.3 trillion kWh in 2025, more than the rest of the world combined. China generated 10.7 trillion kWh, the US 4.5 trillion kWh and India 2.1 trillion kWh.",
+   "actors": [
+    {
+     "name": "Renewable power generators",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "Renewable generation grew from 2.9 to 10.6 trillion kWh between 2000 and 2025 and became the largest source in 2025, according to the EIA."
+    },
+    {
+     "name": "Coal-fired generation",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Coal output grew 83% from 2000 to 2024, but its share of world generation fell from 41% in 2007 to 33% in 2025."
+    },
+    {
+     "name": "US power sector and data-center demand",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "US generation growth averaged 2% a year in 2020-2025, much of it from commercial demand including data centers, per the EIA."
+    },
+    {
+     "name": "India's power system",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Generation more than tripled since 2000 and 70% of the 2025 output came from coal, so demand growth is tied largely to coal."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Revisions to the EIA's preliminary 2025 estimates for China and other countries in International Energy Statistics",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare future updates of the EIA International Energy Statistics database with the figures in this article."
+    },
+    {
+     "text": "Whether US generation growth stays near the 2% annual average seen in 2020-2025",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check EIA Electric Power Monthly and Monthly Energy Review releases."
+    },
+    {
+     "text": "Whether the renewables share stays above coal's share in the global mix in later data",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review the next annual EIA global generation data by source."
+    }
+   ],
+   "unknowns": [
+    "How much the preliminary 2025 estimates, especially for China, will change when revised?",
+    "How much of the future growth in demand will be met by renewables versus coal?",
+    "How large will the contribution of data centers to US demand be beyond the 2020-2025 period?"
+   ],
+   "tags": [
+    "electricity",
+    "generation",
+    "renewables",
+    "coal",
+    "China",
+    "India"
+   ],
+   "es": {
+    "title": "EIA: la generación eléctrica mundial llegó a 31,8 billones de kWh en 2025, más del doble que en 2000",
+    "summary": "La EIA reporta que el mundo generó 31,8 billones de kWh de electricidad en 2025, frente a 15,1 billones de kWh en 2000. Las renovables pasaron de 2,9 a 10,6 billones de kWh, con una participación de 34 % en la mezcla de 2025, y superaron al carbón, cuya participación bajó de un máximo de 41 % en 2007 a 33 %. China, Estados Unidos e India generaron en conjunto 17,3 billones de kWh en 2025, más que el resto del mundo junto. China generó 10,7 billones de kWh, Estados Unidos 4,5 billones y la India 2,1 billones.",
+    "actors": [
+     {
+      "name": "Generadores de energía renovable",
+      "reason": "Según la EIA, la generación renovable creció de 2,9 a 10,6 billones de kWh entre 2000 y 2025 y fue la mayor fuente en 2025."
+     },
+     {
+      "name": "Generación a carbón",
+      "reason": "La generación a carbón aumentó 83 % entre 2000 y 2024, pero su participación en la generación mundial bajó de 41 % en 2007 a 33 % en 2025."
+     },
+     {
+      "name": "Sector eléctrico de EE. UU. y demanda de centros de datos",
+      "reason": "El crecimiento de la generación en EE. UU. promedió 2 % anual en 2020-2025, en buena parte por la demanda comercial, incluidos los centros de datos, según la EIA."
+     },
+     {
+      "name": "Sistema eléctrico de la India",
+      "reason": "La generación se más que triplicó desde 2000 y 70 % de la producción de 2025 provino del carbón, por lo que el crecimiento de la demanda depende en gran medida de este."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Revisiones a las estimaciones preliminares de 2025 de la EIA para China y otros países en International Energy Statistics",
+      "note": "Comparar las futuras actualizaciones de la base de datos International Energy Statistics de la EIA con las cifras de este artículo."
+     },
+     {
+      "text": "Si el crecimiento de la generación en EE. UU. se mantiene cerca del promedio anual de 2 % de 2020-2025",
+      "note": "Revisar las publicaciones Electric Power Monthly y Monthly Energy Review de la EIA."
+     },
+     {
+      "text": "Si la participación de las renovables se mantiene por encima de la del carbón en la mezcla mundial en datos posteriores",
+      "note": "Revisar los próximos datos anuales de generación mundial por fuente de la EIA."
+     }
+    ],
+    "unknowns": [
+     "¿Cuánto cambiarán las estimaciones preliminares de 2025, en especial las de China, cuando se revisen?",
+     "¿Qué parte del crecimiento futuro de la demanda será cubierta por renovables y cuál por carbón?",
+     "¿Qué tan grande será el aporte de los centros de datos a la demanda de EE. UU. más allá del periodo 2020-2025?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-banrep-s-acosta-says-2027-minimum-wage-rise-shou",
+   "title": "BanRep's Acosta says 2027 minimum wage rise should be around 8%",
+   "category": "Central banks",
+   "region": "Colombia",
+   "eventDate": "2026-11-27",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/incremento-del-minimo-debe-alinearse-con-inflacion-y-productividad-para-no-deteriorar-el-empleo-codirectora-banrep/"
+   },
+   "summary": "In an interview with Bloomberg Línea, as reported by Valora Analitik, Banco de la República co-director Olga Lucía Acosta said the 2027 minimum wage increase should be around 8%. She based this on inflation closing 2026 at 7% at most and labor productivity growth near 1%. She said the 23% rise set for 2026 was followed by weaker formal employment in labor-intensive sectors, and that the central bank expects 2027 growth slightly below 2%. She also said conditions for gradual rate cuts could emerge in the second half of 2027 if fiscal and monetary policy align.",
+   "actors": [
+    {
+     "name": "Minimum wage earners and their households",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Acosta called the 2026 rise favorable for families individually, but said it was followed by weaker formal employment in sectors with many minimum-wage workers."
+    },
+    {
+     "name": "Small and medium-sized businesses",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Acosta said they generate 70% of employment and many could not absorb the 2026 increase, with labor reform adding costs."
+    },
+    {
+     "name": "Colombian borrowers and consumers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Restrictive monetary policy keeps rates higher for now, while Acosta sees possible gradual cuts in the second half of 2027 if fiscal adjustment advances."
+    },
+    {
+     "name": "Colombian public finances",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Acosta described the government's tax reform as a key signal on debt sustainability, but said the adjustment will take several periods."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Official 2027 minimum wage decision and how it compares with the roughly 8% suggested by Acosta",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the government decree or announcement of the 2027 minimum wage increase."
+    },
+    {
+     "text": "Fourth-quarter 2026 GDP data, after 0.5% growth in the third quarter",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the DANE release with Acosta's moderate optimism about reconstruction effects."
+    },
+    {
+     "text": "BanRep board rate decisions and inflation readings relative to the 3% target",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review board statements and DANE inflation releases for signs of the easing Acosta described."
+    }
+   ],
+   "unknowns": [
+    "Will the government and unions adopt a minimum wage figure close to 8%?",
+    "How quickly will the fiscal adjustment move through Congress and affect inflation and rates?",
+    "How large will the effects of El Niño and subsidy revisions be on inflation?"
+   ],
+   "tags": [
+    "BanRep",
+    "minimum wage",
+    "inflation",
+    "interest rates",
+    "Colombia",
+    "fiscal reform"
+   ],
+   "es": {
+    "title": "Codirectora del BanRep, Acosta, plantea que el mínimo de 2027 suba cerca de 8 %",
+    "summary": "En una entrevista con Bloomberg Línea, reportada por Valora Analitik, la codirectora del Banco de la República, Olga Lucía Acosta, dijo que el aumento del salario mínimo para 2027 debería ubicarse en torno al 8 %. Se basó en una inflación que cerraría 2026 «a lo sumo en 7 %» y un avance de la productividad laboral cercano al 1 %. Afirmó que tras el alza de 23 % fijada para 2026 se deterioró el empleo formal en sectores intensivos en mano de obra, y que el banco prevé un crecimiento ligeramente inferior a 2 % en 2027. Añadió que en el segundo semestre de 2027 podrían darse las condiciones para una reducción gradual de las tasas si la política fiscal y la monetaria se armonizan.",
+    "actors": [
+     {
+      "name": "Trabajadores que ganan el salario mínimo y sus hogares",
+      "reason": "Acosta calificó el alza de 2026 como favorable para las familias individualmente, pero dijo que se asoció con un deterioro del empleo formal en sectores con muchos trabajadores atados al mínimo."
+     },
+     {
+      "name": "Pequeñas y medianas empresas",
+      "reason": "Acosta dijo que generan el 70 % del empleo y que muchas no pudieron absorber el aumento de 2026, con costos adicionales por la reforma laboral."
+     },
+     {
+      "name": "Deudores y consumidores colombianos",
+      "reason": "La política monetaria restrictiva mantiene tasas altas por ahora, mientras Acosta ve posibles recortes graduales en el segundo semestre de 2027 si avanza el ajuste fiscal."
+     },
+     {
+      "name": "Finanzas públicas de Colombia",
+      "reason": "Acosta describió la reforma tributaria del Gobierno como una señal clave sobre la sostenibilidad de la deuda, pero dijo que el ajuste tardará varios periodos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión oficial sobre el salario mínimo de 2027 y su comparación con el 8 % aproximado sugerido por Acosta",
+      "note": "Revisar el decreto o anuncio del Gobierno sobre el aumento del mínimo de 2027."
+     },
+     {
+      "text": "Datos del PIB del cuarto trimestre de 2026, tras el crecimiento de 0,5 % del tercer trimestre",
+      "note": "Comparar la publicación del DANE con el moderado optimismo de Acosta sobre los efectos de la reconstrucción."
+     },
+     {
+      "text": "Decisiones de tasas de la Junta del BanRep y datos de inflación frente a la meta de 3 %",
+      "note": "Revisar los comunicados de la Junta y las publicaciones de inflación del DANE en busca de señales de la flexibilización que describió Acosta."
+     }
+    ],
+    "unknowns": [
+     "¿El Gobierno y los sindicatos adoptarán una cifra de salario mínimo cercana al 8 %?",
+     "¿Con qué rapidez avanzará el ajuste fiscal en el Congreso y cómo afectará la inflación y las tasas?",
+     "¿Qué tan grandes serán los efectos de El Niño y de la revisión de subsidios sobre la inflación?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-census-bureau-page-outlines-advance-report-on-tr",
+   "title": "Census Bureau page outlines advance report on trade in goods and inventories",
+   "category": "Macro data",
+   "region": "US",
+   "eventDate": "2026-11-27",
+   "evidence": "A",
+   "source": {
+    "name": "US Census Bureau (economic indicators)",
+    "url": "https://www.census.gov/econ/indicators/index.html"
+   },
+   "summary": "The Census Bureau's Advance Economic Indicators page describes a report with advance statistics for U.S. international trade in goods, domestic retail inventories and domestic wholesale inventories. According to the page, entities report dollar values of end-of-month merchant wholesale and retail inventories. The text provided contains no inventory readings or changes, so it does not show how inventories moved.",
+   "actors": [
+    {
+     "name": "Data users (analysts, forecasters)",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "The page describes the dataset and its coverage, but no figures are given that would show any effect."
+    },
+    {
+     "name": "U.S. retailers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Their end-of-month inventory values feed the retail inventories series, but the text gives no readings."
+    },
+    {
+     "name": "U.S. wholesalers",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Their end-of-month inventory values feed the wholesale inventories series, but the text gives no readings."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Publication of the latest Advance Economic Indicators report with retail and wholesale inventory values",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the Census Bureau release schedule and the latest report linked from the page."
+    },
+    {
+     "text": "Advance international trade in goods figures in the same report",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare them with the report's historical data once published."
+    }
+   ],
+   "unknowns": [
+    "What are the latest retail and wholesale inventory values?",
+    "When is the next report scheduled for release?",
+    "How do the advance figures compare with prior periods?"
+   ],
+   "tags": [
+    "Census Bureau",
+    "retail inventories",
+    "wholesale inventories",
+    "trade in goods",
+    "advance indicators"
+   ],
+   "es": {
+    "title": "Página del Censo de EE. UU. describe el informe adelantado de comercio de bienes e inventarios",
+    "summary": "La página de Indicadores Económicos Adelantados de la Oficina del Censo describe un informe con estadísticas adelantadas sobre el comercio internacional de bienes de EE. UU. y los inventarios internos del comercio minorista y mayorista. Según la página, las entidades reportan los valores en dólares de los inventarios de fin de mes de mayoristas y minoristas. El texto suministrado no incluye lecturas ni variaciones de inventarios, por lo que no muestra cómo se movieron.",
+    "actors": [
+     {
+      "name": "Usuarios de los datos (analistas, pronosticadores)",
+      "reason": "La página describe el conjunto de datos y su cobertura, pero no da cifras que muestren algún efecto."
+     },
+     {
+      "name": "Minoristas de EE. UU.",
+      "reason": "Sus valores de inventario de fin de mes alimentan la serie de inventarios minoristas, pero el texto no da lecturas."
+     },
+     {
+      "name": "Mayoristas de EE. UU.",
+      "reason": "Sus valores de inventario de fin de mes alimentan la serie de inventarios mayoristas, pero el texto no da lecturas."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Publicación del último informe de Indicadores Económicos Adelantados con valores de inventarios minoristas y mayoristas",
+      "note": "Revisar el calendario de publicaciones de la Oficina del Censo y el último informe enlazado en la página."
+     },
+     {
+      "text": "Cifras adelantadas de comercio internacional de bienes en el mismo informe",
+      "note": "Compararlas con los datos históricos del informe una vez se publiquen."
+     }
+    ],
+    "unknowns": [
+     "¿Cuáles son los valores más recientes de inventarios minoristas y mayoristas?",
+     "¿Cuándo está programada la publicación del próximo informe?",
+     "¿Cómo se comparan las cifras adelantadas con los periodos anteriores?"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-asian-and-european-stocks-rise-as-ai-shares-rebo",
+   "title": "Asian and European stocks rise as AI shares rebound; Brent up 1.1% to US$97.66",
+   "category": "Other",
+   "region": "Global",
+   "eventDate": "2026-11-27",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-mercados-suben-ante-recuperacion-del-sector-de-ia-petroleo-repunta-y-europa-espera-datos-clave/"
+   },
+   "summary": "Most Asian markets rose on Friday, with China's CSI 300 up 3.5% and South Korea's Kospi up 4.1%, after China's State Council pledged more capital-market support and AI-related tech stocks recovered. The Stoxx 600 was up 0.9% in the morning session but was still on course for a 1.5% monthly decline in November, while European bond yields rose after ECB minutes with a hawkish tone. Brent futures rose 1.1% to US$97.66 and WTI gained 2.7% to US$85.97, as reported attacks on Saudi energy infrastructure and shipping near the Strait of Hormuz fueled supply concerns. Spot gold rose 3% to US$3,672.19. Tokyo core inflation reached 2.9% in November, up from 2.6% in October.",
+   "actors": [
+    {
+     "name": "Chinese equity market",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The State Council pledged additional capital-market policies and state-backed investor support, and exchanges are cutting the minimum margin for leveraged share purchases from 100% to 80%."
+    },
+    {
+     "name": "AI and tech-sector stocks",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Shares rebounded on Friday, but the source says doubts persist over whether debt-financed AI spending is sustainable as interest rates rise."
+    },
+    {
+     "name": "European bond investors",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Yields rose, especially at short maturities, after ECB minutes pointed to a restrictive tone and traders priced in more rate hikes."
+    },
+    {
+     "name": "Crude oil market",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Prices rose on concerns that escalating Middle East hostilities could disrupt the recovery of regional crude supplies, but the source gives no confirmed supply impact."
+    }
+   ],
+   "watch": [
+    {
+     "text": "France's November CPI and the final eurozone consumer confidence reading for November, both scheduled for Friday.",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the published figures with the market reaction in European rates and equities."
+    },
+    {
+     "text": "Entry into force of the lower minimum margin requirement (80%) for leveraged share purchases on the Shanghai, Shenzhen and Beijing exchanges.",
+     "due": "2026-11-30",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check exchange notices and Chinese equity market moves after the change takes effect."
+    },
+    {
+     "text": "Whether the Bank of Japan moves toward a rate hike in December, as Tokyo inflation data reinforced expectations.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Bank of Japan statements and its December meeting outcome."
+    }
+   ],
+   "unknowns": [
+    "What the scope and timing of China's additional capital-market support will be, since officials gave no details.",
+    "Whether the rebound in AI-related stocks will hold after a month of heavy losses.",
+    "How far the reported attacks on Saudi energy infrastructure and Hormuz shipping will affect actual crude supplies."
+   ],
+   "tags": [
+    "markets",
+    "AI stocks",
+    "China",
+    "ECB",
+    "oil",
+    "gold"
+   ],
+   "es": {
+    "title": "Bolsas de Asia y Europa suben con el rebote de acciones de IA; el Brent sube 1,1 % hasta US$97,66",
+    "summary": "La mayoría de los mercados asiáticos subieron el viernes: el CSI 300 de China avanzó 3,5 % y el Kospi de Corea del Sur 4,1 %, tras el compromiso del Consejo de Estado chino de ofrecer más apoyo a los mercados de capitales y la recuperación de las acciones tecnológicas ligadas a la IA. El Stoxx 600 subía 0,9 % en la sesión matinal, aunque seguía en camino de una caída mensual de 1,5 % en noviembre, mientras los rendimientos de los bonos europeos subían tras unas actas del BCE de tono restrictivo. Los futuros del Brent subieron 1,1 % hasta US$97,66 y el WTI ganó 2,7 % hasta US$85,97, en medio de ataques reportados contra infraestructura energética saudí y el tráfico marítimo cerca del estrecho de Ormuz. El oro al contado subió 3 % hasta US$3.672,19. La inflación subyacente de Tokio en noviembre llegó a 2,9 %, frente a 2,6 % en octubre.",
+    "actors": [
+     {
+      "name": "Mercado accionario chino",
+      "reason": "El Consejo de Estado prometió políticas adicionales en los mercados de capitales y apoyo de inversores respaldados por el Estado, y las bolsas reducirán el margen mínimo para compras apalancadas de acciones de 100 % a 80 %."
+     },
+     {
+      "name": "Acciones de IA y del sector tecnológico",
+      "reason": "Las acciones rebotaron el viernes, pero la fuente indica que persisten las dudas sobre si el gasto en IA financiado con deuda es sostenible a medida que suben los tipos de interés."
+     },
+     {
+      "name": "Inversores en bonos europeos",
+      "reason": "Los rendimientos subieron, sobre todo en los plazos cortos, tras unas actas del BCE de tono restrictivo, y los traders descontaron más alzas de tipos."
+     },
+     {
+      "name": "Mercado de petróleo crudo",
+      "reason": "Los precios subieron por la preocupación de que la escalada de hostilidades en Oriente Medio interrumpa la recuperación del suministro regional de crudo, pero la fuente no confirma un impacto real en la oferta."
+     }
+    ],
+    "watch": [
+     {
+      "text": "IPC de noviembre de Francia y lectura final de la confianza del consumidor de la eurozona para noviembre, ambos programados para el viernes.",
+      "note": "Comparar las cifras publicadas con la reacción de los mercados europeos de tasas y acciones."
+     },
+     {
+      "text": "Entrada en vigor del menor requisito mínimo de margen (80 %) para compras apalancadas de acciones en las bolsas de Shanghái, Shenzhen y Pekín.",
+      "note": "Revisar los avisos de las bolsas y el comportamiento del mercado accionario chino tras el cambio."
+     },
+     {
+      "text": "Si el Banco de Japón avanza hacia una subida de tipos en diciembre, como refuerzan los datos de inflación de Tokio.",
+      "note": "Revisar los comunicados del Banco de Japón y el resultado de su reunión de diciembre."
+     }
+    ],
+    "unknowns": [
+     "Cuál será el alcance y el calendario del apoyo adicional de China a los mercados de capitales, ya que los funcionarios no dieron detalles.",
+     "Si el rebote de las acciones ligadas a la IA se sostendrá tras un mes de fuertes pérdidas.",
+     "Hasta qué punto los ataques reportados contra infraestructura energética saudí y el tráfico en Ormuz afectarán el suministro real de crudo."
+    ]
+   }
+  }
+ ],
+ "rejected": [],
+ "candidates": {
+  "from_feeds": 89,
+  "after_filter": 30,
+  "sample": [
+   "Advance U.S. International Trade in Goods",
+   "Credibilidad fiscal del Gobierno colombiano está en riesgo ante la falta de medidas concre",
+   "Global electricity generation more than doubled from 2000 to 2025",
+   "Incremento del mínimo debe alinearse con inflación y productividad para no deteriorar el e",
+   "Advance Retail Inventories",
+   "Premercado | Mercados suben ante recuperación del sector de IA: petróleo repunta y Europa ",
+   "Advance Wholesale Inventories",
+   "Colombia presentó ante la OCDE su plan para transformar la economía al 2030"
+  ],
+  "dropped": {
+   "seen": 13,
+   "skip": 1,
+   "no_topic": 45
+  },
+  "raw_sample": [
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for applicability of truth in lend"
+   ],
+   [
+    "A",
+    2,
+    "Agencies announce dollar thresholds for smaller loan exemption from ap"
+   ],
+   [
+    "A",
+    0,
+    "Global electricity generation more than doubled from 2000 to 2025"
+   ],
+   [
+    "A",
+    0,
+    "Almost 60% of primary energy used for electricity is lost to conversio"
+   ],
+   [
+    "B",
+    0,
+    "Decreto para tramitar consulta previa y licencia ambiental a la par «y"
+   ],
+   [
+    "B",
+    2,
+    "Salario mínimo 2027 en Colombia: negociación inicia con 0,15 % de prod"
+   ]
+  ]
+ },
+ "audit": [
+  {
+   "id": "2026-11-27-census-bureau-page-describes-advance-economic-in",
+   "title": "Census Bureau page describes Advance Economic Indicators report on goods trade and inventories",
+   "url": "https://www.census.gov/econ/indicators/index.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": []
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-27-renta-4-research-head-sees-colombia-s-fiscal-cre",
+   "title": "Renta 4 research head sees Colombia's fiscal credibility at risk without concrete cuts",
+   "url": "https://www.valoraanalitik.com/credibilidad-fiscal-del-gobierno-colombiano-esta-en-riesgo-ante-la-falta-de-medidas-concretas-de-ajuste/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 5,
+    "issues": [
+     "Actor 'Colombian fixed income and peso investors' is marked 'adverse', but the source does not support an adverse impact for peso investors. Molina calls the peso 'high beta', reacting strongly to both good and bad news. He also says it strengthened after the move to $4,500 and projects it could stabilize at $3,250–3,300 before rising toward $3,450 in 2027. Only the fixed income and risk-premium pressure is supported as adverse. Split the actor or limit it to fixed income, and fix the reason in both EN and ES.",
+     "Actor 'Colombian oil industry' is marked 'mixed', but the source only states what Molina says the tax reform needs (RUGE incentives) and that tax burdens near 50% make investment hard to attract. It describes no actual mixed impact. 'undetermined', or an adverse reason tied explicitly to the current tax burden, would match the source better.",
+     "Deficit figures: the source is internally inconsistent, saying both the 9.4% and the 8.5% figures are 'sin reforma'. The draft's 'his own estimate of about 8.5%' drops that qualifier. Consider noting the ambiguity rather than implying a clean contrast.",
+     "IMF: the source says the negotiation with the IMF is an 'importante válvula de escape' and could facilitate an agreement with more flexible terms. The draft attributes the relief-valve role to 'an IMF agreement' in both EN and ES. This is a minor shift that should be aligned with the source wording.",
+     "Category 'Other' seems inappropriate for a fiscal, monetary policy and FX brief; a macro/economy category would fit better.",
+     "Summary omits Molina's rate path (short-term rates unlikely below 11% before mid-next year, long-term around 12.5%) and his FX projections. This is not an accuracy error, but it is relevant context for the peso actor."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-27-eia-global-electricity-generation-reached-31-8-t",
+   "title": "EIA: global electricity generation reached 31.8 trillion kWh in 2025, over double 2000",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=68525",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": false,
+    "relevance": 2,
+    "issues": [
+     "Actor 'India's power system' (EN and ES): the reason says 'so demand growth is tied largely to coal' / 'el crecimiento de la demanda depende en gran medida de este'. The source does not say this. It reports that 70% of India's 2025 generation came from coal, which describes the generation mix, not what drives demand growth. The source attributes India's demand growth to population growth and a fast-growing manufacturing sector. Remove the inference, or restate it as the source does (e.g., 'generation more than tripled since 2000, averaging 5% a year, and 70% of 2025 output came from coal')."
+    ]
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-27-banrep-s-acosta-says-2027-minimum-wage-rise-shou",
+   "title": "BanRep's Acosta says 2027 minimum wage rise should be around 8%",
+   "url": "https://www.valoraanalitik.com/incremento-del-minimo-debe-alinearse-con-inflacion-y-productividad-para-no-deteriorar-el-empleo-codirectora-banrep/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 5,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-27T20:06:38.047856+00:00"
+  },
+  {
+   "id": "2026-11-27-census-bureau-page-outlines-advance-report-on-tr",
+   "title": "Census Bureau page outlines advance report on trade in goods and inventories",
+   "url": "https://www.census.gov/econ/indicators/index.html",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 2,
+    "issues": []
+   },
+   "decision": "hold",
+   "reviewModel": "claude-opus-5-5"
+  },
+  {
+   "id": "2026-11-27-asian-and-european-stocks-rise-as-ai-shares-rebo",
+   "title": "Asian and European stocks rise as AI shares rebound; Brent up 1.1% to US$97.66",
+   "url": "https://www.valoraanalitik.com/premercado-mercados-suben-ante-recuperacion-del-sector-de-ia-petroleo-repunta-y-europa-espera-datos-clave/",
+   "gate": "pass",
+   "numbers_missing": [],
+   "review": {
+    "pass": true,
+    "relevance": 3,
+    "issues": []
+   },
+   "decision": "publish",
+   "reviewModel": "claude-opus-5-5",
+   "publishedAt": "2026-11-27T20:07:32.339224+00:00"
+  }
+ ],
+ "insight_checks": [
+  {
+   "id": "2026-11-27-banrep-s-acosta-says-2027-minimum-wage-rise-shou",
+   "events": [],
+   "rounds": [
+    {
+     "claims": 16,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  },
+  {
+   "id": "2026-11-27-asian-and-european-stocks-rise-as-ai-shares-rebo",
+   "events": [
+    "brent_up"
+   ],
+   "rounds": [
+    {
+     "claims": 18,
+     "unsupported": [
+      {
+       "text": "Colombia's oil-linked assets react to Brent / Los activos colombianos ligados al crudo reaccionan al Brent",
+       "why": "Stated as a fact, not a conditional mechanism. Neither the source nor the brief backs it, and the historical evidence shows no reliable reaction (e.g., Ecopetrol 52% vs 52% any period)."
+      }
+     ],
+     "numbers_missing": []
+    },
+    {
+     "claims": 18,
+     "unsupported": [],
+     "numbers_missing": []
+    }
+   ],
+   "result": "published"
+  }
+ ],
+ "budget": {
+  "calls": {
+   "draft": 9,
+   "review": 9
+  },
+  "limits": {
+   "draft": 24,
+   "review": 24
+  },
+  "max_publish": 5,
+  "hit": []
+ }
+}

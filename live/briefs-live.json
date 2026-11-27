@@ -1,6 +1,238 @@
 {
  "briefs": [
   {
+   "id": "2026-11-27-asian-and-european-stocks-rise-as-ai-shares-rebo",
+   "title": "Asian and European stocks rise as AI shares rebound; Brent up 1.1% to US$97.66",
+   "category": "Other",
+   "region": "Global",
+   "eventDate": "2026-11-27",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/premercado-mercados-suben-ante-recuperacion-del-sector-de-ia-petroleo-repunta-y-europa-espera-datos-clave/"
+   },
+   "summary": "Most Asian markets rose on Friday, with China's CSI 300 up 3.5% and South Korea's Kospi up 4.1%, after China's State Council pledged more capital-market support and AI-related tech stocks recovered. The Stoxx 600 was up 0.9% in the morning session but was still on course for a 1.5% monthly decline in November, while European bond yields rose after ECB minutes with a hawkish tone. Brent futures rose 1.1% to US$97.66 and WTI gained 2.7% to US$85.97, as reported attacks on Saudi energy infrastructure and shipping near the Strait of Hormuz fueled supply concerns. Spot gold rose 3% to US$3,672.19. Tokyo core inflation reached 2.9% in November, up from 2.6% in October.",
+   "actors": [
+    {
+     "name": "Chinese equity market",
+     "ticker": "",
+     "impact": "favorable",
+     "reason": "The State Council pledged additional capital-market policies and state-backed investor support, and exchanges are cutting the minimum margin for leveraged share purchases from 100% to 80%."
+    },
+    {
+     "name": "AI and tech-sector stocks",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Shares rebounded on Friday, but the source says doubts persist over whether debt-financed AI spending is sustainable as interest rates rise."
+    },
+    {
+     "name": "European bond investors",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Yields rose, especially at short maturities, after ECB minutes pointed to a restrictive tone and traders priced in more rate hikes."
+    },
+    {
+     "name": "Crude oil market",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Prices rose on concerns that escalating Middle East hostilities could disrupt the recovery of regional crude supplies, but the source gives no confirmed supply impact."
+    }
+   ],
+   "watch": [
+    {
+     "text": "France's November CPI and the final eurozone consumer confidence reading for November, both scheduled for Friday.",
+     "due": "2026-11-27",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the published figures with the market reaction in European rates and equities."
+    },
+    {
+     "text": "Entry into force of the lower minimum margin requirement (80%) for leveraged share purchases on the Shanghai, Shenzhen and Beijing exchanges.",
+     "due": "2026-11-30",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check exchange notices and Chinese equity market moves after the change takes effect."
+    },
+    {
+     "text": "Whether the Bank of Japan moves toward a rate hike in December, as Tokyo inflation data reinforced expectations.",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review Bank of Japan statements and its December meeting outcome."
+    }
+   ],
+   "unknowns": [
+    "What the scope and timing of China's additional capital-market support will be, since officials gave no details.",
+    "Whether the rebound in AI-related stocks will hold after a month of heavy losses.",
+    "How far the reported attacks on Saudi energy infrastructure and Hormuz shipping will affect actual crude supplies."
+   ],
+   "tags": [
+    "markets",
+    "AI stocks",
+    "China",
+    "ECB",
+    "oil",
+    "gold"
+   ],
+   "es": {
+    "title": "Bolsas de Asia y Europa suben con el rebote de acciones de IA; el Brent sube 1,1 % hasta US$97,66",
+    "summary": "La mayoría de los mercados asiáticos subieron el viernes: el CSI 300 de China avanzó 3,5 % y el Kospi de Corea del Sur 4,1 %, tras el compromiso del Consejo de Estado chino de ofrecer más apoyo a los mercados de capitales y la recuperación de las acciones tecnológicas ligadas a la IA. El Stoxx 600 subía 0,9 % en la sesión matinal, aunque seguía en camino de una caída mensual de 1,5 % en noviembre, mientras los rendimientos de los bonos europeos subían tras unas actas del BCE de tono restrictivo. Los futuros del Brent subieron 1,1 % hasta US$97,66 y el WTI ganó 2,7 % hasta US$85,97, en medio de ataques reportados contra infraestructura energética saudí y el tráfico marítimo cerca del estrecho de Ormuz. El oro al contado subió 3 % hasta US$3.672,19. La inflación subyacente de Tokio en noviembre llegó a 2,9 %, frente a 2,6 % en octubre.",
+    "actors": [
+     {
+      "name": "Mercado accionario chino",
+      "reason": "El Consejo de Estado prometió políticas adicionales en los mercados de capitales y apoyo de inversores respaldados por el Estado, y las bolsas reducirán el margen mínimo para compras apalancadas de acciones de 100 % a 80 %."
+     },
+     {
+      "name": "Acciones de IA y del sector tecnológico",
+      "reason": "Las acciones rebotaron el viernes, pero la fuente indica que persisten las dudas sobre si el gasto en IA financiado con deuda es sostenible a medida que suben los tipos de interés."
+     },
+     {
+      "name": "Inversores en bonos europeos",
+      "reason": "Los rendimientos subieron, sobre todo en los plazos cortos, tras unas actas del BCE de tono restrictivo, y los traders descontaron más alzas de tipos."
+     },
+     {
+      "name": "Mercado de petróleo crudo",
+      "reason": "Los precios subieron por la preocupación de que la escalada de hostilidades en Oriente Medio interrumpa la recuperación del suministro regional de crudo, pero la fuente no confirma un impacto real en la oferta."
+     }
+    ],
+    "watch": [
+     {
+      "text": "IPC de noviembre de Francia y lectura final de la confianza del consumidor de la eurozona para noviembre, ambos programados para el viernes.",
+      "note": "Comparar las cifras publicadas con la reacción de los mercados europeos de tasas y acciones."
+     },
+     {
+      "text": "Entrada en vigor del menor requisito mínimo de margen (80 %) para compras apalancadas de acciones en las bolsas de Shanghái, Shenzhen y Pekín.",
+      "note": "Revisar los avisos de las bolsas y el comportamiento del mercado accionario chino tras el cambio."
+     },
+     {
+      "text": "Si el Banco de Japón avanza hacia una subida de tipos en diciembre, como refuerzan los datos de inflación de Tokio.",
+      "note": "Revisar los comunicados del Banco de Japón y el resultado de su reunión de diciembre."
+     }
+    ],
+    "unknowns": [
+     "Cuál será el alcance y el calendario del apoyo adicional de China a los mercados de capitales, ya que los funcionarios no dieron detalles.",
+     "Si el rebote de las acciones ligadas a la IA se sostendrá tras un mes de fuertes pérdidas.",
+     "Hasta qué punto los ataques reportados contra infraestructura energética saudí y el tráfico en Ormuz afectarán el suministro real de crudo."
+    ]
+   }
+  },
+  {
+   "id": "2026-11-27-banrep-s-acosta-says-2027-minimum-wage-rise-shou",
+   "title": "BanRep's Acosta says 2027 minimum wage rise should be around 8%",
+   "category": "Central banks",
+   "region": "Colombia",
+   "eventDate": "2026-11-27",
+   "evidence": "B",
+   "source": {
+    "name": "Valora Analitik",
+    "url": "https://www.valoraanalitik.com/incremento-del-minimo-debe-alinearse-con-inflacion-y-productividad-para-no-deteriorar-el-empleo-codirectora-banrep/"
+   },
+   "summary": "In an interview with Bloomberg Línea, as reported by Valora Analitik, Banco de la República co-director Olga Lucía Acosta said the 2027 minimum wage increase should be around 8%. She based this on inflation closing 2026 at 7% at most and labor productivity growth near 1%. She said the 23% rise set for 2026 was followed by weaker formal employment in labor-intensive sectors, and that the central bank expects 2027 growth slightly below 2%. She also said conditions for gradual rate cuts could emerge in the second half of 2027 if fiscal and monetary policy align.",
+   "actors": [
+    {
+     "name": "Minimum wage earners and their households",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Acosta called the 2026 rise favorable for families individually, but said it was followed by weaker formal employment in sectors with many minimum-wage workers."
+    },
+    {
+     "name": "Small and medium-sized businesses",
+     "ticker": "",
+     "impact": "adverse",
+     "reason": "Acosta said they generate 70% of employment and many could not absorb the 2026 increase, with labor reform adding costs."
+    },
+    {
+     "name": "Colombian borrowers and consumers",
+     "ticker": "",
+     "impact": "mixed",
+     "reason": "Restrictive monetary policy keeps rates higher for now, while Acosta sees possible gradual cuts in the second half of 2027 if fiscal adjustment advances."
+    },
+    {
+     "name": "Colombian public finances",
+     "ticker": "",
+     "impact": "undetermined",
+     "reason": "Acosta described the government's tax reform as a key signal on debt sustainability, but said the adjustment will take several periods."
+    }
+   ],
+   "watch": [
+    {
+     "text": "Official 2027 minimum wage decision and how it compares with the roughly 8% suggested by Acosta",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Check the government decree or announcement of the 2027 minimum wage increase."
+    },
+    {
+     "text": "Fourth-quarter 2026 GDP data, after 0.5% growth in the third quarter",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Compare the DANE release with Acosta's moderate optimism about reconstruction effects."
+    },
+    {
+     "text": "BanRep board rate decisions and inflation readings relative to the 3% target",
+     "due": "",
+     "status": "open",
+     "kind": "observation",
+     "note": "Review board statements and DANE inflation releases for signs of the easing Acosta described."
+    }
+   ],
+   "unknowns": [
+    "Will the government and unions adopt a minimum wage figure close to 8%?",
+    "How quickly will the fiscal adjustment move through Congress and affect inflation and rates?",
+    "How large will the effects of El Niño and subsidy revisions be on inflation?"
+   ],
+   "tags": [
+    "BanRep",
+    "minimum wage",
+    "inflation",
+    "interest rates",
+    "Colombia",
+    "fiscal reform"
+   ],
+   "es": {
+    "title": "Codirectora del BanRep, Acosta, plantea que el mínimo de 2027 suba cerca de 8 %",
+    "summary": "En una entrevista con Bloomberg Línea, reportada por Valora Analitik, la codirectora del Banco de la República, Olga Lucía Acosta, dijo que el aumento del salario mínimo para 2027 debería ubicarse en torno al 8 %. Se basó en una inflación que cerraría 2026 «a lo sumo en 7 %» y un avance de la productividad laboral cercano al 1 %. Afirmó que tras el alza de 23 % fijada para 2026 se deterioró el empleo formal en sectores intensivos en mano de obra, y que el banco prevé un crecimiento ligeramente inferior a 2 % en 2027. Añadió que en el segundo semestre de 2027 podrían darse las condiciones para una reducción gradual de las tasas si la política fiscal y la monetaria se armonizan.",
+    "actors": [
+     {
+      "name": "Trabajadores que ganan el salario mínimo y sus hogares",
+      "reason": "Acosta calificó el alza de 2026 como favorable para las familias individualmente, pero dijo que se asoció con un deterioro del empleo formal en sectores con muchos trabajadores atados al mínimo."
+     },
+     {
+      "name": "Pequeñas y medianas empresas",
+      "reason": "Acosta dijo que generan el 70 % del empleo y que muchas no pudieron absorber el aumento de 2026, con costos adicionales por la reforma laboral."
+     },
+     {
+      "name": "Deudores y consumidores colombianos",
+      "reason": "La política monetaria restrictiva mantiene tasas altas por ahora, mientras Acosta ve posibles recortes graduales en el segundo semestre de 2027 si avanza el ajuste fiscal."
+     },
+     {
+      "name": "Finanzas públicas de Colombia",
+      "reason": "Acosta describió la reforma tributaria del Gobierno como una señal clave sobre la sostenibilidad de la deuda, pero dijo que el ajuste tardará varios periodos."
+     }
+    ],
+    "watch": [
+     {
+      "text": "Decisión oficial sobre el salario mínimo de 2027 y su comparación con el 8 % aproximado sugerido por Acosta",
+      "note": "Revisar el decreto o anuncio del Gobierno sobre el aumento del mínimo de 2027."
+     },
+     {
+      "text": "Datos del PIB del cuarto trimestre de 2026, tras el crecimiento de 0,5 % del tercer trimestre",
+      "note": "Comparar la publicación del DANE con el moderado optimismo de Acosta sobre los efectos de la reconstrucción."
+     },
+     {
+      "text": "Decisiones de tasas de la Junta del BanRep y datos de inflación frente a la meta de 3 %",
+      "note": "Revisar los comunicados de la Junta y las publicaciones de inflación del DANE en busca de señales de la flexibilización que describió Acosta."
+     }
+    ],
+    "unknowns": [
+     "¿El Gobierno y los sindicatos adoptarán una cifra de salario mínimo cercana al 8 %?",
+     "¿Con qué rapidez avanzará el ajuste fiscal en el Congreso y cómo afectará la inflación y las tasas?",
+     "¿Qué tan grandes serán los efectos de El Niño y de la revisión de subsidios sobre la inflación?"
+    ]
+   }
+  },
+  {
    "id": "2026-11-26-fund-managers-flag-ai-linked-recession-risk-and-",
    "title": "Fund managers flag AI-linked recession risk and rising asset correlations at Singapore panel",
    "category": "Other",
@@ -2811,7 +3043,7 @@
    }
   }
  ],
- "updatedAt": "2026-11-26T23:03:12.235203+00:00",
+ "updatedAt": "2026-11-27T20:07:33.218683+00:00",
  "retracted": [
   "2026-11-18-fed-releases-minutes-of-october-27-28-2026-fomc-"
  ],
@@ -3486,6 +3718,61 @@
      "Qué cambiaría la lectura"
     ]
    }
+  },
+  "2026-11-27-banrep-s-acosta-says-2027-minimum-wage-rise-shou": {
+   "tease": "A BanRep co-director says the 2027 minimum wage rise should be around 8%, built from inflation closing 2026 at 7% at most plus labor productivity growth near 1%. This is one official's view, not a decision. It suggests the central bank worries that another jump like the 23% rise for 2026 could hurt formal jobs and keep price pressure high.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If the government sets a rise close to 8%, then cost pressure on employers tends to stay more contained, and gradual rate cuts in the second half of 2027 look more plausible. If the figure lands well above it, then business costs and inflation pressure tend to rise, and easing could be pushed back. Slow fiscal adjustment could have a similar effect."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "basis": [],
+   "checked": 16,
+   "es": {
+    "tease": "Una codirectora del BanRep plantea que el alza del salario mínimo de 2027 ronde el 8 %, calculada con una inflación que cerraría 2026 «a lo sumo en 7 %» y una productividad laboral cercana al 1 %. Es la opinión de una funcionaria, no una decisión. Sugiere preocupación de que otro salto como el 23 % de 2026 golpee el empleo formal y mantenga la presión sobre los precios.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si el Gobierno fija un aumento cercano al 8 %, la presión de costos sobre los empleadores tiende a ser más contenida y los recortes graduales de tasas en el segundo semestre de 2027 se ven más plausibles. Si la cifra queda muy por encima, los costos y la presión inflacionaria tienden a subir, y la flexibilización podría aplazarse. Un ajuste fiscal lento tendría un efecto similar."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
+  },
+  "2026-11-27-asian-and-european-stocks-rise-as-ai-shares-rebo": {
+   "tease": "Markets rebounded on Friday: China's CSI 300 rose 3.5%, the Kospi 4.1% and the Stoxx 600 0.9%, though the Stoxx 600 is still on course for a 1.5% fall in November. Brent rose 1.1% to US$97.66 on reported attacks on Saudi energy infrastructure and Hormuz shipping. The source gives no confirmed supply impact.",
+   "first": {
+    "h": "Scenarios",
+    "p": "If the attacks start to cut real crude supply, Brent tends to stay firm; if supply proves unaffected, the rise may fade. Past days with Brent up 2.5% or more, a bigger jump than today's, give a mixed record: Ecopetrol's ADR was up 20 trading days later in 90 of 174 cases (52%; any period 52%)."
+   },
+   "parts": [
+    "Who feels it first",
+    "What would change the reading"
+   ],
+   "basis": [
+    {
+     "event": "brent_up",
+     "n": 285,
+     "en": "Brent rises 2.5% or more in a day",
+     "es": "El Brent sube 2,5% o más en un día"
+    }
+   ],
+   "checked": 18,
+   "es": {
+    "tease": "Los mercados rebotaron el viernes: el CSI 300 de China subió 3,5 %, el Kospi 4,1 % y el Stoxx 600 0,9 %, aunque el Stoxx 600 sigue en camino de una caída de 1,5 % en noviembre. El Brent subió 1,1 % hasta US$97,66 por ataques reportados contra infraestructura energética saudí y el tráfico en Ormuz. La fuente no confirma un impacto real en el suministro.",
+    "first": {
+     "h": "Escenarios",
+     "p": "Si los ataques empiezan a recortar el suministro real de crudo, el Brent tiende a mantenerse firme; si el suministro no se afecta, el alza podría diluirse. Los días pasados con Brent al alza de 2,5 % o más, un salto mayor al de hoy, dejan un registro mixto: el ADR de Ecopetrol subía 20 ruedas después en 90 de 174 casos (52 %; cualquier período 52 %)."
+    },
+    "parts": [
+     "Quién lo siente primero",
+     "Qué cambiaría la lectura"
+    ]
+   }
   }
  },
  "track": {
@@ -3493,7 +3780,7 @@
   "closed": 0,
   "held": 0,
   "expected": null,
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "recent": []
  }
 }
