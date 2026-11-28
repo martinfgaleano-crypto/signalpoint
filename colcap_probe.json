@@ -1,0 +1,37 @@
+{
+ "yahoo_ICOLCAP.CL": {
+  "ok": true,
+  "bytes": 2612,
+  "head": "{\"chart\":{\"result\":[{\"meta\":{\"currency\":\"COP\",\"symbol\":\"ICOLCAP.CL\",\"exchangeName\":\"BVC\",\"fullExchangeName\":\"BVC\",\"instrumentType\":\"ETF\",\"firstTradeDate\":1367501400,\"regularMarketTime\":1795807701,\"hasPrePostMarketData\":false,\"gmtoffset\":-18000,\"timezone\":\"EST\",\"exchangeTimezoneName\":\"America/New_York\",\"regularMarketPrice\":23726.5,\"regularMarketChangePercent\":1.108,\"fulldayPrice\":23726.5,\"fulldayCh"
+ },
+ "yahoo_COLCAP.CL": {
+  "ok": false,
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ "yahoo_^MXCO": {
+  "ok": false,
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ "stooq_colcap": {
+  "ok": true,
+  "bytes": 796,
+  "head": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex,nofollow\"></head><body><noscript>This site requires JavaScript to verify your browser. Please enable JavaScript and reload.</noscript><script nonce=\"7poFTAvip-gaBtOEf105nQ\">\n(async()=>{const c=\"AAAAAGsKXp4LdfyotDrJiZQMFep2ZRQUFKsOQZNv9-LNBiFujeyvrvrYwbE\",d=4,t=\"0\".repeat(d),e=new TextEncoder;let n=0;while(1){cons"
+ },
+ "bvc_rest": {
+  "ok": false,
+  "error": "<HTTPError 400: 'Bad Request'>"
+ },
+ "bvc_site": {
+  "ok": true,
+  "bytes": 40461,
+  "head": "<!DOCTYPE html><html lang=\"es\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width\"/><meta name=\"next-head-count\" content=\"2\"/><meta name=\"google-site-verification\" content=\"r7Hnyvy5R63Z_KhqjGdn3WDjTs0GjKwQnXiZrJI6Wew\"/><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)["
+ },
+ "investing": {
+  "ok": false,
+  "error": "<HTTPError 403: 'Forbidden'>"
+ },
+ "wsj": {
+  "ok": false,
+  "error": "<HTTPError 401: 'HTTP Forbidden'>"
+ }
+}
